@@ -13,3 +13,4 @@ vim.opt.hlsearch = false
 
 vim.opt.spell = true
 
+vim.opt.scrolloff = 5
