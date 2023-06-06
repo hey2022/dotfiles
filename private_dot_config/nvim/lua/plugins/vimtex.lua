@@ -1,3 +1,3 @@
 return {
-	"lervag/vimtex",
+    "lervag/vimtex",
 }

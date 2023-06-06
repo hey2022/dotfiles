@@ -6,13 +6,13 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["wlr/workspaces", "sway/mode", "sway/scratchpad", "custom/media"],
-	"modules-center": ["hyprland/window"],
+    "modules-center": ["hyprland/window"],
     "modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "tray"],
-	// Modules configuration
-	"wlr/workspaces": {
-		"on-click": "activate",
-		"sort-by-number": true,
-	},
+    // Modules configuration
+    "wlr/workspaces": {
+        "on-click": "activate",
+        "sort-by-number": true,
+    },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,

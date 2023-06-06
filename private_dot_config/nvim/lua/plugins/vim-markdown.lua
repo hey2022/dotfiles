@@ -1,6 +1,6 @@
 return {
-	"preservim/vim-markdown",
-	dependencies = {
-		{"godlygeek/tabular"},
-	},
+    "preservim/vim-markdown",
+    dependencies = {
+        {"godlygeek/tabular"},
+    },
 }
