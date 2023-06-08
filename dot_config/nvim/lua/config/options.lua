@@ -16,3 +16,6 @@ vim.opt.hlsearch = false
 vim.opt.spell = true
 
 vim.opt.scrolloff = 5
+
+vim.opt.textwidth = 100
+vim.opt.colorcolumn = "80"
