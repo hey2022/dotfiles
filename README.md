@@ -45,7 +45,6 @@ Neovim
 
 `neovim`
 
-
 Shell
 
 `zsh sheldon` 
