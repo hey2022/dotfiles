@@ -6,7 +6,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+if [[ -f "${HOME}/.p10k.zsh" ]]; then
+    source "${HOME}/.p10k.zsh"
+fi
 
 # Completion
 autoload -U compinit
@@ -14,7 +16,7 @@ compinit
 zstyle ':completion:*' menu select
 
 # History
-HISTFILE=~/.histfile
+HISTFILE="${HOME}/.histfile"
 HISTSIZE=1000
 SAVEHIST=1000
 
@@ -30,8 +32,10 @@ alias rm='echo "This is not the command you are looking for."; false'
 alias df="duf"
 alias du="dust"
 alias activate="source ./venv/bin/activate"
-alias bc="bc -l $HOME/.bcrc"
+alias bc="bc -l ${HOME}/.bcrc"
 
-source /home/yiheng/.config/broot/launcher/bash/br
+if [[ -f "${HOME}/.config/broot/launcher/bash/br" ]]; then
+    source /home/yiheng/.config/broot/launcher/bash/br
+fi
 
 eval "$(sheldon source)"
