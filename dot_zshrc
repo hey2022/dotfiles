@@ -32,7 +32,7 @@ alias rm='echo "This is not the command you are looking for."; false'
 alias df="duf"
 alias du="dust"
 alias activate="source ./venv/bin/activate"
-alias bc="bc -l ${HOME}/.bcrc"
+alias bc="bc -l"
 
 if [[ -f "${HOME}/.config/broot/launcher/bash/br" ]]; then
     source /home/yiheng/.config/broot/launcher/bash/br
