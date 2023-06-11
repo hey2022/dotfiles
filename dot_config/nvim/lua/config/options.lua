@@ -19,3 +19,5 @@ vim.opt.scrolloff = 5
 
 vim.opt.textwidth = 100
 vim.opt.colorcolumn = "80"
+
+vim.opt.undofile = true
