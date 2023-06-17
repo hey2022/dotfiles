@@ -34,7 +34,7 @@ return {
                     ["<C-Space>"] = cmp.mapping.complete(),
                     ["<C-f>"] = cmp_action.luasnip_jump_forward(),
                     ["<C-b>"] = cmp_action.luasnip_jump_backward(),
-                    ["<CR>"] = cmp.mapping.confirm({ select = true }),
+                    ["<CR>"] = cmp.mapping.confirm(),
                     ["<Tab>"] = cmp_action.tab_complete(),
                 },
             })
