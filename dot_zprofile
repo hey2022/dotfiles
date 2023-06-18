@@ -7,6 +7,8 @@ if [[ -z "${XDG_RUNTIME_DIR}" ]]; then
     fi
 fi
 
+eval $(ssh-agent)
+
 export VISUAL="nvim"
 export EDITOR="${VISUAL}"
 export PATH="${PATH}:${HOME}/.cargo/bin"
