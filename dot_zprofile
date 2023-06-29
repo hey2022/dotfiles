@@ -9,6 +9,7 @@ fi
 
 eval $(ssh-agent)
 
-export VISUAL="nvim"
+export ALTERNATE_EDITOR=""
+export VISUAL="emacsclient -nw"
 export EDITOR="${VISUAL}"
 export PATH="${PATH}:${HOME}/.cargo/bin"
