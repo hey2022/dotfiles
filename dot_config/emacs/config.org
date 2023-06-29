@@ -1,0 +1,158 @@
+#+TITLE: Emacs Config
+#+AUTHOR: Yiheng He
+
+My emacs config
+
+* Setup
+** Setup package manager
+~straight.el~ is a package manager for emacs that uses git instead of tarballs
+
+Bootstrap ~straight.el~
+#+BEGIN_SRC emacs-lisp
+  (defvar bootstrap-version)
+  (let ((bootstrap-file
+	 (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
+	(bootstrap-version 6))
+    (unless (file-exists-p bootstrap-file)
+      (with-current-buffer
+	  (url-retrieve-synchronously
+	   "https://raw.githubusercontent.com/radian-software/straight.el/develop/install.el"
+	   'silent 'inhibit-cookies)
+	(goto-char (point-max))
+	(eval-print-last-sexp)))
+    (load bootstrap-file nil 'nomessage))
+#+END_SRC
+
+*** ~use-package~ intergration
+~use-package~ is a package that simplifies your emacs configuration
+
+Install ~use-package~
+#+BEGIN_SRC emacs-lisp
+  (straight-use-package 'use-package)
+#+END_SRC
+
+Make ~use-package~ use ~straight.el~ by default
+#+BEGIN_SRC emacs-lisp
+  (setq straight-use-package-by-default t)
+#+END_SRC
+
+** Setup terminal
+~vterm~ is a better terminal than the builtin terminals
+#+BEGIN_SRC emacs-lisp
+  (use-package vterm
+    :config
+    (setq vterm-timer-delay 0))
+#+END_SRC
+
+Setup $PATH for ~vterm~
+#+BEGIN_SRC emacs-lisp
+  (use-package exec-path-from-shell)
+  (when (daemonp)
+    (exec-path-from-shell-initialize))
+#+END_SRC
+
+Disable line numbers in ~vterm~
+#+BEGIN_SRC emacs-lisp
+  (add-hook 'vterm-mode-hook (lambda() (display-line-numbers-mode -1)))
+#+END_SRC
+
+* UI
+** Theme
+Use the catppuccin mocha theme
+#+BEGIN_SRC emacs-lisp
+  (use-package catppuccin-theme
+    :config
+    (load-theme 'catppuccin :noconfirm))
+ #+END_SRC
+
+** Dashboard
+Setup dashboard
+#+BEGIN_SRC emacs-lisp
+  (use-package dashboard
+    :config
+    (dashboard-setup-startup-hook))
+#+END_SRC
+
+Start dashboard on server setup
+#+BEGIN_SRC emacs-lisp
+  (setq initial-buffer-choice (lambda () (get-buffer-create "*dashboard*")))
+#+END_SRC
+
+** Cleaner interafce
+This removes
+- menu bar
+- tool bar
+- scroll bar
+#+BEGIN_SRC emacs-lisp
+  (menu-bar-mode -1)
+  (tool-bar-mode -1)
+  (toggle-scroll-bar -1)
+#+END_SRC
+
+** Line numbers
+Absolute and relative line numbers
+#+BEGIN_SRC emacs-lisp
+  (global-display-line-numbers-mode)
+  (setq display-line-numbers-type 'relative)
+#+END_SRC
+
+** Modeline
+#+BEGIN_SRC emacs-lisp
+  (use-package doom-modeline
+    :init
+    (doom-modeline-mode))
+#+END_SRC
+
+** Font
+Sets the font to FiraCode
+#+BEGIN_SRC emacs-lisp
+  (add-to-list 'default-frame-alist '(font . "FiraCode"))
+#+END_SRC
+
+** ~which-key~
+Install ~which-key~
+#+BEGIN_SRC emacs-lisp
+  (use-package which-key
+    :init
+    (which-key-mode))
+#+END_SRC
+
+* Interfaces
+** Completion
+*** ~Vertico~
+Use ~vertico~ completion UI
+#+BEGIN_SRC emacs-lisp
+  (use-package vertico
+    :init
+    (vertico-mode))
+#+END_SRC
+
+*** ~Marginalia~
+Install ~marginalia~
+#+BEGIN_SRC emacs-lisp
+  (use-package marginalia
+    ;; Bind `marginalia-cycle' locally in the minibuffer.  To make the binding
+    ;; available in the *Completions* buffer, add it to the
+    ;; `completion-list-mode-map'.
+    :bind (:map minibuffer-local-map
+		("M-A" . marginalia-cycle))
+    :init
+    (marginalia-mode))
+#+END_SRC
+
+*** ~Orderless~
+Install ~orderless~ fuzzy finder
+#+BEGIN_SRC emacs-lisp
+  (use-package orderless
+    :custom
+    (completion-styles '(orderless basic))
+    (completion-category-overrides '((file (styles basic partial-completion)))))
+#+END_SRC
+
+** ~Magit~
+~magit~ is a git interface fit for gods
+
+Install ~magit~
+#+BEGIN_SRC emacs-lisp
+  (use-package magit)
+#+END_SRC
