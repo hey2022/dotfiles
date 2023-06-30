@@ -41,7 +41,7 @@ Make ~use-package~ use ~straight.el~ by default
 #+BEGIN_SRC emacs-lisp
   (use-package vterm
     :config
-    (setq vterm-timer-delay 0))
+    (setq vterm-timer-delay 0.01))
 #+END_SRC
 
 Setup $PATH for ~vterm~
@@ -109,7 +109,7 @@ Sets the font to FiraCode
   (add-to-list 'default-frame-alist '(font . "FiraCode"))
 #+END_SRC
 
-** ~which-key~
+** which-key
 Install ~which-key~
 #+BEGIN_SRC emacs-lisp
   (use-package which-key
@@ -119,7 +119,7 @@ Install ~which-key~
 
 * Interfaces
 ** Completion
-*** ~Vertico~
+*** Vertico
 Use ~vertico~ completion UI
 #+BEGIN_SRC emacs-lisp
   (use-package vertico
@@ -127,7 +127,7 @@ Use ~vertico~ completion UI
     (vertico-mode))
 #+END_SRC
 
-*** ~Marginalia~
+*** Marginalia
 Install ~marginalia~
 #+BEGIN_SRC emacs-lisp
   (use-package marginalia
@@ -140,7 +140,7 @@ Install ~marginalia~
     (marginalia-mode))
 #+END_SRC
 
-*** ~Orderless~
+*** Orderless
 Install ~orderless~ fuzzy finder
 #+BEGIN_SRC emacs-lisp
   (use-package orderless
@@ -149,7 +149,7 @@ Install ~orderless~ fuzzy finder
     (completion-category-overrides '((file (styles basic partial-completion)))))
 #+END_SRC
 
-** ~Magit~
+** Magit
 ~magit~ is a git interface fit for gods
 
 Install ~magit~
