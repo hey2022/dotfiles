@@ -41,7 +41,8 @@ Make ~use-package~ use ~straight.el~ by default
 #+BEGIN_SRC emacs-lisp
   (use-package vterm
     :config
-    (setq vterm-timer-delay nil))
+    (setq vterm-timer-delay 0.01)
+    (setq vterm-max-scrollback 100000))
 #+END_SRC
 
 Setup $PATH for ~vterm~
