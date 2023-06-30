@@ -41,7 +41,7 @@ Make ~use-package~ use ~straight.el~ by default
 #+BEGIN_SRC emacs-lisp
   (use-package vterm
     :config
-    (setq vterm-timer-delay 0.01))
+    (setq vterm-timer-delay nil))
 #+END_SRC
 
 Setup $PATH for ~vterm~
