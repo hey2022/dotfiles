@@ -32,6 +32,7 @@ alias df="duf"
 alias du="dust"
 alias activate="source ./venv/bin/activate"
 alias bc="bc -l"
+alias emacsd="\emacs --daemon"
 alias emacs="emacsclient -nw"
 
 if [[ -f "${HOME}/.config/broot/launcher/bash/br" ]]; then
