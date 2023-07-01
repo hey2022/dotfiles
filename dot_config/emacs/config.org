@@ -57,15 +57,22 @@ Disable line numbers in ~vterm~
   (add-hook 'vterm-mode-hook (lambda() (display-line-numbers-mode -1)))
 #+END_SRC
 
+** Change custom file location
+This will change the custom file location so it won't pollute init.el
+#+BEGIN_SRC emacs-lisp
+  (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+  (load custom-file 'noerror 'nomessage)
+#+END_SRC
+
 * UI
 ** Theme
 Use the catppuccin mocha theme
 #+BEGIN_SRC emacs-lisp
   (use-package catppuccin-theme
     :config
-    (load-theme 'catppuccin :noconfirm))
+    (load-theme 'catppuccin t))
  #+END_SRC
-
+ 
 ** Dashboard
 Setup dashboard
 #+BEGIN_SRC emacs-lisp
@@ -79,7 +86,7 @@ Start dashboard on server setup
   (setq initial-buffer-choice (lambda () (get-buffer-create "*dashboard*")))
 #+END_SRC
 
-** Cleaner interafce
+** Cleaner interface
 This removes
 - menu bar
 - tool bar
@@ -89,6 +96,11 @@ This removes
   (tool-bar-mode -1)
   (add-to-list 'default-frame-alist
 	       '(vertical-scroll-bars . nil))
+#+END_SRC
+
+Prevent UI prompts
+#+BEGIN_SRC emacs-lisp
+  (setq use-dialog-box nil)
 #+END_SRC
 
 ** Line numbers
@@ -117,6 +129,37 @@ Install ~which-key~
   (use-package which-key
     :init
     (which-key-mode))
+#+END_SRC
+
+** Visible bell
+Turns on visible bell
+#+BEGIN_SRC emacs-lisp
+  (setq visible-bell t)
+#+END_SRC
+* Quality of life
+** Recent files
+Turns on recentf mode
+#+BEGIN_SRC emacs-lisp
+  (recentf-mode)
+#+END_SRC
+
+** Minibuffer history
+Turns on minibuffer history
+#+BEGIN_SRC emacs-lisp
+  (setq history-length 25)
+  (savehist-mode)
+#+END_SRC
+
+** Save place in file
+#+BEGIN_SRC emacs-lisp
+  (save-place-mode)
+#+END_SRC
+
+** Automatically update buffer
+Turn on automatic buffer updates
+#+BEGIN_SRC emacs-lisp
+  (global-auto-revert-mode)
+  (setq global-auto-revert-non-file-buffers t)
 #+END_SRC
 
 * Interfaces
