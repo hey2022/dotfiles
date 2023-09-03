@@ -21,7 +21,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 
 unsetopt beep
-bindkey -e
+bindkey -v
 
 # Alias
 alias ls="exa"
