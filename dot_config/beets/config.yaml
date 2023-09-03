@@ -1,0 +1,19 @@
+directory: ~/music
+
+import:
+    move: yes
+
+pluginpath: ~/.config/beets/plugins
+plugins: replaygain scrub chroma fromfilename discogs
+
+replaygain:
+    backend: ffmpeg
+
+ui:
+    color: yes
+
+paths:
+    default: $albumartist/$album/$track $title
+    singleton: Singletons/$artist - $title
+    comp: $genre/$album/$track $title
+    albumtype:soundtrack: Soundtracks/$album/$track $title
