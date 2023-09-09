@@ -24,9 +24,9 @@ unsetopt beep
 bindkey -v
 
 # Alias
-alias ls="exa"
-alias la="exa -la"
-alias ll="exa -l"
+alias ls="eza"
+alias la="eza -la"
+alias ll="eza -l"
 alias rm='echo "This is not the command you are looking for."; false'
 alias df="duf"
 alias du="dust"
