@@ -72,6 +72,9 @@ input type:keyboard {
     # Kill focused window
     bindsym $mod+Shift+q kill
 
+    # Force kill focused window
+    bindsym $mod+Ctrl+q exec ~/.config/sway/force_kill.sh
+
     # Start your launcher
     bindsym $mod+d exec $menu
 
