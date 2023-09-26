@@ -227,7 +227,7 @@ default_border none
 
 exec gammastep -l 23.021:113.752
 exec mako
-bindsym $mod+Ctrl+e exec emacsclient -c
+bindsym $mod+Shift+Return exec emacsclient -c
 
 # Pipewire
 bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
