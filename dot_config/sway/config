@@ -31,6 +31,7 @@ bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
 
 ### Idle configuration
+exec ~/.config/sway/swayidle.sh
 #
 # Example configuration:
 #
@@ -237,5 +238,8 @@ bindsym XF86AudioMicMute exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
 # Brightness
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+
+# Lock
+bindsym $mod+q exec ~/.config/sway/swaylock.sh
 
 include /etc/sway/config.d/*
