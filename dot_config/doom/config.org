@@ -115,4 +115,19 @@
         org-roam-ui-open-on-start t))
 #+end_src
 
+** Org Auto Export
+#+begin_src emacs-lisp
+(defun async-org-latex-export-to-pdf ()
+  (org-latex-export-to-pdf t))
+
+(defun toggle-pdf-export-on-save ()
+  "Enable or disable export PDF when saving current buffer."
+  (interactive)
+  (when (not (eq major-mode 'org-mode))
+    (error "Not an org-mode file!"))
+  (if (memq 'async-org-latex-export-to-pdf after-save-hook)
+      (progn (remove-hook 'after-save-hook 'async-org-latex-export-to-pdf t)
+             (message "Disabled org pdf export on save"))
+    (add-hook 'after-save-hook 'async-org-latex-export-to-pdf nil t)
+    (message "Enabled org pdf export on save")))
 #+end_src
