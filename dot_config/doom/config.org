@@ -115,6 +115,24 @@
         org-roam-ui-open-on-start t))
 #+end_src
 
+** Org agenda
+#+begin_src emacs-lisp :tangle nil
+(setq cycle-start (28 8 2023))
+
+(defun school-timetable (day)
+  (let ))
+
+(defun school-cycle (current-day)
+  (let ((six-days-later (calendar-gregorian-from-absolute
+                         (+ (calendar-absolute-from-gregorian current-day) 6))))
+    (while (or (eq (calendar-day-of-week six-days-later) 0) ; Sunday
+               (eq (calendar-day-of-week six-days-later) 6)) ; Saturday
+      (setq six-days-later ; Skip weekends
+            (calendar-gregorian-from-absolute
+             (+ (calendar-absolute-from-gregorian six-days-later) 1))))
+    six-days-later))
+#+end_src
+
 ** Org Auto Export
 #+begin_src emacs-lisp
 (defun async-org-latex-export-to-pdf ()
