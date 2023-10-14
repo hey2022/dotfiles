@@ -116,21 +116,26 @@
 #+end_src
 
 ** Org agenda
-#+begin_src emacs-lisp :tangle nil
-(setq cycle-start (28 8 2023))
+#+begin_src emacs-lisp
+(defun school-timetable (date day)
+  (= (school-cycle-day '(10 16 2023) date) day))
 
-(defun school-timetable (day)
-  (let ))
+(defun school-cycle-day (cycle-start-date date)
+  (if (weekday-p date)
+      (+ (% (weekdays-since cycle-start-date date) 6) 1)
+    0))
 
-(defun school-cycle (current-day)
-  (let ((six-days-later (calendar-gregorian-from-absolute
-                         (+ (calendar-absolute-from-gregorian current-day) 6))))
-    (while (or (eq (calendar-day-of-week six-days-later) 0) ; Sunday
-               (eq (calendar-day-of-week six-days-later) 6)) ; Saturday
-      (setq six-days-later ; Skip weekends
-            (calendar-gregorian-from-absolute
-             (+ (calendar-absolute-from-gregorian six-days-later) 1))))
-    six-days-later))
+(defun weekdays-since (start-date end-date)
+  (let ((weekdays 0))
+    (dotimes (i (- (calendar-absolute-from-gregorian end-date)
+                   (calendar-absolute-from-gregorian start-date)))
+      (let ((current-date (calendar-gregorian-from-absolute (+ (calendar-absolute-from-gregorian start-date) i))))
+        (when (weekday-p current-date)
+          (setq weekdays (+ weekdays 1)))))
+    weekdays))
+
+(defun weekday-p (date)
+  (memq (calendar-day-of-week date) '(1 2 3 4 5)))
 #+end_src
 
 ** Org Auto Export
