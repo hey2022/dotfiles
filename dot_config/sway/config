@@ -225,7 +225,7 @@ bindsym Ctrl+Shift+Print exec grim -g "$(slurp)" $screenshot_path
 
 default_border none
 
-exec gammastep -l 23.021:113.752
+exec gammastep
 exec mako
 bindsym $mod+Shift+Return exec emacsclient -c
 
