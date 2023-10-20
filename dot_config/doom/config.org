@@ -9,8 +9,9 @@ Sets the font to =JetBrains Mono= because I liked it the most when tested on the
 #+end_src
 
 ** Theme
+Sets the theme to tokyo night
 #+begin_src emacs-lisp
-(setq doom-theme 'catppuccin)
+(setq doom-theme 'doom-tokyo-night)
 #+end_src
 ** Line numbers
 #+begin_src emacs-lisp
