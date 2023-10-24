@@ -46,10 +46,10 @@ Sets the theme to tokyo night
 ** Org agenda
 #+begin_src emacs-lisp
 (defun school-timetable (date day)
-  (= (school-cycle-day '(10 16 2023) date) day))
+  (= (school-cycle-day '(10 23 2023) date) day))
 
 (defun school-cycle-day (cycle-start-date date)
-  (if (weekday-p date)
+  (if (weekdayp date)
       (+ (% (weekdays-since cycle-start-date date) 6) 1)
     0))
 
@@ -58,11 +58,11 @@ Sets the theme to tokyo night
     (dotimes (i (- (calendar-absolute-from-gregorian end-date)
                    (calendar-absolute-from-gregorian start-date)))
       (let ((current-date (calendar-gregorian-from-absolute (+ (calendar-absolute-from-gregorian start-date) i))))
-        (when (weekday-p current-date)
+        (when (weekdayp current-date)
           (setq weekdays (+ weekdays 1)))))
     weekdays))
 
-(defun weekday-p (date)
+(defun weekdayp (date)
   (memq (calendar-day-of-week date) '(1 2 3 4 5)))
 #+end_src
 
