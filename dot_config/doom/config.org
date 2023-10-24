@@ -22,7 +22,7 @@ Sets the theme to tokyo night
 * Org
 #+begin_src emacs-lisp
 (setq org-directory "~/org/")
-(setq org-agenda-files '("/home/yiheng/org/agenda.org" "~/school/school.org"))
+(setq org-agenda-files '("~/org/agenda.org" "~/school/school.org"))
 #+end_src
 
 ** Org Roam
