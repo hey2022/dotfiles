@@ -45,12 +45,14 @@ Sets the theme to tokyo night
 
 ** Org agenda
 #+begin_src emacs-lisp
-(defun school-timetable (date day)
-  (= (school-cycle-day '(10 23 2023) date) day))
+(setq cycle-date '((11 14 2023) 5))
 
-(defun school-cycle-day (cycle-start-date date)
+(defun school-timetable (date day)
+  (= (school-cycle-day date) day))
+
+(defun school-cycle-day (date)
   (if (weekdayp date)
-      (+ (% (weekdays-since cycle-start-date date) 6) 1)
+      (+ (% (+ (- (nth 1 cycle-date) 1) (weekdays-since (nth 0 cycle-date) date)) 6) 1)
     0))
 
 (defun weekdays-since (start-date end-date)
