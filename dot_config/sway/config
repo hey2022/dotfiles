@@ -219,10 +219,10 @@ bar {
 # Screenshots:
 #
 set $screenshot_path ~/screenshots/$(date +"%Y%m%d%H%M%S").png
-bindsym Print exec grim - | wl-copy
-bindsym Shift+Print exec grim -g "$(slurp)" - | wl-copy
-bindsym Ctrl+Print exec grim $screenshot_path
-bindsym Ctrl+Shift+Print exec grim -g "$(slurp)" $screenshot_path
+bindsym Ctrl+Print exec grim - | wl-copy
+bindsym Ctrl+Shift+Print exec grim -g "$(slurp)" - | wl-copy
+bindsym Print exec grim $screenshot_path
+bindsym Shift+Print exec grim -g "$(slurp)" $screenshot_path
 
 default_border none
 
