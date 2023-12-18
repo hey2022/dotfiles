@@ -63,6 +63,16 @@ input type:keyboard {
   xkb_options caps:escape
 }
 
+input type:touchpad {
+    tap enabled
+    natural_scroll enabled
+    dwt disabled
+}
+
+input "2:10:TPPS/2_Elan_TrackPoint" {
+    pointer_accel 1
+}
+
 ### Key bindings
 #
 # Basics:
