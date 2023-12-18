@@ -238,6 +238,9 @@ default_border none
 
 exec gammastep
 exec mako
+
+# Emacs
+exec emacs --daemon
 bindsym $mod+Shift+Return exec emacsclient -c
 
 # Pipewire
