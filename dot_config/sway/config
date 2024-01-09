@@ -251,6 +251,12 @@ bindsym XF86AudioMicMute exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
 
+# Media player controls
+bindsym XF86AudioPlay exec playerctl -p strawberry play-pause
+bindsym XF86AudioPause exec playerctl -p strawberry play-pause
+bindsym XF86AudioNext exec playerctl -p strawberry next
+bindsym XF86AudioPrev exec playerctl -p strawberry previous
+
 # Lock
 bindsym $mod+q exec swaylock
 
