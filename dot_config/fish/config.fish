@@ -4,4 +4,5 @@ if status is-interactive
     abbr -a venv-activate "source ./venv/bin/activate.fish"
     abbr -a cd z
     zoxide init fish | source
+    thefuck --alias | source
 end
