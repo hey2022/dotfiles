@@ -5,4 +5,5 @@ if status is-interactive
     abbr -a cd z
     zoxide init fish | source
     thefuck --alias | source
+    mcfly init fish | source
 end
