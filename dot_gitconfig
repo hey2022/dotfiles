@@ -3,3 +3,5 @@
     email = yiheng.he@proton.me
 [init]
     defaultBranch = main
+[github]
+	user = hey2022
