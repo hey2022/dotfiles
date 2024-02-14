@@ -44,6 +44,10 @@ Sets the theme to tokyo night
   :hook (org-mode . org-fragtog-mode))
 #+end_src
 
+** Latex Headers
+#+begin_src emacs-lisp
+(after! org
+  (add-to-list 'org-latex-packages-alist '("per-mode=fraction" "siunitx" t)))
 #+end_src
 
 ** Org Roam
