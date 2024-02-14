@@ -4,6 +4,7 @@ SETUVAR --export ALTERNATE_EDITOR:
 SETUVAR --export EDITOR:emacsclient\x20\x2dt
 SETUVAR --export GTK_IM_MODULE:fcitx
 SETUVAR --export QT_IM_MODULE:fcitx
+SETUVAR --export QT_QPA_PLATFORMTHEME:qt5ct
 SETUVAR --export SSH_AUTH_SOCK:/run/user/1000/ssh\x2dagent\x2esocket
 SETUVAR --export VISUAL:emacsclient\x20\x2dc
 SETUVAR --export XMODIFIERS:\x40im\x3dfcitx
