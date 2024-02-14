@@ -13,6 +13,14 @@ Sets the theme to tokyo night
 #+begin_src emacs-lisp
 (setq doom-theme 'doom-tokyo-night)
 #+end_src
+
+** Transparancy
+#+begin_src emacs-lisp
+(set-frame-parameter nil 'alpha-background 75)
+
+(add-to-list 'default-frame-alist '(alpha-background . 75))
+#+end_src
+
 ** Line numbers
 #+begin_src emacs-lisp
 (setq display-line-numbers-type `relative)
