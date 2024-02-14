@@ -26,6 +26,11 @@ Sets the theme to tokyo night
 (setq display-line-numbers-type `relative)
 #+end_src
 
+** Prevent emacs client from creating new workspace
+#+begin_src emacs-lisp
+(after! persp-mode
+  (setq persp-emacsclient-init-frame-behaviour-override "main"))
+#+end_src
 
 * Org
 #+begin_src emacs-lisp
