@@ -95,17 +95,23 @@ Sets the theme to tokyo night
 
 ** Org Auto Export
 #+begin_src emacs-lisp
-(defun async-org-latex-export-to-pdf ()
-  (org-latex-export-to-pdf t))
-
-(defun toggle-pdf-export-on-save ()
-  "Enable or disable export PDF when saving current buffer."
-  (interactive)
+(defun org-export-on-save (export-method)
+  "Export org when saving current buffer."
   (when (not (eq major-mode 'org-mode))
     (error "Not an org-mode file!"))
-  (if (memq 'async-org-latex-export-to-pdf after-save-hook)
-      (progn (remove-hook 'after-save-hook 'async-org-latex-export-to-pdf t)
-             (message "Disabled org pdf export on save"))
-    (add-hook 'after-save-hook 'async-org-latex-export-to-pdf nil t)
-    (message "Enabled org pdf export on save")))
+  (if (memq export-method after-save-hook)
+      (progn (remove-hook 'after-save-hook export-method t)
+             (message "Disabled export on save"))
+    (add-hook 'after-save-hook export-method nil t)
+    (message "Enabled export on save")))
+
+(defun org-export-pdf-on-save ()
+  "Export org to pdf on save"
+  (interactive)
+  (org-export-on-save (lambda () (org-latex-export-to-pdf t))))
+
+(defun org-export-html-on-save ()
+  "Export org to html on save"
+  (interactive)
+  (org-export-on-save 'org-html-export-to-html))
 #+end_src
