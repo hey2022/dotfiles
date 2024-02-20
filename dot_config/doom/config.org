@@ -75,7 +75,7 @@ Sets the theme to tokyo night
 
 ** Org agenda
 #+begin_src emacs-lisp
-(setq cycle-date '((1 15 2024) 4))
+(setq cycle-date '((2 21 2024) 1))
 
 (defun school-timetable (date day)
   (= (school-cycle-day date) day))
