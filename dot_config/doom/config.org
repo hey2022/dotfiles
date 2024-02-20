@@ -37,7 +37,12 @@ Sets the theme to tokyo night
 (setq org-directory "~/org/")
 (setq org-agenda-files '("~/org/personal.org" "~/school/school.org"))
 #+end_src
-** Fragtog
+** Latex Preview
+*** Latex Preview Startup
+#+begin_src emacs-lisp
+(setq org-startup-with-latex-preview t)
+#+end_src
+*** Fragtog
 #+begin_src emacs-lisp
 (use-package! org-fragtog
   :after org
