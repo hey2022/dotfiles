@@ -32,6 +32,13 @@ Sets the theme to tokyo night
   (setq persp-emacsclient-init-frame-behaviour-override "main"))
 #+end_src
 
+** Fix tabs
+#+begin_src emacs-lisp
+(after! centaur-tabs
+  (setq centaur-tabs-set-bar 'right))
+#+end_src
+
+
 * Org
 #+begin_src emacs-lisp
 (setq org-directory "~/org/")
