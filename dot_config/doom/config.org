@@ -1,7 +1,7 @@
 #+title: DOOM Emacs Config
 #+author: Yiheng He
 
-* UI
+* User Interface
 ** Font
 Sets the font to =JetBrains Mono= because I liked it the most when tested on the website https://www.codingfont.com/
 #+begin_src emacs-lisp
@@ -14,7 +14,7 @@ Sets the theme to tokyo night
 (setq doom-theme 'doom-tokyo-night)
 #+end_src
 
-** Transparancy
+** Transparency
 #+begin_src emacs-lisp
 (set-frame-parameter nil 'alpha-background 75)
 
@@ -26,7 +26,7 @@ Sets the theme to tokyo night
 (setq display-line-numbers-type `relative)
 #+end_src
 
-** Prevent emacs client from creating new workspace
+** Prevent Emacs client from creating new workspace
 #+begin_src emacs-lisp
 (after! persp-mode
   (setq persp-emacsclient-init-frame-behaviour-override "main"))
@@ -68,10 +68,7 @@ Sets the theme to tokyo night
   :after org-roam)
 
 (use-package! org-roam-ui
-  :after org-roam ;; or :after org
-  ;;         normally we'd recommend hooking orui after org-roam, but since org-roam does not have
-  ;;         a hookable mode anymore, you're advised to pick something yourself
-  ;;         if you don't care about startup time, use
+  :after org-roam
   :hook (after-init . org-roam-ui-mode)
   :config
   (setq org-roam-ui-sync-theme t
