@@ -5,3 +5,5 @@
     defaultBranch = main
 [github]
 	user = hey2022
+[gitlab]
+	user = hey2022
