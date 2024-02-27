@@ -7,3 +7,5 @@
 	user = hey2022
 [gitlab]
 	user = hey2022
+[commit]
+	gpgsign = true
