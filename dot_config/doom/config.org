@@ -55,6 +55,11 @@ Sets the theme to tokyo night
   :after org
   :hook (org-mode . org-fragtog-mode))
 #+end_src
+** CDLaTex
+Disable company-mode in org mode documents to prevent conflicts with CDLaTex.
+#+begin_src emacs-lisp :tangle nil
+(add-hook 'org-mode-hook (lambda () (company-mode -1)))
+#+end_src
 
 ** Latex Headers
 #+begin_src emacs-lisp
