@@ -69,7 +69,6 @@ Sets the theme to tokyo night
 
 (use-package! org-roam-ui
   :after org-roam
-  :hook (after-init . org-roam-ui-mode)
   :config
   (setq org-roam-ui-sync-theme t
         org-roam-ui-follow t
