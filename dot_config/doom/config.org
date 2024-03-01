@@ -128,3 +128,7 @@ Disable company-mode in org mode documents to prevent conflicts with CDLaTex.
   (interactive)
   (org-export-on-save 'org-html-export-to-html))
 #+end_src
+** Smartparens
+#+begin_src emacs-lisp
+(sp-local-pair 'org-mode "\\[" "\\]")
+#+end_src
