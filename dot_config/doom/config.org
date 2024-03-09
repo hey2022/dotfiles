@@ -45,7 +45,6 @@ Sets the theme to tokyo night
   (setq centaur-tabs-set-bar 'right))
 #+end_src
 
-
 * Org
 #+begin_src emacs-lisp
 (after! org
