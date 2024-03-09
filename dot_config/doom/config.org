@@ -1,6 +1,13 @@
 #+title: DOOM Emacs Config
 #+author: Yiheng He
 
+* Core
+** Fish Shell
+#+begin_src emacs-lisp
+(setq shell-file-name (executable-find "bash"))
+(setq-default vterm-shell (executable-find "fish"))
+(setq-default explicit-shell-file-name (executable-find "fish"))
+#+end_src
 * User Interface
 ** Font
 Sets the font to =JetBrains Mono= because I liked it the most when tested on the website https://www.codingfont.com/
