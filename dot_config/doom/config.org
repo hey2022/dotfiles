@@ -60,9 +60,7 @@ Sets the theme to tokyo night
 #+end_src
 *** Fragtog
 #+begin_src emacs-lisp
-(use-package! org-fragtog
-  :after org
-  :hook (org-mode . org-fragtog-mode))
+(add-hook! org-mode 'org-fragtog-mode)
 #+end_src
 
 ** CDLaTex
