@@ -41,13 +41,15 @@ Sets the theme to tokyo night
 
 * Org
 #+begin_src emacs-lisp
-(setq org-directory "~/org/")
-(setq org-agenda-files '("~/org/personal.org" "~/school/school.org"))
+(after! org
+  (setq org-directory "~/org/")
+  (setq org-agenda-files '("~/org/personal.org" "~/school/school.org")))
 #+end_src
 ** Latex Preview
 *** Latex Preview Startup
 #+begin_src emacs-lisp
-(setq org-startup-with-latex-preview t)
+(after! org
+  (setq org-startup-with-latex-preview t))
 #+end_src
 *** Fragtog
 #+begin_src emacs-lisp
@@ -84,52 +86,55 @@ Disable company-mode in org mode documents to prevent conflicts with CDLaTex.
 
 ** Org agenda
 #+begin_src emacs-lisp
-(setq cycle-date '((2 21 2024) 1))
+(after! org
+   (setq cycle-date '((2 21 2024) 1))
 
-(defun school-timetable (date day)
-  (= (school-cycle-day date) day))
+  (defun school-timetable (date day)
+    (= (school-cycle-day date) day))
 
-(defun school-cycle-day (date)
-  (if (weekdayp date)
-      (+ (% (+ (- (nth 1 cycle-date) 1) (weekdays-since (nth 0 cycle-date) date)) 6) 1)
-    0))
+  (defun school-cycle-day (date)
+    (if (weekdayp date)
+        (+ (% (+ (- (nth 1 cycle-date) 1) (weekdays-since (nth 0 cycle-date) date)) 6) 1)
+      0))
 
-(defun weekdays-since (start-date end-date)
-  (let ((weekdays 0))
-    (dotimes (i (- (calendar-absolute-from-gregorian end-date)
-                   (calendar-absolute-from-gregorian start-date)))
-      (let ((current-date (calendar-gregorian-from-absolute (+ (calendar-absolute-from-gregorian start-date) i))))
-        (when (weekdayp current-date)
-          (setq weekdays (+ weekdays 1)))))
-    weekdays))
+  (defun weekdays-since (start-date end-date)
+    (let ((weekdays 0))
+      (dotimes (i (- (calendar-absolute-from-gregorian end-date)
+                     (calendar-absolute-from-gregorian start-date)))
+        (let ((current-date (calendar-gregorian-from-absolute (+ (calendar-absolute-from-gregorian start-date) i))))
+          (when (weekdayp current-date)
+            (setq weekdays (+ weekdays 1)))))
+      weekdays))
 
-(defun weekdayp (date)
-  (memq (calendar-day-of-week date) '(1 2 3 4 5)))
+  (defun weekdayp (date)
+    (memq (calendar-day-of-week date) '(1 2 3 4 5))))
 #+end_src
 
 ** Org Auto Export
 #+begin_src emacs-lisp
-(defun org-export-on-save (export-method)
-  "Export org when saving current buffer."
-  (when (not (eq major-mode 'org-mode))
-    (error "Not an org-mode file!"))
-  (if (memq export-method after-save-hook)
-      (progn (remove-hook 'after-save-hook export-method t)
-             (message "Disabled export on save"))
-    (add-hook 'after-save-hook export-method nil t)
-    (message "Enabled export on save")))
+(after! org
+   (defun org-export-on-save (export-method)
+     "Export org when saving current buffer."
+     (when (not (eq major-mode 'org-mode))
+       (error "Not an org-mode file!"))
+     (if (memq export-method after-save-hook)
+         (progn (remove-hook 'after-save-hook export-method t)
+                (message "Disabled export on save"))
+       (add-hook 'after-save-hook export-method nil t)
+       (message "Enabled export on save")))
 
-(defun org-export-pdf-on-save ()
-  "Export org to pdf on save"
-  (interactive)
-  (org-export-on-save (lambda () (org-latex-export-to-pdf t))))
+  (defun org-export-pdf-on-save ()
+    "Export org to pdf on save"
+    (interactive)
+    (org-export-on-save (lambda () (org-latex-export-to-pdf t))))
 
-(defun org-export-html-on-save ()
-  "Export org to html on save"
-  (interactive)
-  (org-export-on-save 'org-html-export-to-html))
+  (defun org-export-html-on-save ()
+    "Export org to html on save"
+    (interactive)
+    (org-export-on-save 'org-html-export-to-html)))
 #+end_src
 ** Smartparens
 #+begin_src emacs-lisp
-(sp-local-pair 'org-mode "\\[" "\\]")
+(after! org
+   (sp-local-pair 'org-mode "\\[" "\\]"))
 #+end_src
