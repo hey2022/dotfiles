@@ -65,7 +65,7 @@ Sets the theme to tokyo night
 ** CDLaTex
 Disable company-mode in org mode documents to prevent conflicts with CDLaTex.
 #+begin_src emacs-lisp
-(add-hook! org-mode (lambda () (company-mode -1)))
+(add-hook! org-mode (company-mode -1))
 #+end_src
 
 ** Latex Headers
