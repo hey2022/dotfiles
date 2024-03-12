@@ -1,3 +1,3 @@
-function emacs --description 'alias emacs emacs -nw'
-    command emacs -nw $argv
+function emacs --description 'alias emacs emacsclient -nw'
+    command emacsclient -nw $argv
 end
