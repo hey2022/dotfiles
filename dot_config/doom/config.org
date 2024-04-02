@@ -23,9 +23,9 @@ Sets the theme to tokyo night
 
 ** Transparency
 #+begin_src emacs-lisp
-(set-frame-parameter nil 'alpha-background 75)
+(set-frame-parameter nil 'alpha-background 90)
 
-(add-to-list 'default-frame-alist '(alpha-background . 75))
+(add-to-list 'default-frame-alist '(alpha-background . 90))
 #+end_src
 
 ** Line numbers
