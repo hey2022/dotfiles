@@ -128,6 +128,29 @@ Remove file creation date from the capture template
     (memq (calendar-day-of-week date) '(1 2 3 4 5))))
 #+end_src
 
+*** Timeblock
+#+begin_src emacs-lisp
+(use-package! org-timeblock
+  :config
+  (evil-define-key 'normal org-timeblock-mode-map "q" #'org-timeblock-quit)
+  (evil-define-key 'normal org-timeblock-mode-map "l" #'org-timeblock-day-later)
+  (evil-define-key 'normal org-timeblock-mode-map "h" #'org-timeblock-day-earlier)
+  (evil-define-key 'normal org-timeblock-mode-map "j" #'org-timeblock-jump-to-day)
+  (evil-define-key 'normal org-timeblock-mode-map "v" #'org-timeblock-change-span)
+  (evil-define-key 'normal org-timeblock-mode-map "s" #'org-timeblock-schedule)
+  (evil-define-key 'normal org-timeblock-mode-map "d" #'org-timeblock-set-duration)
+  (evil-define-key 'normal org-timeblock-mode-map "m" #'org-timeblock-mark-block)
+  (evil-define-key 'normal org-timeblock-mode-map "u" #'org-timeblock-unmark-block)
+  (evil-define-key 'normal org-timeblock-mode-map "U" #'org-timeblock-unmark-all-blocks)
+  (evil-define-key 'normal org-timeblock-mode-map "+" #'org-timeblock-new-task)
+  :custom
+  (org-timeblock-show-future-repeats t)
+  (org-timeblock-span 7)
+  :bind
+  (:map doom-leader-open-map
+        ("a b" . org-timeblock)))
+#+end_src
+
 ** Org Auto Export
 #+begin_src emacs-lisp
 (after! org
