@@ -192,4 +192,9 @@ Remove file creation date from the capture template
    :map doom-leader-notes-map
    :desc "Org Transclusion Mode" "t" #'org-transclusion-mode))
 #+end_src
+* Writing
+** Language Tool
+#+begin_src emacs-lisp
+(after! languagetool
+  (setq langtool-default-language "en-GB"))
 #+end_src
