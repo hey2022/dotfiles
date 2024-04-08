@@ -77,6 +77,15 @@ Disable company-mode in org mode documents to prevent conflicts with CDLaTex.
 #+end_src
 
 ** Org Roam
+Remove file creation date from the capture template
+#+begin_src emacs-lisp
+(after! org-roam
+  (setq org-roam-capture-templates
+        '(("d" "default" plain "%?" :target
+           (file+head "${slug}.org" "#+title: ${title}\n")
+           :unnarrowed t))))
+#+end_src
+
 #+begin_src emacs-lisp
 (use-package! websocket
   :after org-roam)
