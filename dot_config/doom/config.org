@@ -105,7 +105,7 @@ Remove file creation date from the capture template
 ** Org agenda
 #+begin_src emacs-lisp
 (after! org
-   (setq cycle-date '((2 21 2024) 1))
+   (setq cycle-date '((4 8 2024) 3))
 
   (defun school-timetable (date day)
     (= (school-cycle-day date) day))
