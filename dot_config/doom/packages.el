@@ -1,3 +1,6 @@
 (unpin! org-roam)
 (package! org-roam-ui)
 (package! org-fragtog)
+(package! org-transclusion)
+(package! org-remark)
+(package! org-timeblock)
