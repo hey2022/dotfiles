@@ -154,15 +154,15 @@ Remove file creation date from the capture template
 ** Org Auto Export
 #+begin_src emacs-lisp
 (after! org
-   (defun org-export-on-save (export-method)
-     "Export org when saving current buffer."
-     (when (not (eq major-mode 'org-mode))
-       (error "Not an org-mode file!"))
-     (if (memq export-method after-save-hook)
-         (progn (remove-hook 'after-save-hook export-method t)
-                (message "Disabled export on save"))
-       (add-hook 'after-save-hook export-method nil t)
-       (message "Enabled export on save")))
+  (defun org-export-on-save (export-method)
+    "Export org when saving current buffer."
+    (when (not (eq major-mode 'org-mode))
+      (error "Not an org-mode file!"))
+    (if (memq export-method after-save-hook)
+        (progn (remove-hook 'after-save-hook export-method t)
+               (message "Disabled export on save"))
+      (add-hook 'after-save-hook export-method nil t)
+      (message "Enabled export on save")))
 
   (defun org-export-pdf-on-save ()
     "Export org to pdf on save"
@@ -177,5 +177,6 @@ Remove file creation date from the capture template
 ** Smartparens
 #+begin_src emacs-lisp
 (after! org
-   (sp-local-pair 'org-mode "\\[" "\\]"))
+  (sp-local-pair 'org-mode "\\[" "\\]"))
+#+end_src
 #+end_src
