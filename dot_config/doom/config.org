@@ -179,4 +179,17 @@ Remove file creation date from the capture template
 (after! org
   (sp-local-pair 'org-mode "\\[" "\\]"))
 #+end_src
+
+** Transclusion
+#+begin_src emacs-lisp
+(use-package! org-transclusion
+  :after org
+  :hook
+  (org-mode . org-transclusion-mode)
+  (org-mode . (lambda () (add-hook! after-save #'org-transclusion-add-all)))
+  :init
+  (map!
+   :map doom-leader-notes-map
+   :desc "Org Transclusion Mode" "t" #'org-transclusion-mode))
+#+end_src
 #+end_src
