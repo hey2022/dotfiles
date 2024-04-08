@@ -86,12 +86,15 @@ Remove file creation date from the capture template
            :unnarrowed t))))
 #+end_src
 
+*** Org Roam UI
 #+begin_src emacs-lisp
 (use-package! websocket
   :after org-roam)
 
 (use-package! org-roam-ui
   :after org-roam
+  :bind (:map doom-leader-notes-map
+              ("r u" . org-roam-ui-mode))
   :custom
   (org-roam-ui-sync-theme t)
   (org-roam-ui-follow t)
