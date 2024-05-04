@@ -11,6 +11,14 @@
    :desc "Fuzzy Find" "F" #'affe-find
    :desc "Fuzzy Find Home" "h" (lambda () (interactive) (affe-find "~"))))
 #+end_src
+
+** Change Directory
+#+begin_src emacs-lisp
+(map!
+ :map doom-leader-file-map
+ "z" #'cd)
+#+end_src
+
 * User Interface
 ** Font
 Sets font to a custom build of Iosevka using https://typeof.net/Iosevka/customizer
