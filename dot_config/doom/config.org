@@ -160,7 +160,6 @@ Remove file creation date from the capture template
   (evil-define-key 'normal org-timeblock-mode-map "+" #'org-timeblock-new-task)
   :custom
   (org-timeblock-show-future-repeats t)
-  (org-timeblock-span 7)
   :bind
   (:map doom-leader-open-map
         ("a b" . org-timeblock)))
