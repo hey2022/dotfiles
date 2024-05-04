@@ -1,0 +1,10 @@
+export ALTERNATE_EDITOR=""
+export VISUAL="emacsclient -c"
+export EDITOR="emacsclient -nw"
+export PATH="$PATH:/opt/bin:$HOME/.cargo/bin:$HOME/.config/emacs/bin"
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+export QT_QPA_PLATFORMTHEME="qt5ct"
+
+export GTK_IM_MODULE="fcitx"
+export QT_IM_MODULE="fcitx"
+export XMODIFIERS="@im=fcitx"
