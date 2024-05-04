@@ -82,6 +82,15 @@ Sets the theme to tokyo night
   (add-to-list 'org-latex-packages-alist '("per-mode=fraction" "siunitx" t)))
 #+end_src
 
+*** minted
+#+begin_src emacs-lisp
+(setq org-latex-listings 'minted
+      org-latex-packages-alist '(("" "minted"))
+      org-latex-pdf-process
+      '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+        "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
+#+end_src
+
 ** Org Roam
 Remove file creation date from the capture template
 #+begin_src emacs-lisp
