@@ -210,6 +210,14 @@ Remove file creation date from the capture template
 #+begin_src emacs-lisp
 (add-to-list 'org-modules 'org-habit)
 #+end_src
+** Journal
+#+begin_src emacs-lisp
+(use-package! org-journal
+  :init
+  (add-hook! org-journal-mode (setq auto-save-default nil))
+  :config
+  (setq org-journal-enable-encryption t))
+#+end_src
 ** Auto Tangle
 #+begin_src emacs-lisp
 (use-package org-auto-tangle
