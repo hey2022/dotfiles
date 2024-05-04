@@ -61,12 +61,6 @@ Sets the theme to tokyo night
   (org-mode . org-fragtog-mode))
 #+end_src
 
-** CDLaTex
-Disable company-mode in org mode documents to prevent conflicts with CDLaTex.
-#+begin_src emacs-lisp
-(add-hook! org-mode (company-mode -1))
-#+end_src
-
 ** Latex Headers
 #+begin_src emacs-lisp
 (after! org
