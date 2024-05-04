@@ -224,6 +224,6 @@ Remove file creation date from the capture template
 * Writing
 ** Language Tool
 #+begin_src emacs-lisp
-(after! languagetool
+(after! langtool
   (setq langtool-default-language "en-GB"))
 #+end_src
