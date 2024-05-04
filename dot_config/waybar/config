@@ -14,11 +14,8 @@
         "disable-markup": false,
         "format": "{icon}",
         "format-icons": {
-            "1": "1 <span font='Font Awesome 5 Free 14'></span>",
-            "2": "2 <span font='Font Awesome 5 Free 14'></span>",
-            "3": "3 <span font='Font Awesome 5 Free 14'></span>",
-            "4": "4 <span font='Font Awesome 5 Free 14'></span>",
-            "5": "5 <span font='Font Awesome 5 Free 14'></span>",
+            "1": "1 <span font='Font Awesome 5 Free 14'></span>",
+            "2": "2 <span font='Font Awesome 5 Free 14'></span>",
             "9": "9 <span font='Font Awesome 5 Free 14'></span>",
             "10": "10 <span font='Font Awesome 5 Free 14'></span>",
         }
