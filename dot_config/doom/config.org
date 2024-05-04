@@ -2,7 +2,14 @@
 #+author: Yiheng He
 
 * Core
+** Fuzzy Find
 #+begin_src emacs-lisp
+(use-package! affe
+  :config
+  (setq affe-find-command "fd -t file -H")
+  (map! :map doom-leader-file-map
+   :desc "Fuzzy Find" "F" #'affe-find
+   :desc "Fuzzy Find Home" "h" (lambda () (interactive) (affe-find "~"))))
 #+end_src
 * User Interface
 ** Font

@@ -7,3 +7,5 @@
 (package! org-timeblock)
 (package! org-auto-tangle)
 (package! org-modern)
+
+(package! affe)
