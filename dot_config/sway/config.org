@@ -332,7 +332,7 @@ bindsym $mod+ctrl+shift+insert exec grim -g "$(slurp)" - | wl-copy
 #+end_src
 
 ** Wallpaper switcher
-Wallpaper switcher that uses wofi to change swww wallpaper
+Wallpaper switcher that uses tofi to change swww wallpaper
 #+begin_src conf
 bindsym $mod+w exec ~/.config/scripts/wallpaper.sh
 #+end_src
@@ -344,5 +344,9 @@ bindsym $mod+escape exec swaylock
 
 ** Launcher
 #+begin_src conf
-bindsym $mod+Space exec ~/.config/wofi/launch.sh
+set $menu tofi-run | xargs swaymsg exec --
+bindsym $mod+space exec $menu
+
+set $drun tofi-drun | xargs swaymsg exec --
+bindsym $mod+shift+space exec $drun
 #+end_src
