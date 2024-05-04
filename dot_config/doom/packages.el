@@ -4,3 +4,4 @@
 (package! org-transclusion)
 (package! org-remark)
 (package! org-timeblock)
+(package! org-auto-tangle)

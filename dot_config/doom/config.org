@@ -192,6 +192,11 @@ Remove file creation date from the capture template
    :map doom-leader-notes-map
    :desc "Org Transclusion Mode" "t" #'org-transclusion-mode))
 #+end_src
+** Auto Tangle
+#+begin_src emacs-lisp
+(use-package org-auto-tangle
+  :hook (org-mode . org-auto-tangle-mode))
+#+end_src
 * Writing
 ** Language Tool
 #+begin_src emacs-lisp
