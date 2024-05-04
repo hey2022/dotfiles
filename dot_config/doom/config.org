@@ -69,6 +69,7 @@ Sets the theme to tokyo night
 (after! org
   (setq org-startup-with-latex-preview t))
 #+end_src
+
 *** Fragtog
 #+begin_src emacs-lisp
 (use-package! org-fragtog
