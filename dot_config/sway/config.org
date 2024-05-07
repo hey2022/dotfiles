@@ -110,6 +110,8 @@ input type:touchpad {
     natural_scroll enabled
     dwt disabled
     tap enabled
+    pointer_accel 1
+    accel_profile "flat"
 }
 #+end_src
 

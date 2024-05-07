@@ -40,6 +40,8 @@ input type:touchpad {
     natural_scroll enabled
     dwt disabled
     tap enabled
+    pointer_accel 1
+    accel_profile "flat"
 }
 
 input "2:10:TPPS/2_Elan_TrackPoint" {
