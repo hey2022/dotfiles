@@ -191,8 +191,8 @@ bindsym $mod+w exec ~/.config/scripts/wallpaper.sh
 
 bindsym $mod+shift+escape exec swaylock
 
-set $menu tofi-run | xargs swaymsg exec --
-bindsym $mod+space exec $menu
-
 set $drun tofi-drun | xargs swaymsg exec --
-bindsym $mod+shift+space exec $drun
+bindsym $mod+space exec $drun
+
+set $menu tofi-run | xargs swaymsg exec --
+bindsym $mod+shift+space exec $menu
