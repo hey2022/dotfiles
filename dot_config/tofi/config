@@ -1,0 +1,24 @@
+# Font
+font = "~/.local/share/fonts/Iosevka/IosevkaCustom/IosevkaCustom-Regular.ttf"
+font-size = 16
+
+# Colors
+prompt-color = #C0CAF5
+selection-color = #C0CAF5
+background-color = #1A1B26CC
+border-color = #C0CAF5
+
+# Prompt
+prompt-text = "$ "
+
+# Size
+width = 50%
+height = 50%
+
+# Border Size
+outline-width = 0
+border-width = 3
+corner-radius = 20
+
+# Search
+matching-algorithm = fuzzy
