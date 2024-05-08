@@ -237,3 +237,10 @@ Remove file creation date from the capture template
 (after! langtool
   (setq langtool-default-language "en-GB"))
 #+end_src
+* Programming
+** LSP Mode
+*** Inlay Hints
+#+begin_src emacs-lisp
+(after! lsp-mode
+  (setq lsp-inlay-hint-enable t))
+#+end_src
