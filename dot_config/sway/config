@@ -86,7 +86,7 @@ bindsym $mod+7 workspace number 7
 bindsym $mod+8 workspace number 8
 bindsym $mod+9 workspace number 9
 bindsym $mod+0 workspace number 10
-bindsym $mod+minus workspace Scratch
+bindsym $mod+minus workspace -
 
 bindgesture swipe:right workspace prev
 bindgesture swipe:left workspace next
@@ -101,7 +101,7 @@ bindsym $mod+control+7 [workspace=7] move workspace to output current, workspace
 bindsym $mod+control+8 [workspace=8] move workspace to output current, workspace number 8
 bindsym $mod+control+9 [workspace=9] move workspace to output current, workspace number 9
 bindsym $mod+control+0 [workspace=10] move workspace to output current, workspace number 10
-bindsym $mod+control+minus [workspace=Scratch] move workspace to output current, workspace Scratch
+bindsym $mod+control+minus [workspace=-] move workspace to output current, workspace -
 
 bindsym $mod+shift+1 move container to workspace number 1
 bindsym $mod+shift+2 move container to workspace number 2
@@ -113,7 +113,7 @@ bindsym $mod+shift+7 move container to workspace number 7
 bindsym $mod+shift+8 move container to workspace number 8
 bindsym $mod+shift+9 move container to workspace number 9
 bindsym $mod+shift+0 move container to workspace number 10
-bindsym $mod+shift+minus move container to workspace Scratch
+bindsym $mod+shift+minus move container to workspace -
 
 mode "resize" {
     bindsym $left resize shrink width 10px
