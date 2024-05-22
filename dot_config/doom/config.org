@@ -30,7 +30,7 @@ Sets font to a custom build of Iosevka using https://typeof.net/Iosevka/customiz
 ** Theme
 Sets the theme to tokyo night
 #+begin_src emacs-lisp
-(setq doom-theme 'doom-tokyo-night)
+(setq doom-theme 'doom-one)
 #+end_src
 
 ** Transparency
