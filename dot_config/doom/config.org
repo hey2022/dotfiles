@@ -232,6 +232,14 @@ Remove file creation date from the capture template
   :hook (org-mode . org-modern-mode)
   :hook (org-agenda-finalize . org-modern-agenda))
 #+end_src
+** Org Capture Templates
+#+begin_src emacs-lisp
+(after! org
+  (add-to-list 'org-capture-templates '("s" "School Todo" entry
+                                        (file+headline "~/school/school.org" "Tasks")
+                                        "* TODO %? %^G\nDEADLINE: %^{Deadline}T\n%i")))
+#+end_src
+
 * Writing
 ** Language Tool
 #+begin_src emacs-lisp
