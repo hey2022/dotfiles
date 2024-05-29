@@ -239,6 +239,10 @@ Remove file creation date from the capture template
                                         (file+headline "~/school/school.org" "Tasks")
                                         "* TODO %? %^G\nDEADLINE: %^{Deadline}T\n%i")))
 #+end_src
+* Latex
+#+begin_src emacs-lisp
+(setq TeX-electric-sub-and-superscript nil)
+#+end_src
 
 * Writing
 ** Language Tool
