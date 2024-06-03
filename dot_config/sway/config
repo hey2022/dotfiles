@@ -36,6 +36,10 @@ exec gammastep
 
 exec swww-daemon
 
+input type:pointer {
+    accel_profile "flat"
+}
+
 input type:touchpad {
     natural_scroll enabled
     dwt disabled

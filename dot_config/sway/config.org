@@ -104,6 +104,13 @@ input type:keyboard {
 #+end_src
 
 ** Pointers
+*** Mouse
+#+begin_src conf
+input type:pointer {
+    accel_profile "flat"
+}
+#+end_src
+
 *** Touchpad
 #+begin_src conf
 input type:touchpad {
