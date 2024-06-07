@@ -353,7 +353,7 @@ bindsym $mod+w exec ~/.config/scripts/wallpaper.sh
 
 ** Screen locker
 #+begin_src conf
-bindsym $mod+shift+escape exec swaylock
+bindsym $mod+escape exec swaylock
 #+end_src
 
 ** Launcher
