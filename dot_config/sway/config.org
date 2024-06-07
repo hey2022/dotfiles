@@ -91,6 +91,10 @@ exec gammastep
 #+begin_src conf
 exec swww-daemon
 #+end_src
+** Navidrome
+#+begin_src emacs-lisp
+exec navidrome
+#+end_src
 
 * Inputs
 Get the names of inputs by running: swaymsg -t get_inputs

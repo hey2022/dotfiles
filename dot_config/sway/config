@@ -36,6 +36,8 @@ exec gammastep
 
 exec swww-daemon
 
+exec navidrome
+
 input type:pointer {
     accel_profile "flat"
 }
