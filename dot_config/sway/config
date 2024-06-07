@@ -44,8 +44,9 @@ input type:pointer {
 
 input type:touchpad {
     natural_scroll enabled
-    dwt disabled
+    dwt enabled
     tap enabled
+    drag disabled
     pointer_accel 1
     accel_profile "flat"
 }
