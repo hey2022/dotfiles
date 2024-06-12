@@ -146,12 +146,6 @@ bindsym $mod+$down focus down
 bindsym $mod+$up focus up
 bindsym $mod+$right focus right
 
-# Arrow keys
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-
 # focus parent
 bindsym $mod+a focus parent
 #+end_src
@@ -162,12 +156,6 @@ bindsym $mod+shift+$left move left
 bindsym $mod+shift+$down move down
 bindsym $mod+shift+$up move up
 bindsym $mod+shift+$right move right
-
-# Arrow keys
-bindsym $mod+shift+Left move left
-bindsym $mod+shift+Down move down
-bindsym $mod+shift+Up move up
-bindsym $mod+shift+Right move right
 #+end_src
 
 *** Switch to Workspace
@@ -318,6 +306,12 @@ bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
 bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
 bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 bindsym XF86AudioMicMute exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+
+# non-media keys
+bindsym $mod+down exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+bindsym $mod+up exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+bindsym $mod+shift+down exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+bindsym $mod+shift+up exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
 #+end_src
 
 *** Brightness
@@ -332,6 +326,11 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+
+# non-media keys
+bindsym $mod+p exec playerctl play-pause
+bindsym $mod+left exec playerctl previous
+bindsym $mod+right exec playerctl next
 #+end_src
 
 ** Screenshots
