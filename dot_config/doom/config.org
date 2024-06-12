@@ -247,6 +247,12 @@ Don't insert braces after _ and ^
 (setq TeX-electric-sub-and-superscript nil)
 #+end_src
 
+** Latex Compile Flags
+Add shell-escape flag
+#+begin_src emacs-lisp
+(setq TeX-command-extra-options "-shell-escape")
+#+end_src
+
 * Writing
 ** Language Tool
 #+begin_src emacs-lisp
