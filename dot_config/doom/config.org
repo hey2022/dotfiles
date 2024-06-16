@@ -166,6 +166,26 @@ Remove file creation date from the capture template
   (:map doom-leader-open-map
         ("a b" . org-timeblock)))
 #+end_src
+*** Org Super Agenda
+#+begin_src emacs-lisp
+(use-package! org-super-agenda
+  :after org-agenda
+  :config
+  (org-super-agenda-mode)
+  (setq org-super-agenda-header-map (make-sparse-keymap))
+  (setq org-super-agenda-groups
+        '((:name "Overdue"
+           :deadline past)
+          (:name "Today"
+           :time-grid t)
+          (:name "Important"
+           :priority "A")
+          (:name "Tasks"
+           :and (:todo t
+                 :not (:habit t)))
+          (:name "Habits"
+           :habit t))))
+#+end_src
 
 ** Org Auto Export
 #+begin_src emacs-lisp
