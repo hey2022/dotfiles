@@ -21,4 +21,4 @@ border-width = 3
 corner-radius = 20
 
 # Search
-matching-algorithm = fuzzy
+fuzzy-match = true
