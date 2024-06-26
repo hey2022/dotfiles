@@ -120,6 +120,11 @@ Remove file creation date from the capture template
 #+end_src
 
 ** Org Agenda
+*** Include Diary
+#+begin_src emacs-lisp
+(setq org-agenda-include-diary t)
+#+end_src
+
 *** School Timetable
 #+begin_src emacs-lisp
 (after! org
