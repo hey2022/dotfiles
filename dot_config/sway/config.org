@@ -315,8 +315,11 @@ bindsym XF86AudioMicMute exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
 # non-media keys
 bindsym $mod+down exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
 bindsym $mod+up exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
-bindsym $mod+shift+down exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
-bindsym $mod+shift+up exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+bindsym $mod+shift+down exec wpctl set-volume -p $(swaymsg -t get_tree | jq '.. | select(.type?) | select(.focused==true) | .pid') 5%-
+bindsym $mod+shift+up exec wpctl set-volume -p $(swaymsg -t get_tree | jq '.. | select(.type?) | select(.focused==true) | .pid') 5%+
+
+bindsym $mod+m exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+bindsym $mod+shift+m exec wpctl set-mute -p $(swaymsg -t get_tree | jq '.. | select(.type?) | select(.focused==true) | .pid') toggle
 #+end_src
 
 *** Brightness
