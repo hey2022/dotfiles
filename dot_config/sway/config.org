@@ -123,6 +123,7 @@ input type:pointer {
 *** Touchpad
 #+begin_src conf
 input type:touchpad {
+    events disabled_on_external_mouse
     natural_scroll enabled
     dwt enabled
     tap enabled
