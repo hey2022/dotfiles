@@ -33,14 +33,13 @@ alias la="ls -la"
 alias ll="ls -l"
 alias cd="z"
 alias cat="bat"
-alias ec="emacsclient -c"
+alias ec="emacsclient -nw"
 alias ff="fastfetch"
 
 alias rm='echo "This is not the command you are looking for."; false'
 alias rmt="trash-put"
 
 alias activate="source ./venv/bin/activate"
-alias ec="emacsclient -c"
 
 # evals
 znap eval zoxide "zoxide init zsh"
