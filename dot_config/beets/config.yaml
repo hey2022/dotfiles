@@ -4,7 +4,7 @@ import:
     move: yes
 
 pluginpath: ~/.config/beets/plugins
-plugins: replaygain scrub chroma fromfilename discogs
+plugins: replaygain scrub chroma fromfilename discogs fetchart
 
 replaygain:
     backend: ffmpeg
