@@ -295,18 +295,22 @@ Add shell-escape flag
 *** Copy current line LSP diagnostic message
 #+begin_src emacs-lisp
 (defun kill-lsp-current-line-diagnostic-message ()
-  "Add the current LSP line diagonstic message to the kill ring, prompting the user if there are more than one."
+  "Add the current line LSP diagonstic message to the kill ring."
   (interactive)
+  (kill-new (lsp-current-line-diagnostic-message)))
+
+(defun lsp-current-line-diagnostic-message ()
+  "Return the current line LSP diagonstic message, prompting the user if there are more than one."
   (let* ((lsp-diagnostics (lsp-cur-line-diagnostics))
          (lsp-messages (get-lsp-messages lsp-diagnostics)))
     (unless lsp-messages
       (user-error "No LSP diagnostic messages on this line"))
     (if (length> lsp-messages 1)
-        (kill-new (completing-read "Message: " lsp-messages))
-      (kill-new (car lsp-messages)))))
+        (completing-read "Message: " lsp-messages)
+      (car lsp-messages))))
 
 (defun get-lsp-messages (lsp-diagnostics)
-  "Get the \"message\" values from LSP-DIAGNOSTICS."
+  "Return the \"message\" values from LSP-DIAGNOSTICS."
   (mapcar (lambda (lsp-diagnostic) (gethash "message" lsp-diagnostic)) (lsp-cur-line-diagnostics)))
 
 (map! :after lsp-mode
