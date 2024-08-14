@@ -294,6 +294,12 @@ Add shell-escape flag
 #+end_src
 *** Copy current line LSP diagnostic message
 #+begin_src emacs-lisp
+(setq search-engine-query-url "https://google.com/search?q=")
+(defun browse-lsp-current-line-diagnostic-message ()
+  "Browse the current line LSP diagonstic message with search-engine-query-url."
+  (interactive)
+  (browse-url (concat search-engine-query-url (lsp-current-line-diagnostic-message))))
+
 (defun kill-lsp-current-line-diagnostic-message ()
   "Add the current line LSP diagonstic message to the kill ring."
   (interactive)
@@ -315,5 +321,6 @@ Add shell-escape flag
 
 (map! :after lsp-mode
       :map doom-leader-code-map
-      "y" #'kill-lsp-current-line-diagnostic-message)
+      "y" #'kill-lsp-current-line-diagnostic-message
+      "Y" #'browse-lsp-current-line-diagnostic-message)
 #+end_src
