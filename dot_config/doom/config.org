@@ -292,7 +292,7 @@ Add shell-escape flag
 (after! lsp-mode
   (setq lsp-inlay-hint-enable t))
 #+end_src
-*** Copy LSP message at current line
+*** Copy current line LSP diagnostic message
 #+begin_src emacs-lisp
 (defun kill-lsp-current-line-diagnostic-message ()
   "Add the current LSP line diagonstic message to the kill ring, prompting the user if there are more than one."
