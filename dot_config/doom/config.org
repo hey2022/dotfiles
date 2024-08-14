@@ -292,7 +292,7 @@ Add shell-escape flag
 (after! lsp-mode
   (setq lsp-inlay-hint-enable t))
 #+end_src
-*** Copy current line LSP diagnostic message
+*** Current line LSP diagnostic message
 #+begin_src emacs-lisp
 (setq search-engine-query-url "https://google.com/search?q=")
 (defun browse-lsp-current-line-diagnostic-message ()
