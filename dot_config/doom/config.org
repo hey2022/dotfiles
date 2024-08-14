@@ -292,3 +292,14 @@ Add shell-escape flag
 (after! lsp-mode
   (setq lsp-inlay-hint-enable t))
 #+end_src
+*** Copy LSP message at current line
+#+begin_src emacs-lisp
+(defun kill-lsp-cur-line-diagnostics ()
+  "Add the current lsp line diagonstic to the kill ring"
+  (interactive)
+  (kill-new (gethash "message" (aref (lsp-cur-line-diagnostics) 0))))
+
+(map! :after lsp-mode
+      :map doom-leader-code-map
+      "y" #'kill-lsp-cur-line-diagnostics)
+#+end_src
