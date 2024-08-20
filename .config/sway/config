@@ -1,0 +1,212 @@
+include /etc/sway/config.d/*
+
+set $mod mod4
+
+set $left h
+set $down j
+set $up k
+set $right l
+
+bindsym $mod+shift+r reload
+
+bindsym $mod+shift+e exec swaynag -t warning -m 'Do you really want to exit sway?' -B 'Yes, exit sway' 'swaymsg exit'
+
+gaps inner 10
+
+default_border pixel 5
+
+bar {
+    swaybar_command waybar
+}
+
+output eDP-1 pos 0 0
+output HDMI1 pos 1920 0
+
+set $laptop eDP-1
+bindswitch --reload --locked lid:on output $laptop disable
+bindswitch --reload --locked lid:off output $laptop enable
+
+exec swayidle -w
+
+exec mako
+
+exec emacs --daemon
+
+exec gammastep
+
+exec swww-daemon
+
+exec navidrome
+
+exec fcitx5
+
+input type:pointer {
+    accel_profile "flat"
+}
+
+input type:touchpad {
+    events disabled_on_external_mouse
+    natural_scroll enabled
+    dwt enabled
+    tap enabled
+    drag disabled
+    pointer_accel 1
+    accel_profile "flat"
+}
+
+input "2:10:TPPS/2_Elan_TrackPoint" {
+    pointer_accel 1
+    accel_profile "flat"
+}
+
+bindsym $mod+tab focus next
+bindsym $mod+shift+tab focus prev
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+
+# focus parent
+bindsym $mod+a focus parent
+
+bindsym $mod+shift+$left move left
+bindsym $mod+shift+$down move down
+bindsym $mod+shift+$up move up
+bindsym $mod+shift+$right move right
+
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+4 workspace number 4
+bindsym $mod+5 workspace number 5
+bindsym $mod+6 workspace number 6
+bindsym $mod+7 workspace number 7
+bindsym $mod+8 workspace number 8
+bindsym $mod+9 workspace number 9
+bindsym $mod+0 workspace number 10
+bindsym $mod+minus workspace -
+
+bindgesture swipe:right workspace prev
+bindgesture swipe:left workspace next
+
+bindsym $mod+control+1 [workspace=1] move workspace to output current, workspace number 1
+bindsym $mod+control+2 [workspace=2] move workspace to output current, workspace number 2
+bindsym $mod+control+3 [workspace=3] move workspace to output current, workspace number 3
+bindsym $mod+control+4 [workspace=4] move workspace to output current, workspace number 4
+bindsym $mod+control+5 [workspace=5] move workspace to output current, workspace number 5
+bindsym $mod+control+6 [workspace=6] move workspace to output current, workspace number 6
+bindsym $mod+control+7 [workspace=7] move workspace to output current, workspace number 7
+bindsym $mod+control+8 [workspace=8] move workspace to output current, workspace number 8
+bindsym $mod+control+9 [workspace=9] move workspace to output current, workspace number 9
+bindsym $mod+control+0 [workspace=10] move workspace to output current, workspace number 10
+bindsym $mod+control+minus [workspace=-] move workspace to output current, workspace -
+
+bindsym $mod+shift+1 move container to workspace number 1
+bindsym $mod+shift+2 move container to workspace number 2
+bindsym $mod+shift+3 move container to workspace number 3
+bindsym $mod+shift+4 move container to workspace number 4
+bindsym $mod+shift+5 move container to workspace number 5
+bindsym $mod+shift+6 move container to workspace number 6
+bindsym $mod+shift+7 move container to workspace number 7
+bindsym $mod+shift+8 move container to workspace number 8
+bindsym $mod+shift+9 move container to workspace number 9
+bindsym $mod+shift+0 move container to workspace number 10
+bindsym $mod+shift+minus move container to workspace -
+
+mode "resize" {
+    bindsym $left resize shrink width 10px
+    bindsym $down resize grow height 10px
+    bindsym $up resize shrink height 10px
+    bindsym $right resize grow width 10px
+
+    bindsym Left resize shrink width 10px
+    bindsym Down resize grow height 10px
+    bindsym Up resize shrink height 10px
+    bindsym Right resize grow width 10px
+
+    bindsym return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+bindsym $mod+grave Scratchpad show
+bindsym $mod+shift+grave floating enable, resize set 1440 810, move position center, move Scratchpad
+
+bindsym $mod+q kill
+
+# Force kill
+bindsym $mod+shift+q exec ~/.config/sway/force_kill.sh
+
+bindsym $mod+b splith
+bindsym $mod+v splitv
+bindsym $mod+n split none
+
+bindsym $mod+s layout stacking
+bindsym $mod+t layout tabbed
+bindsym $mod+e layout toggle split
+
+floating_modifier $mod normal
+bindsym $mod+x floating toggle
+bindsym mod1+tab focus mode_toggle
+
+bindsym $mod+control+$left focus output left
+bindsym $mod+control+$down focus output down
+bindsym $mod+control+$up focus output up
+bindsym $mod+control+$right focus output right
+
+bindsym $mod+control+shift+$left move workspace to output left
+bindsym $mod+control+shift+$down move workspace to output down
+bindsym $mod+control+shift+$up move workspace to output up
+bindsym $mod+control+shift+$right move workspace to output right
+
+bindsym $mod+f fullscreen
+
+bindsym $mod+return exec foot
+
+bindsym $mod+shift+return exec emacsclient -c
+
+bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+bindsym XF86AudioMicMute exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+
+# non-media keys
+bindsym $mod+down exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+bindsym $mod+up exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+bindsym $mod+shift+down exec wpctl set-volume -p $(swaymsg -t get_tree | jq '.. | select(.type?) | select(.focused==true) | .pid') 5%-
+bindsym $mod+shift+up exec wpctl set-volume -p $(swaymsg -t get_tree | jq '.. | select(.type?) | select(.focused==true) | .pid') 5%+
+
+bindsym $mod+m exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+bindsym $mod+shift+m exec wpctl set-mute -p $(swaymsg -t get_tree | jq '.. | select(.type?) | select(.focused==true) | .pid') toggle
+
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+# non-media keys
+bindsym $mod+p exec playerctl play-pause
+bindsym $mod+left exec playerctl previous
+bindsym $mod+right exec playerctl next
+
+set $screenshot_path $(xdg-user-dir PICTURES)/screenshots/$(date +"%Y%m%d%H%M%S").png
+
+bindsym $mod+insert exec grim $screenshot_path
+bindsym $mod+ctrl+insert exec grim - | wl-copy
+
+bindsym $mod+shift+insert exec grim -g "$(slurp)" $screenshot_path
+bindsym $mod+ctrl+shift+insert exec grim -g "$(slurp)" - | wl-copy
+
+bindsym $mod+w exec ~/.config/scripts/wallpaper.sh
+
+bindsym $mod+escape exec swaylock
+
+set $drun tofi-drun | xargs swaymsg exec --
+bindsym $mod+space exec $drun
+
+set $menu tofi-run | xargs swaymsg exec --
+bindsym $mod+shift+space exec $menu
