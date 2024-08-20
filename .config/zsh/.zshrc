@@ -43,7 +43,7 @@ alias activate="source ./venv/bin/activate"
 
 # evals
 znap eval zoxide "zoxide init zsh"
-znap eval thefuck "thefuck --alias"
+znap eval thefuck "thefuck --alias --enable-experimental-instant-mode"
 znap eval mcfly "mcfly init zsh"
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
