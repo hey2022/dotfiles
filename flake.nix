@@ -16,12 +16,12 @@
 		nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
 			inherit system;
 			modules = [
-				./nixos/hosts/desktop/configuration.nix
+				./hosts/desktop/configuration.nix
 			];
 		};
 		homeConfigurations.yiheng = home-manager.lib.homeManagerConfiguration {
 			pkgs = nixpkgs.legacyPackages.${system};
-			modules = [ ./home-manager/home.nix ];
+			modules = [ ./home/home.nix ];
 		};
 	};
 }
