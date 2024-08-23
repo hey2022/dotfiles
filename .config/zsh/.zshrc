@@ -33,7 +33,7 @@ alias la="ls -la"
 alias ll="ls -l"
 alias cd="z"
 alias cat="bat"
-alias ec="emacsclient -nw"
+alias ec="emacsclient -c"
 alias ff="fastfetch"
 
 alias rm='echo "This is not the command you are looking for."; false'
