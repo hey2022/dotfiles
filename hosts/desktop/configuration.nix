@@ -5,10 +5,9 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [ # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -62,6 +61,7 @@
     wget
     fastfetch
     neovim
+    nixfmt
 
     home-manager
   ];
@@ -82,13 +82,14 @@
     syncthing = {
       enable = true;
       user = "yiheng";
-      dataDir = "/home/yiheng/sync";    # Default folder for new synced folders
-      configDir = "/home/yiheng/.config/syncthing";   # Folder for Syncthing's settings and keys
+      dataDir = "/home/yiheng/sync"; # Default folder for new synced folders
+      configDir =
+        "/home/yiheng/.config/syncthing"; # Folder for Syncthing's settings and keys
     };
   };
 
-  nix.settings.experimental-features = ["nix-command" "flakes"];
-      
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -118,4 +119,3 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.05"; # Did you read the comment?
 }
-
