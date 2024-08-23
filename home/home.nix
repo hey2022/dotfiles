@@ -53,4 +53,11 @@
     feishin
     mullvad-vpn
   ];
+
+  home.file = {
+    ".config" = {
+      source = ../.config;
+      recursive = true;
+    };
+  };
 }
