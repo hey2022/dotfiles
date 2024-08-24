@@ -40,6 +40,10 @@ exec navidrome
 
 exec fcitx5
 
+input type:keyboard {
+    xkb_options caps:escape
+}
+
 input type:pointer {
     accel_profile "flat"
 }

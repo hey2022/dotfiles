@@ -105,10 +105,9 @@ exec fcitx5
 Get the names of inputs by running: swaymsg -t get_inputs
 See /usr/share/X11/xkb/rules/xorg.lst for options
 ** Keyboard
-Using keyd to remap caps to escape and ctrl instead of xkb_options.
-#+begin_src conf :tangle no
+#+begin_src conf
 input type:keyboard {
-  # xkb_options caps:escape
+    xkb_options caps:escape
 }
 #+end_src
 
