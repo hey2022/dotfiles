@@ -38,6 +38,7 @@
     git
     wget
     neovim
+    emacs
 
     # Research
     zotero
