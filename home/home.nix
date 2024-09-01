@@ -66,5 +66,6 @@
       source = ../.local/share/fonts;
       recursive = true;
     };
+    ".zshenv".source = ../.zshenv;
   };
 }
