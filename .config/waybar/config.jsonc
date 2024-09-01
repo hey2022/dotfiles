@@ -17,7 +17,6 @@
     "temperature",
     "cpu",
     "memory",
-    "temperature",
     "battery",
     "network"
   ],
