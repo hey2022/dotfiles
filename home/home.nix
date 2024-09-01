@@ -31,6 +31,11 @@
     mako
     tofi
 
+    # Shell
+    eza
+    ripgrep
+    fd
+
     # Development
     python311Packages.grip
     bun
@@ -39,8 +44,6 @@
     wget
     neovim
     emacs
-    ripgrep
-    fd
 
     # Research
     zotero
