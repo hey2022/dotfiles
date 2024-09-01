@@ -35,6 +35,7 @@
     eza
     ripgrep
     fd
+    bat
 
     # Development
     python311Packages.grip
