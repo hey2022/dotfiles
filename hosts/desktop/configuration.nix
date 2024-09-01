@@ -109,6 +109,7 @@
       localNetworkGameTransfers.openFirewall = true;
     };
   };
+  programs.zsh.enable = true;
 
   # List services that you want to enable:
 
