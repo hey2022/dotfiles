@@ -5,7 +5,8 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ # Include the results of the hardware scan.
+  imports = [
+    # Include the results of the hardware scan.
     ./hardware-configuration.nix
   ];
 
@@ -84,12 +85,14 @@
       enable = true;
       user = "yiheng";
       dataDir = "/home/yiheng/sync"; # Default folder for new synced folders
-      configDir =
-        "/home/yiheng/.config/syncthing"; # Folder for Syncthing's settings and keys
+      configDir = "/home/yiheng/.config/syncthing"; # Folder for Syncthing's settings and keys
     };
   };
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
