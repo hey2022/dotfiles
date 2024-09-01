@@ -34,7 +34,7 @@
     # Development
     python311Packages.grip
     bun
-    nixfmt
+    nixfmt-rfc-style
     git
     wget
     neovim

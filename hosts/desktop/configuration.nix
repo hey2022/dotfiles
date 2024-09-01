@@ -62,7 +62,7 @@
     wget
     fastfetch
     neovim
-    nixfmt
+    nixfmt-rfc-style
 
     home-manager
   ];
