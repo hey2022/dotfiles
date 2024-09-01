@@ -62,5 +62,9 @@
       source = ../.config;
       recursive = true;
     };
+    ".local/share/fonts" = {
+      source = ../.local/share/fonts;
+      recursive = true;
+    };
   };
 }
