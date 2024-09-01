@@ -110,6 +110,7 @@
     };
   };
   programs.zsh.enable = true;
+  users.defaultUserShell = pkgs.zsh;
 
   # List services that you want to enable:
 
