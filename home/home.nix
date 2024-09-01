@@ -39,6 +39,8 @@
     wget
     neovim
     emacs
+    ripgrep
+    fd
 
     # Research
     zotero
