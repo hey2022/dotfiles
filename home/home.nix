@@ -53,6 +53,7 @@
     # CLI
     trackma
     fastfetch
+    hyperfine
 
     # Apps
     firefox
