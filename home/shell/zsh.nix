@@ -6,6 +6,7 @@
     ripgrep
     fd
     bat
+    zoxide
   ];
 
   home.file = {
