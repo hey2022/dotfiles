@@ -9,16 +9,19 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, ... }:
-    let system = "x86_64-linux";
-    in {
+  outputs =
+    { nixpkgs, home-manager, ... }:
+    let
+      system = "x86_64-linux";
+    in
+    {
       nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [ ./hosts/desktop/configuration.nix ];
       };
-      homeConfigurations.yiheng = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations."yiheng@desktop" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
-        modules = [ ./home/home.nix ];
+        modules = [ ./hosts/desktop/home.nix ];
       };
     };
 }

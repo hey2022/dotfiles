@@ -64,13 +64,13 @@
 
   home.file = {
     ".config" = {
-      source = ../.config;
+      source = ../../.config;
       recursive = true;
     };
     ".local/share/fonts" = {
-      source = ../.local/share/fonts;
+      source = ../../.local/share/fonts;
       recursive = true;
     };
-    ".zshenv".source = ../.zshenv;
+    ".zshenv".source = ../../.zshenv;
   };
 }
