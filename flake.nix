@@ -23,5 +23,9 @@
         pkgs = nixpkgs.legacyPackages.${system};
         modules = [ ./hosts/desktop/home.nix ];
       };
+      homeConfigurations."yiheng@goon" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.${system};
+        modules = [ ./hosts/goon/home.nix ];
+      };
     };
 }
