@@ -4,6 +4,7 @@
   imports = [
     ../../home/desktop/sway.nix
     ../../home/shell/zsh.nix
+    ../../home/dev
   ];
   home.username = "yiheng";
   home.homeDirectory = "/home/yiheng";
@@ -21,15 +22,6 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
   home.packages = with pkgs; [
-    # Development
-    python311Packages.grip
-    bun
-    nixfmt-rfc-style
-    git
-    wget
-    neovim
-    emacs
-
     # Research
     zotero
     biber
