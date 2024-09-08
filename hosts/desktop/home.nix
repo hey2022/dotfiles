@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 
 {
+  imports = [ ../../home/desktop/sway.nix ];
   home.username = "yiheng";
   home.homeDirectory = "/home/yiheng";
 
@@ -17,20 +18,6 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
   home.packages = with pkgs; [
-    # Desktop
-    sway
-    waybar
-    swww
-    foot
-    wlogout
-    swaylock
-    swayidle
-    grim
-    slurp
-    wl-clipboard
-    mako
-    tofi
-
     # Shell
     eza
     ripgrep
