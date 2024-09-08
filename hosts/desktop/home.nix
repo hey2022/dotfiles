@@ -1,7 +1,10 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ../../home/desktop/sway.nix ];
+  imports = [
+    ../../home/desktop/sway.nix
+    ../../home/shell/zsh.nix
+  ];
   home.username = "yiheng";
   home.homeDirectory = "/home/yiheng";
 
@@ -18,12 +21,6 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
   home.packages = with pkgs; [
-    # Shell
-    eza
-    ripgrep
-    fd
-    bat
-
     # Development
     python311Packages.grip
     bun
@@ -58,6 +55,5 @@
       source = ../../.local/share/fonts;
       recursive = true;
     };
-    ".zshenv".source = ../../.zshenv;
   };
 }
