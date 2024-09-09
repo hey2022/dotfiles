@@ -28,7 +28,6 @@
 
     # CLI
     trackma
-    fastfetch
     hyperfine
 
     # Apps

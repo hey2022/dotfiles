@@ -7,6 +7,7 @@
     fd
     bat
     zoxide
+    fastfetch
   ];
 
   home.file = {
