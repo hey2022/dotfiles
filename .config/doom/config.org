@@ -263,7 +263,7 @@ Remove file creation date from the capture template
 (after! org
   (add-to-list 'org-capture-templates '("s" "School Todo" entry
                                         (file+headline "~/school/school.org" "Tasks")
-                                        "* TODO %? %^G\nDEADLINE: %^{Deadline}T\n%i")))
+                                        "* TODO %? %^G\nDEADLINE: %^{Deadline}t\n%i")))
 #+end_src
 
 * Latex
