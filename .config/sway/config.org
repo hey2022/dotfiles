@@ -73,7 +73,7 @@ exec swayidle -w
 
 ** Notification daemon
 #+begin_src conf
-exec mako
+exec swaync
 #+end_src
 
 ** Emacs
@@ -256,7 +256,7 @@ Change split direction
 #+begin_src conf
 bindsym $mod+b splith
 bindsym $mod+v splitv
-bindsym $mod+n split none
+bindsym $mod+shift+n split none
 #+end_src
 **** Switch layouts
 #+begin_src conf
@@ -371,4 +371,8 @@ bindsym $mod+space exec $drun
 set $menu tofi-run | xargs swaymsg exec --
 bindsym $mod+shift+space exec $menu
 
+#+end_src
+** Notifications
+#+begin_src conf
+bindsym $mod+n exec swaync-client -t
 #+end_src

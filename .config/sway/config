@@ -28,7 +28,7 @@ bindswitch --reload --locked lid:off output $laptop enable
 
 exec swayidle -w
 
-exec mako
+exec swaync
 
 exec emacs --daemon
 
@@ -144,7 +144,7 @@ bindsym $mod+shift+q exec ~/.config/sway/force_kill.sh
 
 bindsym $mod+b splith
 bindsym $mod+v splitv
-bindsym $mod+n split none
+bindsym $mod+shift+n split none
 
 bindsym $mod+s layout stacking
 bindsym $mod+t layout tabbed
@@ -214,3 +214,5 @@ bindsym $mod+space exec $drun
 
 set $menu tofi-run | xargs swaymsg exec --
 bindsym $mod+shift+space exec $menu
+
+bindsym $mod+n exec swaync-client -t

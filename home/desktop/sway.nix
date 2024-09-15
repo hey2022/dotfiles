@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 
 {
+  imports = [ ./swaync.nix ];
   home.packages = with pkgs; [
     sway
     waybar
@@ -12,7 +13,6 @@
     grim
     slurp
     wl-clipboard
-    mako
     tofi
   ];
 
@@ -23,10 +23,6 @@
     };
     ".config/gammastep" = {
       source = ../../.config/gammastep;
-      recursive = true;
-    };
-    ".config/mako" = {
-      source = ../../.config/mako;
       recursive = true;
     };
     ".config/sway" = {
