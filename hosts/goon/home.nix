@@ -4,6 +4,7 @@
   imports = [
     ../../home/shell/zsh.nix
     ../../home/dev
+    ../../home/font.nix
   ];
   home.username = "yiheng";
   home.homeDirectory = "/home/yiheng";
@@ -39,10 +40,6 @@
   home.file = {
     ".config" = {
       source = ../../.config;
-      recursive = true;
-    };
-    ".local/share/fonts" = {
-      source = ../../.local/share/fonts;
       recursive = true;
     };
   };
