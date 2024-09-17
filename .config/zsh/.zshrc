@@ -21,6 +21,7 @@ znap source zsh-users/zsh-history-substring-search
 znap source marlonrichert/zsh-autocomplete
 bindkey              "^I"         menu-complete
 bindkey "$terminfo[kcbt]" reverse-menu-complete
+bindkey -M menuselect '^M' .accept-line
 
 # History
 HISTSIZE=1000
