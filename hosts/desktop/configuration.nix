@@ -10,6 +10,7 @@
     ./hardware-configuration.nix
     ../../system/ly.nix
     ../../system/nix-ld.nix
+    ../../system/services
   ];
 
   # Use the systemd-boot EFI boot loader.
@@ -72,16 +73,10 @@
 
   services = {
     mullvad-vpn.enable = true;
-    tailscale.enable = true;
     pipewire = {
       enable = true;
       alsa.enable = true;
       pulse.enable = true;
-    };
-    openssh = {
-      enable = true;
-      settings.PasswordAuthentication = false;
-      settings.KbdInteractiveAuthentication = false;
     };
     syncthing = {
       enable = true;
