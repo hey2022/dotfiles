@@ -8,6 +8,7 @@
     bat
     zoxide
     fastfetch
+    trash-cli
   ];
 
   home.file = {
