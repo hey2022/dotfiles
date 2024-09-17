@@ -9,6 +9,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ../../system/ly.nix
+    ../../system/nix-ld.nix
   ];
 
   # Use the systemd-boot EFI boot loader.
