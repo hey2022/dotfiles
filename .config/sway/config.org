@@ -366,10 +366,10 @@ bindsym $mod+escape exec swaylock
 ** Launcher
 #+begin_src conf
 set $drun tofi-drun | xargs swaymsg exec --
-bindsym $mod+space exec $drun
+bindsym $mod+space exec pkill tofi || $drun
 
 set $menu tofi-run | xargs swaymsg exec --
-bindsym $mod+shift+space exec $menu
+bindsym $mod+shift+space exec pkill tofi || $menu
 
 #+end_src
 ** Notifications
