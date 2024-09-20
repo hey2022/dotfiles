@@ -1,11 +1,17 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  ...
+}:
 
 {
   imports = [
+    ../../home
     ../../home/shell/zsh.nix
     ../../home/dev
     ../../home/services
   ];
+
   home.username = "yiheng";
   home.homeDirectory = "/home/yiheng";
 
@@ -19,6 +25,7 @@
   # changes in each release.
   home.stateVersion = "24.05";
 
+  nixGL.enable = true;
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
   home.packages = with pkgs; [
