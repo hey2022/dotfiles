@@ -1,6 +1,11 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ./swaync.nix
+    ./blueman.nix
+    ./pipewire.nix
+  ];
   home.packages = with pkgs; [
     sway
     waybar
@@ -13,10 +18,6 @@
     slurp
     wl-clipboard
     tofi
-  imports = [
-    ./swaync.nix
-    ./blueman.nix
-  ];
 
   home.file = {
     ".config/foot" = {
