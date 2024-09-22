@@ -4,6 +4,7 @@ export EDITOR="emacsclient -nw"
 export PATH="$PATH:/opt/bin:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.config/emacs/bin"
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export QT_QPA_PLATFORMTHEME="qt5ct"
+export FLAKE="$HOME/.dotfiles"
 
 export GTK_IM_MODULE="fcitx"
 export QT_IM_MODULE="fcitx"
