@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 
 {
+  imports = [ ./nix-index.nix ];
   home.packages = with pkgs; [
     eza
     ripgrep
