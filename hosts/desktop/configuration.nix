@@ -11,6 +11,7 @@
     ../../system/ly.nix
     ../../system/nix-ld.nix
     ../../system/services
+    ../../system/bluetooth.nix
   ];
 
   # Use the systemd-boot EFI boot loader.
