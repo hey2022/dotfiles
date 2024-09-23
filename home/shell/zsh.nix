@@ -15,7 +15,7 @@
 
   home.file = {
     ".zshenv".source = ../../.zshenv;
-    ".zsh" = {
+    ".config/zsh/" = {
       source = ../../.config/zsh;
       recursive = true;
     };
