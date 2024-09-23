@@ -5,10 +5,10 @@
     ./swaync.nix
     ./blueman.nix
     ./pipewire.nix
+    ./waybar.nix
   ];
   home.packages = with pkgs; [
     sway
-    waybar
     swww
     foot
     wlogout
@@ -42,10 +42,6 @@
     };
     ".config/tofi" = {
       source = ../../.config/tofi;
-      recursive = true;
-    };
-    ".config/waybar" = {
-      source = ../../.config/waybar;
       recursive = true;
     };
   };
