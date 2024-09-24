@@ -6,5 +6,15 @@
 }:
 
 {
-  home.packages = with pkgs; [ swaynotificationcenter ];
+  services.swaync = {
+    enable = true;
+    settings = {
+      "widgets" = [
+        "title"
+        "dnd"
+        "mpris"
+        "notifications"
+      ];
+    };
+  };
 }
