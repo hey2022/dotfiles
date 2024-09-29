@@ -8,6 +8,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ../../system/desktop/xdg
     ../../system/ly.nix
     ../../system/nix-ld.nix
     ../../system/services
