@@ -9,7 +9,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ../../system/desktop/xdg
-    ../../system/ly.nix
+    ../../system/desktop/regreet.nix
     ../../system/nix-ld.nix
     ../../system/services
     ../../system/bluetooth.nix
