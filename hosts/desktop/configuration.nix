@@ -12,6 +12,7 @@
     ../../system/nix-ld.nix
     ../../system/services
     ../../system/bluetooth.nix
+    ../../system/flatpak.nix
   ];
 
   # Use the systemd-boot EFI boot loader.
