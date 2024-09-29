@@ -18,6 +18,7 @@
     slurp
     wl-clipboard
     tofi
+  ];
 
   home.file = {
     ".config/foot" = {
