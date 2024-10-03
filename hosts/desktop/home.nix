@@ -3,7 +3,7 @@
 {
   imports = [
     ../../home
-    ../../home/desktop/sway.nix
+    ../../home/desktop/sway
     ../../home/shell/zsh.nix
     ../../home/dev
   ];

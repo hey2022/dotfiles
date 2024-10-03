@@ -7,6 +7,7 @@
 {
   imports = [
     ../../home
+    ../../home/desktop/sway
     ../../home/shell/zsh.nix
     ../../home/dev
     ../../home/services
