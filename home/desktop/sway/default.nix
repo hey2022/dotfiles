@@ -7,7 +7,7 @@
     ../pipewire.nix
     ../waybar.nix
     ../wayvnc.nix
-    ../terminal/wezterm.nix
+    ../terminal/wezterm
     ../terminal/foot
   ];
 
