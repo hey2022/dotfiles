@@ -20,7 +20,7 @@ in
       Type = "simple";
       ExecStart = "${
         pkgs.writeShellApplication {
-          name = "${name}";
+          name = name;
           runtimeInputs = [
             pkgs.systemd
             pkgs.playerctl
