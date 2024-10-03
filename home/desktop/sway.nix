@@ -6,11 +6,11 @@
     ./blueman.nix
     ./pipewire.nix
     ./waybar.nix
+    ./terminal/foot
   ];
   home.packages = with pkgs; [
     sway
     swww
-    foot
     wlogout
     swaylock
     swayidle
@@ -21,10 +21,6 @@
   ];
 
   home.file = {
-    ".config/foot" = {
-      source = ../../.config/foot;
-      recursive = true;
-    };
     ".config/gammastep" = {
       source = ../../.config/gammastep;
       recursive = true;
