@@ -5,8 +5,11 @@
   ...
 }:
 
+let
+  name = "media-lid-inhibit-lock";
+in
 {
-  systemd.user.services.media-lid-inhibit-lock = {
+  systemd.user.services.${name} = {
     Unit = {
       Description = "Inhibit suspend on lid when media is playing.";
     };
@@ -15,9 +18,16 @@
     };
     Service = {
       Type = "simple";
-      ExecStart = "${pkgs.writeShellScript "media-lid-inhibit-lock" (
-        builtins.readFile ./media-lid-inhibit-lock.sh
-      )}";
+      ExecStart = "${
+        pkgs.writeShellApplication {
+          name = "${name}";
+          runtimeInputs = [
+            pkgs.systemd
+            pkgs.playerctl
+          ];
+          text = builtins.readFile ./${name}.sh;
+        }
+      }/bin/${name}";
       Restart = "on-failure";
     };
   };
