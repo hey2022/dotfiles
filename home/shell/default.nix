@@ -11,6 +11,7 @@
     ./zoxide.nix
     ./nix-index.nix
     ./starship.nix
+    ./env.nix
   ];
 
   home.packages = with pkgs; [

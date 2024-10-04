@@ -9,7 +9,6 @@
     enable = true;
     dotDir = ".config/zsh";
     initExtra = builtins.readFile ./.zshrc;
-    envExtra = builtins.readFile ./.zshenv;
     history.ignoreDups = true;
   };
 }

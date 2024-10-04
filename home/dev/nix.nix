@@ -8,6 +8,6 @@
 {
   home.packages = with pkgs; [ nh ];
   home.sessionVariables = {
-    FLAKE = "~/.dotfiles";
+    FLAKE = "$HOME/.dotfiles";
   };
 }
