@@ -4,6 +4,7 @@
   imports = [
     ../aliases.nix
     ../nix-index.nix
+    ../starship.nix
   ];
 
   programs.zsh = {
