@@ -28,20 +28,6 @@ HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=$ZDOTDIR/history
 
-# Alias
-alias ls="eza --icons"
-alias la="ls -la"
-alias ll="ls -l"
-alias cd="z"
-alias cat="bat"
-alias ec="emacsclient -c"
-alias ff="fastfetch"
-
-alias rm='echo "This is not the command you are looking for."; false'
-alias rmt="trash-put"
-
-alias activate="source ./venv/bin/activate"
-
 # evals
 znap eval zoxide "zoxide init zsh"
 znap eval thefuck "thefuck --alias --enable-experimental-instant-mode"

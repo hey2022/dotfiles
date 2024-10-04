@@ -4,7 +4,7 @@
   imports = [
     ../../home
     ../../home/desktop/sway
-    ../../home/shell/zsh.nix
+    ../../home/shell/zsh
     ../../home/dev
   ];
   home.username = "yiheng";
