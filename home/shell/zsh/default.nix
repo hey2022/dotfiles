@@ -15,12 +15,7 @@
   };
 
   home.packages = with pkgs; [
-    eza
     ripgrep
     fd
-    bat
-    zoxide
-    fastfetch
-    trash-cli
   ];
 }
