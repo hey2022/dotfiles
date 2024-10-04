@@ -288,7 +288,7 @@ bindsym $mod+f fullscreen
 ** Applications
 *** Terminal
 #+begin_src conf
-bindsym $mod+return exec foot
+bindsym $mod+return exec wezterm
 #+end_src
 
 *** Emacs

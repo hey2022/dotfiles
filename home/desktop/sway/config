@@ -162,7 +162,7 @@ bindsym $mod+control+shift+$right move workspace to output right
 
 bindsym $mod+f fullscreen
 
-bindsym $mod+return exec foot
+bindsym $mod+return exec wezterm
 
 bindsym $mod+shift+return exec emacsclient -c
 
