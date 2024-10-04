@@ -28,11 +28,7 @@ bindswitch --reload --locked lid:off output $laptop enable
 
 exec swayidle -w
 
-exec swaync
-
 exec emacs --daemon
-
-exec gammastep
 
 exec swww-daemon
 
