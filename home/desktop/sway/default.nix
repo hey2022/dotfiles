@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ../gammastep.nix
     ../swaylock.nix
     ../swaync.nix
     ../blueman.nix
@@ -30,10 +31,6 @@
   ];
 
   home.file = {
-    ".config/gammastep" = {
-      source = ../../../.config/gammastep;
-      recursive = true;
-    };
     ".config/swayidle" = {
       source = ../../../.config/swayidle;
       recursive = true;
