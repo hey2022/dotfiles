@@ -8,8 +8,6 @@
   imports = [
     ../../home
     ../../home/desktop/sway
-    ../../home/shell
-    ../../home/shell/zsh
     ../../home/shell/nushell
     ../../home/dev
     ../../home/services

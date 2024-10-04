@@ -4,9 +4,8 @@
   imports = [
     ../../home
     ../../home/desktop/sway
-    ../../home/shell
-    ../../home/shell/zsh
     ../../home/dev
+    ../../home/shell/nushell
   ];
   home.username = "yiheng";
   home.homeDirectory = "/home/yiheng";

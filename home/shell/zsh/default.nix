@@ -2,9 +2,7 @@
 
 {
   imports = [
-    ../aliases.nix
-    ../nix-index.nix
-    ../starship.nix
+    ../.
   ];
 
   programs.zsh = {
@@ -14,9 +12,4 @@
     envExtra = builtins.readFile ./.zshenv;
     history.ignoreDups = true;
   };
-
-  home.packages = with pkgs; [
-    ripgrep
-    fd
-  ];
 }
