@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ../swaylock.nix
     ../swaync.nix
     ../blueman.nix
     ../pipewire.nix
@@ -21,7 +22,6 @@
   home.packages = with pkgs; [
     swww
     wlogout
-    swaylock
     swayidle
     grim
     slurp
@@ -36,10 +36,6 @@
     };
     ".config/swayidle" = {
       source = ../../../.config/swayidle;
-      recursive = true;
-    };
-    ".config/swaylock" = {
-      source = ../../../.config/swaylock;
       recursive = true;
     };
     ".config/tofi" = {
