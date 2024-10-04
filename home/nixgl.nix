@@ -14,11 +14,5 @@
     })
   ];
 
-  options = {
-    nixGL.enable = lib.mkEnableOption "Enable nixGL for GPU access on non NixOS systems.";
-  };
-
-  config = lib.mkIf config.nixGL.enable {
-    nixGL.packages = inputs.nixGL.packages;
-  };
+  nixGL.packages = lib.mkIf (builtins.pathExists "/etc/NIXOS") inputs.nixGL.packages;
 }
