@@ -1,9 +1,19 @@
-local wezterm = require 'wezterm'
+local wezterm = require "wezterm"
 
 return {
   front_end = "WebGpu",
 
-  default_prog = { 'nu' },
+  color_scheme = "Tomorrow Night",
+
+  window_background_opacity = 0.9,
+
+  tab_bar_at_bottom = true,
+  window_frame = {
+    active_titlebar_bg = "rgba(0,0,0,0)",
+    inactive_titlebar_bg = "rgba(0,0,0,0)",
+  },
+
+  default_prog = { "nu" },
 
   keys = {
     {key="n", mods="ALT", action=wezterm.action{SpawnTab="CurrentPaneDomain"}},
