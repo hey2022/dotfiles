@@ -6,13 +6,6 @@
 }:
 
 {
-  home.packages = with pkgs; [
-    eza
-    bat
-    fastfetch
-    trash-cli
-  ];
-
   home.shellAliases = {
     ls = "eza --icons";
     la = "ls -la";
