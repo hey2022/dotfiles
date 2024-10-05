@@ -6,16 +6,21 @@
 }:
 
 {
-  programs.git = {
-    enable = true;
-    userEmail = "yiheng.he@proton.me";
-    userName = "Yiheng He";
-    extraConfig.init.defaultBranch = "main";
-    signing = {
-      key = null;
-      # signByDefault = true;
+  programs = {
+    git = {
+      enable = true;
+      userEmail = "yiheng.he@proton.me";
+      userName = "Yiheng He";
+      extraConfig.init.defaultBranch = "main";
+      signing = {
+        key = null;
+        # signByDefault = true;
+      };
+      delta = {
+        enable = true;
+      };
     };
-    delta = {
+    lazygit = {
       enable = true;
     };
   };
