@@ -12,5 +12,6 @@
     bun
     wget
     neovim
+    hyperfine
   ];
 }
