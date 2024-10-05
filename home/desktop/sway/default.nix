@@ -5,12 +5,14 @@
     ../gammastep.nix
     ../swaylock.nix
     ../swaync.nix
+    ../vnc
     ../pipewire.nix
     ../waybar.nix
     ../terminal/wezterm
     ../terminal/foot
   ];
 
+  wayvnc.enable = true;
   wayland.windowManager.sway = {
     enable = true;
     package = config.lib.nixGL.wrap pkgs.sway;
