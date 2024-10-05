@@ -19,6 +19,7 @@
     fastfetch
     trash-cli
     ripgrep
+    tldr
     fd
   ];
 }
