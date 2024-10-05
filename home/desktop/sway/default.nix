@@ -5,7 +5,6 @@
     ../gammastep.nix
     ../swaylock.nix
     ../swaync.nix
-    ../blueman.nix
     ../pipewire.nix
     ../waybar.nix
     ../terminal/wezterm
