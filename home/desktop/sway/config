@@ -136,7 +136,7 @@ bindsym $mod+shift+grave floating enable, resize set 1440 810, move position cen
 bindsym $mod+q kill
 
 # Force kill
-bindsym $mod+shift+q exec ~/.config/sway/force_kill.sh
+bindsym $mod+shift+q exec wkill
 
 bindsym $mod+b splith
 bindsym $mod+v splitv

@@ -10,6 +10,7 @@
     ../waybar.nix
     ../terminal/wezterm
     ../terminal/foot
+    ./wkill.nix
   ];
 
   wayvnc.enable = true;
