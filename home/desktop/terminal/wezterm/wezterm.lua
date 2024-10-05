@@ -13,7 +13,7 @@ return {
     inactive_titlebar_bg = "rgba(0,0,0,0)",
   },
 
-  default_prog = { "nu" },
+  default_prog = { "fish" },
 
   keys = {
     {key="n", mods="ALT", action=wezterm.action{SpawnTab="CurrentPaneDomain"}},

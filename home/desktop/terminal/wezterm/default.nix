@@ -6,7 +6,7 @@
 }:
 
 {
-  imports = [ ../../../shell/nushell ];
+  imports = [ ../../../shell/fish ];
   programs.wezterm = {
     enable = true;
     package = config.lib.nixGL.wrap pkgs.wezterm;
