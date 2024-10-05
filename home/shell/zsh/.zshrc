@@ -22,5 +22,4 @@ HISTFILE=$ZDOTDIR/history
 
 # evals
 znap eval zoxide "zoxide init zsh"
-znap eval thefuck "thefuck --alias --enable-experimental-instant-mode"
 znap eval mcfly "mcfly init zsh"
