@@ -29,7 +29,6 @@
 
     # CLI
     trackma
-    hyperfine
 
     # Apps
     firefox
