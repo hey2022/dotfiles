@@ -1,9 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  imports = [
-    ../.
-  ];
+  imports = [ ../. ];
 
   programs.zsh = {
     enable = true;
