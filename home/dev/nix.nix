@@ -8,6 +8,7 @@
 {
   home.packages = with pkgs; [
     nh
+    nixd
     nixfmt-rfc-style
   ];
   home.sessionVariables = {
