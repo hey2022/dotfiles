@@ -1,6 +1,4 @@
 {
-  config,
-  lib,
   pkgs,
   ...
 }:
@@ -12,6 +10,7 @@
     ./nix-index.nix
     ./starship.nix
     ./env.nix
+    ./fzf.nix
   ];
 
   home.packages = with pkgs; [
