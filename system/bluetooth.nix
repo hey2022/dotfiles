@@ -6,7 +6,6 @@
 }:
 
 {
-  imports = [ ../home/desktop/blueman.nix ];
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
