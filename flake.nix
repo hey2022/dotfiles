@@ -27,6 +27,10 @@
       homeConfigurations."yiheng@desktop" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
         modules = [ ./hosts/desktop/home.nix ];
+
+        extraSpecialArgs = {
+          inherit inputs;
+        };
       };
       homeConfigurations."yiheng@goon" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
