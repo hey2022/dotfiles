@@ -9,6 +9,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ../../system
+    ../../system/programs/steam.nix
     ../../system/desktop/xdg
     ../../system/desktop/regreet.nix
     ../../system/services
@@ -98,14 +99,6 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
-  programs = {
-    steam = {
-      enable = true;
-      remotePlay.openFirewall = true;
-      dedicatedServer.openFirewall = true;
-      localNetworkGameTransfers.openFirewall = true;
-    };
-  };
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
 
