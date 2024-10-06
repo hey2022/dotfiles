@@ -15,6 +15,7 @@
 
   home.packages = with pkgs; [
     eza
+    btop
     bat
     fastfetch
     trashy
