@@ -18,10 +18,6 @@
       indicator-thickness = 7;
       effect-blur = "7x5";
       effect-vignette = "0.5:0.5";
-      ring-color = "283457";
-      key-hl-color = "c0caf5";
-      color = "1a1b26";
-      text-color = "c0caf5";
     };
   };
 }

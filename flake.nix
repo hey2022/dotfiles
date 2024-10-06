@@ -11,10 +11,16 @@
       url = "github:nix-community/nixGL";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    stylix.url = "github:danth/stylix";
   };
 
   outputs =
-    { nixpkgs, home-manager, ... }@inputs:
+    {
+      nixpkgs,
+      home-manager,
+      stylix,
+      ...
+    }@inputs:
     let
       system = "x86_64-linux";
     in
@@ -26,7 +32,10 @@
       };
       homeConfigurations."yiheng@desktop" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
-        modules = [ ./hosts/desktop/home.nix ];
+        modules = [
+          ./hosts/desktop/home.nix
+          stylix.homeManagerModules.stylix
+        ];
 
         extraSpecialArgs = {
           inherit inputs;
@@ -34,7 +43,10 @@
       };
       homeConfigurations."yiheng@goon" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
-        modules = [ ./hosts/goon/home.nix ];
+        modules = [
+          ./hosts/goon/home.nix
+          stylix.homeManagerModules.stylix
+        ];
 
         extraSpecialArgs = {
           inherit inputs;
