@@ -1,4 +1,9 @@
-{ config, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   imports = [
@@ -9,7 +14,8 @@
     ../pipewire.nix
     ../waybar.nix
     ../terminal/wezterm
-    ../terminal/foot
+    ../terminal/foot.nix
+    ../stylix.nix
     ./wkill.nix
   ];
 
@@ -17,7 +23,7 @@
   wayland.windowManager.sway = {
     enable = true;
     package = config.lib.nixGL.wrap pkgs.sway;
-    config = null;
+    config = lib.mkForce null;
     extraConfig = builtins.readFile ./config;
   };
 
