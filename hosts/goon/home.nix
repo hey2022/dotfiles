@@ -4,6 +4,7 @@
   imports = [
     ../../home
     ../../home/desktop/sway
+    ../../home/shell/zsh
     ../../home/shell/nushell
     ../../home/dev
     ../../home/services
