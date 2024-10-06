@@ -18,7 +18,7 @@
     bat
     fastfetch
     trash-cli
-    ripgrep
+    ripgrep-all
     tldr
     fd
   ];
