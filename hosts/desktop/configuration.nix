@@ -10,8 +10,7 @@
     ./hardware-configuration.nix
     ../../system
     ../../system/programs/steam.nix
-    ../../system/desktop/xdg
-    ../../system/desktop/regreet.nix
+    ../../system/desktop
     ../../system/services
     ../../system/flatpak.nix
   ];

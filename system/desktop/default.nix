@@ -1,0 +1,8 @@
+{ ... }:
+
+{
+  imports = [
+    ./regreet.nix
+    ./xdg
+  ];
+}
