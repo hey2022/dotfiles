@@ -10,6 +10,7 @@
     ./starship.nix
     ./env.nix
     ./fzf.nix
+    ./uutils.nix
   ];
 
   home.packages = with pkgs; [
