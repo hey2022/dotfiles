@@ -17,7 +17,7 @@
     eza
     bat
     fastfetch
-    trash-cli
+    trashy
     ripgrep-all
     tldr
     fd

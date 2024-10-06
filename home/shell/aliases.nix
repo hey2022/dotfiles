@@ -16,7 +16,7 @@
     ff = "fastfetch";
 
     rm = ''echo "This is not the command you are looking for."; false'';
-    rmt = "trash-put";
+    tp = "trash put";
 
     activate = "source ./venv/bin/activate";
   };
