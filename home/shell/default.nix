@@ -7,7 +7,6 @@
   imports = [
     ./aliases.nix
     ./zoxide.nix
-    ./nix-index.nix
     ./starship.nix
     ./env.nix
     ./fzf.nix
