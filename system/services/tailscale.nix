@@ -6,6 +6,6 @@
 }:
 
 {
-  services.resolved.enable = true;
+  imports = [ ../network.nix ];
   services.tailscale.enable = true;
 }
