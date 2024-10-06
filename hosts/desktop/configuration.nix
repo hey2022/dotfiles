@@ -8,11 +8,10 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ../../system
     ../../system/desktop/xdg
     ../../system/desktop/regreet.nix
-    ../../system/nix-ld.nix
     ../../system/services
-    ../../system/bluetooth.nix
     ../../system/flatpak.nix
   ];
 
