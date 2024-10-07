@@ -244,7 +244,8 @@ Remove file creation date from the capture template
   (add-hook! org-journal-mode (setq auto-save-default nil))
   (add-hook! org-journal-mode (setq-local undo-tree-auto-save-history nil))
   :config
-  (setq org-journal-enable-encryption t))
+  (setq org-journal-enable-encryption t)
+  (setq org-journal-encrypt-journal t))
 #+end_src
 ** Auto Tangle
 #+begin_src emacs-lisp
