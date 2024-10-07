@@ -1,10 +1,8 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}:
+{ ... }:
 
 {
-  imports = [ ./media-lid-inhibit-lock ];
+  imports = [
+    ./media-lid-inhibit-lock
+    ./lid-inhibit-lock.nix
+  ];
 }
