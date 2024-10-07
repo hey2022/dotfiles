@@ -29,6 +29,7 @@ in
         }
       }/bin/${name}";
       Restart = "on-failure";
+      RestartSec = 5;
     };
   };
 }
