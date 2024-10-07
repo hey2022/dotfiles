@@ -5,7 +5,7 @@
 {
   systemd.user.services."lid-inhibit-lock" = {
     Unit = {
-      Description = "Inhibit lid lock.";
+      Description = "Inhibit lid lock";
     };
     Service = {
       Type = "simple";

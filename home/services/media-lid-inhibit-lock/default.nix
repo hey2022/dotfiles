@@ -11,7 +11,7 @@ in
 {
   systemd.user.services.${name} = {
     Unit = {
-      Description = "Inhibit suspend on lid when media is playing.";
+      Description = "Inhibit suspend on lid when media is playing";
     };
     Install = {
       WantedBy = [ "default.target" ];
