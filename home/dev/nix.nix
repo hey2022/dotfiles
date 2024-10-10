@@ -8,6 +8,7 @@
 {
   home.packages = with pkgs; [
     nh
+    nix-search-cli
     nixd
     nixfmt-rfc-style
   ];
