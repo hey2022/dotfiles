@@ -266,6 +266,12 @@ Remove file creation date from the capture template
                                         "* TODO %? %^G\nDEADLINE: %^{Deadline}t\n%i")))
 #+end_src
 
+** Anki-Editor
+#+begin_src emacs-lisp
+(use-package! anki-editor
+  :after org)
+#+end_src
+
 * Latex
 ** Electric Subscript and Superscript
 Don't insert braces after _ and ^
