@@ -13,5 +13,6 @@
     wget
     neovim
     hyperfine
+    meld
   ];
 }
