@@ -1,7 +1,12 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
-  home.packages = with pkgs; [ emacs ];
+  home.packages = with pkgs; [
+    git
+    emacs
+    ripgrep
+    fd
+  ];
   home.file = {
     ".config/doom" = {
       source = ../../.config/doom;
