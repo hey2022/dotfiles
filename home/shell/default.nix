@@ -19,6 +19,7 @@
     bat
     fastfetch
     trashy
+    ripgrep
     ripgrep-all
     tldr
     fd
