@@ -11,6 +11,10 @@
       url = "github:nix-community/nixGL";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     stylix.url = "github:danth/stylix";
   };
 
@@ -18,6 +22,7 @@
     {
       nixpkgs,
       home-manager,
+      nix-index-database,
       stylix,
       ...
     }@inputs:
@@ -34,6 +39,7 @@
         pkgs = nixpkgs.legacyPackages.${system};
         modules = [
           ./hosts/desktop/home.nix
+          nix-index-database.hmModules.nix-index
           stylix.homeManagerModules.stylix
         ];
 
@@ -45,6 +51,7 @@
         pkgs = nixpkgs.legacyPackages.${system};
         modules = [
           ./hosts/goon/home.nix
+          nix-index-database.hmModules.nix-index
           stylix.homeManagerModules.stylix
         ];
 
