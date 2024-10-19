@@ -23,5 +23,6 @@
     ripgrep-all
     tldr
     fd
+    doggo
   ];
 }
