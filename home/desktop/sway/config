@@ -28,8 +28,6 @@ bindswitch --reload --locked lid:off output $laptop enable
 
 exec swayidle -w
 
-exec emacs --daemon
-
 exec swww-daemon
 
 exec navidrome

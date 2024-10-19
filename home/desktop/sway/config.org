@@ -71,12 +71,6 @@ bindswitch --reload --locked lid:off output $laptop enable
 exec swayidle -w
 #+end_src
 
-** Emacs
-Start Emacs daemon at startup for emacsclient
-#+begin_src conf
-exec emacs --daemon
-#+end_src
-
 ** Background
 #+begin_src conf
 exec swww-daemon
