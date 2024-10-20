@@ -3,6 +3,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ../../system
+    ../../system/desktop/hyprland.nix
     ../../system/programs/steam.nix
     ../../system/programs/utilities
     ../../system/desktop
