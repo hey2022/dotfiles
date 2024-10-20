@@ -274,7 +274,17 @@ Remove file creation date from the capture template
 ** Anki-Editor
 #+begin_src emacs-lisp
 (use-package! anki-editor
-  :after org)
+  :after org
+  :hook (org-mode . anki-editor-mode)
+  :config
+  (map! :map org-mode-map
+        :localleader
+        :prefix ("R" . "Anki Editor")
+        :desc "Insert note" "i" #'anki-editor-insert-note
+        :desc "Push notes" "p" #'anki-editor-push-notes
+        :desc "Cloze note" "c" #'anki-editor-cloze-dwim
+        :desc "Delete current note" "d" #'anki-editor-delete-note-at-point
+        :desc "Browse current note" "b" #'anki-editor-gui-browse))
 #+end_src
 
 * Latex
