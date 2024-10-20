@@ -3,6 +3,7 @@
 {
   imports = [
     ../../home
+    ../../home/desktop/hyprland
     ../../home/desktop/sway
     ../../home/dev
     ../../home/shell/nushell
