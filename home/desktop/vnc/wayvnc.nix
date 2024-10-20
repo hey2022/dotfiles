@@ -22,7 +22,7 @@
         Type = "simple";
         ExecStart = "${pkgs.wayvnc}/bin/wayvnc -r";
         Restart = "always";
-        RestartSec = 5;
+        RestartSec = 15;
       };
     };
   };
