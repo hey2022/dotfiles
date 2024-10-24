@@ -67,6 +67,7 @@ Sets font to a custom build of Iosevka using https://typeof.net/Iosevka/customiz
   (setq org-directory "~/org/")
   (setq org-agenda-files '("~/org/personal.org" "~/school/school.org")))
 #+end_src
+
 ** Latex Preview
 *** Latex Preview Startup
 #+begin_src emacs-lisp
@@ -176,6 +177,7 @@ Remove file creation date from the capture template
   (:map doom-leader-open-map
         ("a b" . org-timeblock)))
 #+end_src
+
 *** Org Super Agenda
 #+begin_src emacs-lisp
 (use-package! org-super-agenda
@@ -220,6 +222,7 @@ Remove file creation date from the capture template
     (interactive)
     (org-export-on-save 'org-html-export-to-html)))
 #+end_src
+
 ** Smartparens
 #+begin_src emacs-lisp
 (after! org
@@ -238,10 +241,12 @@ Remove file creation date from the capture template
    :map doom-leader-notes-map
    :desc "Org Transclusion Mode" "t" #'org-transclusion-mode))
 #+end_src
+
 ** Org Habit
 #+begin_src emacs-lisp
 (add-to-list 'org-modules 'org-habit)
 #+end_src
+
 ** Journal
 #+begin_src emacs-lisp
 (use-package! org-journal
@@ -252,17 +257,20 @@ Remove file creation date from the capture template
   (setq org-journal-enable-encryption t)
   (setq org-journal-encrypt-journal t))
 #+end_src
+
 ** Auto Tangle
 #+begin_src emacs-lisp
 (use-package org-auto-tangle
   :hook (org-mode . org-auto-tangle-mode))
 #+end_src
+
 ** Org Modern
 #+begin_src emacs-lisp
 (use-package org
   :hook (org-mode . org-modern-mode)
   :hook (org-agenda-finalize . org-modern-agenda))
 #+end_src
+
 ** Org Capture Templates
 #+begin_src emacs-lisp
 (after! org
@@ -306,6 +314,7 @@ Add shell-escape flag
 (after! langtool
   (setq langtool-default-language "en-GB"))
 #+end_src
+
 * Programming
 ** LSP Mode
 *** Inlay Hints
@@ -313,6 +322,7 @@ Add shell-escape flag
 (after! lsp-mode
   (setq lsp-inlay-hint-enable t))
 #+end_src
+
 *** Current line LSP diagnostic message
 #+begin_src emacs-lisp
 (setq search-engine-query-url "https://google.com/search?q=")
