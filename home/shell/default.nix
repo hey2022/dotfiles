@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -11,6 +8,7 @@
     ./env.nix
     ./fzf.nix
     ./uutils.nix
+    ./direnv.nix
   ];
 
   home.packages = with pkgs; [
