@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./network.nix
+    ./network
     ./bluetooth.nix
     ./nix-ld.nix
   ];
