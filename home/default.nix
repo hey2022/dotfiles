@@ -1,12 +1,10 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}:
+{ pkgs, ... }:
 
 {
-  imports = [ ./nixgl.nix ];
+  imports = [
+    ./nixgl.nix
+    ./xdg
+  ];
   home.stateVersion = "24.05";
   programs.home-manager.enable = true;
   nixpkgs.config.allowUnfree = true;
