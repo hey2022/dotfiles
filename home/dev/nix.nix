@@ -1,16 +1,9 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}:
-
-{
+{pkgs, ...}: {
   home.packages = with pkgs; [
     nh
     nix-search-cli
     nixd
-    nixfmt-rfc-style
+    alejandra
   ];
   programs.nix-index-database.comma.enable = true;
   home.sessionVariables = {

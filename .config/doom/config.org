@@ -358,3 +358,10 @@ Add shell-escape flag
       "y" #'kill-lsp-current-line-diagnostic-message
       "Y" #'browse-lsp-current-line-diagnostic-message)
 #+end_src
+
+** Nix
+#+begin_src emacs-lisp
+(after! nix-mode
+  (set-formatter! 'alejandra '("alejandra" "--quiet") :modes '(nix-mode))
+  (setq-hook! 'nix-mode-hook +format-with-lsp nil))
+#+end_src
