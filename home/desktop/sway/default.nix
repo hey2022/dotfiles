@@ -30,7 +30,6 @@
   home.packages = with pkgs; [
     swww
     wlogout
-    swayidle
     grim
     slurp
     wl-clipboard
@@ -38,10 +37,6 @@
   ];
 
   home.file = {
-    ".config/swayidle" = {
-      source = ../../../.config/swayidle;
-      recursive = true;
-    };
     ".config/tofi" = {
       source = ../../../.config/tofi;
       recursive = true;

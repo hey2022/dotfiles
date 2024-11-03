@@ -66,11 +66,6 @@ bindswitch --reload --locked lid:off output $laptop enable
 #+end_src
 
 * Autostart
-** Swayidle
-#+begin_src conf
-exec swayidle -w
-#+end_src
-
 ** Background
 #+begin_src conf
 exec swww-daemon
