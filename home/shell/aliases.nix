@@ -1,6 +1,4 @@
-{ ... }:
-
-{
+{...}: {
   home.shellAliases = {
     ls = "eza --icons";
     la = "ls -la";

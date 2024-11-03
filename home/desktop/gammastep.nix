@@ -3,9 +3,7 @@
   lib,
   pkgs,
   ...
-}:
-
-{
+}: {
   services.gammastep = {
     enable = true;
     temperature = {

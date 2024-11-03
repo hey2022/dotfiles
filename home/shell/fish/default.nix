@@ -3,10 +3,8 @@
   lib,
   pkgs,
   ...
-}:
-
-{
-  imports = [ ../. ];
+}: {
+  imports = [../.];
   home.sessionVariables = {
     fish_greeting = "";
   };

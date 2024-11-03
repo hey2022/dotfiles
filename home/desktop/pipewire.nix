@@ -3,8 +3,6 @@
   lib,
   pkgs,
   ...
-}:
-
-{
-  home.packages = with pkgs; [ pwvucontrol ];
+}: {
+  home.packages = with pkgs; [pwvucontrol];
 }

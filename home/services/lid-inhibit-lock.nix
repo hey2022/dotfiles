@@ -1,8 +1,4 @@
-{
-  ...
-}:
-
-{
+{...}: {
   systemd.user.services."lid-inhibit-lock" = {
     Unit = {
       Description = "Inhibit lid lock";

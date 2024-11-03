@@ -3,9 +3,7 @@
   lib,
   pkgs,
   ...
-}:
-
-{
+}: {
   home = {
     sessionPath = [
       "$HOME/.config/emacs/bin"

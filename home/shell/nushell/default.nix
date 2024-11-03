@@ -3,10 +3,8 @@
   lib,
   pkgs,
   ...
-}:
-
-{
-  imports = [ ../. ];
+}: {
+  imports = [../.];
   programs.nushell = {
     enable = true;
     configFile.source = ./config.nu;

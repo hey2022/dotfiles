@@ -1,6 +1,4 @@
-{ ... }:
-
-{
+{...}: {
   networking = {
     networkmanager.dns = "none";
     nameservers = [
@@ -8,7 +6,7 @@
       "::1"
     ];
     hosts = {
-      "34.223.124.45" = [ "neverssl.com" ];
+      "34.223.124.45" = ["neverssl.com"];
     };
   };
   services.dnscrypt-proxy2 = {

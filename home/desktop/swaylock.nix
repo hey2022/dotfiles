@@ -3,12 +3,13 @@
   lib,
   pkgs,
   ...
-}:
-
-{
+}: {
   programs.swaylock = {
     enable = true;
-    package = if builtins.pathExists "/etc/NIXOS" then pkgs.swaylock-effects else pkgs.emptyDirectory;
+    package =
+      if builtins.pathExists "/etc/NIXOS"
+      then pkgs.swaylock-effects
+      else pkgs.emptyDirectory;
     settings = {
       screenshots = true;
       clock = true;

@@ -3,8 +3,6 @@
   lib,
   pkgs,
   ...
-}:
-
-{
-  home.packages = with pkgs; [ gnupg ];
+}: {
+  home.packages = with pkgs; [gnupg];
 }

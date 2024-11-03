@@ -1,6 +1,4 @@
-{ ... }:
-
-{
-  imports = [ ./dnscrypt.nix ];
+{...}: {
+  imports = [./dnscrypt.nix];
   networking.networkmanager.enable = true;
 }

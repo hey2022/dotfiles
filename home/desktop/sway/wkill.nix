@@ -3,9 +3,7 @@
   lib,
   pkgs,
   ...
-}:
-
-{
+}: {
   home.packages = [
     (pkgs.writeShellApplication {
       name = "wkill";

@@ -3,9 +3,7 @@
   lib,
   pkgs,
   ...
-}:
-
-{
+}: {
   imports = [
     ../gammastep.nix
     ../swaylock.nix

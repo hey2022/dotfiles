@@ -3,10 +3,8 @@
   lib,
   pkgs,
   ...
-}:
-
-{
-  imports = [ ../../../shell/fish ];
+}: {
+  imports = [../../../shell/fish];
   programs.wezterm = {
     enable = true;
     package = config.lib.nixGL.wrap pkgs.wezterm;
