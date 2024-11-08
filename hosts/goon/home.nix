@@ -10,6 +10,7 @@
     ../../home/shell/nushell
     ../../home/dev
     ../../home/services
+    ../../home/programs/email.nix
   ];
 
   home.username = "yiheng";
