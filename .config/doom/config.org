@@ -365,3 +365,14 @@ Add shell-escape flag
   (set-formatter! 'alejandra '("alejandra" "--quiet") :modes '(nix-mode))
   (setq-hook! 'nix-mode-hook +format-with-lsp nil))
 #+end_src
+
+** Copilot
+#+begin_src emacs-lisp
+(use-package! copilot
+  :hook (prog-mode . copilot-mode)
+  :bind (:map copilot-completion-map
+              ("<tab>" . 'copilot-accept-completion)
+              ("TAB" . 'copilot-accept-completion)
+              ("C-TAB" . 'copilot-accept-completion-by-word)
+              ("C-<tab>" . 'copilot-accept-completion-by-word)))
+#+end_src

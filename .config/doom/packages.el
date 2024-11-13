@@ -12,3 +12,6 @@
   :recipe (:host github :repo "anki-editor/anki-editor"))
 
 (package! affe)
+
+(package! copilot
+  :recipe (:host github :repo "copilot-emacs/copilot.el" :files ("*.el")))
