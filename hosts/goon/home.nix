@@ -11,6 +11,7 @@
     ../../home/dev
     ../../home/services
     ../../home/programs/email.nix
+    ../../home/programs/browsers/brave.nix
   ];
 
   home.username = "yiheng";
