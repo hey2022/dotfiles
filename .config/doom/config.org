@@ -299,12 +299,6 @@ Remove file creation date from the capture template
 #+end_src
 
 * Latex
-** Electric Subscript and Superscript
-Don't insert braces after _ and ^
-#+begin_src emacs-lisp
-(setq TeX-electric-sub-and-superscript nil)
-#+end_src
-
 ** Latex Compile Flags
 Add shell-escape flag
 #+begin_src emacs-lisp
