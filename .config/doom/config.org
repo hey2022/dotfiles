@@ -311,7 +311,7 @@ If no tags are provided, return all files."
                   :where (in tag $v1)])))
     (mapcar #'car (org-roam-db-query query tags))))
 
-(defun org-roam-ui-export (target &optional tags)
+(defun org-roam-export (target &optional tags)
   "Copy org-roam files with tags in TAGS to TARGET and generate a new Org Roam database.
 If no tags are provided, copy all files."
   (interactive
