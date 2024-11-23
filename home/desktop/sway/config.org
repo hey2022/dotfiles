@@ -71,11 +71,6 @@ bindswitch --reload --locked lid:off output $laptop enable
 exec swww-daemon
 #+end_src
 
-** Navidrome
-#+begin_src emacs-lisp
-exec navidrome
-#+end_src
-
 ** Input method
 Use fcitx5 as input method
 #+begin_src conf

@@ -28,8 +28,6 @@ bindswitch --reload --locked lid:off output $laptop enable
 
 exec swww-daemon
 
-exec navidrome
-
 exec fcitx5
 
 input type:keyboard {
