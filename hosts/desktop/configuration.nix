@@ -14,6 +14,7 @@
     ../../system/desktop
     ../../system/services
     ../../system/flatpak.nix
+    ../../system/network/mullvad.nix
   ];
 
   # Use the systemd-boot EFI boot loader.
@@ -64,7 +65,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     git
-    mullvad-vpn
     wget
     fastfetch
     neovim
@@ -73,7 +73,6 @@
   ];
 
   services = {
-    mullvad-vpn.enable = true;
     pipewire = {
       enable = true;
       alsa.enable = true;

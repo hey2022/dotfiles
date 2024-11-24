@@ -25,6 +25,5 @@
     firefox
     keepassxc
     feishin
-    mullvad-vpn
   ];
 }
