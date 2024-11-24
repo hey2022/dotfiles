@@ -5,6 +5,7 @@
 }: {
   imports = [
     ../../home
+    ../../home/desktop
     ../../home/desktop/sway
     ../../home/dev
     ../../home/shell/nushell

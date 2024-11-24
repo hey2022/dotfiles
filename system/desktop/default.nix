@@ -3,5 +3,6 @@
     ./regreet.nix
     ./xdg
     ./gtk.nix
+    ./mount.nix
   ];
 }

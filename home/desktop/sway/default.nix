@@ -15,6 +15,7 @@
     ../terminal/foot.nix
     ../stylix.nix
     ./wkill.nix
+    ../file-manager/dolphin.nix
   ];
 
   wayvnc.enable = true;
