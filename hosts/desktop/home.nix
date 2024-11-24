@@ -11,6 +11,7 @@
     ../../home/shell/nushell
     ../../home/programs/email.nix
     ../../home/programs/beets.nix
+    ../../home/programs/documents
   ];
   home.username = "yiheng";
   home.homeDirectory = "/home/yiheng";

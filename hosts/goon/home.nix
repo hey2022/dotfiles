@@ -13,6 +13,7 @@
     ../../home/services
     ../../home/programs/email.nix
     ../../home/programs/browsers/brave.nix
+    ../../home/programs/documents
   ];
 
   home.username = "yiheng";
