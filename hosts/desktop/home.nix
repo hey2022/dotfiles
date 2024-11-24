@@ -14,6 +14,7 @@
     ../../home/programs/documents
     ../../home/programs/wechat.nix
     ../../home/programs/inkscape.nix
+    ../../home/programs/browsers/brave.nix
   ];
   home.username = "yiheng";
   home.homeDirectory = "/home/yiheng";
