@@ -10,6 +10,7 @@
     ../../home/dev
     ../../home/shell/nushell
     ../../home/programs/email.nix
+    ../../home/programs/beets.nix
   ];
   home.username = "yiheng";
   home.homeDirectory = "/home/yiheng";
