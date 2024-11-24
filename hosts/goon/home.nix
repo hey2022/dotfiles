@@ -14,6 +14,7 @@
     ../../home/programs/email.nix
     ../../home/programs/browsers/brave.nix
     ../../home/programs/documents
+    ../../home/programs/wechat.nix
   ];
 
   home.username = "yiheng";

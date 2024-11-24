@@ -12,6 +12,7 @@
     ../../home/programs/email.nix
     ../../home/programs/beets.nix
     ../../home/programs/documents
+    ../../home/programs/wechat.nix
     ../../home/programs/inkscape.nix
   ];
   home.username = "yiheng";
