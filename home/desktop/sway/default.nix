@@ -33,6 +33,7 @@
     slurp
     wl-clipboard
     tofi
+    playerctl
   ];
 
   home.file = {
