@@ -22,7 +22,6 @@
   home.packages = with pkgs; [
     # Research
     zotero
-    biber
 
     # CLI
     trackma
