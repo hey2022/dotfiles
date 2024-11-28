@@ -334,11 +334,6 @@ Wallpaper switcher that uses tofi to change swww wallpaper
 bindsym $mod+w exec ~/.config/scripts/wallpaper.sh
 #+end_src
 
-** Screen locker
-#+begin_src conf
-bindsym $mod+escape exec swaylock
-#+end_src
-
 ** Launcher
 #+begin_src conf
 set $drun tofi-drun | xargs swaymsg exec --

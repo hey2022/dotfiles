@@ -6,7 +6,7 @@
 }: {
   imports = [
     ../gammastep.nix
-    ../swaylock.nix
+    ../hyprlock.nix
     ../swaync.nix
     ../vnc
     ../pipewire.nix

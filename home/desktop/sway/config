@@ -197,8 +197,6 @@ bindsym $mod+ctrl+shift+insert exec grim -g "$(slurp)" - | wl-copy
 
 bindsym $mod+w exec ~/.config/scripts/wallpaper.sh
 
-bindsym $mod+escape exec swaylock
-
 set $drun tofi-drun | xargs swaymsg exec --
 bindsym $mod+space exec pkill tofi || $drun
 
