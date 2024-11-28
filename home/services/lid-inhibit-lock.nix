@@ -30,5 +30,5 @@ in {
       ExecStart = ''systemd-inhibit --what=handle-lid-switch --why="Inhibit lid lock" sleep infinity'';
     };
   };
-  wayland.windowManager.sway.extraConfig = lib.mkAfter "bindsym $mod+i exec toggle-${name}";
+  wayland.windowManager.sway.extraConfig = lib.mkIf config.wayland.windowManager.sway.enable (lib.mkAfter "bindsym $mod+i exec toggle-${name}");
 }
