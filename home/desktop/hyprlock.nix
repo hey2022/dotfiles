@@ -22,6 +22,8 @@
         position = "0, 80";
         font_family = "Inter";
         font_size = 64;
+        halign = "center";
+        valign = "center";
       };
       background = {
         blur_passes = 2;
