@@ -11,6 +11,9 @@ in {
     git
     ripgrep
     fd
+
+    # copilot-node-server
+    nodejs_18
   ];
   programs.emacs = {
     enable = true;
