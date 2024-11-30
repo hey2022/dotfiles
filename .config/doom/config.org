@@ -283,7 +283,9 @@ Remove file creation date from the capture template
 #+begin_src emacs-lisp
 (use-package! anki-editor
   :after org
-  :hook (org-mode . anki-editor-mode)
+  :hook (org-mode . (lambda ()
+                      (if (ignore-errors (anki-editor-api-check))
+                          (anki-editor-mode))))
   :config
   (map! :map anki-editor-mode-map
         :leader
@@ -297,6 +299,7 @@ Remove file creation date from the capture template
         :desc "Set current note type" "t" #'anki-editor-set-note-type
         :desc "Push new notes" "P" #'anki-editor-push-new-notes))
 #+end_src
+
 ** Org Roam export to publish
 #+begin_src emacs-lisp
 (defun org-roam-get-files-with-tag (&optional tags)
