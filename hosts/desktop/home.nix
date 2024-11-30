@@ -10,7 +10,7 @@
     ../../home/dev
     ../../home/shell/nushell
     ../../home/programs/email.nix
-    ../../home/programs/beets.nix
+    ../../home/programs/cli
     ../../home/programs/documents
     ../../home/programs/wechat.nix
     ../../home/programs/inkscape.nix

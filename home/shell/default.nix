@@ -4,7 +4,6 @@
     ./zoxide.nix
     ./starship.nix
     ./env.nix
-    ./fzf.nix
     ./uutils.nix
     ./direnv.nix
   ];
@@ -19,6 +18,5 @@
     ripgrep-all
     tldr
     fd
-    doggo
   ];
 }

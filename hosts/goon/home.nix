@@ -11,6 +11,7 @@
     ../../home/shell/nushell
     ../../home/dev
     ../../home/services
+    ../../home/programs/cli
     ../../home/programs/email.nix
     ../../home/programs/browsers/brave.nix
     ../../home/programs/documents
