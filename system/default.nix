@@ -3,6 +3,7 @@
     ./network
     ./bluetooth.nix
     ./nix-ld.nix
+    ./ssh.nix
   ];
   system.stateVersion = "23.05";
   nix = {
