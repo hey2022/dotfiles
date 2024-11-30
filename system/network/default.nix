@@ -1,6 +1,9 @@
 {pkgs, ...}: {
   imports = [./dnscrypt.nix];
-  networking.networkmanager.enable = true;
+  networking = {
+    nftables.enable = true;
+    networkmanager.enable = true;
+  };
 
   # https://github.com/NixOS/nixpkgs/issues/180175
   systemd.services.NetworkManager-wait-online = {
