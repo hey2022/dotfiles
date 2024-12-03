@@ -10,7 +10,6 @@
       "$HOME/.cargo/bin"
     ];
     sessionVariables = {
-      ALTERNATE_EDITOR = "";
       VISUAL = "emacsclient -c";
       EDITOR = "emacsclient -nw";
       QT_QPA_PLATFORMTHEME = "qt5ct";
