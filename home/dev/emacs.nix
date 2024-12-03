@@ -1,4 +1,5 @@
 {
+  config,
   pkgs,
   inputs,
   ...
@@ -27,7 +28,7 @@ in {
   };
   home.file = {
     ".config/doom" = {
-      source = ../../.config/doom;
+      source = config.lib.file.mkOutOfStoreSymlink "${config.home.dotfiles}/.config/doom";
       recursive = true;
     };
   };
