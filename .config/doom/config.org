@@ -329,6 +329,12 @@ If no tags are provided, copy all files."
     (org-roam-db-sync)))
 #+end_src
 
+** Latex Snippets
+#+begin_src emacs-lisp
+(after! org
+  (add-hook! org-mode (yas-activate-extra-mode 'latex-mode)))
+#+end_src
+
 * Latex
 ** Latex Compile Flags
 Add shell-escape flag
