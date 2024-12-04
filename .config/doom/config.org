@@ -284,7 +284,7 @@ Remove file creation date from the capture template
 (use-package! anki-editor
   :after org
   :hook (org-mode . (lambda ()
-                      (if (ignore-errors (anki-editor-api-check))
+                      (if (ignore-errors (anki-editor-api-check) t)
                           (anki-editor-mode))))
   :config
   (map! :map anki-editor-mode-map
