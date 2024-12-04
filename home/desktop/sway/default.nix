@@ -5,7 +5,7 @@
   ...
 }: {
   imports = [
-    ../gammastep.nix
+    ../brightness.nix
     ../hyprlock.nix
     ../swaync.nix
     ../vnc
