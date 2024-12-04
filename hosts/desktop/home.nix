@@ -9,12 +9,10 @@
     ../../home/desktop/sway
     ../../home/dev
     ../../home/shell/nushell
-    ../../home/programs/email.nix
     ../../home/programs/cli
-    ../../home/programs/documents
     ../../home/programs/wechat.nix
-    ../../home/programs/inkscape.nix
     ../../home/programs/browsers/brave.nix
+    ../../home/profiles/education.nix
   ];
   home.username = "yiheng";
   home.homeDirectory = "/home/yiheng";
