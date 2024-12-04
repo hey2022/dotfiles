@@ -91,11 +91,12 @@ Sets font to a custom build of Iosevka using https://typeof.net/Iosevka/customiz
 
 *** minted
 #+begin_src emacs-lisp
-(setq org-latex-listings 'minted
-      org-latex-packages-alist '(("" "minted"))
-      org-latex-pdf-process
-      '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
-        "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
+(after! org
+  (add-to-list 'org-latex-packages-alist '("" "minted" t))
+  (setq org-latex-listings 'minted
+        org-latex-pdf-process
+        '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+          "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f")))
 #+end_src
 
 ** Org Roam
