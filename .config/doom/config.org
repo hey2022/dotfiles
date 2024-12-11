@@ -100,13 +100,26 @@ Sets font to a custom build of Iosevka using https://typeof.net/Iosevka/customiz
 #+end_src
 
 ** Org Roam
-Remove file creation date from the capture template
+*** Capture Templates
+Setup Org Roam capture templates.
 #+begin_src emacs-lisp
+(defun org-roam-template-select-tags ()
+  "Prompt and add tags for Org Roam captures"
+  (let ((tags (completing-read-multiple "Tag: " (org-roam-tag-completions))))
+    (if tags
+        (concat "#+filetags: " (org-make-tag-string tags))
+      "")))
+
 (after! org-roam
   (setq org-roam-capture-templates
-        '(("d" "default" plain "%?" :target
-           (file+head "${slug}.org" "#+title: ${title}\n")
-           :unnarrowed t))))
+        '(("d" "Default" plain "%?"
+           :target (file+head "${slug}.org" "#+title: ${title}\n%(org-roam-template-select-tags)\n")
+           :unnarrowed t
+           :empty-lines 1)
+          ("a" "Anki Card" plain "* ${title}\n%?"
+           :target (file+head "${slug}.org" ":PROPERTIES:\n:ANKI_DECK: Main\n:END:\n#+title: ${title}\n%(org-roam-template-select-tags)\n")
+           :unnarrowed t
+           :empty-lines 1))))
 #+end_src
 
 *** Org Roam UI
