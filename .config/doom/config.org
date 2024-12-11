@@ -125,6 +125,35 @@ Remove file creation date from the capture template
   (org-roam-ui-open-on-start t))
 #+end_src
 
+*** Org Roam Export to Publish
+#+begin_src emacs-lisp
+(defun org-roam-get-files-with-tag (&optional tags)
+  "Return a list of org-roam files that contain tags in TAGS.
+If no tags are provided, return all files."
+  (let ((query (if (null tags)
+                   [:select :distinct file
+                    :from nodes]
+                 [:select :distinct file
+                  :from nodes
+                  :join tags :on (= id node-id)
+                  :where (in tag $v1)])))
+    (mapcar #'car (org-roam-db-query query tags))))
+
+(defun org-roam-export (target &optional tags)
+  "Copy org-roam files with tags in TAGS to TARGET and generate a new Org Roam database.
+If no tags are provided, copy all files."
+  (interactive
+   (list
+    (read-directory-name "Target: ")
+    (apply #'vector (completing-read-multiple "Tags: " (org-roam-tag-completions)))))
+  (let ((files (org-roam-get-files-with-tag tags))
+        (org-roam-directory target)
+        (org-roam-db-location (concat target "/org-roam.db")))
+    (dolist (file files)
+      (copy-file file org-roam-directory t))
+    (org-roam-db-sync)))
+#+end_src
+
 ** Org Agenda
 *** Include Diary
 #+begin_src emacs-lisp
@@ -299,35 +328,6 @@ Remove file creation date from the capture template
         :desc "Browse current note" "b" #'anki-editor-gui-browse
         :desc "Set current note type" "t" #'anki-editor-set-note-type
         :desc "Push new notes" "P" #'anki-editor-push-new-notes))
-#+end_src
-
-** Org Roam export to publish
-#+begin_src emacs-lisp
-(defun org-roam-get-files-with-tag (&optional tags)
-  "Return a list of org-roam files that contain tags in TAGS.
-If no tags are provided, return all files."
-  (let ((query (if (null tags)
-                   [:select :distinct file
-                    :from nodes]
-                 [:select :distinct file
-                  :from nodes
-                  :join tags :on (= id node-id)
-                  :where (in tag $v1)])))
-    (mapcar #'car (org-roam-db-query query tags))))
-
-(defun org-roam-export (target &optional tags)
-  "Copy org-roam files with tags in TAGS to TARGET and generate a new Org Roam database.
-If no tags are provided, copy all files."
-  (interactive
-   (list
-    (read-directory-name "Target: ")
-    (apply #'vector (completing-read-multiple "Tags: " (org-roam-tag-completions)))))
-  (let ((files (org-roam-get-files-with-tag tags))
-        (org-roam-directory target)
-        (org-roam-db-location (concat target "/org-roam.db")))
-    (dolist (file files)
-      (copy-file file org-roam-directory t))
-    (org-roam-db-sync)))
 #+end_src
 
 ** Latex Snippets
