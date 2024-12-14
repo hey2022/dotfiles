@@ -195,6 +195,9 @@ bindsym $mod+ctrl+insert exec grim - | wl-copy
 bindsym $mod+shift+insert exec grim -g "$(slurp)" $screenshot_path
 bindsym $mod+ctrl+shift+insert exec grim -g "$(slurp)" - | wl-copy
 
+bindsym $mod+o exec grim -g "$(slurp)" - | tesseract -l eng - - | wl-copy
+bindsym $mod+shift+o exec grim -g "$(slurp)" - | tesseract -l chi_sim - - | wl-copy
+
 bindsym $mod+w exec ~/.config/scripts/wallpaper.sh
 
 set $drun tofi-drun | xargs swaymsg exec --

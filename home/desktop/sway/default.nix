@@ -31,6 +31,7 @@
     wlogout
     grim
     slurp
+    tesseract
     wl-clipboard
     tofi
     playerctl

@@ -328,6 +328,13 @@ bindsym $mod+shift+insert exec grim -g "$(slurp)" $screenshot_path
 bindsym $mod+ctrl+shift+insert exec grim -g "$(slurp)" - | wl-copy
 #+end_src
 
+** OCR
+OCR using grim + slurp + tesseract + wl-clipboard.
+#+begin_src conf
+bindsym $mod+o exec grim -g "$(slurp)" - | tesseract -l eng - - | wl-copy
+bindsym $mod+shift+o exec grim -g "$(slurp)" - | tesseract -l chi_sim - - | wl-copy
+#+end_src
+
 ** Wallpaper switcher
 Wallpaper switcher that uses tofi to change swww wallpaper
 #+begin_src conf
