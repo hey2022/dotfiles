@@ -1,13 +1,9 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
+{...}: {
   home = {
     sessionPath = [
       "$HOME/.config/emacs/bin"
       "$HOME/.cargo/bin"
+      "$HOME/.local/bin"
     ];
     sessionVariables = {
       VISUAL = "emacsclient -c";
