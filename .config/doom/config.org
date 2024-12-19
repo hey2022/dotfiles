@@ -319,7 +319,7 @@ If no tags are provided, copy all files."
 (after! org
   (add-to-list 'org-capture-templates '("s" "School Todo" entry
                                         (file+headline "~/school/school.org" "Tasks")
-                                        "* TODO %? %^G\nDEADLINE: %^{Deadline}t\n%i")))
+                                        "* TODO %? %^G\nDEADLINE: %^{Deadline}t\n%^{EFFORT}p\n%i")))
 #+end_src
 
 ** Anki-Editor
