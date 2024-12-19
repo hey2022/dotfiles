@@ -156,8 +156,11 @@ bindsym $mod+minus workspace -
 
 **** Gestures
 #+begin_src conf
-bindgesture swipe:right workspace prev
-bindgesture swipe:left workspace next
+bindgesture swipe:3:right focus left
+bindgesture swipe:3:left focus right
+
+bindgesture swipe:4:right workspace prev
+bindgesture swipe:4:left workspace next
 #+end_src
 
 **** Monitor switch workspace
