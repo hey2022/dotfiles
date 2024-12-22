@@ -1,16 +1,10 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running `nixos-help`).
-{
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ../../system
     ../../system/programs/steam.nix
+    ../../system/programs/utilities
     ../../system/desktop
     ../../system/services
     ../../system/flatpak.nix
@@ -88,6 +82,11 @@
       enable = true;
       MusicFolder = "/home/yiheng/music";
     };
+  };
+
+  programs.ydotool = {
+    enable = true;
+    users = ["yiheng"];
   };
 
   # Some programs need SUID wrappers, can be configured further or are
