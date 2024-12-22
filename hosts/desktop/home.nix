@@ -13,6 +13,7 @@
     ../../home/programs/wechat.nix
     ../../home/programs/browsers/brave.nix
     ../../home/profiles/education.nix
+    ../../home/profiles/gaming.nix
   ];
   home.username = "yiheng";
   home.homeDirectory = "/home/yiheng";

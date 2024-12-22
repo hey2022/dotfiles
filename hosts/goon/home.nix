@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
     ../../home
     ../../home/desktop
@@ -15,6 +11,7 @@
     ../../home/programs/browsers/brave.nix
     ../../home/programs/wechat.nix
     ../../home/profiles/education.nix
+    ../../home/profiles/gaming.nix
   ];
 
   home.username = "yiheng";
