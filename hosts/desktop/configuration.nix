@@ -6,6 +6,7 @@
     ../../system/programs/steam.nix
     ../../system/programs/utilities
     ../../system/desktop
+    ../../system/desktop/hyprland.nix
     ../../system/services
     ../../system/flatpak.nix
     ../../system/network/mullvad.nix

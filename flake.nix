@@ -20,6 +20,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     stylix.url = "github:danth/stylix";
+    hyprland.url = "github:hyprwm/Hyprland";
   };
 
   outputs = {
@@ -34,6 +35,7 @@
     formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.alejandra;
     nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
       inherit system;
+      specialArgs = {inherit inputs;};
       modules = [./hosts/desktop/configuration.nix];
     };
     homeConfigurations."yiheng@desktop" = home-manager.lib.homeManagerConfiguration {
