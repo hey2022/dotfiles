@@ -4,6 +4,7 @@
     ./git.nix
     ./gpg.nix
     ./nix.nix
+    ./java.nix
   ];
   home.packages = with pkgs; [
     python311Packages.grip
