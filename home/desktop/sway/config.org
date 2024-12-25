@@ -335,7 +335,7 @@ bindsym $mod+ctrl+shift+insert exec grim -g "$(slurp)" - | wl-copy
 OCR using grim + slurp + tesseract + wl-clipboard.
 #+begin_src conf
 bindsym $mod+o exec grim -g "$(slurp)" - | tesseract -l eng - - | wl-copy
-bindsym $mod+shift+o exec grim -g "$(slurp)" - | tesseract -l chi_sim - - | wl-copy
+bindsym $mod+shift+o exec grim -g "$(slurp)" - | tesseract -l chi_sim+jpn+kor -c preserve_interword_spaces=1 - - | wl-copy
 #+end_src
 
 ** Wallpaper switcher
