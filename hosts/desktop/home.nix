@@ -7,6 +7,7 @@
     ../../home
     ../../home/desktop
     ../../home/desktop/sway
+    ../../home/programs/games
     ../../home/dev
     ../../home/shell/nushell
     ../../home/programs/cli
