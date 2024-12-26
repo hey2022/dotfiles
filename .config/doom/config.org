@@ -437,3 +437,9 @@ and `defcustom' forms reset their default values."
       (forward-sexp)
       (eval-defun nil))))
 #+end_src
+
+** Mindustry Logic
+#+begin_src emacs-lisp
+(use-package! mlog-mode
+  :mode ("\\.\\(mlog\\|masm\\)\\'"))
+#+end_src

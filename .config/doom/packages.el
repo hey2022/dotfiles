@@ -15,3 +15,6 @@
 
 (package! copilot
   :recipe (:host github :repo "copilot-emacs/copilot.el" :files ("*.el")))
+
+(package! mlog-mode
+  :recipe (:host github :repo "hey2022/mlog-mode"))
