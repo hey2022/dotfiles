@@ -5,7 +5,7 @@
     ll = "ls -l";
     cd = "z";
     cat = "bat";
-    ec = "emacsclient -c";
+    ec = "emacsclient -nw";
     ff = "fastfetch";
 
     rm = ''echo "This is not the command you are looking for."; false'';
