@@ -18,5 +18,6 @@
     ripgrep-all
     tldr
     fd
+    dust
   ];
 }
