@@ -73,12 +73,6 @@
       alsa.enable = true;
       pulse.enable = true;
     };
-    syncthing = {
-      enable = true;
-      user = "yiheng";
-      dataDir = "/home/yiheng/sync"; # Default folder for new synced folders
-      configDir = "/home/yiheng/.config/syncthing"; # Folder for Syncthing's settings and keys
-    };
     myNavidrome = {
       enable = true;
       MusicFolder = "/home/yiheng/music";

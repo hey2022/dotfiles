@@ -16,6 +16,7 @@
     ../../home/programs/browsers
     ../../home/profiles/education.nix
     ../../home/profiles/gaming.nix
+    ../../home/services
   ];
   home.username = "yiheng";
   home.homeDirectory = "/home/yiheng";
