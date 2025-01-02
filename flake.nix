@@ -3,6 +3,10 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -39,6 +43,7 @@
 
   outputs = {
     nixpkgs,
+    disko,
     nur,
     home-manager,
     ...
@@ -63,6 +68,11 @@
       extraSpecialArgs = {
         inherit inputs;
       };
+    };
+    nixosConfigurations.goon = nixpkgs.lib.nixosSystem {
+      inherit system;
+      specialArgs = {inherit inputs;};
+      modules = [./hosts/goon/configuration.nix disko.nixosModules.default];
     };
     homeConfigurations."yiheng@goon" = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.${system};
