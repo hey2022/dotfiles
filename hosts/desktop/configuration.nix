@@ -8,6 +8,7 @@
     ../../system/desktop
     ../../system/desktop/hyprland.nix
     ../../system/services
+    ../../system/services/navidrome.nix
     ../../system/flatpak.nix
     ../../system/network/mullvad.nix
   ];
