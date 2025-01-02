@@ -12,8 +12,8 @@
     ../../home/shell/nushell
     ../../home/programs/cli
     ../../home/programs/wechat.nix
-    ../../home/programs/browsers/brave.nix
     ../../home/programs/torrent.nix
+    ../../home/programs/browsers
     ../../home/profiles/education.nix
     ../../home/profiles/gaming.nix
   ];
@@ -28,7 +28,6 @@
     trackma
 
     # Apps
-    firefox
     keepassxc
     feishin
   ];

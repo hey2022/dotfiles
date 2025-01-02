@@ -8,7 +8,7 @@
     ../../home/dev
     ../../home/services
     ../../home/programs/cli
-    ../../home/programs/browsers/brave.nix
+    ../../home/programs/browsers
     ../../home/programs/wechat.nix
     ../../home/profiles/education.nix
     ../../home/profiles/gaming.nix
@@ -26,7 +26,6 @@
     trackma
 
     # Apps
-    firefox
     keepassxc
     feishin
     mullvad-vpn
