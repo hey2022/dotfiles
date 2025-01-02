@@ -7,6 +7,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nixGL = {
       url = "github:nix-community/nixGL";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -35,6 +39,7 @@
 
   outputs = {
     nixpkgs,
+    nur,
     home-manager,
     nix-index-database,
     stylix,
@@ -52,6 +57,7 @@
       pkgs = nixpkgs.legacyPackages.${system};
       modules = [
         ./hosts/desktop/home.nix
+        nur.modules.homeManager.default
         nix-index-database.hmModules.nix-index
         stylix.homeManagerModules.stylix
       ];
@@ -64,6 +70,7 @@
       pkgs = nixpkgs.legacyPackages.${system};
       modules = [
         ./hosts/goon/home.nix
+        nur.modules.homeManager.default
         nix-index-database.hmModules.nix-index
         stylix.homeManagerModules.stylix
       ];
