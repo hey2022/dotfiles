@@ -13,6 +13,7 @@
     ../../home/programs/cli
     ../../home/programs/wechat.nix
     ../../home/programs/browsers/brave.nix
+    ../../home/programs/torrent.nix
     ../../home/profiles/education.nix
     ../../home/profiles/gaming.nix
   ];
