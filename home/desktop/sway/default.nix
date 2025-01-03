@@ -35,6 +35,7 @@
     wl-clipboard
     tofi
     playerctl
+    brightnessctl
   ];
 
   home.file = {
