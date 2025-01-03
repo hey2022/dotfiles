@@ -17,6 +17,7 @@ in {
         "svg.context-properties.content.enabled" = true;
         "uc.tweak.popup-search" = true;
         "uc.tweak.hide-sidebar-header" = true;
+        "uc.tweak.longer-sidebar" = true;
         "extensions.autoDisableScopes" = 0;
       };
       extraConfig = builtins.readFile (builtins.fetchurl {
