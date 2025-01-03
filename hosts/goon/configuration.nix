@@ -1,16 +1,18 @@
-{ config, lib, pkgs, ... }:
-
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-      ./disko-config.nix
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+  imports = [
+    ./hardware-configuration.nix
+    ./disko-config.nix
 
-      ../../system
-      ../../system/desktop
-      ../../system/services
-      ../../system/network/mullvad.nix
-    ];
+    ../../system
+    ../../system/desktop
+    ../../system/services
+    ../../system/network/mullvad.nix
+  ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -23,7 +25,7 @@
 
   users.users.yiheng = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ];
+    extraGroups = ["wheel"];
   };
 
   environment.systemPackages = with pkgs; [
@@ -32,4 +34,3 @@
     home-manager
   ];
 }
-
