@@ -41,8 +41,6 @@
     nixpkgs,
     nur,
     home-manager,
-    nix-index-database,
-    stylix,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -58,8 +56,8 @@
       modules = [
         ./hosts/desktop/home.nix
         nur.modules.homeManager.default
-        nix-index-database.hmModules.nix-index
-        stylix.homeManagerModules.stylix
+        inputs.nix-index-database.hmModules.nix-index
+        inputs.stylix.homeManagerModules.stylix
       ];
 
       extraSpecialArgs = {
@@ -71,8 +69,8 @@
       modules = [
         ./hosts/goon/home.nix
         nur.modules.homeManager.default
-        nix-index-database.hmModules.nix-index
-        stylix.homeManagerModules.stylix
+        inputs.nix-index-database.hmModules.nix-index
+        inputs.stylix.homeManagerModules.stylix
       ];
 
       extraSpecialArgs = {
