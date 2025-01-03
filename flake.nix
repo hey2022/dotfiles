@@ -54,7 +54,7 @@
     nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
       inherit system;
       specialArgs = {inherit inputs;};
-      modules = [./hosts/desktop/configuration.nix];
+      modules = [./hosts/desktop/configuration.nix inputs.stylix.nixosModules.stylix];
     };
     homeConfigurations."yiheng@desktop" = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.${system};
@@ -72,7 +72,7 @@
     nixosConfigurations.goon = nixpkgs.lib.nixosSystem {
       inherit system;
       specialArgs = {inherit inputs;};
-      modules = [./hosts/goon/configuration.nix disko.nixosModules.default];
+      modules = [./hosts/goon/configuration.nix disko.nixosModules.default inputs.stylix.nixosModules.stylix];
     };
     homeConfigurations."yiheng@goon" = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.${system};

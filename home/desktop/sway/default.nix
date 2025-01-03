@@ -13,7 +13,6 @@
     ../waybar.nix
     ../terminal/wezterm
     ../terminal/foot.nix
-    ../stylix.nix
     ./wkill.nix
     ../file-manager/dolphin.nix
   ];
