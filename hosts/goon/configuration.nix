@@ -9,6 +9,7 @@
     ./disko-config.nix
 
     ../../system
+    ../../system/laptop
     ../../system/desktop
     ../../system/services
     ../../system/network/mullvad.nix
