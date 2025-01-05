@@ -5,7 +5,7 @@
     ./nix-ld.nix
     ./ssh.nix
   ];
-  system.stateVersion = "23.05";
+  system.stateVersion = "24.11";
   nix = {
     settings = {
       experimental-features = [
