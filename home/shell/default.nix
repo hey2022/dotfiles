@@ -19,5 +19,6 @@
     tldr
     fd
     dust
+    duf
   ];
 }
