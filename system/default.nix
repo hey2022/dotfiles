@@ -8,6 +8,7 @@
   system.stateVersion = "24.11";
   nix = {
     settings = {
+      keep-going = true;
       experimental-features = [
         "nix-command"
         "flakes"
