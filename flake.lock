@@ -713,7 +713,29 @@
         "nixGL": "nixGL",
         "nixpkgs": "nixpkgs",
         "nur": "nur",
-        "stylix": "stylix"
+        "stylix": "stylix",
+        "tls-xb": "tls-xb"
+      }
+    },
+    "rust-overlay": {
+      "inputs": {
+        "nixpkgs": [
+          "tls-xb",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1735957590,
+        "narHash": "sha256-vbkoQTInunSjwx9DKebbCNBq9bim8CRj1VbS4eiABfg=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "d40e15e076bcedc5bf5498a0f8ff5f18de4bf8c3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "type": "github"
       }
     },
     "stylix": {
@@ -825,6 +847,28 @@
       "original": {
         "owner": "tinted-theming",
         "repo": "tinted-tmux",
+        "type": "github"
+      }
+    },
+    "tls-xb": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "rust-overlay": "rust-overlay"
+      },
+      "locked": {
+        "lastModified": 1736094163,
+        "narHash": "sha256-ixsyQ88iotBLKBijfbRR2P/BPBSgCiOMmzkUhkplBQk=",
+        "owner": "hey2022",
+        "repo": "tls-xb",
+        "rev": "1d2daf1d165f1298135325fefff7e0130ca55e84",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hey2022",
+        "ref": "build/package-tls-xb",
+        "repo": "tls-xb",
         "type": "github"
       }
     },
