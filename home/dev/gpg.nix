@@ -1,8 +1,9 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
-  home.packages = with pkgs; [gnupg];
+{pkgs, ...}: {
+  programs.gpg = {
+    enable = true;
+  };
+  services.gpg-agent = {
+    enable = true;
+    pinentryPackage = pkgs.pinentry-qt;
+  };
 }
