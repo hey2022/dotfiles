@@ -898,16 +898,15 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1736096277,
+        "lastModified": 1736158238,
         "narHash": "sha256-uWx2m/69tFwp3FXDFe5hoA/WmYQgRs8VUL0SjA6k+kk=",
         "owner": "hey2022",
         "repo": "tls-xb",
-        "rev": "e0670fffae4d1999c7580d35fbf0f1bf53f6c761",
+        "rev": "7273a555ce7cbac43f80bbcc8469d00977f5bb8d",
         "type": "github"
       },
       "original": {
         "owner": "hey2022",
-        "ref": "build/package-tls-xb",
         "repo": "tls-xb",
         "type": "github"
       }

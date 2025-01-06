@@ -41,7 +41,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     tls-xb = {
-      url = "github:hey2022/tls-xb/build/package-tls-xb";
+      url = "github:hey2022/tls-xb";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
