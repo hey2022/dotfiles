@@ -27,7 +27,7 @@ in {
     };
     Service = {
       Type = "simple";
-      ExecStart = ''systemd-inhibit --what=handle-lid-switch --why="Inhibit lid lock" sleep infinity'';
+      ExecStart = ''${pkgs.systemd}/bin/systemd-inhibit --what=handle-lid-switch --why="Inhibit lid lock" ${pkgs.coreutils}/bin/sleep infinity'';
     };
   };
   wayland.windowManager.sway.extraConfig = lib.mkIf config.wayland.windowManager.sway.enable (lib.mkAfter "bindsym $mod+i exec toggle-${name}");
