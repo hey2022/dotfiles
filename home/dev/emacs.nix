@@ -6,7 +6,7 @@
 }: let
   emacs = pkgs.emacs-unstable-pgtk;
 in {
-  imports = [./tex.nix];
+  imports = [./tex.nix ../spell.nix];
   nixpkgs.overlays = [(import inputs.emacs-overlay)];
   home.packages = with pkgs; [
     git
@@ -19,7 +19,7 @@ in {
   programs.emacs = {
     enable = true;
     package = emacs;
-    extraPackages = epkgs: [epkgs.vterm];
+    extraPackages = epkgs: with epkgs; [vterm jinx];
   };
   services.emacs = {
     enable = true;

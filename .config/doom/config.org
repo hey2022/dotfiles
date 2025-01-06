@@ -363,6 +363,17 @@ Add shell-escape flag
   (setq langtool-default-language "en-GB"))
 #+end_src
 
+** Jinx
+#+begin_src emacs-lisp
+(use-package! jinx
+  :hook (emacs-startup . global-jinx-mode)
+  :config
+  (setq jinx-languages "en_GB")
+  (map! :n "z=" #'jinx-correct
+        :leader "ts" #'jinx-mode
+        :leader "tS" #'jinx-languages))
+#+end_src
+
 * Programming
 ** LSP Mode
 *** Inlay Hints
