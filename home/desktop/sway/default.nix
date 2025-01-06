@@ -14,7 +14,7 @@
     ../terminal/wezterm
     ../terminal/foot.nix
     ./wkill.nix
-    ../file-manager/dolphin.nix
+    ../file-manager/pcmanfm.nix
   ];
 
   wayvnc.enable = true;
