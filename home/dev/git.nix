@@ -1,9 +1,4 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
+{...}: {
   programs = {
     git = {
       enable = true;
@@ -15,7 +10,7 @@
       };
       signing = {
         key = null;
-        # signByDefault = true;
+        signByDefault = true;
       };
       delta = {
         enable = true;
