@@ -1,3 +1,3 @@
 {...}: {
-  imports = [./userDirs.nix];
+  imports = [./userDirs.nix ./mimeApps.nix];
 }
