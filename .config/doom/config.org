@@ -69,17 +69,34 @@ Sets font to a custom build of Iosevka using https://typeof.net/Iosevka/customiz
 #+end_src
 
 ** Latex Preview
-*** Latex Preview Startup
 #+begin_src emacs-lisp
-(after! org
-  (setq org-startup-with-latex-preview t))
-#+end_src
+(use-package! org-latex-preview
+  :after org
+  :config
+  (setq org-startup-with-latex-preview t)
+  ;; Increase preview width
+  (plist-put! org-latex-preview-appearance-options
+              :page-width 0.8
+              :zoom 2.0)
 
-*** Fragtog
-#+begin_src emacs-lisp
-(use-package! org-fragtog
-  :hook
-  (org-mode . org-fragtog-mode))
+  ;; Use dvisvgm to generate previews
+  ;; You don't need this, it's the default:
+  (setq org-latex-preview-process-default 'dvisvgm)
+
+  ;; Turn on auto-mode, it's built into Org and much faster/more featured than
+  ;; org-fragtog. (Remember to turn off/uninstall org-fragtog.)
+  (add-hook 'org-mode-hook 'org-latex-preview-auto-mode)
+
+  ;; Enable consistent equation numbering
+  (setq org-latex-preview-numbered t)
+
+  ;; Bonus: Turn on live previews.  This shows you a live preview of a LaTeX
+  ;; fragment and updates the preview in real-time as you edit it.
+  ;; To preview only environments, set it to '(block edit-special) instead
+  (setq org-latex-preview-live t)
+
+  ;; More immediate live-previews -- the default delay is 1 second
+  (setq org-latex-preview-live-debounce 0.25))
 #+end_src
 
 ** Latex Headers
