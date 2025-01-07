@@ -11,6 +11,7 @@
     ../../system/services/navidrome.nix
     ../../system/flatpak.nix
     ../../system/network/mullvad.nix
+    ../../system/shell/fish.nix
   ];
 
   # Use the systemd-boot EFI boot loader.
@@ -55,6 +56,7 @@
   users.users.yiheng = {
     isNormalUser = true;
     extraGroups = ["wheel"];
+    shell = pkgs.fish;
   };
 
   # List packages installed in system profile. To search, run:
@@ -92,8 +94,6 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
-  programs.zsh.enable = true;
-  users.defaultUserShell = pkgs.zsh;
 
   # List services that you want to enable:
 

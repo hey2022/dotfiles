@@ -12,6 +12,7 @@
     ../../system/laptop
     ../../system/desktop
     ../../system/services
+    ../../system/shell/fish.nix
     ../../system/network/mullvad.nix
   ];
 
@@ -27,6 +28,7 @@
   users.users.yiheng = {
     isNormalUser = true;
     extraGroups = ["wheel"];
+    shell = pkgs.fish;
   };
 
   environment.systemPackages = with pkgs; [
