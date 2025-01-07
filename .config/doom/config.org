@@ -299,7 +299,11 @@ If no tags are provided, copy all files."
   :init
   (map!
    :map doom-leader-notes-map
-   :desc "Org Transclusion Mode" "t" #'org-transclusion-mode))
+   :desc "Org Transclusion Mode" "t" #'org-transclusion-mode)
+  :config
+  (setq org-transclusion-exclude-elements '(property-drawer keyword))
+  (setq org-roam-db-extra-links-exclude-keys
+        (remove '(keyword "transclude") org-roam-db-extra-links-exclude-keys)))
 #+end_src
 
 ** Org Habit
