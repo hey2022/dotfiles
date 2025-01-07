@@ -19,11 +19,6 @@
  "z" #'cd)
 #+end_src
 
-** vterm Shell
-#+begin_src emacs-lisp
-(setq vterm-shell "/bin/fish")
-#+end_src
-
 * User Interface
 ** Font
 Sets font to a custom build of Iosevka using https://typeof.net/Iosevka/customizer
