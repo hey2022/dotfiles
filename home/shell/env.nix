@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   home = {
     sessionPath = [
       "$HOME/.config/emacs/bin"
@@ -13,6 +13,7 @@
       GTK_IM_MODULE = "fcitx";
       QT_IM_MODULE = "fcitx";
       XMODIFIERS = "@im=fcitx";
+      SHELL = "${pkgs.fish}/bin/fish";
     };
   };
 }
