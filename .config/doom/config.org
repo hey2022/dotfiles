@@ -368,7 +368,7 @@ Add shell-escape flag
 (use-package! jinx
   :hook (emacs-startup . global-jinx-mode)
   :config
-  (setq jinx-languages "en_GB")
+  (setq jinx-languages "en_GB-ize")
   (map! :n "z=" #'jinx-correct
         :leader "ts" #'jinx-mode
         :leader "tS" #'jinx-languages))

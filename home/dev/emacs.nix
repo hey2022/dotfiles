@@ -6,7 +6,7 @@
 }: let
   emacs = pkgs.emacs-unstable-pgtk;
 in {
-  imports = [./tex.nix ../spell.nix];
+  imports = [./tex.nix ../spell];
   nixpkgs.overlays = [(import inputs.emacs-overlay)];
   home.packages = with pkgs; [
     git
