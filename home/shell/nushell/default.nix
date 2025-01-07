@@ -17,7 +17,6 @@
       ec = "emacsclient -c";
       ff = "fastfetch";
 
-      rm = ''echo "This is not the command you are looking for."; false'';
       rmt = "trash-put";
     };
   };
