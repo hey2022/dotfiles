@@ -16,8 +16,7 @@
       cat = "bat";
       ec = "emacsclient -c";
       ff = "fastfetch";
-
-      rmt = "trash-put";
+      tp = "trash-put";
     };
   };
 }
