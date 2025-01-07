@@ -1,3 +1,3 @@
 {...}: {
-  imports = [./fzf.nix ./network.nix ./beets.nix];
+  imports = [./fzf.nix ./network.nix ./beets.nix ./yazi.nix];
 }
