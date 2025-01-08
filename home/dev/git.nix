@@ -12,7 +12,7 @@
         key = null;
         signByDefault = true;
       };
-      delta = {
+      difftastic = {
         enable = true;
       };
     };
