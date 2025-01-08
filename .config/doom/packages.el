@@ -43,3 +43,5 @@
   :recipe (:host github :repo "hey2022/mlog-mode"))
 
 (package! envrc)
+
+(package! difftastic)

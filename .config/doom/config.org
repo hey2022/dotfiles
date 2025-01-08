@@ -475,3 +475,11 @@ and `defcustom' forms reset their default values."
 #+begin_src emacs-lisp
 (add-hook 'after-init-hook 'envrc-global-mode)
 #+end_src
+
+** difftastic
+#+begin_src emacs-lisp
+(use-package! difftastic
+  :after magit
+  :config
+  (difftastic-bindings-mode))
+#+end_src
