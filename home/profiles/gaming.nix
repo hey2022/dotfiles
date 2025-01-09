@@ -1,3 +1,3 @@
 {...}: {
-  imports = [../programs/wclicker];
+  imports = [../programs/wclicker ../programs/games];
 }
