@@ -1,3 +1,4 @@
 {pkgs, ...}: {
-  home.packages = with pkgs; [okular ocrmypdf];
+  imports = [./pdf.nix];
+  home.packages = with pkgs; [okular];
 }
