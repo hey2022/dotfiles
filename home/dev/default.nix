@@ -9,6 +9,7 @@
     ./cyber-security.nix
     ./sh.nix
     ./lisp.nix
+    ./rust.nix
   ];
   home.packages = with pkgs; [
     python311Packages.grip
