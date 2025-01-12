@@ -7,6 +7,7 @@
     cat = "bat";
     ec = "emacsclient -nw";
     ff = "fastfetch";
+    uctl = "systemctl --user";
 
     tp = "trash put";
 
