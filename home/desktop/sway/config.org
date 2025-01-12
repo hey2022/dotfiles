@@ -346,13 +346,10 @@ bindsym $mod+w exec ~/.config/scripts/wallpaper.sh
 
 ** Launcher
 #+begin_src conf
-set $drun tofi-drun | xargs swaymsg exec --
-bindsym $mod+space exec pkill tofi || $drun
-
-set $menu tofi-run | xargs swaymsg exec --
-bindsym $mod+shift+space exec pkill tofi || $menu
-
+bindsym $mod+space exec pkill rofi || rofi -show drun
+bindsym $mod+shift+space exec pkill rofi || rofi -show run
 #+end_src
+
 ** Notifications
 #+begin_src conf
 bindsym $mod+n exec swaync-client -t

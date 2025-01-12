@@ -203,10 +203,7 @@ bindsym $mod+shift+o exec grim -g "$(slurp)" - | tesseract -l chi_sim+jpn+kor -c
 
 bindsym $mod+w exec ~/.config/scripts/wallpaper.sh
 
-set $drun tofi-drun | xargs swaymsg exec --
-bindsym $mod+space exec pkill tofi || $drun
-
-set $menu tofi-run | xargs swaymsg exec --
-bindsym $mod+shift+space exec pkill tofi || $menu
+bindsym $mod+space exec pkill rofi || rofi -show drun
+bindsym $mod+shift+space exec pkill rofi || rofi -show run
 
 bindsym $mod+n exec swaync-client -t

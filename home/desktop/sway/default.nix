@@ -33,15 +33,7 @@
     slurp
     tesseract
     wl-clipboard
-    tofi
     playerctl
     brightnessctl
   ];
-
-  home.file = {
-    ".config/tofi" = {
-      source = ../../../.config/tofi;
-      recursive = true;
-    };
-  };
 }
