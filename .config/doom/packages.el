@@ -24,6 +24,8 @@
   :pin nil)
 (unpin! org)
 (unpin! org-roam)
+(package! org-node)
+(package! org-node-fakeroam)
 (package! org-roam-ui)
 (package! org-transclusion)
 (package! org-remark)

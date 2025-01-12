@@ -111,7 +111,36 @@ Sets font to a custom build of Iosevka using https://typeof.net/Iosevka/customiz
           "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f")))
 #+end_src
 
-** Org Roam
+** Org Node
+*** Org Node
+#+begin_src emacs-lisp
+(use-package org-node
+  :after org
+  :init
+  (map! :leader
+        (:prefix ("n r" . "roam/node")
+         :desc "Find node" "f" #'org-node-find
+         :desc "Insert link" "i" #'org-node-insert-link
+         :desc "Insert transclusion" "t" #'org-node-insert-transclusion
+         :desc "Random node" "a" #'org-node-visit-random))
+  :config
+  (setq org-node-extra-id-dirs '("~/org/"))
+  (org-node-cache-mode)
+
+  (org-node-complete-at-point-mode)
+  (setq org-roam-completion-everywhere nil))
+
+(use-package org-node-fakeroam
+  :after org-node
+  :config
+  (setq org-node-creation-fn #'org-node-fakeroam-new-via-roam-capture)
+  (setq org-node-slug-fn #'org-node-fakeroam-slugify-via-roam)
+  (org-node-fakeroam-fast-render-mode)
+
+  (setq org-roam-db-update-on-save nil)
+  (setq org-roam-link-auto-replace nil))
+#+end_src
+
 *** Capture Templates
 Setup Org Roam capture templates.
 #+begin_src emacs-lisp
