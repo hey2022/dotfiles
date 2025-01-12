@@ -18,5 +18,6 @@
     neovim
     hyperfine
     meld
+    tokei
   ];
 }
