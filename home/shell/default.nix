@@ -6,6 +6,7 @@
     ./env.nix
     ./uutils.nix
     ./direnv.nix
+    ./scripts
   ];
 
   home.packages = with pkgs; [
