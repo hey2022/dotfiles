@@ -6,6 +6,7 @@
     ./nix.nix
     ./java.nix
     ./python.nix
+    ./cyber-security.nix
   ];
   home.packages = with pkgs; [
     python311Packages.grip
