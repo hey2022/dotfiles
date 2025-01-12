@@ -121,6 +121,7 @@ Sets font to a custom build of Iosevka using https://typeof.net/Iosevka/customiz
         (:prefix ("n r" . "roam/node")
          :desc "Find node" "f" #'org-node-find
          :desc "Insert link" "i" #'org-node-insert-link
+         :desc "Link word at point" "w" #'org-node-insert-link-at-word
          :desc "Insert transclusion" "t" #'org-node-insert-transclusion
          :desc "Random node" "a" #'org-node-visit-random))
   :config
@@ -139,6 +140,29 @@ Sets font to a custom build of Iosevka using https://typeof.net/Iosevka/customiz
 
   (setq org-roam-db-update-on-save nil)
   (setq org-roam-link-auto-replace nil))
+#+end_src
+
+*** Insert link at word
+#+begin_src emacs-lisp
+(defun select-word-at-point ()
+  "Select the word at point."
+  (let ((bounds (bounds-of-thing-at-point 'word)))
+    (when bounds
+      (set-mark (car bounds))
+      (goto-char (cdr bounds))
+      (activate-mark))))
+
+(defun org-node-insert-link-at-word ()
+  "Select the word at point and call org-node-insert-link."
+  (interactive)
+  (select-word-at-point)
+  (org-node-insert-link))
+
+(defun org-roam-insert-link-at-word ()
+  "Select the word at point and call org-roam-node-insert."
+  (interactive)
+  (select-word-at-point)
+  (org-roam-node-insert))
 #+end_src
 
 *** Capture Templates
