@@ -10,9 +10,9 @@
     ./sh.nix
     ./lisp.nix
     ./rust.nix
+    ./markdown.nix
   ];
   home.packages = with pkgs; [
-    python311Packages.grip
     bun
     wget
     neovim
