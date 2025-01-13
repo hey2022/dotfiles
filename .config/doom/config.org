@@ -120,6 +120,7 @@ Sets font to a custom build of Iosevka using https://typeof.net/Iosevka/customiz
   (map! :leader
         (:prefix ("n r" . "roam/node")
          :desc "Find node" "f" #'org-node-find
+         :desc "Find node" "F" #'org-roam-node-find
          :desc "Insert link" "i" #'org-node-insert-link
          :desc "Link word at point" "w" #'org-node-insert-link-at-word
          :desc "Insert transclusion" "t" #'org-node-insert-transclusion
@@ -136,10 +137,7 @@ Sets font to a custom build of Iosevka using https://typeof.net/Iosevka/customiz
   :config
   (setq org-node-creation-fn #'org-node-fakeroam-new-via-roam-capture)
   (setq org-node-slug-fn #'org-node-fakeroam-slugify-via-roam)
-  (org-node-fakeroam-fast-render-mode)
-
-  (setq org-roam-db-update-on-save nil)
-  (setq org-roam-link-auto-replace nil))
+  (org-node-fakeroam-fast-render-mode))
 #+end_src
 
 *** Insert link at word
