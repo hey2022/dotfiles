@@ -21,5 +21,6 @@
     fd
     dust
     duf
+    lnav
   ];
 }
