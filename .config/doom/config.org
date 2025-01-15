@@ -482,6 +482,11 @@ Add shell-escape flag
       "Y" #'browse-lsp-current-line-diagnostic-message)
 #+end_src
 
+*** Basedpyright
+#+begin_src emacs-lisp
+(setq lsp-pyright-langserver-command "basedpyright")
+#+end_src
+
 ** Nix
 #+begin_src emacs-lisp
 (after! nix-mode
