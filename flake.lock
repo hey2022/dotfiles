@@ -752,7 +752,8 @@
         "nixpkgs": "nixpkgs",
         "nur": "nur",
         "stylix": "stylix",
-        "tls-xb": "tls-xb"
+        "tls-xb": "tls-xb",
+        "zen-browser": "zen-browser"
       }
     },
     "rust-overlay": {
@@ -987,6 +988,26 @@
       "original": {
         "owner": "hyprwm",
         "repo": "xdg-desktop-portal-hyprland",
+        "type": "github"
+      }
+    },
+    "zen-browser": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1736972281,
+        "narHash": "sha256-RqjDPPpMYoqcduQw4Bo5XOAab9t+IAIaTGlQLHnOPEk=",
+        "owner": "0xc000022070",
+        "repo": "zen-browser-flake",
+        "rev": "356ea5bbc8558e653fb00ccd14e4aff527ca9323",
+        "type": "github"
+      },
+      "original": {
+        "owner": "0xc000022070",
+        "repo": "zen-browser-flake",
         "type": "github"
       }
     }
