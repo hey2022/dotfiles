@@ -17,7 +17,6 @@
     wget
     neovim
     hyperfine
-    meld
     tokei
   ];
 }
