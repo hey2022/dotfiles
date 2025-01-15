@@ -177,8 +177,8 @@ bindsym $mod+shift+up exec wpctl set-volume -p $(swaymsg -t get_tree | jq '.. | 
 bindsym $mod+m exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 bindsym $mod+shift+m exec wpctl set-mute -p $(swaymsg -t get_tree | jq '.. | select(.type?) | select(.focused==true) | .pid') toggle
 
-bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
-bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+bindsym XF86MonBrightnessDown exec brightnessctl set 1%-
+bindsym XF86MonBrightnessUp exec brightnessctl set 1%+
 
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioPause exec playerctl pause
