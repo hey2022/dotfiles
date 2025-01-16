@@ -7,5 +7,5 @@
     ./wluma.nix
     ../../modules/stylix.nix
   ];
-  services.wluma.enable = true;
+  programs.wluma.enable = true;
 }
