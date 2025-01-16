@@ -9,13 +9,13 @@
       als.time = {
         thresholds = {
           "0" = "night";
-          "7" = "dark";
-          "9" = "dim";
-          "11" = "normal";
-          "13" = "bright";
-          "16" = "normal";
-          "18" = "dark";
-          "20" = "night";
+          "7" = "dim";
+          "8" = "normal";
+          "11" = "bright";
+          "13" = "normal";
+          "18" = "dim";
+          "21" = "dark";
+          "23" = "night";
         };
       };
 
