@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  imports = [./icons.nix ../../modules/stylix.nix ./wluma.nix];
+  imports = [./icons.nix ./stylix.nix ./wluma.nix];
   home.packages = with pkgs; [
     desktop-file-utils
   ];
