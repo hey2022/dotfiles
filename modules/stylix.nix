@@ -1,8 +1,25 @@
-{pkgs, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: let
+  fonts = import ../lib/fonts.nix {inherit pkgs;};
+in {
   stylix = {
     enable = true;
     polarity = "dark";
     image = ../wallpapers/five-minutes-of-silence.jpg;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/tomorrow-night.yaml";
+    fonts = {
+      serif = config.stylix.fonts.sansSerif;
+      sansSerif = {
+        package = pkgs.inter;
+        name = "Inter";
+      };
+      monospace = {
+        package = fonts.IosevkaCustom;
+        name = "Iosevka Custom";
+      };
+    };
   };
 }
