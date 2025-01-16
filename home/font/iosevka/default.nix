@@ -1,13 +1,8 @@
-{pkgs, ...}: {
-  home.packages = with pkgs; [
-    (iosevka.override {
-      privateBuildPlan = builtins.readFile ./private-build-plans.toml;
-      set = "Custom";
-    })
-
-    (iosevka.override {
-      privateBuildPlan = builtins.readFile ./private-build-plans.toml;
-      set = "ProportionalCustom";
-    })
+{pkgs, ...}: let
+  fonts = import ../../../lib/fonts.nix {inherit pkgs;};
+in {
+  home.packages = with fonts; [
+    IosevkaCustom
+    IosevkaProportionalCustom
   ];
 }
