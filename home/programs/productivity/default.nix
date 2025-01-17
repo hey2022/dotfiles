@@ -1,3 +1,3 @@
 {...}: {
-  imports = [./pdf.nix ./inkscape.nix ./libreoffice.nix ./rnote.nix];
+  imports = [./pdf.nix ./inkscape.nix ./libreoffice.nix ./rnote.nix ./xournalpp.nix];
 }
