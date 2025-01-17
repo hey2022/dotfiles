@@ -9,7 +9,6 @@
     ../../home/desktop/sway
     ../../home/programs/games
     ../../home/dev
-    ../../home/shell/nushell
     ../../home/programs/cli
     ../../home/programs/wechat.nix
     ../../home/programs/torrent.nix
