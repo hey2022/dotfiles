@@ -15,9 +15,7 @@
   home.username = "yiheng";
   home.homeDirectory = "/home/yiheng";
 
-  # Let Home Manager install and manage itself.
   home.packages = with pkgs; [
-    # Apps
     keepassxc
     feishin
   ];

@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
     ../../home
     ../../home/desktop
@@ -20,7 +16,6 @@
   home.homeDirectory = "/home/yiheng";
 
   home.packages = with pkgs; [
-    # Apps
     keepassxc
     feishin
   ];
