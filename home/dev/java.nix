@@ -1,3 +1,6 @@
 {pkgs, ...}: {
-  home.packages = [pkgs.jdt-language-server];
+  home.packages = with pkgs; [
+    jdk
+    jdt-language-server
+  ];
 }
