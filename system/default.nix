@@ -2,6 +2,7 @@
   imports = [
     ./boot.nix
     ./programs
+    ./services
     ./nix.nix
     ./network
     ./bluetooth.nix

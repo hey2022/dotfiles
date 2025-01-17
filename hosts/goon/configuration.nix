@@ -6,7 +6,6 @@
     ../../system
     ../../system/laptop
     ../../system/desktop
-    ../../system/services
     ../../system/shell/fish.nix
     ../../system/network/mullvad.nix
     ../../system/network/mac-spoof.nix
