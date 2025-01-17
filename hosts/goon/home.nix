@@ -17,9 +17,6 @@
 
   # Let Home Manager install and manage itself.
   home.packages = with pkgs; [
-    # Research
-    zotero
-
     # CLI
     trackma
 

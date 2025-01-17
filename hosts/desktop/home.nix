@@ -20,9 +20,6 @@
   home.homeDirectory = "/home/yiheng";
 
   home.packages = with pkgs; [
-    # Research
-    zotero
-
     # CLI
     trackma
 
