@@ -8,6 +8,7 @@
     ./bluetooth.nix
     ./nix-ld.nix
     ./ssh.nix
+    ./polkit.nix
   ];
   system.stateVersion = "24.11";
 }
