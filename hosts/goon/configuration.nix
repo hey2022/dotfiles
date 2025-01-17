@@ -23,10 +23,4 @@
     extraGroups = ["wheel"];
     shell = pkgs.fish;
   };
-
-  environment.systemPackages = with pkgs; [
-    vim
-    wget
-    home-manager
-  ];
 }

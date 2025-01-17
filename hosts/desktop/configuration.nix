@@ -26,15 +26,6 @@
     shell = pkgs.fish;
   };
 
-  environment.systemPackages = with pkgs; [
-    git
-    wget
-    fastfetch
-    neovim
-
-    home-manager
-  ];
-
   services = {
     pipewire = {
       enable = true;

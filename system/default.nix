@@ -1,6 +1,7 @@
 {...}: {
   imports = [
     ./boot.nix
+    ./programs
     ./nix.nix
     ./network
     ./bluetooth.nix
