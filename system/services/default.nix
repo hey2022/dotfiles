@@ -4,5 +4,6 @@
     ./tailscale.nix
     ./syncthing.nix
     ./automount.nix
+    ./pipewire.nix
   ];
 }

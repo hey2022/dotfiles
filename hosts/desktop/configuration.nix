@@ -27,11 +27,6 @@
   };
 
   services = {
-    pipewire = {
-      enable = true;
-      alsa.enable = true;
-      pulse.enable = true;
-    };
     myNavidrome = {
       enable = true;
       MusicFolder = "/home/yiheng/music";
