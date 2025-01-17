@@ -9,7 +9,6 @@
     ../../system/services/navidrome.nix
     ../../system/flatpak.nix
     ../../system/network/mullvad.nix
-    ../../system/shell/fish.nix
   ];
 
   networking.hostName = "desktop";
