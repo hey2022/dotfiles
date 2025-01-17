@@ -16,8 +16,6 @@
 
   time.timeZone = "Asia/Shanghai";
 
-  hardware.graphics.enable = true;
-
   users.users.yiheng = {
     isNormalUser = true;
     extraGroups = ["wheel"];
