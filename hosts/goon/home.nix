@@ -23,6 +23,5 @@
     # Apps
     keepassxc
     feishin
-    mullvad-vpn
   ];
 }
