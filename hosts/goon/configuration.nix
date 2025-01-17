@@ -12,9 +12,6 @@
     ../../system/network/mac-spoof.nix
   ];
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
   boot.kernelParams = ["i915.enable_dc=0"];
 
   networking.hostName = "goon";
