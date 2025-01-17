@@ -4,7 +4,6 @@
     ../../home/desktop
     ../../home/desktop/sway
     ../../home/dev
-    ../../home/services
     ../../home/programs/cli
     ../../home/programs/browsers
     ../../home/programs/wechat.nix
