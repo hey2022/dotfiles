@@ -206,7 +206,7 @@ bindsym $mod+shift+o exec grim -g "$(slurp)" - | tesseract -l chi_sim+jpn+kor -c
 
 bindsym $mod+w exec ~/.config/scripts/wallpaper.sh
 
-bindsym $mod+space exec pkill rofi || rofi -show drun
-bindsym $mod+shift+space exec pkill rofi || rofi -show run
+bindsym $mod+space exec pkill rofi || rofi -show drun -theme ~/.config/rofi/launchers/type-1/style-1.rasi
+bindsym $mod+shift+space exec pkill rofi || rofi -show run -theme ~/.config/rofi/launchers/type-1/style-1.rasi
 
 bindsym $mod+n exec swaync-client -t
