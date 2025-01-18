@@ -341,12 +341,6 @@ bindsym $mod+o exec grim -g "$(slurp)" - | tesseract -l eng - - | wl-copy
 bindsym $mod+shift+o exec grim -g "$(slurp)" - | tesseract -l chi_sim+jpn+kor -c preserve_interword_spaces=1 - - | wl-copy
 #+end_src
 
-** Wallpaper switcher
-Wallpaper switcher that uses tofi to change swww wallpaper
-#+begin_src conf
-bindsym $mod+w exec ~/.config/scripts/wallpaper.sh
-#+end_src
-
 ** Launcher
 #+begin_src conf
 bindsym $mod+space exec pkill rofi || rofi -show drun -theme ~/.config/rofi/launchers/type-1/style-1.rasi
