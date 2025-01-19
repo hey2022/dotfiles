@@ -1,3 +1,3 @@
 {...}: {
-  imports = [./navidrome.nix];
+  imports = [./navidrome.nix ./miniflux.nix];
 }
