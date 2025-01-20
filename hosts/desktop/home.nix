@@ -7,6 +7,7 @@
     ../../home/dev
     ../../home/programs/cli
     ../../home/programs/wechat.nix
+    ../../home/programs/rss.nix
     ../../home/programs/torrent.nix
     ../../home/programs/browsers
     ../../home/profiles/education.nix
