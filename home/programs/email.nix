@@ -60,7 +60,7 @@
       WantedBy = ["default.target"];
     };
     Service = {
-      ExecStart = "${pkgs.hydroxide}/bin/hydroxide serve";
+      ExecStart = "${pkgs.hydroxide}/bin/hydroxide --carddav-port 5232 serve";
       Restart = "always";
     };
   };
