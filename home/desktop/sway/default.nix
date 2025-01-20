@@ -10,7 +10,7 @@
     ../swaync.nix
     ../vnc
     ../pipewire.nix
-    ../waybar.nix
+    ../waybar
     ../terminal/wezterm
     ../terminal/foot.nix
     ./wkill.nix
