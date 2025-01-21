@@ -2,7 +2,6 @@
   imports = [
     ./hardware-configuration.nix
     ../../system
-    ../../system/programs/steam.nix
     ../../system/programs/utilities
     ../../system/desktop
     ../../system/desktop/hyprland.nix
