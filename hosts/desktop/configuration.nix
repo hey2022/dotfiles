@@ -9,6 +9,7 @@
     ../../system/services/homelab.nix
     ../../system/flatpak.nix
     ../../system/network/mullvad.nix
+    ../../system/game.nix
   ];
 
   networking.hostName = "desktop";
