@@ -3,6 +3,7 @@
   "position": "top",
   "height": 30,
   "modules-left": [
+    "hyprland/workspaces",
     "sway/workspaces",
     "sway/mode",
     "sway/scratchpad",
@@ -30,6 +31,18 @@
     "tooltip-format": "{app}: {title}"
   },
   "sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": false,
+    "disable-markup": false,
+    "format": "{icon}",
+    "format-icons": {
+      "1": "1 <span font='Font Awesome 5 Free 14'></span>",
+      "2": "2 <span font='Font Awesome 5 Free 14'></span>",
+      "9": "9 <span font='Font Awesome 5 Free 14'></span>",
+      "10": "10 <span font='Font Awesome 5 Free 14'></span>"
+    }
+  },
+  "hyprland/workspaces": {
     "disable-scroll": true,
     "all-outputs": false,
     "disable-markup": false,
