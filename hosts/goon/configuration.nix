@@ -6,6 +6,7 @@
     ../../system
     ../../system/laptop
     ../../system/desktop
+    ../../system/desktop/hyprland.nix
     ../../system/network/mullvad.nix
     ../../system/network/mac-spoof.nix
   ];

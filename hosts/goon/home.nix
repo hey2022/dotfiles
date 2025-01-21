@@ -2,6 +2,7 @@
   imports = [
     ../../home
     ../../home/desktop
+    ../../home/desktop/hyprland
     ../../home/desktop/sway
     ../../home/dev
     ../../home/programs/cli
