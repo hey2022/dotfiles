@@ -7,7 +7,7 @@
   programs.hyprlock = {
     enable = true;
     package =
-      if builtins.pathExists "/etc/NIXOS"
+      if config.home.isNixOS
       then pkgs.hyprlock
       else pkgs.emptyDirectory;
     settings = {

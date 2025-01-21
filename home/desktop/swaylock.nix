@@ -1,13 +1,12 @@
 {
   config,
-  lib,
   pkgs,
   ...
 }: {
   programs.swaylock = {
     enable = true;
     package =
-      if builtins.pathExists "/etc/NIXOS"
+      if config.home.isNixOS
       then pkgs.swaylock-effects
       else pkgs.emptyDirectory;
     settings = {
