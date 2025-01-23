@@ -5,6 +5,7 @@
     ../../home/desktop/hyprland
     ../../home/desktop/sway
     ../../home/dev
+    ../../home/anime.nix
     ../../home/programs/cli
     ../../home/programs/browsers
     ../../home/programs/wechat.nix

@@ -6,6 +6,7 @@
     ../../home/desktop/sway
     ../../home/programs/games
     ../../home/dev
+    ../../home/anime.nix
     ../../home/programs/cli
     ../../home/programs/wechat.nix
     ../../home/programs/rss.nix
