@@ -18,6 +18,7 @@
     ../terminal/wezterm
     ../file-manager/pcmanfm.nix
     ../rofi
+    ../../programs/music.nix
   ];
   wayland.windowManager.hyprland = {
     enable = true;
