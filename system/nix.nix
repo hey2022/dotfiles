@@ -19,7 +19,7 @@
     optimise.automatic = true;
     gc = {
       automatic = true;
-      options = "--delete-older-than 30d";
+      options = "--delete-older-than 7d";
     };
   };
   nixpkgs.config.allowUnfree = true;
