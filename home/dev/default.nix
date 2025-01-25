@@ -10,6 +10,7 @@
     ./sh.nix
     ./lisp.nix
     ./rust.nix
+    ./cpp.nix
     ./markdown.nix
   ];
   home.packages = with pkgs; [
