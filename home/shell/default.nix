@@ -22,5 +22,6 @@
     dust
     duf
     lnav
+    tree
   ];
 }
