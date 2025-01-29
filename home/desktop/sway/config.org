@@ -42,13 +42,6 @@ gaps inner 10
 default_border pixel 5
 #+end_src
 
-** Bar
-#+begin_src conf
-bar {
-    swaybar_command waybar
-}
-#+end_src
-
 * Output
 Outputs can also be configured by wlr-randr
 ** Output Positions

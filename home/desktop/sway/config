@@ -15,10 +15,6 @@ gaps inner 10
 
 default_border pixel 5
 
-bar {
-    swaybar_command waybar
-}
-
 output eDP-1 pos 0 0
 output HDMI1 pos 1920 0
 
