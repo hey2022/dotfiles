@@ -1,5 +1,5 @@
 {...}: {
-  imports = [./auto-cpufreq.nix];
+  imports = [./tlp.nix];
   powerManagement.enable = true;
   services.thermald.enable = true;
 }
