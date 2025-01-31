@@ -1,3 +1,3 @@
 {...}: {
-  imports = [./prism-launcher.nix ./hmcl.nix];
+  imports = [./fjord.nix];
 }
