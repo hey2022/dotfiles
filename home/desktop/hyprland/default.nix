@@ -15,7 +15,7 @@
     ../pipewire.nix
     ../waybar
     ../wlogout.nix
-    ../terminal/wezterm
+    ../terminal/foot.nix
     ../file-manager/pcmanfm.nix
     ../rofi
     ../../programs/music.nix

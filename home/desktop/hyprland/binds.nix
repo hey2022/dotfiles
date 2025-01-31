@@ -8,7 +8,7 @@ in {
 
     bind = [
       # programs
-      "$mod, Return, exec, uwsm app -- wezterm"
+      "$mod, Return, exec, uwsm app -- foot"
       "$mod SHIFT, Return, exec, uwsm app -- emacsclient -c"
       "$mod, E, exec, uwsm app -- pcmanfm"
 
