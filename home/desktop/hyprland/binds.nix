@@ -93,6 +93,10 @@ in {
       # send focused workspace to left/right monitors
       "$mod SHIFT CTRL, bracketleft, movecurrentworkspacetomonitor, l"
       "$mod SHIFT CTRL, bracketright, movecurrentworkspacetomonitor, r"
+
+      # mullvad tunnel
+      "$mod, T, exec, mullvad split-tunnel add $(hyprctl activewindow -j | jq '.pid')"
+      "$mod SHIFT, T, exec, mullvad split-tunnel delete $(hyprctl activewindow -j | jq '.pid')"
     ];
 
     bindr = [

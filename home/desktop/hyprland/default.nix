@@ -19,6 +19,7 @@
     ../file-manager/pcmanfm.nix
     ../rofi
     ../../programs/music.nix
+    ../../dev/jq.nix
   ];
   wayland.windowManager.hyprland = {
     enable = true;
@@ -27,6 +28,7 @@
   };
   home.packages = [
     inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
+    pkgs.mullvad
   ];
   home.sessionVariables.NIXOS_OZONE_WL = "1";
 }
