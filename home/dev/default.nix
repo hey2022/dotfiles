@@ -12,6 +12,7 @@
     ./rust.nix
     ./cpp.nix
     ./markdown.nix
+    ./jq.nix
   ];
   home.packages = with pkgs; [
     bun
