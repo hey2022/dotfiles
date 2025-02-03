@@ -4,7 +4,6 @@
     ./zoxide.nix
     ./starship.nix
     ./env.nix
-    ./uutils.nix
     ./direnv.nix
     ./scripts
   ];
