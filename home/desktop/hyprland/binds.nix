@@ -14,6 +14,7 @@ in {
 
       # compositor commands
       "$mod, Q, killactive,"
+      "$mod SHIFT, Q, exec, kill -9 $(hyprctl activewindow -j | jq '.pid')"
       "$mod SHIFT, E, exec, uwsm stop"
       "$mod, F, fullscreen,"
       "$mod, G, togglegroup,"
