@@ -1,5 +1,6 @@
 {...}: {
   imports = [
+    ./homepage.nix
     ./ssh.nix
     ./tailscale.nix
     ./syncthing.nix
