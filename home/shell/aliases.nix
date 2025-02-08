@@ -1,8 +1,8 @@
 {...}: {
   home.shellAliases = {
     ls = "eza --icons";
-    la = "ls -la";
-    ll = "ls -l";
+    la = "eza -lag";
+    ll = "eza -lg";
     cd = "z";
     cat = "bat";
     ec = "emacsclient -nw";
