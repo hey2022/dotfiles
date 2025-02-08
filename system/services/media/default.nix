@@ -1,4 +1,4 @@
 {...}: {
-  imports = [./torrent];
+  imports = [./jellyfin.nix ./torrent];
   users.groups.media = {};
 }
