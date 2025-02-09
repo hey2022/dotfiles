@@ -52,6 +52,20 @@ in {
         };
       }
     ];
+    bookmarks = [
+      {
+        Developer = [
+          {
+            Github = [
+              {
+                abbr = "GH";
+                href = "https://github.com";
+              }
+            ];
+          }
+        ];
+      }
+    ];
   };
   environment.etc."homepage-dashboard/services.yaml".source = lib.mkForce (settingsFormat.generate "services.yaml"
     (lib.mapAttrsToList
