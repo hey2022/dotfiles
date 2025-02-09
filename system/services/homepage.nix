@@ -18,6 +18,7 @@ in {
       theme = "dark";
       color = "slate";
       background = "/images/alena-aenami-serenity-1k.jpg";
+      cardBlur = "sm";
       target = "_self";
     };
     widgets = [
