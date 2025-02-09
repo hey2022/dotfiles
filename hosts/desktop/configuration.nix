@@ -22,13 +22,6 @@
     shell = pkgs.fish;
   };
 
-  services = {
-    myNavidrome = {
-      enable = true;
-      MusicFolder = "/home/yiheng/music";
-    };
-  };
-
   programs.ydotool = {
     enable = true;
     users = ["yiheng"];
