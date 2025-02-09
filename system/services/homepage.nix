@@ -43,6 +43,14 @@ in {
           url = "https://priv.au/search?q=";
         };
       }
+      {
+        openmeteo = {
+          latitude = 23.021;
+          longitude = 113.752;
+          units = "metric";
+          cache = "5";
+        };
+      }
     ];
   };
   environment.etc."homepage-dashboard/services.yaml".source = lib.mkForce (settingsFormat.generate "services.yaml"
