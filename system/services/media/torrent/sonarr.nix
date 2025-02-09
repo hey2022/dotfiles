@@ -4,6 +4,7 @@
     group = "media";
   };
   services.homepage-dashboard.services.media.sonarr = {
+    icon = "sonarr.svg";
     href = "http://localhost:8989";
   };
   nixpkgs.config.permittedInsecurePackages = [
