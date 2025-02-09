@@ -9,6 +9,10 @@
 in {
   services.homepage-dashboard = {
     enable = true;
+    settings = {
+      theme = "dark";
+      color = "slate";
+    };
   };
   environment.etc."homepage-dashboard/services.yaml".source = lib.mkForce (settingsFormat.generate "services.yaml"
     (lib.mapAttrsToList
