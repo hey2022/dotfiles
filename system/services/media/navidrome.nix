@@ -8,4 +8,8 @@
       MusicFolder = "/var/lib/media/music";
     };
   };
+  services.homepage-dashboard.services.media.navidrome = {
+    icon = "navidrome.svg";
+    href = "http://localhost:4533";
+  };
 }
