@@ -68,12 +68,12 @@ in {
     ];
   };
   environment.etc."homepage-dashboard/services.yaml".source = lib.mkForce (settingsFormat.generate "services.yaml"
-    (lib.mapAttrsToList
+    (lib.optionalAttrs (cfg.services != []) (lib.mapAttrsToList
       (groupName: services: {
         ${groupName} =
           lib.mapAttrsToList
           (serviceName: settings: {${serviceName} = settings;})
           services;
       })
-      cfg.services));
+      cfg.services)));
 }
