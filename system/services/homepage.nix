@@ -13,6 +13,29 @@ in {
       theme = "dark";
       color = "slate";
     };
+    widgets = [
+      {
+        resources = {
+          cpu = true;
+          disk = "/";
+          memory = true;
+        };
+      }
+      {
+        datetime = {
+          format = {
+            dateStyle = "short";
+            timeStyle = "short";
+          };
+        };
+      }
+      {
+        search = {
+          provider = "custom";
+          url = "https://priv.au/search?q=";
+        };
+      }
+    ];
   };
   environment.etc."homepage-dashboard/services.yaml".source = lib.mkForce (settingsFormat.generate "services.yaml"
     (lib.mapAttrsToList
