@@ -113,7 +113,7 @@ Sets font to a custom build of Iosevka using https://typeof.net/Iosevka/customiz
 
 ** Org Node
 *** Org Node
-#+begin_src emacs-lisp
+#+begin_src emacs-lisp :tangle no
 (use-package org-node
   :after org
   :init
