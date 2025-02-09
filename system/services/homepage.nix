@@ -18,6 +18,7 @@ in {
       theme = "dark";
       color = "slate";
       background = "/images/alena-aenami-serenity-1k.jpg";
+      target = "_self";
     };
     widgets = [
       {
