@@ -90,6 +90,10 @@ in {
           abbr = "TM";
           href = "https://teams.microsoft.com";
         };
+        Canva = {
+          icon = "si-canva";
+          href = "https://www.canva.com";
+        };
       };
     };
   };
