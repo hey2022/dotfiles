@@ -8,7 +8,16 @@
   cfg = config.services.homepage-dashboard;
   settingsFormat = pkgs.formats.yaml {};
   package = pkgs.homepage-dashboard.overrideAttrs (old: {
-    postInstall = (old.postInstall or "") + "ln -s ${inputs.self}/wallpapers $out/share/homepage/public/images";
+    postInstall =
+      (old.postInstall or "")
+      + ''
+        ln -s ${
+          builtins.path {
+            path = "${inputs.self}/wallpapers";
+            name = "homepage-wallpapers";
+          }
+        } $out/share/homepage/public/images
+      '';
   });
   convertServiceConfig = option: (lib.optionalAttrs (option != []) (lib.mapAttrsToList
     (groupName: services: {
