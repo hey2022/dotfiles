@@ -10,6 +10,14 @@
   package = pkgs.homepage-dashboard.overrideAttrs (old: {
     postInstall = (old.postInstall or "") + "ln -s ${inputs.self}/wallpapers $out/share/homepage/public/images";
   });
+  convertServiceConfig = option: (lib.optionalAttrs (option != []) (lib.mapAttrsToList
+    (groupName: services: {
+      ${groupName} =
+        lib.mapAttrsToList
+        (serviceName: settings: {${serviceName} = settings;})
+        services;
+    })
+    option));
 in {
   services.homepage-dashboard = {
     inherit package;
@@ -67,13 +75,5 @@ in {
       }
     ];
   };
-  environment.etc."homepage-dashboard/services.yaml".source = lib.mkForce (settingsFormat.generate "services.yaml"
-    (lib.optionalAttrs (cfg.services != []) (lib.mapAttrsToList
-      (groupName: services: {
-        ${groupName} =
-          lib.mapAttrsToList
-          (serviceName: settings: {${serviceName} = settings;})
-          services;
-      })
-      cfg.services)));
+  environment.etc."homepage-dashboard/services.yaml".source = lib.mkForce (settingsFormat.generate "services.yaml" (convertServiceConfig cfg.services));
 }
