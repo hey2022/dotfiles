@@ -78,6 +78,16 @@ in {
           href = "https://github.com";
         };
       };
+      School = {
+        Xiaobao = {
+          abbr = "XB";
+          href = "https://tsinglanstudent.schoolis.cn";
+        };
+        Teams = {
+          abbr = "TM";
+          href = "https://teams.microsoft.com";
+        };
+      };
     };
   };
   environment.etc."homepage-dashboard/services.yaml".source = lib.mkForce (settingsFormat.generate "services.yaml" (convertServiceConfig cfg.services));
