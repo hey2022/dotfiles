@@ -74,16 +74,19 @@ in {
     bookmarks = {
       Developer = {
         Github = {
+          icon = "github-light.svg";
           abbr = "GH";
           href = "https://github.com";
         };
       };
       School = {
         Xiaobao = {
+          icon = "https://cdn.schoolis.cn/sis/favicon/sis.ico";
           abbr = "XB";
           href = "https://tsinglanstudent.schoolis.cn";
         };
         Teams = {
+          icon = "microsoft-teams.svg";
           abbr = "TM";
           href = "https://teams.microsoft.com";
         };
