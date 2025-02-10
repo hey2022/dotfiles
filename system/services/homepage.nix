@@ -96,7 +96,6 @@ in {
         };
         Teams = {
           icon = "microsoft-teams.svg";
-          abbr = "TM";
           href = "https://teams.microsoft.com";
         };
         Canva = {
