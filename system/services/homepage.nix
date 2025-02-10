@@ -18,6 +18,17 @@
         services;
     })
     option));
+  convertBookmarkConfig = option:
+    lib.optionalAttrs (option != []) (lib.mapAttrsToList
+      (groupName: bookmarks: {
+        ${groupName} =
+          lib.mapAttrsToList
+          (bookmarkName: settings: {
+            ${bookmarkName} = [settings];
+          })
+          bookmarks;
+      })
+      option);
 in {
   services.homepage-dashboard = {
     inherit package;
@@ -60,20 +71,15 @@ in {
         };
       }
     ];
-    bookmarks = [
-      {
-        Developer = [
-          {
-            Github = [
-              {
-                abbr = "GH";
-                href = "https://github.com";
-              }
-            ];
-          }
-        ];
-      }
-    ];
+    bookmarks = {
+      Developer = {
+        Github = {
+          abbr = "GH";
+          href = "https://github.com";
+        };
+      };
+    };
   };
   environment.etc."homepage-dashboard/services.yaml".source = lib.mkForce (settingsFormat.generate "services.yaml" (convertServiceConfig cfg.services));
+  environment.etc."homepage-dashboard/bookmarks.yaml".source = lib.mkForce (settingsFormat.generate "bookmarks.yaml" (convertBookmarkConfig cfg.bookmarks));
 }
