@@ -8,7 +8,7 @@ in {
   stylix = {
     enable = true;
     polarity = "dark";
-    image = ../wallpapers/five-minutes-of-silence.jpg;
+    image = ../wallpapers/alena-aenami-eclipse-1k.jpg;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/tomorrow-night.yaml";
     fonts = {
       serif = config.stylix.fonts.sansSerif;
