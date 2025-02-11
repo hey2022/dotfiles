@@ -397,6 +397,7 @@ If no tags are provided, copy all files."
                       (if (ignore-errors (anki-editor-api-check) t)
                           (anki-editor-mode))))
   :config
+  (setq anki-editor-swap-two-fields '("Cloze"))
   (map! :map anki-editor-mode-map
         :leader
         :prefix ("n e" . "Anki Editor")
