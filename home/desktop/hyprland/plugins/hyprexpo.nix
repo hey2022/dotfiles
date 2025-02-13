@@ -9,7 +9,6 @@
     ];
     settings = {
       bind = [
-        # hyprexpo
         "$mod, GRAVE, hyprexpo:expo, toggle"
       ];
       plugin = {
