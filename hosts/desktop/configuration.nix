@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./hardware-configuration.nix
+    ./homepage.nix
     ../../system
     ../../system/desktop/hyprland.nix
     ../../system/programs/utilities

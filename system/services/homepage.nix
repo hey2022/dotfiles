@@ -42,6 +42,7 @@ in {
   services.homepage-dashboard = {
     inherit package;
     enable = true;
+    openFirewall = true;
     settings = {
       theme = "dark";
       color = "slate";
