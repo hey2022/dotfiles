@@ -2,6 +2,7 @@
   services.sonarr = {
     enable = true;
     group = "media";
+    openFirewall = true;
   };
   services.homepage-dashboard.services.media.sonarr = {
     icon = "sonarr.svg";
