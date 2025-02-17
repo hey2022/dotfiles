@@ -23,6 +23,10 @@ in {
         icon = "jellyfin.svg";
         href = "http://${hostname}:8096";
       };
+      navidrome = {
+        icon = "navidrome.svg";
+        href = "http://${hostname}:4533";
+      };
     };
   };
 }
