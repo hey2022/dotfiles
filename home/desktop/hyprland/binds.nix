@@ -108,8 +108,7 @@ in {
 
     bindr = [
       # launcher
-      "$mod, space, exec, ${toggle "rofi"} -show drun -theme ~/.config/rofi/launchers/type-1/style-1.rasi"
-      "$mod SHIFT, space, exec, ${toggle "rofi"} -show run -theme ~/.config/rofi/launchers/type-1/style-1.rasi"
+      "$mod, space, exec, ${toggle "fuzzel"}"
     ];
 
     bindl = [

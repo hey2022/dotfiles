@@ -17,7 +17,7 @@
     ../wlogout.nix
     ../terminal/foot.nix
     ../file-manager/pcmanfm.nix
-    ../launchers/rofi
+    ../launchers/fuzzel.nix
     ../../programs/music.nix
     ../../dev/jq.nix
   ];
