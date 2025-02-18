@@ -104,9 +104,7 @@ in {
       # mullvad tunnel
       "$mod, T, exec, mullvad split-tunnel add $(hyprctl activewindow -j | jq '.pid')"
       "$mod SHIFT, T, exec, mullvad split-tunnel delete $(hyprctl activewindow -j | jq '.pid')"
-    ];
 
-    bindr = [
       # launcher
       "$mod, space, exec, ${toggle "fuzzel"}"
     ];
