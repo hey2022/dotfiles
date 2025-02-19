@@ -13,6 +13,7 @@
     ./cpp.nix
     ./markdown.nix
     ./jq.nix
+    ./julia.nix
   ];
   home.packages = with pkgs; [
     bun
