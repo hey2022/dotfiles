@@ -9,6 +9,7 @@
     ./rules.nix
     ../stylix.nix
     ../brightness.nix
+    ./hypridle.nix
     ../hyprlock.nix
     ../swaync.nix
     ../vnc
