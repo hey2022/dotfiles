@@ -143,6 +143,22 @@
         "type": "github"
       }
     },
+    "firefox-csshacks": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1739438389,
+        "narHash": "sha256-eufeXtt/SDcnb+yMMxijRssQr9zeBZQWRLihnxIF49M=",
+        "owner": "MrOtherGuy",
+        "repo": "firefox-csshacks",
+        "rev": "86203c2a52541818907c8d7775bbfcd49cf56ba0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "MrOtherGuy",
+        "repo": "firefox-csshacks",
+        "type": "github"
+      }
+    },
     "firefox-gnome-theme": {
       "flake": false,
       "locked": {
@@ -893,6 +909,7 @@
       "inputs": {
         "disko": "disko",
         "emacs-overlay": "emacs-overlay",
+        "firefox-csshacks": "firefox-csshacks",
         "fjordlauncher": "fjordlauncher",
         "home-manager": "home-manager",
         "hyprland": "hyprland",
