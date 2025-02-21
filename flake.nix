@@ -41,10 +41,6 @@
       url = "github:hyprwm/contrib";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    zen-browser = {
-      url = "github:0xc000022070/zen-browser-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     tls-xb = {
       url = "github:hey2022/tls-xb";
       inputs.nixpkgs.follows = "nixpkgs";
