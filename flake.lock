@@ -100,6 +100,22 @@
         "type": "github"
       }
     },
+    "betterfox": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1733772338,
+        "narHash": "sha256-Uu/a5t74GGvMIJP5tptqbiFiA+x2hw98irPdl8ynGoE=",
+        "owner": "yokoffing",
+        "repo": "Betterfox",
+        "rev": "09dd87a3abcb15a88798941e5ed74e4aa593108c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "yokoffing",
+        "repo": "Betterfox",
+        "type": "github"
+      }
+    },
     "disko": {
       "inputs": {
         "nixpkgs": [
@@ -907,6 +923,7 @@
     },
     "root": {
       "inputs": {
+        "betterfox": "betterfox",
         "disko": "disko",
         "emacs-overlay": "emacs-overlay",
         "firefox-csshacks": "firefox-csshacks",
