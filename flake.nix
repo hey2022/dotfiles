@@ -45,10 +45,6 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    rofi-themes = {
-      url = "github:adi1090x/rofi";
-      flake = false;
-    };
     tls-xb = {
       url = "github:hey2022/tls-xb";
       inputs.nixpkgs.follows = "nixpkgs";
