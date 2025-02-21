@@ -16,11 +16,13 @@ in {
       };
       extraConfig = "${inputs.betterfox}/main/user.js";
       userChrome = builtins.readFile ./userChrome.css;
-      extensions = with pkgs.nur.repos.rycee.firefox-addons; [
-        ublock-origin
-        keepassxc-browser
-        sidebery
-      ];
+      extensions = {
+        packages = with pkgs.nur.repos.rycee.firefox-addons; [
+          ublock-origin
+          keepassxc-browser
+          sidebery
+        ];
+      };
     };
   };
   home.file = {
