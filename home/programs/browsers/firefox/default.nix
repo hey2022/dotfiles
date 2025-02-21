@@ -13,6 +13,7 @@ in {
       settings = {
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
         "extensions.autoDisableScopes" = 0;
+        "browser.tabs.closeWindowWithLastTab" = false;
       };
       extraConfig = "${inputs.betterfox}/main/user.js";
       userChrome = builtins.readFile ./userChrome.css;
