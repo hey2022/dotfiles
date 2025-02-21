@@ -15,7 +15,7 @@
     ../terminal/foot.nix
     ./wkill.nix
     ../file-manager/pcmanfm.nix
-    ../launchers/rofi
+    ../launchers/fuzzel.nix
   ];
 
   wayvnc.enable = true;

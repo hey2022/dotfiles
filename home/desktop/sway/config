@@ -200,7 +200,6 @@ bindsym $mod+ctrl+shift+insert exec grim -g "$(slurp)" - | wl-copy
 bindsym $mod+o exec grim -g "$(slurp)" - | tesseract -l eng - - | wl-copy
 bindsym $mod+shift+o exec grim -g "$(slurp)" - | tesseract -l chi_sim+jpn+kor -c preserve_interword_spaces=1 - - | wl-copy
 
-bindsym $mod+space exec pkill rofi || rofi -show drun -theme ~/.config/rofi/launchers/type-1/style-1.rasi
-bindsym $mod+shift+space exec pkill rofi || rofi -show run -theme ~/.config/rofi/launchers/type-1/style-1.rasi
+bindsym $mod+space exec pkill fuzzel || fuzzel
 
 bindsym $mod+n exec swaync-client -t
