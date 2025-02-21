@@ -70,7 +70,7 @@ in {
       # logout menu
       "$mod SHIFT, Escape, exec, ${toggle "wlogout"} -p layer-shell"
       # lock screen
-      "$mod, Escape, exec, ${runOnce "hyprlock"}"
+      "$mod, Escape, exec, ${runOnce "hyprlock"} --immediate"
 
       # screenshot
       # area
