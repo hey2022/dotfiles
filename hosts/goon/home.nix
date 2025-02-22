@@ -16,6 +16,7 @@
 
   home.username = "yiheng";
   home.homeDirectory = "/home/yiheng";
+  host.laptop = true;
 
   home.packages = with pkgs; [
     keepassxc

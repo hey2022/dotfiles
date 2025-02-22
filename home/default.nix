@@ -21,6 +21,11 @@
       default = true;
       description = "Whether the system is running NixOS";
     };
+    host.laptop = lib.mkOption {
+      type = lib.types.bool;
+      default = false;
+      description = "Whether the host is a laptop";
+    };
   };
   config = {
     home.stateVersion = "24.11";
