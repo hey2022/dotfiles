@@ -3,6 +3,7 @@
     nh
     nix-search-cli
     nixd
+    nurl
     alejandra
   ];
   programs.nix-index-database.comma.enable = true;
