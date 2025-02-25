@@ -1,5 +1,5 @@
 {pkgs, ...}: let
-  beetsSettings = import ../../../../../.config/beets/config.nix;
+  beetsSettings = import ../../../../../common/beets.nix;
   beetsImport = pkgs.writeScriptBin "beets-import.sh" ''
     #!${pkgs.bash}/bin/bash
 

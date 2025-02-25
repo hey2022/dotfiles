@@ -1,5 +1,5 @@
 {pkgs, ...}: let
-  beetsSettings = import ../../../.config/beets/config.nix;
+  beetsSettings = import ../../../common/beets.nix;
 in {
   home.packages = [pkgs.ffmpeg];
   programs.beets = {

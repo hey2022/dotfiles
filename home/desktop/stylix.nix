@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  imports = [../../modules/stylix.nix];
+  imports = [../../common/stylix.nix];
   stylix = {
     iconTheme = {
       enable = true;
