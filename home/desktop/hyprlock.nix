@@ -17,9 +17,9 @@
       };
       label = {
         text = "$TIME";
-        color = "rgb(${config.lib.stylix.colors.base00})";
+        color = "rgb(${config.lib.stylix.colors.base05})";
 
-        position = "0, 80";
+        position = "0, 100";
         font_family = "Inter";
         font_size = 64;
         halign = "center";
