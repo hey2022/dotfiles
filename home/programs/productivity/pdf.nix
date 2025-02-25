@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    okular
+    kdePackages.okular
     ocrmypdf
     poppler_utils
   ];
