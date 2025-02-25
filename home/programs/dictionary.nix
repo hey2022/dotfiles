@@ -1,3 +1,3 @@
 {pkgs, ...}: {
-  home.packages = [pkgs.goldendict-ng];
+  # home.packages = [pkgs.goldendict-ng];
 }
