@@ -16,7 +16,7 @@
     ./wkill.nix
     ../file-manager/pcmanfm.nix
     ../launchers/fuzzel.nix
-    ../swww.nix
+    ../swww
   ];
 
   wayvnc.enable = true;
