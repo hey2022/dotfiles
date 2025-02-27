@@ -21,6 +21,7 @@
     ../launchers/fuzzel.nix
     ../../programs/music.nix
     ../../dev/jq.nix
+    ../swww.nix
   ];
   wayland.windowManager.hyprland = {
     enable = true;

@@ -8,7 +8,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
-      url = "github:nix-community/home-manager";
+      # url = "github:nix-community/home-manager";
+      url = "github:hey2022/home-manager/swww";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nur = {

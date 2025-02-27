@@ -16,6 +16,7 @@
     ./wkill.nix
     ../file-manager/pcmanfm.nix
     ../launchers/fuzzel.nix
+    ../swww.nix
   ];
 
   wayvnc.enable = true;
@@ -27,7 +28,6 @@
   };
 
   home.packages = with pkgs; [
-    swww
     wlogout
     grim
     slurp
