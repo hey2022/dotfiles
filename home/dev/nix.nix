@@ -5,6 +5,7 @@
     nixd
     nurl
     alejandra
+    nixfmt-rfc-style
   ];
   programs.nix-index-database.comma.enable = true;
   home.sessionVariables = {
