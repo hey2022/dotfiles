@@ -10,11 +10,11 @@
     ../stylix.nix
     ../brightness.nix
     ./hypridle.nix
+    ./hyprpanel.nix
     ../hyprlock.nix
     ../swaync.nix
     ../vnc
     ../pipewire.nix
-    ../waybar
     ../wlogout.nix
     ../terminal/foot.nix
     ../file-manager/pcmanfm.nix

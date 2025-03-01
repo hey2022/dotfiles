@@ -86,9 +86,6 @@ in {
       "ALT, Print, exec, ${runOnce "grimblast"} --notify --cursor copy screen"
       "$mod ALT, S, exec, ${runOnce "grimblast"} --notify --cursor copy screen"
 
-      # notification
-      "$mod, N, exec, ${toggle "swaync-client"} -t"
-
       # cycle workspaces
       "$mod, bracketleft, workspace, m-1"
       "$mod, bracketright, workspace, m+1"
