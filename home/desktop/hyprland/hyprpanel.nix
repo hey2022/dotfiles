@@ -28,6 +28,9 @@ in {
         };
       };
       menus = {
+        dashboard = {
+          powermenu.logout = "uwsm stop";
+        };
         clock = {
           weather.enabled = false;
         };
