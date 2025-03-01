@@ -531,8 +531,7 @@ and `defcustom' forms reset their default values."
 
 ** Mindustry Logic
 #+begin_src emacs-lisp
-(use-package! mlog-mode
-  :mode ("\\.\\(mlog\\|masm\\)\\'"))
+(use-package! mlog-mode)
 #+end_src
 
 ** Direnv
