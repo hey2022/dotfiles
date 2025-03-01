@@ -22,6 +22,7 @@
     ../../programs/music.nix
     ../../dev/jq.nix
     ../swww
+    ../wayland
   ];
   wayland.windowManager.hyprland = {
     enable = true;

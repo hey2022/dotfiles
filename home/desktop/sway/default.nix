@@ -17,6 +17,7 @@
     ../file-manager/pcmanfm.nix
     ../launchers/fuzzel.nix
     ../swww
+    ../wayland
   ];
 
   wayvnc.enable = true;
@@ -26,14 +27,4 @@
     config = lib.mkForce null;
     extraConfig = builtins.readFile ./config;
   };
-
-  home.packages = with pkgs; [
-    wlogout
-    grim
-    slurp
-    tesseract
-    wl-clipboard
-    playerctl
-    brightnessctl
-  ];
 }
