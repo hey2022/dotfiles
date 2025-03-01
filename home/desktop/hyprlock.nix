@@ -26,6 +26,7 @@
         valign = "center";
       };
       background = {
+        path = lib.mkForce "screenshot";
         blur_passes = 2;
       };
     };
