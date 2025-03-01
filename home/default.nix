@@ -8,6 +8,7 @@
     ./services
     ./nixgl.nix
     ./xdg
+    ./shell
   ];
   options = {
     home.dotfiles = lib.mkOption {

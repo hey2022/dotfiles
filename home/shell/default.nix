@@ -6,6 +6,7 @@
     ./env.nix
     ./direnv.nix
     ./scripts
+    ./fish
   ];
 
   home.packages = with pkgs; [
