@@ -3,7 +3,6 @@
   config,
   ...
 }: let
-  font = "${config.stylix.fonts.sansSerif.name}";
   font-size = "${toString config.stylix.fonts.sizes.desktop}";
 in {
   imports = [inputs.hyprpanel.homeManagerModules.hyprpanel];
@@ -23,7 +22,7 @@ in {
       };
       theme = {
         font = {
-          name = font;
+          name = "LXGW WenKai";
           size = font-size;
         };
       };
