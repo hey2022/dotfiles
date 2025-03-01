@@ -22,6 +22,10 @@
     "albumtype:soundtrack" = "Soundtracks/$album/$track $title";
   };
 
+  match = {
+    strong_rec_thresh = 0.10;
+  };
+
   permissions = {
     dir = 775;
     file = 664;
