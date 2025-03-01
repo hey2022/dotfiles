@@ -7,5 +7,6 @@
       dark = "Papirus-Dark";
       light = "Papirus";
     };
+    targets.hyprland.hyprpaper.enable = false;
   };
 }
