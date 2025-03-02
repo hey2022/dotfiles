@@ -551,7 +551,7 @@ and `defcustom' forms reset their default values."
         (setf (substring s 0 1) (upcase (substring s 0 1))))
 
       ;; Capitalize first letter after each sentence-ending punctuation
-      (replace-regexp-in-string "[.!?][ \t\n]+\\(\\w\\)"
+      (replace-regexp-in-string "[.!?*-][ \t\n]+\\(\\w\\)"
                                 (lambda (match)
                                   (replace-match (upcase (match-string 1 match))
                                                  t nil match 1))
