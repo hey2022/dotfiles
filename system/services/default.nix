@@ -6,6 +6,5 @@
     ./syncthing.nix
     ./automount.nix
     ./pipewire.nix
-    ./ai
   ];
 }

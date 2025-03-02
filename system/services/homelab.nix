@@ -1,3 +1,3 @@
 {...}: {
-  imports = [./miniflux.nix ./media];
+  imports = [./miniflux.nix ./media ./ai];
 }
