@@ -543,12 +543,19 @@ and `defcustom' forms reset their default values."
 ** Sentence case
 #+begin_src emacs-lisp
 (defun sentence-case-string (string)
-  "Convert STRING to sentence case. Return the converted string or nil if STRING is nil."
-  (cond
-   ((null string) nil)
-   ((zerop (length string)) string)
-   (t (concat (upcase (substring string 0 1))
-              (downcase (substring string 1))))))
+  "Convert STRING to sentence case."
+  (when string
+    (let ((s (downcase string)))
+      ;; Capitalize first character of the string
+      (when (> (length s) 0)
+        (setf (substring s 0 1) (upcase (substring s 0 1))))
+
+      ;; Capitalize first letter after each sentence-ending punctuation
+      (replace-regexp-in-string "[.!?][ \t\n]+\\(\\w\\)"
+                                (lambda (match)
+                                  (replace-match (upcase (match-string 1 match))
+                                                 t nil match 1))
+                                s))))
 
 (defun sentence-case-region (start end)
   "Convert the region from START to END to sentence case."
