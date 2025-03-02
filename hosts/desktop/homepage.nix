@@ -28,5 +28,11 @@ in {
         href = "http://${hostname}:4533";
       };
     };
+    AI = {
+      open-webui = {
+        icon = "open-webui.webp";
+        href = "http://${hostname}:11111";
+      };
+    };
   };
 }
