@@ -111,7 +111,7 @@ Sets font to a custom build of Iosevka using https://typeof.net/Iosevka/customiz
           "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f")))
 #+end_src
 
-** Org Node
+** Org Roam
 *** Org Node
 #+begin_src emacs-lisp :tangle no
 (use-package org-node
