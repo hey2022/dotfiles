@@ -176,20 +176,13 @@ Setup Org Roam capture templates.
 (after! org-roam
   (setq org-roam-capture-templates
         '(("d" "Default" plain "%?"
-           :target (file+head "${slug}.org" "#+title: %(sentence-case \"${title}\")\n%(org-roam-template-select-tags)\n")
+           :target (file+head "${slug}.org" "#+title: %(sentence-case-string \"${title}\")\n%(org-roam-template-select-tags)\n")
            :unnarrowed t
            :empty-lines 1)
-          ("a" "Anki Card" plain "* %(sentence-case \"${title}\")\n%?"
-           :target (file+head "${slug}.org" ":PROPERTIES:\n:ANKI_DECK: Main\n:END:\n#+title: %(sentence-case \"${title}\")\n%(org-roam-template-select-tags)\n")
+          ("a" "Anki Card" plain "* %(sentence-case-string \"${title}\")\n%?"
+           :target (file+head "${slug}.org" ":PROPERTIES:\n:ANKI_DECK: Main\n:END:\n#+title: %(sentence-case-string \"${title}\")\n%(org-roam-template-select-tags)\n")
            :unnarrowed t
            :empty-lines 1))))
-
-(defun sentence-case (string)
-  "Convert STRING to sentence case."
-  (if (zerop (length string))
-      string
-    (concat (upcase (substring string 0 1))
-            (downcase (substring string 1)))))
 #+end_src
 
 *** Org Roam UI
@@ -545,4 +538,25 @@ and `defcustom' forms reset their default values."
   :after magit
   :config
   (difftastic-bindings-mode))
+#+end_src
+* Editing
+** Sentence case
+#+begin_src emacs-lisp
+(defun sentence-case-string (string)
+  "Convert STRING to sentence case. Return the converted string or nil if STRING is nil."
+  (cond
+   ((null string) nil)
+   ((zerop (length string)) string)
+   (t (concat (upcase (substring string 0 1))
+              (downcase (substring string 1))))))
+
+(defun sentence-case-region (start end)
+  "Convert the region from START to END to sentence case."
+  (interactive "r")
+  (if (use-region-p)
+      (let* ((text (buffer-substring-no-properties start end))
+             (converted (sentence-case-string text)))
+        (delete-region start end)
+        (insert converted))
+    (message "No region selected")))
 #+end_src
