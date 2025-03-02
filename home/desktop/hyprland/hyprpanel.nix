@@ -25,6 +25,9 @@ in {
           name = "LXGW WenKai";
           size = font-size;
         };
+        bar = {
+          transparent = true;
+        };
       };
       menus = {
         dashboard = {
