@@ -558,12 +558,17 @@ and `defcustom' forms reset their default values."
                                 s))))
 
 (defun sentence-case-region (start end)
-  "Convert the region from START to END to sentence case."
-  (interactive "r")
-  (if (use-region-p)
-      (let* ((text (buffer-substring-no-properties start end))
-             (converted (sentence-case-string text)))
-        (delete-region start end)
-        (insert converted))
-    (message "No region selected")))
+  "Convert the region from START to END to sentence case.
+If no region is active, convert the current line."
+  (interactive
+   (if (use-region-p)
+       (list (region-beginning) (region-end))
+     (list (line-beginning-position) (line-end-position))))
+
+  (let* ((text (buffer-substring-no-properties start end))
+         (converted (sentence-case-string text)))
+    (delete-region start end)
+    (insert converted)))
+
+(map! :nv "gC" #'sentence-case-region)
 #+end_src
