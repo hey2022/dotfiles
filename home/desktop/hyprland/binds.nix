@@ -116,8 +116,8 @@ in {
         then ["$mod, G, hy3:changegroup, toggletab"]
         else [
           "$mod, G, togglegroup"
-          "$mod, N, changegroupactive, f"
-          "$mod, P, changegroupactive, b"
+          "$mod SHIFT, N, changegroupactive, f"
+          "$mod SHIFT, P, changegroupactive, b"
         ]
       );
 
