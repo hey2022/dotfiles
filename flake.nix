@@ -84,12 +84,12 @@
           desktop = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             specialArgs = {inherit inputs;};
-            modules = [./hosts/desktop/configuration.nix inputs.stylix.nixosModules.stylix];
+            modules = [./hosts/desktop/configuration.nix];
           };
           goon = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             specialArgs = {inherit inputs;};
-            modules = [./hosts/goon/configuration.nix disko.nixosModules.default inputs.stylix.nixosModules.stylix];
+            modules = [./hosts/goon/configuration.nix disko.nixosModules.default];
           };
         };
         homeConfigurations = {
@@ -99,7 +99,6 @@
               ./hosts/desktop/home.nix
               nur.modules.homeManager.default
               inputs.nix-index-database.hmModules.nix-index
-              inputs.stylix.homeManagerModules.stylix
             ];
 
             extraSpecialArgs = {
@@ -112,7 +111,6 @@
               ./hosts/goon/home.nix
               nur.modules.homeManager.default
               inputs.nix-index-database.hmModules.nix-index
-              inputs.stylix.homeManagerModules.stylix
             ];
 
             extraSpecialArgs = {

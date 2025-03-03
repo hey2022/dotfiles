@@ -5,7 +5,7 @@
     ./gtk.nix
     ./mount.nix
     ./wluma.nix
-    ../../common/stylix.nix
+    ./stylix.nix
   ];
   programs.wluma.enable = true;
 }

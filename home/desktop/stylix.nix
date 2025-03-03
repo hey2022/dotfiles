@@ -1,5 +1,10 @@
-{pkgs, ...}: {
-  imports = [../../common/stylix.nix];
+{
+  inputs,
+  pkgs,
+  ...
+}: {
+  imports = [inputs.stylix.homeManagerModules.stylix ../../common/stylix.nix];
+
   stylix = {
     iconTheme = {
       enable = true;
