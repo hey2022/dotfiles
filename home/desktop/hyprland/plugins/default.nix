@@ -1,3 +1,3 @@
 {...}: {
-  imports = [./hyprexpo.nix];
+  imports = [./hy3.nix ./hyprexpo.nix];
 }

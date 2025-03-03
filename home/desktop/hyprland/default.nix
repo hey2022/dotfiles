@@ -1,6 +1,7 @@
 {
-  pkgs,
   inputs,
+  lib,
+  pkgs,
   ...
 }: {
   imports = [
@@ -25,14 +26,20 @@
     ../swww
     ../wayland
   ];
-  wayland.windowManager.hyprland = {
-    enable = true;
-    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
-    systemd.enable = false;
+  options = {
+    wayland.windowManager.hyprland.hy3 = lib.mkEnableOption "hy3";
   };
-  home.packages = [
-    inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
-    pkgs.mullvad
-  ];
-  home.sessionVariables.NIXOS_OZONE_WL = "1";
+  config = {
+    wayland.windowManager.hyprland = {
+      enable = true;
+      package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+      systemd.enable = false;
+      hy3 = true;
+    };
+    home.packages = [
+      inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
+      pkgs.mullvad
+    ];
+    home.sessionVariables.NIXOS_OZONE_WL = "1";
+  };
 }
