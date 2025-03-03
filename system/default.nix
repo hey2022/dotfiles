@@ -1,4 +1,4 @@
-{...}: {
+{lib, ...}: {
   imports = [
     ./boot
     ./programs
@@ -10,6 +10,16 @@
     ./ssh.nix
     ./polkit.nix
     ./shell/fish.nix
+    ./power
   ];
-  system.stateVersion = "24.11";
+  options = {
+    host.laptop = lib.mkOption {
+      type = lib.types.bool;
+      default = false;
+      description = "Whether the host is a laptop";
+    };
+  };
+  config = {
+    system.stateVersion = "24.11";
+  };
 }

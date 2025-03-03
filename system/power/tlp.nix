@@ -1,5 +1,9 @@
-{...}: {
-  services.tlp = {
+{
+  config,
+  lib,
+  ...
+}: {
+  services.tlp = lib.mkIf config.host.laptop {
     enable = true;
     settings = {
       # https://linrunner.de/tlp/support/optimizing.html

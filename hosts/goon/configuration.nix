@@ -9,7 +9,6 @@
     inputs.nixos-hardware.nixosModules.lenovo-thinkpad-x1-6th-gen
 
     ../../system
-    ../../system/laptop
     ../../system/desktop
     ../../system/desktop/hyprland.nix
     ../../system/network/mullvad.nix
@@ -19,6 +18,7 @@
   boot.kernelParams = ["i915.enable_dc=0"];
 
   networking.hostName = "goon";
+  host.laptop = true;
 
   time.timeZone = "Asia/Shanghai";
 
