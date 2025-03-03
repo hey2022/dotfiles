@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    flake-parts.url = "github:hercules-ci/flake-parts";
     disko = {
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -66,50 +67,55 @@
   };
 
   outputs = {
+    flake-parts,
     nixpkgs,
     disko,
     nur,
     home-manager,
     ...
-  } @ inputs: let
-    system = "x86_64-linux";
-  in {
-    formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.alejandra;
-    nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
-      inherit system;
-      specialArgs = {inherit inputs;};
-      modules = [./hosts/desktop/configuration.nix inputs.stylix.nixosModules.stylix];
-    };
-    homeConfigurations."yiheng@desktop" = home-manager.lib.homeManagerConfiguration {
-      pkgs = nixpkgs.legacyPackages.${system};
-      modules = [
-        ./hosts/desktop/home.nix
-        nur.modules.homeManager.default
-        inputs.nix-index-database.hmModules.nix-index
-        inputs.stylix.homeManagerModules.stylix
-      ];
+  } @ inputs:
+    flake-parts.lib.mkFlake {inherit inputs;} {
+      systems = ["x86_64-linux"];
+      perSystem = {pkgs, ...}: {
+        formatter = pkgs.alejandra;
+      };
+      flake = {
+        nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = {inherit inputs;};
+          modules = [./hosts/desktop/configuration.nix inputs.stylix.nixosModules.stylix];
+        };
+        homeConfigurations."yiheng@desktop" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          modules = [
+            ./hosts/desktop/home.nix
+            nur.modules.homeManager.default
+            inputs.nix-index-database.hmModules.nix-index
+            inputs.stylix.homeManagerModules.stylix
+          ];
 
-      extraSpecialArgs = {
-        inherit inputs;
+          extraSpecialArgs = {
+            inherit inputs;
+          };
+        };
+        nixosConfigurations.goon = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = {inherit inputs;};
+          modules = [./hosts/goon/configuration.nix disko.nixosModules.default inputs.stylix.nixosModules.stylix];
+        };
+        homeConfigurations."yiheng@goon" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          modules = [
+            ./hosts/goon/home.nix
+            nur.modules.homeManager.default
+            inputs.nix-index-database.hmModules.nix-index
+            inputs.stylix.homeManagerModules.stylix
+          ];
+
+          extraSpecialArgs = {
+            inherit inputs;
+          };
+        };
       };
     };
-    nixosConfigurations.goon = nixpkgs.lib.nixosSystem {
-      inherit system;
-      specialArgs = {inherit inputs;};
-      modules = [./hosts/goon/configuration.nix disko.nixosModules.default inputs.stylix.nixosModules.stylix];
-    };
-    homeConfigurations."yiheng@goon" = home-manager.lib.homeManagerConfiguration {
-      pkgs = nixpkgs.legacyPackages.${system};
-      modules = [
-        ./hosts/goon/home.nix
-        nur.modules.homeManager.default
-        inputs.nix-index-database.hmModules.nix-index
-        inputs.stylix.homeManagerModules.stylix
-      ];
-
-      extraSpecialArgs = {
-        inherit inputs;
-      };
-    };
-  };
 }
