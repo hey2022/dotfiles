@@ -1,7 +1,12 @@
-{pkgs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
     ./disko-config.nix
+    inputs.nixos-hardware.nixosModules.lenovo-thinkpad-x1-6th-gen
 
     ../../system
     ../../system/laptop

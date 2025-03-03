@@ -7,6 +7,7 @@
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixos-hardware.url = "github:NixOS/nixos-hardware";
     home-manager = {
       # url = "github:nix-community/home-manager";
       url = "github:hey2022/home-manager/swww";
