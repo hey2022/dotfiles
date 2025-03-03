@@ -80,40 +80,44 @@
         formatter = pkgs.alejandra;
       };
       flake = {
-        nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          specialArgs = {inherit inputs;};
-          modules = [./hosts/desktop/configuration.nix inputs.stylix.nixosModules.stylix];
-        };
-        homeConfigurations."yiheng@desktop" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          modules = [
-            ./hosts/desktop/home.nix
-            nur.modules.homeManager.default
-            inputs.nix-index-database.hmModules.nix-index
-            inputs.stylix.homeManagerModules.stylix
-          ];
-
-          extraSpecialArgs = {
-            inherit inputs;
+        nixosConfigurations = {
+          desktop = nixpkgs.lib.nixosSystem {
+            system = "x86_64-linux";
+            specialArgs = {inherit inputs;};
+            modules = [./hosts/desktop/configuration.nix inputs.stylix.nixosModules.stylix];
+          };
+          goon = nixpkgs.lib.nixosSystem {
+            system = "x86_64-linux";
+            specialArgs = {inherit inputs;};
+            modules = [./hosts/goon/configuration.nix disko.nixosModules.default inputs.stylix.nixosModules.stylix];
           };
         };
-        nixosConfigurations.goon = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          specialArgs = {inherit inputs;};
-          modules = [./hosts/goon/configuration.nix disko.nixosModules.default inputs.stylix.nixosModules.stylix];
-        };
-        homeConfigurations."yiheng@goon" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          modules = [
-            ./hosts/goon/home.nix
-            nur.modules.homeManager.default
-            inputs.nix-index-database.hmModules.nix-index
-            inputs.stylix.homeManagerModules.stylix
-          ];
+        homeConfigurations = {
+          "yiheng@desktop" = home-manager.lib.homeManagerConfiguration {
+            pkgs = nixpkgs.legacyPackages.x86_64-linux;
+            modules = [
+              ./hosts/desktop/home.nix
+              nur.modules.homeManager.default
+              inputs.nix-index-database.hmModules.nix-index
+              inputs.stylix.homeManagerModules.stylix
+            ];
 
-          extraSpecialArgs = {
-            inherit inputs;
+            extraSpecialArgs = {
+              inherit inputs;
+            };
+          };
+          "yiheng@goon" = home-manager.lib.homeManagerConfiguration {
+            pkgs = nixpkgs.legacyPackages.x86_64-linux;
+            modules = [
+              ./hosts/goon/home.nix
+              nur.modules.homeManager.default
+              inputs.nix-index-database.hmModules.nix-index
+              inputs.stylix.homeManagerModules.stylix
+            ];
+
+            extraSpecialArgs = {
+              inherit inputs;
+            };
           };
         };
       };
