@@ -3,7 +3,7 @@
   config,
   ...
 }: let
-  font-size = "${toString config.stylix.fonts.sizes.desktop}";
+  font-size = config.stylix.fonts.sizes.desktop;
 in {
   imports = [inputs.hyprpanel.homeManagerModules.hyprpanel];
   programs.hyprpanel = {
@@ -23,7 +23,7 @@ in {
       theme = {
         font = {
           name = "LXGW WenKai";
-          size = font-size;
+          size = toString (font-size + 4);
         };
         bar = {
           transparent = true;
