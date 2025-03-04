@@ -21,7 +21,7 @@
           enable_gesture = true;
           gesture_fingers = 3;
           gesture_distance = 300;
-          gesture_positive = true;
+          gesture_positive = false;
         };
       };
     };
