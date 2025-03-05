@@ -1,4 +1,8 @@
-{config, ...}: let
+{
+  config,
+  lib,
+  ...
+}: let
   toggle = program: "pkill ${program} || uwsm app -- ${program}";
   runOnce = program: "pgrep ${program} || uwsm app -- ${program}";
   hy3 = config.wayland.windowManager.hyprland.hy3;
@@ -119,7 +123,8 @@ in {
           "$mod SHIFT, N, changegroupactive, f"
           "$mod SHIFT, P, changegroupactive, b"
         ]
-      );
+      )
+      ++ lib.optional config.host.laptop "$mod, I, exec, toggle-lid-inhibit-lock";
 
     bindl = [
       # media controls

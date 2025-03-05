@@ -25,6 +25,7 @@
     ../../dev/jq.nix
     ../swww
     ../wayland
+    ../../services/lid-inhibit-lock.nix
   ];
   options = {
     wayland.windowManager.hyprland.hy3 = lib.mkEnableOption "hy3";
