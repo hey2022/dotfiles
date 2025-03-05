@@ -7,6 +7,7 @@
     ./direnv.nix
     ./scripts
     ./fish
+    ./zellij.nix
   ];
 
   home.packages = with pkgs; [
