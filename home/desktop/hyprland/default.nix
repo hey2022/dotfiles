@@ -14,7 +14,6 @@
     ./hypridle.nix
     ./hyprpanel.nix
     ../hyprlock.nix
-    ../swaync.nix
     ../vnc
     ../pipewire.nix
     ../wlogout.nix
