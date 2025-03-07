@@ -6,5 +6,6 @@
     ./syncthing.nix
     ./automount.nix
     ./pipewire.nix
+    ./iperf.nix
   ];
 }
