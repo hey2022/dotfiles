@@ -28,6 +28,7 @@ in {
         bar = {
           transparent = true;
         };
+        osd.enable = false;
       };
       menus = {
         dashboard = {
