@@ -18,6 +18,9 @@
       label = {
         text = "$TIME";
         color = "rgb(${config.lib.stylix.colors.base05})";
+        shadow_color = "rgb(${config.lib.stylix.colors.base00})";
+        shadow_passes = 1;
+        shadow_size = 1;
 
         position = "0, 100";
         font_family = "Inter";
