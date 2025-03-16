@@ -7,5 +7,6 @@
     ./automount.nix
     ./pipewire.nix
     ./iperf.nix
+    ./minecraft.nix
   ];
 }
