@@ -114,6 +114,9 @@ in {
 
         # launcher
         "$mod, space, exec, ${toggle "fuzzel"}"
+
+        # copyq
+        "$mod, C, exec, copyq toggle"
       ]
       ++ (
         if hy3
