@@ -81,30 +81,6 @@ in {
         };
       }
     ];
-    bookmarks = {
-      Developer = {
-        Github = {
-          icon = "github-light.svg";
-          abbr = "GH";
-          href = "https://github.com";
-        };
-      };
-      School = {
-        Xiaobao = {
-          icon = "https://cdn.schoolis.cn/sis/favicon/sis.ico";
-          abbr = "XB";
-          href = "https://tsinglanstudent.schoolis.cn";
-        };
-        Teams = {
-          icon = "microsoft-teams.svg";
-          href = "https://teams.microsoft.com";
-        };
-        Canva = {
-          icon = "si-canva";
-          href = "https://www.canva.com";
-        };
-      };
-    };
   };
   environment.etc."homepage-dashboard/services.yaml".source = lib.mkForce (settingsFormat.generate "services.yaml" (convertServiceConfig cfg.services));
   environment.etc."homepage-dashboard/bookmarks.yaml".source = lib.mkForce (settingsFormat.generate "bookmarks.yaml" (convertBookmarkConfig cfg.bookmarks));
