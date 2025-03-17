@@ -47,3 +47,5 @@
 (package! envrc)
 
 (package! difftastic)
+
+(package! catppuccin-theme)

@@ -10,7 +10,7 @@ in {
     polarity = "dark";
     # https://github.com/nix-community/home-manager/issues/5743
     image = builtins.path {path = ../wallpapers/alena-aenami-serenity-1k.jpg;};
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/tomorrow-night.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
     fonts = {
       serif = config.stylix.fonts.sansSerif;
       sansSerif = {

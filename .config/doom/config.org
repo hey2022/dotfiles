@@ -29,7 +29,7 @@ Sets font to a custom build of Iosevka using https://typeof.net/Iosevka/customiz
 
 ** Theme
 #+begin_src emacs-lisp
-(setq doom-theme 'doom-tomorrow-night)
+(setq doom-theme 'catppuccin)
 #+end_src
 
 ** Transparency

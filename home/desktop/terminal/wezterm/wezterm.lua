@@ -3,7 +3,7 @@ local wezterm = require "wezterm"
 return {
   front_end = "WebGpu",
 
-  color_scheme = "Tomorrow Night",
+  color_scheme = "Catppuccin Mocha",
 
   window_background_opacity = 0.9,
 
