@@ -18,6 +18,7 @@ in {
       extraConfig = "${inputs.betterfox}/main/user.js";
       userChrome = builtins.readFile ./userChrome.css;
       extensions = {
+        force = true;
         packages = with pkgs.nur.repos.rycee.firefox-addons; [
           ublock-origin
           keepassxc-browser
@@ -31,5 +32,9 @@ in {
       source = inputs.firefox-csshacks;
       recursive = true;
     };
+  };
+  stylix.targets.firefox = {
+    profileNames = [profile];
+    colorTheme.enable = true;
   };
 }
