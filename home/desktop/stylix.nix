@@ -12,6 +12,10 @@
       dark = "Papirus-Dark";
       light = "Papirus";
     };
-    targets.hyprland.hyprpaper.enable = false;
+    targets = {
+      hyprland.hyprpaper.enable = false;
+      # https://github.com/danth/stylix/issues/933
+      qt.enable = true;
+    };
   };
 }
