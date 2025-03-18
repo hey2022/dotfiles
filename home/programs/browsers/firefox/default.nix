@@ -23,6 +23,7 @@ in {
           ublock-origin
           keepassxc-browser
           sidebery
+          tridactyl
         ];
       };
     };
