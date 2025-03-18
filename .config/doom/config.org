@@ -383,6 +383,23 @@ If no tags are provided, copy all files."
         :desc "Browse current note" "b" #'anki-editor-gui-browse
         :desc "Set current note type" "t" #'anki-editor-set-note-type
         :desc "Push new notes" "P" #'anki-editor-push-new-notes))
+
+(defun anki-editor-push-notes-directory (directory)
+  (interactive
+   (list (read-directory-name "Directory: ")))
+  (let* ((files (directory-files-recursively directory "\\.org$"))
+         (total (length files))
+         (index 0)
+         (progress-reporter (make-progress-reporter "Pushing notes..." 0 total)))
+    (dolist (file files)
+      (with-current-buffer (find-file-noselect file)
+        (anki-editor-push-notes 'file file)
+        (save-buffer)
+        (kill-buffer (current-buffer)))
+      (setq index (1+ index))
+      (progress-reporter-update progress-reporter index))
+    (progress-reporter-done progress-reporter)
+    (message "Finished pushing notes")))
 #+end_src
 
 ** Latex Snippets
