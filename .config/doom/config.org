@@ -236,32 +236,6 @@ If no tags are provided, copy all files."
 (setq org-agenda-include-diary t)
 #+end_src
 
-*** School Timetable
-#+begin_src emacs-lisp
-(after! org
-  (setq cycle-date '((6 11 2024) 2))
-
-  (defun school-timetable (date day)
-    (= (school-cycle-day date) day))
-
-  (defun school-cycle-day (date)
-    (if (weekdayp date)
-        (+ (% (+ (- (nth 1 cycle-date) 1) (weekdays-since (nth 0 cycle-date) date)) 6) 1)
-      0))
-
-  (defun weekdays-since (start-date end-date)
-    (let ((weekdays 0))
-      (dotimes (i (- (calendar-absolute-from-gregorian end-date)
-                     (calendar-absolute-from-gregorian start-date)))
-        (let ((current-date (calendar-gregorian-from-absolute (+ (calendar-absolute-from-gregorian start-date) i))))
-          (when (weekdayp current-date)
-            (setq weekdays (+ weekdays 1)))))
-      weekdays))
-
-  (defun weekdayp (date)
-    (memq (calendar-day-of-week date) '(1 2 3 4 5))))
-#+end_src
-
 *** Timeblock
 #+begin_src emacs-lisp
 (use-package! org-timeblock
