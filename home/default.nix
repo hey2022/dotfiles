@@ -9,6 +9,7 @@
     ./nixgl.nix
     ./xdg
     ./shell
+    ./font
   ];
   options = {
     home.dotfiles = lib.mkOption {

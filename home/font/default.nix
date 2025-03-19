@@ -8,4 +8,5 @@
     inter
     lxgw-wenkai
   ];
+  fonts.fontconfig.enable = true;
 }
