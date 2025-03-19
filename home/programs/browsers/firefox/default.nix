@@ -15,7 +15,9 @@ in {
         "extensions.autoDisableScopes" = 0;
         "browser.tabs.closeWindowWithLastTab" = false;
       };
-      extraConfig = "${inputs.betterfox}/main/user.js";
+      extraConfig = ''
+        ${builtins.readFile "${inputs.betterfox}/user.js"}
+      '';
       userChrome = builtins.readFile ./userChrome.css;
       extensions = {
         force = true;
