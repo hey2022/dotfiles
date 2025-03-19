@@ -17,6 +17,7 @@ in {
       };
       extraConfig = ''
         ${builtins.readFile "${inputs.betterfox}/user.js"}
+        ${builtins.readFile "${inputs.firefox-ui-fix}/user.js"}
       '';
       userChrome = builtins.readFile ./userChrome.css;
       extensions = {
@@ -34,7 +35,7 @@ in {
   };
   home.file = {
     ".mozilla/firefox/${profile}/chrome" = {
-      source = inputs.firefox-csshacks;
+      source = inputs.firefox-ui-fix;
       recursive = true;
     };
   };

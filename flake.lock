@@ -223,22 +223,6 @@
         "type": "github"
       }
     },
-    "firefox-csshacks": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1742307831,
-        "narHash": "sha256-gI9j/FZ+LA13olbJhw/9sV7KHmVg0iOmsvm85BrMses=",
-        "owner": "MrOtherGuy",
-        "repo": "firefox-csshacks",
-        "rev": "80d3a24829c0643a273e5f214eac53f0afee2a16",
-        "type": "github"
-      },
-      "original": {
-        "owner": "MrOtherGuy",
-        "repo": "firefox-csshacks",
-        "type": "github"
-      }
-    },
     "firefox-gnome-theme": {
       "flake": false,
       "locked": {
@@ -252,6 +236,22 @@
       "original": {
         "owner": "rafaelmardojai",
         "repo": "firefox-gnome-theme",
+        "type": "github"
+      }
+    },
+    "firefox-ui-fix": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1741629672,
+        "narHash": "sha256-NBPSKIxTNSuJahySyLqD45R/UmeyvkJBKehUIE/dI0I=",
+        "owner": "black7375",
+        "repo": "Firefox-UI-Fix",
+        "rev": "d46476ce72ecf236389c568742a2c8ad68dab771",
+        "type": "github"
+      },
+      "original": {
+        "owner": "black7375",
+        "repo": "Firefox-UI-Fix",
         "type": "github"
       }
     },
@@ -1124,7 +1124,7 @@
         "catppuccin": "catppuccin",
         "disko": "disko",
         "emacs-overlay": "emacs-overlay",
-        "firefox-csshacks": "firefox-csshacks",
+        "firefox-ui-fix": "firefox-ui-fix",
         "fjordlauncher": "fjordlauncher",
         "flake-parts": "flake-parts",
         "home-manager": "home-manager",

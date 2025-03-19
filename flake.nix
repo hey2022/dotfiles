@@ -63,8 +63,8 @@
       url = "github:unmojang/FjordLauncher";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    firefox-csshacks = {
-      url = "github:MrOtherGuy/firefox-csshacks";
+    firefox-ui-fix = {
+      url = "github:black7375/Firefox-UI-Fix";
       flake = false;
     };
     betterfox = {
