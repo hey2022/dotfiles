@@ -25,6 +25,7 @@ in {
           sidebery
           stylus
           tridactyl
+          firefox-color
         ];
       };
     };
