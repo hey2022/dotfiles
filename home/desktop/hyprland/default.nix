@@ -9,7 +9,6 @@
     ./binds.nix
     ./rules.nix
     ./plugins
-    ../stylix.nix
     ../brightness.nix
     ./hypridle.nix
     ./hyprpanel.nix
