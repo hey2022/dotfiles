@@ -6,7 +6,7 @@
   fonts = import ../lib/fonts.nix {inherit pkgs;};
 in {
   stylix = {
-    enable = true;
+    enable = false;
     polarity = "dark";
     # https://github.com/nix-community/home-manager/issues/5743
     image = builtins.path {path = ../wallpapers/alena-aenami-serenity-1k.jpg;};

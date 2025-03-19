@@ -8,7 +8,6 @@
     sessionVariables = {
       VISUAL = "emacsclient -c";
       EDITOR = "emacsclient -nw";
-      QT_QPA_PLATFORMTHEME = "qt5ct";
 
       GTK_IM_MODULE = "fcitx";
       QT_IM_MODULE = "fcitx";

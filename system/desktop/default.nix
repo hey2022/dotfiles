@@ -6,6 +6,7 @@
     ./mount.nix
     ./wluma.nix
     ./stylix.nix
+    ./catppuccin.nix
   ];
   programs.wluma.enable = true;
 }
