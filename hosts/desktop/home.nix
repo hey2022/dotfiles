@@ -6,11 +6,9 @@
     ../../home/programs/games
     ../../home/dev
     ../../home/anime.nix
-    ../../home/programs/cli
     ../../home/programs/wechat.nix
     ../../home/programs/rss.nix
     ../../home/programs/torrent.nix
-    ../../home/programs/browsers
     ../../home/profiles/education.nix
     ../../home/profiles/gaming.nix
   ];

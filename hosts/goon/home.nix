@@ -5,8 +5,6 @@
     ../../home/desktop/hyprland
     ../../home/dev
     ../../home/anime.nix
-    ../../home/programs/cli
-    ../../home/programs/browsers
     ../../home/programs/wechat.nix
     ../../home/profiles/education.nix
     ../../home/profiles/gaming.nix

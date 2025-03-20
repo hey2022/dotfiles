@@ -6,6 +6,7 @@
 }: {
   imports = [
     ./services
+    ./programs
     ./nixgl.nix
     ./xdg
     ./shell
