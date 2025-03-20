@@ -5,7 +5,6 @@
     ../../home/desktop/hyprland
     ../../home/dev
     ../../home/anime.nix
-    ../../home/programs/wechat.nix
     ../../home/profiles/education.nix
     ../../home/profiles/gaming.nix
     ../../home/services/lid-inhibit-lock.nix
