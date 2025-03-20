@@ -20,6 +20,7 @@ in {
         ${builtins.readFile "${inputs.firefox-ui-fix}/user.js"}
       '';
       userChrome = builtins.readFile ./userChrome.css;
+      userContent = builtins.readFile ./userContent.css;
       extensions = {
         force = true;
         packages = with pkgs.nur.repos.rycee.firefox-addons; [
@@ -34,7 +35,7 @@ in {
     };
   };
   home.file = {
-    ".mozilla/firefox/${profile}/chrome" = {
+    ".mozilla/firefox/${profile}/chrome/firefox-ui-fix" = {
       source = inputs.firefox-ui-fix;
       recursive = true;
     };
