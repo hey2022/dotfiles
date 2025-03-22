@@ -563,3 +563,8 @@ If no region is active, convert the current line."
 
 (map! :nv "gC" #'sentence-case-region)
 #+end_src
+
+** Sort lines
+#+begin_src emacs-lisp
+(map! :v "gS" #'sort-lines)
+#+end_src
