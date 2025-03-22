@@ -1,10 +1,11 @@
 {...}: {
   imports = [
+    ./aria2.nix
+    ./beets.nix
     ./fzf.nix
     ./network.nix
-    ./beets.nix
+    ./topgrade.nix
     ./yazi.nix
     ./zip.nix
-    ./aria2.nix
   ];
 }
