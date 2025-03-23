@@ -1,19 +1,20 @@
 {pkgs, ...}: {
   imports = [
+    ./cpp.nix
+    ./cyber-security.nix
     ./emacs.nix
     ./git.nix
     ./gpg.nix
-    ./nix.nix
     ./java.nix
-    ./python.nix
-    ./cyber-security.nix
-    ./sh.nix
-    ./lisp.nix
-    ./rust.nix
-    ./cpp.nix
-    ./markdown.nix
     ./jq.nix
+    ./json.nix
     ./julia.nix
+    ./lisp.nix
+    ./markdown.nix
+    ./nix.nix
+    ./python.nix
+    ./rust.nix
+    ./sh.nix
   ];
   home.packages = with pkgs; [
     bun
