@@ -43,9 +43,10 @@
     "spacing": 10
   },
   "clock": {
-    "tooltip": false,
-    "interval": 60,
-    "format": "{:%H:%M} "
+    "format": "{:%T} ",
+    "interval": 1,
+    "tooltip": true,
+    "tooltip-format": "{:%Y-%m-%d}"
   },
   "cpu": {
     "interval": 10,
