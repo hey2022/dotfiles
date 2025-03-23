@@ -30,6 +30,7 @@
 #memory,
 #mpris,
 #tray,
+#window,
 #workspaces,
 #wireplumber {
     background-color: @surface0;
@@ -51,6 +52,10 @@
 #workspaces button:hover {
     color: @sapphire;
     border-radius: 1rem;
+}
+
+window#waybar.empty #window {
+    background-color: transparent;
 }
 
 #clock {

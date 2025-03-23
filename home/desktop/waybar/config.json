@@ -1,7 +1,7 @@
 {
   "layer": "top",
   "position": "top",
-  "modules-left": ["hyprland/workspaces"],
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
   "modules-center": ["mpris"],
   "modules-right": [
     "clock",
@@ -18,6 +18,13 @@
     "format-icons": {
       "default": ""
     }
+  },
+  "hyprland/window": {
+    "format": "{}",
+    "rewrite": {
+      "(?:\\[Sidebery\\] )?(.*) — Mozilla Firefox": " $1"
+    },
+    "separate-outputs": true
   },
   "mpris": {
     "format": "{player_icon} {dynamic}",
