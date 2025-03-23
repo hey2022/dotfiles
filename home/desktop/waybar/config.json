@@ -70,7 +70,7 @@
   },
   "wireplumber": {
     "format": "{volume}% {icon}",
-    "format-muted": "",
+    "format-muted": "",
     "on-click": "pwvucontrol",
     "format-icons": ["", "", ""]
   },
