@@ -36,7 +36,7 @@
     "status-icons": {
       "paused": "⏸"
     },
-    "dynamic-order": ["title", "artist", "album"]
+    "dynamic-order": ["title", "artist"]
   },
   "tray": {
     "icon-size": 21,
