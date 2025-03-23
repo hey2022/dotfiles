@@ -1,3 +1,6 @@
 {...}: {
-  imports = [./swap];
+  imports = [
+    ./link-to-file
+    ./swap
+  ];
 }
