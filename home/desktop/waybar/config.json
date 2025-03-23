@@ -3,7 +3,15 @@
   "position": "top",
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["mpris"],
-  "modules-right": ["clock", "wireplumber", "backlight", "battery", "tray"],
+  "modules-right": [
+    "clock",
+    "cpu",
+    "memory",
+    "wireplumber",
+    "backlight",
+    "battery",
+    "tray"
+  ],
   "hyprland/workspaces": {
     "disable-scroll": true,
     "format": " {icon} ",
@@ -30,6 +38,13 @@
     "tooltip": false,
     "interval": 60,
     "format": "{:%H:%M} "
+  },
+  "cpu": {
+    "interval": 10,
+    "format": "{}% "
+  },
+  "memory": {
+    "format": "{}% "
   },
   "backlight": {
     "device": "intel_backlight",

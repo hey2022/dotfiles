@@ -26,6 +26,8 @@
 #backlight,
 #battery,
 #clock,
+#cpu,
+#memory,
 #mpris,
 #tray,
 #workspaces,
@@ -53,6 +55,14 @@
 
 #clock {
     color: @blue;
+}
+
+#cpu {
+    color: @red;
+}
+
+#memory {
+    color: @green;
 }
 
 #battery {
