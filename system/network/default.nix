@@ -1,5 +1,8 @@
 {pkgs, ...}: {
-  imports = [./dnscrypt.nix];
+  imports = [
+    ./dnscrypt.nix
+    ./nm-applet.nix
+  ];
   networking = {
     nftables.enable = true;
     networkmanager.enable = true;
