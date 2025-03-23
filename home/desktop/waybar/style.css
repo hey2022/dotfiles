@@ -58,6 +58,10 @@ window#waybar.empty #window {
     background-color: transparent;
 }
 
+#mpris.stopped {
+    background-color: transparent;
+}
+
 #clock {
     color: @blue;
 }
