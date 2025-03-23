@@ -1,0 +1,80 @@
+* {
+    font-family:
+        Inter,
+        Symbols Nerd Font;
+    font-size: 16px;
+}
+
+.modules-left {
+    margin: 5px 5px;
+}
+
+.modules-right {
+    margin: 5px 5px;
+}
+
+.modules-center {
+    margin: 5px 5px;
+}
+
+#waybar {
+    background: transparent;
+    color: @text;
+    margin: 5px 5px;
+}
+
+#backlight,
+#battery,
+#clock,
+#mpris,
+#tray,
+#workspaces,
+#wireplumber {
+    background-color: @surface0;
+    margin: 0 5px;
+    padding: 0 1rem;
+    border-radius: 1rem;
+}
+
+#workspaces button {
+    color: @lavender;
+    padding: 0.4rem;
+}
+
+#workspaces button.active {
+    color: @sky;
+    border-radius: 1rem;
+}
+
+#workspaces button:hover {
+    color: @sapphire;
+    border-radius: 1rem;
+}
+
+#clock {
+    color: @blue;
+}
+
+#battery {
+    color: @green;
+}
+
+#battery.charging {
+    color: @green;
+}
+
+#battery.warning:not(.charging) {
+    color: @red;
+}
+
+#backlight {
+    color: @yellow;
+}
+
+#wireplumber {
+    color: @maroon;
+}
+
+#mpris {
+    color: @mauve;
+}

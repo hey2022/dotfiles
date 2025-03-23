@@ -11,7 +11,7 @@
     ./plugins
     ../brightness.nix
     ./hypridle.nix
-    ./hyprpanel.nix
+    ../waybar
     ../hyprlock.nix
     ../vnc
     ../pipewire.nix
@@ -24,6 +24,7 @@
     ../swww
     ../wayland
     ../../services/lid-inhibit-lock.nix
+    ../swaync.nix
   ];
   options = {
     wayland.windowManager.hyprland.hy3 = lib.mkEnableOption "hy3";

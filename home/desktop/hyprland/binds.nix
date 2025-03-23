@@ -117,6 +117,9 @@ in {
 
         # copyq
         "$mod, C, exec, copyq toggle"
+
+        # swaync
+        "$mod, N, exec, swaync-client -t"
       ]
       ++ (
         if hy3

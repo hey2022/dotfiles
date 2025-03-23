@@ -13,7 +13,6 @@
       "widgets" = [
         "title"
         "dnd"
-        "mpris"
         "notifications"
       ];
     };

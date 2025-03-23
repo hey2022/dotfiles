@@ -9,5 +9,6 @@
     settings = {
       mainBar = lib.importJSON ./config.json;
     };
+    style = builtins.readFile ./style.css;
   };
 }

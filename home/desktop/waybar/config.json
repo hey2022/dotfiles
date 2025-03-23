@@ -1,156 +1,53 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 30,
-  "modules-left": [
-    "hyprland/workspaces",
-    "sway/workspaces",
-    "sway/mode",
-    "sway/scratchpad",
-    "sway/window"
-  ],
-  "modules-center": ["clock"],
-  "modules-right": [
-    "tray",
-    "pulseaudio",
-    "backlight",
-    "temperature",
-    "cpu",
-    "memory",
-    "battery",
-    "network"
-  ],
-  "sway/mode": {
-    "format": " {}"
-  },
-  "sway/scratchpad": {
-    "format": "{icon} {count}",
-    "show-empty": false,
-    "format-icons": ["", ""],
-    "tooltip": true,
-    "tooltip-format": "{app}: {title}"
-  },
-  "sway/workspaces": {
-    "disable-scroll": true,
-    "all-outputs": false,
-    "disable-markup": false,
-    "format": "{icon}",
-    "format-icons": {
-      "1": "1 <span font='Font Awesome 5 Free 14'></span>",
-      "2": "2 <span font='Font Awesome 5 Free 14'></span>",
-      "9": "9 <span font='Font Awesome 5 Free 14'></span>",
-      "10": "10 <span font='Font Awesome 5 Free 14'></span>"
-    }
-  },
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["mpris"],
+  "modules-right": ["clock", "wireplumber", "backlight", "battery", "tray"],
   "hyprland/workspaces": {
     "disable-scroll": true,
-    "all-outputs": false,
-    "disable-markup": false,
-    "format": "{icon}",
+    "format": " {icon} ",
     "format-icons": {
-      "1": "1 <span font='Font Awesome 5 Free 14'></span>",
-      "2": "2 <span font='Font Awesome 5 Free 14'></span>",
-      "9": "9 <span font='Font Awesome 5 Free 14'></span>",
-      "10": "10 <span font='Font Awesome 5 Free 14'></span>"
+      "default": ""
     }
+  },
+  "mpris": {
+    "format": "{player_icon} {dynamic}",
+    "format-paused": "{status_icon} {dynamic}",
+    "player-icons": {
+      "default": "🎵"
+    },
+    "status-icons": {
+      "paused": "⏸"
+    },
+    "dynamic-order": ["title", "artist", "album"]
   },
   "tray": {
-    "icon-size": 20,
-    "spacing": 8
-  },
-  "sway/window": {
-    "max-length": 50,
-    "tooltip": false
+    "icon-size": 21,
+    "spacing": 10
   },
   "clock": {
-    "format": "{:%R}",
-    "format-alt": "{:%a, %d %b %R}",
-    "tooltip-format": "<tt><small>{calendar}</small></tt>",
-    "calendar": {
-      "mode": "year",
-      "mode-mon-col": 3,
-      "weeks-pos": "right",
-      "on-scroll": 1,
-      "format": {
-        "months": "<span color='#ffead3'><b>{}</b></span>",
-        "days": "<span color='#ecc6d9'><b>{}</b></span>",
-        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
-        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
-      }
-    },
-    "actions": {
-      "on-click-right": "mode",
-      "on-click-forward": "tz_up",
-      "on-click-backward": "tz_down",
-      "on-scroll-up": "shift_up",
-      "on-scroll-down": "shift_down"
-    }
-  },
-  "cpu": {
-    "interval": 5,
-    "format": "︁ {usage}%",
-    "max-length": 10
-  },
-  "memory": {
-    "interval": 15,
-    "format": "<span font='Font Awesome 5 Free 9'>︁</span> {used:0.1f}G/{total:0.1f}G",
-    "tooltip": false
-  },
-  "battery": {
-    "format": "<span font='Font Awesome 5 Free 11'>{icon}</span> {capacity}%",
-    "format-icons": ["", "", "", "", ""],
-    "format-time": " ({H}h{M}m)",
-    "format-charging": "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}%",
-    "format-full": "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  Charged",
-    "interval": 15,
-    "states": {
-      "warning": 25,
-      "critical": 10
-    },
-    "tooltip": false
-  },
-  "network": {
-    "format": "{icon}",
-    "format-alt": "<span font='Font Awesome 5 Free 10'>︁</span> ︁{ipaddr}/{cidr} {icon}",
-    "format-alt-click": "click-left",
-    "format-wifi": "<span font='Font Awesome 5 Free 10'></span> {essid} ({signalStrength}%)",
-    "format-ethernet": "<span font='Font Awesome 5 Free 10'>︁</span> {ifname}",
-    "format-disconnected": "⚠ Disconnected",
-    "tooltip": false
-  },
-  "pulseaudio": {
-    "format": "<span font='Font Awesome 5 Free 11'>{icon:2}</span>{volume}%",
-    "format-alt": "<span font='Font Awesome 5 Free 11'>{icon:2}</span>{volume}%",
-    "format-alt-click": "click-right",
-    "format-muted": "<span font='Font Awesome 5 Free 11'></span>",
-    "format-icons": {
-      "phone": [" ", " ", " ", " "],
-      "default": ["", "", "", ""]
-    },
-    "scroll-step": 2,
-    "on-click": "pwvucontrol",
-    "tooltip": false
+    "tooltip": false,
+    "interval": 60,
+    "format": "{:%H:%M} "
   },
   "backlight": {
-    "format": "{icon} {percent}%",
-    "format-alt": "{icon}",
-    "format-alt-click": "click-left",
-    "format-icons": ["", ""],
-    "on-scroll-up": "light -A 1",
-    "on-scroll-down": "light -U 1"
+    "device": "intel_backlight",
+    "format": "{percent}% {icon}",
+    "format-icons": ["", "", "", "", "", "", "", "", ""]
   },
-  "temperature": {
-    "critical-threshold": 80,
-    "interval": 5,
-    "format": "{icon} {temperatureC}°C",
-    "tooltip": false,
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ]
+  "battery": {
+    "states": {
+      "warning": 20,
+      "critical": 10
+    },
+    "format": "{capacity}% {icon}",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "wireplumber": {
+    "format": "{volume}% {icon}",
+    "format-muted": "",
+    "on-click": "pwvucontrol",
+    "format-icons": ["", "", ""]
   }
 }
