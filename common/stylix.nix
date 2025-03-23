@@ -3,7 +3,7 @@
   pkgs,
   ...
 }: let
-  fonts = import ../lib/fonts.nix {inherit pkgs;};
+  fonts = import ../common/fonts.nix {inherit pkgs;};
 in {
   stylix = {
     enable = false;
