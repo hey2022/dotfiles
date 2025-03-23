@@ -15,6 +15,9 @@
         autotile = {
           enable = true;
         };
+        tabs = {
+          text_font = "Inter";
+        };
       };
     };
   };
