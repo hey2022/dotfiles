@@ -66,8 +66,8 @@ in {
         "$mod SHIFT, 0, movetoworkspace, 10"
 
         # special workspace
-        "$mod, TAB, togglespecialworkspace, magic"
-        "$mod SHIFT, TAB, movetoworkspace, special:magic"
+        "$mod, TAB, togglespecialworkspace, special"
+        "$mod SHIFT, TAB, exec, hyprctl --batch \"dispatch setfloating; dispatch resizeactive exact 75% 75%; dispatch centerwindow; dispatch movetoworkspace special\""
 
         # Scroll through existing workspaces
         "$mod, mouse_down, workspace, e+1"
