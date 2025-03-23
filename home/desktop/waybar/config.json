@@ -4,13 +4,13 @@
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
   "modules-center": ["mpris"],
   "modules-right": [
-    "clock",
     "cpu",
     "memory",
     "wireplumber",
     "backlight",
     "battery",
     "tray",
+    "clock",
     "custom/notification"
   ],
   "hyprland/workspaces": {
