@@ -40,7 +40,8 @@
     "spacing": 10
   },
   "clock": {
-    "format": "{:%T} ",
+    "format": "{:%H:%M} ",
+    "format-alt": "{:%T} ",
     "interval": 1,
     "tooltip": true,
     "tooltip-format": "{:%Y-%m-%d}"
