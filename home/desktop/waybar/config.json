@@ -21,10 +21,7 @@
     }
   },
   "hyprland/window": {
-    "format": "{}",
-    "rewrite": {
-      "(?:\\[Sidebery\\] )?(.*) — Mozilla Firefox": " $1"
-    },
+    "format": "{class}",
     "separate-outputs": true
   },
   "mpris": {
