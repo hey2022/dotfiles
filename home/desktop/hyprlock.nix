@@ -59,7 +59,7 @@
         text = "$FPRINTPROMPT";
         color = "$text";
         font_size = 14;
-        font_family = font;
+        font_family = $font;
         position = "0, -107";
         halign = "center";
         valign = "center";
@@ -76,6 +76,7 @@
         outer_color = $accent
         inner_color = $surface0
         font_color = $text
+        font_family = $font
         fade_on_empty = false
         placeholder_text = <span foreground="##$textAlpha"><i>󰌾 Logged in as </i><span foreground="##$accentAlpha">$USER</span></span>
         hide_input = false
