@@ -5,22 +5,15 @@
     font-size: 16px;
 }
 
-.modules-left {
-    margin: 5px 5px;
-}
-
+.modules-center,
+.modules-left,
 .modules-right {
-    margin: 5px 5px;
-}
-
-.modules-center {
-    margin: 5px 5px;
+    margin: 5px 5px 0;
 }
 
 #waybar {
     background: transparent;
     color: @text;
-    margin: 5px 5px;
 }
 
 #backlight,
