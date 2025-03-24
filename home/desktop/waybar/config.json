@@ -47,8 +47,7 @@
     "tooltip-format": "{:%Y-%m-%d}"
   },
   "cpu": {
-    "interval": 10,
-    "format": "{}% "
+    "format": "{usage}% "
   },
   "memory": {
     "format": "{}% "
