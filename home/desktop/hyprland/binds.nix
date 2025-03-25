@@ -120,7 +120,7 @@ in {
 
         # swaync
         "$mod, N, exec, swaync-client -t"
-        "$mod SHIFT, N, exec, swaync-client -C"
+        "$mod SHIFT, N, exec, swaync-client -d"
       ]
       ++ (
         if hy3
