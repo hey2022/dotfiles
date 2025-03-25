@@ -17,7 +17,7 @@
     ../pipewire.nix
     ../wlogout.nix
     ../terminal/foot.nix
-    ../file-manager/pcmanfm.nix
+    ../file-manager/dolphin.nix
     ../launchers/fuzzel.nix
     ../../programs/music.nix
     ../../dev/jq.nix
