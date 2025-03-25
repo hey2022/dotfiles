@@ -114,6 +114,7 @@ in {
 
         # launcher
         "$mod, space, exec, ${toggle "fuzzel"}"
+        "$mod SHIFT, space, exec, pkill fuzzel || fd -t file | fuzzel -d | xargs uwsm-app -- xdg-open"
 
         # copyq
         "$mod, C, exec, copyq toggle"
