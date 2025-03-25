@@ -114,7 +114,7 @@ in {
 
         # launcher
         "$mod, space, exec, ${toggle "fuzzel"} --launch-prefix='uwsm-app -- '"
-        "$mod SHIFT, space, exec, pkill fuzzel || fd -t file | fuzzel -d | xargs uwsm-app -- xdg-open"
+        "$mod SHIFT, space, exec, pkill fuzzel || fd -t file | fuzzel -d | xargs -d '\\n' uwsm-app -- xdg-open"
 
         # copyq
         "$mod, C, exec, copyq toggle"
