@@ -141,6 +141,7 @@ in {
       ", XF86AudioNext, exec, playerctl next"
 
       "$mod, P, exec, playerctl play-pause"
+      "$mod SHIFT, P, exec, playerctl stop"
       "$mod, LEFT, exec, playerctl previous"
       "$mod, RIGHT, exec, playerctl next"
 
