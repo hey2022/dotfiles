@@ -11,18 +11,20 @@
   ];
 
   home.packages = with pkgs; [
-    eza
-    btop
     bat
+    btop
+    choose
+    duf
+    dust
+    eza
     fastfetch
-    trashy
+    fd
+    lnav
     ripgrep
     ripgrep-all
+    sd
     tldr
-    fd
-    dust
-    duf
-    lnav
+    trashy
     tree
   ];
 }
