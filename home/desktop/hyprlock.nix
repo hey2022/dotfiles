@@ -23,7 +23,6 @@
 
       # BACKGROUND
       background {
-        monitor =
         path = screenshot
         blur_passes = 2
         color = $base
@@ -31,7 +30,6 @@
 
       # TIME
       label {
-        monitor =
         text = $TIME
         color = $text
         font_size = 90
@@ -43,7 +41,6 @@
 
       # DATE
       label {
-        monitor =
         text = cmd[update:43200000] date +"%A, %d %B %Y"
         color = $text
         font_size = 25
@@ -54,20 +51,18 @@
       }
 
       # FINGERPRINT
-      {
-        monitor = "";
-        text = "$FPRINTPROMPT";
-        color = "$text";
-        font_size = 14;
-        font_family = $font;
-        position = "0, -107";
-        halign = "center";
-        valign = "center";
+      label {
+        text = $FPRINTPROMPT
+        color = $text
+        font_size = 14
+        font_family = $font
+        position = 0, -107
+        halign = center
+        valign = center
       }
 
       # INPUT FIELD
       input-field {
-        monitor =
         size = 300, 60
         outline_thickness = 4
         dots_size = 0.2
