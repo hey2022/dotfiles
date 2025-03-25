@@ -24,7 +24,7 @@ in {
 
         # compositor commands
         "$mod, Q, killactive,"
-        "$mod SHIFT, Q, exec, kill -9 $(hyprctl activewindow -j | jq '.pid')"
+        "$mod SHIFT, Q, exec, hyprctl activewindow -j | jq '.pid' | xargs kill -9"
         "$mod SHIFT, E, exec, uwsm stop"
         "$mod, F, fullscreen,"
         "$mod, V, togglefloating,"
@@ -106,8 +106,8 @@ in {
         "$mod SHIFT CTRL, bracketright, movecurrentworkspacetomonitor, r"
 
         # mullvad tunnel
-        "$mod, T, exec, mullvad split-tunnel add $(hyprctl activewindow -j | jq '.pid')"
-        "$mod SHIFT, T, exec, mullvad split-tunnel delete $(hyprctl activewindow -j | jq '.pid')"
+        "$mod, T, exec, hyprctl activewindow -j | jq '.pid' | xargs mullvad split-tunnel add"
+        "$mod SHIFT, T, exec, hyprctl activewindow -j | jq '.pid' | xargs mullvad split-tunnel delete"
 
         # swww-picker
         "$mod, w, exec, ${runOnce "swww-picker"}"
