@@ -60,9 +60,9 @@
     "format": "{}% ",
     "states": {
       "low": 0,
-      "medium": 25,
-      "high": 50,
-      "critical": 75
+      "medium": 50,
+      "high": 75,
+      "critical": 95
     }
   },
   "temperature": {
