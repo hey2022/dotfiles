@@ -83,12 +83,24 @@ window#waybar.empty #window {
     color: @blue;
 }
 
-#cpu {
-    color: @red;
+#cpu.low,
+#memory.low {
+    color: @green;
 }
 
-#memory {
-    color: @green;
+#cpu.medium,
+#memory.medium {
+    color: @yellow;
+}
+
+#cpu.high,
+#memory.high {
+    color: @peach;
+}
+
+#cpu.critical,
+#memory.critical {
+    color: @red;
 }
 
 #battery {
