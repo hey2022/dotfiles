@@ -3,8 +3,8 @@
   lib,
   ...
 }: let
-  toggle = program: "pkill ${program} || uwsm app -- ${program}";
-  runOnce = program: "pgrep ${program} || uwsm app -- ${program}";
+  toggle = program: "pkill ${program} || uwsm-app -- ${program}";
+  runOnce = program: "pgrep ${program} || uwsm-app -- ${program}";
   hy3 = config.wayland.windowManager.hyprland.hy3;
   hy3Prefix =
     if hy3
@@ -18,9 +18,9 @@ in {
     bind =
       [
         # programs
-        "$mod, Return, exec, uwsm app -- foot"
-        "$mod SHIFT, Return, exec, uwsm app -- emacsclient -c"
-        "$mod, E, exec, uwsm app -- dolphin"
+        "$mod, Return, exec, uwsm-app -- foot"
+        "$mod SHIFT, Return, exec, uwsm-app -- emacsclient -c"
+        "$mod, E, exec, uwsm-app -- dolphin"
 
         # compositor commands
         "$mod, Q, killactive,"
@@ -113,7 +113,7 @@ in {
         "$mod, w, exec, ${runOnce "swww-picker"}"
 
         # launcher
-        "$mod, space, exec, ${toggle "fuzzel"}"
+        "$mod, space, exec, ${toggle "fuzzel"} --launch-prefix='uwsm-app -- '"
         "$mod SHIFT, space, exec, pkill fuzzel || fd -t file | fuzzel -d | xargs uwsm-app -- xdg-open"
 
         # copyq
