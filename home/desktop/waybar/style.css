@@ -23,6 +23,7 @@
 #custom-notification,
 #memory,
 #mpris,
+#temperature,
 #tray,
 #window,
 #workspaces,
@@ -42,7 +43,8 @@
 }
 
 /* middle */
-#memory {
+#memory,
+#temperature {
     margin: 0;
     padding: 0 0.5rem;
     border-radius: 0;
@@ -84,7 +86,8 @@ window#waybar.empty #window {
 }
 
 #cpu.low,
-#memory.low {
+#memory.low,
+#temperature {
     color: @green;
 }
 
@@ -101,7 +104,8 @@ window#waybar.empty #window {
 
 #battery.critical:not(.charging),
 #cpu.critical,
-#memory.critical {
+#memory.critical,
+#temperature.critical {
     color: @red;
 }
 

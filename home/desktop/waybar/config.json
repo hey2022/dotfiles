@@ -8,6 +8,7 @@
     "backlight",
     "cpu",
     "memory",
+    "temperature",
     "battery",
     "tray",
     "clock",
@@ -63,6 +64,13 @@
       "high": 50,
       "critical": 75
     }
+  },
+  "temperature": {
+    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    "critical-threshold": 80,
+    "format": "{temperatureC}°C {icon}",
+    "format-icons": ["", "", "", "", ""],
+    "tooltip": false
   },
   "backlight": {
     "device": "intel_backlight",
