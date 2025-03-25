@@ -88,6 +88,7 @@ window#waybar.empty #window {
     color: @green;
 }
 
+#battery.warning:not(.charging),
 #cpu.medium,
 #memory.medium {
     color: @yellow;
@@ -98,6 +99,7 @@ window#waybar.empty #window {
     color: @peach;
 }
 
+#battery.critical:not(.charging),
 #cpu.critical,
 #memory.critical {
     color: @red;
@@ -109,14 +111,6 @@ window#waybar.empty #window {
 
 #battery.charging {
     color: @green;
-}
-
-#battery.warning:not(.charging) {
-    color: @yellow;
-}
-
-#battery.critical:not(.charging) {
-    color: @red;
 }
 
 #backlight {
