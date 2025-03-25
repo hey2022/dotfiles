@@ -3,6 +3,7 @@
   catppuccin = {
     enable = true;
     flavor = "mocha";
+    hyprlock.useDefaultConfig = false;
   };
   qt = {
     enable = true;
