@@ -7,6 +7,7 @@
     ./gtk.nix
     ./icons.nix
     ./imv.nix
+    ./qt.nix
     ./stylix.nix
     ./wluma.nix
   ];
