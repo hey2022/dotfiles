@@ -11,7 +11,6 @@
     ./polkit.nix
     ./shell/fish.nix
     ./power
-    ./fonts.nix
   ];
   options = {
     host.laptop = lib.mkOption {

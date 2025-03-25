@@ -6,7 +6,8 @@
   fonts = import ../common/fonts.nix {inherit pkgs;};
 in {
   stylix = {
-    enable = false;
+    enable = true;
+    autoEnable = false;
     polarity = "dark";
     # https://github.com/nix-community/home-manager/issues/5743
     image = builtins.path {path = ../wallpapers/alena-aenami-serenity-1k.jpg;};
@@ -20,6 +21,10 @@ in {
       monospace = {
         package = fonts.IosevkaCustom;
         name = "Iosevka Custom";
+      };
+      emoji = {
+        package = pkgs.nerd-fonts.symbols-only;
+        name = "Symbols Nerd Font";
       };
     };
     cursor = {

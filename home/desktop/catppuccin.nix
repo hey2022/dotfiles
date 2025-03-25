@@ -3,7 +3,6 @@
   catppuccin = {
     enable = true;
     flavor = "mocha";
-    cursors.enable = true;
   };
   qt = {
     enable = true;
