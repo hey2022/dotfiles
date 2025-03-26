@@ -146,6 +146,8 @@ in {
       "$mod SHIFT, P, exec, playerctl $playerctl_flags stop"
       "$mod, LEFT, exec, playerctl $playerctl_flags previous"
       "$mod, RIGHT, exec, playerctl $playerctl_flags next"
+      "$mod SHIFT, LEFT, exec, playerctl $playerctl_flags position 10-"
+      "$mod SHIFT, RIGHT, exec, playerctl $playerctl_flags position 10+"
 
       # volume
       ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
