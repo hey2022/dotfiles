@@ -18,9 +18,10 @@
   ];
   home.packages = with pkgs; [
     bun
-    wget
-    neovim
     hyperfine
+    neovim
+    onefetch
     tokei
+    wget
   ];
 }
