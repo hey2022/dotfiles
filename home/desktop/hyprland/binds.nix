@@ -67,6 +67,8 @@ in {
         "$mod SHIFT, 0, movetoworkspace, 10"
 
         # special workspace
+        "$mod, MINUS, settiled"
+        "$mod, MINUS, movetoworkspace, +0"
         "$mod, TAB, togglespecialworkspace, special"
         "$mod SHIFT, TAB, exec, hyprctl --batch \"dispatch setfloating; dispatch resizeactive exact 75% 75%; dispatch centerwindow; dispatch movetoworkspace special\""
 
