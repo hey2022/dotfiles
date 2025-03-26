@@ -34,7 +34,8 @@
     "status-icons": {
       "paused": "⏸"
     },
-    "dynamic-order": ["title", "artist"]
+    "dynamic-order": ["title", "artist"],
+    "ignored-players": ["firefox"]
   },
   "tray": {
     "icon-size": 21,
