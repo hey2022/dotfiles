@@ -21,7 +21,7 @@ in {
         # programs
         "$mod, Return, exec, uwsm-app -- foot"
         "$mod SHIFT, Return, exec, uwsm-app -- emacsclient -c"
-        "$mod, E, exec, uwsm-app -- dolphin"
+        "$mod, E, exec, uwsm-app -- foot fish -C y"
 
         # compositor commands
         "$mod, Q, killactive,"

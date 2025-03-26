@@ -5,26 +5,25 @@
   ...
 }: {
   imports = [
-    ./settings.nix
-    ./binds.nix
-    ./rules.nix
-    ./plugins
-    ../brightness.nix
-    ./hypridle.nix
-    ../waybar
-    ../hyprlock.nix
-    ../vnc
-    ../pipewire.nix
-    ../wlogout.nix
-    ../terminal/foot.nix
-    ../file-manager/dolphin.nix
-    ../launchers/fuzzel.nix
-    ../../programs/music.nix
     ../../dev/jq.nix
-    ../swww
-    ../wayland
+    ../../programs/music.nix
     ../../services/lid-inhibit-lock.nix
+    ../brightness.nix
+    ../hyprlock.nix
+    ../launchers/fuzzel.nix
+    ../pipewire.nix
     ../swaync.nix
+    ../swww
+    ../terminal/foot.nix
+    ../vnc
+    ../waybar
+    ../wayland
+    ../wlogout.nix
+    ./binds.nix
+    ./hypridle.nix
+    ./plugins
+    ./rules.nix
+    ./settings.nix
   ];
   options = {
     wayland.windowManager.hyprland.hy3 = lib.mkEnableOption "hy3";
