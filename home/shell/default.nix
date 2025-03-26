@@ -20,6 +20,7 @@
     fastfetch
     fd
     lnav
+    parallel
     ripgrep
     ripgrep-all
     sd
