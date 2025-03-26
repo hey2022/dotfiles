@@ -11,6 +11,7 @@
     ./julia.nix
     ./lisp.nix
     ./markdown.nix
+    ./neovim
     ./nix.nix
     ./python.nix
     ./rust.nix
@@ -19,7 +20,6 @@
   home.packages = with pkgs; [
     bun
     hyperfine
-    neovim
     onefetch
     tokei
     wget
