@@ -14,6 +14,7 @@ in {
   wayland.windowManager.hyprland.settings = {
     "$mod" = "SUPER";
     "$menu" = "wofi --show drun";
+    "$playerctl_flags" = "-i firefox";
 
     bind =
       [
@@ -136,15 +137,15 @@ in {
 
     bindl = [
       # media controls
-      ", XF86AudioPlay, exec, playerctl play-pause"
-      ", XF86AudioPause, exec, playerctl pause"
-      ", XF86AudioPrev, exec, playerctl previous"
-      ", XF86AudioNext, exec, playerctl next"
+      ", XF86AudioPlay, exec, playerctl $playerctl_flags play-pause"
+      ", XF86AudioPause, exec, playerctl $playerctl_flags pause"
+      ", XF86AudioPrev, exec, playerctl $playerctl_flags previous"
+      ", XF86AudioNext, exec, playerctl $playerctl_flags next"
 
-      "$mod, P, exec, playerctl play-pause"
-      "$mod SHIFT, P, exec, playerctl stop"
-      "$mod, LEFT, exec, playerctl previous"
-      "$mod, RIGHT, exec, playerctl next"
+      "$mod, P, exec, playerctl $playerctl_flags play-pause"
+      "$mod SHIFT, P, exec, playerctl $playerctl_flags stop"
+      "$mod, LEFT, exec, playerctl $playerctl_flags previous"
+      "$mod, RIGHT, exec, playerctl $playerctl_flags next"
 
       # volume
       ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
