@@ -1,11 +1,12 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
+    alejandra
     nh
+    nix-init
     nix-search-cli
     nixd
-    nurl
-    alejandra
     nixfmt-rfc-style
+    nurl
   ];
   programs.nix-index-database.comma.enable = true;
   home.sessionVariables = {
