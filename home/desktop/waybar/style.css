@@ -16,46 +16,23 @@
     color: @text;
 }
 
-#backlight,
-#battery,
 #clock,
-#cpu,
+#controls,
 #custom-notification,
-#memory,
+#hardware,
 #mpris,
-#temperature,
 #tray,
 #window,
-#workspaces,
-#wireplumber {
+#workspaces {
     background-color: @surface0;
     margin: 0 5px;
     padding: 0 1rem;
     border-radius: 1rem;
 }
 
-/* left */
-#cpu,
-#wireplumber {
-    margin: 0 0 0 5px;
-    padding: 0 0.5rem 0 1rem;
-    border-radius: 1rem 0 0 1rem;
-}
-
-/* middle */
-#memory,
-#temperature {
-    margin: 0;
+#controls *,
+#hardware * {
     padding: 0 0.5rem;
-    border-radius: 0;
-}
-
-/* right */
-#battery,
-#backlight {
-    margin: 0 5px 0 0;
-    padding: 0 1rem 0 0.5rem;
-    border-radius: 0 1rem 1rem 0;
 }
 
 #workspaces button {

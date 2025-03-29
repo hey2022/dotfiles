@@ -4,16 +4,20 @@
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
   "modules-center": ["mpris"],
   "modules-right": [
-    "wireplumber",
-    "backlight",
-    "cpu",
-    "memory",
-    "temperature",
-    "battery",
+    "group/controls",
+    "group/hardware",
     "tray",
     "clock",
     "custom/notification"
   ],
+  "group/controls": {
+    "orientation": "inherit",
+    "modules": ["wireplumber", "backlight"]
+  },
+  "group/hardware": {
+    "orientation": "inherit",
+    "modules": ["cpu", "memory", "temperature", "battery"]
+  },
   "hyprland/workspaces": {
     "disable-scroll": true,
     "format": " {icon} ",
