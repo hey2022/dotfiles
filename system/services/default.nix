@@ -1,12 +1,13 @@
 {...}: {
   imports = [
-    ./homepage.nix
-    ./ssh.nix
-    ./tailscale.nix
-    ./syncthing.nix
     ./automount.nix
-    ./pipewire.nix
+    ./homepage.nix
     ./iperf.nix
+    ./kanata.nix
     ./minecraft.nix
+    ./pipewire.nix
+    ./ssh.nix
+    ./syncthing.nix
+    ./tailscale.nix
   ];
 }

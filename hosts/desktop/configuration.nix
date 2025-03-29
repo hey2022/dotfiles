@@ -19,7 +19,12 @@
 
   users.users.yiheng = {
     isNormalUser = true;
-    extraGroups = ["wheel" "media" "networkmanager"];
+    extraGroups = [
+      "media"
+      "networkmanager"
+      "uinput"
+      "wheel"
+    ];
     shell = pkgs.fish;
   };
 }
