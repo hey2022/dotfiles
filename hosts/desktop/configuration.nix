@@ -22,9 +22,4 @@
     extraGroups = ["wheel" "media" "networkmanager"];
     shell = pkgs.fish;
   };
-
-  programs.ydotool = {
-    enable = true;
-    users = ["yiheng"];
-  };
 }
