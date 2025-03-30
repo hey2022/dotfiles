@@ -14,7 +14,7 @@
     ../pipewire.nix
     ../swaync.nix
     ../swww
-    ../terminal/foot.nix
+    ../terminal/wezterm
     ../vnc
     ../waybar
     ../wayland

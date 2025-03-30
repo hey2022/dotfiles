@@ -12,16 +12,17 @@
     else "";
 in {
   wayland.windowManager.hyprland.settings = {
-    "$mod" = "SUPER";
     "$menu" = "wofi --show drun";
+    "$mod" = "SUPER";
     "$playerctl_flags" = "-i firefox";
+    "$term" = "wezterm";
 
     bind =
       [
         # programs
-        "$mod, Return, exec, uwsm-app -- foot"
+        "$mod, Return, exec, uwsm-app -- $term"
         "$mod SHIFT, Return, exec, uwsm-app -- emacsclient -c"
-        "$mod, E, exec, uwsm-app -- foot fish -C y"
+        "$mod, E, exec, uwsm-app -- $term -e fish -C y"
 
         # compositor commands
         "$mod, Q, killactive,"
