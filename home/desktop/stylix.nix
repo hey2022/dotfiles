@@ -12,5 +12,8 @@
       dark = "Papirus-Dark";
       light = "Papirus";
     };
+    targets = {
+      wezterm.enable = true;
+    };
   };
 }

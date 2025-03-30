@@ -11,7 +11,6 @@ config.keys = {
   { key = "n", mods = "ALT", action = wezterm.action { SpawnTab = "CurrentPaneDomain" } },
   { key = "d", mods = "ALT", action = wezterm.action { CloseCurrentTab = { confirm = true } } },
 
-  window_background_opacity = 0.9,
   { key = "h", mods = "ALT", action = wezterm.action { ActivateTabRelative = -1 } },
   { key = "l", mods = "ALT", action = wezterm.action { ActivateTabRelative = 1 } },
   { key = "1", mods = "ALT", action = wezterm.action { ActivateTab = 0 } },
