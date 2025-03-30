@@ -7,7 +7,6 @@
   imports = [
     ../../dev/jq.nix
     ../../programs/music.nix
-    ../../services/lid-inhibit-lock.nix
     ../brightness.nix
     ../hyprlock.nix
     ../launchers/fuzzel.nix
