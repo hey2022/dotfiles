@@ -31,6 +31,13 @@ in {
           tridactyl
           firefox-color
         ];
+        settings = {
+          "tridactyl.vim@cmcaine.co.uk".settings = {
+            userconfig = {
+              smoothscroll = "true";
+            };
+          };
+        };
       };
     };
   };
