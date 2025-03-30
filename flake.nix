@@ -71,6 +71,10 @@
       url = "github:yokoffing/Betterfox";
       flake = false;
     };
+    wezterm = {
+      url = "github:wez/wezterm?dir=nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {

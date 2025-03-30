@@ -1,13 +1,12 @@
 {
+  inputs,
   config,
-  lib,
   pkgs,
   ...
 }: {
-  imports = [../../../shell/fish];
   programs.wezterm = {
     enable = true;
-    package = config.lib.nixGL.wrap pkgs.wezterm;
+    package = config.lib.nixGL.wrap inputs.wezterm.packages.${pkgs.system}.default;
     extraConfig = builtins.readFile ./wezterm.lua;
   };
 }
