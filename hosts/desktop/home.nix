@@ -3,7 +3,6 @@
     ../../home
     ../../home/desktop
     ../../home/desktop/hyprland
-    ../../home/programs/games
     ../../home/dev
     ../../home/anime.nix
     ../../home/programs/rss.nix

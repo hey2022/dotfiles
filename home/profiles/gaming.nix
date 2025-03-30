@@ -1,3 +1,7 @@
 {...}: {
-  imports = [../game.nix ../programs/wclicker ../programs/games];
+  imports = [
+    ../game.nix
+    ../programs/wclicker
+    ../programs/games
+  ];
 }
