@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{...}: {
   imports = [
     ../../home
     ../../home/desktop
@@ -12,8 +12,4 @@
   ];
   home.username = "yiheng";
   home.homeDirectory = "/home/yiheng";
-
-  home.packages = with pkgs; [
-    keepassxc
-  ];
 }
