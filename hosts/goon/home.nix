@@ -6,7 +6,6 @@
     ../../home/dev
     ../../home/anime.nix
     ../../home/profiles/education.nix
-    ../../home/profiles/gaming.nix
     ../../home/services/lid-inhibit-lock.nix
   ];
 
