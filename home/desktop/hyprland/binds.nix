@@ -129,7 +129,11 @@ in {
       ]
       ++ (
         if hy3
-        then ["$mod, G, hy3:changegroup, toggletab"]
+        then [
+          "$mod, G, hy3:changegroup, toggletab"
+          "$mod, A, hy3:changefocus, top"
+          "$mod SHIFT, A, hy3:changefocus, bottom"
+        ]
         else [
           "$mod, G, togglegroup"
           "$mod SHIFT, N, changegroupactive, f"
