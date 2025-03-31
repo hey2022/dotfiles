@@ -101,13 +101,17 @@ in {
         "$mod, bracketleft, workspace, m-1"
         "$mod, bracketright, workspace, m+1"
 
+        # send focused workspace to left/right workspaces
+        "$mod SHIFT, bracketleft, ${hy3Prefix}movetoworkspace, -1"
+        "$mod SHIFT, bracketright, ${hy3Prefix}movetoworkspace, +1"
+
         # cycle monitors
-        "$mod SHIFT, bracketleft, focusmonitor, l"
-        "$mod SHIFT, bracketright, focusmonitor, r"
+        "$mod CTRL, bracketleft, focusmonitor, l"
+        "$mod CTRL, bracketright, focusmonitor, r"
 
         # send focused workspace to left/right monitors
-        "$mod SHIFT CTRL, bracketleft, movecurrentworkspacetomonitor, l"
-        "$mod SHIFT CTRL, bracketright, movecurrentworkspacetomonitor, r"
+        "$mod CTRL SHIFT, bracketleft, movecurrentworkspacetomonitor, l"
+        "$mod CTRL SHIFT, bracketright, movecurrentworkspacetomonitor, r"
 
         # mullvad tunnel
         "$mod, T, exec, hyprctl activewindow -j | jq '.pid' | xargs mullvad split-tunnel add"
