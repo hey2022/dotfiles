@@ -1,6 +1,6 @@
 {...}: {
   imports = [
-    ./pdf.nix
+    ./pdf
     ./inkscape.nix
     ./libreoffice.nix
     ./rnote.nix
