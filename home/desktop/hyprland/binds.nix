@@ -56,22 +56,22 @@ in {
         "$mod, 0, workspace, 10"
 
         # Move active window to a workspace
-        "$mod SHIFT, 1, movetoworkspace, 1"
-        "$mod SHIFT, 2, movetoworkspace, 2"
-        "$mod SHIFT, 3, movetoworkspace, 3"
-        "$mod SHIFT, 4, movetoworkspace, 4"
-        "$mod SHIFT, 5, movetoworkspace, 5"
-        "$mod SHIFT, 6, movetoworkspace, 6"
-        "$mod SHIFT, 7, movetoworkspace, 7"
-        "$mod SHIFT, 8, movetoworkspace, 8"
-        "$mod SHIFT, 9, movetoworkspace, 9"
-        "$mod SHIFT, 0, movetoworkspace, 10"
+        "$mod SHIFT, 1, ${hy3Prefix}movetoworkspace, 1"
+        "$mod SHIFT, 2, ${hy3Prefix}movetoworkspace, 2"
+        "$mod SHIFT, 3, ${hy3Prefix}movetoworkspace, 3"
+        "$mod SHIFT, 4, ${hy3Prefix}movetoworkspace, 4"
+        "$mod SHIFT, 5, ${hy3Prefix}movetoworkspace, 5"
+        "$mod SHIFT, 6, ${hy3Prefix}movetoworkspace, 6"
+        "$mod SHIFT, 7, ${hy3Prefix}movetoworkspace, 7"
+        "$mod SHIFT, 8, ${hy3Prefix}movetoworkspace, 8"
+        "$mod SHIFT, 9, ${hy3Prefix}movetoworkspace, 9"
+        "$mod SHIFT, 0, ${hy3Prefix}movetoworkspace, 10"
 
         # special workspace
         "$mod, MINUS, settiled"
-        "$mod, MINUS, movetoworkspace, +0"
+        "$mod, MINUS, ${hy3Prefix}movetoworkspace, +0"
         "$mod, TAB, togglespecialworkspace, special"
-        "$mod SHIFT, TAB, exec, hyprctl --batch \"dispatch setfloating; dispatch resizeactive exact 75% 75%; dispatch centerwindow; dispatch movetoworkspace special\""
+        "$mod SHIFT, TAB, exec, hyprctl --batch \"dispatch setfloating; dispatch resizeactive exact 75% 75%; dispatch centerwindow; dispatch ${hy3Prefix}movetoworkspace special\""
 
         # Scroll through existing workspaces
         "$mod, mouse_down, workspace, e+1"
