@@ -8,7 +8,7 @@
     ../../dev/jq.nix
     ../../programs/music.nix
     ../brightness.nix
-    ../hyprlock.nix
+    ../hyprlock
     ../launchers/fuzzel.nix
     ../pipewire.nix
     ../swaync.nix

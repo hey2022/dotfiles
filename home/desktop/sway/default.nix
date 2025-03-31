@@ -6,7 +6,7 @@
 }: {
   imports = [
     ../brightness.nix
-    ../hyprlock.nix
+    ../hyprlock
     ../swaync.nix
     ../vnc
     ../pipewire.nix

@@ -3,7 +3,7 @@
   lib,
   ...
 }: {
-  imports = [../hyprlock.nix];
+  imports = [../hyprlock];
   services.hypridle = {
     enable = true;
     settings = {
