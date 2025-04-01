@@ -15,7 +15,7 @@ in {
     "$menu" = "wofi --show drun";
     "$mod" = "SUPER";
     "$playerctl_flags" = "-i firefox";
-    "$term" = "wezterm";
+    "$term" = "ghostty";
 
     bind =
       [

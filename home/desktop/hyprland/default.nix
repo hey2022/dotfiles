@@ -13,7 +13,7 @@
     ../pipewire.nix
     ../swaync.nix
     ../swww
-    ../terminal/wezterm
+    ../terminal/ghostty.nix
     ../vnc
     ../waybar
     ../wayland
