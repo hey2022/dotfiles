@@ -77,6 +77,10 @@
       focus_on_activate = true;
     };
 
+    binds = {
+      hide_special_on_workspace_change = true;
+    };
+
     input = {
       kb_layout = "us";
 
