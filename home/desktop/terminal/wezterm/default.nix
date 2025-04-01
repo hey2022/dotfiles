@@ -1,12 +1,11 @@
 {
-  inputs,
   config,
   pkgs,
   ...
 }: {
   programs.wezterm = {
     enable = true;
-    package = config.lib.nixGL.wrap inputs.wezterm.packages.${pkgs.system}.default;
+    package = config.lib.nixGL.wrap pkgs.wezterm;
     extraConfig = builtins.readFile ./wezterm.lua;
   };
 }
