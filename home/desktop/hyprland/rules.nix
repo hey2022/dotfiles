@@ -1,5 +1,9 @@
 {...}: {
   wayland.windowManager.hyprland.settings = {
+    workspace = [
+      "special:scratchpad, gapsout:100"
+    ];
+
     windowrulev2 = [
       # Ignore maximize requests from apps
       "suppressevent maximize, class:.*"

@@ -67,11 +67,10 @@ in {
         "$mod SHIFT, 9, ${hy3Prefix}movetoworkspace, 9"
         "$mod SHIFT, 0, ${hy3Prefix}movetoworkspace, 10"
 
-        # special workspace
-        "$mod, MINUS, settiled"
+        # scratchpad
         "$mod, MINUS, ${hy3Prefix}movetoworkspace, +0"
-        "$mod, TAB, togglespecialworkspace, special"
-        "$mod SHIFT, TAB, exec, hyprctl --batch \"dispatch setfloating; dispatch resizeactive exact 75% 75%; dispatch centerwindow; dispatch ${hy3Prefix}movetoworkspace special\""
+        "$mod, TAB, togglespecialworkspace, scratchpad"
+        "$mod SHIFT, TAB, ${hy3Prefix}movetoworkspace, special:scratchpad"
 
         # Scroll through existing workspaces
         "$mod, mouse_down, workspace, e+1"
