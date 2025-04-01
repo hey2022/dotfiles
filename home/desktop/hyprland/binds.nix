@@ -54,6 +54,7 @@ in {
         "$mod, 8, workspace, 8"
         "$mod, 9, workspace, 9"
         "$mod, 0, workspace, 10"
+        "$mod, O, focusurgentorlast"
 
         # Move active window to a workspace
         "$mod SHIFT, 1, ${hy3Prefix}movetoworkspace, 1"
