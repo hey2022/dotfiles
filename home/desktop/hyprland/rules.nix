@@ -11,6 +11,9 @@
       # Fix some dragging issues with XWayland
       "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
 
+      # scratchpad only with terminal
+      "workspace +0, onworkspace:special:scratchpad, class:negative:org.wezfurlong.wezterm"
+
       # copyq
       "float, class:copyq"
       "size 25% 25%, class:copyq"
