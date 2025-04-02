@@ -107,8 +107,7 @@ Sets font to a custom build of Iosevka using https://typeof.net/Iosevka/customiz
   (add-to-list 'org-latex-packages-alist '("" "minted" t))
   (setq org-latex-listings 'minted
         org-latex-pdf-process
-        '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
-          "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f")))
+        '("latexmk -output-directory=%o %f")))
 #+end_src
 
 ** Org Roam
