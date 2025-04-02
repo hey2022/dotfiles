@@ -404,6 +404,7 @@ If no tags are provided, copy all files."
 ** Latex Snippets
 #+begin_src emacs-lisp
 (after! org
+  (add-hook! org-mode (corfu-mode -1))
   (add-hook! org-mode (yas-activate-extra-mode 'latex-mode)))
 #+end_src
 
