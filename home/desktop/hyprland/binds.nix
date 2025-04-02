@@ -97,6 +97,9 @@ in {
         "ALT, Print, exec, ${runOnce "grimblast"} --notify --cursor copy screen"
         "$mod ALT, S, exec, ${runOnce "grimblast"} --notify --cursor copy screen"
 
+        # OCR
+        "$mod SHIFT, O, exec, slurp | xargs -I {} grim -g {} - | tesseract -l eng - - | wl-copy"
+
         # cycle workspaces
         "$mod, bracketleft, workspace, m-1"
         "$mod, bracketright, workspace, m+1"
