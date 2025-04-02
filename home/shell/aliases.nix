@@ -10,7 +10,5 @@
     uctl = "systemctl --user";
 
     tp = "trash put";
-
-    activate = "source ./venv/bin/activate";
   };
 }
