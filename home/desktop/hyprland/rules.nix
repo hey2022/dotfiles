@@ -12,7 +12,7 @@
       "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
 
       # scratchpad only with terminal
-      "workspace +0, onworkspace:special:scratchpad, class:negative:(com.mitchellh.ghostty|GTK Application)"
+      "workspace +0, onworkspace:special:scratchpad, floating:0, class:negative:(com.mitchellh.ghostty)"
 
       # copyq
       "float, class:copyq"
