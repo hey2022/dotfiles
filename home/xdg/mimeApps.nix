@@ -2,7 +2,6 @@
   xdg.mimeApps = {
     enable = true;
     defaultApplications = {
-      "application/pdf" = ["org.pwmt.zathura.desktop"];
       "application/pdf" = "org.pwmt.zathura.desktop";
       "image/jpeg" = "imv.desktop";
       "image/png" = "imv.desktop";
