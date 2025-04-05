@@ -22,7 +22,7 @@ in {
         # programs
         "$mod, Return, exec, uwsm-app -- $term"
         "$mod SHIFT, Return, exec, uwsm-app -- emacsclient -c"
-        "$mod, E, exec, uwsm-app -- $term -e fish -C y"
+        "$mod, E, exec, uwsm-app -- dolphin"
 
         # compositor commands
         "$mod, Q, killactive,"
