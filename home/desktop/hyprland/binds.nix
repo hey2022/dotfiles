@@ -14,7 +14,7 @@ in {
   wayland.windowManager.hyprland.settings = {
     "$menu" = "wofi --show drun";
     "$mod" = "SUPER";
-    "$playerctl_flags" = "-i firefox";
+    "$playerctl" = "playerctl -i firefox";
     "$term" = "ghostty";
 
     bind =
@@ -151,17 +151,17 @@ in {
 
     bindl = [
       # media controls
-      ", XF86AudioPlay, exec, playerctl $playerctl_flags play-pause"
-      ", XF86AudioPause, exec, playerctl $playerctl_flags pause"
-      ", XF86AudioPrev, exec, playerctl $playerctl_flags previous"
-      ", XF86AudioNext, exec, playerctl $playerctl_flags next"
+      ", XF86AudioPlay, exec, $playerctl play-pause"
+      ", XF86AudioPause, exec, $playerctl pause"
+      ", XF86AudioPrev, exec, $playerctl previous"
+      ", XF86AudioNext, exec, $playerctl next"
 
-      "$mod, P, exec, playerctl $playerctl_flags play-pause"
-      "$mod SHIFT, P, exec, playerctl $playerctl_flags stop"
-      "$mod, LEFT, exec, playerctl $playerctl_flags previous"
-      "$mod, RIGHT, exec, playerctl $playerctl_flags next"
-      "$mod SHIFT, LEFT, exec, playerctl $playerctl_flags position 10-"
-      "$mod SHIFT, RIGHT, exec, playerctl $playerctl_flags position 10+"
+      "$mod, P, exec, $playerctl play-pause"
+      "$mod SHIFT, P, exec, $playerctl stop"
+      "$mod, LEFT, exec, $playerctl previous"
+      "$mod, RIGHT, exec, $playerctl next"
+      "$mod SHIFT, LEFT, exec, $playerctl position 10-"
+      "$mod SHIFT, RIGHT, exec, $playerctl position 10+"
 
       # volume
       ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
