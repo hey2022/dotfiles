@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     alejandra
+    attic-client
     nh
     nix-init
     nix-search-cli

@@ -1,5 +1,6 @@
 {...}: {
   imports = [
+    ./attic.nix
     ./automount.nix
     ./homepage.nix
     ./iperf.nix
