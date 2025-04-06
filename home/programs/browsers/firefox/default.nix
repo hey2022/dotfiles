@@ -36,6 +36,16 @@ in {
           "tridactyl.vim@cmcaine.co.uk".settings = {
             userconfig = {
               smoothscroll = "true";
+              autocmds = {
+                Docstart = {
+                  "monkeytype.com" = "mode ignore";
+                };
+              };
+              subconfigs = {
+                "exam.net" = {
+                  superignore = "true";
+                };
+              };
             };
           };
         };
