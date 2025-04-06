@@ -6,6 +6,7 @@
         "nix-command"
         "flakes"
       ];
+      trusted-users = ["@wheel"];
       substituters = [
         "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store?priority=20"
         "https://mirrors.ustc.edu.cn/nix-channels/store?priority=20"
