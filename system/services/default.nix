@@ -1,6 +1,7 @@
 { lib, ... }:
 {
   imports = [
+    ./attic.nix
     ./automount.nix
     ./fail2ban.nix
     ./iperf.nix

@@ -11,6 +11,7 @@
     flake-checker
     hydra-check
     inputs.nix-alien.packages.${system}.nix-alien
+    attic-client
     nh
     nix-eval-jobs
     nix-fast-build
