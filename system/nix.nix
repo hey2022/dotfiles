@@ -14,6 +14,7 @@
       download-buffer-size = 1073741824;
       keep-going = true;
       show-trace = true;
+      trusted-users = ["@wheel"];
       substituters = [
         "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store?priority=20"
         "https://mirrors.ustc.edu.cn/nix-channels/store?priority=20"
