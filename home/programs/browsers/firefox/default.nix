@@ -11,9 +11,10 @@ in {
     profiles.${profile} = {
       isDefault = true;
       settings = {
-        "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
-        "extensions.autoDisableScopes" = 0;
         "browser.tabs.closeWindowWithLastTab" = false;
+        "dom.event.clipboardevents.enabled" = false;
+        "extensions.autoDisableScopes" = 0;
+        "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
       };
       extraConfig = ''
         ${builtins.readFile "${inputs.betterfox}/user.js"}
