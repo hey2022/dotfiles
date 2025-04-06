@@ -69,7 +69,6 @@ in {
         "$mod SHIFT, 0, ${hy3Prefix}movetoworkspace, 10"
 
         # scratchpad
-        "$mod, MINUS, ${hy3Prefix}movetoworkspace, +0"
         "$mod, TAB, togglespecialworkspace, scratchpad"
         "$mod SHIFT, TAB, ${hy3Prefix}movetoworkspace, special:scratchpad"
 
@@ -138,8 +137,10 @@ in {
         if hy3
         then [
           "$mod, G, hy3:changegroup, toggletab"
-          "$mod, A, hy3:changefocus, top"
-          "$mod SHIFT, A, hy3:changefocus, bottom"
+          "$mod, equal, hy3:changefocus, raise"
+          "$mod SHIFT, equal, hy3:changefocus, top"
+          "$mod, minus, hy3:changefocus, lower"
+          "$mod SHIFT, minus, hy3:changefocus, bottom"
         ]
         else [
           "$mod, G, togglegroup"
