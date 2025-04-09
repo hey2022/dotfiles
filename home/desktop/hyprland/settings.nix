@@ -78,7 +78,8 @@
     };
 
     binds = {
-      hide_special_on_workspace_change = true;
+      # wait for hyprland release
+      # hide_special_on_workspace_change = true;
     };
 
     input = {

@@ -1,12 +1,6 @@
-{
-  inputs,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   wayland.windowManager.hyprland = {
-    plugins = [
-      inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
-    ];
+    plugins = [pkgs.hyprlandPlugins.hyprexpo];
     settings = {
       bind = [
         "$mod, GRAVE, hyprexpo:expo, toggle"
