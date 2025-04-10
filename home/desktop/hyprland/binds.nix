@@ -25,7 +25,7 @@ in {
         "$mod, E, exec, uwsm-app -- dolphin"
 
         # compositor commands
-        "$mod, Q, killactive,"
+        "$mod, Q, ${hy3Prefix}killactive,"
         "$mod SHIFT, Q, exec, hyprctl activewindow -j | jq '.pid' | xargs kill -9"
         "$mod SHIFT, E, exec, uwsm stop"
         "$mod, F, fullscreen,"
