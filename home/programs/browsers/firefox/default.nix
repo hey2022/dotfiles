@@ -12,7 +12,6 @@ in {
       isDefault = true;
       settings = {
         "browser.tabs.closeWindowWithLastTab" = false;
-        "dom.event.clipboardevents.enabled" = false;
         "extensions.autoDisableScopes" = 0;
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
       };
