@@ -14,11 +14,15 @@
       keybind = [
         "alt+tab=toggle_tab_overview"
         "alt+q=close_surface"
+
+        # tabs
         "alt+h=previous_tab"
         "alt+l=next_tab"
         "alt+shift+h=move_tab:-1"
         "alt+shift+l=move_tab:1"
         "alt+n=new_tab"
+
+        # splits
         "alt+w>v=new_split:right"
         "alt+w>s=new_split:down"
         "alt+w>q=close_surface"
