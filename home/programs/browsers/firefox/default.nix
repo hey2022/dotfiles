@@ -5,6 +5,7 @@
 }: let
   profile = "default";
 in {
+  imports = [./extensions];
   programs.firefox = {
     enable = true;
     languagePacks = ["en-GB" "zh-CN"];
@@ -31,23 +32,6 @@ in {
           tridactyl
           firefox-color
         ];
-        settings = {
-          "tridactyl.vim@cmcaine.co.uk".settings = {
-            userconfig = {
-              smoothscroll = "true";
-              autocmds = {
-                Docstart = {
-                  "monkeytype.com" = "mode ignore";
-                };
-              };
-              subconfigs = {
-                "exam.net" = {
-                  superignore = "true";
-                };
-              };
-            };
-          };
-        };
       };
     };
   };

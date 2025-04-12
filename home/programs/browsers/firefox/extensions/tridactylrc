@@ -1,0 +1,8 @@
+" settings
+set smoothscroll true
+
+" blacklist
+blacklistadd monkeytype.com
+
+" superignore
+seturl exam.net superignore true
