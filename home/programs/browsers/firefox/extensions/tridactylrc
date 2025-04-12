@@ -2,6 +2,10 @@
 set smoothscroll true
 set editorcmd emacsclient -c
 
+" swap J and K
+bind J tabnext
+bind K tabprev
+
 " tridactyl search
 set incsearch true
 bind / fillcmdline find
