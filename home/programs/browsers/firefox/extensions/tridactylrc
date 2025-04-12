@@ -1,6 +1,14 @@
 " settings
 set smoothscroll true
 
+" tridactyl search
+set incsearch true
+bind / fillcmdline find
+bind ? fillcmdline find -?
+bind n findnext 1
+bind N findnext -1
+bind ,<Space> nohlsearch
+
 " blacklist
 blacklistadd monkeytype.com
 
