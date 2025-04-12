@@ -181,7 +181,9 @@ Setup Org Roam capture templates.
           ("a" "Anki Card" plain "* %(sentence-case-string \"${title}\")\n%?"
            :target (file+head "${slug}.org" ":PROPERTIES:\n:ANKI_DECK: Main\n:END:\n#+title: %(sentence-case-string \"${title}\")\n%(org-roam-template-select-tags)\n")
            :unnarrowed t
-           :empty-lines 1))))
+           :empty-lines 1)))
+
+  (setq org-roam-extract-new-file-path "${slug}.org"))
 #+end_src
 
 *** Org Roam UI
