@@ -7,7 +7,7 @@
     ];
     sessionVariables = {
       VISUAL = "emacsclient -c";
-      EDITOR = "nvim";
+      EDITOR = "emacsclient -nw";
 
       GTK_IM_MODULE = "fcitx";
       QT_IM_MODULE = "fcitx";
