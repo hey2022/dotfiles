@@ -15,6 +15,10 @@
         "alt+tab=toggle_tab_overview"
         "alt+q=close_surface"
 
+        # scroll
+        "alt+j=scroll_page_lines:10"
+        "alt+k=scroll_page_lines:-10"
+
         # tabs
         "alt+h=previous_tab"
         "alt+l=next_tab"
