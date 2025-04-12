@@ -2,7 +2,7 @@
   imports = [
     ./cpp.nix
     ./cyber-security.nix
-    ./emacs.nix
+    ./emacs
     ./git.nix
     ./gpg.nix
     ./java.nix
