@@ -15,9 +15,9 @@
       "workspace +0, onworkspace:special:scratchpad, floating:0, class:negative:(com.mitchellh.ghostty)"
 
       # copyq
-      "float, class:copyq"
-      "size 25% 25%, class:copyq"
-      "move 100%-w-10, class:copyq"
+      "float, title:.* — CopyQ"
+      "size 25% 25%, title:.* — CopyQ"
+      "move 100%-w-10, title:.* — CopyQ"
     ];
   };
 }
