@@ -1,5 +1,6 @@
 " settings
 set smoothscroll true
+set editorcmd emacsclient -c
 
 " tridactyl search
 set incsearch true
