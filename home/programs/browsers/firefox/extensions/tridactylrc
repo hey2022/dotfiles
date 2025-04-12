@@ -1,3 +1,6 @@
+" remove tridactyl local storage
+sanitise tridactyllocal
+
 " settings
 set smoothscroll true
 set editorcmd emacsclient -c
