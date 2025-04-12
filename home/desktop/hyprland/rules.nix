@@ -16,7 +16,7 @@
 
       # copyq
       "float, title:.* — CopyQ"
-      "size 25% 25%, title:.* — CopyQ"
+      "size 25% 50%, title:.* — CopyQ"
       "move 100%-w-10, title:.* — CopyQ"
     ];
   };
