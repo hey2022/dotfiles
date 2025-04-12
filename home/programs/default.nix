@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   imports = [
-    ./cli
     ./browsers
+    ./cli
     ./social
   ];
   home.packages = with pkgs; [

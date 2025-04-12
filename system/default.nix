@@ -1,16 +1,17 @@
 {lib, ...}: {
   imports = [
+    ./bluetooth.nix
     ./boot
+    ./hardware
+    ./network
+    ./nix-ld.nix
+    ./nix.nix
+    ./polkit.nix
+    ./power
     ./programs
     ./services
-    ./nix.nix
-    ./network
-    ./bluetooth.nix
-    ./nix-ld.nix
-    ./ssh.nix
-    ./polkit.nix
     ./shell/fish.nix
-    ./power
+    ./ssh.nix
   ];
   options = {
     host.laptop = lib.mkOption {
