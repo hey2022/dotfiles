@@ -123,6 +123,7 @@ Sets font to a custom build of Iosevka using https://typeof.net/Iosevka/customiz
          :desc "Insert link" "i" #'org-node-insert-link
          :desc "Link word at point" "w" #'org-node-insert-link-at-word
          :desc "Insert transclusion" "t" #'org-node-insert-transclusion
+         :desc "Extract subtree" "e" #'org-node-extract-subtree
          :desc "Random node" "a" #'org-node-visit-random))
   :config
   (setq org-node-extra-id-dirs '("~/org/"))
