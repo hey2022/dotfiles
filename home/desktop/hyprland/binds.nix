@@ -73,8 +73,8 @@ in {
         "$mod SHIFT, TAB, ${hy3Prefix}movetoworkspace, special:scratchpad"
 
         # Scroll through existing workspaces
-        "$mod, mouse_down, workspace, e+1"
-        "$mod, mouse_up, workspace, e-1"
+        "$mod, mouse_down, workspace, e-1"
+        "$mod, mouse_up, workspace, e+1"
 
         # utility
         # logout menu
