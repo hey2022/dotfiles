@@ -7,6 +7,7 @@
         disable = [
           "bun"
           "git_repos"
+          "uv"
         ];
         no_retry = true;
       };
