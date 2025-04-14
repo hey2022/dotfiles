@@ -4,7 +4,10 @@
     settings = {
       misc = {
         assume_yes = true;
-        disable = ["bun"];
+        disable = [
+          "bun"
+          "git_repos"
+        ];
         no_retry = true;
       };
       linux = {
