@@ -4,9 +4,10 @@
     ./font-awesome.nix
   ];
   home.packages = with pkgs; [
-    nerd-fonts.symbols-only
+    corefonts
     inter
     lxgw-wenkai
+    nerd-fonts.symbols-only
   ];
   fonts.fontconfig.enable = true;
 }
