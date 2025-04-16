@@ -3,16 +3,14 @@
   pkgs,
   inputs,
   ...
-}:
-let
+}: let
   emacs = pkgs.emacs-unstable-pgtk;
-in
-{
+in {
   imports = [
     ../tex.nix
     ../../spell
   ];
-  nixpkgs.overlays = [ (import inputs.emacs-overlay) ];
+  nixpkgs.overlays = [(import inputs.emacs-overlay)];
   home.packages = with pkgs; [
     git
     ripgrep
@@ -20,12 +18,14 @@ in
 
     # copilot-node-server
     nodejs_18
+
+    languagetool
   ];
   programs.emacs = {
     enable = true;
     package = emacs;
-    extraPackages =
-      epkgs: with epkgs; [
+    extraPackages = epkgs:
+      with epkgs; [
         vterm
         jinx
       ];
