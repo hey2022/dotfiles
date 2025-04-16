@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   home.packages = with pkgs; [
     alejandra
     nh
@@ -10,6 +14,6 @@
   ];
   programs.nix-index-database.comma.enable = true;
   home.sessionVariables = {
-    FLAKE = "$HOME/.dotfiles";
+    FLAKE = config.home.dotfiles;
   };
 }
