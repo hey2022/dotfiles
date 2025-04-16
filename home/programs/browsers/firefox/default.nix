@@ -20,8 +20,8 @@ in {
         ${builtins.readFile "${inputs.betterfox}/user.js"}
         ${builtins.readFile "${inputs.firefox-ui-fix}/user.js"}
       '';
-      userChrome = builtins.readFile ./userChrome.css;
-      userContent = builtins.readFile ./userContent.css;
+      userChrome = ./userChrome.css;
+      userContent = ./userContent.css;
       extensions = {
         force = true;
         packages = with pkgs.nur.repos.rycee.firefox-addons; [
