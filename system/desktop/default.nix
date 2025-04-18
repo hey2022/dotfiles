@@ -1,12 +1,13 @@
 {...}: {
   imports = [
-    ./regreet.nix
-    ./xdg
+    ./catppuccin.nix
+    ./fcitx5.nix
     ./gtk.nix
     ./mount.nix
-    ./wluma.nix
+    ./regreet.nix
     ./stylix.nix
-    ./catppuccin.nix
+    ./wluma.nix
+    ./xdg
   ];
   programs.wluma.enable = true;
 }

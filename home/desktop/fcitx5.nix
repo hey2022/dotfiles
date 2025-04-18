@@ -6,7 +6,4 @@
       waylandFrontend = true;
     };
   };
-  home.sessionVariables = {
-    SDL_IM_MODULE = "fcitx"; # IME support in wechat
-  };
 }
