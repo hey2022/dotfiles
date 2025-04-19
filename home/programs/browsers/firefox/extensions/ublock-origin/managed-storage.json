@@ -1,0 +1,38 @@
+{
+  "name": "uBlock0@raymondhill.net",
+  "description": "Managed storage for uBlock Origin",
+  "type": "storage",
+  "data": {
+    "userSettings": [
+      ["advancedUserEnabled", "true"],
+      ["popupPanelSections", "31"]
+    ],
+    "toOverwrite": {
+      "filters": [
+        "www.youtube.com##ytd-browse[page-subtype=\"home\"]",
+        "www.youtube.com##ytd-watch-flexy #secondary"
+      ],
+      "filterLists": [
+        "user-filters",
+        "ublock-filters",
+        "ublock-badware",
+        "ublock-privacy",
+        "ublock-quick-fixes",
+        "ublock-unbreak",
+        "easylist",
+        "easyprivacy",
+        "urlhaus-1",
+        "plowe-0",
+        "fanboy-cookiemonster",
+        "ublock-cookies-easylist",
+        "easylist-chat",
+        "easylist-newsletters",
+        "easylist-notifications",
+        "easylist-annoyances",
+        "ublock-annoyances",
+        "CHN-0",
+        "https://raw.githubusercontent.com/gijsdev/ublock-hide-yt-shorts/master/list.txt"
+      ]
+    }
+  }
+}
