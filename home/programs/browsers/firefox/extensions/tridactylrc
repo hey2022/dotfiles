@@ -19,6 +19,7 @@ bind ,<Space> nohlsearch
 
 " blacklist
 blacklistadd monkeytype.com
+blacklistadd tybayn.github.io/phasmo-cheat-sheet
 
 " superignore
 seturl exam.net superignore true
