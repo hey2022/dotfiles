@@ -11,6 +11,7 @@
           "uv"
         ];
         no_retry = true;
+        pre_sudo = true;
       };
       linux = {
         nix_arguments = "--flake ${config.home.dotfiles}";
