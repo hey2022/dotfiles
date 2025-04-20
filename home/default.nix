@@ -1,4 +1,5 @@
 {
+  inputs,
   config,
   lib,
   pkgs,
@@ -32,6 +33,10 @@
     };
   };
   config = {
+    _module.args.pkgs-stable = import inputs.nixpkgs-stable {
+      inherit (pkgs.stdenv.hostPlatform) system;
+      inherit (config.nixpkgs) config;
+    };
     home.stateVersion = "24.11";
     programs.home-manager.enable = true;
     nixpkgs.config.allowUnfree = true;
