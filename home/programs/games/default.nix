@@ -1,4 +1,7 @@
 {pkgs, ...}: {
-  imports = [./minecraft];
+  imports = [
+    ./minecraft
+    ./roblox.nix
+  ];
   home.packages = with pkgs; [mindustry];
 }
