@@ -43,6 +43,7 @@ in {
     inherit package;
     enable = true;
     openFirewall = true;
+    allowedHosts = "localhost:8082,127.0.0.1:8082,${config.networking.hostName}:${toString config.services.homepage-dashboard.listenPort}";
     settings = {
       theme = "dark";
       color = "slate";
@@ -81,9 +82,6 @@ in {
         };
       }
     ];
-  };
-  systemd.services.homepage-dashboard.environment = {
-    HOMEPAGE_ALLOWED_HOSTS = "${config.networking.hostName}:${toString config.services.homepage-dashboard.listenPort}";
   };
   environment.etc."homepage-dashboard/services.yaml".source = lib.mkForce (settingsFormat.generate "services.yaml" (convertServiceConfig cfg.services));
   environment.etc."homepage-dashboard/bookmarks.yaml".source = lib.mkForce (settingsFormat.generate "bookmarks.yaml" (convertBookmarkConfig cfg.bookmarks));
