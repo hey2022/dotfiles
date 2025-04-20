@@ -1,16 +1,14 @@
 {
   config,
   pkgs,
-  inputs,
   ...
 }: let
-  emacs = pkgs.emacs-unstable-pgtk;
+  emacs = pkgs.emacs-pgtk;
 in {
   imports = [
     ../tex.nix
     ../../spell
   ];
-  nixpkgs.overlays = [(import inputs.emacs-overlay)];
   home.packages = with pkgs; [
     git
     ripgrep
