@@ -6,6 +6,7 @@
         assume_yes = true;
         disable = [
           "bun"
+          "flatpak"
           "git_repos"
           "nix"
           "uv"
