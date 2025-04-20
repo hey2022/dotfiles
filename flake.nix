@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     flake-parts.url = "github:hercules-ci/flake-parts";
     disko = {
       url = "github:nix-community/disko";

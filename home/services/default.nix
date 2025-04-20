@@ -1,6 +1,7 @@
 {...}: {
   imports = [
-    ./syncthing.nix
+    ./flatpak.nix
     ./lid-inhibit-lock.nix
+    ./syncthing.nix
   ];
 }
