@@ -60,7 +60,7 @@ Sets font to a custom build of Iosevka using https://typeof.net/Iosevka/customiz
 #+begin_src emacs-lisp
 (after! org
   (setq org-directory "~/org/")
-  (setq org-agenda-files '("~/org/personal.org" "~/school/school.org")))
+  (setq org-agenda-files '("~/org/agenda.org" "~/school/school.org")))
 #+end_src
 
 ** Latex Preview
