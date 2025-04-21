@@ -13,7 +13,7 @@
       + ''
         ln -s ${
           builtins.path {
-            path = "${inputs.self}/wallpapers";
+            path = "${inputs.self}/assets/wallpapers";
             name = "homepage-wallpapers";
           }
         } $out/share/homepage/public/images

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DEFAULT_WALLPAPER_FOLDER="$HOME/.dotfiles/wallpapers"
+DEFAULT_WALLPAPER_FOLDER="$HOME/.dotfiles/assets/wallpapers"
 wallpaper_folder="${1:-$DEFAULT_WALLPAPER_FOLDER}"
 if [[ ! -d "$wallpaper_folder" ]]; then
     echo "Error: Directory '$wallpaper_folder' does not exist."
