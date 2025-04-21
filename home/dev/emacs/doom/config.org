@@ -412,6 +412,11 @@ If no tags are provided, copy all files."
   (add-hook! org-mode (corfu-mode -1))
   (add-hook! org-mode (yas-activate-extra-mode 'latex-mode)))
 #+end_src
+** Pomodoro
+#+begin_src emacs-lisp
+(after! org-pomodoro
+  (setq org-pomodoro-audio-player (executable-find "mpv")))
+#+end_src
 
 * Latex
 ** Latex Compile Flags
