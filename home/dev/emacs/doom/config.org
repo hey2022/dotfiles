@@ -352,13 +352,6 @@ If no tags are provided, copy all files."
   :hook (org-mode . org-auto-tangle-mode))
 #+end_src
 
-** Org Modern
-#+begin_src emacs-lisp
-(use-package org
-  :hook (org-mode . org-modern-mode)
-  :hook (org-agenda-finalize . org-modern-agenda))
-#+end_src
-
 ** Org Capture Templates
 #+begin_src emacs-lisp
 (after! org
