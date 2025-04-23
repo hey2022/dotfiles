@@ -282,6 +282,12 @@ If no tags are provided, copy all files."
           (:name "Habits"
            :habit t))))
 #+end_src
+*** Clock report
+#+begin_src emacs-lisp
+(after! org-agenda
+  (setq org-agenda-start-with-clockreport-mode t)
+  (setq org-agenda-clockreport-parameter-plist '(:link t :tags t :fileskip0 t)))
+#+end_src
 
 ** Org Auto Export
 #+begin_src emacs-lisp
