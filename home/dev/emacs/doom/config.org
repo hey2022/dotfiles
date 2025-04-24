@@ -240,8 +240,9 @@ If no tags are provided, copy all files."
 
 *** Diary
 #+begin_src emacs-lisp
-(setq diary-file "~/org/diary")
-(setq org-agenda-include-diary t)
+(after! org-agenda
+  (setq diary-file "~/org/diary")
+  (setq org-agenda-include-diary t))
 #+end_src
 
 *** Timeblock
