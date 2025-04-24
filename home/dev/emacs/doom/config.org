@@ -418,22 +418,9 @@ If no tags are provided, copy all files."
 #+end_src
 
 ** Clock
-Use mpv instead of aplay to play mp3
 #+begin_src emacs-lisp
 (after! org-clock
-  (setq org-clock-sound "~/.dotfiles/assets/audio/alarm.mp3")
-  (defun org-clock-play-sound-mpv-advice (original-func &optional clock-sound)
-    "Advice for `org-clock-play-sound` to use mpv for sound playback."
-    (let* ((org-clock-sound (or clock-sound org-clock-sound)))
-      (if (stringp org-clock-sound)
-          (let ((file (expand-file-name org-clock-sound)))
-            (if (and (file-exists-p file)
-                     (executable-find "mpv"))
-                (start-process "org-clock-play-notification" nil
-                               "mpv" file)))
-        (funcall original-func clock-sound))))
-
-  (advice-add 'org-clock-play-sound :around #'org-clock-play-sound-mpv-advice))
+  (setq org-clock-sound "~/.dotfiles/assets/audio/alarm.wav"))
 #+end_src
 
 * Latex

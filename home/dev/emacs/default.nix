@@ -17,6 +17,7 @@ in {
     # copilot-node-server
     nodejs_18
 
+    alsa-utils
     languagetool
   ];
   programs.emacs = {
