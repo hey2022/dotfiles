@@ -27,6 +27,7 @@ in {
         packages = with pkgs.nur.repos.rycee.firefox-addons; [
           firefox-color
           keepassxc-browser
+          libredirect
           sidebery
           sponsorblock
           stylus
