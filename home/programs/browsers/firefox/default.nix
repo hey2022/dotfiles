@@ -32,6 +32,7 @@ in {
           stylus
           tridactyl
           ublock-origin
+          zotero-connector
         ];
       };
     };
