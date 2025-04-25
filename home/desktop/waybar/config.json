@@ -6,10 +6,14 @@
   "modules-right": [
     "group/controls",
     "group/hardware",
-    "tray",
+    "group/tray",
     "clock",
     "custom/notification"
   ],
+  "custom/drawer": {
+    "tooltip": false,
+    "format": ""
+  },
   "group/controls": {
     "orientation": "inherit",
     "modules": ["wireplumber", "backlight"]
@@ -40,6 +44,14 @@
     },
     "dynamic-order": ["title", "artist"],
     "ignored-players": ["firefox"]
+  },
+  "group/tray": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-left-to-right": false,
+      "click-to-reveal": true
+    },
+    "modules": ["custom/drawer", "tray"]
   },
   "tray": {
     "icon-size": 21,
