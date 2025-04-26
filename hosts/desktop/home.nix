@@ -8,7 +8,7 @@
     ../../home/programs/rss.nix
     ../../home/programs/torrent.nix
     ../../home/profiles/education.nix
-    ../../home/profiles/gaming.nix
+    ../../home/programs/games
   ];
   home.username = "yiheng";
   home.homeDirectory = "/home/yiheng";
