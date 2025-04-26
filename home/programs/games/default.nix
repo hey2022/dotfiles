@@ -2,7 +2,7 @@
   imports = [
     ./minecraft
     ./reshade.nix
-    ./roblox.nix
+    ./roblox
   ];
   home.packages = with pkgs; [mindustry];
 }
