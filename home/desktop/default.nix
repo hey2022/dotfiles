@@ -9,6 +9,7 @@
     ./imv.nix
     ./qt.nix
     ./stylix.nix
+    ./udiskie.nix
     ./wluma.nix
   ];
   home.packages = with pkgs; [
