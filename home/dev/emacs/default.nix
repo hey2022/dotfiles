@@ -15,7 +15,7 @@ in {
     fd
 
     # copilot-node-server
-    nodejs_18
+    nodejs
 
     alsa-utils
     languagetool
