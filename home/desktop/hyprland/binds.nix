@@ -14,7 +14,7 @@ in {
   wayland.windowManager.hyprland.settings = {
     "$menu" = "wofi --show drun";
     "$mod" = "SUPER";
-    "$playerctl" = "playerctl -p Feishin,firefox";
+    "$playerctl" = "playerctl -p Feishin,spotube,%any";
     "$term" = "ghostty";
 
     bind =
