@@ -14,7 +14,6 @@
         "FFlagDebugDisableTelemetryV2Counter": "True",
         "FFlagDebugDisableTelemetryV2Event": "True",
         "FFlagDebugDisableTelemetryV2Stat": "True",
-        "FFlagDebugDisplayFPS": "True",
         "FFlagFastGPULightCulling3": "True",
         "FFlagNewLightAttenuation": "True",
         "FFlagOptimizeNetwork": "True",
