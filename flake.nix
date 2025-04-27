@@ -59,6 +59,10 @@
       url = "github:yokoffing/Betterfox";
       flake = false;
     };
+    reshade-shaders = {
+      url = "github:crosire/reshade-shaders";
+      flake = false;
+    };
   };
 
   outputs = {

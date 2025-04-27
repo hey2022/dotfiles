@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./minecraft
+    ./reshade-shaders
     ./reshade.nix
     ./roblox
     ./wclicker

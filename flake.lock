@@ -722,6 +722,22 @@
         "type": "github"
       }
     },
+    "reshade-shaders": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1742933696,
+        "narHash": "sha256-st/i8qrxcs1JnkqqOJnjEtB9+HMR/LoV6qnnJexoeu0=",
+        "owner": "crosire",
+        "repo": "reshade-shaders",
+        "rev": "33212be28d177636c0411993a492993fc5389334",
+        "type": "github"
+      },
+      "original": {
+        "owner": "crosire",
+        "repo": "reshade-shaders",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "betterfox": "betterfox",
@@ -740,6 +756,7 @@
         "nixpkgs-stable": "nixpkgs-stable",
         "nixvim": "nixvim",
         "nur": "nur",
+        "reshade-shaders": "reshade-shaders",
         "stylix": "stylix",
         "tls-xb": "tls-xb"
       }
