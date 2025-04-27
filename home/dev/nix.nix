@@ -8,6 +8,7 @@
     nh
     nix-init
     nix-search-cli
+    nix-tree
     nixd
     nixfmt-rfc-style
     nurl
