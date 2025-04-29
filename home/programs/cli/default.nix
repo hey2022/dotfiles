@@ -6,6 +6,7 @@
     ./network.nix
     ./topgrade.nix
     ./yazi.nix
+    ./yt-dlp.nix
     ./zip.nix
   ];
 }
