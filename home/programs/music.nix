@@ -3,5 +3,6 @@
     feishin
     songrec
     spotube
+    yt-dlp
   ];
 }
