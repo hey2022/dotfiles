@@ -10,7 +10,7 @@
     "toOverwrite": {
       "filters": [
         "www.youtube.com##ytd-browse[page-subtype=\"home\"]",
-        "www.youtube.com##ytd-watch-flexy #secondary"
+        "www.youtube.com##ytd-watch-next-secondary-results-renderer"
       ],
       "filterLists": [
         "user-filters",
