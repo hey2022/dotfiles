@@ -100,6 +100,12 @@ Sets font to a custom build of Iosevka using https://typeof.net/Iosevka/customiz
 #+end_src
 
 *** Latex Headers
+**** derivative
+#+begin_src emacs-lisp
+(after! org
+  (add-to-list 'org-latex-packages-alist '("" "derivative" t)))
+#+end_src
+
 **** siunitx
 #+begin_src emacs-lisp
 (after! org
