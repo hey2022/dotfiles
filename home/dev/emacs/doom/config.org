@@ -317,6 +317,11 @@ If no tags are provided, copy all files."
     (interactive)
     (org-export-on-save 'org-html-export-to-html)))
 #+end_src
+** Org modern
+#+begin_src emacs-lisp
+(after! org
+  (setq org-pretty-entities nil))
+#+end_src
 
 ** Smartparens
 #+begin_src emacs-lisp
