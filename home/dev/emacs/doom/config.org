@@ -62,7 +62,13 @@ Sets font to a custom build of Iosevka using https://typeof.net/Iosevka/customiz
   (setq org-directory "~/org/"))
 #+end_src
 
-** Latex Preview
+** Latex
+*** Latex process
+#+begin_src emacs-lisp
+(after! org
+  (setq org-latex-pdf-process '("latexmk -output-directory=%o %f")))
+#+end_src
+*** Latex Preview
 #+begin_src emacs-lisp
 (use-package! org-latex-preview
   :after org
@@ -93,22 +99,25 @@ Sets font to a custom build of Iosevka using https://typeof.net/Iosevka/customiz
   (setq org-latex-preview-live-debounce 0.25))
 #+end_src
 
-** Latex Headers
-*** siunitx
+*** Latex Headers
+**** siunitx
 #+begin_src emacs-lisp
 (after! org
   (add-to-list 'org-latex-packages-alist '("per-mode=fraction" "siunitx" t)))
 #+end_src
 
-*** minted
+**** minted
 #+begin_src emacs-lisp
 (after! org
   (add-to-list 'org-latex-packages-alist '("" "minted" t))
-  (setq org-latex-listings 'minted
-        org-latex-pdf-process
-        '("latexmk -output-directory=%o %f")))
+  (setq org-latex-listings 'minted))
 #+end_src
-
+*** Latex Snippets
+#+begin_src emacs-lisp
+(after! org
+  (add-hook! org-mode (corfu-mode -1))
+  (add-hook! org-mode (yas-activate-extra-mode 'latex-mode)))
+#+end_src
 ** Org Roam
 *** Org Node
 #+begin_src emacs-lisp
@@ -413,13 +422,6 @@ If no tags are provided, copy all files."
       (progress-reporter-update progress-reporter index))
     (progress-reporter-done progress-reporter)
     (message "Finished pushing notes")))
-#+end_src
-
-** Latex Snippets
-#+begin_src emacs-lisp
-(after! org
-  (add-hook! org-mode (corfu-mode -1))
-  (add-hook! org-mode (yas-activate-extra-mode 'latex-mode)))
 #+end_src
 
 ** Clock
