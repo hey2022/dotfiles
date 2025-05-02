@@ -17,6 +17,11 @@
     };
 in {
   services.homepage-dashboard.services = {
+    status = {
+      prometheus = mkService {
+        name = "prometheus";
+      };
+    };
     media = {
       lidarr = mkService {
         name = "lidarr";

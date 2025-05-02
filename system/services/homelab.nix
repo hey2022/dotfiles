@@ -5,5 +5,6 @@
     ./karakeep.nix
     ./media
     ./miniflux.nix
+    ./prometheus/prometheus.nix
   ];
 }
