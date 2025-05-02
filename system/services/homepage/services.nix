@@ -42,6 +42,10 @@ in {
         name = "navidrome";
         port = config.services.navidrome.settings.Port;
       };
+      karakeep = mkService {
+        name = "karakeep";
+        port = config.services.karakeep.extraEnvironment.PORT;
+      };
     };
     AI = {
       open-webui = mkService {
