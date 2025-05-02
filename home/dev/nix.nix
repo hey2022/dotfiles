@@ -15,6 +15,6 @@
   ];
   programs.nix-index-database.comma.enable = true;
   home.sessionVariables = {
-    FLAKE = config.home.dotfiles;
+    NH_FLAKE = config.home.dotfiles;
   };
 }
