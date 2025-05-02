@@ -21,6 +21,10 @@ in {
       prometheus = mkService {
         name = "prometheus";
       };
+      grafana = mkService {
+        name = "grafana";
+        port = config.services.grafana.settings.server.http_port;
+      };
     };
     media = {
       lidarr = mkService {
