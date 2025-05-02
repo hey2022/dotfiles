@@ -1,7 +1,7 @@
 {...}: {
   imports = [
     ./automount.nix
-    ./homepage.nix
+    ./homepage
     ./iperf.nix
     ./kanata.nix
     ./minecraft.nix

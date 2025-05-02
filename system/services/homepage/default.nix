@@ -39,6 +39,7 @@
       })
       option);
 in {
+  imports = [./services.nix];
   services.homepage-dashboard = {
     inherit package;
     enable = true;
