@@ -17,6 +17,12 @@
     };
 in {
   services.homepage-dashboard.services = {
+    services = {
+      karakeep = mkService {
+        name = "karakeep";
+        port = config.services.karakeep.extraEnvironment.PORT;
+      };
+    };
     status = {
       prometheus = mkService {
         name = "prometheus";
@@ -50,10 +56,6 @@ in {
       navidrome = mkService {
         name = "navidrome";
         port = config.services.navidrome.settings.Port;
-      };
-      karakeep = mkService {
-        name = "karakeep";
-        port = config.services.karakeep.extraEnvironment.PORT;
       };
     };
     AI = {
