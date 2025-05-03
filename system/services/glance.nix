@@ -1,4 +1,8 @@
-{...}: {
+{
+  config,
+  lib,
+  ...
+}: {
   services.glance = {
     enable = true;
     openFirewall = true;
@@ -48,6 +52,25 @@
             }
           ];
         }
+        (
+          lib.mkIf
+          config.services.homepage-dashboard.enable
+          {
+            name = "Homepage";
+            columns = [
+              {
+                size = "full";
+                widgets = [
+                  {
+                    type = "iframe";
+                    source = "http://${config.networking.hostName}:${toString config.services.homepage-dashboard.listenPort}";
+                    height = 800;
+                  }
+                ];
+              }
+            ];
+          }
+        )
       ];
     };
   };
