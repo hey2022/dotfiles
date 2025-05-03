@@ -32,6 +32,9 @@ in {
   services.emacs = {
     enable = true;
     package = emacs;
+    client = {
+      enable = true;
+    };
     startWithUserSession = true;
   };
   xdg.configFile."doom" = {
