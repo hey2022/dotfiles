@@ -22,6 +22,10 @@ in {
         name = "karakeep";
         port = config.services.karakeep.extraEnvironment.PORT;
       };
+      miniflux = mkService {
+        name = "miniflux";
+        port = 8081;
+      };
     };
     status = {
       prometheus = mkService {
