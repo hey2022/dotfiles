@@ -19,8 +19,27 @@
         negative-color = "347 70 65";
       };
       pages = [
+        (
+          lib.mkIf
+          config.services.homepage-dashboard.enable
+          {
+            name = "Homepage";
+            columns = [
+              {
+                size = "full";
+                widgets = [
+                  {
+                    type = "iframe";
+                    source = "http://${config.networking.hostName}:${toString config.services.homepage-dashboard.listenPort}";
+                    height = 800;
+                  }
+                ];
+              }
+            ];
+          }
+        )
         {
-          name = "Home";
+          name = "Feed";
           columns = [
             {
               size = "small";
@@ -52,25 +71,6 @@
             }
           ];
         }
-        (
-          lib.mkIf
-          config.services.homepage-dashboard.enable
-          {
-            name = "Homepage";
-            columns = [
-              {
-                size = "full";
-                widgets = [
-                  {
-                    type = "iframe";
-                    source = "http://${config.networking.hostName}:${toString config.services.homepage-dashboard.listenPort}";
-                    height = 800;
-                  }
-                ];
-              }
-            ];
-          }
-        )
       ];
     };
   };
