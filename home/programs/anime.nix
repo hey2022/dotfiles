@@ -4,6 +4,7 @@
     ./media
   ];
   home.packages = with pkgs; [
+    ani-cli
     trackma
   ];
 }
