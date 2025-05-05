@@ -1,5 +1,8 @@
 {pkgs, ...}: {
-  imports = [./programs/torrent.nix ./programs/media];
+  imports = [
+    ./torrent.nix
+    ./media
+  ];
   home.packages = with pkgs; [
     trackma
   ];
