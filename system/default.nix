@@ -13,6 +13,7 @@
     ./services
     ./shell/fish.nix
     ./ssh.nix
+    ./virtualisation
   ];
   options = {
     host.laptop = lib.mkOption {
