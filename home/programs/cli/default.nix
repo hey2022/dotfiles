@@ -1,6 +1,7 @@
 {...}: {
   imports = [
     ./aria2.nix
+    ./atuin.nix
     ./beets.nix
     ./fzf.nix
     ./network.nix
