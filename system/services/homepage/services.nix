@@ -5,16 +5,26 @@
 }: let
   hostname = config.networking.hostName;
 
-  mkService = {
+  mkService = attrs @ {
     name,
     icon ? "${name}.svg",
     port ? config.services.${name}.port,
     ...
-  }:
-    lib.mkIf config.services.${name}.enable {
-      icon = icon;
-      href = "http://${hostname}:${toString port}";
-    };
+  }: let
+    url = "http://${hostname}:${toString port}";
+  in
+    lib.mkIf config.services.${name}.enable ({
+        icon = icon;
+        href = url;
+      }
+      // lib.optionalAttrs (attrs ? widget) {
+        widget =
+          attrs.widget
+          // {
+            type = name;
+            inherit url;
+          };
+      });
 in {
   services.homepage-dashboard.services = {
     services = {
@@ -56,6 +66,9 @@ in {
       jellyfin = mkService {
         name = "jellyfin";
         port = 8096;
+        widget = {
+          key = "{{HOMEPAGE_VAR_JELLYFIN_API_KEY}}";
+        };
       };
       navidrome = mkService {
         name = "navidrome";
