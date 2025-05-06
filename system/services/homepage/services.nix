@@ -50,7 +50,7 @@ in {
         port = config.services.grafana.settings.server.http_port;
         widget = {
           username = "admin";
-          password = "{{HOMEPAGE_VAR_GRAFANA_ADMIN_PASSWORD}}";
+          password = "{{HOMEPAGE_VAR_GRAFANA}}";
         };
       };
     };
@@ -75,7 +75,7 @@ in {
         name = "jellyfin";
         port = 8096;
         widget = {
-          key = "{{HOMEPAGE_VAR_JELLYFIN_API_KEY}}";
+          key = "{{HOMEPAGE_VAR_JELLYFIN}}";
         };
       };
       navidrome = mkService {
