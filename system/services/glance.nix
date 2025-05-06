@@ -29,6 +29,8 @@
                 size = "full";
                 widgets = [
                   {
+                    title = "Homepage";
+                    title-url = "https://gethomepage.dev";
                     type = "iframe";
                     source = "http://${config.networking.hostName}:${toString config.services.homepage-dashboard.listenPort}";
                     height = 800;
