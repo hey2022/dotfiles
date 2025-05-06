@@ -3,6 +3,7 @@
     ./anime.nix
     ./browsers
     ./cli
+    ./encryption.nix
     ./social
   ];
   home.packages = with pkgs; [
