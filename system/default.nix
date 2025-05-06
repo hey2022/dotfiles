@@ -12,6 +12,7 @@
     ./programs
     ./services
     ./shell/fish.nix
+    ./sops-nix.nix
     ./ssh.nix
     ./virtualisation
   ];
