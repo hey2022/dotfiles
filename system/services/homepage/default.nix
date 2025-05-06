@@ -27,17 +27,6 @@
         services;
     })
     option));
-  convertBookmarkConfig = option:
-    lib.optionalAttrs (option != []) (lib.mapAttrsToList
-      (groupName: bookmarks: {
-        ${groupName} =
-          lib.mapAttrsToList
-          (bookmarkName: settings: {
-            ${bookmarkName} = [settings];
-          })
-          bookmarks;
-      })
-      option);
 in {
   imports = [./services.nix];
   services.homepage-dashboard = {
@@ -85,5 +74,4 @@ in {
     ];
   };
   environment.etc."homepage-dashboard/services.yaml".source = lib.mkForce (settingsFormat.generate "services.yaml" (convertServiceConfig cfg.services));
-  environment.etc."homepage-dashboard/bookmarks.yaml".source = lib.mkForce (settingsFormat.generate "bookmarks.yaml" (convertBookmarkConfig cfg.bookmarks));
 }
