@@ -40,6 +40,7 @@ in {
     status = {
       prometheus = mkService {
         name = "prometheus";
+        widget = {};
       };
       grafana = mkService {
         name = "grafana";
