@@ -435,6 +435,14 @@ If no tags are provided, copy all files."
 (after! org-clock
   (setq org-clock-sound "~/.dotfiles/assets/audio/alarm.wav"))
 #+end_src
+** valign
+#+begin_src emacs-lisp
+(use-package! valign
+  :hook (org-mode-hook . valign-mode)
+  :config
+  (setq org-modern-table nil)
+  (setq valign-fancy-bar t))
+#+end_src
 
 * Latex
 ** Latex Compile Flags

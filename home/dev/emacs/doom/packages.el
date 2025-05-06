@@ -32,6 +32,7 @@
 (package! org-timeblock)
 (package! org-auto-tangle)
 (package! org-super-agenda)
+(package! valign)
 (package! anki-editor
   :recipe (:host github :repo "anki-editor/anki-editor"))
 
