@@ -32,6 +32,7 @@ in {
   services.homepage-dashboard = {
     inherit package;
     enable = true;
+    environmentFile = config.sops.secrets.homepage.path;
     openFirewall = true;
     allowedHosts = "localhost:8082,127.0.0.1:8082,${config.networking.hostName}:${toString config.services.homepage-dashboard.listenPort}";
     settings = {
@@ -74,4 +75,8 @@ in {
     ];
   };
   environment.etc."homepage-dashboard/services.yaml".source = lib.mkForce (settingsFormat.generate "services.yaml" (convertServiceConfig cfg.services));
+  sops.secrets.homepage = {
+    sopsFile = ../../../secrets/homepage.env;
+    format = "dotenv";
+  };
 }
