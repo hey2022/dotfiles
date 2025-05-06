@@ -74,8 +74,4 @@ in {
     ];
   };
   environment.etc."homepage-dashboard/services.yaml".source = lib.mkForce (settingsFormat.generate "services.yaml" (convertServiceConfig cfg.services));
-  sops.secrets.homepage = {
-    sopsFile = ../../../secrets/homepage.env;
-    format = "dotenv";
-  };
 }

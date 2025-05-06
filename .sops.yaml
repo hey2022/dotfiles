@@ -2,7 +2,7 @@ keys:
   - &admin age1hf2zuvuwccu5r5u8rj5yuqapxkdjr8pnsqg6ehsgr5l7hr6meqrquqq0nx
   - &root-desktop age1c0efwwd98587gdu7yyuhzhgpzg3j7mvmrynlpzvu5dgrq6dqu3tsf9pmnp
 creation_rules:
-  - path_regex: secrets/[^/]+\.(yaml|json|env|ini)$
+  - path_regex: secrets/desktop/[^/]+\.(yaml|json|env|ini)$
     key_groups:
       - age:
           - *admin
