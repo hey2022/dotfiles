@@ -31,6 +31,9 @@ in {
       karakeep = mkService {
         name = "karakeep";
         port = config.services.karakeep.extraEnvironment.PORT;
+        widget = {
+          key = "{{HOMEPAGE_VAR_KARAKEEP}}";
+        };
       };
       miniflux = mkService {
         name = "miniflux";
