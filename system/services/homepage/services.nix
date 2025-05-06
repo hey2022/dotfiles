@@ -66,6 +66,9 @@ in {
       sonarr = mkService {
         name = "sonarr";
         port = 8989;
+        widget = {
+          key = "{{HOMEPAGE_VAR_SONARR}}";
+        };
       };
       prowlarr = mkService {
         name = "prowlarr";
