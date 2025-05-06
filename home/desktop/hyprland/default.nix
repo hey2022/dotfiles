@@ -13,7 +13,6 @@
     ../launchers/fuzzel.nix
     ../pipewire.nix
     ../swaync.nix
-    ../swww
     ../terminal/ghostty.nix
     ../vnc
     ../waybar

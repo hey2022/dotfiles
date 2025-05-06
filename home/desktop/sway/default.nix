@@ -16,7 +16,6 @@
     ./wkill.nix
     ../file-manager/pcmanfm.nix
     ../launchers/fuzzel.nix
-    ../swww
     ../wayland
   ];
 

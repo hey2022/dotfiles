@@ -119,8 +119,8 @@ in {
         "$mod, T, exec, hyprctl activewindow -j | jq '.pid' | xargs mullvad split-tunnel add"
         "$mod SHIFT, T, exec, hyprctl activewindow -j | jq '.pid' | xargs mullvad split-tunnel delete"
 
-        # swww-picker
-        "$mod, w, exec, ${runOnce "swww-picker"}"
+        # wallpaper
+        "$mod, w, exec, ${toggle "waytrogen"}"
 
         # launcher
         "$mod, space, exec, ${toggle "fuzzel"} --launch-prefix='uwsm-app -- '"
