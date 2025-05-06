@@ -1,7 +1,7 @@
 {...}: {
   imports = [
     ./audio
-    ./inkscape.nix
+    ./graphics
     ./libreoffice.nix
     ./obs.nix
     ./pdf
