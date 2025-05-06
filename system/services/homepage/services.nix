@@ -44,6 +44,10 @@ in {
       grafana = mkService {
         name = "grafana";
         port = config.services.grafana.settings.server.http_port;
+        widget = {
+          username = "admin";
+          password = "{{HOMEPAGE_VAR_GRAFANA_ADMIN_PASSWORD}}";
+        };
       };
     };
     media = {
