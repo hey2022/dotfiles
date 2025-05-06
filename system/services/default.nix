@@ -1,6 +1,7 @@
 {...}: {
   imports = [
     ./automount.nix
+    ./fail2ban.nix
     ./iperf.nix
     ./kanata.nix
     ./minecraft.nix
