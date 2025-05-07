@@ -3,15 +3,13 @@
   lib,
   ...
 }: let
-  hostname = config.networking.hostName;
-
   mkService = attrs @ {
     name,
     icon ? "${name}.svg",
     port ? config.services.${name}.port,
     ...
   }: let
-    url = "http://${hostname}:${toString port}";
+    url = "http://${config.host.ip}:${toString port}";
   in
     lib.mkIf config.services.${name}.enable ({
         icon = icon;

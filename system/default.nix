@@ -1,4 +1,8 @@
-{lib, ...}: {
+{
+  config,
+  lib,
+  ...
+}: {
   imports = [
     ./bluetooth.nix
     ./boot
@@ -21,6 +25,11 @@
       type = lib.types.bool;
       default = false;
       description = "Whether the host is a laptop";
+    };
+    host.ip = lib.mkOption {
+      type = lib.types.string;
+      default = "${config.networking.hostName}.taila6842.ts.net";
+      description = "Host ip address";
     };
   };
   config = {

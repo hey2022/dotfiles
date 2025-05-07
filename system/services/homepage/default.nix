@@ -34,7 +34,7 @@ in {
     enable = true;
     environmentFile = config.sops.secrets.homepage.path;
     openFirewall = true;
-    allowedHosts = "localhost:8082,127.0.0.1:8082,${config.networking.hostName}:${toString config.services.homepage-dashboard.listenPort}";
+    allowedHosts = "localhost:8082,127.0.0.1:8082,${config.host.ip}:${toString config.services.homepage-dashboard.listenPort}";
     settings = {
       theme = "dark";
       color = "slate";

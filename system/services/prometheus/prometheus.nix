@@ -8,8 +8,8 @@
         static_configs = [
           {
             targets = [
-              "desktop:9100"
-              "goon:9100"
+              "desktop.taila6842.ts.net:9100"
+              "goon.taila6842.ts.net:9100"
             ];
           }
         ];
