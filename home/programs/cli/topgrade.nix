@@ -17,9 +17,6 @@
         nix_arguments = "--flake ${config.home.dotfiles}";
         home_manager_arguments = ["--flake" "${config.home.dotfiles}" "-b" "backup"];
       };
-      pre_commands = {
-        "Update flake" = "nix flake update --flake ${config.home.dotfiles}";
-      };
     };
   };
 }
