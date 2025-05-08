@@ -1,4 +1,6 @@
-{config, ...}: {
+{config, ...}: let
+  cfg = config.services.grafana;
+in {
   services.grafana = {
     enable = true;
     settings = {
@@ -22,6 +24,6 @@
     };
   };
   networking.firewall = {
-    allowedTCPPorts = [config.services.grafana.settings.server.http_port];
+    allowedTCPPorts = [cfg.settings.server.http_port];
   };
 }
