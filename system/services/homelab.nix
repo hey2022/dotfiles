@@ -1,6 +1,7 @@
 {...}: {
   imports = [
     ./ai
+    ./caddy.nix
     ./glance.nix
     ./grafana.nix
     ./homepage

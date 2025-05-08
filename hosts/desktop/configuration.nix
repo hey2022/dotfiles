@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
     ./sops.nix
@@ -13,6 +17,11 @@
   ];
 
   networking.hostName = "desktop";
+
+  host.address = "hey2022.duckdns.org";
+  services.caddy.globalConfig = ''
+    acme_dns duckdns {env.DUCKDNS_TOKEN}
+  '';
 
   time.timeZone = "Asia/Shanghai";
 
