@@ -6,6 +6,9 @@
         http_addr = "0.0.0.0";
         http_port = 9191;
       };
+      security = {
+        allow_embedding = true;
+      };
     };
     provision = {
       enable = true;
