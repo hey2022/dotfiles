@@ -26,10 +26,10 @@
       default = false;
       description = "Whether the host is a laptop";
     };
-    host.ip = lib.mkOption {
+    host.address = lib.mkOption {
       type = lib.types.str;
       default = "${config.networking.hostName}.taila6842.ts.net";
-      description = "Host ip address";
+      description = "Host address";
     };
   };
   config = {

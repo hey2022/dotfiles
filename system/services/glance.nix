@@ -32,7 +32,7 @@
                     title = "Homepage";
                     title-url = "https://gethomepage.dev";
                     type = "iframe";
-                    source = "http://${config.host.ip}:${toString config.services.homepage-dashboard.listenPort}";
+                    source = "http://${config.host.address}:${toString config.services.homepage-dashboard.listenPort}";
                     height = 800;
                   }
                 ];

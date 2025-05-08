@@ -9,7 +9,7 @@
     port ? config.services.${name}.port,
     ...
   }: let
-    url = "http://${config.host.ip}:${toString port}";
+    url = "http://${config.host.address}:${toString port}";
   in
     lib.mkIf config.services.${name}.enable ({
         icon = icon;
