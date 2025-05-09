@@ -66,6 +66,9 @@ in {
       };
       prowlarr = mkService {
         name = "prowlarr";
+        widget = {
+          key = "{{HOMEPAGE_VAR_PROWLARR}}";
+        };
       };
       jellyfin = mkService {
         name = "jellyfin";
