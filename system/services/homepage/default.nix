@@ -33,8 +33,7 @@ in {
     inherit package;
     enable = true;
     environmentFile = config.sops.secrets.homepage.path;
-    openFirewall = true;
-    allowedHosts = "localhost:8082,127.0.0.1:8082,${config.host.address}:${toString config.services.homepage-dashboard.listenPort}";
+    allowedHosts = "localhost:8082,127.0.0.1:8082,homepage.${config.host.address}";
     settings = {
       theme = "dark";
       color = "slate";
@@ -75,4 +74,7 @@ in {
     ];
   };
   environment.etc."homepage-dashboard/services.yaml".source = lib.mkForce (settingsFormat.generate "services.yaml" (convertServiceConfig cfg.services));
+  services.caddy.virtualHosts."homepage.${config.host.address}".extraConfig = ''
+    reverse_proxy localhost:${toString cfg.listenPort}
+  '';
 }
