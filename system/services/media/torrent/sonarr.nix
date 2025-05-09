@@ -1,7 +1,9 @@
-{...}: {
+{config, ...}: {
   services.sonarr = {
     enable = true;
     group = "media";
-    openFirewall = true;
   };
+  services.caddy.virtualHosts."sonarr.${config.host.address}".extraConfig = ''
+    reverse_proxy localhost:8989
+  '';
 }
