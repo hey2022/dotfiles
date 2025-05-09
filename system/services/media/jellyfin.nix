@@ -1,7 +1,9 @@
-{...}: {
+{config, ...}: {
   services.jellyfin = {
     enable = true;
     group = "media";
-    openFirewall = true;
   };
+  services.caddy.virtualHosts."jellyfin.${config.host.address}".extraConfig = ''
+    reverse_proxy localhost:8096
+  '';
 }
