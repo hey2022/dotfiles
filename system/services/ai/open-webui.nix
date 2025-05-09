@@ -1,8 +1,11 @@
-{...}: {
+{config, ...}: let
+  cfg = config.services.open-webui;
+in {
   services.open-webui = {
     enable = true;
-    openFirewall = true;
-    host = "0.0.0.0";
     port = 11111;
   };
+  services.caddy.virtualHosts."open-webui.${config.host.address}".extraConfig = ''
+    reverse_proxy localhost:${toString cfg.port}
+  '';
 }
