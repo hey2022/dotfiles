@@ -1,15 +1,13 @@
-{
-  config,
-  lib,
-  ...
-}: {
+{config, ...}: let
+  cfg = config.services.karakeep;
+in {
   services.karakeep = {
     enable = true;
     extraEnvironment = {
       PORT = "9000";
     };
   };
-  networking.firewall = {
-    allowedTCPPorts = [(lib.strings.toInt config.services.karakeep.extraEnvironment.PORT)];
-  };
+  services.caddy.virtualHosts."karakeep.${config.host.address}".extraConfig = ''
+    reverse_proxy localhost:${toString cfg.extraEnvironment.PORT}
+  '';
 }
