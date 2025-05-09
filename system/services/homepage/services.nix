@@ -84,6 +84,11 @@ in {
       };
       navidrome = mkService {
         name = "navidrome";
+        widget = {
+          user = "admin";
+          token = "{{HOMEPAGE_VAR_NAVIDROME}}";
+          salt = "3cd981";
+        };
       };
     };
     AI = {
