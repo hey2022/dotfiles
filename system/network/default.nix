@@ -4,7 +4,10 @@
     ./nm-applet.nix
   ];
   networking = {
-    nftables.enable = true;
+    nftables = {
+      enable = true;
+      flushRuleset = true;
+    };
     networkmanager.enable = true;
   };
 
