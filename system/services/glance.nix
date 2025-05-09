@@ -2,10 +2,11 @@
   config,
   lib,
   ...
-}: {
+}: let
+  cfg = config.services.glance;
+in {
   services.glance = {
     enable = true;
-    openFirewall = true;
     settings = {
       server = {
         port = 5678;
@@ -32,7 +33,7 @@
                     title = "Homepage";
                     title-url = "https://gethomepage.dev";
                     type = "iframe";
-                    source = "http://${config.host.address}:${toString config.services.homepage-dashboard.listenPort}";
+                    source = "https://homepage.${config.host.address}";
                     height = 800;
                   }
                 ];
@@ -76,4 +77,7 @@
       ];
     };
   };
+  services.caddy.virtualHosts."${config.host.address}".extraConfig = ''
+    reverse_proxy localhost:${toString cfg.settings.server.port}
+  '';
 }
