@@ -1,7 +1,9 @@
-{...}: {
+{config, ...}: {
   services.radarr = {
     enable = true;
     group = "media";
-    openFirewall = true;
   };
+  services.caddy.virtualHosts."radarr.${config.host.address}".extraConfig = ''
+    reverse_proxy localhost:7878
+  '';
 }
