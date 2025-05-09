@@ -32,6 +32,9 @@ in {
       };
       miniflux = mkService {
         name = "miniflux";
+        widget = {
+          key = "{{HOMEPAGE_VAR_MINIFLUX}}";
+        };
       };
     };
     status = {
