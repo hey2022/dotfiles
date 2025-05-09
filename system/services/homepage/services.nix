@@ -51,6 +51,9 @@ in {
     media = {
       lidarr = mkService {
         name = "lidarr";
+        widget = {
+          key = "{{HOMEPAGE_VAR_LIDARR}}";
+        };
       };
       radarr = mkService {
         name = "radarr";
