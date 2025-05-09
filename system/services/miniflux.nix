@@ -1,4 +1,4 @@
-{...}: let
+{config, ...}: let
   port = 8081;
 in {
   services.miniflux = {
@@ -8,7 +8,7 @@ in {
       LISTEN_ADDR = "0.0.0.0:${toString port}";
     };
   };
-  networking.firewall = {
-    allowedTCPPorts = [port];
-  };
+  services.caddy.virtualHosts."miniflux.${config.host.address}".extraConfig = ''
+    reverse_proxy localhost:${toString port}
+  '';
 }
