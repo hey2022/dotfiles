@@ -57,6 +57,9 @@ in {
       };
       radarr = mkService {
         name = "radarr";
+        widget = {
+          key = "{{HOMEPAGE_VAR_RADARR}}";
+        };
       };
       sonarr = mkService {
         name = "sonarr";
