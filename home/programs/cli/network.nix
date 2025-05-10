@@ -4,5 +4,6 @@
     mtr
     rustscan
     iperf3
+    gping
   ];
 }
