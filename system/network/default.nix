@@ -2,6 +2,7 @@
   imports = [
     ./dnscrypt.nix
     ./nm-applet.nix
+    ./wireshark.nix
   ];
   networking = {
     nftables = {

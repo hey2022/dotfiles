@@ -28,6 +28,7 @@
       "networkmanager"
       "uinput"
       "wheel"
+      "wireshark"
     ];
     shell = pkgs.fish;
   };
