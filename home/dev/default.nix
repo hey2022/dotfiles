@@ -8,6 +8,7 @@
     ./java.nix
     ./jq.nix
     ./json.nix
+    ./jujutsu.nix
     ./julia.nix
     ./lisp.nix
     ./markdown.nix
