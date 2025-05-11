@@ -1,6 +1,6 @@
 {...}: {
   programs.jujutsu = {
-    enable = true;
+    enable = false;
     settings = {
       user = {
         email = "yiheng.he@proton.me";
