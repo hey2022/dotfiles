@@ -31,6 +31,11 @@
       default = "${config.networking.hostName}.taila6842.ts.net";
       description = "Host address";
     };
+    host.desktop = lib.mkOption {
+      type = lib.types.bool;
+      default = true;
+      description = "Whether the host is a desktop";
+    };
   };
   config = {
     system.stateVersion = "24.11";
