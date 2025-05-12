@@ -1,6 +1,6 @@
-{...}: {
+{config, ...}: {
   hardware.logitech.wireless = {
-    enable = true;
+    enable = config.host.desktop;
     enableGraphical = true;
   };
 }

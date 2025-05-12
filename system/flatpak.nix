@@ -1,8 +1,3 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
-  services.flatpak.enable = true;
+{config, ...}: {
+  services.flatpak.enable = config.host.desktop;
 }
