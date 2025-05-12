@@ -1,9 +1,10 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     doggo
-    mtr
-    rustscan
-    iperf3
     gping
+    iperf3
+    mtr
+    nethogs
+    rustscan
   ];
 }
