@@ -25,6 +25,7 @@
       "net.core.default_qdisc" = "cake";
       "net.ipv4.tcp_congestion_control" = "bbr";
       "net.ipv4.tcp_ecn" = 1;
+      "net.ipv4.tcp_fastopen" = 3;
     };
   };
 }
