@@ -2,7 +2,6 @@
   home.packages = with pkgs; [
     feishin
     songrec
-    spotube
   ];
   # https://nixpk.gs/pr-tracker.html?pr=405530
   nixpkgs.config.permittedInsecurePackages = [
