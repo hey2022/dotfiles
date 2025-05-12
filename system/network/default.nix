@@ -18,4 +18,12 @@
       ExecStart = ["" "${pkgs.networkmanager}/bin/nm-online -q"];
     };
   };
+
+  boot = {
+    kernelModules = ["tcp_bbr"];
+    kernel.sysctl = {
+      "net.core.default_qdisc" = "cake";
+      "net.ipv4.tcp_congestion_control" = "bbr";
+    };
+  };
 }
