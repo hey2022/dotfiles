@@ -10,7 +10,6 @@
           "nix"
           "uv"
         ];
-        no_retry = true;
         pre_sudo = true;
       };
       linux = {
