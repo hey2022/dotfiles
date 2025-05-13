@@ -13,6 +13,7 @@
     ./nix.nix
     ./polkit.nix
     ./power
+    ./profiles
     ./programs
     ./services
     ./shell/fish.nix

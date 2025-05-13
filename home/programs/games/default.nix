@@ -8,8 +8,9 @@
     ./wclicker
   ];
   home.packages = with pkgs; [
-    mindustry
     goverlay
+    mindustry
+    steam
   ];
   programs.mangohud = {
     enable = true;

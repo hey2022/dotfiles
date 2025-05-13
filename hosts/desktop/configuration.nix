@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
     ./hardware-configuration.nix
     ./sops.nix
@@ -13,7 +9,6 @@
     ../../system/desktop/hyprland.nix
     ../../system/services/homelab.nix
     ../../system/network/mullvad.nix
-    ../../system/game.nix
   ];
 
   networking.hostName = "desktop";
