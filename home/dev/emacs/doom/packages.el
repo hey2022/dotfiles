@@ -49,3 +49,5 @@
 (package! difftastic)
 
 (package! catppuccin-theme)
+
+(package! magit-todos)
