@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   imports = [
-    ./dnscrypt.nix
+    ./dns.nix
     ./nm-applet.nix
     ./wireshark.nix
   ];

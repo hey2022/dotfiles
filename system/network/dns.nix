@@ -9,7 +9,7 @@
   services.dnscrypt-proxy2 = {
     enable = true;
     settings = {
-      server_names = ["mullvad-base-doh" "quad9-dnscrypt-ip6-filter-pri" "adguard-dns-ipv6" "cloudflare-security-ipv6" "dns0" "controld-block-malware-ad"];
+      server_names = ["adguard-dns" "quad9-dnscrypt-ip4-filter-ecs-pri" "dns0"];
       forwarding_rules = builtins.toFile "forwarding-rules" ''
         neverssl.com $DHCP,$BOOTSTRAP
       '';
