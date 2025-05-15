@@ -332,6 +332,20 @@ If no tags are provided, copy all files."
     (interactive)
     (org-export-on-save 'org-html-export-to-html)))
 #+end_src
+
+** org-download
+#+begin_src emacs-lisp
+(use-package! org-download
+  :after org
+  :config
+  (setq-default org-download-image-dir "images")
+  (setq-default org-download-heading-lvl nil)
+  (setq org-download-method 'directory)
+  ;; HACK: https://github.com/doomemacs/doomemacs/issues/7269
+  (setq org-download-link-format "[[file:%s]]\n")
+  (setq org-download-abbreviate-filename-function #'file-relative-name))
+#+end_src
+
 ** Org modern
 #+begin_src emacs-lisp
 (after! org
