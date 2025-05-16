@@ -6,5 +6,6 @@
     mtr
     nethogs
     rustscan
+    speedtest-go
   ];
 }
