@@ -11,10 +11,10 @@
     ./network
     ./nix-ld.nix
     ./nix.nix
-    ./polkit.nix
     ./power
     ./profiles
     ./programs
+    ./security
     ./services
     ./shell/fish.nix
     ./sops-nix.nix
