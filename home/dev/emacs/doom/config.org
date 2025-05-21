@@ -141,18 +141,16 @@ Sets font to a custom build of Iosevka using https://typeof.net/Iosevka/customiz
          :desc "Rename file by title" "N" #'org-node-rename-file-by-title
          :desc "Random node" "a" #'org-node-visit-random))
   :config
-  (setq org-node-extra-id-dirs '("~/org/"))
+  (setq org-mem-watch-dirs '("~/org/"))
+  (setq org-mem-do-sync-with-org-id t)
+  (org-mem-updater-mode)
   (org-node-cache-mode)
 
   (org-node-complete-at-point-mode)
-  (setq org-roam-completion-everywhere nil))
+  (setq org-roam-completion-everywhere nil)
 
-(use-package org-node-fakeroam
-  :after org-node
-  :config
-  (setq org-node-creation-fn #'org-node-fakeroam-new-via-roam-capture)
-  (setq org-node-slug-fn #'org-node-fakeroam-slugify-via-roam)
-  (org-node-fakeroam-fast-render-mode))
+  (setq org-node-roam-accelerator-mode t)
+  (setq org-mem-roamy-db-mode t))
 #+end_src
 
 *** Insert link at word
