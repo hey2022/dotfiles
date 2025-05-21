@@ -17,6 +17,7 @@
       goverlay
       mindustry
       steam
+      superTuxKart
     ];
   };
 }
