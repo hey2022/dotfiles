@@ -4,6 +4,7 @@
     ./browsers
     ./cli
     ./encryption.nix
+    ./games
     ./social
   ];
   home.packages = with pkgs; [

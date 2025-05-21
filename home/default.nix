@@ -7,12 +7,13 @@
 }: {
   imports = [
     ../lib/hm.nix
-    ./services
-    ./programs
-    ./nixgl.nix
-    ./xdg
-    ./shell
     ./font
+    ./nixgl.nix
+    ./profiles
+    ./programs
+    ./services
+    ./shell
+    ./xdg
   ];
   options = {
     home.dotfiles = lib.mkOption {

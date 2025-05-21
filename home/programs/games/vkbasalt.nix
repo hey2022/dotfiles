@@ -1,15 +1,18 @@
 {
   config,
+  lib,
   pkgs,
   ...
 }: {
-  xdg.configFile."vkBasalt/vkBasalt.conf".text = ''
-    effects = LiftGammaGain
+  config = lib.mkIf config.profiles.gaming.enable {
+    xdg.configFile."vkBasalt/vkBasalt.conf".text = ''
+      effects = LiftGammaGain
 
-    reshadeIncludePath = ${config.home.homeDirectory}/.local/share/gamescope/reshade/Shaders
+      reshadeIncludePath = ${config.home.homeDirectory}/.local/share/gamescope/reshade/Shaders
 
-    LiftGammaGain = ${config.home.homeDirectory}/.local/share/gamescope/reshade/Shaders/LiftGammaGain.fx
-  '';
-  home.file.".local/share/vulkan/implicit_layer.d/vkBasalt.json".source = "${pkgs.vkbasalt}/share/vulkan/implicit_layer.d/vkBasalt.json";
-  home.file.".local/lib/libvkbasalt.so".source = "${pkgs.vkbasalt}/lib/libvkbasalt.so";
+      LiftGammaGain = ${config.home.homeDirectory}/.local/share/gamescope/reshade/Shaders/LiftGammaGain.fx
+    '';
+    home.file.".local/share/vulkan/implicit_layer.d/vkBasalt.json".source = "${pkgs.vkbasalt}/share/vulkan/implicit_layer.d/vkBasalt.json";
+    home.file.".local/lib/libvkbasalt.so".source = "${pkgs.vkbasalt}/lib/libvkbasalt.so";
+  };
 }

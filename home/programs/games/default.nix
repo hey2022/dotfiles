@@ -1,4 +1,9 @@
-{pkgs, ...}: {
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   imports = [
     ./minecraft
     ./reshade-shaders
@@ -7,12 +12,11 @@
     ./vkbasalt.nix
     ./wclicker
   ];
-  home.packages = with pkgs; [
-    goverlay
-    mindustry
-    steam
-  ];
-  programs.mangohud = {
-    enable = true;
+  config = lib.mkIf config.profiles.gaming.enable {
+    home.packages = with pkgs; [
+      goverlay
+      mindustry
+      steam
+    ];
   };
 }

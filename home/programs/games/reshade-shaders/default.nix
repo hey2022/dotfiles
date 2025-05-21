@@ -1,5 +1,7 @@
 {
   inputs,
+  config,
+  lib,
   pkgs,
   ...
 }: let
@@ -11,5 +13,7 @@
     ];
   };
 in {
-  home.file.".local/share/gamescope/reshade/Shaders".source = combined;
+  config = lib.mkIf config.profiles.gaming.enable {
+    home.file.".local/share/gamescope/reshade/Shaders".source = combined;
+  };
 }

@@ -1,6 +1,13 @@
-{pkgs, ...}: {
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   imports = [./fjord.nix];
-  home.packages = with pkgs; [
-    cubiomes-viewer
-  ];
+  config = lib.mkIf config.profiles.gaming.enable {
+    home.packages = with pkgs; [
+      cubiomes-viewer
+    ];
+  };
 }
