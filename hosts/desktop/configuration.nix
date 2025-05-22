@@ -23,6 +23,7 @@
   users.users.yiheng = {
     isNormalUser = true;
     extraGroups = [
+      "gamemode"
       "media"
       "networkmanager"
       "uinput"
