@@ -566,11 +566,6 @@ and `defcustom' forms reset their default values."
 (use-package! mlog-mode)
 #+end_src
 
-** Direnv
-#+begin_src emacs-lisp
-(add-hook 'after-init-hook 'envrc-global-mode)
-#+end_src
-
 ** difftastic
 #+begin_src emacs-lisp
 (use-package! difftastic
