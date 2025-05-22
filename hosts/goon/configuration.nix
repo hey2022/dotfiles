@@ -32,4 +32,6 @@
     ];
     shell = pkgs.fish;
   };
+
+  profiles.gaming.enable = true;
 }
