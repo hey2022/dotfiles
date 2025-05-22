@@ -3,7 +3,7 @@
   pkgs,
   ...
 }: {
-  imports = [inputs.stylix.homeManagerModules.stylix ../../common/stylix.nix];
+  imports = [inputs.stylix.homeModules.stylix ../../common/stylix.nix];
 
   stylix = {
     iconTheme = {
