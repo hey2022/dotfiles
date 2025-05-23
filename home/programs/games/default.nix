@@ -16,6 +16,7 @@
     home.packages = with pkgs; [
       goverlay
       mindustry
+      osu-lazer-bin
       steam
       superTuxKart
     ];
