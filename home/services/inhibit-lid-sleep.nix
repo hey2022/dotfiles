@@ -4,7 +4,7 @@
   pkgs,
   ...
 }: let
-  name = "lid-inhibit-lock";
+  name = "inhibit-lid-sleep";
 in {
   config = lib.mkIf config.host.laptop {
     home.packages = [
@@ -24,13 +24,16 @@ in {
     ];
     systemd.user.services.${name} = {
       Unit = {
-        Description = "Inhibit lid lock";
+        Description = "Inhibit lid sleep";
       };
       Service = {
         Type = "simple";
-        ExecStart = ''${pkgs.systemd}/bin/systemd-inhibit --what=handle-lid-switch --why="Inhibit lid lock" ${pkgs.coreutils}/bin/sleep infinity'';
+        ExecStart = ''${lib.getExe' pkgs.systemd "systemd-inhibit"} --what=handle-lid-switch:sleep --why="Inhibit lid sleep" ${lib.getExe' pkgs.coreutils "sleep"} infinity'';
       };
     };
-    wayland.windowManager.sway.extraConfig = lib.mkIf config.wayland.windowManager.sway.enable (lib.mkAfter "bindsym $mod+i exec toggle-${name}");
+    wayland.windowManager = {
+      hyprland.settings.bind = ["$mod, I, exec, toggle-${name}"];
+      sway.extraConfig = lib.mkAfter "bindsym $mod+i exec toggle-${name}";
+    };
   };
 }

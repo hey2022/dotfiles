@@ -147,8 +147,7 @@ in {
           "$mod SHIFT, N, changegroupactive, f"
           "$mod SHIFT, P, changegroupactive, b"
         ]
-      )
-      ++ lib.optional config.host.laptop "$mod, I, exec, toggle-lid-inhibit-lock";
+      );
 
     bindl = [
       # media controls
