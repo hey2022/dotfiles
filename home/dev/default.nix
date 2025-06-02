@@ -4,6 +4,7 @@
     ./cyber-security.nix
     ./emacs
     ./git.nix
+    ./github.nix
     ./gpg.nix
     ./java.nix
     ./jq.nix
