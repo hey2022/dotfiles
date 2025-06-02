@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   programs = {
     git = {
       enable = true;
@@ -20,4 +20,8 @@
       enable = true;
     };
   };
+
+  home.packages = with pkgs; [
+    onefetch
+  ];
 }
