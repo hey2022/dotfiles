@@ -15,7 +15,7 @@
     ./neovim
     ./nix.nix
     ./python.nix
-    ./rust.nix
+    ./rust
     ./sh.nix
   ];
   home.packages = with pkgs; [
