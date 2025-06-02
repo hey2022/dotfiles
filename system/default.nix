@@ -7,6 +7,7 @@
     ./bluetooth.nix
     ./boot
     ./flatpak.nix
+    ./groups.nix
     ./hardware
     ./network
     ./nix-ld.nix

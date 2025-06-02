@@ -1,5 +1,6 @@
 {
   inputs,
+  config,
   pkgs,
   ...
 }: {
@@ -24,13 +25,7 @@
 
   users.users.yiheng = {
     isNormalUser = true;
-    extraGroups = [
-      "gamemode"
-      "networkmanager"
-      "uinput"
-      "wheel"
-      "wireshark"
-    ];
+    extraGroups = config.users.baseGroups;
     shell = pkgs.fish;
   };
 
