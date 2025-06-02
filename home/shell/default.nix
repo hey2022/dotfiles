@@ -24,7 +24,7 @@
     ripgrep
     ripgrep-all
     sd
-    tldr
+    tealdeer
     trashy
     tree
   ];
