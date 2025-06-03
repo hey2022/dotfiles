@@ -11,6 +11,10 @@
           prune = true;
           pruneTags = true;
         };
+        push = {
+          autoSetupRemote = true;
+          followTags = true;
+        };
         rebase = {
           autoSquash = true;
           autoStash = true;
