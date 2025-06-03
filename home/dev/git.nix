@@ -6,6 +6,12 @@
       userName = "Yiheng He";
       extraConfig = {
         init.defaultBranch = "main";
+        diff = {
+          algorithm = "histogram";
+          colorMoved = "plain";
+          mnemonicPrefix = true;
+          renames = true;
+        };
         fetch = {
           all = true;
           prune = true;
