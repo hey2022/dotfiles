@@ -31,6 +31,6 @@
 
   profiles = {
     gaming.enable = false;
-    vm.enable = true;
+    vm.enable = false;
   };
 }
