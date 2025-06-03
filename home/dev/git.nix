@@ -6,7 +6,11 @@
       userName = "Yiheng He";
       extraConfig = {
         init.defaultBranch = "main";
-        fetch.prune = true;
+        fetch = {
+          all = true;
+          prune = true;
+          pruneTags = true;
+        };
         pull.rebase = true;
       };
       signing = {
