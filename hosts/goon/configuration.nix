@@ -29,5 +29,8 @@
     shell = pkgs.fish;
   };
 
-  profiles.gaming.enable = false;
+  profiles = {
+    gaming.enable = false;
+    vm.enable = true;
+  };
 }

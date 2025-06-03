@@ -3,6 +3,7 @@
     type = lib.types.listOf lib.types.str;
     default = [
       "gamemode"
+      "libvirtd"
       "networkmanager"
       "uinput"
       "wheel"
