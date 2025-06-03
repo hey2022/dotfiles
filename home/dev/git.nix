@@ -11,6 +11,11 @@
           prune = true;
           pruneTags = true;
         };
+        rebase = {
+          autoSquash = true;
+          autoStash = true;
+          updateRefs = true;
+        };
         pull.rebase = true;
       };
       signing = {
