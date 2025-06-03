@@ -11,6 +11,9 @@
           prune = true;
           pruneTags = true;
         };
+        merge = {
+          conflictstyle = "zdiff3";
+        };
         push = {
           autoSetupRemote = true;
           followTags = true;
