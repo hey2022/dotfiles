@@ -32,6 +32,7 @@
           autoStash = true;
           updateRefs = true;
         };
+        tag.sort = "version:refname";
       };
       signing = {
         key = null;
