@@ -18,6 +18,7 @@
           prune = true;
           pruneTags = true;
         };
+        help.autocorrect = "prompt";
         init.defaultBranch = "main";
         merge = {
           conflictstyle = "zdiff3";
