@@ -17,6 +17,7 @@
           all = true;
           prune = true;
           pruneTags = true;
+          writeCommitGraph = true;
         };
         help.autocorrect = "prompt";
         init.defaultBranch = "main";
