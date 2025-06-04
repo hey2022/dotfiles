@@ -23,6 +23,7 @@
           pruneTags = true;
           writeCommitGraph = true;
         };
+        gitbutler.signCommits = true;
         help.autocorrect = "prompt";
         init.defaultBranch = "main";
         merge = {
@@ -45,7 +46,7 @@
         tag.sort = "version:refname";
       };
       signing = {
-        key = null;
+        key = "128E09C06F73D6786BB5E5515EA53C75F7BE3EDE";
         signByDefault = true;
       };
       difftastic = {
