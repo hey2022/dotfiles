@@ -1,13 +1,14 @@
 {pkgs, ...}: {
   imports = [
     ./aliases.nix
-    ./zoxide.nix
-    ./starship.nix
-    ./env.nix
     ./direnv.nix
-    ./scripts
+    ./env.nix
     ./fish
+    ./pay-respects.nix
+    ./scripts
+    ./starship.nix
     ./zellij.nix
+    ./zoxide.nix
   ];
 
   home.packages = with pkgs; [
