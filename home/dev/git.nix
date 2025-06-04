@@ -6,6 +6,8 @@
       userName = "Yiheng He";
       extraConfig = {
         init.defaultBranch = "main";
+        branch.sort = "-committerdate";
+        column.ui = "auto";
         diff = {
           algorithm = "histogram";
           colorMoved = "plain";
