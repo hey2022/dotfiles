@@ -5,7 +5,6 @@
       userEmail = "yiheng.he@proton.me";
       userName = "Yiheng He";
       extraConfig = {
-        init.defaultBranch = "main";
         branch.sort = "-committerdate";
         column.ui = "auto";
         diff = {
@@ -19,9 +18,11 @@
           prune = true;
           pruneTags = true;
         };
+        init.defaultBranch = "main";
         merge = {
           conflictstyle = "zdiff3";
         };
+        pull.rebase = true;
         push = {
           autoSetupRemote = true;
           followTags = true;
@@ -31,7 +32,6 @@
           autoStash = true;
           updateRefs = true;
         };
-        pull.rebase = true;
       };
       signing = {
         key = null;
