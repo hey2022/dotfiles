@@ -33,6 +33,10 @@
           autoStash = true;
           updateRefs = true;
         };
+        rerere = {
+          enabled = true;
+          autoupdate = true;
+        };
         tag.sort = "version:refname";
       };
       signing = {
