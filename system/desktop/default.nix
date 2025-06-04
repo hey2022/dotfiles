@@ -9,5 +9,5 @@
     ./wluma.nix
     ./xdg
   ];
-  programs.wluma.enable = true;
+  programs.wluma.enable = false;
 }

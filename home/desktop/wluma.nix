@@ -1,6 +1,6 @@
 {...}: {
   services.wluma = {
-    enable = true;
+    enable = false;
     settings = {
       als.time = {
         thresholds = {
