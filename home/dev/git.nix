@@ -7,6 +7,10 @@
       extraConfig = {
         branch.sort = "-committerdate";
         column.ui = "auto";
+        core = {
+          fsmonitor = true;
+          untrackedcache = true;
+        };
         diff = {
           algorithm = "histogram";
           colorMoved = "plain";
