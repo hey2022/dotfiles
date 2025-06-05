@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ../font
+    ./activitywatch.nix
     ./catppuccin.nix
     ./copyq.nix
     ./fcitx5.nix
