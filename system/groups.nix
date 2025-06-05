@@ -2,6 +2,7 @@
   options.users.baseGroups = lib.mkOption {
     type = lib.types.listOf lib.types.str;
     default = [
+      "adbusers"
       "gamemode"
       "libvirtd"
       "networkmanager"

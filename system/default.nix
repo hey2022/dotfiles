@@ -6,6 +6,7 @@
   imports = [
     ./bluetooth.nix
     ./boot
+    ./dev
     ./flatpak.nix
     ./groups.nix
     ./hardware

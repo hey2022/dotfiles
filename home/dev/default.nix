@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   imports = [
+    ./android.nix
     ./cpp.nix
     ./cyber-security.nix
     ./emacs
