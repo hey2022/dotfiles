@@ -9,6 +9,7 @@
     nix-init
     nix-search-cli
     nix-tree
+    nix-update
     nixd
     nixfmt-rfc-style
     nurl
