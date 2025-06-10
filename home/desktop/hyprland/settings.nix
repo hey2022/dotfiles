@@ -80,6 +80,7 @@
 
       touchpad = {
         natural_scroll = true;
+        tap-and-drag = false;
       };
     };
 
