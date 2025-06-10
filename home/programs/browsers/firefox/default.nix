@@ -25,6 +25,7 @@ in {
       extensions = {
         force = true;
         packages = with pkgs.nur.repos.rycee.firefox-addons; [
+          aw-watcher-web
           firefox-color
           keepassxc-browser
           languagetool
