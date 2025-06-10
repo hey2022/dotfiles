@@ -51,3 +51,5 @@
 (package! catppuccin-theme)
 
 (package! magit-todos)
+
+(package! activity-watch-mode)

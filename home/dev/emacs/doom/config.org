@@ -19,6 +19,13 @@
  "z" #'cd)
 #+end_src
 
+** Activity watch
+#+begin_src emacs-lisp
+(use-package! activity-watch-mode
+  :init
+  (global-activity-watch-mode))
+#+end_src
+
 * User Interface
 ** Font
 Sets font to a custom build of Iosevka using https://typeof.net/Iosevka/customizer
