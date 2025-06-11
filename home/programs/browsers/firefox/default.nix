@@ -30,6 +30,7 @@ in {
           keepassxc-browser
           languagetool
           libredirect
+          redirector
           sidebery
           sponsorblock
           stylus
