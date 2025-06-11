@@ -10,6 +10,7 @@
     nh
     nix-init
     nix-search-cli
+    steam-run-free
     nix-tree
     nix-update
     nixd
