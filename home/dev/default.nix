@@ -19,6 +19,7 @@
     ./python.nix
     ./rust
     ./sh.nix
+    ./typst.nix
   ];
   home.packages = with pkgs; [
     bun
