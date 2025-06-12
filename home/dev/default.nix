@@ -4,13 +4,10 @@
     ./cpp.nix
     ./cyber-security.nix
     ./emacs
-    ./git.nix
-    ./github.nix
     ./gpg.nix
     ./java.nix
     ./jq.nix
     ./json.nix
-    ./jujutsu.nix
     ./julia.nix
     ./lisp.nix
     ./markdown.nix
@@ -20,6 +17,7 @@
     ./rust
     ./sh.nix
     ./typst.nix
+    ./vcs
   ];
   home.packages = with pkgs; [
     bun
