@@ -63,19 +63,20 @@ Sets font to a custom build of Iosevka using https://typeof.net/Iosevka/customiz
   (setq centaur-tabs-set-bar 'right))
 #+end_src
 
-* Org
+* Languages
+** Org
 #+begin_src emacs-lisp
 (after! org
   (setq org-directory "~/org/"))
 #+end_src
 
-** Latex
-*** Latex process
+*** Latex
+**** Latex process
 #+begin_src emacs-lisp
 (after! org
   (setq org-latex-pdf-process '("latexmk -output-directory=%o %f")))
 #+end_src
-*** Latex Preview
+**** Latex Preview
 #+begin_src emacs-lisp
 (use-package! org-latex-preview
   :after org
@@ -106,33 +107,33 @@ Sets font to a custom build of Iosevka using https://typeof.net/Iosevka/customiz
   (setq org-latex-preview-live-debounce 0.25))
 #+end_src
 
-*** Latex Headers
-**** derivative
+**** Latex Headers
+***** derivative
 #+begin_src emacs-lisp
 (after! org
   (add-to-list 'org-latex-packages-alist '("" "derivative" t)))
 #+end_src
 
-**** siunitx
+***** siunitx
 #+begin_src emacs-lisp
 (after! org
   (add-to-list 'org-latex-packages-alist '("per-mode=fraction" "siunitx" t)))
 #+end_src
 
-**** minted
+***** minted
 #+begin_src emacs-lisp
 (after! org
   (add-to-list 'org-latex-packages-alist '("" "minted" t))
   (setq org-latex-listings 'minted))
 #+end_src
-*** Latex Snippets
+**** Latex Snippets
 #+begin_src emacs-lisp
 (after! org
   (add-hook! org-mode (corfu-mode -1))
   (add-hook! org-mode (yas-activate-extra-mode 'latex-mode)))
 #+end_src
-** Org Roam
-*** Org Node
+*** Org Roam
+**** Org Node
 #+begin_src emacs-lisp
 (use-package org-node
   :after org
@@ -160,7 +161,7 @@ Sets font to a custom build of Iosevka using https://typeof.net/Iosevka/customiz
   (setq org-mem-roamy-db-mode t))
 #+end_src
 
-*** Insert link at word
+**** Insert link at word
 #+begin_src emacs-lisp
 (defun select-word-at-point ()
   "Select the word at point."
@@ -183,7 +184,7 @@ Sets font to a custom build of Iosevka using https://typeof.net/Iosevka/customiz
   (org-roam-node-insert))
 #+end_src
 
-*** Capture Templates
+**** Capture Templates
 Setup Org Roam capture templates.
 #+begin_src emacs-lisp
 (defun org-roam-template-select-tags ()
@@ -207,7 +208,7 @@ Setup Org Roam capture templates.
   (setq org-roam-extract-new-file-path "${slug}.org"))
 #+end_src
 
-*** Org Roam UI
+**** Org Roam UI
 #+begin_src emacs-lisp
 (use-package! websocket
   :after org-roam)
@@ -223,7 +224,7 @@ Setup Org Roam capture templates.
   (org-roam-ui-open-on-start t))
 #+end_src
 
-*** Org Roam Export to Publish
+**** Org Roam Export to Publish
 #+begin_src emacs-lisp
 (defun org-roam-get-files-with-tag (&optional tags)
   "Return a list of org-roam files that contain tags in TAGS.
@@ -252,20 +253,20 @@ If no tags are provided, copy all files."
     (org-roam-db-sync)))
 #+end_src
 
-** Org Agenda
+*** Org Agenda
 #+begin_src emacs-lisp
 (after! org-agenda
  (setq org-agenda-files '("~/org/agenda.org" "~/school/school.org")))
 #+end_src
 
-*** Diary
+**** Diary
 #+begin_src emacs-lisp
 (after! org-agenda
   (setq diary-file "~/org/diary")
   (setq org-agenda-include-diary t))
 #+end_src
 
-*** Timeblock
+**** Timeblock
 #+begin_src emacs-lisp
 (use-package! org-timeblock
   :config
@@ -287,7 +288,7 @@ If no tags are provided, copy all files."
         ("a b" . org-timeblock)))
 #+end_src
 
-*** Org Super Agenda
+**** Org Super Agenda
 #+begin_src emacs-lisp
 (use-package! org-super-agenda
   :after org-agenda
@@ -307,14 +308,14 @@ If no tags are provided, copy all files."
           (:name "Habits"
            :habit t))))
 #+end_src
-*** Clock report
+**** Clock report
 #+begin_src emacs-lisp
 (after! org-agenda
   (setq org-agenda-start-with-clockreport-mode t)
   (setq org-agenda-clockreport-parameter-plist '(:link t :tags t :fileskip0 t)))
 #+end_src
 
-** Org Auto Export
+*** Org Auto Export
 #+begin_src emacs-lisp
 (after! org
   (defun org-export-on-save (export-method)
@@ -338,7 +339,7 @@ If no tags are provided, copy all files."
     (org-export-on-save 'org-html-export-to-html)))
 #+end_src
 
-** org-download
+*** org-download
 #+begin_src emacs-lisp
 (use-package! org-download
   :after org
@@ -351,19 +352,19 @@ If no tags are provided, copy all files."
   (setq org-download-abbreviate-filename-function #'file-relative-name))
 #+end_src
 
-** Org modern
+*** Org modern
 #+begin_src emacs-lisp
 (after! org
   (setq org-pretty-entities nil))
 #+end_src
 
-** Smartparens
+*** Smartparens
 #+begin_src emacs-lisp
 (after! org
   (sp-local-pair 'org-mode "\\[" "\\]"))
 #+end_src
 
-** Transclusion
+*** Transclusion
 #+begin_src emacs-lisp
 (use-package! org-transclusion
   :after org
@@ -380,12 +381,12 @@ If no tags are provided, copy all files."
         (remove '(keyword "transclude") org-roam-db-extra-links-exclude-keys)))
 #+end_src
 
-** Org Habit
+*** Org Habit
 #+begin_src emacs-lisp
 (add-to-list 'org-modules 'org-habit)
 #+end_src
 
-** Journal
+*** Journal
 #+begin_src emacs-lisp
 (use-package! org-journal
   :init
@@ -396,13 +397,13 @@ If no tags are provided, copy all files."
   (setq org-journal-encrypt-journal t))
 #+end_src
 
-** Auto Tangle
+*** Auto Tangle
 #+begin_src emacs-lisp
 (use-package org-auto-tangle
   :hook (org-mode . org-auto-tangle-mode))
 #+end_src
 
-** Org Capture Templates
+*** Org Capture Templates
 #+begin_src emacs-lisp
 (after! org
   (add-to-list 'org-capture-templates '("s" "School Todo" entry
@@ -410,7 +411,7 @@ If no tags are provided, copy all files."
                                         "* TODO %? %^G\nDEADLINE: %^{Deadline}t\n%^{EFFORT}p\n%i")))
 #+end_src
 
-** Anki-Editor
+*** Anki-Editor
 #+begin_src emacs-lisp
 (use-package! anki-editor
   :after org
@@ -449,12 +450,12 @@ If no tags are provided, copy all files."
     (message "Finished pushing notes")))
 #+end_src
 
-** Clock
+*** Clock
 #+begin_src emacs-lisp
 (after! org-clock
   (setq org-clock-sound "~/.dotfiles/assets/audio/alarm.wav"))
 #+end_src
-** valign
+*** valign
 #+begin_src emacs-lisp
 (use-package! valign
   :hook (org-mode-hook . valign-mode)
@@ -462,12 +463,39 @@ If no tags are provided, copy all files."
   (setq org-modern-table nil)
   (setq valign-fancy-bar t))
 #+end_src
-
-* Latex
-** Latex Compile Flags
+** Latex
+*** Latex Compile Flags
 Add shell-escape flag
 #+begin_src emacs-lisp
 (setq TeX-command-extra-options "-shell-escape")
+#+end_src
+
+** Typst
+*** Typst TS mode
+#+begin_src emacs-lisp
+(use-package! typst-ts-mode
+  :custom
+  (typst-ts-watch-options "--open")
+  (typst-ts-mode-grammar-location (expand-file-name "tree-sitter/libtree-sitter-typst.so" user-emacs-directory))
+  (typst-ts-mode-enable-raw-blocks-highlight t))
+#+end_src
+
+*** Typst LSP
+#+begin_src emacs-lisp
+(after! (typst-ts-mode lsp-mode)
+  (add-to-list 'lsp-language-id-configuration '(typst-ts-mode . "typst"))
+  (lsp-register-client
+   (make-lsp-client
+    :new-connection (lsp-stdio-connection "tinymist")
+    :activation-fn (lsp-activate-on "typst")
+    :server-id 'tinymist)))
+#+end_src
+
+*** Typst preview
+#+begin_src emacs-lisp
+(use-package! typst-preview
+  :custom
+  (typst-preview-invert-colors "never"))
 #+end_src
 
 * Writing
