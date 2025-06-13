@@ -10,12 +10,13 @@
     nh
     nix-init
     nix-search-cli
-    steam-run-free
     nix-tree
     nix-update
     nixd
     nixfmt-rfc-style
+    nixpkgs-review
     nurl
+    steam-run-free
   ];
   programs.nix-index-database.comma.enable = true;
   home.sessionVariables = {
