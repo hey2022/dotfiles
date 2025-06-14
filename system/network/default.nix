@@ -2,6 +2,7 @@
   imports = [
     ./dns.nix
     ./nm-applet.nix
+    ./proxy
     ./wireshark.nix
   ];
   networking = {

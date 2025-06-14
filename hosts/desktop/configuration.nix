@@ -12,7 +12,6 @@
     ../../system/desktop
     ../../system/desktop/hyprland.nix
     ../../system/services/homelab.nix
-    ../../system/network/mullvad.nix
   ];
 
   networking.hostName = "desktop";
