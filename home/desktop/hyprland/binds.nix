@@ -30,6 +30,7 @@ in {
         "$mod SHIFT, E, exec, uwsm stop"
         "$mod, F, fullscreen,"
         "$mod, V, togglefloating,"
+        "$mod SHIFT, P, pin"
 
         # move focus
         "$mod, H, ${hy3Prefix}movefocus, l"
