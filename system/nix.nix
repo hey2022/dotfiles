@@ -1,6 +1,7 @@
 {...}: {
   nix = {
     settings = {
+      download-buffer-size = 1073741824;
       keep-going = true;
       experimental-features = [
         "nix-command"
