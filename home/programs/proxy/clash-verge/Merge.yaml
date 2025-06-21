@@ -1,0 +1,8 @@
+profile:
+  store-selected: true
+dns:
+  use-system-hosts: false
+prepend:
+  - "IP-CIDR,100.64.0.0/10,DIRECT"
+append: []
+delete: []

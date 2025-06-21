@@ -1,5 +1,5 @@
-{pkgs, ...}: {
-  home.packages = with pkgs; [
-    clash-verge-rev
+{...}: {
+  imports = [
+    ./clash-verge
   ];
 }
