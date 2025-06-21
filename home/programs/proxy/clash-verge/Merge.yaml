@@ -4,5 +4,6 @@ dns:
   use-system-hosts: false
 prepend:
   - "IP-CIDR,100.64.0.0/10,DIRECT"
+  - "DOMAIN-SUFFIX,hey2022.duckdns.org,DIRECT"
 append: []
 delete: []
