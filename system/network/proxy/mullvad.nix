@@ -5,7 +5,7 @@
   };
   networking.nftables.ruleset = ''
     define EXCLUDED_IPS = { 100.64.0.0/10 }
-    define CADDY_PORTS = { 80, 443 }
+    define EXCLUDED_PORTS = { 80, 443 }
 
     table inet excludeTraffic {
       chain excludeOutgoing {
@@ -14,11 +14,11 @@
       }
       chain allowIncoming {
         type filter hook input priority -100; policy accept;
-        tcp dport $CADDY_PORTS ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
+        tcp dport $EXCLUDED_PORTS ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
       }
       chain allowOutgoing {
         type route hook output priority -100; policy accept;
-        tcp sport $CADDY_PORTS ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
+        tcp sport $EXCLUDED_PORTS ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
       }
     }
   '';
