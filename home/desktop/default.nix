@@ -16,5 +16,6 @@
   ];
   home.packages = with pkgs; [
     desktop-file-utils
+    localsend
   ];
 }
