@@ -8,7 +8,7 @@
     ../../dev/jq.nix
     ../../programs/music.nix
     ../brightness.nix
-    ../file-manager/dolphin.nix
+    ../file-manager/cosmic-files.nix
     ../hyprlock
     ../launchers/fuzzel.nix
     ../pipewire.nix

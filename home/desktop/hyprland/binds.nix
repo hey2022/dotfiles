@@ -1,8 +1,4 @@
-{
-  config,
-  lib,
-  ...
-}: let
+{config, ...}: let
   toggle = program: "pkill ${program} || uwsm-app -- ${program}";
   runOnce = program: "pgrep ${program} || uwsm-app -- ${program}";
   hy3 = config.wayland.windowManager.hyprland.hy3;
@@ -22,7 +18,7 @@ in {
         # programs
         "$mod, Return, exec, uwsm-app -- $term"
         "$mod SHIFT, Return, exec, uwsm-app -- emacsclient -c"
-        "$mod, E, exec, uwsm-app -- dolphin"
+        "$mod, E, exec, uwsm-app -- cosmic-files"
 
         # compositor commands
         "$mod, Q, ${hy3Prefix}killactive,"
