@@ -1,9 +1,10 @@
 {
   config,
   pkgs,
+  pkgs-stable,
   ...
 }: let
-  fonts = import ../common/fonts.nix {inherit pkgs;};
+  fonts = import ../common/fonts.nix {pkgs = pkgs-stable;};
 in {
   stylix = {
     enable = true;
