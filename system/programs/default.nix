@@ -1,5 +1,8 @@
 {pkgs, ...}: {
-  imports = [./productivity];
+  imports = [
+    ./localsend.nix
+    ./productivity
+  ];
   environment.systemPackages = with pkgs; [
     home-manager
     fastfetch
