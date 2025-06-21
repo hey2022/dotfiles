@@ -35,7 +35,6 @@
     };
     home.packages = [
       inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
-      pkgs.mullvad
     ];
     home.sessionVariables.NIXOS_OZONE_WL = "1";
   };

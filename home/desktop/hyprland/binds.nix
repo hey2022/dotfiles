@@ -117,8 +117,8 @@ in {
         "$mod CTRL SHIFT, bracketright, movecurrentworkspacetomonitor, r"
 
         # mullvad tunnel
-        "$mod, T, exec, hyprctl activewindow -j | jq '.pid' | xargs mullvad split-tunnel add"
-        "$mod SHIFT, T, exec, hyprctl activewindow -j | jq '.pid' | xargs mullvad split-tunnel delete"
+        # "$mod, T, exec, hyprctl activewindow -j | jq '.pid' | xargs mullvad split-tunnel add"
+        # "$mod SHIFT, T, exec, hyprctl activewindow -j | jq '.pid' | xargs mullvad split-tunnel delete"
 
         # wallpaper
         "$mod, w, exec, ${toggle "waytrogen"}"
