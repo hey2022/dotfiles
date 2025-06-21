@@ -13,7 +13,6 @@
     ./programs
     ./services
     ./shell
-    ./xdg
   ];
   options = {
     home.dotfiles = lib.mkOption {
