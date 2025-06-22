@@ -6,6 +6,9 @@
     };
     # https://github.com/NixOS/nixpkgs/issues/287189
     kernelPackages = pkgs.linuxPackages_zen;
-    kernel.sysctl."kernel.sysrq" = 1;
+    kernel.sysctl = {
+      "kernel.sysrq" = 1;
+      "vm.swappiness" = 10;
+    };
   };
 }
