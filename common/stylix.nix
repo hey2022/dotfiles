@@ -10,7 +10,7 @@ in {
     enable = true;
     autoEnable = false;
     polarity = "dark";
-    # https://github.com/nix-community/home-manager/issues/5743
+    # HACK: https://github.com/nix-community/home-manager/issues/5743
     image = builtins.path {path = ../assets/wallpapers/alena-aenami-serenity-1k.jpg;};
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
     fonts = {

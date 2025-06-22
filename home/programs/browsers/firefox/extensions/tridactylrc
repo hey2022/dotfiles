@@ -22,7 +22,7 @@ blacklistadd monkeytype.com
 blacklistadd tybayn.github.io/phasmo-cheat-sheet
 
 " noiframe
-" https://github.com/tridactyl/tridactyl/issues/722
+" HACK: https://github.com/tridactyl/tridactyl/issues/722
 seturl codeforces.com noiframe true
 
 " superignore

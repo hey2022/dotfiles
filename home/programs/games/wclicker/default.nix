@@ -14,7 +14,7 @@
     ];
     wayland.windowManager.sway.extraConfig = lib.mkIf config.wayland.windowManager.sway.enable (lib.mkAfter ''
       mode "game" {
-          # https://www.github.com/swaywm/sway/issues/5333
+          # TODO: Use when mouse bindsym works https://www.github.com/swaywm/sway/issues/5333
           # bindsym --whole-window --no-repeat button2 exec wclicker 20
           # bindsym --whole-window --release --no-repeat button2 exec pkill wclicker
 
