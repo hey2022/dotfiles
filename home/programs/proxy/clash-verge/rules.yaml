@@ -1,0 +1,4 @@
+prepend:
+  - "DOMAIN-SUFFIX,hey2022.duckdns.org,DIRECT"
+append: []
+delete: []
