@@ -13,6 +13,7 @@
     ./udiskie.nix
     ./wallpaper.nix
     ./wluma.nix
+    ./xdg
   ];
   home.packages = with pkgs; [
     desktop-file-utils
