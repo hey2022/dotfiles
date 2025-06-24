@@ -497,7 +497,9 @@ Add shell-escape flag
 #+begin_src emacs-lisp
 (use-package! typst-preview
   :custom
-  (typst-preview-invert-colors "never"))
+  (typst-preview-invert-colors "never")
+  :hook
+  (typst-ts-mode . typst-preview-mode))
 #+end_src
 
 * Writing
