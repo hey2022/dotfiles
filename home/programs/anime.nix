@@ -1,10 +1,13 @@
-{pkgs, ...}: {
-  imports = [
-    ./torrent.nix
-    ./media
-  ];
-  home.packages = with pkgs; [
-    ani-cli
-    trackma
-  ];
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+  config = lib.mkIf config.profiles.entertainment.anime.enable {
+    home.packages = with pkgs; [
+      ani-cli
+      trackma
+    ];
+  };
 }
