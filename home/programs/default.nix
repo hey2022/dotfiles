@@ -1,11 +1,16 @@
 {pkgs, ...}: {
   imports = [
     ./anime.nix
+    ./anki.nix
     ./browsers
+    ./calculator.nix
     ./cli
+    ./dictionary.nix
+    ./email.nix
     ./encryption.nix
     ./games
     ./media
+    ./productivity
     ./proxy
     ./social
     ./torrent.nix

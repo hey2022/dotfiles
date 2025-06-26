@@ -1,10 +1,16 @@
-{pkgs, ...}: {
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   imports = [
     ./zathura.nix
   ];
-  home.packages = with pkgs; [
-    kdePackages.okular
-    ocrmypdf
-    poppler_utils
-  ];
+  home.packages = with pkgs;
+    lib.mkIf config.profiles.productivity.enable [
+      kdePackages.okular
+      ocrmypdf
+      poppler_utils
+    ];
 }

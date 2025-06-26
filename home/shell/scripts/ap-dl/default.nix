@@ -1,5 +1,10 @@
-{pkgs, ...}: {
-  home.packages = [
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+  home.packages = lib.mkIf config.profiles.education.enable [
     (pkgs.writeShellApplication {
       name = "ap-dl";
       runtimeInputs = with pkgs; [

@@ -1,20 +1,22 @@
 {
   inputs,
+  config,
+  lib,
   pkgs,
   ...
 }: {
-  # TODO: refactor this into a proper profile
-  imports = [
-    ../programs/email.nix
-    ../programs/productivity
-    ../programs/dictionary.nix
-    ../programs/anki.nix
-    ../programs/calculator.nix
-    ../shell/scripts/ap-dl
-  ];
-  home.packages = with pkgs; [
-    inputs.tls-xb.packages.${pkgs.system}.default
-    teams-for-linux
-    zotero
-  ];
+  options = {
+    profiles.education.enable = lib.mkOption {
+      type = lib.types.bool;
+      default = true;
+      description = "Weather to enable education profile";
+    };
+  };
+  config = lib.mkIf config.profiles.education.enable {
+    home.packages = with pkgs; [
+      inputs.tls-xb.packages.${pkgs.system}.default
+      teams-for-linux
+      zotero
+    ];
+  };
 }

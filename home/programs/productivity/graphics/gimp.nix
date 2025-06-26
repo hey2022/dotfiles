@@ -1,3 +1,8 @@
-{pkgs, ...}: {
-  home.packages = [pkgs.gimp];
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+  home.packages = lib.mkIf config.profiles.productivity.enable [pkgs.gimp];
 }
