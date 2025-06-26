@@ -34,6 +34,10 @@
       };
     };
 
+    debug = {
+      full_cm_proto = true;
+    };
+
     animations = {
       enabled = true;
       bezier = [
