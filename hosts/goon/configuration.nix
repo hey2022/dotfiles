@@ -29,7 +29,7 @@
   };
 
   profiles = {
-    gaming.enable = true;
+    gaming.enable = false;
     vm.enable = false;
   };
 }
