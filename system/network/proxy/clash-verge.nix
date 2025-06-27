@@ -4,7 +4,7 @@
     serviceMode = false;
     tunMode = true;
   };
-  # HACK: https://github.com/NixOS/nixpkgs/issues/420460
+  # HACK: https://nixpk.gs/pr-tracker.html?pr=420530
   systemd.services.clash-verge = {
     enable = true;
     description = "Clash Verge Service Mode";
