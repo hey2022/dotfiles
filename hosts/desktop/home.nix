@@ -10,5 +10,5 @@
   home.username = "yiheng";
   home.homeDirectory = "/home/yiheng";
 
-  profiles.gaming.enable = true;
+  profiles.gaming.enable = false;
 }
