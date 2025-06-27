@@ -1,6 +1,8 @@
 {
+  inputs,
   config,
   lib,
+  pkgs,
   ...
 }: {
   imports = [
@@ -42,5 +44,13 @@
   };
   config = {
     system.stateVersion = "25.05";
+    _module.args.pkgs-stable = import inputs.nixpkgs-stable {
+      inherit (pkgs.stdenv.hostPlatform) system;
+      inherit (config.nixpkgs) config;
+    };
+    _module.args.pkgs-git = import inputs.nixpkgs-git {
+      inherit (pkgs.stdenv.hostPlatform) system;
+      inherit (config.nixpkgs) config;
+    };
   };
 }
