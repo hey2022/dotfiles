@@ -6,6 +6,7 @@
     pandas
     scikit-learn
     scipy
+    seaborn
   ];
 in {
   home.packages = with pkgs; [
