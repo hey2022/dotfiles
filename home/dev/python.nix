@@ -1,5 +1,6 @@
 {pkgs, ...}: let
   datascience = with pkgs.python3Packages; [
+    jupyterlab
     matplotlib
     numpy
     pandas
