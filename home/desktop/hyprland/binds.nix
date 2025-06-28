@@ -67,7 +67,6 @@ in {
 
         # scratchpad
         "$mod, TAB, togglespecialworkspace, scratchpad"
-        "$mod SHIFT, TAB, ${hy3Prefix}movetoworkspace, special:scratchpad"
 
         # Scroll through existing workspaces
         "$mod, mouse_down, workspace, e-1"
