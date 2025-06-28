@@ -1,0 +1,84 @@
+From e25da8d009d7d0af34b7a9f1cf1e5e151e289582 Mon Sep 17 00:00:00 2001
+From: GideonBear <87426140+GideonBear@users.noreply.github.com>
+Date: Sat, 28 Jun 2025 14:36:46 +0200
+Subject: [PATCH] Add doom.aot option
+
+---
+ config.example.toml |  6 ++++++
+ src/config.rs       | 17 +++++++++++++++++
+ src/steps/emacs.rs  |  6 +++++-
+ 3 files changed, 28 insertions(+), 1 deletion(-)
+
+diff --git a/config.example.toml b/config.example.toml
+index 7c0db353..ee6939d9 100644
+--- a/config.example.toml
++++ b/config.example.toml
+@@ -325,3 +325,9 @@
+ # extensions should be updated for.
+ # (default: this won't be set by default)
+ # profile = ""
++
++[doom]
++# If this is set to true, the `--aot` flag is added to `doom upgrade`,
++# which enables ahead-of-time native compilation of packages.
++# (default: false)
++# aot = true
+diff --git a/src/config.rs b/src/config.rs
+index 237739b3..b6cd1a8c 100644
+--- a/src/config.rs
++++ b/src/config.rs
+@@ -499,6 +499,12 @@ pub struct VscodeConfig {
+     profile: Option<String>,
+ }
+ 
++#[derive(Deserialize, Default, Debug, Merge)]
++#[serde(deny_unknown_fields)]
++pub struct DoomConfig {
++    aot: Option<bool>,
++}
++
+ #[derive(Deserialize, Default, Debug, Merge)]
+ #[serde(deny_unknown_fields)]
+ /// Configuration file
+@@ -574,6 +580,9 @@ pub struct ConfigFile {
+ 
+     #[merge(strategy = crate::utils::merge_strategies::inner_merge_opt)]
+     vscode: Option<VscodeConfig>,
++
++    #[merge(strategy = crate::utils::merge_strategies::inner_merge_opt)]
++    doom: Option<DoomConfig>,
+ }
+ 
+ fn config_directory() -> PathBuf {
+@@ -1760,6 +1769,14 @@ impl Config {
+             Some(profile.as_str())
+         }
+     }
++
++    pub fn doom_aot(&self) -> bool {
++        self.config_file
++            .doom
++            .as_ref()
++            .and_then(|doom| doom.aot)
++            .unwrap_or(false)
++    }
+ }
+ 
+ #[cfg(test)]
+diff --git a/src/steps/emacs.rs b/src/steps/emacs.rs
+index 2567dc0e..ae166c8f 100644
+--- a/src/steps/emacs.rs
++++ b/src/steps/emacs.rs
+@@ -65,7 +65,11 @@ impl Emacs {
+             command.arg("--force");
+         }
+ 
+-        command.args(["upgrade"]);
++        command.arg("upgrade");
++
++        if ctx.config().doom_aot() {
++            command.arg("--aot");
++        }
+ 
+         command.status_checked()
+     }

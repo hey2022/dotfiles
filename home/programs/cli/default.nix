@@ -5,7 +5,7 @@
     ./beets.nix
     ./fzf.nix
     ./network.nix
-    ./topgrade.nix
+    ./topgrade
     ./yazi.nix
     ./yt-dlp.nix
     ./zip.nix
