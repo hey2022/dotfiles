@@ -13,6 +13,7 @@
   config = lib.mkIf config.profiles.productivity.enable {
     programs = {
       obs-studio.enable = true;
+      pandoc.enable = true;
       zathura.enable = true;
     };
   };
