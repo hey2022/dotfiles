@@ -10,5 +10,10 @@
   home.username = "yiheng";
   home.homeDirectory = "/home/yiheng";
 
-  profiles.gaming.enable = false;
+  profiles = {
+    gaming.enable = false;
+    entertainment = {
+      anime.enable = true;
+    };
+  };
 }
