@@ -9,5 +9,10 @@
   home.homeDirectory = "/home/yiheng";
   host.laptop = true;
 
-  profiles.gaming.enable = false;
+  profiles = {
+    gaming.enable = false;
+    entertainment = {
+      anime.enable = true;
+    };
+  };
 }
