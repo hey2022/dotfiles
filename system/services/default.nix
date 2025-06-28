@@ -6,6 +6,7 @@
     ./kanata.nix
     ./minecraft.nix
     ./pipewire.nix
+    ./printing.nix
     ./prometheus
     ./ssh.nix
     ./syncthing.nix
