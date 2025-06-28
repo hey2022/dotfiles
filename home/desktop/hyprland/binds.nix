@@ -24,7 +24,7 @@ in {
         "$mod, Q, ${hy3Prefix}killactive,"
         "$mod SHIFT, Q, exec, hyprctl activewindow -j | jq '.pid' | xargs kill -9"
         "$mod SHIFT, E, exec, uwsm stop"
-        "$mod, F, fullscreen,"
+        "$mod SHIFT, F, fullscreen,"
         "$mod, V, togglefloating,"
         "$mod SHIFT, P, pin"
 

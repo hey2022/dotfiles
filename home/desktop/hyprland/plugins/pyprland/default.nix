@@ -12,6 +12,7 @@
       ];
       bind = [
         "$mod, B, exec, pypr fetch_client_menu"
+        "$mod, F, exec, pypr layout_center toggle"
       ];
     };
     xdg.configFile."hypr/pyprland.toml".source = config.lib.hm.mkFlakeSymlink ./pyprland.toml;

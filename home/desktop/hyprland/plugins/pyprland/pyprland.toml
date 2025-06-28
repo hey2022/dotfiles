@@ -1,4 +1,5 @@
 [pyprland]
 plugins = [
     "fetch_client_menu",
+    "layout_center",
 ]
