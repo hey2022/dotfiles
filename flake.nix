@@ -60,6 +60,14 @@
       url = "github:unmojang/FjordLauncher";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    zen-browser-catppuccin = {
+      url = "github:catppuccin/zen-browser";
+      flake = false;
+    };
     firefox-ui-fix = {
       url = "github:black7375/Firefox-UI-Fix";
       flake = false;

@@ -442,6 +442,27 @@
         "type": "github"
       }
     },
+    "home-manager_3": {
+      "inputs": {
+        "nixpkgs": [
+          "zen-browser",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1743604125,
+        "narHash": "sha256-ZD61DNbsBt1mQbinAaaEqKaJk2RFo9R/j+eYWeGMx7A=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "180fd43eea296e62ae68e079fcf56aba268b9a1a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
     "hyprland-contrib": {
       "inputs": {
         "nixpkgs": [
@@ -816,7 +837,9 @@
         "reshade-shaders": "reshade-shaders",
         "sops-nix": "sops-nix",
         "stylix": "stylix",
-        "tls-xb": "tls-xb"
+        "tls-xb": "tls-xb",
+        "zen-browser": "zen-browser",
+        "zen-browser-catppuccin": "zen-browser-catppuccin"
       }
     },
     "rust-overlay": {
@@ -1084,6 +1107,43 @@
       "original": {
         "owner": "numtide",
         "repo": "treefmt-nix",
+        "type": "github"
+      }
+    },
+    "zen-browser": {
+      "inputs": {
+        "home-manager": "home-manager_3",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1751127508,
+        "narHash": "sha256-fU2FQKNxO5gkADRFMS2S54M/LKsTewMpGRm+KJRLdFo=",
+        "owner": "0xc000022070",
+        "repo": "zen-browser-flake",
+        "rev": "5962b5db7babbb1607dcd2d1d6db9ab540cc108d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "0xc000022070",
+        "repo": "zen-browser-flake",
+        "type": "github"
+      }
+    },
+    "zen-browser-catppuccin": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1750430416,
+        "narHash": "sha256-cccLZSrUQ9wxmXnEntbQAfGDFB9gQmIM9pa9BXce1Xo=",
+        "owner": "catppuccin",
+        "repo": "zen-browser",
+        "rev": "e171e2a1d94ed70f39ff0ac452aef335f8b233c9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "catppuccin",
+        "repo": "zen-browser",
         "type": "github"
       }
     }
