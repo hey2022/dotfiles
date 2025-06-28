@@ -51,11 +51,6 @@
 (package! catppuccin-theme)
 
 (package! magit-todos)
-;; HACK: https://github.com/doomemacs/doomemacs/issues/8421
-(package! glab)
-(package! gtea)
-(package! gogs)
-(package! buck)
 
 (package! activity-watch-mode)
 
