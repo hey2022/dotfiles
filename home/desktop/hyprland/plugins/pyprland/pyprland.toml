@@ -1,2 +1,4 @@
 [pyprland]
-plugins = []
+plugins = [
+    "fetch_client_menu",
+]
