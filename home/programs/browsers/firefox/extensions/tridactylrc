@@ -18,6 +18,7 @@ bind N findnext -1
 bind ,<Space> nohlsearch
 
 " blacklist
+blacklistadd localhost:8888
 blacklistadd monkeytype.com
 blacklistadd tybayn.github.io/phasmo-cheat-sheet
 
