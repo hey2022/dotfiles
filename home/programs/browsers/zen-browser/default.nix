@@ -11,6 +11,9 @@ in {
   ];
   programs.zen-browser = {
     enable = true;
+    policies = {
+      OfferToSaveLogins = false;
+    };
     profiles.${profile} = {
       isDefault = true;
       userChrome = builtins.readFile "${inputs.zen-browser-catppuccin}/themes/Mocha/Mauve/userChrome.css";
