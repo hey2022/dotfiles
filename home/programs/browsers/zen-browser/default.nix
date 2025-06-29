@@ -33,6 +33,17 @@ in {
           zotero-connector
         ];
       };
+      search = {
+        force = true;
+        default = "Unduck";
+        privateDefault = "Unduck";
+        engines = {
+          Unduck = {
+            urls = [{template = "https://s.dunkirk.sh?q={searchTerms}";}];
+            definedAliases = ["@!"];
+          };
+        };
+      };
     };
   };
   home.file = {
