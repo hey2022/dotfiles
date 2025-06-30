@@ -2,6 +2,7 @@
 sanitise tridactyllocal
 
 " settings
+set theme midnight
 set smoothscroll true
 set editorcmd emacsclient -c
 
