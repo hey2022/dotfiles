@@ -6,6 +6,7 @@
     ./copyq.nix
     ./fcitx5.nix
     ./gtk.nix
+    ./hyprlock
     ./icons.nix
     ./imv.nix
     ./qt.nix

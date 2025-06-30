@@ -5,7 +5,6 @@
   ...
 }: {
   programs.hyprlock = {
-    enable = true;
     package =
       if config.home.isNixOS
       then pkgs.hyprlock

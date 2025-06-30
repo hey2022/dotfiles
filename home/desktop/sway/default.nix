@@ -6,7 +6,6 @@
 }: {
   imports = [
     ../brightness.nix
-    ../hyprlock
     ../swaync.nix
     ../vnc
     ../pipewire.nix
@@ -25,5 +24,8 @@
     package = config.lib.nixGL.wrap pkgs.sway;
     config = lib.mkForce null;
     extraConfig = builtins.readFile ./config;
+  };
+  programs = {
+    hyprlock.enable = true;
   };
 }

@@ -9,7 +9,6 @@
     ../../programs/music.nix
     ../brightness.nix
     ../file-manager/cosmic-files.nix
-    ../hyprlock
     ../launchers/fuzzel.nix
     ../pipewire.nix
     ../swaync.nix
@@ -37,5 +36,8 @@
       inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
     ];
     home.sessionVariables.NIXOS_OZONE_WL = "1";
+    programs = {
+      hyprlock.enable = true;
+    };
   };
 }
