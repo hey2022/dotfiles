@@ -7,7 +7,6 @@
     ./fcitx5.nix
     ./gammastep.nix
     ./gtk.nix
-    ./hyprlock
     ./icons.nix
     ./imv.nix
     ./launchers

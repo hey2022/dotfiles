@@ -12,6 +12,7 @@
     ../wayland
     ./binds.nix
     ./hypridle.nix
+    ./hyprlock
     ./plugins
     ./rules.nix
     ./settings.nix
