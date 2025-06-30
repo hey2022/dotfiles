@@ -7,7 +7,6 @@
   imports = [
     ../../dev/jq.nix
     ../../programs/music.nix
-    ../brightness.nix
     ../file-manager/cosmic-files.nix
     ../vnc
     ../wayland
@@ -38,6 +37,7 @@
       wlogout.enable = true;
     };
     services = {
+      gammastep.enable = true;
       swaync.enable = true;
     };
   };

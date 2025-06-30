@@ -5,7 +5,6 @@
   ...
 }: {
   imports = [
-    ../brightness.nix
     ../vnc
     ./wkill.nix
     ../file-manager/pcmanfm.nix
@@ -27,6 +26,7 @@
     wezterm.enable = true;
   };
   services = {
+    gammastep.enable = true;
     swaync.enable = true;
   };
 }

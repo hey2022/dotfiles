@@ -5,6 +5,7 @@
     ./catppuccin.nix
     ./copyq.nix
     ./fcitx5.nix
+    ./gammastep.nix
     ./gtk.nix
     ./hyprlock
     ./icons.nix
