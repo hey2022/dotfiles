@@ -9,7 +9,6 @@
     ../vnc
     ./wkill.nix
     ../file-manager/pcmanfm.nix
-    ../launchers/fuzzel.nix
     ../wayland
   ];
 
@@ -22,6 +21,7 @@
   };
   programs = {
     foot.enable = true;
+    fuzzel.enable = true;
     hyprlock.enable = true;
     waybar.enable = true;
     wezterm.enable = true;

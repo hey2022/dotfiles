@@ -1,0 +1,6 @@
+{...}: {
+  imports = [
+    ./fuzzel.nix
+    ./rofi
+  ];
+}

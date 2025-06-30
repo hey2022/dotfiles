@@ -9,6 +9,7 @@
     ./hyprlock
     ./icons.nix
     ./imv.nix
+    ./launchers
     ./pipewire.nix
     ./qt.nix
     ./stylix.nix

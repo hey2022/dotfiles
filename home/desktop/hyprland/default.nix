@@ -9,7 +9,6 @@
     ../../programs/music.nix
     ../brightness.nix
     ../file-manager/cosmic-files.nix
-    ../launchers/fuzzel.nix
     ../vnc
     ../wayland
     ./binds.nix
@@ -32,6 +31,7 @@
     ];
     home.sessionVariables.NIXOS_OZONE_WL = "1";
     programs = {
+      fuzzel.enable = true;
       ghostty.enable = true;
       hyprlock.enable = true;
       waybar.enable = true;
