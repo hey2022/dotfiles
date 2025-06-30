@@ -1,5 +1,0 @@
-{...}: {
-  programs.wlogout = {
-    enable = true;
-  };
-}

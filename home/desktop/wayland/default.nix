@@ -1,6 +1,8 @@
 {pkgs, ...}: {
+  imports = [
+    ./wlogout.nix
+  ];
   home.packages = with pkgs; [
-    wlogout
     grim
     slurp
     tesseract

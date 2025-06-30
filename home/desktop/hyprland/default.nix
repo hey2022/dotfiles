@@ -16,7 +16,6 @@
     ../vnc
     ../waybar
     ../wayland
-    ../wlogout.nix
     ./binds.nix
     ./hypridle.nix
     ./plugins
@@ -38,6 +37,8 @@
     home.sessionVariables.NIXOS_OZONE_WL = "1";
     programs = {
       hyprlock.enable = true;
+      wlogout.enable = true;
+    };
     };
   };
 }
