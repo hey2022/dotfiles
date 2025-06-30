@@ -530,7 +530,7 @@ Add shell-escape flag
 
 *** Current line LSP diagnostic message
 #+begin_src emacs-lisp
-(setq search-engine-query-url "https://google.com/search?q=")
+(setq search-engine-query-url "https://duckduckgo.com/?q=")
 (defun browse-lsp-current-line-diagnostic-message ()
   "Browse the current line LSP diagonstic message with search-engine-query-url."
   (interactive)
