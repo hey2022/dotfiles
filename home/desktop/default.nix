@@ -12,6 +12,7 @@
     ./pipewire.nix
     ./qt.nix
     ./stylix.nix
+    ./terminal
     ./udiskie.nix
     ./wallpaper.nix
     ./wluma.nix

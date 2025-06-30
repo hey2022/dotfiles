@@ -1,6 +1,5 @@
 {...}: {
   programs.ghostty = {
-    enable = true;
     settings = {
       gtk-single-instance = true;
       gtk-tabs-location = "bottom";

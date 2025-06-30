@@ -10,7 +10,6 @@
     ../brightness.nix
     ../file-manager/cosmic-files.nix
     ../launchers/fuzzel.nix
-    ../terminal/ghostty.nix
     ../vnc
     ../waybar
     ../wayland
@@ -34,6 +33,7 @@
     ];
     home.sessionVariables.NIXOS_OZONE_WL = "1";
     programs = {
+      ghostty.enable = true;
       hyprlock.enable = true;
       wlogout.enable = true;
     };

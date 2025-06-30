@@ -8,8 +8,6 @@
     ../brightness.nix
     ../vnc
     ../waybar
-    ../terminal/wezterm
-    ../terminal/foot.nix
     ./wkill.nix
     ../file-manager/pcmanfm.nix
     ../launchers/fuzzel.nix
@@ -24,7 +22,9 @@
     extraConfig = builtins.readFile ./config;
   };
   programs = {
+    foot.enable = true;
     hyprlock.enable = true;
+    wezterm.enable = true;
   };
   services = {
     swaync.enable = true;
