@@ -11,7 +11,6 @@
     ../file-manager/cosmic-files.nix
     ../launchers/fuzzel.nix
     ../vnc
-    ../waybar
     ../wayland
     ./binds.nix
     ./hypridle.nix
@@ -35,6 +34,7 @@
     programs = {
       ghostty.enable = true;
       hyprlock.enable = true;
+      waybar.enable = true;
       wlogout.enable = true;
     };
     services = {

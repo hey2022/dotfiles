@@ -7,7 +7,6 @@
   imports = [
     ../brightness.nix
     ../vnc
-    ../waybar
     ./wkill.nix
     ../file-manager/pcmanfm.nix
     ../launchers/fuzzel.nix
@@ -24,6 +23,7 @@
   programs = {
     foot.enable = true;
     hyprlock.enable = true;
+    waybar.enable = true;
     wezterm.enable = true;
   };
   services = {

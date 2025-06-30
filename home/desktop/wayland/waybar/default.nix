@@ -1,10 +1,5 @@
 {config, ...}: {
-  imports = [
-    ../pipewire.nix
-    ../../font
-  ];
   programs.waybar = {
-    enable = true;
     systemd.enable = true;
     style = "@import \"./config.css\";";
   };

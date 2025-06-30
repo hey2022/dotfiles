@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./swaync.nix
+    ./waybar
     ./wlogout.nix
   ];
   home.packages = with pkgs; [
