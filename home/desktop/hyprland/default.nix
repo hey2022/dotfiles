@@ -10,7 +10,6 @@
     ../brightness.nix
     ../file-manager/cosmic-files.nix
     ../launchers/fuzzel.nix
-    ../pipewire.nix
     ../terminal/ghostty.nix
     ../vnc
     ../waybar

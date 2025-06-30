@@ -7,7 +7,6 @@
   imports = [
     ../brightness.nix
     ../vnc
-    ../pipewire.nix
     ../waybar
     ../terminal/wezterm
     ../terminal/foot.nix
