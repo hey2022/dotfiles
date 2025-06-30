@@ -11,7 +11,6 @@
     ../file-manager/cosmic-files.nix
     ../launchers/fuzzel.nix
     ../pipewire.nix
-    ../swaync.nix
     ../terminal/ghostty.nix
     ../vnc
     ../waybar
@@ -39,6 +38,8 @@
       hyprlock.enable = true;
       wlogout.enable = true;
     };
+    services = {
+      swaync.enable = true;
     };
   };
 }

@@ -6,7 +6,6 @@
 }: {
   imports = [
     ../brightness.nix
-    ../swaync.nix
     ../vnc
     ../pipewire.nix
     ../waybar
@@ -27,5 +26,8 @@
   };
   programs = {
     hyprlock.enable = true;
+  };
+  services = {
+    swaync.enable = true;
   };
 }
