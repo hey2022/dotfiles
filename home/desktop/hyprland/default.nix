@@ -38,6 +38,7 @@
     };
     services = {
       gammastep.enable = true;
+      hypridle.enable = true;
       swaync.enable = true;
     };
   };

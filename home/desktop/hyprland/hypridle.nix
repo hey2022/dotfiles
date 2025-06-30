@@ -3,9 +3,7 @@
   lib,
   ...
 }: {
-  imports = [../hyprlock];
   services.hypridle = {
-    enable = true;
     settings = {
       general = {
         lock_cmd = "pgrep hyprlock || hyprlock";
@@ -31,4 +29,5 @@
       ];
     };
   };
+  programs.hyprlock.enable = true;
 }
