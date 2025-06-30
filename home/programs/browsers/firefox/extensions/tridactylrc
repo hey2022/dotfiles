@@ -21,6 +21,7 @@ bind ,<Space> nohlsearch
 blacklistadd localhost:8888
 blacklistadd monkeytype.com
 blacklistadd tybayn.github.io/phasmo-cheat-sheet
+blacklistadd hey2022.github.io/qField
 
 " noiframe
 " HACK: https://github.com/tridactyl/tridactyl/issues/722
