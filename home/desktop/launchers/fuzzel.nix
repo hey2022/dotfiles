@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   programs.fuzzel = {
     settings = {
       main = {

@@ -1,3 +1,4 @@
-{...}: {
-  programs.pandoc = {};
+{ ... }:
+{
+  programs.pandoc = { };
 }

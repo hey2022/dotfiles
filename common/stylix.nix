@@ -3,15 +3,17 @@
   pkgs,
   pkgs-stable,
   ...
-}: let
-  fonts = import ../common/fonts.nix {pkgs = pkgs-stable;};
-in {
+}:
+let
+  fonts = import ../common/fonts.nix { pkgs = pkgs-stable; };
+in
+{
   stylix = {
     enable = true;
     autoEnable = false;
     polarity = "dark";
     # HACK: https://github.com/nix-community/home-manager/issues/5743
-    image = builtins.path {path = ../assets/wallpapers/alena-aenami-serenity-1k.jpg;};
+    image = builtins.path { path = ../assets/wallpapers/alena-aenami-serenity-1k.jpg; };
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
     fonts = {
       serif = config.stylix.fonts.sansSerif;

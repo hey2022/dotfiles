@@ -1,3 +1,4 @@
-{...}: {
-  imports = [./sober.nix];
+{ ... }:
+{
+  imports = [ ./sober.nix ];
 }

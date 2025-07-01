@@ -1,6 +1,8 @@
-{config, ...}: let
+{ config, ... }:
+let
   cfg = config.services.open-webui;
-in {
+in
+{
   services.open-webui = {
     enable = true;
     port = 11111;

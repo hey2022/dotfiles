@@ -3,7 +3,8 @@
   config,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     ./hardware-configuration.nix
     ./disko-config.nix
@@ -15,7 +16,7 @@
     ../../system/network/mac-spoof.nix
   ];
 
-  boot.kernelParams = ["i915.enable_dc=0"];
+  boot.kernelParams = [ "i915.enable_dc=0" ];
 
   networking.hostName = "goon";
   host.laptop = true;

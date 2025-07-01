@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   imports = [
     ./catppuccin.nix
     ./fcitx5.nix

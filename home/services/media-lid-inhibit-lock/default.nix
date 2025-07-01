@@ -3,15 +3,17 @@
   lib,
   pkgs,
   ...
-}: let
+}:
+let
   name = "media-lid-inhibit-lock";
-in {
+in
+{
   systemd.user.services.${name} = {
     Unit = {
       Description = "Inhibit suspend on lid when media is playing";
     };
     Install = {
-      WantedBy = ["default.target"];
+      WantedBy = [ "default.target" ];
     };
     Service = {
       Type = "simple";

@@ -1,3 +1,4 @@
-{pkgs, ...}: {
-  home.packages = [pkgs.zellij];
+{ pkgs, ... }:
+{
+  home.packages = [ pkgs.zellij ];
 }

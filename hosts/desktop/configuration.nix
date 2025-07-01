@@ -2,7 +2,8 @@
   config,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     ./hardware-configuration.nix
     ./sops.nix
@@ -25,11 +26,9 @@
 
   users.users.yiheng = {
     isNormalUser = true;
-    extraGroups =
-      config.users.baseGroups
-      ++ [
-        "media"
-      ];
+    extraGroups = config.users.baseGroups ++ [
+      "media"
+    ];
     shell = pkgs.fish;
   };
 

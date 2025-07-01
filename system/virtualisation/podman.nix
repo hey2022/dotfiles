@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   virtualisation.containers.enable = true;
   virtualisation = {
     podman = {
@@ -7,5 +8,5 @@
       defaultNetwork.settings.dns_enabled = true;
     };
   };
-  environment.systemPackages = [pkgs.podman-compose];
+  environment.systemPackages = [ pkgs.podman-compose ];
 }

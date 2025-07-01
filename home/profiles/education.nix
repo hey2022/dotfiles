@@ -4,7 +4,8 @@
   lib,
   pkgs,
   ...
-}: {
+}:
+{
   options = {
     profiles.education.enable = lib.mkOption {
       type = lib.types.bool;

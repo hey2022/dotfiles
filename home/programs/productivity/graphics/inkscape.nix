@@ -3,12 +3,14 @@
   lib,
   pkgs,
   ...
-}: let
+}:
+let
   inkscape = pkgs.inkscape-with-extensions.override {
     inkscapeExtensions = with pkgs.inkscape-extensions; [
       textext
     ];
   };
-in {
-  home.packages = lib.mkIf config.profiles.productivity.enable [inkscape];
+in
+{
+  home.packages = lib.mkIf config.profiles.productivity.enable [ inkscape ];
 }

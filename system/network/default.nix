@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   imports = [
     ./dnscrypt.nix
     ./nm-applet.nix
@@ -16,12 +17,15 @@
   # HACK: https://github.com/NixOS/nixpkgs/issues/180175
   systemd.services.NetworkManager-wait-online = {
     serviceConfig = {
-      ExecStart = ["" "${pkgs.networkmanager}/bin/nm-online -q"];
+      ExecStart = [
+        ""
+        "${pkgs.networkmanager}/bin/nm-online -q"
+      ];
     };
   };
 
   boot = {
-    kernelModules = ["tcp_bbr"];
+    kernelModules = [ "tcp_bbr" ];
     kernel.sysctl = {
       "net.core.default_qdisc" = "cake";
       "net.ipv4.tcp_congestion_control" = "bbr";

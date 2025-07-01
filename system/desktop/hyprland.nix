@@ -1,5 +1,6 @@
-{...}: {
-  imports = [./hyprlock.nix];
+{ ... }:
+{
+  imports = [ ./hyprlock.nix ];
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;

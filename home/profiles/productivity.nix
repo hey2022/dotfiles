@@ -2,7 +2,8 @@
   config,
   lib,
   ...
-}: {
+}:
+{
   options = {
     profiles.productivity.enable = lib.mkOption {
       type = lib.types.bool;

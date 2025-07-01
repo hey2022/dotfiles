@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   services.swaync = {
     settings = {
       "control-center-margin-top" = 5;

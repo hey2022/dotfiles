@@ -2,13 +2,18 @@
   inputs,
   pkgs,
   ...
-}: let
+}:
+let
   profile = "default";
-in {
-  imports = [./extensions];
+in
+{
+  imports = [ ./extensions ];
   programs.firefox = {
     enable = true;
-    languagePacks = ["en-GB" "zh-CN"];
+    languagePacks = [
+      "en-GB"
+      "zh-CN"
+    ];
     profiles.${profile} = {
       isDefault = true;
       settings = {
@@ -46,8 +51,8 @@ in {
         privateDefault = "Unduck";
         engines = {
           Unduck = {
-            urls = [{template = "https://s.dunkirk.sh?q={searchTerms}";}];
-            definedAliases = ["@!"];
+            urls = [ { template = "https://s.dunkirk.sh?q={searchTerms}"; } ];
+            definedAliases = [ "@!" ];
           };
         };
       };
@@ -60,7 +65,7 @@ in {
     };
   };
   stylix.targets.firefox = {
-    profileNames = [profile];
+    profileNames = [ profile ];
     colorTheme.enable = true;
   };
 }

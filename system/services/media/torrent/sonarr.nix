@@ -1,4 +1,5 @@
-{config, ...}: {
+{ config, ... }:
+{
   services.sonarr = {
     enable = true;
     group = "media";

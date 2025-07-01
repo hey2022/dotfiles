@@ -1,4 +1,5 @@
-{config, ...}: {
+{ config, ... }:
+{
   services.jellyfin = {
     enable = true;
     group = "media";

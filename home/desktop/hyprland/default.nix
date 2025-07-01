@@ -3,7 +3,8 @@
   lib,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     ../../dev/jq.nix
     ../../programs/music.nix

@@ -1,5 +1,9 @@
-{pkgs, ...}: {
-  imports = [./aspell.nix ./nuspell.nix];
+{ pkgs, ... }:
+{
+  imports = [
+    ./aspell.nix
+    ./nuspell.nix
+  ];
   home.packages = with pkgs; [
     enchant
   ];

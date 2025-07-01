@@ -2,10 +2,12 @@
   inputs,
   config,
   ...
-}: let
+}:
+let
   font-size = config.stylix.fonts.sizes.desktop;
-in {
-  imports = [inputs.hyprpanel.homeManagerModules.hyprpanel];
+in
+{
+  imports = [ inputs.hyprpanel.homeManagerModules.hyprpanel ];
   programs.hyprpanel = {
     enable = true;
     overlay.enable = true;

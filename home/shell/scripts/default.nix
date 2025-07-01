@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   imports = [
     ./ap-dl
     ./link-to-file

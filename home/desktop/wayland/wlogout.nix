@@ -1,3 +1,4 @@
-{...}: {
-  programs.wlogout = {};
+{ ... }:
+{
+  programs.wlogout = { };
 }

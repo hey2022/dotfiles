@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   programs.steam = {
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;

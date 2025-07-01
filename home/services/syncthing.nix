@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   services.syncthing = {
     enable = true;
     overrideDevices = false;

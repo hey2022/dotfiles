@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   programs.jujutsu = {
     enable = false;
     settings = {
@@ -14,7 +15,14 @@
         editor = "emacsclient -nw";
       };
       aliases = {
-        tug = ["bookmark" "move" "--from" "heads(::@- & bookmarks())" "--to" "@-"];
+        tug = [
+          "bookmark"
+          "move"
+          "--from"
+          "heads(::@- & bookmarks())"
+          "--to"
+          "@-"
+        ];
       };
     };
   };

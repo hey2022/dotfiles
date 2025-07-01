@@ -1,5 +1,6 @@
-{pkgs, ...}: {
-  imports = [./hunspell.nix];
+{ pkgs, ... }:
+{
+  imports = [ ./hunspell.nix ];
   home.packages = with pkgs; [
     nuspell
   ];

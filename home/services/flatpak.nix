@@ -1,5 +1,6 @@
-{inputs, ...}: {
-  imports = [inputs.nix-flatpak.homeManagerModules.nix-flatpak];
+{ inputs, ... }:
+{
+  imports = [ inputs.nix-flatpak.homeManagerModules.nix-flatpak ];
   services.flatpak = {
     enable = true;
     uninstallUnmanaged = true;

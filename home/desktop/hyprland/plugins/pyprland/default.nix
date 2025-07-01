@@ -3,9 +3,10 @@
   lib,
   pkgs,
   ...
-}: {
+}:
+{
   config = lib.mkIf config.wayland.windowManager.hyprland.enable {
-    home.packages = [pkgs.pyprland];
+    home.packages = [ pkgs.pyprland ];
     wayland.windowManager.hyprland.settings = {
       exec-once = [
         "pypr"

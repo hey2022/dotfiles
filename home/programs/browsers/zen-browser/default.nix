@@ -2,9 +2,11 @@
   inputs,
   pkgs,
   ...
-}: let
+}:
+let
   profile = "default";
-in {
+in
+{
   imports = [
     inputs.zen-browser.homeModules.beta
     ../firefox/extensions
@@ -40,14 +42,15 @@ in {
         privateDefault = "Unduck";
         engines = {
           Unduck = {
-            urls = [{template = "https://s.dunkirk.sh?q={searchTerms}";}];
-            definedAliases = ["@!"];
+            urls = [ { template = "https://s.dunkirk.sh?q={searchTerms}"; } ];
+            definedAliases = [ "@!" ];
           };
         };
       };
     };
   };
   home.file = {
-    ".zen/${profile}/chrome/zen-logo-mocha.svg".source = "${inputs.zen-browser-catppuccin}/themes/Mocha/Mauve/zen-logo-mocha.svg";
+    ".zen/${profile}/chrome/zen-logo-mocha.svg".source =
+      "${inputs.zen-browser-catppuccin}/themes/Mocha/Mauve/zen-logo-mocha.svg";
   };
 }

@@ -2,26 +2,29 @@
   config,
   lib,
   ...
-}: let
-  mkService = attrs @ {
-    name,
-    icon ? "${name}.svg",
-    url ? "https://${name}.${config.host.address}",
-    ...
-  }:
-    lib.mkIf config.services.${name}.enable ({
+}:
+let
+  mkService =
+    attrs@{
+      name,
+      icon ? "${name}.svg",
+      url ? "https://${name}.${config.host.address}",
+      ...
+    }:
+    lib.mkIf config.services.${name}.enable (
+      {
         icon = icon;
         href = url;
       }
       // lib.optionalAttrs (attrs ? widget) {
-        widget =
-          attrs.widget
-          // {
-            type = name;
-            inherit url;
-          };
-      });
-in {
+        widget = attrs.widget // {
+          type = name;
+          inherit url;
+        };
+      }
+    );
+in
+{
   services.homepage-dashboard.services = {
     services = {
       karakeep = mkService {
@@ -41,7 +44,7 @@ in {
       prometheus = mkService {
         name = "prometheus";
         url = "http://localhost:${toString config.services.prometheus.port}";
-        widget = {};
+        widget = { };
       };
       grafana = mkService {
         name = "grafana";

@@ -1,6 +1,8 @@
-{config, ...}: let
+{ config, ... }:
+let
   cfg = config.services.karakeep;
-in {
+in
+{
   services.karakeep = {
     enable = true;
     extraEnvironment = {

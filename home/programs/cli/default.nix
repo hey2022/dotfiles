@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   imports = [
     ./aria2.nix
     ./atuin.nix

@@ -2,7 +2,8 @@
   config,
   lib,
   ...
-}: {
+}:
+{
   services.tlp = lib.mkIf config.host.laptop {
     enable = true;
     settings = {

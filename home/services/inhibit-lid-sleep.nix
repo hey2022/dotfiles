@@ -3,14 +3,19 @@
   lib,
   pkgs,
   ...
-}: let
+}:
+let
   name = "inhibit-lid-sleep";
-in {
+in
+{
   config = lib.mkIf config.host.laptop {
     home.packages = [
       (pkgs.writeShellApplication {
         name = "toggle-${name}";
-        runtimeInputs = [pkgs.systemd pkgs.libnotify];
+        runtimeInputs = [
+          pkgs.systemd
+          pkgs.libnotify
+        ];
         text = ''
           if systemctl --user is-active --quiet ${name}.service; then
             systemctl --user stop ${name}.service
@@ -32,7 +37,7 @@ in {
       };
     };
     wayland.windowManager = {
-      hyprland.settings.bind = ["$mod, I, exec, toggle-${name}"];
+      hyprland.settings.bind = [ "$mod, I, exec, toggle-${name}" ];
       sway.extraConfig = lib.mkAfter "bindsym $mod+i exec toggle-${name}";
     };
   };

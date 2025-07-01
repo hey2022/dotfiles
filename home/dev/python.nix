@@ -1,4 +1,5 @@
-{pkgs, ...}: let
+{ pkgs, ... }:
+let
   datascience = with pkgs.python3Packages; [
     jupyterlab
     matplotlib
@@ -8,7 +9,8 @@
     scipy
     seaborn
   ];
-in {
+in
+{
   home.packages = with pkgs; [
     (python3.withPackages (python: datascience))
     basedpyright

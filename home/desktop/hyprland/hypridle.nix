@@ -2,7 +2,8 @@
   config,
   lib,
   ...
-}: {
+}:
+{
   services.hypridle = {
     settings = {
       general = {
@@ -21,11 +22,10 @@
           on-timeout = "hyprctl dispatch dpms off";
           on-resume = "hyprctl dispatch dpms on";
         }
-        (lib.mkIf config.host.laptop
-          {
-            timeout = 1800;
-            on-timeout = "systemctl suspend";
-          })
+        (lib.mkIf config.host.laptop {
+          timeout = 1800;
+          on-timeout = "systemctl suspend";
+        })
       ];
     };
   };

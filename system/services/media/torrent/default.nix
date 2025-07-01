@@ -1,3 +1,9 @@
-{...}: {
-  imports = [./prowlarr.nix ./radarr.nix ./sonarr.nix ./lidarr];
+{ ... }:
+{
+  imports = [
+    ./prowlarr.nix
+    ./radarr.nix
+    ./sonarr.nix
+    ./lidarr
+  ];
 }

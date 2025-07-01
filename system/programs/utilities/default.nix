@@ -1,3 +1,4 @@
-{...}: {
-  imports = [./ydotool.nix];
+{ ... }:
+{
+  imports = [ ./ydotool.nix ];
 }

@@ -1,4 +1,5 @@
-{config, ...}: {
+{ config, ... }:
+{
   services.radarr = {
     enable = true;
     group = "media";

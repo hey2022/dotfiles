@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   imports = [
     ./education.nix
     ./entertainment.nix

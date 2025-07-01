@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   accounts.email.accounts = {
     "yiheng.he@proton.me" = {
       primary = true;
@@ -57,7 +58,7 @@
       After = "network-online.target";
     };
     Install = {
-      WantedBy = ["default.target"];
+      WantedBy = [ "default.target" ];
     };
     Service = {
       ExecStart = "${pkgs.hydroxide}/bin/hydroxide --carddav-port 5232 serve";

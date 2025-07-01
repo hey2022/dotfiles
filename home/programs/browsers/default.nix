@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   imports = [
     ./firefox
     ./zen-browser

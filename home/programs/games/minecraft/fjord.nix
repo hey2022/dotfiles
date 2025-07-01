@@ -4,9 +4,11 @@
   lib,
   pkgs,
   ...
-}: let
+}:
+let
   fjordPackages = inputs.fjordlauncher.packages.${pkgs.system};
-in {
+in
+{
   options.programs.fjord = {
     enable = lib.mkEnableOption "Enable fjord";
   };
@@ -15,7 +17,7 @@ in {
     home.packages = [
       (fjordPackages.fjordlauncher.override {
         fjordlauncher-unwrapped = fjordPackages.fjordlauncher-unwrapped.overrideAttrs (oldAttrs: {
-          patches = (oldAttrs.patches or []) ++ [./prism-crack.patch];
+          patches = (oldAttrs.patches or [ ]) ++ [ ./prism-crack.patch ];
         });
       })
     ];

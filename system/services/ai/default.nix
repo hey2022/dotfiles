@@ -1,3 +1,7 @@
-{...}: {
-  imports = [./ollama.nix ./open-webui.nix];
+{ ... }:
+{
+  imports = [
+    ./ollama.nix
+    ./open-webui.nix
+  ];
 }

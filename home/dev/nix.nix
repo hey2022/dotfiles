@@ -3,7 +3,8 @@
   config,
   pkgs,
   ...
-}: {
+}:
+{
   home.packages = with pkgs; [
     inputs.nix-alien.packages.${system}.nix-alien
     nh

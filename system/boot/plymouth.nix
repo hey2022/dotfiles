@@ -3,13 +3,14 @@
   lib,
   pkgs,
   ...
-}: {
+}:
+{
   boot.plymouth = {
     enable = true;
     theme = "lone";
     themePackages = with pkgs; [
       (adi1090x-plymouth-themes.override {
-        selected_themes = ["lone"];
+        selected_themes = [ "lone" ];
       })
     ];
   };

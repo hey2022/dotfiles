@@ -1,4 +1,5 @@
-{config, ...}: {
+{ config, ... }:
+{
   programs.waybar = {
     systemd.enable = true;
     style = "@import \"./config.css\";";

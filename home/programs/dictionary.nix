@@ -1,3 +1,4 @@
-{pkgs, ...}: {
-  home.packages = [pkgs.goldendict-ng];
+{ pkgs, ... }:
+{
+  home.packages = [ pkgs.goldendict-ng ];
 }

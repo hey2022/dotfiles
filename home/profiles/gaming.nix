@@ -2,7 +2,8 @@
   config,
   lib,
   ...
-}: {
+}:
+{
   options.profiles.gaming = {
     enable = lib.mkEnableOption "Gaming support";
   };

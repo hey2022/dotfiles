@@ -1,6 +1,7 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   wayland.windowManager.hyprland = {
-    plugins = [pkgs.hyprlandPlugins.hyprbars];
+    plugins = [ pkgs.hyprlandPlugins.hyprbars ];
     settings = {
       plugin = {
         hyprbars = {

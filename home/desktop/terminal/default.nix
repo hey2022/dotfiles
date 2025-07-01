@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   imports = [
     ./foot.nix
     ./wezterm

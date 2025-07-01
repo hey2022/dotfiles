@@ -1,6 +1,8 @@
-{config, ...}: let
+{ config, ... }:
+let
   port = 8081;
-in {
+in
+{
   services.miniflux = {
     enable = true;
     adminCredentialsFile = /etc/nixos/miniflux-admin-credentials;

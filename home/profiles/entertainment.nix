@@ -2,9 +2,11 @@
   config,
   lib,
   ...
-}: let
+}:
+let
   cfg = config.profiles.entertainment;
-in {
+in
+{
   options.profiles.entertainment = {
     enable = lib.mkEnableOption "Entertainment profile";
     anime.enable = lib.mkEnableOption "Anime profile";

@@ -1,6 +1,8 @@
-{config, ...}: let
+{ config, ... }:
+let
   cfg = config.services.navidrome;
-in {
+in
+{
   services.navidrome = {
     enable = true;
     group = "media";

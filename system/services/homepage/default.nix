@@ -4,9 +4,10 @@
   lib,
   pkgs,
   ...
-}: let
+}:
+let
   cfg = config.services.homepage-dashboard;
-  settingsFormat = pkgs.formats.yaml {};
+  settingsFormat = pkgs.formats.yaml { };
   package = pkgs.homepage-dashboard.overrideAttrs (old: {
     postInstall =
       (old.postInstall or "")
@@ -19,16 +20,16 @@
         } $out/share/homepage/public/images
       '';
   });
-  convertServiceConfig = option: (lib.optionalAttrs (option != []) (lib.mapAttrsToList
-    (groupName: services: {
-      ${groupName} =
-        lib.mapAttrsToList
-        (serviceName: settings: {${serviceName} = settings;})
-        services;
-    })
-    option));
-in {
-  imports = [./services.nix];
+  convertServiceConfig =
+    option:
+    (lib.optionalAttrs (option != [ ]) (
+      lib.mapAttrsToList (groupName: services: {
+        ${groupName} = lib.mapAttrsToList (serviceName: settings: { ${serviceName} = settings; }) services;
+      }) option
+    ));
+in
+{
+  imports = [ ./services.nix ];
   services.homepage-dashboard = {
     inherit package;
     enable = true;
@@ -73,7 +74,9 @@ in {
       }
     ];
   };
-  environment.etc."homepage-dashboard/services.yaml".source = lib.mkForce (settingsFormat.generate "services.yaml" (convertServiceConfig cfg.services));
+  environment.etc."homepage-dashboard/services.yaml".source = lib.mkForce (
+    settingsFormat.generate "services.yaml" (convertServiceConfig cfg.services)
+  );
   services.caddy.virtualHosts."homepage.${config.host.address}".extraConfig = ''
     reverse_proxy localhost:${toString cfg.listenPort}
   '';

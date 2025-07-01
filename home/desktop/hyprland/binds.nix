@@ -1,12 +1,11 @@
-{config, ...}: let
+{ config, ... }:
+let
   toggle = program: "pkill ${program} || uwsm-app -- ${program}";
   runOnce = program: "pgrep ${program} || uwsm-app -- ${program}";
   hy3 = config.wayland.windowManager.hyprland.hy3;
-  hy3Prefix =
-    if hy3
-    then "hy3:"
-    else "";
-in {
+  hy3Prefix = if hy3 then "hy3:" else "";
+in
+{
   wayland.windowManager.hyprland.settings = {
     "$menu" = "wofi --show drun";
     "$mod" = "SUPER";
@@ -130,19 +129,20 @@ in {
         "$mod SHIFT, N, exec, swaync-client -d"
       ]
       ++ (
-        if hy3
-        then [
-          "$mod, G, hy3:changegroup, toggletab"
-          "$mod, equal, hy3:changefocus, raise"
-          "$mod SHIFT, equal, hy3:changefocus, top"
-          "$mod, minus, hy3:changefocus, lower"
-          "$mod SHIFT, minus, hy3:changefocus, bottom"
-        ]
-        else [
-          "$mod, G, togglegroup"
-          "$mod SHIFT, N, changegroupactive, f"
-          "$mod SHIFT, P, changegroupactive, b"
-        ]
+        if hy3 then
+          [
+            "$mod, G, hy3:changegroup, toggletab"
+            "$mod, equal, hy3:changefocus, raise"
+            "$mod SHIFT, equal, hy3:changefocus, top"
+            "$mod, minus, hy3:changefocus, lower"
+            "$mod SHIFT, minus, hy3:changefocus, bottom"
+          ]
+        else
+          [
+            "$mod, G, togglegroup"
+            "$mod SHIFT, N, changegroupactive, f"
+            "$mod SHIFT, P, changegroupactive, b"
+          ]
       );
 
     bindl = [

@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   imports = [
     ./ai
     ./caddy.nix

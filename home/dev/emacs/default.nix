@@ -2,9 +2,11 @@
   config,
   pkgs,
   ...
-}: let
+}:
+let
   emacs = pkgs.emacs-pgtk;
-in {
+in
+{
   imports = [
     ../tex.nix
     ../../spell
@@ -23,8 +25,8 @@ in {
   programs.emacs = {
     enable = true;
     package = emacs;
-    extraPackages = epkgs:
-      with epkgs; [
+    extraPackages =
+      epkgs: with epkgs; [
         vterm
         jinx
       ];

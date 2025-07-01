@@ -4,7 +4,8 @@
   lib,
   pkgs,
   ...
-}: let
+}:
+let
   combined = pkgs.symlinkJoin {
     name = "combined-reshade-shaders";
     paths = [
@@ -12,7 +13,8 @@
       ./SweetFX/Shaders
     ];
   };
-in {
+in
+{
   config = lib.mkIf config.profiles.gaming.enable {
     home.file.".local/share/gamescope/reshade/Shaders".source = combined;
   };

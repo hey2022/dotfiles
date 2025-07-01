@@ -2,9 +2,11 @@
   config,
   lib,
   ...
-}: let
+}:
+let
   cfg = config.services.glance;
-in {
+in
+{
   services.glance = {
     enable = true;
     settings = {
@@ -20,34 +22,30 @@ in {
         negative-color = "347 70 65";
       };
       pages = [
-        (
-          lib.mkIf
-          config.services.homepage-dashboard.enable
-          {
-            name = "Homepage";
-            columns = [
-              {
-                size = "full";
-                widgets = [
-                  {
-                    title = "Homepage";
-                    title-url = "https://gethomepage.dev";
-                    type = "iframe";
-                    source = "https://homepage.${config.host.address}";
-                    height = 800;
-                  }
-                ];
-              }
-            ];
-          }
-        )
+        (lib.mkIf config.services.homepage-dashboard.enable {
+          name = "Homepage";
+          columns = [
+            {
+              size = "full";
+              widgets = [
+                {
+                  title = "Homepage";
+                  title-url = "https://gethomepage.dev";
+                  type = "iframe";
+                  source = "https://homepage.${config.host.address}";
+                  height = 800;
+                }
+              ];
+            }
+          ];
+        })
         {
           name = "Feed";
           columns = [
             {
               size = "small";
               widgets = [
-                {type = "calendar";}
+                { type = "calendar"; }
               ];
             }
             {
@@ -56,8 +54,8 @@ in {
                 {
                   type = "group";
                   widgets = [
-                    {type = "hacker-news";}
-                    {type = "lobsters";}
+                    { type = "hacker-news"; }
+                    { type = "lobsters"; }
                   ];
                 }
               ];

@@ -3,6 +3,7 @@
   lib,
   pkgs,
   ...
-}: {
-  imports = [./portal.nix];
+}:
+{
+  imports = [ ./portal.nix ];
 }

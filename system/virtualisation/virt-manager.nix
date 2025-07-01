@@ -2,7 +2,8 @@
   config,
   lib,
   ...
-}: {
+}:
+{
   options = {
     profiles.vm.enable = lib.mkEnableOption "VM support";
   };

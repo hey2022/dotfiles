@@ -86,30 +86,34 @@
     };
   };
 
-  outputs = {
-    flake-parts,
-    nixpkgs,
-    disko,
-    nur,
-    home-manager,
-    ...
-  } @ inputs:
-    flake-parts.lib.mkFlake {inherit inputs;} {
+  outputs =
+    {
+      flake-parts,
+      nixpkgs,
+      disko,
+      nur,
+      home-manager,
+      ...
+    }@inputs:
+    flake-parts.lib.mkFlake { inherit inputs; } {
       imports = [
         ./flake-modules/treefmt.nix
       ];
-      systems = ["x86_64-linux"];
+      systems = [ "x86_64-linux" ];
       flake = {
         nixosConfigurations = {
           desktop = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
-            specialArgs = {inherit inputs;};
-            modules = [./hosts/desktop/configuration.nix];
+            specialArgs = { inherit inputs; };
+            modules = [ ./hosts/desktop/configuration.nix ];
           };
           goon = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
-            specialArgs = {inherit inputs;};
-            modules = [./hosts/goon/configuration.nix disko.nixosModules.default];
+            specialArgs = { inherit inputs; };
+            modules = [
+              ./hosts/goon/configuration.nix
+              disko.nixosModules.default
+            ];
           };
         };
         homeConfigurations = {

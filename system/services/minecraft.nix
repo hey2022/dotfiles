@@ -2,9 +2,10 @@
   config,
   lib,
   ...
-}: {
+}:
+{
   networking.firewall = lib.mkIf config.profiles.gaming.enable {
-    allowedTCPPorts = [25565];
+    allowedTCPPorts = [ 25565 ];
     allowedUDPPorts = [
       25565
 
