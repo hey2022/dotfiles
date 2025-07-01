@@ -38,10 +38,6 @@
       inherit (pkgs.stdenv.hostPlatform) system;
       inherit (config.nixpkgs) config;
     };
-    _module.args.pkgs-git = import inputs.nixpkgs-git {
-      inherit (pkgs.stdenv.hostPlatform) system;
-      inherit (config.nixpkgs) config;
-    };
     home.stateVersion = "25.05";
     programs.home-manager.enable = true;
     nixpkgs.config.allowUnfree = true;

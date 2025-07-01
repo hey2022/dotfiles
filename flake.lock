@@ -666,21 +666,6 @@
         "type": "github"
       }
     },
-    "nixpkgs-git": {
-      "locked": {
-        "lastModified": 1751389935,
-        "narHash": "sha256-BD4gnq3UjHwoX13zgh5gExPpzzjzyksrDmI6OKIM4vU=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "250397c4cbac94e6a2df560aa3454e2096544ef8",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nixpkgs-lib": {
       "locked": {
         "lastModified": 1748740939,
@@ -838,7 +823,6 @@
         "nixGL": "nixGL",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs",
-        "nixpkgs-git": "nixpkgs-git",
         "nixpkgs-stable": "nixpkgs-stable",
         "nixvim": "nixvim",
         "nur": "nur",

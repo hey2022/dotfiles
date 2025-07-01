@@ -49,9 +49,5 @@
       inherit (pkgs.stdenv.hostPlatform) system;
       inherit (config.nixpkgs) config;
     };
-    _module.args.pkgs-git = import inputs.nixpkgs-git {
-      inherit (pkgs.stdenv.hostPlatform) system;
-      inherit (config.nixpkgs) config;
-    };
   };
 }

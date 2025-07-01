@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs-git.url = "github:NixOS/nixpkgs";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.05";
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
