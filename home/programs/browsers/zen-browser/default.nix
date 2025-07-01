@@ -26,6 +26,7 @@ in {
           languagetool
           libredirect
           redirector
+          refined-github
           sponsorblock
           stylus
           tridactyl

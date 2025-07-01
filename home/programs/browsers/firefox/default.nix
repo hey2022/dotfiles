@@ -31,6 +31,7 @@ in {
           languagetool
           libredirect
           redirector
+          refined-github
           sidebery
           sponsorblock
           stylus
