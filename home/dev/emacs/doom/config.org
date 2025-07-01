@@ -567,7 +567,8 @@ Add shell-escape flag
 #+end_src
 
 ** Nix
-#+begin_src emacs-lisp
+*** Format with alejandra
+#+begin_src emacs-lisp :tangle no
 (after! nix-mode
   (set-formatter! 'alejandra '("alejandra" "--quiet") :modes '(nix-mode))
   (setq-hook! 'nix-mode-hook +format-with-lsp nil))

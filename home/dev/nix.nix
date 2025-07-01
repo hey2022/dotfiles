@@ -5,7 +5,6 @@
   ...
 }: {
   home.packages = with pkgs; [
-    alejandra
     inputs.nix-alien.packages.${system}.nix-alien
     nh
     nix-init

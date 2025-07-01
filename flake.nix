@@ -93,7 +93,7 @@
     flake-parts.lib.mkFlake {inherit inputs;} {
       systems = ["x86_64-linux"];
       perSystem = {pkgs, ...}: {
-        formatter = pkgs.alejandra;
+        formatter = pkgs.nixfmt-rfc-style;
       };
       flake = {
         nixosConfigurations = {
