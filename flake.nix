@@ -5,6 +5,10 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-git.url = "github:NixOS/nixpkgs";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.05";
+    treefmt-nix = {
+      url = "github:numtide/treefmt-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     sops-nix = {
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -91,10 +95,10 @@
     ...
   } @ inputs:
     flake-parts.lib.mkFlake {inherit inputs;} {
+      imports = [
+        ./flake-modules/treefmt.nix
+      ];
       systems = ["x86_64-linux"];
-      perSystem = {pkgs, ...}: {
-        formatter = pkgs.nixfmt-rfc-style;
-      };
       flake = {
         nixosConfigurations = {
           desktop = nixpkgs.lib.nixosSystem {
