@@ -9,6 +9,7 @@
     inputs.nix-alien.packages.${system}.nix-alien
     nh
     nix-init
+    nix-melt
     nix-search-cli
     nix-tree
     nix-update
