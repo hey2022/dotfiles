@@ -1,19 +1,19 @@
 * {
-    font-family:
-        Iosevka Custom,
-        Symbols Nerd Font;
-    font-size: 16px;
+  font-family:
+    Iosevka Custom,
+    Symbols Nerd Font;
+  font-size: 16px;
 }
 
 .modules-center,
 .modules-left,
 .modules-right {
-    margin: 5px 5px 0;
+  margin: 5px 5px 0;
 }
 
 #waybar {
-    background: transparent;
-    color: @text;
+  background: transparent;
+  color: @text;
 }
 
 #clock,
@@ -24,84 +24,84 @@
 #tray,
 #window,
 #workspaces {
-    background-color: @surface0;
-    margin: 0 5px;
-    padding: 0 0.5rem;
-    border-radius: 1rem;
+  background-color: @surface0;
+  margin: 0 5px;
+  padding: 0 0.5rem;
+  border-radius: 1rem;
 }
 
 #controls *,
 #hardware * {
-    padding: 0 0.5rem;
+  padding: 0 0.5rem;
 }
 
 #workspaces button {
-    color: @lavender;
-    padding: 0.4rem;
+  color: @lavender;
+  padding: 0.4rem;
 }
 
 #workspaces button.active {
-    color: @sky;
-    border-radius: 1rem;
+  color: @sky;
+  border-radius: 1rem;
 }
 
 #workspaces button:hover {
-    color: @sapphire;
-    border-radius: 1rem;
+  color: @sapphire;
+  border-radius: 1rem;
 }
 
 window#waybar.empty #window {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 #mpris.stopped {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 #clock {
-    color: @blue;
+  color: @blue;
 }
 
 #cpu.low,
 #memory.low,
 #temperature {
-    color: @green;
+  color: @green;
 }
 
 #battery.warning:not(.charging),
 #cpu.medium,
 #memory.medium {
-    color: @yellow;
+  color: @yellow;
 }
 
 #cpu.high,
 #memory.high {
-    color: @peach;
+  color: @peach;
 }
 
 #battery.critical:not(.charging),
 #cpu.critical,
 #memory.critical,
 #temperature.critical {
-    color: @red;
+  color: @red;
 }
 
 #battery {
-    color: @green;
+  color: @green;
 }
 
 #battery.charging {
-    color: @green;
+  color: @green;
 }
 
 #backlight {
-    color: @yellow;
+  color: @yellow;
 }
 
 #wireplumber {
-    color: @maroon;
+  color: @maroon;
 }
 
 #mpris {
-    color: @mauve;
+  color: @mauve;
 }
