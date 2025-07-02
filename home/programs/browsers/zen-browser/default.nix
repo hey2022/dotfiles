@@ -6,6 +6,7 @@
 }:
 let
   profile = "default";
+  addons = import ../firefox/addons { inherit pkgs; };
 in
 {
   imports = [
@@ -30,19 +31,25 @@ in
       };
       extensions = {
         force = true;
-        packages = with pkgs.nur.repos.rycee.firefox-addons; [
-          aw-watcher-web
-          keepassxc-browser
-          languagetool
-          libredirect
-          redirector
-          refined-github
-          sponsorblock
-          stylus
-          tridactyl
-          ublock-origin
-          zotero-connector
-        ];
+        packages =
+          with pkgs.nur.repos.rycee.firefox-addons;
+          [
+            aw-watcher-web
+            keepassxc-browser
+            languagetool
+            libredirect
+            redirector
+            refined-github
+            sponsorblock
+            stylus
+            tridactyl
+            ublock-origin
+            zotero-connector
+          ]
+          ++ (with addons; [
+            bonjourr
+            zen-internet
+          ]);
       };
       search = {
         force = true;
