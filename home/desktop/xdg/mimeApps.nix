@@ -3,6 +3,7 @@
   xdg.mimeApps = {
     enable = true;
     defaultApplications = {
+      "application/json" = "emacsclient.desktop";
       "application/pdf" = "org.pwmt.zathura.desktop";
       "image/jpeg" = "imv.desktop";
       "image/png" = "imv.desktop";
