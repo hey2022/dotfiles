@@ -11,6 +11,6 @@
     ff = "fastfetch";
     uctl = "systemctl --user";
 
-    tp = "trash put";
+    tp = "gtrash put";
   };
 }

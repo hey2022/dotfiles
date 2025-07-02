@@ -21,13 +21,13 @@
     eza
     fastfetch
     fd
+    gtrash
     lnav
     parallel
     ripgrep
     ripgrep-all
     sd
     tealdeer
-    trashy
     tree
   ];
 }
