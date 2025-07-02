@@ -18,6 +18,9 @@ in
     };
     profiles.${profile} = {
       isDefault = true;
+      extraConfig = ''
+        ${builtins.readFile "${inputs.betterfox}/zen/user.js"}
+      '';
       userChrome = builtins.readFile "${inputs.zen-browser-catppuccin}/themes/Mocha/Mauve/userChrome.css";
       userContent = builtins.readFile "${inputs.zen-browser-catppuccin}/themes/Mocha/Mauve/userContent.css";
       extensions = {
