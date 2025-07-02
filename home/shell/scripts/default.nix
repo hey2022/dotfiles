@@ -5,5 +5,6 @@
     ./link-to-file
     ./nightgrade
     ./swap
+    ./nixpif
   ];
 }
