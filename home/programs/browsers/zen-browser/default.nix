@@ -42,7 +42,6 @@ in
             redirector
             refined-github
             sponsorblock
-            stylus
             tridactyl
             ublock-origin
             zotero-connector
