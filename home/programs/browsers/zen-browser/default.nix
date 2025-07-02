@@ -27,6 +27,7 @@ in
       userContent = config.lib.hm.mkFlakeSymlink ./userContent.css;
       settings = {
         "browser.tabs.allow_transparent_browser" = true;
+        "extensions.autoDisableScopes" = 0;
         "nebula-tab-loading-animation" = 0;
       };
       extensions = {
