@@ -1,11 +1,11 @@
-{ ... }:
+{ config, ... }:
 {
   programs.ghostty = {
     settings = {
       gtk-single-instance = true;
       gtk-tabs-location = "bottom";
       gtk-wide-tabs = false;
-      background-opacity = 0.9;
+      background-opacity = config.stylix.opacity.terminal;
       font-family = [
         "Iosevka Custom"
         "Symbols Nerd Font"
