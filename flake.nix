@@ -73,8 +73,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
-    zen-browser-catppuccin = {
-      url = "github:catppuccin/zen-browser";
+    zen-nebula = {
+      url = "github:JustAdumbPrsn/Zen-Nebula";
       flake = false;
     };
     firefox-ui-fix = {

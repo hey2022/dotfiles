@@ -790,7 +790,7 @@
         "tls-xb": "tls-xb",
         "treefmt-nix": "treefmt-nix_3",
         "zen-browser": "zen-browser",
-        "zen-browser-catppuccin": "zen-browser-catppuccin"
+        "zen-nebula": "zen-nebula"
       }
     },
     "rust-overlay": {
@@ -1106,19 +1106,19 @@
         "type": "github"
       }
     },
-    "zen-browser-catppuccin": {
+    "zen-nebula": {
       "flake": false,
       "locked": {
-        "lastModified": 1750430416,
-        "narHash": "sha256-cccLZSrUQ9wxmXnEntbQAfGDFB9gQmIM9pa9BXce1Xo=",
-        "owner": "catppuccin",
-        "repo": "zen-browser",
-        "rev": "e171e2a1d94ed70f39ff0ac452aef335f8b233c9",
+        "lastModified": 1751045693,
+        "narHash": "sha256-qXqS7LXDelE0qiPkr2irL6mRexrO5UhfuaKuPi/OeJc=",
+        "owner": "JustAdumbPrsn",
+        "repo": "Zen-Nebula",
+        "rev": "78f67e443ab59d94f37dd5e44d7fb73da50f1f98",
         "type": "github"
       },
       "original": {
-        "owner": "catppuccin",
-        "repo": "zen-browser",
+        "owner": "JustAdumbPrsn",
+        "repo": "Zen-Nebula",
         "type": "github"
       }
     }

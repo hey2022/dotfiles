@@ -1,5 +1,6 @@
 {
   inputs,
+  config,
   pkgs,
   ...
 }:
@@ -21,8 +22,12 @@ in
       extraConfig = ''
         ${builtins.readFile "${inputs.betterfox}/zen/user.js"}
       '';
-      userChrome = builtins.readFile "${inputs.zen-browser-catppuccin}/themes/Mocha/Mauve/userChrome.css";
-      userContent = builtins.readFile "${inputs.zen-browser-catppuccin}/themes/Mocha/Mauve/userContent.css";
+      userChrome = config.lib.hm.mkFlakeSymlink ./userChrome.css;
+      userContent = config.lib.hm.mkFlakeSymlink ./userContent.css;
+      settings = {
+        "browser.tabs.allow_transparent_browser" = true;
+        "nebula-tab-loading-animation" = 0;
+      };
       extensions = {
         force = true;
         packages = with pkgs.nur.repos.rycee.firefox-addons; [
@@ -53,7 +58,9 @@ in
     };
   };
   home.file = {
-    ".zen/${profile}/chrome/zen-logo-mocha.svg".source =
-      "${inputs.zen-browser-catppuccin}/themes/Mocha/Mauve/zen-logo-mocha.svg";
+    ".zen/${profile}/chrome/Nebula" = {
+      source = "${inputs.zen-nebula}/Nebula";
+      recursive = true;
+    };
   };
 }
