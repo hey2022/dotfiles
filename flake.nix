@@ -20,8 +20,6 @@
     };
     nixos-hardware = {
       url = "github:NixOS/nixos-hardware";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.treefmt-nix.follows = "treefmt-nix";
     };
     home-manager = {
       url = "github:nix-community/home-manager";
