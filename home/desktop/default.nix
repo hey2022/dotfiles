@@ -16,7 +16,7 @@
     ./stylix.nix
     ./terminal
     ./udiskie.nix
-    ./wallpaper.nix
+    ./wallpaper
     ./wluma.nix
     ./xdg
   ];
