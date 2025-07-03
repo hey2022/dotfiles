@@ -1,7 +1,7 @@
 { ... }:
 {
   imports = [
-    ./tridactyl.nix
+    ./tridactyl
     ./ublock-origin
   ];
 }
