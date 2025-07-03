@@ -71,6 +71,10 @@ in
         "$mod, mouse_down, workspace, e-1"
         "$mod, mouse_up, workspace, e+1"
 
+        # waypaper
+        "$mod, W, exec, ${runOnce "waypaper"} --random"
+        "$mod SHIFT, W, exec, ${toggle "waypaper"}"
+
         # utility
         # logout menu
         "$mod SHIFT, Escape, exec, ${toggle "wlogout"} -p layer-shell"
