@@ -12,10 +12,10 @@ let
   );
 in
 {
-  services.swww.enable = true;
-  home.packages = with pkgs; [
-    waypaper
+  imports = [
+    ./waypaper.nix
   ];
+  services.swww.enable = true;
   systemd.user.services.wallpaper-updater = {
     Unit = {
       Description = "Update wallpaper collection";
