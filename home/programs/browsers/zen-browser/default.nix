@@ -18,6 +18,9 @@ in
     policies = {
       OfferToSaveLogins = false;
     };
+    nativeMessagingHosts = with pkgs; [
+      tridactyl-native
+    ];
     profiles.${profile} = {
       isDefault = true;
       extraConfig = ''
