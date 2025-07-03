@@ -36,6 +36,7 @@ in
           with pkgs.nur.repos.rycee.firefox-addons;
           [
             aw-watcher-web
+            darkreader
             keepassxc-browser
             languagetool
             libredirect
