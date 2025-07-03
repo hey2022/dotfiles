@@ -36,10 +36,10 @@ in
       size = 24;
     };
     opacity = {
-      terminal = 0.4;
-      applications = 0.4;
-      desktop = 0.4;
-      popups = 0.4;
+      terminal = 0.5;
+      applications = 0.5;
+      desktop = 0.5;
+      popups = 0.5;
     };
   };
 }
