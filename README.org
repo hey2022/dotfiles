@@ -1,3 +1,4 @@
+# TODO: finish README
 #+title: dotfiles
 
 My NixOS and Home-Manager configuration.
