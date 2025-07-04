@@ -17,6 +17,7 @@
       light = "Papirus";
     };
     targets = {
+      fuzzel.enable = true;
       wezterm.enable = true;
     };
   };

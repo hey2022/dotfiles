@@ -1,10 +1,4 @@
 { ... }:
 {
-  programs.fuzzel = {
-    settings = {
-      main = {
-        font = "Inter";
-      };
-    };
-  };
+  programs.fuzzel = { };
 }
