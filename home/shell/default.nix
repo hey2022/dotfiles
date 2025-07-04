@@ -8,6 +8,7 @@
     ./pay-respects.nix
     ./scripts
     ./starship.nix
+    ./tldr.nix
     ./zellij.nix
     ./zoxide.nix
   ];
@@ -27,7 +28,6 @@
     ripgrep
     ripgrep-all
     sd
-    tealdeer
     tree
   ];
 }
