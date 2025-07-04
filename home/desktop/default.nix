@@ -1,3 +1,4 @@
+# TODO: add Ags widgets
 { pkgs, ... }:
 {
   imports = [
