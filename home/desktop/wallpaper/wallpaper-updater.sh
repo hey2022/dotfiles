@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-wallpaper_dir="$HOME/wallpapers"
+wallpaper_dir="$HOME/wallpapers/aesthetic-wallpapers"
 wallpaper_url='https://github.com/D3Ext/aesthetic-wallpapers'
 mkdir -p "$wallpaper_dir"
 if [ -d "$wallpaper_dir/.git" ]; then
