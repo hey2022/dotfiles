@@ -21,6 +21,10 @@ in
     nativeMessagingHosts = with pkgs; [
       tridactyl-native
     ];
+    languagePacks = [
+      "en-GB"
+      "zh-CN"
+    ];
     profiles.${profile} = {
       isDefault = true;
       extraConfig = ''
