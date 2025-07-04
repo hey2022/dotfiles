@@ -27,6 +27,7 @@
         Timer = {
           Unit = "waypaper-random.service";
           OnCalendar = "daily";
+          Persistent = true;
         };
         Install.WantedBy = [ "timers.target" ];
       };
