@@ -23,6 +23,7 @@
   home.packages = with pkgs; [
     bun
     hyperfine
+    just
     onefetch
     tokei
     wget
