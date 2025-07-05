@@ -494,10 +494,16 @@ Add shell-escape flag
 *** Typst preview
 #+begin_src emacs-lisp
 (use-package! typst-preview
+  :after typst-ts-mode
   :custom
   (typst-preview-invert-colors "never")
-  :hook
-  (typst-ts-mode . typst-preview-mode))
+  :config
+  (map! :map typst-ts-mode-map
+        :localleader
+        :prefix ("p" . "Typst preview")
+        :desc "preview mode"    "p" #'typst-preview-mode
+        :desc "preview restart" "r" #'typst-preview-restart
+        :desc "preview mode"    "o" #'typst-preview-open-browser))))
 #+end_src
 
 * Writing
