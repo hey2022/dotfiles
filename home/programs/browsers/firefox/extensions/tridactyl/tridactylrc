@@ -10,14 +10,6 @@ set editorcmd emacsclient -c
 bind J tabnext
 bind K tabprev
 
-" tridactyl search
-set incsearch true
-bind / fillcmdline find
-bind ? fillcmdline find -?
-bind n findnext 1
-bind N findnext -1
-bind ,<Space> nohlsearch
-
 " blacklist
 blacklistadd localhost:8888
 blacklistadd monkeytype.com
