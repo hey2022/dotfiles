@@ -1,7 +1,9 @@
 { pkgs, ... }:
 {
+  imports = [
+    ./grip.nix
+  ];
   home.packages = with pkgs; [
-    python311Packages.grip
     marksman
     mdl
   ];

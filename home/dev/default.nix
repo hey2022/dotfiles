@@ -11,7 +11,7 @@
     ./json.nix
     ./julia.nix
     ./lisp.nix
-    ./markdown.nix
+    ./markdown
     ./neovim
     ./nix.nix
     ./python.nix
