@@ -3,6 +3,7 @@ keys:
   - &root-desktop age1c0efwwd98587gdu7yyuhzhgpzg3j7mvmrynlpzvu5dgrq6dqu3tsf9pmnp
   - &yiheng-desktop age1z6jpfald6ktxa3sq86qp6vr0fefrl6fyc54saztf086mgakh797smq80hg
   - &root-goon age1qtrx64maz2xhjv2r46ya2q6w9utqclxmvkxjd00racxwnntey3lsm2m226
+  - &yiheng-goon age12pza2uxdg43603zyscjamm0lnrgsjj8z7pkrzv6d9fefgaz0f3zq60lutl
 creation_rules:
   - path_regex: secrets/[^/]+$
     key_groups:
@@ -11,6 +12,7 @@ creation_rules:
           - *root-desktop
           - *yiheng-desktop
           - *root-goon
+          - *yiheng-goon
   - path_regex: secrets/desktop/[^/]+$
     key_groups:
       - age:
