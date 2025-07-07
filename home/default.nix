@@ -14,6 +14,7 @@
     ./programs
     ./services
     ./shell
+    ./sops-nix.nix
   ];
   options = {
     home.dotfiles = lib.mkOption {
