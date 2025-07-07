@@ -1,7 +1,14 @@
 keys:
   - &admin age1hf2zuvuwccu5r5u8rj5yuqapxkdjr8pnsqg6ehsgr5l7hr6meqrquqq0nx
   - &root-desktop age1c0efwwd98587gdu7yyuhzhgpzg3j7mvmrynlpzvu5dgrq6dqu3tsf9pmnp
+  - &root-goon age1qtrx64maz2xhjv2r46ya2q6w9utqclxmvkxjd00racxwnntey3lsm2m226
 creation_rules:
+  - path_regex: secrets/[^/]+\.(yaml|json|env|ini)$
+    key_groups:
+      - age:
+          - *admin
+          - *root-desktop
+          - *root-goon
   - path_regex: secrets/desktop/[^/]+\.(yaml|json|env|ini)$
     key_groups:
       - age:
