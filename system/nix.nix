@@ -1,4 +1,4 @@
-{ ... }:
+{ config, ... }:
 {
   nix = {
     settings = {
@@ -24,6 +24,9 @@
       automatic = true;
       options = "--delete-older-than 7d";
     };
+    extraOptions = ''
+      !include ${config.sops.secrets.nix-access-tokens.path}
+    '';
   };
   nixpkgs.config.allowUnfree = true;
 }
