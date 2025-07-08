@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    comrak
+    go-grip
     marksman
     mdl
   ];
