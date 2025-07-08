@@ -18,5 +18,5 @@ echo '<div class="markdown-body">' >"$tmp_prefix"
 echo '</div>' >"$tmp_suffix"
 
 live-server "$tmp_output" &
-cmd="comrak --gfm $1 | pandoc -s --metadata pagetitle=\"GFM Preview\" -c 'https://cdn.jsdelivr.net/npm/github-markdown-css/github-markdown.min.css' --include-before-body=$tmp_prefix --include-after-body=$tmp_suffix -o $tmp_output"
+cmd="comrak --gfm --unsafe $1 | pandoc -s --metadata pagetitle=\"GFM Preview\" -c 'https://cdn.jsdelivr.net/npm/github-markdown-css/github-markdown.min.css' --include-before-body=$tmp_prefix --include-after-body=$tmp_suffix -o $tmp_output"
 echo "$1" | entr -s "$cmd"
