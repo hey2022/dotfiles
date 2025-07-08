@@ -1,12 +1,7 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}:
+{ pkgs, ... }:
 
 {
-  home.packages = lib.mkIf config.profiles.education.enable [
+  home.packages = [
     (pkgs.writeShellApplication {
       name = "gfm";
       runtimeInputs = with pkgs; [
