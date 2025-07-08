@@ -22,6 +22,7 @@
   ];
   home.packages = with pkgs; [
     bun
+    entr
     hyperfine
     just
     onefetch
