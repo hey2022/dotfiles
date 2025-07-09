@@ -1,4 +1,4 @@
-# TODO: add Ags widgets
+# TODO: add quickshell widgets
 { pkgs, ... }:
 {
   imports = [
