@@ -33,8 +33,9 @@
         "easylist-annoyances",
         "ublock-annoyances",
         "CHN-0",
-        "https://raw.githubusercontent.com/gijsdev/ublock-hide-yt-shorts/master/list.txt",
-        "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/porn/hosts"
+        "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt",
+        "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/porn/hosts",
+        "https://raw.githubusercontent.com/gijsdev/ublock-hide-yt-shorts/master/list.txt"
       ]
     }
   }
