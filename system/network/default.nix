@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
-    ./dnscrypt.nix
+    ./dns
     ./nm-applet.nix
     ./proxy
     ./wireshark.nix
