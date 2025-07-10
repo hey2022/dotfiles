@@ -451,7 +451,7 @@ If no tags are provided, copy all files."
 *** Clock
 #+begin_src emacs-lisp
 (after! org-clock
-  (setq org-clock-sound "~/.dotfiles/assets/audio/alarm.wav"))
+  (setq org-clock-sound "~/.config/emacs/.local/alarm.wav"))
 #+end_src
 *** valign
 #+begin_src emacs-lisp

@@ -1,4 +1,5 @@
 {
+  inputs,
   config,
   pkgs,
   ...
@@ -39,8 +40,11 @@ in
     };
     startWithUserSession = true;
   };
-  xdg.configFile."doom" = {
-    source = config.lib.hm.mkFlakeSymlink ./doom;
-    recursive = true;
+  xdg.configFile = {
+    "doom" = {
+      source = config.lib.hm.mkFlakeSymlink ./doom;
+      recursive = true;
+    };
+    "emacs/.local/alarm.wav".source = "${inputs.self}/assets/audio/alarm.wav";
   };
 }
