@@ -1,14 +1,13 @@
 {
-  inputs,
   config,
   lib,
-  pkgs,
   ...
 }:
 {
   imports = [
     ../lib/hm.nix
     ./font
+    ./nix.nix
     ./nixgl.nix
     ./profiles
     ./programs
@@ -35,19 +34,7 @@
     };
   };
   config = {
-    _module.args.pkgs-stable = import inputs.nixpkgs-stable {
-      inherit (pkgs.stdenv.hostPlatform) system;
-      inherit (config.nixpkgs) config;
-    };
     home.stateVersion = "25.05";
     programs.home-manager.enable = true;
-    nixpkgs.config.allowUnfree = true;
-    nix = {
-      package = pkgs.nix;
-      settings.experimental-features = [
-        "nix-command"
-        "flakes"
-      ];
-    };
   };
 }
