@@ -8,12 +8,6 @@
       ["popupPanelSections", "31"]
     ],
     "toOverwrite": {
-      "filters": [
-        "www.youtube.com##ytd-browse[page-subtype=\"home\"]",
-        "www.youtube.com###related",
-        "m.youtube.com##.related-items-container",
-        "m.youtube.com##.rich-grid-single-column"
-      ],
       "filterLists": [
         "user-filters",
         "ublock-filters",
@@ -35,7 +29,8 @@
         "CHN-0",
         "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt",
         "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/porn/hosts",
-        "https://raw.githubusercontent.com/gijsdev/ublock-hide-yt-shorts/master/list.txt"
+        "https://raw.githubusercontent.com/gijsdev/ublock-hide-yt-shorts/master/list.txt",
+        "https://raw.githubusercontent.com/hey2022/filterlist/main/filterlist.txt"
       ]
     }
   }
