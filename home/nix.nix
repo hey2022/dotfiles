@@ -6,9 +6,6 @@
 }:
 
 {
-  nixpkgs.overlays = [
-    (import ../pkgs/default.nix)
-  ];
   sops.secrets.nix-access-tokens = {
     sopsFile = "${inputs.self}/secrets/nix-access-tokens";
     format = "binary";

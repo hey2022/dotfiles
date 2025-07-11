@@ -99,6 +99,7 @@
     }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; } {
       imports = [
+        ./flake-modules/pkgs.nix
         ./flake-modules/treefmt.nix
       ];
       systems = [
@@ -127,6 +128,9 @@
             import (config.packages.${system}.nixpkgs-patched) {
               inherit system;
               config = import ./common/nixpkgs.nix;
+              overlays = [
+                (final: prev: builtins.mapAttrs (_: package: package) config.packages.${system})
+              ];
             };
 
           mkNixosSystem =
