@@ -92,7 +92,6 @@
     {
       flake-parts,
       nixpkgs,
-      disko,
       home-manager,
       ...
     }@inputs:
@@ -160,7 +159,7 @@
 
             goon = mkNixosSystem "x86_64-linux" [
               ./hosts/goon/configuration.nix
-              disko.nixosModules.default
+              inputs.disko.nixosModules.default
             ];
           };
 
