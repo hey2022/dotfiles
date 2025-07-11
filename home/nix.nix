@@ -6,6 +6,10 @@
 }:
 
 {
+  imports = [
+    inputs.nur.modules.homeManager.default
+    inputs.nix-index-database.hmModules.nix-index
+  ];
   sops.secrets.nix-access-tokens = {
     sopsFile = "${inputs.self}/secrets/nix-access-tokens";
     format = "binary";

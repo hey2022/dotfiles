@@ -93,7 +93,6 @@
       flake-parts,
       nixpkgs,
       disko,
-      nur,
       home-manager,
       ...
     }@inputs:
@@ -168,14 +167,10 @@
           homeConfigurations = {
             "yiheng@desktop" = mkHomeConfig "x86_64-linux" [
               ./hosts/desktop/home.nix
-              nur.modules.homeManager.default
-              inputs.nix-index-database.hmModules.nix-index
             ];
 
             "yiheng@goon" = mkHomeConfig "x86_64-linux" [
               ./hosts/goon/home.nix
-              nur.modules.homeManager.default
-              inputs.nix-index-database.hmModules.nix-index
             ];
           };
         };
