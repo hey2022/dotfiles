@@ -12,8 +12,8 @@ rustPlatform.buildRustPackage rec {
   src = fetchFromGitHub {
     owner = "aulimaru";
     repo = "cliprust";
-    rev = "b14a6a9aef00c567ff36bf88f706d9b25bd13e3d";
-    hash = "sha256-Wilh/c89imuLFWNI94icS2pcRGCBaPkNz2HdDxd+gCk=";
+    rev = "25c46cedeecef32dec94fa2ffb57b30cddce1e05";
+    hash = "sha256-Ognk4bckhIakkO75NfifYjq4b+AYk1cEkKHZGraIFrU=";
   };
 
   cargoHash = "sha256-dKJyrKlgrH3iidD+btv5t7wPpHOtw4BnYN+uGSKKxJM=";
