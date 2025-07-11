@@ -115,12 +115,7 @@
           packages.home-manager-patched = pkgs.applyPatches {
             name = "home-manager-patched";
             src = home-manager;
-            patches = [
-              (pkgs.fetchpatch {
-                url = "https://patch-diff.githubusercontent.com/raw/nix-community/home-manager/pull/7431.patch";
-                sha256 = "sha256-7yHOroGKiRLddhcOv+c8a0iKV3z6hN5KL01dw7f76zQ=";
-              })
-            ];
+            patches = [ ];
           };
         };
 
