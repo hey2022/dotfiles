@@ -101,11 +101,18 @@
       imports = [
         ./flake-modules/treefmt.nix
       ];
-      systems = [ "x86_64-linux" ];
-      flake =
-        let
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          home-manager-patched = pkgs.applyPatches {
+      systems = [
+        "x86_64-linux"
+      ];
+      perSystem =
+        { pkgs, ... }:
+        {
+          packages.nixpkgs-patched = pkgs.applyPatches {
+            name = "nixpkgs-patched";
+            src = nixpkgs;
+            patches = [ ];
+          };
+          packages.home-manager-patched = pkgs.applyPatches {
             name = "home-manager-patched";
             src = home-manager;
             patches = [
@@ -115,47 +122,62 @@
               })
             ];
           };
-          home-manager' = import home-manager-patched { };
+        };
+
+      flake =
+        { config, ... }:
+        let
+          mkNixpkgs =
+            system:
+            import (config.packages.${system}.nixpkgs-patched) {
+              inherit system;
+              config = import ./common/nixpkgs.nix;
+            };
+
+          mkNixosSystem =
+            system: modules:
+            nixpkgs.lib.nixosSystem {
+              inherit system;
+              pkgs = mkNixpkgs system;
+              specialArgs = { inherit inputs; };
+              modules = modules;
+            };
+
+          mkHomeConfig =
+            system: modules:
+            let
+              home-manager' = import (config.packages.${system}.home-manager-patched) { };
+            in
+            home-manager'.lib.homeManagerConfiguration {
+              pkgs = mkNixpkgs system;
+              modules = modules;
+              extraSpecialArgs = { inherit inputs; };
+            };
         in
         {
           nixosConfigurations = {
-            desktop = nixpkgs.lib.nixosSystem {
-              system = "x86_64-linux";
-              specialArgs = { inherit inputs; };
-              modules = [ ./hosts/desktop/configuration.nix ];
-            };
-            goon = nixpkgs.lib.nixosSystem {
-              system = "x86_64-linux";
-              specialArgs = { inherit inputs; };
-              modules = [
-                ./hosts/goon/configuration.nix
-                disko.nixosModules.default
-              ];
-            };
+            desktop = mkNixosSystem "x86_64-linux" [
+              ./hosts/desktop/configuration.nix
+            ];
+
+            goon = mkNixosSystem "x86_64-linux" [
+              ./hosts/goon/configuration.nix
+              disko.nixosModules.default
+            ];
           };
+
           homeConfigurations = {
-            "yiheng@desktop" = home-manager'.lib.homeManagerConfiguration {
-              pkgs = nixpkgs.legacyPackages.x86_64-linux;
-              modules = [
-                ./hosts/desktop/home.nix
-                nur.modules.homeManager.default
-                inputs.nix-index-database.hmModules.nix-index
-              ];
-              extraSpecialArgs = {
-                inherit inputs;
-              };
-            };
-            "yiheng@goon" = home-manager'.lib.homeManagerConfiguration {
-              pkgs = nixpkgs.legacyPackages.x86_64-linux;
-              modules = [
-                ./hosts/goon/home.nix
-                nur.modules.homeManager.default
-                inputs.nix-index-database.hmModules.nix-index
-              ];
-              extraSpecialArgs = {
-                inherit inputs;
-              };
-            };
+            "yiheng@desktop" = mkHomeConfig "x86_64-linux" [
+              ./hosts/desktop/home.nix
+              nur.modules.homeManager.default
+              inputs.nix-index-database.hmModules.nix-index
+            ];
+
+            "yiheng@goon" = mkHomeConfig "x86_64-linux" [
+              ./hosts/goon/home.nix
+              nur.modules.homeManager.default
+              inputs.nix-index-database.hmModules.nix-index
+            ];
           };
         };
     };

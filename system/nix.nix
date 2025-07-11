@@ -28,5 +28,4 @@
       !include ${config.sops.secrets.nix-access-tokens.path}
     '';
   };
-  nixpkgs.config.allowUnfree = true;
 }
