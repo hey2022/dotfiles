@@ -5,7 +5,7 @@
 }:
 
 {
-  flake.flake-utils = system: rec {
+  flake.build = system: rec {
     mkNixpkgs = import (self.packages.${system}.nixpkgs-patched) {
       inherit system;
       config = import ../common/nixpkgs.nix;
@@ -13,14 +13,14 @@
         (final: prev: builtins.mapAttrs (_: package: package) self.packages.${system})
       ];
     };
-    mkNixosSystem =
+    mkSystem =
       modules:
       inputs.nixpkgs.lib.nixosSystem {
         inherit system modules;
         pkgs = mkNixpkgs;
         specialArgs = { inherit inputs; };
       };
-    mkHomeConfig =
+    mkHome =
       modules:
       let
         home-manager' = import (self.packages.${system}.home-manager-patched) { };

@@ -1,11 +1,11 @@
 { self, ... }:
 
 {
-  flake.nixosConfigurations.desktop = (self.flake-utils "x86_64-linux").mkNixosSystem [
+  flake.nixosConfigurations.desktop = (self.build "x86_64-linux").mkSystem [
     ./configuration.nix
   ];
 
-  flake.homeConfigurations."yiheng@desktop" = (self.flake-utils "x86_64-linux").mkHomeConfig [
+  flake.homeConfigurations."yiheng@desktop" = (self.build "x86_64-linux").mkHome [
     ./home.nix
   ];
 }
