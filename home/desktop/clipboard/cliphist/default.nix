@@ -14,5 +14,6 @@
       package = pkgs.cliprust;
       extraOptions = [ ];
     };
+    xdg.configFile."cliprust/config.toml".source = config.lib.hm.mkFlakeSymlink ./config.toml;
   };
 }

@@ -1,0 +1,5 @@
+db_dir_path = ".local/share/cliprust"
+max_dedupe_depth = 100
+max_items = 750
+preview_width = 100
+generate_thumb = true
