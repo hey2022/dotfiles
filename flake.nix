@@ -97,8 +97,8 @@
     }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; } {
       imports = [
-        ./flake-modules/pkgs.nix
-        ./flake-modules/treefmt.nix
+        ./flake-modules
+        ./hosts
       ];
       systems = [
         "x86_64-linux"
@@ -115,62 +115,6 @@
             name = "home-manager-patched";
             src = home-manager;
             patches = [ ];
-          };
-        };
-
-      flake =
-        { config, ... }:
-        let
-          mkNixpkgs =
-            system:
-            import (config.packages.${system}.nixpkgs-patched) {
-              inherit system;
-              config = import ./common/nixpkgs.nix;
-              overlays = [
-                (final: prev: builtins.mapAttrs (_: package: package) config.packages.${system})
-              ];
-            };
-
-          mkNixosSystem =
-            system: modules:
-            nixpkgs.lib.nixosSystem {
-              inherit system;
-              inherit modules;
-              pkgs = mkNixpkgs system;
-              specialArgs = { inherit inputs; };
-            };
-
-          mkHomeConfig =
-            system: modules:
-            let
-              home-manager' = import (config.packages.${system}.home-manager-patched) { };
-            in
-            home-manager'.lib.homeManagerConfiguration {
-              inherit modules;
-              pkgs = mkNixpkgs system;
-              extraSpecialArgs = { inherit inputs; };
-            };
-        in
-        {
-          nixosConfigurations = {
-            desktop = mkNixosSystem "x86_64-linux" [
-              ./hosts/desktop/configuration.nix
-            ];
-
-            goon = mkNixosSystem "x86_64-linux" [
-              ./hosts/goon/configuration.nix
-              inputs.disko.nixosModules.default
-            ];
-          };
-
-          homeConfigurations = {
-            "yiheng@desktop" = mkHomeConfig "x86_64-linux" [
-              ./hosts/desktop/home.nix
-            ];
-
-            "yiheng@goon" = mkHomeConfig "x86_64-linux" [
-              ./hosts/goon/home.nix
-            ];
           };
         };
     };
