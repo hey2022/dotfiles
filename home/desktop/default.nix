@@ -5,7 +5,7 @@
     ../font
     ./activitywatch.nix
     ./catppuccin.nix
-    ./copyq.nix
+    ./clipboard
     ./fcitx5.nix
     ./gammastep.nix
     ./gtk.nix

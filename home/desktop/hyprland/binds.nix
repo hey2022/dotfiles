@@ -122,8 +122,8 @@ in
         "$mod, space, exec, ${toggle "fuzzel"} --launch-prefix='uwsm-app -- '"
         "$mod SHIFT, space, exec, pkill fuzzel || fd -t file | fuzzel -d | xargs -d '\\n' uwsm-app -- xdg-open"
 
-        # copyq
-        "$mod, C, exec, copyq toggle"
+        # clipboard
+        "$mod, C, exec, cliprust list | fuzzel -d | cliprust decode | wl-copy"
 
         # swaync
         "$mod, N, exec, swaync-client -t"

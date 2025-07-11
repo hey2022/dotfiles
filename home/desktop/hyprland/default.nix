@@ -39,6 +39,7 @@
       wlogout.enable = true;
     };
     services = {
+      cliphist.enable = true;
       gammastep.enable = true;
       hypridle.enable = true;
       swaync.enable = true;
