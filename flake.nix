@@ -135,9 +135,9 @@
             system: modules:
             nixpkgs.lib.nixosSystem {
               inherit system;
+              inherit modules;
               pkgs = mkNixpkgs system;
               specialArgs = { inherit inputs; };
-              modules = modules;
             };
 
           mkHomeConfig =
@@ -146,8 +146,8 @@
               home-manager' = import (config.packages.${system}.home-manager-patched) { };
             in
             home-manager'.lib.homeManagerConfiguration {
+              inherit modules;
               pkgs = mkNixpkgs system;
-              modules = modules;
               extraSpecialArgs = { inherit inputs; };
             };
         in
