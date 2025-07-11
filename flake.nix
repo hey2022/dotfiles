@@ -103,19 +103,5 @@
       systems = [
         "x86_64-linux"
       ];
-      perSystem =
-        { pkgs, ... }:
-        {
-          packages.nixpkgs-patched = pkgs.applyPatches {
-            name = "nixpkgs-patched";
-            src = nixpkgs;
-            patches = [ ];
-          };
-          packages.home-manager-patched = pkgs.applyPatches {
-            name = "home-manager-patched";
-            src = home-manager;
-            patches = [ ];
-          };
-        };
     };
 }
