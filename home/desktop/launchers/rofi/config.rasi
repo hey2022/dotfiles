@@ -1,0 +1,9 @@
+@theme "custom"
+
+configuration {
+  modes: "window,drun,run,recursivebrowser";
+  run-command: "uwsm-app -- {cmd}";
+  recursivebrowser {
+    command: "uwsm-app -- xdg-open";
+  }
+}

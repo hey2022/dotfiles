@@ -119,11 +119,11 @@ in
         # "$mod SHIFT, T, exec, hyprctl activewindow -j | jq '.pid' | xargs mullvad split-tunnel delete"
 
         # launcher
-        "$mod, space, exec, ${toggle "fuzzel"} --launch-prefix='uwsm-app -- '"
-        "$mod SHIFT, space, exec, pkill fuzzel || fd -t file | fuzzel -d | xargs -d '\\n' uwsm-app -- xdg-open"
+        "$mod, space, exec, ${toggle "rofi"} -show drun"
+        "$mod SHIFT, space, exec, ${toggle "rofi"} -show recursivebrowser"
 
         # clipboard
-        "$mod, C, exec, cliprust list | fuzzel -d | cliprust decode | wl-copy"
+        "$mod, C, exec, pkill rofi || cliprust list | rofi -dmenu | cliprust decode | wl-copy"
 
         # swaync
         "$mod, N, exec, swaync-client -t"
