@@ -7,6 +7,7 @@
 {
   home.packages = with pkgs; [
     deadnix
+    flake-checker
     inputs.nix-alien.packages.${system}.nix-alien
     nh
     nix-init
