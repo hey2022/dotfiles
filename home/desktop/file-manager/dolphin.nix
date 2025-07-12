@@ -2,9 +2,9 @@
 {
   nixpkgs.overlays = [
     # https://github.com/rumboon/dolphin-overlay
-    (final: prev: {
+    (_final: prev: {
       kdePackages = prev.kdePackages.overrideScope (
-        kfinal: kprev: {
+        _kfinal: kprev: {
           dolphin = kprev.dolphin.overrideAttrs (oldAttrs: {
             nativeBuildInputs = (oldAttrs.nativeBuildInputs or [ ]) ++ [ prev.makeWrapper ];
             postInstall =

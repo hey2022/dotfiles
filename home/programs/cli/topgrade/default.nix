@@ -1,6 +1,6 @@
 { config, ... }:
 let
-  topgrade-overlay = final: prev: {
+  topgrade-overlay = _final: prev: {
     topgrade = prev.topgrade.overrideAttrs (old: {
       patches = (old.patches or [ ]) ++ [
         # TODO: remove once merged into nixpkgs https://github.com/topgrade-rs/topgrade/pull/1214

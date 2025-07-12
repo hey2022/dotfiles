@@ -10,7 +10,7 @@
       inherit system;
       config = import ../common/nixpkgs.nix;
       overlays = [
-        (final: prev: builtins.mapAttrs (_: package: package) self.packages.${system})
+        (_final: _prev: builtins.mapAttrs (_: package: package) self.packages.${system})
       ];
     };
     mkSystem =

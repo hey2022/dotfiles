@@ -91,8 +91,6 @@
   outputs =
     {
       flake-parts,
-      nixpkgs,
-      home-manager,
       ...
     }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; } {
