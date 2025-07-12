@@ -27,6 +27,9 @@ in
     wayland.windowManager.hyprland = {
       hy3 = lib.mkEnableOption "hy3";
       uwsm = lib.mkEnableOption "uwsm";
+      term = lib.mkPackageOption pkgs "terminal" {
+        default = "kitty";
+      };
     };
   };
   config = {
@@ -35,6 +38,7 @@ in
       systemd.enable = false;
       hy3 = true;
       uwsm = true;
+      term = config.programs.ghostty.package;
     };
     home.packages = [
       inputs.hyprland-contrib.packages.${pkgs.system}.grimblast

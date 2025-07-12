@@ -1,8 +1,9 @@
-{ config, ... }:
+{ config, lib, ... }:
 let
+  cfg = config.wayland.windowManager.hyprland;
   toggle = program: "pkill ${program} || uwsm-app -- ${program}";
   runOnce = program: "pgrep ${program} || uwsm-app -- ${program}";
-  inherit (config.wayland.windowManager.hyprland) hy3;
+  inherit (cfg) hy3;
   hy3Prefix = if hy3 then "hy3:" else "";
 in
 {
@@ -10,12 +11,10 @@ in
     "$menu" = "wofi --show drun";
     "$mod" = "SUPER";
     "$playerctl" = "playerctl -p Feishin,%any";
-    "$term" = "ghostty";
-
     bind =
       [
         # programs
-        "$mod, Return, exec, uwsm-app -- $term"
+        "$mod, Return, exec, uwsm-app -- ${lib.getExe cfg.term}"
         "$mod SHIFT, Return, exec, uwsm-app -- emacsclient -c"
         "$mod, E, exec, uwsm-app -- cosmic-files"
 

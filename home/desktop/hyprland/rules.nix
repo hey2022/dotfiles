@@ -1,7 +1,11 @@
-_: {
+{ config, lib, ... }:
+let
+  cfg = config.wayland.windowManager.hyprland;
+in
+{
   wayland.windowManager.hyprland.settings = {
     workspace = [
-      "special:scratchpad, gapsout:100, on-created-empty:$term"
+      "special:scratchpad, gapsout:100, on-created-empty:${lib.getExe cfg.term}"
     ];
 
     windowrulev2 = [
