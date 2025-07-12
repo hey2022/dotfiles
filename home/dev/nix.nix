@@ -6,6 +6,7 @@
 }:
 {
   home.packages = with pkgs; [
+    deadnix
     inputs.nix-alien.packages.${system}.nix-alien
     nh
     nix-init
@@ -17,6 +18,7 @@
     nixfmt-rfc-style
     nixpkgs-review
     nurl
+    statix
     steam-run-free
   ];
   programs.nix-index-database.comma.enable = true;
