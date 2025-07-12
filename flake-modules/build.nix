@@ -12,7 +12,12 @@
       nixpkgs-patched = pkgs.applyPatches {
         name = "nixpkgs-patched";
         src = inputs.nixpkgs;
-        patches = [ ];
+        patches = [
+          (pkgs.fetchpatch2 {
+            url = "https://github.com/NixOS/nixpkgs/pull/424156.patch";
+            sha256 = "sha256-zgWWtMHlPGA6Ootu6LPa4nsWu+eJ5wTzW7nxdqS/Xb4=";
+          })
+        ];
       };
       home-manager-patched = pkgs.applyPatches {
         name = "home-manager-patched";
