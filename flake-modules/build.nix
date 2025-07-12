@@ -5,7 +5,7 @@
 }:
 
 {
-  flake.build = system: rec {
+  flake.lib.build = system: rec {
     mkNixpkgs = import self.packages.${system}.nixpkgs-patched {
       inherit system;
       config = import ../common/nixpkgs.nix;
