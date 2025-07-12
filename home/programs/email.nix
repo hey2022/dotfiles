@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   accounts.email.accounts = {
     "yiheng.he@proton.me" = {
@@ -61,7 +61,7 @@
       WantedBy = [ "default.target" ];
     };
     Service = {
-      ExecStart = "${pkgs.hydroxide}/bin/hydroxide --carddav-port 5232 serve";
+      ExecStart = "${lib.getExe pkgs.hydroxide} --carddav-port 5232 serve";
       Restart = "always";
     };
   };
