@@ -43,7 +43,6 @@ in
     home.packages = [
       inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
     ] ++ lib.optionals cfg.uwsm [ pkgs.uwsm ];
-    home.sessionVariables.NIXOS_OZONE_WL = "1";
     programs = {
       rofi.enable = true;
       ghostty.enable = true;
