@@ -13,7 +13,7 @@ let
     }:
     lib.mkIf config.services.${name}.enable (
       {
-        icon = icon;
+        inherit icon;
         href = url;
       }
       // lib.optionalAttrs (attrs ? widget) {

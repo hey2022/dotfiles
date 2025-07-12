@@ -6,7 +6,7 @@
 
 {
   flake.build = system: rec {
-    mkNixpkgs = import (self.packages.${system}.nixpkgs-patched) {
+    mkNixpkgs = import self.packages.${system}.nixpkgs-patched {
       inherit system;
       config = import ../common/nixpkgs.nix;
       overlays = [
@@ -23,7 +23,7 @@
     mkHome =
       modules:
       let
-        home-manager' = import (self.packages.${system}.home-manager-patched) { };
+        home-manager' = import self.packages.${system}.home-manager-patched { };
       in
       home-manager'.lib.homeManagerConfiguration {
         inherit modules;

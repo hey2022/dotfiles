@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 let
-  buildFirefoxXpiAddon = pkgs.nur.repos.rycee.firefox-addons.buildFirefoxXpiAddon;
+  inherit (pkgs.nur.repos.rycee.firefox-addons) buildFirefoxXpiAddon;
   callPackage =
     path: args:
     pkgs.callPackage path (

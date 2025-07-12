@@ -1,5 +1,4 @@
-{ ... }:
-{
+_: {
   services.wluma = {
     settings = {
       als.time = {

@@ -2,7 +2,7 @@
 let
   toggle = program: "pkill ${program} || uwsm-app -- ${program}";
   runOnce = program: "pgrep ${program} || uwsm-app -- ${program}";
-  hy3 = config.wayland.windowManager.hyprland.hy3;
+  inherit (config.wayland.windowManager.hyprland) hy3;
   hy3Prefix = if hy3 then "hy3:" else "";
 in
 {

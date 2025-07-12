@@ -1,5 +1,4 @@
-{ ... }:
-{
+_: {
   programs.jujutsu = {
     enable = false;
     settings = {

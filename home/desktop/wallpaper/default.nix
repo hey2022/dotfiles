@@ -1,15 +1,13 @@
 { pkgs, lib, ... }:
 let
-  wallpaper-updater = (
-    pkgs.writeShellApplication {
-      name = "wallpaper-updater";
-      runtimeInputs = with pkgs; [
-        coreutils
-        git
-      ];
-      text = builtins.readFile ./wallpaper-updater.sh;
-    }
-  );
+  wallpaper-updater = pkgs.writeShellApplication {
+    name = "wallpaper-updater";
+    runtimeInputs = with pkgs; [
+      coreutils
+      git
+    ];
+    text = builtins.readFile ./wallpaper-updater.sh;
+  };
 in
 {
   imports = [

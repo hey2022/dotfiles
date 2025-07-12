@@ -1,5 +1,4 @@
-{ ... }:
-{
+_: {
   home.sessionVariables = {
     fish_greeting = "";
   };

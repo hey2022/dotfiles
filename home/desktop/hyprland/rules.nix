@@ -1,5 +1,4 @@
-{ ... }:
-{
+_: {
   wayland.windowManager.hyprland.settings = {
     workspace = [
       "special:scratchpad, gapsout:100, on-created-empty:$term"

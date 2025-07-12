@@ -1,5 +1,4 @@
-{ ... }:
-{
+_: {
   services.gammastep = {
     temperature = {
       day = 6500;

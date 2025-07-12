@@ -17,7 +17,7 @@ in
       Type = "simple";
       ExecStart = "${
         pkgs.writeShellApplication {
-          name = name;
+          inherit name;
           runtimeInputs = [
             pkgs.systemd
             pkgs.playerctl

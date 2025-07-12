@@ -1,4 +1,4 @@
-{ ... }:
+_:
 let
   spoofed-mac-address = "B4:AD:A3:F8:84:05";
 in
