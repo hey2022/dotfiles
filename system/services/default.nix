@@ -1,6 +1,7 @@
 { ... }:
 {
   imports = [
+    ./ai
     ./automount.nix
     ./fail2ban.nix
     ./iperf.nix
