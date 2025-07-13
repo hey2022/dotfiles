@@ -1,11 +1,9 @@
 {
   home.shellAliases = {
     eza = "eza --icons";
-    ls = "eza";
-    la = "eza -lag";
-    ll = "eza -lg";
+    ll = "ls -l";
+    la = "ls -la";
     cd = "z";
-    cat = "bat -p";
     ec = "emacsclient -nw";
     ff = "fastfetch";
     uctl = "systemctl --user";

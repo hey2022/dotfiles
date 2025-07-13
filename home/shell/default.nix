@@ -5,6 +5,7 @@
     ./direnv.nix
     ./env.nix
     ./fish
+    ./nushell
     ./pay-respects.nix
     ./scripts
     ./starship.nix
