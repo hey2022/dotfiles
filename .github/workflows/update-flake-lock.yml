@@ -17,6 +17,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: DeterminateSystems/nix-installer-action@main
       - uses: DeterminateSystems/update-flake-lock@main
+        id: update
         with:
           pr-title: "Update Nix flake inputs"
           pr-labels: |
@@ -24,3 +25,6 @@ jobs:
             automated
           commit-msg: "flake: update inputs"
           token: ${{ secrets.UPDATE_FLAKE_LOCK }}
+      - run: "gh pr merge --auto --merge ${{ steps.update.outputs.pull-request-number }}"
+        env:
+          GH_TOKEN: ${{ secrets.UPDATE_FLAKE_LOCK }}
