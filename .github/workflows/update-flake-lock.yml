@@ -15,6 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - uses: DeterminateSystems/nix-installer-action@main
       - uses: DeterminateSystems/update-flake-lock@main
         id: update
@@ -25,6 +27,7 @@ jobs:
             automated
           commit-msg: "flake: update inputs"
           token: ${{ secrets.UPDATE_FLAKE_LOCK }}
-      - run: "gh pr merge --auto --squash ${{ steps.update.outputs.pull-request-number }}"
+        run: "gh pr merge --auto --squash ${PULL_REQUEST_NUMBER}"
         env:
           GH_TOKEN: ${{ secrets.UPDATE_FLAKE_LOCK }}
+          PULL_REQUEST_NUMBER: ${{ steps.update.outputs.pull-request-number }}
