@@ -7,6 +7,7 @@
 }:
 {
   imports = [
+    ./auto-upgrade.nix
     ./bluetooth.nix
     ./boot
     ./dev
