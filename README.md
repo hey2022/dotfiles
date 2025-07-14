@@ -2,4 +2,13 @@
 
 <h1 align="center">hey2022/dotfiles</h1>
 
-My NixOS and Home-Manager configuration.
+Cooked configs for NixOS and Home-Manager using [flake-parts](https://github.com/hercules-ci/flake-parts).
+
+See an overview of the flake outputs by running
+`nix flake show github:hey2022/dotfiles`.
+
+# Resources
+
+Other configurations from where I have stolen from.
+
+- [fufexan/dotfiles](https://github.com/fufexan/dotfiles)
