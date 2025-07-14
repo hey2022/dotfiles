@@ -25,6 +25,6 @@ jobs:
             automated
           commit-msg: "flake: update inputs"
           token: ${{ secrets.UPDATE_FLAKE_LOCK }}
-      - run: "gh pr merge --auto --merge ${{ steps.update.outputs.pull-request-number }}"
+      - run: "gh pr merge --auto --squash ${{ steps.update.outputs.pull-request-number }}"
         env:
           GH_TOKEN: ${{ secrets.UPDATE_FLAKE_LOCK }}
