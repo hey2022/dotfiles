@@ -8,7 +8,7 @@
 {
   imports = [
     inputs.nur.modules.homeManager.default
-    inputs.nix-index-database.hmModules.nix-index
+    inputs.nix-index-database.homeModules.nix-index
   ];
   sops.secrets.nix-access-tokens = {
     sopsFile = "${inputs.self}/secrets/nix-access-tokens";
