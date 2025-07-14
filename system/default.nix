@@ -26,6 +26,7 @@
     ./sops-nix.nix
     ./ssh.nix
     ./virtualisation
+    inputs.nix-topology.nixosModules.default
   ];
   options = {
     host.laptop = lib.mkOption {
