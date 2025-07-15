@@ -14,7 +14,7 @@
   profiles = {
     gaming.enable = false;
     entertainment = {
-      anime.enable = true;
+      anime.enable = false;
     };
   };
 }
