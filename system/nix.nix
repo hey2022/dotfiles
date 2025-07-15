@@ -3,6 +3,7 @@
   imports = [ inputs.determinate.nixosModules.default ];
   nix = {
     settings = {
+      lazy-trees = true;
       download-buffer-size = 1073741824;
       keep-going = true;
       experimental-features = [
