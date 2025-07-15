@@ -18,6 +18,7 @@
     };
     targets = {
       fuzzel.enable = true;
+      gtk.enable = true;
       wezterm.enable = true;
     };
   };
