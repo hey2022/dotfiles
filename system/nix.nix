@@ -1,5 +1,6 @@
-{ config, ... }:
+{ inputs, config, ... }:
 {
+  imports = [ inputs.determinate.nixosModules.default ];
   nix = {
     settings = {
       download-buffer-size = 1073741824;
