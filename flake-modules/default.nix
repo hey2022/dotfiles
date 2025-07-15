@@ -3,9 +3,9 @@
 {
   imports = [
     ./build.nix
+    ./nix-topology.nix
     ./pkgs.nix
     ./treefmt.nix
-    ./nix-topology.nix
     inputs.home-manager.flakeModules.home-manager
   ];
 }
