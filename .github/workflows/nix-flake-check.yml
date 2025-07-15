@@ -15,5 +15,7 @@ jobs:
         with:
           persist-credentials: false
       - uses: DeterminateSystems/determinate-nix-action@v3
+        with:
+          extra-conf: lazy-trees = true
       - uses: DeterminateSystems/magic-nix-cache-action@main
       - run: nix flake check
