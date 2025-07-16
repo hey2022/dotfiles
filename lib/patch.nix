@@ -20,6 +20,11 @@ let
       url = "https://github.com/NixOS/nixpkgs/pull/425299.patch";
       sha256 = "sha256-eixt+0nHxoRMMj+Js/wy8E/PWC41L9kgUAasAGH6Ua4=";
     })
+    # https://nixpk.gs/pr-tracker.html?pr=425710
+    (pkgs.fetchpatch2 {
+      url = "https://github.com/NixOS/nixpkgs/pull/425710.patch";
+      sha256 = "sha256-KfDo2EABueN2QQVCdQvk2gQV4bgB+LJV3oULqTe05Oo=";
+    })
   ];
   home-manager-patches = [ ];
   nixpkgs-patched =
