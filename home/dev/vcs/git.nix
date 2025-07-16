@@ -1,9 +1,10 @@
-_: {
+{
   programs = {
     git = {
       enable = true;
       userEmail = "yiheng.he@proton.me";
       userName = "Yiheng He";
+      lfs.enable = true;
       extraConfig = {
         branch.sort = "-committerdate";
         column.ui = "auto";
