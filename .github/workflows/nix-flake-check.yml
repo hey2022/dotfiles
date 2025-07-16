@@ -18,4 +18,4 @@ jobs:
         with:
           extra-conf: lazy-trees = true
       - uses: DeterminateSystems/magic-nix-cache-action@main
-      - run: nix flake check --no-build
+      - run: nix flake check --no-build --show-trace
