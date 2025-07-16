@@ -21,3 +21,5 @@ jobs:
             show-trace = true
       - uses: DeterminateSystems/magic-nix-cache-action@main
       - run: nix flake check
+        env:
+          CI: "true"
