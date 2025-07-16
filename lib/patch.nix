@@ -10,6 +10,7 @@ let
     inherit system;
   };
   nixpkgs-patches = [
+    # https://nixpk.gs/pr-tracker.html?pr=424156
     (pkgs.fetchpatch2 {
       url = "https://github.com/NixOS/nixpkgs/pull/424156.diff";
       sha256 = "sha256-eHVynJDZWnaNKakkq1MkdIAr1pxCcMxIW15KGzqNJgo=";
