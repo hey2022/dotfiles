@@ -8,6 +8,7 @@
   home.packages = with pkgs; [
     deadnix
     flake-checker
+    hydra-check
     inputs.nix-alien.packages.${system}.nix-alien
     nh
     nix-init
