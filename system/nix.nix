@@ -6,6 +6,7 @@
       lazy-trees = true;
       download-buffer-size = 1073741824;
       keep-going = true;
+      show-trace = true;
       experimental-features = [
         "nix-command"
         "flakes"
