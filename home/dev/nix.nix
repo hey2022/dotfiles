@@ -13,7 +13,7 @@
     nh
     nix-init
     nix-melt
-    nix-search-cli
+    nix-search-tv
     nix-tree
     nix-update
     nixd
