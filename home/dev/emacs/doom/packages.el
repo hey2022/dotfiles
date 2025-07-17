@@ -46,7 +46,7 @@
 
 (package! envrc)
 
-(package! difftastic)
+;; (package! difftastic)
 
 (package! catppuccin-theme)
 

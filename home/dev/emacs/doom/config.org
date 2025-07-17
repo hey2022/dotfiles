@@ -611,7 +611,7 @@ and `defcustom' forms reset their default values."
 #+end_src
 
 ** difftastic
-#+begin_src emacs-lisp
+#+begin_src emacs-lisp :tangle no
 (use-package! difftastic
   :after magit
   :config

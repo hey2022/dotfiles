@@ -49,7 +49,7 @@
       signing = {
         signByDefault = true;
       };
-      difftastic = {
+      delta = {
         enable = true;
       };
     };
