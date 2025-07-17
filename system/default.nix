@@ -7,6 +7,7 @@
 }:
 {
   imports = [
+    ../modules/nixos
     ./auto-upgrade.nix
     ./bluetooth.nix
     ./boot
