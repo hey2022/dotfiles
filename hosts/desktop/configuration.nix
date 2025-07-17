@@ -7,6 +7,7 @@
   imports = [
     ./hardware-configuration.nix
     ./sops.nix
+    ./cloudflared.nix
     ../../system
     ../../system/desktop/hyprland.nix
     ../../system/programs/utilities
@@ -17,11 +18,7 @@
 
   networking.hostName = "desktop";
 
-  host.address = "hey2022.duckdns.org";
-  services.caddy.globalConfig = ''
-    acme_dns duckdns {env.DUCKDNS_TOKEN}
-  '';
-
+  host.address = "hey2022.dev";
   time.timeZone = "Asia/Shanghai";
 
   users.users.yiheng = {
