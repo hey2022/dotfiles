@@ -7,7 +7,7 @@ Cooked configs for NixOS and Home-Manager using [flake-parts](https://github.com
 See an overview of the flake outputs by running
 `nix flake show github:hey2022/dotfiles`.
 
-# Resources
+## Resources
 
 Other configurations where I have stolen from.
 
