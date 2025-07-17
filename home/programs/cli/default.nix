@@ -6,6 +6,7 @@
     ./beets.nix
     ./fzf.nix
     ./network.nix
+    ./television
     ./topgrade
     ./yazi.nix
     ./yt-dlp.nix

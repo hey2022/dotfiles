@@ -4,7 +4,6 @@
     fd
   ];
   programs.fzf = {
-    enable = true;
     defaultCommand = "fd -t f";
   };
 }
