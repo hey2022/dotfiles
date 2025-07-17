@@ -8,7 +8,7 @@
   flake.lib.build =
     system:
     let
-      patched = import ../lib/patch.nix {
+      patched = import ../lib/patch {
         inherit self inputs system;
       };
     in

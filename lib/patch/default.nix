@@ -28,6 +28,8 @@ let
       url = "https://github.com/NixOS/nixpkgs/pull/425710.patch";
       sha256 = "sha256-KfDo2EABueN2QQVCdQvk2gQV4bgB+LJV3oULqTe05Oo=";
     })
+    # https://nixpk.gs/pr-tracker.html?pr=404337
+    ./cloudflared.patch
   ];
   home-manager-patches = [ ];
   nixpkgs-patched =
@@ -52,7 +54,7 @@ in
 {
   nixpkgs = import nixpkgs-patched {
     inherit system;
-    config = import ../common/nixpkgs.nix;
+    config = import "${self}/common/nixpkgs.nix";
     overlays = [
       (_final: _prev: builtins.mapAttrs (_: package: package) self.packages.${system})
     ];
