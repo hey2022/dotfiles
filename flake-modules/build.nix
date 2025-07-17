@@ -15,7 +15,7 @@
     {
       mkSystem =
         modules:
-        inputs.nixpkgs.lib.nixosSystem {
+        patched.nixosSystem {
           inherit system modules;
           pkgs = patched.nixpkgs;
           specialArgs = { inherit inputs; };
