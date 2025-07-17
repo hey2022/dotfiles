@@ -7,6 +7,17 @@ Cooked configs for NixOS and Home-Manager using [flake-parts](https://github.com
 See an overview of the flake outputs by running
 `nix flake show github:hey2022/dotfiles`.
 
+## Contents
+
+- [hosts](./hosts): Host-specific configuration
+- [system](./system): Common NixOS configurations
+- [home](./home): [Home Manager](https://github.com/nix-community/home-manager)
+  config
+- [lib](./lib): Helper functions
+- [modules/nixos](./modules/nixos): NixOS modules
+- [flake-modules](./flake-modules): Flake-part modules
+- [pkgs](./pkgs): Package definitions
+
 ## Resources
 
 Other configurations where I have stolen from.
