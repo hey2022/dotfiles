@@ -12,3 +12,4 @@ See an overview of the flake outputs by running
 Other configurations from where I have stolen from.
 
 - [fufexan/dotfiles](https://github.com/fufexan/dotfiles)
+- [Mic92/dotfiles](https://github.com/Mic92/dotfiles)
