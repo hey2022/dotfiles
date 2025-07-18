@@ -3,6 +3,7 @@
   imports = [
     ./ai
     ./automount.nix
+    ./cloudflared.nix
     ./fail2ban.nix
     ./iperf.nix
     ./kanata.nix
