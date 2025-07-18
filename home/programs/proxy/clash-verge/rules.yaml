@@ -1,4 +1,4 @@
 prepend:
-  - "DOMAIN-SUFFIX,hey2022.duckdns.org,DIRECT"
+  - "DOMAIN-SUFFIX,argotunnel.com,DIRECT"
 append: []
 delete: []
