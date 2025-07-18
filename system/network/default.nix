@@ -7,6 +7,9 @@
     ./proxy
     ./wireshark.nix
   ];
+  environment.systemPackages = with pkgs; [
+    nettools
+  ];
   networking = {
     nftables = {
       enable = true;
