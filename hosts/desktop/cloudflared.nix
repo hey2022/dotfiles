@@ -26,7 +26,18 @@
           credentialsFile = config.sops.secrets."cloudflared/credentials".path;
           certificateFile = config.sops.secrets."cloudflared/cert".path;
           ingress = lib.mapAttrs' (
-            name: _: lib.nameValuePair "${name}.${config.host.address}" "https://localhost:443"
+            name: value:
+            let
+              serviceConfig = if lib.isInt value || lib.isString value then { port = value; } else value;
+              hostname =
+                if serviceConfig.root or false then config.host.address else "${name}.${config.host.address}";
+            in
+            lib.nameValuePair hostname {
+              service = "https://localhost:443";
+              originRequest = {
+                originServerName = hostname;
+              };
+            }
           ) config.hostedServices;
         };
       };

@@ -4,10 +4,15 @@
   services.caddy = {
     enable = true;
     virtualHosts = lib.mapAttrs' (
-      name: port:
-      lib.nameValuePair "${name}.${config.host.address}" {
+      name: value:
+      let
+        serviceConfig = if lib.isInt value || lib.isString value then { port = value; } else value;
+        hostname =
+          if serviceConfig.root or false then config.host.address else "${name}.${config.host.address}";
+      in
+      lib.nameValuePair hostname {
         extraConfig = ''
-          reverse_proxy localhost:${toString port}
+          reverse_proxy localhost:${toString serviceConfig.port}
         '';
       }
     ) config.hostedServices;
