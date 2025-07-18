@@ -13,7 +13,7 @@ creation_rules:
           - *yiheng-desktop
           - *root-goon
           - *yiheng-goon
-  - path_regex: secrets/desktop/[^/]+$
+  - path_regex: secrets/desktop/.+$
     key_groups:
       - age:
           - *admin

@@ -1,13 +1,33 @@
-{ config, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
+  sops.secrets = {
+    "cloudflared/credentials" = {
+      sopsFile = ../../secrets/desktop/cloudflared/credentials.json;
+      format = "json";
+      key = "";
+    };
+    "cloudflared/cert" = {
+      sopsFile = ../../secrets/desktop/cloudflared/cert.pem;
+      format = "binary";
+    };
+  };
   services = {
     cloudflared = {
       enable = true;
       tunnels = {
-        "99843de1-f462-4f8c-bd97-e872f6c0137b" = {
+        "5a36f895-2dc4-44f6-a1c4-77635d08471d" = {
           default = "http_status:404";
-          tokenFile = config.sops.secrets.cloudflared.path;
+          credentialsFile = config.sops.secrets."cloudflared/credentials".path;
+          certificateFile = config.sops.secrets."cloudflared/cert".path;
+          ingress = lib.mapAttrs' (
+            name: _: lib.nameValuePair "${name}.${config.host.address}" "https://localhost:443"
+          ) config.hostedServices;
         };
       };
     };
