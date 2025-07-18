@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, ... }:
 {
   imports = [
     ./ai
@@ -14,4 +14,10 @@
     ./syncthing.nix
     ./tailscale.nix
   ];
+  options = {
+    hostedServices = lib.mkOption {
+      type = with lib.types; attrsOf (either ints.u16 str);
+      description = "A set of services with their names as keys and ports as values.";
+    };
+  };
 }
