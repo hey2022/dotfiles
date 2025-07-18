@@ -60,8 +60,8 @@ in
       }
       {
         search = {
-          provider = "custom";
-          url = "https://priv.au/search?q=";
+          provider = "duckduckgo";
+          showSearchSuggestions = true;
         };
       }
       {
