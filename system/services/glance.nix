@@ -75,7 +75,5 @@ in
       ];
     };
   };
-  services.caddy.virtualHosts."${config.host.address}".extraConfig = ''
-    reverse_proxy localhost:${toString cfg.settings.server.port}
-  '';
+  hostedServices.glance = cfg.settings.server.port;
 }

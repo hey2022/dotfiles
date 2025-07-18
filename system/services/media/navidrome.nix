@@ -11,9 +11,9 @@ in
     };
   };
   services.caddy.virtualHosts."navidrome.${config.host.address}".extraConfig = ''
-    reverse_proxy localhost:${toString cfg.settings.Port}
     header {
         Content-Security-Policy "frame-ancestors 'self' https://${config.host.address}"
     }
   '';
+  hostedServices.navidrome = cfg.settings.Port;
 }

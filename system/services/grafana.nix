@@ -22,7 +22,5 @@ in
       ];
     };
   };
-  services.caddy.virtualHosts."grafana.${config.host.address}".extraConfig = ''
-    reverse_proxy localhost:${toString cfg.settings.server.http_port}
-  '';
+  hostedServices.grafana = cfg.settings.server.http_port;
 }

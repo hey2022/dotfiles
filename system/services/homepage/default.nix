@@ -77,7 +77,5 @@ in
   environment.etc."homepage-dashboard/services.yaml".source = lib.mkForce (
     settingsFormat.generate "services.yaml" (convertServiceConfig cfg.services)
   );
-  services.caddy.virtualHosts."homepage.${config.host.address}".extraConfig = ''
-    reverse_proxy localhost:${toString cfg.listenPort}
-  '';
+  hostedServices.homepage = cfg.listenPort;
 }

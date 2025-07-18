@@ -8,8 +8,6 @@ in
       enable = true;
       port = 11111;
     };
-    services.caddy.virtualHosts."open-webui.${config.host.address}".extraConfig = ''
-      reverse_proxy localhost:${toString cfg.port}
-    '';
+    hostedServices.open-webui = cfg.port;
   };
 }

@@ -11,9 +11,9 @@ in
     };
   };
   services.caddy.virtualHosts."miniflux.${config.host.address}".extraConfig = ''
-    reverse_proxy localhost:${toString port}
     header {
         Content-Security-Policy "frame-ancestors 'self' https://${config.host.address}"
     }
   '';
+  hostedServices.miniflux = port;
 }
