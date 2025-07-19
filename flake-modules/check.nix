@@ -29,6 +29,6 @@
             name: config: lib.nameValuePair "home-manager-${name}" config.activation-script
           ) (self'.legacyPackages.homeConfigurations or { });
         in
-        devShells // packages // lib.optionalAttrs (!CI) (nixosMachines // homeConfigurations);
+        nixosMachines // devShells // packages // lib.optionalAttrs (!CI) homeConfigurations;
     };
 }
