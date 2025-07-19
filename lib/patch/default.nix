@@ -16,12 +16,6 @@ let
       url = "https://github.com/NixOS/nixpkgs/pull/424156.diff";
       sha256 = "sha256-eHVynJDZWnaNKakkq1MkdIAr1pxCcMxIW15KGzqNJgo=";
     })
-    # https://nixpk.gs/pr-tracker.html?pr=425710
-    (pkgs.fetchpatch2 {
-      name = "gimp: fix build with gettext 0.25";
-      url = "https://github.com/NixOS/nixpkgs/pull/425710.patch";
-      sha256 = "sha256-KfDo2EABueN2QQVCdQvk2gQV4bgB+LJV3oULqTe05Oo=";
-    })
     # https://nixpk.gs/pr-tracker.html?pr=404337
     # ./cloudflared.patch
 
