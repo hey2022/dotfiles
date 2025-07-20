@@ -17,7 +17,7 @@ let
       sha256 = "sha256-h/3F2k+oOC663rmqoYOQWBkEzaIqeeHrB8lZGUFJdWc=";
     })
     # https://nixpk.gs/pr-tracker.html?pr=404337
-    # ./cloudflared.patch
+    ./cloudflared.patch
 
     # https://nixpk.gs/pr-tracker.html?pr=423662
     ./television.patch

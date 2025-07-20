@@ -16,7 +16,7 @@ index 04a1e3c0b6d3..ba19af9eb220 100644
      github = "bnlrnz";
      githubId = 11310385;
 diff --git c/nixos/modules/services/networking/cloudflared.nix w/nixos/modules/services/networking/cloudflared.nix
-index 0a6a09dabf2b..5325988ca454 100644
+index 0a6a09dabf2b..1ca0a02ad245 100644
 --- c/nixos/modules/services/networking/cloudflared.nix
 +++ w/nixos/modules/services/networking/cloudflared.nix
 @@ -203,7 +203,8 @@ in
@@ -116,14 +116,18 @@ index 0a6a09dabf2b..5325988ca454 100644
  
      systemd.services = lib.mapAttrs' (
        name: tunnel:
-@@ -368,21 +421,29 @@ in
+@@ -367,22 +420,31 @@ in
+         serviceConfig = {
            RuntimeDirectory = "cloudflared-tunnel-${name}";
            RuntimeDirectoryMode = "0400";
-           LoadCredential = [
+-          LoadCredential = [
 -            "credentials.json:${tunnel.credentialsFile}"
-+            (lib.optional (tunnel.credentialsFile != null) ("credentials.json:${tunnel.credentialsFile}"))
-+            (lib.optional (tunnel.tokenFile != null) ("credentials.json:${tunnel.tokenFile}"))
-           ] ++ (lib.optional (certFile != null) "cert.pem:${certFile}");
+-          ] ++ (lib.optional (certFile != null) "cert.pem:${certFile}");
++          LoadCredential = lib.concatLists [
++            (lib.optional (tunnel.credentialsFile != null) "credentials.json:${tunnel.credentialsFile}")
++            (lib.optional (tunnel.tokenFile != null) "credentials.json:${tunnel.tokenFile}")
++            (lib.optional (certFile != null) "cert.pem:${certFile}")
++          ];
  
 -          ExecStart = "${cfg.package}/bin/cloudflared tunnel --config=${mkConfigFile} --no-autoupdate run";
 +          ExecStart =
