@@ -6,7 +6,7 @@
   ];
   home.packages = with pkgs; [
     corefonts
-    inter
+    inter-nerdfont
     lxgw-wenkai
     nerd-fonts.symbols-only
   ];
