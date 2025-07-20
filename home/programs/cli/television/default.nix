@@ -5,9 +5,10 @@
     enable = true;
   };
   home.packages = with pkgs; [
-    fd
     bat
+    fd
     nix-search-tv
+    ripgrep
   ];
   xdg.configFile."television/cable".source = config.lib.hm.mkFlakeSymlink ./cable;
 }
