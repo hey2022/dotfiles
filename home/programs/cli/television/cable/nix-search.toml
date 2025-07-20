@@ -8,3 +8,6 @@ command = "nix-search-tv print"
 
 [preview]
 command = "nix-search-tv preview {}"
+
+[keybindings]
+shortcut = "f3"
