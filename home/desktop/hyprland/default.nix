@@ -42,7 +42,8 @@ in
     };
     home.packages = [
       inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
-    ] ++ lib.optionals cfg.uwsm [ pkgs.uwsm ];
+    ]
+    ++ lib.optionals cfg.uwsm [ pkgs.uwsm ];
     programs = {
       rofi.enable = true;
       ghostty.enable = true;

@@ -8,7 +8,7 @@
         coreutils
         curl
         jq
-        nixfmt-rfc-style
+        nixfmt
         unzip
       ];
       text = builtins.readFile ./nixpif.sh;
