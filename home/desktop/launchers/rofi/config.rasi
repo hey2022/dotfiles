@@ -1,7 +1,16 @@
-@theme "custom"
+@theme "theme"
 
 configuration {
-  modes: "window,drun,run,recursivebrowser";
+  modes: "drun,run,recursivebrowser,window";
+  show-icons: true;
+  display-drun: "󰕰";
+  display-run: "";
+  display-recursivebrowser: "";
+  display-window: "";
+
+  drun-display-format: "{name}";
+  window-format: "{w}{c}";
+
   run-command: "uwsm-app -- {cmd}";
   recursivebrowser {
     command: "uwsm-app -- xdg-open";

@@ -24,3 +24,4 @@ Other configurations where I have stolen from.
 
 - [fufexan/dotfiles](https://github.com/fufexan/dotfiles)
 - [Mic92/dotfiles](https://github.com/Mic92/dotfiles)
+- [adi1090x/rofi](https://github.com/adi1090x/rofi)
