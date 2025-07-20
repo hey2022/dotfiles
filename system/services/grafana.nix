@@ -22,5 +22,7 @@ in
       ];
     };
   };
-  hostedServices.grafana = cfg.settings.server.http_port;
+  homelab.services.grafana = {
+    port = cfg.settings.server.http_port;
+  };
 }

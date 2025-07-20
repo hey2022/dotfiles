@@ -15,24 +15,41 @@
     ./syncthing.nix
     ./tailscale.nix
   ];
+
   options = {
-    hostedServices = lib.mkOption {
-      type =
-        with lib.types;
-        let
-          portType = either ints.u16 str;
-        in
-        attrsOf (
-          either portType (submodule {
+    homelab =
+      with lib.types;
+      let
+        portType = either ints.u16 str;
+        serviceType = submodule (
+          { name, ... }:
+          {
             options = {
-              port = lib.mkOption { type = portType; };
-              root = lib.mkOption {
-                type = bool;
+              expose = lib.mkOption {
+                description = "Whether to expose service";
+                type = boolean;
                 default = false;
               };
+              subdomain = lib.mkOption {
+                description = "Subdomain of service";
+                type = str;
+                default = name;
+              };
+              port = lib.mkOption {
+                description = "Internal port of service";
+                type = portType;
+              };
             };
-          })
+          }
         );
-    };
+      in
+      {
+        rootService = lib.mkOption {
+          type = portType;
+        };
+        services = lib.mkOption {
+          type = attrsOf serviceType;
+        };
+      };
   };
 }

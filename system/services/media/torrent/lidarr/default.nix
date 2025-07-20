@@ -4,5 +4,7 @@
     enable = true;
     group = "media";
   };
-  hostedServices.lidarr = 8686;
+  homelab.services.lidarr = {
+    port = 8686;
+  };
 }

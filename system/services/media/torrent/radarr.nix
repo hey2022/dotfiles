@@ -3,5 +3,7 @@
     enable = true;
     group = "media";
   };
-  hostedServices.radarr = 7878;
+  homelab.services.radarr = {
+    port = 7878;
+  };
 }

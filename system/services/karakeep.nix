@@ -11,5 +11,7 @@ in
   };
   # TODO: Use karakeep option when this is merged https://nixpk.gs/pr-tracker.html?pr=418146
   services.meilisearch.dumplessUpgrade = true;
-  hostedServices.karakeep = cfg.extraEnvironment.PORT;
+  homelab.services.karakeep = {
+    port = cfg.extraEnvironment.PORT;
+  };
 }

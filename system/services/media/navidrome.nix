@@ -10,10 +10,14 @@ in
       MusicFolder = "/var/lib/media/music";
     };
   };
-  services.caddy.virtualHosts."navidrome.${config.host.address}".extraConfig = ''
-    header {
-        Content-Security-Policy "frame-ancestors 'self' https://${config.host.address}"
+  services.caddy.virtualHosts."*.${config.host.address}".extraConfig = ''
+    handle @navidrome {
+        header {
+            Content-Security-Policy "frame-ancestors 'self' https://${config.host.address}"
+        }
     }
   '';
-  hostedServices.navidrome = cfg.settings.Port;
+  homelab.services.navidrome = {
+    port = cfg.settings.Port;
+  };
 }

@@ -3,19 +3,21 @@
 {
   services.caddy = {
     enable = true;
-    virtualHosts = lib.mapAttrs' (
-      name: value:
+    virtualHosts =
       let
-        serviceConfig = if lib.isInt value || lib.isString value then { port = value; } else value;
-        hostname =
-          if serviceConfig.root or false then config.host.address else "${name}.${config.host.address}";
+        domain = config.host.address;
       in
-      lib.nameValuePair hostname {
-        extraConfig = ''
-          reverse_proxy localhost:${toString serviceConfig.port}
+      {
+        ${domain}.extraConfig = ''
+          reverse_proxy localhost:${toString config.homelab.rootService}
         '';
-      }
-    ) config.hostedServices;
+        "*.${domain}".extraConfig = lib.concatLines (
+          lib.mapAttrsToList (name: service: ''
+            @${name} host ${service.subdomain}.${domain}
+            reverse_proxy @${name} localhost:${toString service.port}
+          '') config.homelab.services
+        );
+      };
   };
   services.tailscale.permitCertUid = config.services.caddy.user;
   networking.firewall = {

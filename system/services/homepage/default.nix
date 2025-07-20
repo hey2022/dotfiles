@@ -77,5 +77,7 @@ in
   environment.etc."homepage-dashboard/services.yaml".source = lib.mkForce (
     settingsFormat.generate "services.yaml" (convertServiceConfig cfg.services)
   );
-  hostedServices.homepage = cfg.listenPort;
+  homelab.services.homepage = {
+    port = cfg.listenPort;
+  };
 }

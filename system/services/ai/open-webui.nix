@@ -8,6 +8,8 @@ in
       enable = true;
       port = 11111;
     };
-    hostedServices.open-webui = cfg.port;
+    homelab.services.open-webui = {
+      port = cfg.port;
+    };
   };
 }
