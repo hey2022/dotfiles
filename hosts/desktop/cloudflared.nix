@@ -2,7 +2,10 @@
 
 {
   sops.secrets = {
-    cloudflared = { };
+    cloudflared = {
+      sopsFile = ../../secrets/desktop/cloudflared.env;
+      format = "dotenv";
+    };
     caddy = {
       sopsFile = ../../secrets/desktop/caddy.env;
       format = "dotenv";
@@ -14,7 +17,7 @@
       tunnels = {
         "5a36f895-2dc4-44f6-a1c4-77635d08471d" = {
           default = "http_status:404";
-          tokenFile = config.sops.secrets.cloudflared.path;
+          environmentFile = config.sops.secrets.cloudflared.path;
         };
       };
     };

@@ -1,5 +1,5 @@
 diff --git c/maintainers/maintainer-list.nix w/maintainers/maintainer-list.nix
-index 04a1e3c0b6d3..ba19af9eb220 100644
+index 50888cbe5111..828dcbdf963c 100644
 --- c/maintainers/maintainer-list.nix
 +++ w/maintainers/maintainer-list.nix
 @@ -3479,6 +3479,12 @@
@@ -15,8 +15,23 @@ index 04a1e3c0b6d3..ba19af9eb220 100644
    bnlrnz = {
      github = "bnlrnz";
      githubId = 11310385;
+@@ -10126,6 +10132,14 @@
+     githubId = 47456195;
+     name = "hexclover";
+   };
++  hey2022 = {
++    name = "Yiheng He";
++    email = "yiheng.he@proton.me";
++    matrix = "@hey2022:matrix.org";
++    github = "hey2022";
++    githubId = 48553457;
++    keys = [ { fingerprint = "128E 09C0 6F73 D678 6BB5  E551 5EA5 3C75 F7BE 3EDE"; } ];
++  };
+   heyimnova = {
+     email = "git@heyimnova.dev";
+     github = "heyimnova";
 diff --git c/nixos/modules/services/networking/cloudflared.nix w/nixos/modules/services/networking/cloudflared.nix
-index 0a6a09dabf2b..1ca0a02ad245 100644
+index 0a6a09dabf2b..cc1f3bc024e0 100644
 --- c/nixos/modules/services/networking/cloudflared.nix
 +++ w/nixos/modules/services/networking/cloudflared.nix
 @@ -203,7 +203,8 @@ in
@@ -29,7 +44,7 @@ index 0a6a09dabf2b..1ca0a02ad245 100644
                  description = ''
                    Credential file.
  
-@@ -211,6 +212,34 @@ in
+@@ -211,6 +212,48 @@ in
                  '';
                };
  
@@ -61,10 +76,24 @@ index 0a6a09dabf2b..1ca0a02ad245 100644
 +                example = "/path/to/my/token_file";
 +              };
 +
++              environmentFile = lib.mkOption {
++                type = with lib.types; nullOr path;
++                default = null;
++                example = "/run/secrets/cloudflared.env";
++                description = ''
++                  The environment file Cloudflare tunnel will use, which can be used to set TUNNEL_TOKEN.
++
++                  Tunnel run parameters that can be set through environment variables can be found
++                  [here](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/configure-tunnels/cloudflared-parameters/run-parameters)
++
++                  The Environment file is as defined in {manpage}`systemd.exec(5)`.
++                '';
++              };
++
                warp-routing = {
                  enabled = lib.mkOption {
                    type = with lib.types; nullOr bool;
-@@ -231,6 +260,7 @@ in
+@@ -231,6 +274,7 @@ in
                    See `service`.
                  '';
                  example = "http_status:404";
@@ -72,7 +101,7 @@ index 0a6a09dabf2b..1ca0a02ad245 100644
                };
  
                ingress = lib.mkOption {
-@@ -298,11 +328,34 @@ in
+@@ -298,11 +342,34 @@ in
            };
            default = "http_status:404";
          };
@@ -107,7 +136,7 @@ index 0a6a09dabf2b..1ca0a02ad245 100644
      systemd.targets = lib.mapAttrs' (
        name: tunnel:
        lib.nameValuePair "cloudflared-tunnel-${name}" {
-@@ -311,7 +364,7 @@ in
+@@ -311,7 +378,7 @@ in
          after = [ "cloudflared-tunnel-${name}.service" ];
          unitConfig.StopWhenUnneeded = true;
        }
@@ -116,7 +145,7 @@ index 0a6a09dabf2b..1ca0a02ad245 100644
  
      systemd.services = lib.mapAttrs' (
        name: tunnel:
-@@ -367,22 +420,31 @@ in
+@@ -367,22 +434,35 @@ in
          serviceConfig = {
            RuntimeDirectory = "cloudflared-tunnel-${name}";
            RuntimeDirectoryMode = "0400";
@@ -128,6 +157,7 @@ index 0a6a09dabf2b..1ca0a02ad245 100644
 +            (lib.optional (tunnel.tokenFile != null) "credentials.json:${tunnel.tokenFile}")
 +            (lib.optional (certFile != null) "cert.pem:${certFile}")
 +          ];
++          EnvironmentFile = lib.optional (tunnel.environmentFile != null) tunnel.environmentFile;
  
 -          ExecStart = "${cfg.package}/bin/cloudflared tunnel --config=${mkConfigFile} --no-autoupdate run";
 +          ExecStart =
@@ -135,8 +165,10 @@ index 0a6a09dabf2b..1ca0a02ad245 100644
 +              "${cfg.package}/bin/cloudflared tunnel run --token ${lib.escapeShellArg tunnel.token}"
 +            else if tunnel.tokenFile != null then
 +              "${cfg.package}/bin/cloudflared tunnel run --token-file /run/credentials/cloudflared-tunnel-${name}.service/credentials.json"
++            else if tunnel.credentialsFile != null then
++              "${cfg.package}/bin/cloudflared tunnel --config=${mkConfigFile} --no-autoupdate run"
 +            else
-+              "${cfg.package}/bin/cloudflared tunnel --config=${mkConfigFile} --no-autoupdate run";
++              "${cfg.package}/bin/cloudflared tunnel run";
            Restart = "on-failure";
            DynamicUser = true;
          };
@@ -148,8 +180,10 @@ index 0a6a09dabf2b..1ca0a02ad245 100644
    };
  
    meta.maintainers = with lib.maintainers; [
-     bbigras
-+    bn
+-    bbigras
      anpin
++    bbigras
++    bn
++    hey2022
    ];
  }
