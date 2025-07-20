@@ -6,7 +6,7 @@
     background:                  @base;
     background-alt:              @crust;
     foreground:                  @text;
-    selected:                    @mauve;
+    selected:                    @lavender;
     active:                      @green;
     urgent:                      @yellow;
 }
@@ -99,7 +99,8 @@ button {
     cursor:                      pointer;
 }
 button selected {
-    background-color:            @selected;
+    border:                      2px solid;
+    border-color:                @selected;
     text-color:                  @foreground;
 }
 
@@ -137,23 +138,28 @@ element normal.normal {
     text-color:                  inherit;
 }
 element normal.urgent {
-    background-color:            @urgent;
+    border:                      2px solid;
+    border-color:                @urgent;
     text-color:                  @foreground;
 }
 element normal.active {
-    background-color:            @active;
+    border:                      2px solid;
+    border-color:                @active;
     text-color:                  @foreground;
 }
 element selected.normal {
-    background-color:            @selected;
+    border:                      2px solid;
+    border-color:                @selected;
     text-color:                  @foreground;
 }
 element selected.urgent {
-    background-color:            @urgent;
+    border:                      2px solid;
+    border-color:                @urgent;
     text-color:                  @foreground;
 }
 element selected.active {
-    background-color:            @urgent;
+    border:                      2px solid;
+    border-color:                @urgent;
     text-color:                  @foreground;
 }
 element-icon {
