@@ -18,14 +18,20 @@
         patched.nixosSystem {
           inherit system modules;
           pkgs = patched.nixpkgs;
-          specialArgs = { inherit inputs; };
+          specialArgs = {
+            inherit inputs;
+            inherit (inputs) self;
+          };
         };
       mkHome =
         modules:
         patched.home-manager.lib.homeManagerConfiguration {
           inherit modules;
           pkgs = patched.nixpkgs;
-          extraSpecialArgs = { inherit inputs; };
+          extraSpecialArgs = {
+            inherit inputs;
+            inherit (inputs) self;
+          };
         };
     };
 }
