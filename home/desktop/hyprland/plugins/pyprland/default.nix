@@ -13,7 +13,6 @@
       ];
       bind = [
         "$mod, B, exec, pypr fetch_client_menu"
-        "$mod, F, exec, pypr layout_center toggle"
         "$mod, Z, exec, pypr zoom ++0.5"
         "$mod SHIFT, Z, exec, pypr zoom"
         "$mod SHIFT, TAB, exec, pypr toggle_special scratchpad"
