@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
+    ./quickshell
     ./swaync.nix
     ./waybar
     ./wlogout.nix
