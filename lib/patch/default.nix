@@ -14,7 +14,7 @@ let
     (pkgs.fetchpatch2 {
       name = "gitbutler: 0.14.19 -> 0.15.2";
       url = "https://github.com/NixOS/nixpkgs/pull/424156.patch";
-      sha256 = "sha256-h/3F2k+oOC663rmqoYOQWBkEzaIqeeHrB8lZGUFJdWc=";
+      sha256 = "sha256-XyaEC2ZSc4/tn2LNE2lMM+g/tnk3//LGq5ltWaH5lZ8=";
     })
     # https://nixpk.gs/pr-tracker.html?pr=404337
     ./cloudflared.patch
