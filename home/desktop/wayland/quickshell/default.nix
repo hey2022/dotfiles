@@ -1,6 +1,9 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
 {
+  home.packages = with pkgs; [
+    qt6Packages.qtmultimedia
+  ];
   programs.quickshell = {
     enable = true;
     systemd.enable = true;
