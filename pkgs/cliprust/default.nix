@@ -7,13 +7,13 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "cliprust";
-  version = "unstable-2025-07-11";
+  version = "0-unstable-2025-07-22";
 
   src = fetchFromGitHub {
     owner = "aulimaru";
     repo = "cliprust";
-    rev = "25c46cedeecef32dec94fa2ffb57b30cddce1e05";
-    hash = "sha256-Ognk4bckhIakkO75NfifYjq4b+AYk1cEkKHZGraIFrU=";
+    rev = "950f62613647a1543b45dd0e7ce0d7e881f76e64";
+    hash = "sha256-/4oZLllhANl1HjjI6WmrBW1fsZk+LVgV27NDZskbVIY=";
   };
 
   cargoHash = "sha256-dKJyrKlgrH3iidD+btv5t7wPpHOtw4BnYN+uGSKKxJM=";
