@@ -1,6 +1,7 @@
 import Quickshell
 
-Scope {
+ShellRoot {
+    ReloadPopup {}
     TaskTimer {}
     VolumeOSD {}
 }
