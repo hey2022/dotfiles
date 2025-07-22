@@ -14,42 +14,55 @@ Scope {
         model: Quickshell.screens
         PanelWindow {
             property var modelData
+            property real margin: 5
             screen: modelData
             anchors {
-                top: true
+                bottom: true
                 right: true
             }
 
-            implicitHeight: timerDisplay.implicitHeight
-            implicitWidth: timerDisplay.implicitWidth
+            margins {
+                top: margin
+                bottom: margin
+                left: margin
+                right: margin
+            }
+            implicitHeight: timerDisplay.implicitHeight + margin * 2
+            implicitWidth: timerDisplay.implicitWidth + margin * 2
+            color: "transparent"
 
-            color: "black"
+            Rectangle {
+                // match the size of the window
+                anchors.fill: parent
 
-            Text {
-                id: timerDisplay
-                anchors {
-                    top: parent
-                    horizontalCenter: parent.horizontalCenter
-                }
+                radius: 10
+                color: "#80000000"
+                Text {
+                    id: timerDisplay
+                    anchors {
+                        horizontalCenter: parent.horizontalCenter
+                        verticalCenter: parent.verticalCenter
+                    }
 
-                color: "white"
-                font.pixelSize: 20
-                text: {
-                    let minutes = Math.floor(root.timeRemaining / 60);
-                    let seconds = root.timeRemaining % 60;
-                    return `${root.isTask ? "Task" : "Break"}: ${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
-                }
+                    color: "white"
+                    font.pixelSize: 20
+                    text: {
+                        let minutes = Math.floor(root.timeRemaining / 60);
+                        let seconds = root.timeRemaining % 60;
+                        return `${root.isTask ? "Task" : "Break"}: ${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+                    }
 
-                MouseArea {
-                    anchors.fill: parent
-                    acceptedButtons: Qt.LeftButton | Qt.RightButton
-                    onClicked: mouse => {
-                        if (mouse.button === Qt.LeftButton) {
-                            timer.running = !timer.running;
-                        } else if (mouse.button === Qt.RightButton) {
-                            timer.running = false;
-                            root.isTask = true;
-                            root.timeRemaining = root.taskDuration;
+                    MouseArea {
+                        anchors.fill: parent
+                        acceptedButtons: Qt.LeftButton | Qt.RightButton
+                        onClicked: mouse => {
+                            if (mouse.button === Qt.LeftButton) {
+                                timer.running = !timer.running;
+                            } else if (mouse.button === Qt.RightButton) {
+                                timer.running = false;
+                                root.isTask = true;
+                                root.timeRemaining = root.taskDuration;
+                            }
                         }
                     }
                 }
