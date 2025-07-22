@@ -15,6 +15,7 @@
     ./neovim
     ./nix.nix
     ./python.nix
+    ./qt.nix
     ./rust
     ./sh.nix
     ./typst.nix
