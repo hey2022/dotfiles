@@ -5,6 +5,10 @@
       userEmail = "yiheng.he@proton.me";
       userName = "Yiheng He";
       lfs.enable = true;
+      includes = [ { path = "~/.config/git/maintenance"; } ];
+      aliases = {
+        maintain = "maintenance register --config-file ~/.config/git/maintenance";
+      };
       extraConfig = {
         branch.sort = "-committerdate";
         column.ui = "auto";
