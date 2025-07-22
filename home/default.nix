@@ -22,7 +22,7 @@
       default = "${config.home.homeDirectory}/.dotfiles";
       description = "Location of the dotfiles";
     };
-    home.isNixOS = lib.mkOption {
+    host.isNixOS = lib.mkOption {
       type = lib.types.bool;
       default = true;
       description = "Whether the system is running NixOS";

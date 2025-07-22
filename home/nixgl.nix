@@ -5,5 +5,5 @@
   ...
 }:
 {
-  nixGL.packages = lib.mkIf (!config.home.isNixOS) inputs.nixGL.packages;
+  nixGL.packages = lib.mkIf (!config.host.isNixOS) inputs.nixGL.packages;
 }

@@ -6,7 +6,7 @@
 {
   programs.swaylock = {
     enable = true;
-    package = if config.home.isNixOS then pkgs.swaylock-effects else pkgs.emptyDirectory;
+    package = if config.host.isNixOS then pkgs.swaylock-effects else pkgs.emptyDirectory;
     settings = {
       screenshots = true;
       clock = true;
