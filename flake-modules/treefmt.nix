@@ -1,20 +1,30 @@
 { inputs, ... }:
+
 {
   imports = [ inputs.treefmt-nix.flakeModule ];
-  perSystem = {
-    treefmt = {
-      projectRootFile = "flake.nix";
-      programs = {
-        nixfmt.enable = true;
-        prettier = {
-          enable = true;
-          excludes = [
-            "secrets/*" # handled by sops
-          ];
+  perSystem =
+    { pkgs, lib, ... }:
+    {
+      treefmt = {
+        projectRootFile = "flake.nix";
+        programs = {
+          nixfmt.enable = true;
+          prettier = {
+            enable = true;
+            excludes = [
+              "secrets/*" # handled by sops
+            ];
+          };
+          shellcheck.enable = true;
+          taplo.enable = true;
         };
-        shellcheck.enable = true;
-        taplo.enable = true;
+        settings.formatter = {
+          qmlformat = {
+            command = lib.getExe' pkgs.qt6Packages.qtdeclarative "qmlformat";
+            options = [ "-i" ];
+            includes = [ "*.qml" ];
+          };
+        };
       };
     };
-  };
 }
