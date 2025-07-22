@@ -638,6 +638,16 @@ and `defcustom' forms reset their default values."
   :after magit
   :config (magit-todos-mode 1))
 #+end_src
+
+** Projectile
+*** Cache
+Use transient projectile cache
+#+begin_src emacs-lisp
+(use-package! projectile
+  :custom
+  (projectile-enable-caching 'transient))
+#+end_src
+
 * Editing
 ** Sentence case
 #+begin_src emacs-lisp
