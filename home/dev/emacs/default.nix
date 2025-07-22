@@ -45,6 +45,6 @@ in
       source = config.lib.hm.mkFlakeSymlink ./doom;
       recursive = true;
     };
-    "emacs/.local/alarm.wav".source = "${inputs.self}/assets/audio/alarm.wav";
+    "emacs/.local/alarm.wav".source = "${inputs.self}/assets/sounds/alarm.wav";
   };
 }
