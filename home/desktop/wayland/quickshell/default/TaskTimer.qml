@@ -8,6 +8,7 @@ Scope {
     id: root
     property bool isTask: true
     property int time: 0
+    property int breakTime: 0
 
     Variants {
         model: Quickshell.screens
@@ -49,8 +50,9 @@ Scope {
                         color: "white"
                         font.pixelSize: 20
                         text: {
-                            let minutes = Math.floor(root.time / 60);
-                            let seconds = root.time % 60;
+                            let time = root.isTask ? root.time : root.breakTime;
+                            let minutes = Math.floor(time / 60);
+                            let seconds = time % 60;
                             return `${root.isTask ? "Task" : "Break"}: ${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
                         }
                     }
@@ -62,13 +64,16 @@ Scope {
                         timer.running ^= true;
                         break;
                     case Qt.RightButton:
-                        root.time = root.isTask ? root.time / 5 : 0;
-                        root.isTask ^= true;
+                        switchMode();
                         break;
                     case Qt.MiddleButton:
                         root.isTask = true;
                         timer.running = false;
-                        root.time = 0;
+                        if (root.isTask) {
+                            root.time = 0;
+                        } else {
+                            root.breakTime = 0;
+                        }
                         break;
                     }
                 }
@@ -88,13 +93,24 @@ Scope {
         running: false
         repeat: true
         onTriggered: {
-            root.time += root.isTask ? 1 : -1;
-            if (!root.isTask && time <= 0) {
-                root.isTask = true;
-                root.time = 0;
+            if (root.isTask) {
+                root.time++;
+                return;
+            }
+
+            if (root.breakTime <= 0) {
+                switchMode();
                 alarmSound.play();
+            } else {
+                root.breakTime--;
             }
         }
+    }
+
+    function switchMode() {
+        root.breakTime += root.time / 5;
+        root.time = 0;
+        root.isTask ^= true;
     }
 
     SoundEffect {
