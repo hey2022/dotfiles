@@ -121,7 +121,7 @@ in
       "$mod SHIFT, space, exec, ${toggle "rofi"} -show recursivebrowser"
 
       # clipboard
-      "$mod, C, exec, pkill rofi || cliprust list | rofi -dmenu | cliprust decode | wl-copy"
+      "$mod, C, exec, pkill rofi || cliprust list | rofi -dmenu -display-columns 2 | cliprust decode | wl-copy"
 
       # swaync
       "$mod, N, exec, swaync-client -t"
