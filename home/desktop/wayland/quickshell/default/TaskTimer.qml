@@ -6,10 +6,8 @@ import QtMultimedia
 
 Scope {
     id: root
-    property int taskDuration: 90 * 60
-    property int breakDuration: 20 * 60
     property bool isTask: true
-    property int timeRemaining: taskDuration
+    property int time: 0
 
     Variants {
         model: Quickshell.screens
@@ -47,8 +45,8 @@ Scope {
                         color: "white"
                         font.pixelSize: 20
                         text: {
-                            let minutes = Math.floor(root.timeRemaining / 60);
-                            let seconds = root.timeRemaining % 60;
+                            let minutes = Math.floor(root.time / 60);
+                            let seconds = root.time % 60;
                             return `${root.isTask ? "Task" : "Break"}: ${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
                         }
                     }
@@ -60,18 +58,21 @@ Scope {
                         timer.running ^= true;
                         break;
                     case Qt.RightButton:
-                        timer.running = false;
-                        root.timeRemaining = root.resetTime();
+                        root.time = root.isTask ? root.time / 5 : 0;
+                        root.isTask ^= true;
                         break;
                     case Qt.MiddleButton:
+                        root.isTask = true;
                         timer.running = false;
-                        root.isTask ^= true;
-                        root.timeRemaining = root.resetTime();
+                        root.time = 0;
                         break;
                     }
                 }
                 onWheel: wheel => {
-                    root.timeRemaining += wheel.angleDelta.y / 2;
+                    if (root.isTask) {
+                        root.time += wheel.angleDelta.y / 2;
+                        root.time = Math.max(root.time, 0);
+                    }
                 }
             }
         }
@@ -83,18 +84,13 @@ Scope {
         running: false
         repeat: true
         onTriggered: {
-            if (root.timeRemaining > 0) {
-                root.timeRemaining -= 1;
-            } else {
-                root.isTask ^= true;
-                root.timeRemaining = root.resetTime();
+            root.time += root.isTask ? 1 : -1;
+            if (!root.isTask && time <= 0) {
+                root.isTask = true;
+                root.time = 0;
                 alarmSound.play();
             }
         }
-    }
-
-    function resetTime() {
-        return root.isTask ? root.taskDuration : root.breakDuration;
     }
 
     SoundEffect {
