@@ -1,4 +1,5 @@
 import Quickshell
+import Quickshell.Widgets
 import QtQuick
 import QtQuick.Controls
 import QtMultimedia
@@ -22,55 +23,51 @@ Scope {
             }
 
             margins {
-                top: margin
                 bottom: margin
-                left: margin
                 right: margin
             }
-            implicitHeight: timerDisplay.implicitHeight + margin * 2
-            implicitWidth: timerDisplay.implicitWidth + margin * 2
+
             color: "transparent"
+            implicitHeight: rect.implicitHeight
+            implicitWidth: rect.implicitWidth
 
-            Rectangle {
-                // match the size of the window
-                anchors.fill: parent
-
-                radius: 10
-                color: "#80000000"
-                Text {
-                    id: timerDisplay
-                    anchors {
-                        horizontalCenter: parent.horizontalCenter
-                        verticalCenter: parent.verticalCenter
-                    }
-
-                    color: "white"
-                    font.pixelSize: 20
-                    text: {
-                        let minutes = Math.floor(root.timeRemaining / 60);
-                        let seconds = root.timeRemaining % 60;
-                        return `${root.isTask ? "Task" : "Break"}: ${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
-                    }
-
-                    MouseArea {
+            WrapperMouseArea {
+                WrapperRectangle {
+                    id: rect
+                    anchors.centerIn: parent
+                    radius: 10
+                    margin: 5
+                    color: "#80000000"
+                    Text {
+                        id: timerDisplay
                         anchors.fill: parent
-                        acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MiddleButton
-                        onClicked: mouse => {
-                            switch (mouse.button) {
-                            case Qt.LeftButton:
-                                timer.running ^= true;
-                                break;
-                            case Qt.RightButton:
-                                timer.running = false;
-                                root.timeRemaining = root.resetTime();
-                                break;
-                            case Qt.MiddleButton:
-                                timer.running = false;
-                                root.isTask ^= true;
-                                root.timeRemaining = root.resetTime();
-                                break;
-                            }
+                        horizontalAlignment: Text.AlignHCenter
+                        verticalAlignment: Text.AlignVCenter
+
+                        color: "white"
+                        font.pixelSize: 20
+                        text: {
+                            let minutes = Math.floor(root.timeRemaining / 60);
+                            let seconds = root.timeRemaining % 60;
+                            return `${root.isTask ? "Task" : "Break"}: ${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
                         }
+                    }
+                }
+                acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MiddleButton
+                onClicked: mouse => {
+                    switch (mouse.button) {
+                    case Qt.LeftButton:
+                        timer.running ^= true;
+                        break;
+                    case Qt.RightButton:
+                        timer.running = false;
+                        root.timeRemaining = root.resetTime();
+                        break;
+                    case Qt.MiddleButton:
+                        timer.running = false;
+                        root.isTask ^= true;
+                        root.timeRemaining = root.resetTime();
+                        break;
                     }
                 }
             }
