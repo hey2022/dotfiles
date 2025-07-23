@@ -36,6 +36,10 @@ Scope {
                     radius: 10
                     margin: 5
                     color: "#80000000"
+                    border {
+                        width: 2
+                        color: timer.running ? "#ffffff" : "#000000"
+                    }
                     Text {
                         id: timerDisplay
                         anchors.fill: parent
