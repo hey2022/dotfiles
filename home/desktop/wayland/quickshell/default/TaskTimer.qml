@@ -70,6 +70,9 @@ Scope {
                         break;
                     }
                 }
+                onWheel: wheel => {
+                    root.timeRemaining += wheel.angleDelta.y / 2;
+                }
             }
         }
     }
