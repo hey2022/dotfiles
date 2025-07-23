@@ -62,13 +62,12 @@ Scope {
                                 break;
                             case Qt.RightButton:
                                 timer.running = false;
-                                root.isTask = true;
-                                root.timeRemaining = root.taskDuration;
+                                root.timeRemaining = root.resetTime();
                                 break;
                             case Qt.MiddleButton:
                                 timer.running = false;
                                 root.isTask ^= true;
-                                root.timeRemaining = root.isTask ? root.taskDuration : root.breakDuration;
+                                root.timeRemaining = root.resetTime();
                                 break;
                             }
                         }
@@ -87,11 +86,15 @@ Scope {
             if (root.timeRemaining > 0) {
                 root.timeRemaining -= 1;
             } else {
-                root.timeRemaining = root.isTask ? root.breakDuration : root.taskDuration;
                 root.isTask ^= true;
+                root.timeRemaining = root.resetTime();
                 alarmSound.play();
             }
         }
+    }
+
+    function resetTime() {
+        return root.isTask ? root.taskDuration : root.breakDuration;
     }
 
     SoundEffect {
