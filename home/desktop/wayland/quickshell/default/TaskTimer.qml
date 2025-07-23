@@ -54,14 +54,22 @@ Scope {
 
                     MouseArea {
                         anchors.fill: parent
-                        acceptedButtons: Qt.LeftButton | Qt.RightButton
+                        acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MiddleButton
                         onClicked: mouse => {
-                            if (mouse.button === Qt.LeftButton) {
-                                timer.running = !timer.running;
-                            } else if (mouse.button === Qt.RightButton) {
+                            switch (mouse.button) {
+                            case Qt.LeftButton:
+                                timer.running ^= true;
+                                break;
+                            case Qt.RightButton:
                                 timer.running = false;
                                 root.isTask = true;
                                 root.timeRemaining = root.taskDuration;
+                                break;
+                            case Qt.MiddleButton:
+                                timer.running = false;
+                                root.isTask ^= true;
+                                root.timeRemaining = root.isTask ? root.taskDuration : root.breakDuration;
+                                break;
                             }
                         }
                     }
@@ -80,7 +88,7 @@ Scope {
                 root.timeRemaining -= 1;
             } else {
                 root.timeRemaining = root.isTask ? root.breakDuration : root.taskDuration;
-                root.isTask = !root.isTask;
+                root.isTask ^= true;
                 alarmSound.play();
             }
         }
