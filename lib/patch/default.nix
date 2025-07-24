@@ -21,13 +21,6 @@ let
 
     # https://nixpk.gs/pr-tracker.html?pr=423662
     ./television.patch
-
-    # https://nixpk.gs/pr-tracker.html?pr=426893
-    (pkgs.fetchpatch2 {
-      name = "hyprlandPlugins/hyprland-plugins: 0.49.0-fix -> 0.50.0";
-      url = "https://github.com/NixOS/nixpkgs/commit/ff4bb73d7265d7ea4d7bc49c4e038a29879b6711.patch";
-      sha256 = "sha256-SyOQmWTKOhXe2clybzVmPF4xUJdQNMebmXn2NxGUt/c=";
-    })
   ];
   home-manager-patches = [ ];
   nixpkgs-patched =
