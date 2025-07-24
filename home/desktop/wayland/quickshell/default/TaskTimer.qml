@@ -78,8 +78,11 @@ Scope {
                     }
                 }
                 onWheel: wheel => {
+                    let dt = wheel.angleDelta.y / 2;
                     if (root.isTask) {
-                        root.time = Math.max(0, root.time + wheel.angleDelta.y / 2);
+                        root.time = Math.max(0, root.time + dt);
+                    } else {
+                        root.breakTime = Math.max(0, root.breakTime + dt);
                     }
                 }
             }
