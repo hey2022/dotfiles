@@ -100,6 +100,7 @@ Scope {
 
             if (root.breakTime <= 0) {
                 switchMode();
+                timer.running = false;
                 alarmSound.play();
             } else {
                 root.breakTime--;
@@ -108,9 +109,9 @@ Scope {
     }
 
     function switchMode() {
+        root.isTask ^= true;
         root.breakTime += root.time / 5;
         root.time = 0;
-        root.isTask ^= true;
     }
 
     SoundEffect {
