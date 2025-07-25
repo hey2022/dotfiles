@@ -7,7 +7,7 @@
       lfs.enable = true;
       includes = [ { path = "~/.config/git/maintenance"; } ];
       aliases = {
-        maintain = "maintenance register --config-file ~/.config/git/maintenance";
+        maintain = "maintenance register --config-file $HOME/.config/git/maintenance";
       };
       extraConfig = {
         branch.sort = "-committerdate";
