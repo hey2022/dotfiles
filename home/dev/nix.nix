@@ -18,6 +18,7 @@
     nix-update
     nixd
     nixfmt
+    nixpkgs-hammering
     nixpkgs-review
     nurl
     statix
