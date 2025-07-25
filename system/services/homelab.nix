@@ -10,4 +10,5 @@
     ./miniflux.nix
     ./prometheus/prometheus.nix
   ];
+  services.qbittorrent.enable = true;
 }

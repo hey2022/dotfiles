@@ -85,6 +85,13 @@ in
           key = "{{HOMEPAGE_VAR_JELLYFIN}}";
         };
       };
+      qbittorrent = mkService {
+        name = "qbittorrent";
+        widget = {
+          username = "admin";
+          password = "{{HOMEPAGE_VAR_QBITTORRENT}}";
+        };
+      };
       navidrome = mkService {
         name = "navidrome";
         widget = {

@@ -11,6 +11,7 @@
     ./pipewire.nix
     ./printing.nix
     ./prometheus
+    ./qbittorrent.nix
     ./ssh.nix
     ./syncthing.nix
     ./tailscale.nix
