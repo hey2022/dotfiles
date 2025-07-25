@@ -15,7 +15,7 @@
           lib.mapAttrsToList (name: service: ''
             @${name} host ${service.subdomain}.${domain}
             reverse_proxy @${name} localhost:${toString service.port}
-          '') config.homelab.services
+          '') (lib.filterAttrs (_: service: service.expose) config.homelab.services)
         );
       };
   };

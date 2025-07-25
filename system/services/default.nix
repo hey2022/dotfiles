@@ -27,8 +27,8 @@
             options = {
               expose = lib.mkOption {
                 description = "Whether to expose service";
-                type = boolean;
-                default = false;
+                type = bool;
+                default = true;
               };
               subdomain = lib.mkOption {
                 description = "Subdomain of service";
