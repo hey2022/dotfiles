@@ -9,7 +9,6 @@ in
 {
   imports = [ ./extensions ];
   programs.firefox = {
-    enable = true;
     languagePacks = [
       "en-GB"
       "zh-CN"
