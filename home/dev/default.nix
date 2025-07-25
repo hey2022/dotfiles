@@ -24,6 +24,7 @@
   home.packages = with pkgs; [
     bun
     entr
+    flamegraph
     hyperfine
     just
     onefetch
