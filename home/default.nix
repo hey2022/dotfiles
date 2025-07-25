@@ -6,6 +6,7 @@
 {
   imports = [
     ../lib/hm.nix
+    ./dev
     ./font
     ./nix.nix
     ./nixgl.nix
