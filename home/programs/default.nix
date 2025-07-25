@@ -14,6 +14,7 @@
     ./pandoc.nix
     ./productivity
     ./proxy
+    ./rss.nix
     ./social
     ./torrent.nix
   ];
