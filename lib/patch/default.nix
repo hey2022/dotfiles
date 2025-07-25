@@ -19,9 +19,6 @@ let
 
     # https://nixpk.gs/pr-tracker.html?pr=404337
     ./cloudflared.patch
-
-    # https://nixpk.gs/pr-tracker.html?pr=423662
-    ./television.patch
   ];
   home-manager-patches = [ ];
   nixpkgs-patched =
