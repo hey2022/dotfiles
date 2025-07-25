@@ -9,17 +9,7 @@ let
   pkgs = import inputs.nixpkgs {
     inherit system;
   };
-  nixpkgs-patches = [
-    # https://nixpk.gs/pr-tracker.html?pr=424156
-    # (pkgs.fetchpatch2 {
-    #   name = "gitbutler: 0.14.19 -> 0.15.2";
-    #   url = "https://github.com/NixOS/nixpkgs/pull/424156.patch";
-    #   sha256 = "sha256-XyaEC2ZSc4/tn2LNE2lMM+g/tnk3//LGq5ltWaH5lZ8=";
-    # })
-
-    # https://nixpk.gs/pr-tracker.html?pr=404337
-    ./cloudflared.patch
-  ];
+  nixpkgs-patches = [ ];
   home-manager-patches = [ ];
   nixpkgs-patched =
     if nixpkgs-patches != [ ] then
