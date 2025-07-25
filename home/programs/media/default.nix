@@ -2,5 +2,8 @@
   ...
 }:
 {
-  imports = [ ./mpv.nix ];
+  imports = [
+    ./jellyfin.nix
+    ./mpv.nix
+  ];
 }
