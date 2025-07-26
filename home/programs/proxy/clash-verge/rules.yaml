@@ -1,4 +1,0 @@
-prepend:
-  - "DOMAIN-SUFFIX,argotunnel.com,DIRECT"
-append: []
-delete: []
