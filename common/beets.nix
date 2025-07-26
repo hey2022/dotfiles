@@ -1,7 +1,7 @@
 {
   directory = "/var/lib/media/music";
   library = "/etc/beets/library.db";
-  import.move = true;
+  import.hardlink = true;
   plugins = [
     "replaygain"
     "scrub"
