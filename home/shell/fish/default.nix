@@ -9,7 +9,7 @@
       fish_vi_key_bindings
     '';
     shellAliases = {
-      ls = "eza -g";
+      ls = "eza";
       cat = "bat -p";
     };
   };
