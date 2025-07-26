@@ -8,7 +8,7 @@
         domain = config.host.address;
       in
       {
-        ${domain}.extraConfig = ''
+        "${domain}, www.${domain}".extraConfig = ''
           reverse_proxy localhost:${toString config.homelab.rootService}
         '';
         "*.${domain}".extraConfig = lib.concatLines (
