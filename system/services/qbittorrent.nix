@@ -9,6 +9,7 @@ in
       "--confirm-legal-notice"
     ];
     webuiPort = 8123;
+    torrentingPort = 49152;
     serverConfig = {
       Preferences.WebUI = {
         AlternativeUIEnabled = true;
@@ -17,6 +18,7 @@ in
       };
     };
   };
+  networking.firewall.allowedTCPPorts = [ cfg.torrentingPort ];
   homelab.services.qbittorrent = {
     port = cfg.webuiPort;
   };
