@@ -29,6 +29,16 @@
     fsType = "vfat";
   };
 
+  fileSystems."/mnt/elements" = {
+    device = "/dev/disk/by-uuid/AAC8CF3AC8CF0393";
+    fsType = "ntfs3";
+  };
+
+  fileSystems."/var/lib/media" = {
+    device = "/mnt/elements/media";
+    options = [ "bind" ];
+  };
+
   swapDevices = [
     { device = "/dev/disk/by-uuid/8458c549-7f00-43e2-bf05-fc0029b35816"; }
     {
