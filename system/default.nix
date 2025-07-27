@@ -30,20 +30,22 @@
     inputs.nix-topology.nixosModules.default
   ];
   options = {
-    host.laptop = lib.mkOption {
-      type = lib.types.bool;
-      default = false;
-      description = "Whether the host is a laptop";
-    };
-    host.address = lib.mkOption {
-      type = lib.types.str;
-      default = "${config.networking.hostName}.taila6842.ts.net";
-      description = "Host address";
-    };
-    host.desktop = lib.mkOption {
-      type = lib.types.bool;
-      default = true;
-      description = "Whether the host is a desktop";
+    host = {
+      laptop = lib.mkOption {
+        type = lib.types.bool;
+        default = false;
+        description = "Whether the host is a laptop";
+      };
+      address = lib.mkOption {
+        type = lib.types.str;
+        default = "${config.networking.hostName}.taila6842.ts.net";
+        description = "Host address";
+      };
+      desktop = lib.mkOption {
+        type = lib.types.bool;
+        default = true;
+        description = "Whether the host is a desktop";
+      };
     };
   };
   config = {

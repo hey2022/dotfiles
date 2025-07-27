@@ -9,7 +9,7 @@ in
       port = 11111;
     };
     homelab.services.open-webui = {
-      port = cfg.port;
+      inherit (cfg) port;
     };
   };
 }

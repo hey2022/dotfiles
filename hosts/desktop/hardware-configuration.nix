@@ -7,36 +7,39 @@
 {
   imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
 
-  boot.initrd.availableKernelModules = [
-    "nvme"
-    "xhci_pci"
-    "ahci"
-    "usbhid"
-    "usb_storage"
-    "sd_mod"
-  ];
-  boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-amd" ];
-  boot.extraModulePackages = [ ];
-
-  fileSystems."/" = {
-    device = "/dev/disk/by-uuid/4a7dea96-c8a0-438b-9477-d8a0f357d92e";
-    fsType = "ext4";
+  boot = {
+    initrd = {
+      availableKernelModules = [
+        "nvme"
+        "xhci_pci"
+        "ahci"
+        "usbhid"
+        "usb_storage"
+        "sd_mod"
+      ];
+      kernelModules = [ ];
+    };
+    kernelModules = [ "kvm-amd" ];
+    extraModulePackages = [ ];
   };
 
-  fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/A35E-2111";
-    fsType = "vfat";
-  };
-
-  fileSystems."/mnt/elements" = {
-    device = "/dev/disk/by-uuid/AAC8CF3AC8CF0393";
-    fsType = "ntfs3";
-  };
-
-  fileSystems.${config.homelab.mediaDir} = {
-    device = "/mnt/elements/media";
-    options = [ "bind" ];
+  fileSystems = {
+    "/" = {
+      device = "/dev/disk/by-uuid/4a7dea96-c8a0-438b-9477-d8a0f357d92e";
+      fsType = "ext4";
+    };
+    "/boot" = {
+      device = "/dev/disk/by-uuid/A35E-2111";
+      fsType = "vfat";
+    };
+    "/mnt/elements" = {
+      device = "/dev/disk/by-uuid/AAC8CF3AC8CF0393";
+      fsType = "ntfs3";
+    };
+    ${config.homelab.mediaDir} = {
+      device = "/mnt/elements/media";
+      options = [ "bind" ];
+    };
   };
 
   swapDevices = [
