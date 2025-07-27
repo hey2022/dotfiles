@@ -19,6 +19,7 @@
     ./torrent.nix
   ];
   home.packages = with pkgs; [
+    czkawka
     keepassxc
   ];
 }
