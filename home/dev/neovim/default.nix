@@ -1,13 +1,5 @@
-{ inputs, ... }:
-{
-  imports = [
-    inputs.nixvim.homeManagerModules.nixvim
-    ./plugins
-    ./settings.nix
-  ];
-  programs.nixvim = {
-    enable = true;
+{ pkgs, ... }:
 
-    colorschemes.catppuccin.enable = true;
-  };
+{
+  home.packages = [ pkgs.neovim ];
 }
