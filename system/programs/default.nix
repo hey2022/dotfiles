@@ -5,9 +5,10 @@
     ./productivity
   ];
   environment.systemPackages = with pkgs; [
-    home-manager
     fastfetch
+    fclones
     git
+    home-manager
     neovim
     wget
   ];
