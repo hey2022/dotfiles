@@ -87,6 +87,12 @@ in
           enableNowPlaying = false;
         };
       };
+      jellyseerr = mkService {
+        name = "jellyseerr";
+        widget = {
+          key = "{{HOMEPAGE_VAR_JELLYSEERR}}";
+        };
+      };
       qbittorrent = mkService {
         name = "qbittorrent";
         widget = {

@@ -1,4 +1,3 @@
-{ ... }:
 {
   imports = [
     ./caddy.nix
@@ -12,6 +11,7 @@
   ];
 
   services = {
+    jellyseerr.enable = true;
     qbittorrent.enable = true;
     suwayomi-server.enable = true;
   };

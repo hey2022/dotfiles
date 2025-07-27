@@ -6,6 +6,7 @@
     ./cloudflared.nix
     ./fail2ban.nix
     ./iperf.nix
+    ./jellyseer.nix
     ./kanata.nix
     ./minecraft.nix
     ./pipewire.nix
