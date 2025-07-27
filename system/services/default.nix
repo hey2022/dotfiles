@@ -56,7 +56,7 @@
         mediaDir = lib.mkOption {
           description = "Path to media directory";
           type = path;
-          default = "/var/lib/media";
+          default = "/srv/media";
         };
       };
   };
