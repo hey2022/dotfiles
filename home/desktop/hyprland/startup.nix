@@ -23,7 +23,6 @@ in
         "[workspace 9 silent] ${uwsm} ${getExe vesktop}"
         "[workspace 10 silent] ${uwsm} ${getExe keepassxc}"
         "[workspace 10 silent] ${uwsm} ${getExe clash-verge-rev}"
-        "[workspace 10 silent] ${uwsm} ${getExe youtube-music}"
         "[workspace special:scratchpad silent] ${uwsm} ${lib.getExe cfg.term}"
       ];
   };
