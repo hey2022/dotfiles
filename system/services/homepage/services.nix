@@ -19,7 +19,7 @@ let
       // lib.optionalAttrs (attrs ? widget) {
         widget = attrs.widget // {
           type = name;
-          inherit url;
+          url = "http://localhost:${toString config.homelab.services.${name}.port}";
         };
       }
     );
