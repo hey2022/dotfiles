@@ -1,6 +1,5 @@
 {
   config,
-  pkgs,
   lib,
   ...
 }:
@@ -11,19 +10,16 @@ let
 in
 {
   wayland.windowManager.hyprland.settings = {
-    exec-once =
-      with lib;
-      with pkgs;
-      [
-        "[workspace 1 silent] ${uwsm} ${getExe config.programs.zen-browser.package}"
-        "[workspace 2 silent] ${uwsm} ${getExe' config.programs.emacs.package "emacsclient"} -c"
-        "[workspace 9 silent] ${uwsm} ${getExe wechat-uos}"
-        "[workspace 9 silent] ${uwsm} ${getExe thunderbird}"
-        "[workspace 9 silent] ${uwsm} ${getExe element-desktop}"
-        "[workspace 9 silent] ${uwsm} ${getExe vesktop}"
-        "[workspace 10 silent] ${uwsm} ${getExe keepassxc}"
-        "[workspace 10 silent] ${uwsm} ${getExe clash-verge-rev}"
-        "[workspace special:scratchpad silent] ${uwsm} ${lib.getExe cfg.term}"
-      ];
+    exec-once = [
+      "[workspace 1 silent] ${uwsm} zen-beta"
+      "[workspace 2 silent] ${uwsm} emacsclient -c"
+      "[workspace 9 silent] ${uwsm} wechat-uos"
+      "[workspace 9 silent] ${uwsm} thunderbird"
+      "[workspace 9 silent] ${uwsm} element-desktop"
+      "[workspace 9 silent] ${uwsm} vesktop"
+      "[workspace 10 silent] ${uwsm} keepassxc"
+      "[workspace 10 silent] ${uwsm} clash-verge"
+      "[workspace special:scratchpad silent] ${uwsm} ${lib.getExe cfg.term}"
+    ];
   };
 }

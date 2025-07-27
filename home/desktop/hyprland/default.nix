@@ -28,7 +28,7 @@ in
       hy3 = lib.mkEnableOption "hy3";
       uwsm = lib.mkEnableOption "uwsm";
       term = lib.mkPackageOption pkgs "terminal" {
-        default = "kitty";
+        default = "ghostty";
       };
     };
   };
@@ -38,7 +38,6 @@ in
       systemd.enable = false;
       hy3 = true;
       uwsm = true;
-      term = config.programs.ghostty.package;
     };
     home.packages = [
       inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
