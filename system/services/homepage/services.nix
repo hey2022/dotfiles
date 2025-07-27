@@ -83,6 +83,8 @@ in
         name = "jellyfin";
         widget = {
           key = "{{HOMEPAGE_VAR_JELLYFIN}}";
+          enableBlocks = true;
+          enableNowPlaying = false;
         };
       };
       qbittorrent = mkService {
