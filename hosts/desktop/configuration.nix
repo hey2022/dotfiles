@@ -30,4 +30,5 @@
   };
 
   profiles.gaming.enable = false;
+  homelab.enable = true;
 }

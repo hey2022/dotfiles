@@ -46,6 +46,7 @@
         );
       in
       {
+        enable = lib.mkEnableOption "homelab setup";
         rootService = lib.mkOption {
           type = portType;
         };

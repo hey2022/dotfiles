@@ -1,3 +1,5 @@
+{ config, lib, ... }:
+
 {
   imports = [
     ./caddy.nix
@@ -10,9 +12,11 @@
     ./prometheus/prometheus.nix
   ];
 
-  services = {
-    jellyseerr.enable = true;
-    qbittorrent.enable = true;
-    suwayomi-server.enable = true;
+  config = lib.mkIf config.homelab.enable {
+    services = {
+      jellyseerr.enable = true;
+      qbittorrent.enable = true;
+      suwayomi-server.enable = true;
+    };
   };
 }

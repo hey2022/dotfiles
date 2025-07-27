@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
+    ./beets.nix
     ./localsend.nix
     ./productivity
   ];
