@@ -1,5 +1,10 @@
 {
-  directory = "/var/lib/media/music";
+  mediaDir ? "/var/lib/media",
+  ...
+}:
+
+{
+  directory = "${mediaDir}/music";
   library = "/etc/beets/library.db";
   import.hardlink = true;
   plugins = [

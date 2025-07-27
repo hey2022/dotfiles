@@ -1,4 +1,4 @@
-{ ... }:
+{ config, ... }:
 {
   imports = [
     ./jellyfin.nix
@@ -7,9 +7,9 @@
   ];
   users.groups.media = { };
   systemd.tmpfiles.rules = [
-    "d /var/lib/media 775 root media - -"
-    "d /var/lib/media/anime 775 root media - -"
-    "d /var/lib/media/music 775 root media - -"
-    "d /var/lib/media/downloads 775 root media - -"
+    "d ${config.homelab.mediaDir} 775 root media - -"
+    "d ${config.homelab.mediaDir}/anime 775 root media - -"
+    "d ${config.homelab.mediaDir}/music 775 root media - -"
+    "d ${config.homelab.mediaDir}/downloads 775 root media - -"
   ];
 }

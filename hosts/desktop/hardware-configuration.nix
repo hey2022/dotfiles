@@ -34,7 +34,7 @@
     fsType = "ntfs3";
   };
 
-  fileSystems."/var/lib/media" = {
+  fileSystems.${config.homelab.mediaDir} = {
     device = "/mnt/elements/media";
     options = [ "bind" ];
   };

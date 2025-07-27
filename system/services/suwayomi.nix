@@ -9,7 +9,7 @@ in
   };
   services.suwayomi-server = {
     group = "media";
-    dataDir = "/var/lib/media/manga";
+    dataDir = "${config.homelab.mediaDir}/manga";
     settings.server = {
       basicAuthEnabled = true;
       basicAuthUsername = "admin";

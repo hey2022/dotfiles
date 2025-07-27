@@ -7,7 +7,7 @@ in
     enable = true;
     group = "media";
     settings = {
-      MusicFolder = "/var/lib/media/music";
+      MusicFolder = "${config.homelab.mediaDir}/music";
     };
   };
   homelab.services.navidrome = {

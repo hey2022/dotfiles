@@ -1,5 +1,5 @@
 let
-  beetsSettings = import ../../../common/beets.nix;
+  beetsSettings = import ../../../common/beets.nix { };
 in
 {
   programs.beets = {

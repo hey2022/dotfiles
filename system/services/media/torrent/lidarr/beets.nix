@@ -1,7 +1,7 @@
 { lib, pkgs, ... }:
 
 let
-  beetsSettings = import ../../../../../common/beets.nix;
+  beetsSettings = import ../../../../../common/beets.nix { };
   beetsImport = pkgs.writeShellApplication {
     name = "beets-import.sh";
     runtimeInputs = with pkgs; [
