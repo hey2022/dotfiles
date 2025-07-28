@@ -16,6 +16,10 @@ in
       basicAuthPasswordFile = config.sops.secrets.suwayomi-password.path;
       localSourcePath = "${config.homelab.mediaDir}/manga";
       downloadsPath = "${config.homelab.mediaDir}/manga/suwayomi";
+      autoDownloadNewChapters = true;
+      extensionRepos = [
+        "https://raw.githubusercontent.com/keiyoushi/extensions/repo/index.min.json"
+      ];
     };
   };
   homelab.services.suwayomi = {
