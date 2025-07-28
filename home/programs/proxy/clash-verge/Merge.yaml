@@ -93,6 +93,7 @@ rule-providers:
 rules:
   - DOMAIN-SUFFIX,argotunnel.com,DIRECT
   - PROCESS-NAME-REGEX,.*qbittorrent.*,DIRECT
+  - DOMAIN-SUFFIX,comick.pictures,DIRECT
   - RULE-SET,applications,DIRECT
   - RULE-SET,private,DIRECT
   - RULE-SET,reject,REJECT
