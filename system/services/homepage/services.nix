@@ -115,6 +115,14 @@ in
           salt = "3cd981";
         };
       };
+      suwayomi = mkService {
+        name = "suwayomi";
+        serviceName = "suwayomi-server";
+        widget = {
+          username = "admin";
+          password = "{{HOMEPAGE_VAR_SUWAYOMI}}";
+        };
+      };
     };
     AI = {
       open-webui = mkService {
