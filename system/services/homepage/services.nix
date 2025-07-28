@@ -5,19 +5,20 @@
 }:
 let
   mkService =
-    attrs@{
+    {
       name,
+      serviceName ? name,
       icon ? "${name}.svg",
       url ? "https://${name}.${config.host.address}",
-      ...
+      widget ? null,
     }:
-    lib.mkIf config.services.${name}.enable (
+    lib.mkIf config.services.${serviceName}.enable (
       {
         inherit icon;
         href = url;
       }
-      // lib.optionalAttrs (attrs ? widget) {
-        widget = attrs.widget // {
+      // lib.optionalAttrs (widget != null) {
+        widget = widget // {
           type = name;
           url = "http://localhost:${toString config.homelab.services.${name}.port}";
         };
