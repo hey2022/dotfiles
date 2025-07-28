@@ -3,17 +3,14 @@
   imports = [
     ./ai
     ./automount.nix
-    ./bazarr.nix
     ./cloudflared.nix
     ./fail2ban.nix
     ./iperf.nix
-    ./jellyseer.nix
     ./kanata.nix
     ./minecraft.nix
     ./pipewire.nix
     ./printing.nix
     ./prometheus
-    ./qbittorrent.nix
     ./ssh.nix
     ./syncthing.nix
     ./tailscale.nix
