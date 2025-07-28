@@ -43,7 +43,7 @@ in
     status = {
       prometheus = mkService {
         name = "prometheus";
-        url = "http://localhost:${toString config.services.prometheus.port}";
+        url = null;
         widget = { };
       };
       grafana = mkService {
