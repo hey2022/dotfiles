@@ -11,6 +11,7 @@
     hydra-check
     inputs.nix-alien.packages.${system}.nix-alien
     nh
+    nix-fast-build
     nix-init
     nix-melt
     nix-search-tv
