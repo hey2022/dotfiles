@@ -38,6 +38,7 @@ in
       userChrome = config.lib.hm.mkFlakeSymlink ./userChrome.css;
       userContent = config.lib.hm.mkFlakeSymlink ./userContent.css;
       settings = {
+        "zen.urlbar.replace-newtab" = false;
         "browser.tabs.allow_transparent_browser" = true;
         "browser.tabs.closeWindowWithLastTab" = false;
         "extensions.autoDisableScopes" = 0;
