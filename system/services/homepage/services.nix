@@ -79,6 +79,12 @@ in
           key = "{{HOMEPAGE_VAR_PROWLARR}}";
         };
       };
+      bazarr = mkService {
+        name = "bazarr";
+        widget = {
+          key = "{{HOMEPAGE_VAR_BAZARR}}";
+        };
+      };
       jellyfin = mkService {
         name = "jellyfin";
         widget = {

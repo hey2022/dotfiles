@@ -14,6 +14,7 @@
 
   config = lib.mkIf config.homelab.enable {
     services = {
+      bazarr.enable = true;
       jellyseerr.enable = true;
       qbittorrent.enable = true;
       suwayomi-server.enable = true;
