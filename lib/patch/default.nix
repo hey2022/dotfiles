@@ -9,7 +9,14 @@ let
   pkgs = import inputs.nixpkgs {
     inherit system;
   };
-  nixpkgs-patches = [ ];
+  nixpkgs-patches = [
+    # https://nixpk.gs/pr-tracker.html?pr=400589
+    (pkgs.fetchpatch2 {
+      name = "suwayomi-server: 1.1.1 -> 2.0.1727";
+      url = "https://github.com/NixOS/nixpkgs/pull/400589.patch";
+      sha256 = "sha256-CziVqTe6MseudWN99OshagBkpoG5EvsoJbIf7HYe6js=";
+    })
+  ];
   home-manager-patches = [ ];
   nixpkgs-patched =
     if nixpkgs-patches != [ ] then
