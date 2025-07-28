@@ -9,12 +9,13 @@ in
   };
   services.suwayomi-server = {
     group = "media";
-    dataDir = "${config.homelab.mediaDir}/manga";
     settings.server = {
+      port = 4567;
       basicAuthEnabled = true;
       basicAuthUsername = "admin";
       basicAuthPasswordFile = config.sops.secrets.suwayomi-password.path;
-      port = 4567;
+      localSourcePath = "${config.homelab.mediaDir}/manga";
+      downloadsPath = "${config.homelab.mediaDir}/manga/suwayomi";
     };
   };
   homelab.services.suwayomi = {
