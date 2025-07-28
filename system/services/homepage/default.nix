@@ -38,6 +38,12 @@ in
       color = "slate";
       background = "/images/alena-aenami-serenity-1k.jpg";
       cardBlur = "sm";
+      layout = {
+        media = {
+          style = "row";
+          columns = 4;
+        };
+      };
     };
     widgets = [
       {
