@@ -1,6 +1,9 @@
 _: {
   wayland.windowManager.hyprland.settings = {
-    monitor = [ ",preferred,auto,1" ];
+    monitor = [
+      ", preferred, auto, auto"
+      "desc:XGM XGIMI TV 0x00000001, preferred, auto, 2"
+    ];
 
     general = {
       gaps_in = 5;
