@@ -11,7 +11,6 @@
     {
       checks =
         let
-          CI = builtins.getEnv "CI" != "";
           machinesPerSystem = {
             x86_64-linux = [
               "desktop"
@@ -29,6 +28,6 @@
             name: config: lib.nameValuePair "home-manager-${name}" config.activation-script
           ) (self'.legacyPackages.homeConfigurations or { });
         in
-        devShells // packages // lib.optionalAttrs (!CI) (nixosMachines // homeConfigurations);
+        nixosMachines // homeConfigurations // devShells // packages;
     };
 }
