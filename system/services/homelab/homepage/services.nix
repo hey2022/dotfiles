@@ -12,7 +12,11 @@ let
       url ? "https://${name}.${config.host.address}",
       widget ? null,
     }:
-    lib.mkIf config.services.${serviceName}.enable (
+    let
+      attrPath = lib.splitString "." serviceName;
+      enable = lib.getAttrFromPath ([ "services" ] ++ attrPath ++ [ "enable" ]) config;
+    in
+    lib.mkIf enable (
       {
         inherit icon;
         href = url;
@@ -28,6 +32,11 @@ in
 {
   services.homepage-dashboard.services = {
     services = {
+      buildbot = mkService {
+        name = "buildbot";
+        serviceName = "buildbot-nix.master";
+        icon = null;
+      };
       karakeep = mkService {
         name = "karakeep";
         widget = {
