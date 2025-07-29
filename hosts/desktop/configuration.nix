@@ -13,7 +13,7 @@
     ../../system/programs/utilities
     ../../system/desktop
     ../../system/desktop/hyprland.nix
-    ../../system/services/homelab.nix
+    ../../system/services/homelab
   ];
 
   networking.hostName = "desktop";

@@ -2,14 +2,16 @@
 
 {
   imports = [
+    ./ai
     ./caddy.nix
+    ./cloudflared.nix
     ./glance.nix
     ./grafana.nix
     ./homepage
     ./karakeep.nix
     ./media
     ./miniflux.nix
-    ./prometheus/prometheus.nix
+    ./prometheus.nix
   ];
 
   config = lib.mkIf config.homelab.enable {
