@@ -6,6 +6,7 @@
     ../common/nix.nix
   ];
   nix = {
+    channel.enable = false;
     settings = {
       lazy-trees = true;
       download-buffer-size = 1073741824;
