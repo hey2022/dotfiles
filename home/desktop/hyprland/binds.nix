@@ -119,6 +119,7 @@ in
       # launcher
       "$mod, space, exec, ${toggle "rofi"} -show drun"
       "$mod SHIFT, space, exec, ${toggle "rofi"} -show recursivebrowser"
+      "$mod, PERIOD, exec, ${toggle "rofi"} -mode emoji -show emoji"
 
       # clipboard
       "$mod, C, exec, pkill rofi || cliprust list | rofi -dmenu -display-columns 2 | cliprust decode | wl-copy"
