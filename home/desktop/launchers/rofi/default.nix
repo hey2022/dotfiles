@@ -8,6 +8,7 @@
     package = pkgs.rofi-wayland;
     configPath = "";
     plugins = with pkgs; [
+      rofi-calc
       rofi-emoji
     ];
   };

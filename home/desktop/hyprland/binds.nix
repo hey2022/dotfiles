@@ -120,6 +120,7 @@ in
       "$mod, space, exec, ${toggle "rofi"} -show drun"
       "$mod SHIFT, space, exec, ${toggle "rofi"} -show recursivebrowser"
       "$mod, PERIOD, exec, ${toggle "rofi"} -mode emoji -show emoji"
+      "$mod SHIFT, C, exec, ${toggle "rofi"} -show calc -modi calc -no-show-match -no-sort -no-history -calc-command \"echo -n '{result}' | wl-copy\""
 
       # clipboard
       "$mod, C, exec, pkill rofi || cliprust list | rofi -dmenu -display-columns 2 | cliprust decode | wl-copy"
