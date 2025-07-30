@@ -18,6 +18,7 @@
     ./qt.nix
     ./rust
     ./sh.nix
+    ./sqlite.nix
     ./typst.nix
     ./vcs
   ];
