@@ -31,4 +31,5 @@
 
   profiles.gaming.enable = false;
   homelab.enable = true;
+  programs.niri.enable = true;
 }
