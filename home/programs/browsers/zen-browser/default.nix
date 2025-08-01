@@ -1,12 +1,12 @@
 {
   inputs,
   config,
+  lib,
   pkgs,
   ...
 }:
 let
   profile = "default";
-  addons = import ../firefox/addons { inherit pkgs; };
 in
 {
   imports = [
@@ -44,27 +44,29 @@ in
         "extensions.autoDisableScopes" = 0;
         "nebula-tab-loading-animation" = 0;
       };
-      extensions = {
-        force = true;
-        packages =
-          with pkgs.nur.repos.rycee.firefox-addons;
-          [
-            aw-watcher-web
-            darkreader
-            keepassxc-browser
-            languagetool
-            libredirect
-            redirector
-            refined-github
-            sponsorblock
-            tridactyl
-            ublock-origin
-            zotero-connector
-          ]
-          ++ (with addons; [
-            bonjourr
-          ]);
-      };
+      extensions =
+        let
+          importExtension = path: import (../firefox/extensions + ("/" + path + ".nix")) { inherit pkgs; };
+        in
+        lib.mkMerge [
+          {
+            force = true;
+            packages = with pkgs.nur.repos.rycee.firefox-addons; [
+              aw-watcher-web
+              darkreader
+              keepassxc-browser
+              languagetool
+              libredirect
+              redirector
+              refined-github
+              sponsorblock
+              tridactyl
+              ublock-origin
+              zotero-connector
+            ];
+          }
+          (importExtension "bonjourr")
+        ];
       search = {
         force = true;
         default = "Unduck";
