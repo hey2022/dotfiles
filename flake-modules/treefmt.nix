@@ -17,6 +17,7 @@
           };
           shellcheck.enable = true;
           taplo.enable = true;
+          kdlfmt.enable = true;
         };
         settings.formatter = {
           qmlformat = {
