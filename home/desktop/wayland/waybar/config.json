@@ -1,7 +1,12 @@
 {
   "layer": "top",
   "position": "top",
-  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-left": [
+    "niri/workspaces",
+    "hyprland/workspaces",
+    "niri/window",
+    "hyprland/window"
+  ],
   "modules-right": [
     "group/hardware",
     "group/controls",
@@ -24,12 +29,22 @@
     },
     "modules": ["battery", "cpu", "memory", "temperature"]
   },
+  "niri/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "active": "",
+      "default": ""
+    }
+  },
   "hyprland/workspaces": {
     "disable-scroll": true,
     "format": " {icon} ",
     "format-icons": {
       "default": ""
     }
+  },
+  "niri/window": {
+    "format": "{app_id}"
   },
   "hyprland/window": {
     "format": "{class}",
