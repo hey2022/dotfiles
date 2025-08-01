@@ -647,13 +647,13 @@ binds {
     // since it will switch twice upon pressing the hotkey (once by xkb, once by niri).
     // Mod+Space       { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
-    Print {
-        screenshot
-    }
-    Ctrl+Print {
+    Mod+S {
         screenshot-screen
     }
-    Alt+Print {
+    Mod+Shift+S {
+        screenshot
+    }
+    Mod+Ctrl+S {
         screenshot-window
     }
     // Applications such as remote-desktop clients and software KVM switches may
