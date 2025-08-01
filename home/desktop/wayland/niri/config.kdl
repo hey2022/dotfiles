@@ -667,4 +667,16 @@ binds {
     Mod+Ctrl+P {
         power-off-monitors
     }
+    Mod+Shift+W {
+        spawn "waypaper" "--random"
+    }
+    Mod+Shift+C {
+        spawn "sh" "-c" "pkill rofi || cliprust list | rofi -dmenu -display-columns 2 | cliprust decode | wl-copy"
+    }
+    Mod+N {
+        spawn "swaync-client" "-t"
+    }
+    Mod+Shift+N {
+        spawn "swaync-client" "-d"
+    }
 }
