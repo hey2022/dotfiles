@@ -6,6 +6,7 @@
 {
   imports = [
     ../lib/hm.nix
+    ../modules/home-manager/default.nix
     ./dev
     ./font
     ./nix.nix
