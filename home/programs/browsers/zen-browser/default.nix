@@ -57,7 +57,6 @@ in
               keepassxc-browser
               languagetool
               libredirect
-              redirector
               refined-github
               sponsorblock
               tridactyl
@@ -65,6 +64,7 @@ in
               zotero-connector
             ];
           }
+          (importExtension "redirector")
           (importExtension "bonjourr")
         ];
       search = {
