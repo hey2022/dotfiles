@@ -10,4 +10,5 @@
   profiles = {
     entertainment.enable = true;
   };
+  programs.niri.enable = true;
 }

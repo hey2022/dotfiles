@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
+    ./niri
     ./quickshell
     ./swaync.nix
     ./waybar
