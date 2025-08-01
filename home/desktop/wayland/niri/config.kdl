@@ -348,6 +348,9 @@ binds {
     Mod+Q {
         close-window
     }
+    Mod+Shift+Q {
+        spawn "sh" "-c" "niri msg -j focused-window | jq '.pid' | xargs kill -9"
+    }
     Mod+H {
         focus-column-left
     }
