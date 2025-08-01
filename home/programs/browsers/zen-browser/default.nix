@@ -63,7 +63,6 @@ in
           ]
           ++ (with addons; [
             bonjourr
-            zen-internet
           ]);
       };
       search = {

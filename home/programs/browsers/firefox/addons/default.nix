@@ -14,5 +14,4 @@ in
 {
   inherit buildFirefoxXpiAddon;
   bonjourr = callPackage ./bonjourr.nix { };
-  zen-internet = callPackage ./zen-internet.nix { };
 }
