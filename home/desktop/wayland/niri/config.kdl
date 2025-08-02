@@ -436,10 +436,10 @@ binds {
     // the cooldown-ms property. The bind will be rate-limited to this value.
     // You can set a cooldown on any bind, but it's most useful for the wheel.
     Mod+WheelScrollDown cooldown-ms=150 {
-        focus-workspace-down
+        focus-window-or-workspace-down
     }
     Mod+WheelScrollUp cooldown-ms=150 {
-        focus-workspace-up
+        focus-window-or-workspace-up
     }
     Mod+Shift+WheelScrollDown cooldown-ms=150 {
         move-column-to-workspace-down
