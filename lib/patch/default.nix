@@ -14,7 +14,7 @@ let
     (pkgs.fetchpatch2 {
       name = "suwayomi-server: 1.1.1 -> 2.0.1727";
       url = "https://github.com/NixOS/nixpkgs/pull/400589.patch";
-      sha256 = "sha256-CziVqTe6MseudWN99OshagBkpoG5EvsoJbIf7HYe6js=";
+      sha256 = "sha256-ur8eyCzCUhBRmdSm4oQjOk6MyozjewjyH9durUhzmag=";
     })
   ];
   home-manager-patches = [ ];
