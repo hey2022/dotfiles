@@ -321,6 +321,18 @@ binds {
     XF86AudioNext allow-when-locked=true {
         spawn "playerctl" "next"
     }
+    XF86MonBrightnessUp {
+        spawn "brightnessctl" "set" "5%+"
+    }
+    XF86MonBrightnessDown {
+        spawn "brightnessctl" "set" "5%-"
+    }
+    Shift+XF86MonBrightnessUp {
+        spawn "brightnessctl" "set" "1%+"
+    }
+    Shift+XF86MonBrightnessDown {
+        spawn "brightnessctl" "set" "1%-"
+    }
     Mod+P allow-when-locked=true {
         spawn "playerctl" "play-pause"
     }
