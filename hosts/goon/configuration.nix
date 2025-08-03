@@ -33,4 +33,5 @@
     gaming.enable = true;
     vm.enable = false;
   };
+  programs.niri.enable = true;
 }

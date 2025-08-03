@@ -10,4 +10,5 @@
   host.laptop = true;
 
   profiles.gaming.enable = true;
+  programs.niri.enable = true;
 }
