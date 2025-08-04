@@ -294,10 +294,10 @@ binds {
     // Mod+T { spawn "bash" "-c" "notify-send hello && exec alacritty"; }
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
-    XF86AudioRaiseVolume allow-when-locked=true {
+    XF86AudioRaiseVolume allow-when-locked=true hotkey-overlay-title=null {
         spawn "wpctl" "set-volume" "-l" "1.0" "@DEFAULT_AUDIO_SINK@" "0.05+"
     }
-    XF86AudioLowerVolume allow-when-locked=true {
+    XF86AudioLowerVolume allow-when-locked=true hotkey-overlay-title=null {
         spawn "wpctl" "set-volume" "-l" "1.0" "@DEFAULT_AUDIO_SINK@" "0.05-"
     }
     Mod+Up allow-when-locked=true {
@@ -306,34 +306,34 @@ binds {
     Mod+Down allow-when-locked=true {
         spawn "wpctl" "set-volume" "-l" "1.0" "@DEFAULT_AUDIO_SINK@" "0.05-"
     }
-    XF86AudioMute allow-when-locked=true {
+    XF86AudioMute allow-when-locked=true hotkey-overlay-title=null {
         spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"
     }
-    XF86AudioMicMute allow-when-locked=true {
+    XF86AudioMicMute allow-when-locked=true hotkey-overlay-title=null {
         spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"
     }
-    XF86AudioPlay allow-when-locked=true {
+    XF86AudioPlay allow-when-locked=true hotkey-overlay-title=null {
         spawn "playerctl" "play-pause"
     }
-    XF86AudioPause allow-when-locked=true {
+    XF86AudioPause allow-when-locked=true hotkey-overlay-title=null {
         spawn "playerctl" "pause"
     }
-    XF86AudioPrev allow-when-locked=true {
+    XF86AudioPrev allow-when-locked=true hotkey-overlay-title=null {
         spawn "playerctl" "previous"
     }
-    XF86AudioNext allow-when-locked=true {
+    XF86AudioNext allow-when-locked=true hotkey-overlay-title=null {
         spawn "playerctl" "next"
     }
-    XF86MonBrightnessUp {
+    XF86MonBrightnessUp hotkey-overlay-title=null {
         spawn "brightnessctl" "set" "5%+"
     }
-    XF86MonBrightnessDown {
+    XF86MonBrightnessDown hotkey-overlay-title=null {
         spawn "brightnessctl" "set" "5%-"
     }
-    Shift+XF86MonBrightnessUp {
+    Shift+XF86MonBrightnessUp hotkey-overlay-title=null {
         spawn "brightnessctl" "set" "1%+"
     }
-    Shift+XF86MonBrightnessDown {
+    Shift+XF86MonBrightnessDown hotkey-overlay-title=null {
         spawn "brightnessctl" "set" "1%-"
     }
     Mod+P allow-when-locked=true {
