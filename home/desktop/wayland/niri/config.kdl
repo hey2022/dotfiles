@@ -286,6 +286,9 @@ binds {
     Mod+Space hotkey-overlay-title="Run an Application: rofi" {
         spawn "rofi" "-show" "drun"
     }
+    Mod+Shift+Space hotkey-overlay-title="Open file" {
+        spawn "rofi" "-show" "recursivebrowser"
+    }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" {
         spawn "hyprlock" "--immediate"
     }
