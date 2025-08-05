@@ -5,6 +5,7 @@
       gtk-single-instance = true;
       gtk-tabs-location = "bottom";
       gtk-wide-tabs = false;
+      clipboard-paste-protection = false;
       background-opacity = config.stylix.opacity.terminal;
       font-family = [
         "Iosevka Custom"
