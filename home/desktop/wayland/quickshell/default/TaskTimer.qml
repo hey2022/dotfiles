@@ -38,7 +38,7 @@ Scope {
                     margin: 5
                     color: "#80000000"
                     border {
-                        width: 2
+                        width: 1
                         color: timer.running ? "#ffffff" : "#000000"
                     }
                     Text {
@@ -48,7 +48,7 @@ Scope {
                         verticalAlignment: Text.AlignVCenter
 
                         color: "white"
-                        font.pixelSize: 20
+                        font.pixelSize: 12
                         text: {
                             let time = root.isTask ? root.time : root.breakTime;
                             let minutes = Math.floor(time / 60);
