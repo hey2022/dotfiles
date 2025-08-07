@@ -52,8 +52,6 @@ in
           {
             force = true;
             packages = with pkgs.nur.repos.rycee.firefox-addons; [
-              # BUG: https://github.com/tridactyl/tridactyl/issues/1409
-              # tridactyl
               aw-watcher-web
               darkreader
               keepassxc-browser
@@ -61,6 +59,7 @@ in
               libredirect
               refined-github
               sponsorblock
+              tridactyl
               ublock-origin
               zotero-connector
             ];
