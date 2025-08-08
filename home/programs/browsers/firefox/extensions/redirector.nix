@@ -13,7 +13,7 @@
         "includePattern" = "https://nixos.wiki/*";
         "excludePattern" = "";
         "patternDesc" = "Any word after example.com leads to google search for that word.";
-        "redirectUrl" = "https://wiki.nixos.org/wiki/Main_Page";
+        "redirectUrl" = "https://wiki.nixos.org/$1";
         "patternType" = "W";
         "processMatches" = "noProcessing";
         "disabled" = false;
