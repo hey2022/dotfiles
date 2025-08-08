@@ -21,7 +21,7 @@ in
     ./lisp.nix
     ./markdown
     ./neovim
-    ./nix.nix
+    ./nix
     ./python.nix
     ./qt.nix
     ./rust
