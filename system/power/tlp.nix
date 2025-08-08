@@ -12,8 +12,8 @@
       PLATFORM_PROFILE_ON_AC = "performance";
 
       # https://linrunner.de/tlp/settings/battery.html
-      START_CHARGE_THRESH_BAT0 = 75;
-      STOP_CHARGE_THRESH_BAT0 = 80;
+      START_CHARGE_THRESH_BAT0 = 90;
+      STOP_CHARGE_THRESH_BAT0 = 95;
     };
   };
 }
