@@ -1,4 +1,12 @@
-{ pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+let
+  cfg = config.profiles.dev;
+in
 {
   imports = [
     ./android.nix
@@ -22,14 +30,23 @@
     ./typst.nix
     ./vcs
   ];
-  home.packages = with pkgs; [
-    bun
-    entr
-    flamegraph
-    hyperfine
-    just
-    onefetch
-    tokei
-    wget
-  ];
+  options.profiles.dev = {
+    enable = lib.mkOption {
+      type = lib.types.bool;
+      default = true;
+      description = "Development profile";
+    };
+  };
+  config = lib.mkIf cfg.enable {
+    home.packages = with pkgs; [
+      bun
+      entr
+      flamegraph
+      hyperfine
+      just
+      onefetch
+      tokei
+      wget
+    ];
+  };
 }
