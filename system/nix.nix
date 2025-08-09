@@ -7,6 +7,7 @@
   ];
   nix = {
     channel.enable = false;
+    nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
     settings = {
       lazy-trees = true;
       download-buffer-size = 1073741824;
