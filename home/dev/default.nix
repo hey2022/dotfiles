@@ -20,7 +20,7 @@ in
     ./julia.nix
     ./lisp.nix
     ./markdown
-    ./neovim
+    ./neovim.nix
     ./nix
     ./python.nix
     ./qt.nix
