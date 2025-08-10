@@ -1,5 +1,4 @@
-local catUtils = require('nixCatsUtils')
-if (catUtils.isNixCats and nixCats('lspDebugMode')) then
+if nixCats('lspDebugMode') then
   vim.lsp.set_log_level("debug")
 end
 
@@ -41,7 +40,6 @@ require('lze').load {
   {
     "mason.nvim",
     -- only run it when not on nix
-    enabled = not catUtils.isNixCats,
     on_plugin = { "nvim-lspconfig" },
     load = function(name)
       vim.cmd.packadd(name)
@@ -104,7 +102,6 @@ require('lze').load {
   {
     "rnix",
     -- mason doesn't have nixd
-    enabled = not catUtils.isNixCats,
     lsp = {
       filetypes = { "nix" },
     },
@@ -112,14 +109,13 @@ require('lze').load {
   {
     "nil_ls",
     -- mason doesn't have nixd
-    enabled = not catUtils.isNixCats,
     lsp = {
       filetypes = { "nix" },
     },
   },
   {
     "nixd",
-    enabled = catUtils.isNixCats and (nixCats('nix') or nixCats('neonixdev')) or false,
+    enabled = (nixCats('nix') or nixCats('neonixdev')) or false,
     lsp = {
       filetypes = { "nix" },
       settings = {
