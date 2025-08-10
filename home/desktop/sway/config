@@ -200,6 +200,8 @@ bindsym $mod+ctrl+shift+insert exec grim -g "$(slurp)" - | wl-copy
 bindsym $mod+o exec grim -g "$(slurp)" - | tesseract -l eng - - | wl-copy
 bindsym $mod+shift+o exec grim -g "$(slurp)" - | tesseract -l chi_sim+jpn+kor -c preserve_interword_spaces=1 - - | wl-copy
 
+bindsym $mod+i exec toggle-inhibit-lid-sleep
+
 bindsym $mod+space exec pkill fuzzel || fuzzel
 
 bindsym $mod+n exec swaync-client -t

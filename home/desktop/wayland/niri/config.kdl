@@ -295,6 +295,9 @@ binds {
     Super+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" {
         spawn "hyprlock" "--immediate"
     }
+    Super+I hotkey-overlay-title="Toggle inhibit lid sleep" {
+        spawn "toggle-inhibit-lid-sleep"
+    }
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.
     // Mod+T { spawn "bash" "-c" "notify-send hello && exec alacritty"; }

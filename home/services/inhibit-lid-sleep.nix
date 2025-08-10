@@ -36,9 +36,5 @@ in
         ExecStart = ''${lib.getExe' pkgs.systemd "systemd-inhibit"} --what=handle-lid-switch:sleep --why="Inhibit lid sleep" ${lib.getExe' pkgs.coreutils "sleep"} infinity'';
       };
     };
-    wayland.windowManager = {
-      hyprland.settings.bind = [ "$mod, I, exec, toggle-${name}" ];
-      sway.extraConfig = lib.mkAfter "bindsym $mod+i exec toggle-${name}";
-    };
   };
 }

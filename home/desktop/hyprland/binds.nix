@@ -78,6 +78,8 @@ in
       "$mod SHIFT, Escape, exec, ${toggle "wlogout"} -p layer-shell"
       # lock screen
       "$mod, Escape, exec, ${runOnce "hyprlock"} --immediate"
+      # inhibit-lid-sleep
+      "$mod, I, exec, toggle-inhibit-lid-sleep"
 
       # screenshot
       # area

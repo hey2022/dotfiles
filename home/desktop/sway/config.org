@@ -334,6 +334,10 @@ bindsym $mod+o exec grim -g "$(slurp)" - | tesseract -l eng - - | wl-copy
 bindsym $mod+shift+o exec grim -g "$(slurp)" - | tesseract -l chi_sim+jpn+kor -c preserve_interword_spaces=1 - - | wl-copy
 #+end_src
 
+** Inhibit lid sleep
+#+begin_src conf
+bindsym $mod+i exec toggle-inhibit-lid-sleep
+#+end_src
 ** Launcher
 #+begin_src conf
 bindsym $mod+space exec pkill fuzzel || fuzzel
