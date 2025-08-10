@@ -297,133 +297,52 @@ let
   # The get function is to prevent errors when querying subcategories.
 
   # see :help nixCats.flake.outputs.packageDefinitions
-  packageDefinitions = {
-    # the name here is the name of the package
-    # and also the default command name for it.
-    nvim =
-      { pkgs, name, ... }@misc:
-      {
-        # these also recieve our pkgs variable
-        # see :help nixCats.flake.outputs.packageDefinitions
-        settings = {
-          suffix-path = true;
-          suffix-LD = true;
-          # The name of the package, and the default launch name,
-          # and the name of the .desktop file, is `nixCats`,
-          # or, whatever you named the package definition in the packageDefinitions set.
-          # WARNING: MAKE SURE THESE DONT CONFLICT WITH OTHER INSTALLED PACKAGES ON YOUR PATH
-          # That would result in a failed build, as nixos and home manager modules validate for collisions on your path
-          aliases = [ ];
-
-          # explained below in the `regularCats` package's definition
-          # OR see :help nixCats.flake.outputs.settings for all of the settings available
-          wrapRc = true;
-          configDirName = "nvim";
-          # neovim-unwrapped = inputs.neovim-nightly-overlay.packages.${pkgs.system}.neovim;
-          hosts.python3.enable = true;
-          hosts.node.enable = true;
-        };
-        # enable the categories you want from categoryDefinitions
-        categories = {
-          markdown = true;
-          general = true;
-          lint = true;
-          format = true;
-          neonixdev = true;
-          test = {
-            subtest1 = true;
+  packageDefinitions =
+    let
+      nvim =
+        { pkgs, ... }@misc:
+        {
+          settings = {
+            suffix-path = true;
+            suffix-LD = true;
+            aliases = [ ];
+            wrapRc = true;
+            configDirName = "nvim";
+            hosts.python3.enable = true;
+            hosts.node.enable = true;
           };
-
-          # enabling this category will enable the go category,
-          # and ALSO debug.go and debug.default due to our extraCats in categoryDefinitions.
-          # go = true; # <- disabled but you could enable it with override or module on install
-
-          # this does not have an associated category of plugins,
-          # but lua can still check for it
-          lspDebugMode = false;
-          # you could also pass something else:
-          # see :help nixCats
-          themer = true;
-          colorscheme = "catppuccin";
-        };
-        extra = {
-          # to keep the categories table from being filled with non category things that you want to pass
-          # there is also an extra table you can use to pass extra stuff.
-          # but you can pass all the same stuff in any of these sets and access it in lua
-          nixdExtras = {
-            nixpkgs = ''import ${pkgs.path} {}'';
-            # or inherit nixpkgs;
+          categories = {
+            markdown = true;
+            general = true;
+            lint = true;
+            format = true;
+            neonixdev = true;
+            test = true;
+            lspDebugMode = false;
+            themer = true;
+            colorscheme = "catppuccin";
+          };
+          extra = {
+            nixdExtras = {
+              nixpkgs = ''import ${pkgs.path} {}'';
+            };
           };
         };
-      };
-    nnvim =
-      { pkgs, ... }@misc:
-      {
-        settings = {
-          suffix-path = true;
-          suffix-LD = true;
-          # IMPURE PACKAGE: normal config reload
-          # include same categories as main config,
-          # will load from vim.fn.stdpath('config')
-          wrapRc = false;
-          # or tell it some other place to load
-          # unwrappedCfgPath = "/some/path/to/your/config";
-
-          # configDirName: will now look for nixCats-nvim within .config and .local and others
-          # this can be changed so that you can choose which ones share data folders for auths
-          # :h $NVIM_APPNAME
-          configDirName = "nvim";
-
-          aliases = [ ];
-
-          # If you wanted nightly, uncomment this, and the flake input.
-          # neovim-unwrapped = inputs.neovim-nightly-overlay.packages.${pkgs.system}.neovim;
-          # Probably add the cache stuff they recommend too.
-        };
-        categories = {
-          markdown = true;
-          general = true;
-          neonixdev = true;
-          lint = true;
-          format = true;
-          test = true;
-          # go = true; # <- disabled but you could enable it with override or module on install
-          lspDebugMode = false;
-          themer = true;
-          colorscheme = "catppuccin";
-        };
-        extra = {
-          # nixCats.extra("path.to.val") will perform vim.tbl_get(nixCats.extra, "path" "to" "val")
-          # this is different from the main nixCats("path.to.cat") in that
-          # the main nixCats("path.to.cat") will report true if `path.to = true`
-          # even though path.to.cat would be an indexing error in that case.
-          # this is to mimic the concept of "subcategories" but may get in the way of just fetching values.
-          nixdExtras = {
-            nixpkgs = ''import ${pkgs.path} {}'';
-            # or inherit nixpkgs;
-          };
-          # yes even tortured inputs work.
-          theBestCat = "says meow!!";
-          theWorstCat = {
-            thing'1 = [
-              "MEOW"
-              '']]' ]=][=[HISSS]]"[[''
-            ];
-            thing2 = [
-              {
-                thing3 = [
-                  "give"
-                  "treat"
-                ];
-              }
-              "I LOVE KEYBOARDS"
-              (utils.mkLuaInline ''[[I am a]] .. [[ lua ]] .. type("value")'')
-            ];
-            thing4 = "couch is for scratching";
+      nnvim =
+        { pkgs, ... }@misc:
+        let
+          base = nvim misc;
+        in
+        base
+        // {
+          settings = base.settings // {
+            wrapRc = false;
           };
         };
-      };
-  };
+    in
+    {
+      inherit nvim nnvim;
+    };
 
   defaultPackageName = "nvim";
   # I did not here, but you might want to create a package named nvim.
