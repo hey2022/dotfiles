@@ -64,6 +64,7 @@ require('lze').load {
   { import = "config.plugins.telescope", },
   { import = "config.plugins.treesitter", },
   { import = "config.plugins.completion", },
+  { import = "config.plugins.quarto", },
   {
     "markdown-preview.nvim",
     -- NOTE: for_cat is a custom handler that just sets enabled value for us,

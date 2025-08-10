@@ -84,6 +84,9 @@ let
           go-tools
           gccgo
         ];
+        statistics = with pkgs; [
+          quarto
+        ];
         # and easily check if they are included in lua
         format = with pkgs; [
         ];
@@ -159,6 +162,9 @@ let
         ];
         neonixdev = with pkgs.vimPlugins; [
           lazydev-nvim
+        ];
+        statistics = with pkgs.vimPlugins; [
+          quarto-nvim
         ];
         general = {
           blink = with pkgs.vimPlugins; [
@@ -313,6 +319,7 @@ let
           };
           categories = {
             markdown = true;
+            statistics = true;
             general = true;
             lint = true;
             format = true;
