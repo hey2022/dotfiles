@@ -1,6 +1,6 @@
 return {
     {
-        "NeogitOrg/neogit",
+        "neogit",
         keys = {
             {
                 "<leader>gg",

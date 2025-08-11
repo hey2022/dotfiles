@@ -1,7 +1,7 @@
 return {
     {
-        "quarto-dev/quarto-nvim",
+        "quarto-nvim",
         for_cat = "statistics",
-        ft = "qml";
+        ft = "qml",
     },
 }
