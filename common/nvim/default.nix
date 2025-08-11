@@ -89,6 +89,7 @@ let
         ];
         # and easily check if they are included in lua
         format = with pkgs; [
+          stylua
         ];
         neonixdev = {
           # also you can do this.
