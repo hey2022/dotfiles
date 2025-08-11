@@ -39,18 +39,6 @@ require("lze").load({
         end,
     },
     {
-        "mason.nvim",
-        -- only run it when not on nix
-        on_plugin = { "nvim-lspconfig" },
-        load = function(name)
-            vim.cmd.packadd(name)
-            vim.cmd.packadd("mason-lspconfig.nvim")
-            require("mason").setup()
-            -- auto install will make it install servers when lspconfig is called on them.
-            require("mason-lspconfig").setup({ automatic_installation = true })
-        end,
-    },
-    {
         -- lazydev makes your lsp way better in your config without needing extra lsp configuration.
         "lazydev.nvim",
         for_cat = "neonixdev",
@@ -102,14 +90,12 @@ require("lze").load({
     },
     {
         "rnix",
-        -- mason doesn't have nixd
         lsp = {
             filetypes = { "nix" },
         },
     },
     {
         "nil_ls",
-        -- mason doesn't have nixd
         lsp = {
             filetypes = { "nix" },
         },
