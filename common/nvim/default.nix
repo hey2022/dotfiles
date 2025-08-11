@@ -168,10 +168,6 @@ let
         statistics = with pkgs.vimPlugins; [
           quarto-nvim
         ];
-        git = with pkgs.vimPlugins; [
-          neogit
-          diffview-nvim
-        ];
         general = {
           blink = with pkgs.vimPlugins; [
             luasnip
@@ -200,8 +196,9 @@ let
             nvim-lspconfig
             lualine-nvim
             gitsigns-nvim
+            neogit
+            diffview-nvim
             vim-sleuth
-            vim-fugitive
             vim-rhubarb
             nvim-surround
           ];
@@ -327,7 +324,6 @@ let
             markdown = true;
             statistics = true;
             general = true;
-            git = true;
             lint = true;
             format = true;
             neonixdev = true;

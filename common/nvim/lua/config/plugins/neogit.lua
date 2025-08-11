@@ -1,8 +1,6 @@
 return {
     {
         "NeogitOrg/neogit",
-        for_cat = "git",
-        on_require = { "neogit" },
         keys = {
             {
                 "<leader>gg",
