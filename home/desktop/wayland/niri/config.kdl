@@ -292,7 +292,7 @@ binds {
     Mod+Ctrl+Space hotkey-overlay-title="Open file" {
         spawn "rofi" "-show" "recursivebrowser"
     }
-    Super+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" {
+    Mod+Shift+Escape hotkey-overlay-title="Lock the Screen: hyprlock" {
         spawn "hyprlock" "--immediate"
     }
     Super+I hotkey-overlay-title="Toggle inhibit lid sleep" {
