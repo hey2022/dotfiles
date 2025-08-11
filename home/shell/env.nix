@@ -7,8 +7,8 @@
       "$HOME/.local/bin"
     ];
     sessionVariables = {
-      VISUAL = "emacsclient -c";
-      EDITOR = "emacsclient -nw";
+      VISUAL = "neovide";
+      EDITOR = "nvim";
 
       GTK_IM_MODULE = "fcitx";
       QT_IM_MODULE = "fcitx";
