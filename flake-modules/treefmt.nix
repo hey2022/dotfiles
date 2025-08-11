@@ -25,6 +25,10 @@
             options = [ "-i" ];
             includes = [ "*.qml" ];
           };
+          stylua = {
+            command = lib.getExe pkgs.stylua;
+            includes = [ "*.lua" ];
+          };
         };
       };
     };
