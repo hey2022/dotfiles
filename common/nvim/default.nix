@@ -167,6 +167,7 @@ let
         ];
         statistics = with pkgs.vimPlugins; [
           quarto-nvim
+          otter-nvim
         ];
         general = {
           blink = with pkgs.vimPlugins; [
