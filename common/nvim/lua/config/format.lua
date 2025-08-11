@@ -4,7 +4,7 @@ require("lze").load({
         for_cat = "format",
         -- cmd = { "" },
         -- event = "",
-        -- ft = "",
+        ft = { "stylua", "nix" },
         keys = {
             { "<leader>FF", desc = "[F]ormat [F]ile" },
         },
@@ -25,13 +25,14 @@ require("lze").load({
                     -- Use a sub-list to run only the first available formatter
                     -- javascript = { { "prettierd", "prettier" } },
                 },
+                format_on_save = {
+                    lsp_format = "fallback",
+                },
             })
 
             vim.keymap.set({ "n", "v" }, "<leader>FF", function()
                 conform.format({
-                    lsp_fallback = true,
-                    async = false,
-                    timeout_ms = 1000,
+                    lsp_format = "fallback",
                 })
             end, { desc = "[F]ormat [F]ile" })
         end,
