@@ -17,6 +17,7 @@ require('lze').load {
           -- NOTE: download some formatters in lspsAndRuntimeDeps
           -- and configure them here
           lua = { "stylua" },
+          nix = { "nixfmt" },
           -- go = { "gofmt", "golint" },
           -- templ = { "templ" },
           -- Conform will run multiple formatters sequentially
