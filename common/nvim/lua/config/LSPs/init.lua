@@ -89,6 +89,13 @@ require("lze").load({
         },
     },
     {
+        "clangd",
+        for_cat = "cpp",
+        lsp = {
+            filetpes = { "cpp", "c" },
+        },
+    },
+    {
         "rnix",
         lsp = {
             filetypes = { "nix" },

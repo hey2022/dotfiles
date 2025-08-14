@@ -84,6 +84,9 @@ let
           go-tools
           gccgo
         ];
+        cpp = with pkgs; [
+          clang-tools
+        ];
         statistics = with pkgs; [
           quarto
         ];
