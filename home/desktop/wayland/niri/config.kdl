@@ -435,6 +435,18 @@ binds {
     Mod+Shift+Ctrl+L {
         move-column-to-monitor-right
     }
+    Mod+Shift+Alt+H {
+        move-workspace-to-monitor-left
+    }
+    Mod+Shift+Alt+J {
+        move-workspace-to-monitor-down
+    }
+    Mod+Shift+Alt+K {
+        move-workspace-to-monitor-up
+    }
+    Mod+Shift+Alt+L {
+        move-workspace-to-monitor-right
+    }
     // Alternatively, there are commands to move just a single window:
     // Mod+Shift+Ctrl+Left  { move-window-to-monitor-left; }
     // ...
