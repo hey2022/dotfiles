@@ -411,28 +411,28 @@ binds {
     Mod+Shift+End {
         move-column-to-last
     }
-    Mod+Alt+H {
+    Mod+Ctrl+H {
         focus-monitor-left
     }
-    Mod+Alt+J {
+    Mod+Ctrl+J {
         focus-monitor-down
     }
-    Mod+Alt+K {
+    Mod+Ctrl+K {
         focus-monitor-up
     }
-    Mod+Alt+L {
+    Mod+Ctrl+L {
         focus-monitor-right
     }
-    Mod+Shift+Alt+H {
+    Mod+Shift+Ctrl+H {
         move-column-to-monitor-left
     }
-    Mod+Shift+Alt+J {
+    Mod+Shift+Ctrl+J {
         move-column-to-monitor-down
     }
-    Mod+Shift+Alt+K {
+    Mod+Shift+Ctrl+K {
         move-column-to-monitor-up
     }
-    Mod+Shift+Alt+L {
+    Mod+Shift+Ctrl+L {
         move-column-to-monitor-right
     }
     // Alternatively, there are commands to move just a single window:
@@ -441,18 +441,18 @@ binds {
     // And you can also move a whole workspace to another monitor:
     // Mod+Shift+Ctrl+Left  { move-workspace-to-monitor-left; }
     // ...
-    Mod+Ctrl+J {
-        focus-workspace-down
-    }
-    Mod+Ctrl+K {
-        focus-workspace-up
-    }
-    Mod+Shift+Ctrl+J {
-        move-workspace-down
-    }
-    Mod+Shift+Ctrl+K {
-        move-workspace-up
-    }
+    // Mod+Ctrl+J {
+    //     focus-workspace-down
+    // }
+    // Mod+Ctrl+K {
+    //     focus-workspace-up
+    // }
+    // Mod+Shift+Ctrl+J {
+    //     move-workspace-down
+    // }
+    // Mod+Shift+Ctrl+K {
+    //     move-workspace-up
+    // }
     // You can bind mouse wheel scroll ticks using the following syntax.
     // These binds will change direction based on the natural-scroll setting.
     //
