@@ -179,6 +179,7 @@ let
             cmp-cmdline
             blink-cmp
             blink-compat
+            supermaven-nvim
             colorful-menu-nvim
           ];
           treesitter = with pkgs.vimPlugins; [
