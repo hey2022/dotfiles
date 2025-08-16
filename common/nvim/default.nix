@@ -175,6 +175,7 @@ let
         general = {
           blink = with pkgs.vimPlugins; [
             luasnip
+            friendly-snippets
             cmp-cmdline
             blink-cmp
             blink-compat

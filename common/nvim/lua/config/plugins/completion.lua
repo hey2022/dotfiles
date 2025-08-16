@@ -16,6 +16,11 @@ return {
         dep_of = { "cmp-cmdline" },
     },
     {
+        "friendly-snippets",
+        for_cat = "general.blink",
+        dep_of = { "luasnip" },
+    },
+    {
         "luasnip",
         for_cat = "general.blink",
         dep_of = { "blink.cmp" },
@@ -44,8 +49,6 @@ return {
         event = "DeferredUIEnter",
         after = function(_)
             require("blink.cmp").setup({
-                -- 'default' (recommended) for mappings similar to built-in completions (C-y to accept)
-                -- See :h blink-cmp-config-keymap for configuring keymaps
                 keymap = {
                     preset = "default",
                 },
@@ -71,8 +74,6 @@ return {
                 },
                 fuzzy = {
                     sorts = {
-                        "exact",
-                        -- defaults
                         "score",
                         "sort_text",
                     },
@@ -105,18 +106,6 @@ return {
                 },
                 snippets = {
                     preset = "luasnip",
-                    active = function(filter)
-                        local snippet = require("luasnip")
-                        local blink = require("blink.cmp")
-                        if snippet.in_snippet() and not blink.is_visible() then
-                            return true
-                        else
-                            if not snippet.in_snippet() and vim.fn.mode() == "n" then
-                                snippet.unlink_current()
-                            end
-                            return false
-                        end
-                    end,
                 },
                 sources = {
                     default = { "lsp", "path", "snippets", "buffer", "omni" },
