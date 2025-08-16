@@ -133,6 +133,14 @@ require("lze").load({
         end,
     },
     {
+        "nvim-autopairs",
+        for_cat = "general.always",
+        event = "DeferredUIEnter",
+        after = function(plugin)
+            require("nvim-autopairs").setup()
+        end,
+    },
+    {
         "vim-startuptime",
         for_cat = "general.extra",
         cmd = { "StartupTime" },
