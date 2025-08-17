@@ -295,7 +295,7 @@ binds {
     Mod+Shift+Escape hotkey-overlay-title="Lock the Screen: hyprlock" {
         spawn "hyprlock" "--immediate"
     }
-    Super+I hotkey-overlay-title="Toggle inhibit lid sleep" {
+    Mod+Ctrl+I hotkey-overlay-title="Toggle inhibit lid sleep" {
         spawn "toggle-inhibit-lid-sleep"
     }
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
@@ -453,18 +453,18 @@ binds {
     // And you can also move a whole workspace to another monitor:
     // Mod+Shift+Ctrl+Left  { move-workspace-to-monitor-left; }
     // ...
-    // Mod+Ctrl+J {
-    //     focus-workspace-down
-    // }
-    // Mod+Ctrl+K {
-    //     focus-workspace-up
-    // }
-    // Mod+Shift+Ctrl+J {
-    //     move-workspace-down
-    // }
-    // Mod+Shift+Ctrl+K {
-    //     move-workspace-up
-    // }
+    Mod+U {
+        focus-workspace-down
+    }
+    Mod+I {
+        focus-workspace-up
+    }
+    Mod+Shift+U {
+        move-workspace-down
+    }
+    Mod+Shift+I {
+        move-workspace-up
+    }
     // You can bind mouse wheel scroll ticks using the following syntax.
     // These binds will change direction based on the natural-scroll setting.
     //
