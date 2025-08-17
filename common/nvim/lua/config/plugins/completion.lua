@@ -48,14 +48,6 @@ return {
         on_plugin = { "blink.cmp" },
     },
     {
-        "supermaven-nvim",
-        for_cat = "general.blink",
-        dep_of = { "blink.cmp" },
-        after = function(_)
-            require("supermaven-nvim").setup({})
-        end,
-    },
-    {
         "blink.cmp",
         for_cat = "general.blink",
         event = "DeferredUIEnter",

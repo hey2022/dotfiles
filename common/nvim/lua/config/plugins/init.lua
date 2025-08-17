@@ -66,6 +66,7 @@ require("lze").load({
     { import = "config.plugins.completion" },
     { import = "config.plugins.quarto" },
     { import = "config.plugins.neogit" },
+    { import = "config.plugins.ai" },
     {
         "markdown-preview.nvim",
         -- NOTE: for_cat is a custom handler that just sets enabled value for us,

@@ -179,7 +179,6 @@ let
             cmp-cmdline
             blink-cmp
             blink-compat
-            supermaven-nvim
             colorful-menu-nvim
           ];
           treesitter = with pkgs.vimPlugins; [
@@ -220,6 +219,9 @@ let
             # If it was included in your flake inputs as plugins-hlargs,
             # this would be how to add that plugin in your config.
             # pkgs.neovimPlugins.hlargs
+          ];
+          ai = with pkgs.vimPlugins; [
+            supermaven-nvim
           ];
         };
       };
