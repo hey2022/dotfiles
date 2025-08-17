@@ -28,6 +28,10 @@ return {
             local luasnip = require("luasnip")
             require("luasnip.loaders.from_vscode").lazy_load()
             luasnip.config.setup({})
+            luasnip.config.setup({
+                enable_autosnippets = true,
+                update_events = { "TextChanged", "TextChangedI" },
+            })
 
             local ls = require("luasnip")
 
