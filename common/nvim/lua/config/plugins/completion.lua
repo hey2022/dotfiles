@@ -27,7 +27,7 @@ return {
         after = function(_)
             local luasnip = require("luasnip")
             require("luasnip.loaders.from_vscode").lazy_load()
-            luasnip.config.setup({})
+            require("luasnip.loaders.from_lua").lazy_load({ paths = nixCats.configDir .. "/luasnip" })
             luasnip.config.setup({
                 enable_autosnippets = true,
                 update_events = { "TextChanged", "TextChangedI" },
