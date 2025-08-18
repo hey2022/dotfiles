@@ -123,7 +123,13 @@ require("lze").load({
         for_cat = "general.extra",
         event = "DeferredUIEnter",
         after = function(plugin)
-            require("ibl").setup()
+            require("ibl").setup({
+                exclude = {
+                    filetypes = {
+                        "dashboard",
+                    },
+                },
+            })
         end,
     },
     {
@@ -353,6 +359,21 @@ require("lze").load({
                 { "<leader>t_", hidden = true },
                 { "<leader>w", group = "[w]orkspace" },
                 { "<leader>w_", hidden = true },
+            })
+        end,
+    },
+    {
+        "dashboard-nvim",
+        for_cat = "general.extra",
+        event = "UIEnter",
+        after = function(_)
+            require("dashboard").setup({
+                theme = "hyper",
+                config = {
+                    week_header = {
+                        enable = true,
+                    },
+                },
             })
         end,
     },
