@@ -68,6 +68,7 @@ require("lze").load({
     { import = "config.plugins.neogit" },
     { import = "config.plugins.ai" },
     { import = "config.plugins.typst" },
+    { import = "config.plugins.zettelkasten" },
     {
         "markdown-preview.nvim",
         -- NOTE: for_cat is a custom handler that just sets enabled value for us,

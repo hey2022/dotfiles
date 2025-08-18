@@ -157,6 +157,9 @@ let
         markdown = with pkgs.vimPlugins; [
           markdown-preview-nvim
         ];
+        zettelkasten = with pkgs.vimPlugins; [
+          obsidian-nvim
+        ];
         neonixdev = with pkgs.vimPlugins; [
           lazydev-nvim
         ];
@@ -322,6 +325,7 @@ let
           categories = {
             markdown = true;
             statistics = true;
+            zettelkasten = true;
             typst = true;
             general = true;
             lint = true;
