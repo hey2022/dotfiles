@@ -164,6 +164,9 @@ let
           quarto-nvim
           otter-nvim
         ];
+        typst = with pkgs.vimPlugins; [
+          typst-preview-nvim
+        ];
         general = {
           blink = with pkgs.vimPlugins; [
             luasnip
@@ -318,6 +321,7 @@ let
           categories = {
             markdown = true;
             statistics = true;
+            typst = true;
             general = true;
             lint = true;
             format = true;
