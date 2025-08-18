@@ -212,7 +212,10 @@ return {
             {
                 "<leader>fb",
                 function()
-                    require("telescope").extensions.file_browser.file_browser()
+                    require("telescope").extensions.file_browser.file_browser({
+                        path = vim.fn.expand("%:p:h"),
+                        select_buffer = true,
+                    })
                 end,
                 mode = { "n" },
                 desc = "File browser",
