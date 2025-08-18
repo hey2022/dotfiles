@@ -69,6 +69,7 @@ let
           universal-ctags
           ripgrep
           fd
+          zoxide
         ];
         # these names are arbitrary.
         lint = with pkgs; [
@@ -194,6 +195,7 @@ let
             telescope-fzf-native-nvim
             telescope-ui-select-nvim
             telescope-file-browser-nvim
+            telescope-zoxide
             telescope-nvim
           ];
           always = with pkgs.vimPlugins; [

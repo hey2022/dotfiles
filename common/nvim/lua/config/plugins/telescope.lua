@@ -220,4 +220,19 @@ return {
         },
         after = function(plugin) end,
     },
+    {
+        "telescope-zoxide",
+        for_cat = "general.telescope",
+        cmd = { "Telescope" },
+        keys = {
+            {
+                "<leader>fz",
+                function()
+                    require("telescope").extensions.zoxide.list()
+                end,
+                mode = { "n" },
+                desc = "Zoxide",
+            },
+        },
+    },
 }
