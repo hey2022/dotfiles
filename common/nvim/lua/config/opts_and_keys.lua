@@ -148,3 +148,6 @@ vim.keymap.set(
     '"_dP',
     { noremap = true, silent = true, desc = "Paste over selection without erasing unnamed register" }
 )
+
+-- Neovide
+vim.o.guifont = "Iosevka Custom:h12"
