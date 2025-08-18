@@ -151,3 +151,4 @@ vim.keymap.set(
 
 -- Neovide
 vim.o.guifont = "Iosevka Custom:h12"
+vim.g.neovide_normal_opacity = 0.9
