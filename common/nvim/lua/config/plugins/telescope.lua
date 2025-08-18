@@ -204,4 +204,20 @@ return {
             vim.api.nvim_create_user_command("LiveGrepGitRoot", live_grep_git_root, {})
         end,
     },
+    {
+        "telescope-file-browser.nvim",
+        for_cat = "general.telescope",
+        cmd = { "Telescope" },
+        keys = {
+            {
+                "<leader>fb",
+                function()
+                    require("telescope").extensions.file_browser.file_browser()
+                end,
+                mode = { "n" },
+                desc = "File browser",
+            },
+        },
+        after = function(plugin) end,
+    },
 }

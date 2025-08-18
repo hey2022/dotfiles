@@ -193,6 +193,7 @@ let
           telescope = with pkgs.vimPlugins; [
             telescope-fzf-native-nvim
             telescope-ui-select-nvim
+            telescope-file-browser-nvim
             telescope-nvim
           ];
           always = with pkgs.vimPlugins; [
