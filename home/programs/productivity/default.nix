@@ -1,4 +1,3 @@
-{ ... }:
 {
   imports = [
     ./audio
@@ -9,5 +8,6 @@
     ./pdf
     ./rnote.nix
     ./xournalpp.nix
+    ./zettelkasten.nix
   ];
 }
