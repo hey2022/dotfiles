@@ -201,6 +201,7 @@ let
           always = with pkgs.vimPlugins; [
             nvim-lspconfig
             lualine-nvim
+            barbar-nvim
             gitsigns-nvim
             neogit
             diffview-nvim
