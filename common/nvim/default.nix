@@ -76,14 +76,7 @@ let
         # but you can choose which ones you want
         # per nvim package you export
         debug = with pkgs; {
-          go = [ delve ];
         };
-        go = with pkgs; [
-          gopls
-          gotools
-          go-tools
-          gccgo
-        ];
         cpp = with pkgs; [
           clang-tools
         ];
@@ -154,7 +147,6 @@ let
             nvim-dap-ui
             nvim-dap-virtual-text
           ];
-          go = [ nvim-dap-go ];
         };
         lint = with pkgs.vimPlugins; [
           nvim-lint
@@ -295,12 +287,6 @@ let
             "debug"
             "default"
           ]
-        ];
-        go = [
-          [
-            "debug"
-            "go"
-          ] # yes it has to be a list of lists
         ];
       };
     };
