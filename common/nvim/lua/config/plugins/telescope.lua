@@ -62,11 +62,12 @@ return {
         -- NOTE: our on attach function defines keybinds that call telescope.
         -- so, the on_require handler will load telescope when we use those.
         on_require = { "telescope" },
+        dep_of = { "telescope-file-browser.nvim" },
         -- event = "",
         -- ft = "",
         keys = {
-            { "<leader>fM", "<cmd>Telescope notify<CR>", mode = { "n" }, desc = "[S]earch [M]essage" },
-            { "<leader>fp", live_grep_git_root, mode = { "n" }, desc = "[S]earch git [P]roject root" },
+            { "<leader>fM", "<cmd>Telescope notify<CR>", mode = { "n" }, desc = "Find message" },
+            { "<leader>fp", live_grep_git_root, mode = { "n" }, desc = "Find git project root" },
             {
                 "<leader>/",
                 function()
@@ -89,7 +90,7 @@ return {
                     })
                 end,
                 mode = { "n" },
-                desc = "[S]earch [/] in Open Files",
+                desc = "Find in open files",
             },
             {
                 "<leader><leader>f",
@@ -97,7 +98,7 @@ return {
                     return require("telescope.builtin").buffers()
                 end,
                 mode = { "n" },
-                desc = "[ ] Find existing buffers",
+                desc = "Find existing buffers",
             },
             {
                 "<leader>f.",
@@ -105,7 +106,7 @@ return {
                     return require("telescope.builtin").oldfiles()
                 end,
                 mode = { "n" },
-                desc = '[S]earch Recent Files ("." for repeat)',
+                desc = 'Find Recent Files ("." for repeat)',
             },
             {
                 "<leader>fr",
@@ -113,7 +114,7 @@ return {
                     return require("telescope.builtin").resume()
                 end,
                 mode = { "n" },
-                desc = "[S]earch [R]esume",
+                desc = "Find resume",
             },
             {
                 "<leader>fd",
@@ -121,7 +122,7 @@ return {
                     return require("telescope.builtin").diagnostics()
                 end,
                 mode = { "n" },
-                desc = "[S]earch [D]iagnostics",
+                desc = "Find diagnostics",
             },
             {
                 "<leader>fg",
@@ -129,7 +130,7 @@ return {
                     return require("telescope.builtin").live_grep()
                 end,
                 mode = { "n" },
-                desc = "[S]earch by [G]rep",
+                desc = "Find by grep",
             },
             {
                 "<leader>fw",
@@ -137,7 +138,7 @@ return {
                     return require("telescope.builtin").grep_string()
                 end,
                 mode = { "n" },
-                desc = "[S]earch current [W]ord",
+                desc = "Find current word",
             },
             {
                 "<leader>fs",
@@ -145,7 +146,7 @@ return {
                     return require("telescope.builtin").builtin()
                 end,
                 mode = { "n" },
-                desc = "[S]earch [S]elect Telescope",
+                desc = "Find telescope",
             },
             {
                 "<leader>ff",
@@ -153,7 +154,7 @@ return {
                     return require("telescope.builtin").find_files()
                 end,
                 mode = { "n" },
-                desc = "[S]earch [F]iles",
+                desc = "Find files",
             },
             {
                 "<leader>fk",
@@ -161,7 +162,7 @@ return {
                     return require("telescope.builtin").keymaps()
                 end,
                 mode = { "n" },
-                desc = "[S]earch [K]eymaps",
+                desc = "Find keymaps",
             },
             {
                 "<leader>fh",
@@ -169,7 +170,7 @@ return {
                     return require("telescope.builtin").help_tags()
                 end,
                 mode = { "n" },
-                desc = "[S]earch [H]elp",
+                desc = "Find help",
             },
         },
         -- colorscheme = "",
