@@ -31,4 +31,8 @@
     sd
     tree
   ];
+
+  programs = {
+    carapace.enable = true;
+  };
 }
