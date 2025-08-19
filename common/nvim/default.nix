@@ -209,6 +209,7 @@ let
             vim-rhubarb
             nvim-surround
             nvim-autopairs
+            nvim-spectre
           ];
           extra = with pkgs.vimPlugins; [
             fidget-nvim
