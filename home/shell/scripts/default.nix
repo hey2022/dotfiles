@@ -1,4 +1,3 @@
-{ ... }:
 {
   imports = [
     ./ap-dl
@@ -6,5 +5,6 @@
     ./nightgrade
     ./nixpif
     ./swap
+    ./zjs
   ];
 }
