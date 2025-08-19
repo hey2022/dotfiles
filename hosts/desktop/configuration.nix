@@ -26,7 +26,6 @@
     extraGroups = config.users.baseGroups ++ [
       "media"
     ];
-    shell = pkgs.fish;
   };
 
   profiles.gaming.enable = false;

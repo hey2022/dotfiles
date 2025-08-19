@@ -23,7 +23,7 @@
     ./programs
     ./security
     ./services
-    ./shell/fish.nix
+    ./shell
     ./sops-nix.nix
     ./ssh.nix
     ./virtualisation

@@ -2,6 +2,7 @@
 {
   imports = [
     ./aliases.nix
+    ./bash.nix
     ./direnv.nix
     ./env.nix
     ./fish
