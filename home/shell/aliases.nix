@@ -7,6 +7,7 @@
     ec = "emacsclient -nw";
     ff = "fastfetch";
     uctl = "systemctl --user";
+    zj = "zellij";
 
     tp = "gtrash put";
   };
