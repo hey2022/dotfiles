@@ -126,6 +126,22 @@
         "type": "github"
       }
     },
+    "catppuccin-zen-browser": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1750430416,
+        "narHash": "sha256-cccLZSrUQ9wxmXnEntbQAfGDFB9gQmIM9pa9BXce1Xo=",
+        "owner": "catppuccin",
+        "repo": "zen-browser",
+        "rev": "e171e2a1d94ed70f39ff0ac452aef335f8b233c9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "catppuccin",
+        "repo": "zen-browser",
+        "type": "github"
+      }
+    },
     "determinate": {
       "inputs": {
         "determinate-nixd-aarch64-darwin": "determinate-nixd-aarch64-darwin",
@@ -1058,6 +1074,7 @@
         "betterfox": "betterfox",
         "buildbot-nix": "buildbot-nix",
         "catppuccin": "catppuccin",
+        "catppuccin-zen-browser": "catppuccin-zen-browser",
         "determinate": "determinate",
         "disko": "disko",
         "firefox-ui-fix": "firefox-ui-fix",
@@ -1080,8 +1097,7 @@
         "stylix": "stylix",
         "tls-xb": "tls-xb",
         "treefmt-nix": "treefmt-nix_3",
-        "zen-browser": "zen-browser",
-        "zen-nebula": "zen-nebula"
+        "zen-browser": "zen-browser"
       }
     },
     "rust-analyzer-src": {
@@ -1386,22 +1402,6 @@
       "original": {
         "owner": "0xc000022070",
         "repo": "zen-browser-flake",
-        "type": "github"
-      }
-    },
-    "zen-nebula": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1751987805,
-        "narHash": "sha256-ov5Ix10K0YWtwEpK6hRhsISheJKDunGTO4e8jqE5Ry8=",
-        "owner": "JustAdumbPrsn",
-        "repo": "Zen-Nebula",
-        "rev": "a9bf56f9d3b8e07c691cc3731fdd6ec53c18b8d3",
-        "type": "github"
-      },
-      "original": {
-        "owner": "JustAdumbPrsn",
-        "repo": "Zen-Nebula",
         "type": "github"
       }
     }

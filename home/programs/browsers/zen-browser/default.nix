@@ -42,7 +42,6 @@ in
         "browser.tabs.allow_transparent_browser" = true;
         "browser.tabs.closeWindowWithLastTab" = false;
         "extensions.autoDisableScopes" = 0;
-        "nebula-tab-loading-animation" = 0;
       };
       extensions =
         let
@@ -80,9 +79,7 @@ in
     };
   };
   home.file = {
-    ".zen/${profile}/chrome/Nebula" = {
-      source = "${inputs.zen-nebula}/Nebula";
-      recursive = true;
-    };
+    ".zen/${profile}/chrome/catppuccin".source =
+      "${inputs.catppuccin-zen-browser}/themes/Mocha/Lavender";
   };
 }

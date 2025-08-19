@@ -41,7 +41,7 @@ Sets font to a custom build of Iosevka using https://typeof.net/Iosevka/customiz
 
 ** Transparency
 #+begin_src emacs-lisp
-(add-to-list 'default-frame-alist '(alpha-background . 90))
+(add-to-list 'default-frame-alist '(alpha-background . 100))
 #+end_src
 
 ** Line numbers

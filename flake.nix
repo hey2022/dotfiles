@@ -76,10 +76,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
-    zen-nebula = {
-      url = "github:JustAdumbPrsn/Zen-Nebula";
-      flake = false;
-    };
     firefox-ui-fix = {
       url = "github:black7375/Firefox-UI-Fix";
       flake = false;
@@ -90,6 +86,10 @@
     };
     reshade-shaders = {
       url = "github:crosire/reshade-shaders";
+      flake = false;
+    };
+    catppuccin-zen-browser = {
+      url = "github:catppuccin/zen-browser";
       flake = false;
     };
   };

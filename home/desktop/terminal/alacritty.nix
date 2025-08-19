@@ -2,7 +2,7 @@
   programs.alacritty = {
     settings = {
       window = {
-        opacity = 0.9;
+        opacity = 1.0;
       };
       font = {
         size = 12;
