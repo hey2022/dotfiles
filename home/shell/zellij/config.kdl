@@ -172,7 +172,7 @@ keybinds clear-defaults=true {
         bind "Alt n" { NewTab; }
         bind "Alt q" { CloseTab; }
         bind "Alt d" { Detach; }
-        bind "Alt o" { LaunchOrFocusPlugin "session-manager" {
+        bind "Alt w" { LaunchOrFocusPlugin "session-manager" {
                 floating true
                 move_to_focused_tab true
             };
