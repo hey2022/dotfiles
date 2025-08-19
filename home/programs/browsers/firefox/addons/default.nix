@@ -13,5 +13,4 @@ let
 in
 {
   inherit buildFirefoxXpiAddon;
-  bonjourr = callPackage ./bonjourr.nix { };
 }

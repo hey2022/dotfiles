@@ -65,7 +65,6 @@ in
             ];
           }
           (importExtension "redirector")
-          (importExtension "bonjourr")
         ];
       search = {
         force = true;
