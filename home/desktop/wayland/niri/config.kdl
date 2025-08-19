@@ -288,6 +288,9 @@ binds {
     Mod+Ctrl+Space hotkey-overlay-title="Open file" {
         spawn "rofi" "-show" "recursivebrowser"
     }
+    Mod+Alt+Space hotkey-overlay-title="Calcuate: rofi" {
+        spawn "sh" "-c" "rofi -show calc -modi calc -no-show-match -no-sort -no-history -calc-command \"echo -n '{result}' | wl-copy\""
+    }
     Mod+Shift+Escape hotkey-overlay-title="Lock the Screen: hyprlock" {
         spawn "hyprlock" "--immediate"
     }
