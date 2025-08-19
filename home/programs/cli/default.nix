@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   imports = [
     ./aria2.nix
@@ -9,5 +11,9 @@
     ./yazi.nix
     ./yt-dlp.nix
     ./zip.nix
+  ];
+
+  home.packages = with pkgs; [
+    fastmod
   ];
 }
