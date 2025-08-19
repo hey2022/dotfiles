@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 {
   home = {
     sessionPath = [
@@ -13,7 +13,7 @@
       GTK_IM_MODULE = "fcitx";
       QT_IM_MODULE = "fcitx";
       XMODIFIERS = "@im=fcitx";
-      SHELL = "${pkgs.fish}/bin/fish";
+      SHELL = lib.getExe pkgs.nushell;
     };
   };
 }
