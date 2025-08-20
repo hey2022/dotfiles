@@ -4,7 +4,6 @@
     ./anime.nix
     ./anki.nix
     ./browsers
-    ./calculator.nix
     ./cli
     ./dictionary.nix
     ./email.nix
@@ -14,6 +13,7 @@
     ./pandoc.nix
     ./productivity
     ./proxy
+    ./qalculate
     ./rss.nix
     ./social
     ./torrent.nix
