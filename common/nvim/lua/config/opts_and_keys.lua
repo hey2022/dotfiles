@@ -152,3 +152,6 @@ vim.keymap.set(
 -- Neovide
 vim.o.guifont = "Iosevka Custom:h12"
 vim.g.neovide_normal_opacity = 1.0
+
+-- Window managment
+vim.api.nvim_set_keymap("n", "<leader>w", "<C-w>", { noremap = true, silent = true })
