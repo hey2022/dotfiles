@@ -41,10 +41,9 @@ input {
         // natural-scroll
         accel-speed 1.0
         accel-profile "flat"
-        // scroll-method "on-button-down"
+ // scroll-method "on-button-down"
         // scroll-button 273
         // middle-emulation
-
     }
     // Uncomment this to make the mouse warp to the center of newly focused windows.
     // warp-mouse-to-focus
@@ -234,7 +233,6 @@ screenshot-path null
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Animations
 animations {
     off
-
 }
 // Window rules let you adjust behavior for individual windows.
 // Find more information on the wiki:
