@@ -11,5 +11,5 @@ fi
 
 name=$(basename "$dir")
 
-cd "$dir"
+cd "$dir" || return
 zellij attach --create "$name"
