@@ -232,7 +232,7 @@ screenshot-path null
 // The wiki explains how to configure individual animations:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Animations
 animations {
-    off
+    slowdown 0.1
 }
 // Window rules let you adjust behavior for individual windows.
 // Find more information on the wiki:
