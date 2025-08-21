@@ -470,6 +470,12 @@ keybinds clear-defaults=true {
         bind "Alt =" "Alt +" {
             Resize "Increase"
         }
+        bind "Alt Shift h" "Alt Shift Left" {
+            MoveTab "Left"
+        }
+        bind "Alt Shift l" "Alt Shift Right" {
+            MoveTab "Right"
+        }
         bind "Alt -" {
             Resize "Decrease"
         }
