@@ -67,13 +67,13 @@ Scope {
                         switchMode();
                         break;
                     case Qt.MiddleButton:
-                        root.isTask = true;
                         timer.running = false;
                         if (root.isTask) {
                             root.time = 0;
                         } else {
                             root.breakTime = 0;
                         }
+                        root.isTask = true;
                         break;
                     }
                 }
