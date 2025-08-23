@@ -10,6 +10,8 @@
         port = 8888;
       };
       engines = lib.mapAttrsToList (name: value: { inherit name; } // value) {
+        "bing".disabled = false;
+        "duckduckgo".disabled = true;
         "startpage".disabled = true;
       };
     };

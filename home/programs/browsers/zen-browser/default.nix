@@ -68,7 +68,7 @@ in
       search = {
         force = true;
         default = "SearXNG";
-        privateDefault = "DuckDuckGo";
+        privateDefault = "ddg";
         engines = {
           SearXNG = {
             urls = [ { template = "http://localhost:8888/search?q={searchTerms}"; } ];
