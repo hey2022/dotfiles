@@ -9,6 +9,7 @@
     ./pipewire.nix
     ./printing.nix
     ./prometheus
+    ./searx.nix
     ./ssh.nix
     ./syncthing.nix
     ./tailscale.nix

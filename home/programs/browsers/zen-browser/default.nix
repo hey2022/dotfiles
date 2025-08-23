@@ -67,12 +67,11 @@ in
         ];
       search = {
         force = true;
-        default = "Unduck";
-        privateDefault = "Unduck";
+        default = "SearXNG";
+        privateDefault = "DuckDuckGo";
         engines = {
-          Unduck = {
-            urls = [ { template = "https://s.dunkirk.sh?q={searchTerms}"; } ];
-            definedAliases = [ "@!" ];
+          SearXNG = {
+            urls = [ { template = "http://localhost:8888/search?q={searchTerms}"; } ];
           };
         };
       };
