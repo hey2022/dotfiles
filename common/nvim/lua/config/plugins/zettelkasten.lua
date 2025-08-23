@@ -24,7 +24,7 @@ return {
                 workspaces = {
                     {
                         name = "personal",
-                        path = "~/vaults/personal",
+                        path = "~/documents/vaults/personal",
                     },
                 },
                 legacy_commands = false,
