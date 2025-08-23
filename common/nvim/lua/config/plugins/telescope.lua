@@ -220,6 +220,14 @@ return {
                 mode = { "n" },
                 desc = "File browser",
             },
+            {
+                "<leader>fB",
+                function()
+                    require("telescope").extensions.file_browser.file_browser()
+                end,
+                mode = { "n" },
+                desc = "Browse root directory",
+            },
         },
         after = function(plugin) end,
     },
