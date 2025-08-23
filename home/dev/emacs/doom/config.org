@@ -65,7 +65,7 @@ Sets font to a custom build of Iosevka using https://typeof.net/Iosevka/customiz
 ** Org
 #+begin_src emacs-lisp
 (after! org
-  (setq org-directory "~/org/"))
+  (setq org-directory "~/documents/org/"))
 #+end_src
 
 *** Latex
@@ -147,7 +147,7 @@ Sets font to a custom build of Iosevka using https://typeof.net/Iosevka/customiz
          :desc "Rename file by title" "N" #'org-node-rename-file-by-title
          :desc "Random node" "a" #'org-node-visit-random))
   :config
-  (setq org-mem-watch-dirs '("~/org/"))
+  (setq org-mem-watch-dirs '("~/documents/org/"))
   (setq org-mem-do-sync-with-org-id t)
   (org-mem-updater-mode)
   (org-node-cache-mode)
@@ -254,13 +254,13 @@ If no tags are provided, copy all files."
 *** Org Agenda
 #+begin_src emacs-lisp
 (after! org-agenda
- (setq org-agenda-files '("~/org/agenda.org" "~/school/school.org")))
+ (setq org-agenda-files '("~/documents/org/agenda.org" "~/school/school.org")))
 #+end_src
 
 **** Diary
 #+begin_src emacs-lisp
 (after! org-agenda
-  (setq diary-file "~/org/diary")
+  (setq diary-file "~/documents/org/diary")
   (setq org-agenda-include-diary t))
 #+end_src
 
