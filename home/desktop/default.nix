@@ -9,7 +9,6 @@
     ./fcitx5.nix
     ./gammastep.nix
     ./gtk.nix
-    ./icons.nix
     ./imv.nix
     ./launchers
     ./pipewire.nix
