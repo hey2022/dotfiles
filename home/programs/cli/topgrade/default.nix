@@ -1,26 +1,14 @@
 { config, ... }:
-let
-  topgrade-overlay = _final: prev: {
-    topgrade = prev.topgrade.overrideAttrs (old: {
-      patches = (old.patches or [ ]) ++ [
-        # TODO: remove once merged into nixpkgs https://github.com/topgrade-rs/topgrade/pull/1214
-        ./1214.patch
-      ];
-    });
-  };
-in
+
 {
-  nixpkgs.overlays = [ topgrade-overlay ];
   programs.topgrade = {
     enable = true;
     settings = {
-      doom = {
-        aot = true;
-      };
       misc = {
         assume_yes = true;
         disable = [
           "bun"
+          "doom"
           "git_repos"
           "nix"
           "uv"
