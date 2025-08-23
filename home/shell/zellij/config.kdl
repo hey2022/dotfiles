@@ -461,11 +461,14 @@ keybinds clear-defaults=true {
         bind "Alt l" "Alt Right" {
             MoveFocusOrTab "Right"
         }
-        bind "Alt j" "Alt Down" {
-            MoveFocus "Down"
+        bind "Alt j" {
+            HalfPageScrollDown
         }
-        bind "Alt k" "Alt Up" {
-            MoveFocus "Up"
+        bind "Alt k" {
+            HalfPageScrollUp
+        }
+        bind "Alt /" {
+            SwitchToMode "EnterSearch"
         }
         bind "Alt =" "Alt +" {
             Resize "Increase"
