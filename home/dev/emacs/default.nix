@@ -33,7 +33,7 @@ in
       ];
   };
   services.emacs = {
-    enable = true;
+    enable = false;
     package = emacs;
     client = {
       enable = true;
