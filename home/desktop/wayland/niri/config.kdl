@@ -294,6 +294,9 @@ binds {
     Mod+Ctrl+I hotkey-overlay-title="Toggle inhibit lid sleep" {
         spawn "toggle-inhibit-lid-sleep"
     }
+    Mod+O hotkey-overlay-title="OCR" {
+        spawn "sh" "-c" "slurp | xargs -I {} grim -g {} - | tesseract -l eng - - | wl-copy"
+    }
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.
     // Mod+T { spawn "bash" "-c" "notify-send hello && exec alacritty"; }
