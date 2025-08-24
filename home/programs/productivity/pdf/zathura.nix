@@ -1,9 +1,14 @@
-_: {
+{ pkgs, ... }:
+
+{
   programs.zathura = {
+    package = pkgs.zathura.override {
+      useMupdf = false;
+    };
     options = {
       selection-clipboard = "clipboard";
-      recolor = false;
       recolor-keephue = true;
+      recolor-reverse-video = true;
     };
   };
 }
