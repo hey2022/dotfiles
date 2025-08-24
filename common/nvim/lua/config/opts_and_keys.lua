@@ -155,3 +155,8 @@ vim.g.neovide_normal_opacity = 1.0
 
 -- Window managment
 vim.api.nvim_set_keymap("n", "<leader>w", "<C-w>", { noremap = true, silent = true })
+
+-- Spellcheck
+vim.opt.spell = true
+vim.opt.spelllang = "en_gb"
+vim.api.nvim_set_keymap("i", "<c-l>", "<c-g>u<Esc>[s1z=`]a<c-g>u", { noremap = true, silent = true })
