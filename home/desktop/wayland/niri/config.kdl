@@ -297,6 +297,9 @@ binds {
     Mod+O hotkey-overlay-title="OCR" {
         spawn "sh" "-c" "slurp | xargs -I {} grim -g {} - | tesseract -l eng - - | wl-copy"
     }
+    Mod+Shift+C hotkey-overlay-title="Clipboard: Copy strip new lines" {
+        spawn "sh" "-c" "wl-paste --primary | tr '\n' ' ' | tr '  ' ' ' | wl-copy"
+    }
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.
     // Mod+T { spawn "bash" "-c" "notify-send hello && exec alacritty"; }
@@ -625,13 +628,13 @@ binds {
     Mod+Ctrl+F {
         expand-column-to-available-width
     }
-    Mod+C {
-        center-column
-    }
+    // Mod+C {
+    //     center-column
+    // }
     // Center all fully visible columns on screen.
-    Mod+Ctrl+C {
-        center-visible-columns
-    }
+    // Mod+Ctrl+C {
+    //     center-visible-columns
+    // }
     // Finer width adjustments.
     // This command can also:
     // * set width in pixels: "1000"
@@ -708,7 +711,7 @@ binds {
     Mod+Shift+W {
         spawn "waypaper" "--random"
     }
-    Mod+Shift+C {
+    Mod+C {
         spawn "sh" "-c" "pkill rofi || cliprust list | rofi -dmenu -display-columns 2 | cliprust decode | wl-copy"
     }
     Mod+N {
