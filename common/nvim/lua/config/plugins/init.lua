@@ -363,21 +363,6 @@ require("lze").load({
         end,
     },
     {
-        "dashboard-nvim",
-        for_cat = "general.extra",
-        event = "UIEnter",
-        after = function(_)
-            require("dashboard").setup({
-                theme = "hyper",
-                config = {
-                    week_header = {
-                        enable = true,
-                    },
-                },
-            })
-        end,
-    },
-    {
         "nvim-spectre",
         for_cat = "general.always",
         event = "DeferredUIEnter",
