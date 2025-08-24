@@ -82,5 +82,6 @@ in
   );
   homelab.services.homepage = {
     port = cfg.listenPort;
+    serviceName = "homepage-dashboard";
   };
 }

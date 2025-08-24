@@ -26,6 +26,7 @@
     };
     homelab.services.buildbot = {
       port = 8010;
+      serviceName = "buildbot-nix.master";
     };
     sops = {
       secrets = {

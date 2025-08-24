@@ -34,6 +34,11 @@
                 type = str;
                 default = name;
               };
+              serviceName = lib.mkOption {
+                description = "Service module name";
+                type = str;
+                default = name;
+              };
               port = lib.mkOption {
                 description = "Internal port of service";
                 type = portType;

@@ -24,6 +24,7 @@ in
   };
   homelab.services.suwayomi = {
     inherit (cfg.settings.server) port;
+    serviceName = "suwayomi-server";
   };
   systemd.tmpfiles.rules = [
     "d ${config.homelab.mediaDir}/manga 775 root media - -"

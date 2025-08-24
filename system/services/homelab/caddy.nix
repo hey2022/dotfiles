@@ -13,10 +13,21 @@
             reverse_proxy localhost:${toString config.homelab.rootService}
           '';
           "*.${domain}".extraConfig = lib.concatLines (
-            lib.mapAttrsToList (name: service: ''
-              @${name} host ${service.subdomain}.${domain}
-              reverse_proxy @${name} localhost:${toString service.port}
-            '') (lib.filterAttrs (_: service: service.expose) config.homelab.services)
+            lib.mapAttrsToList
+              (name: service: ''
+                @${name} host ${service.subdomain}.${domain}
+                reverse_proxy @${name} localhost:${toString service.port}
+              '')
+              (
+                lib.filterAttrs (
+                  _: service:
+                  let
+                    attrPath = lib.splitString "." service.serviceName;
+                    enable = lib.getAttrFromPath (attrPath ++ [ "enable" ]) config.services;
+                  in
+                  service.expose && enable
+                ) config.homelab.services
+              )
           );
         };
     };
