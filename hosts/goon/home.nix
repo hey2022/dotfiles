@@ -9,6 +9,8 @@
   home.homeDirectory = "/home/yiheng";
   host.laptop = true;
 
-  profiles.gaming.enable = true;
+  profiles = {
+    gaming.enable = false;
+  };
   programs.niri.enable = true;
 }
