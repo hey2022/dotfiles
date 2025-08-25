@@ -1,5 +1,13 @@
 return {
     {
+        "render-markdown.nvim",
+        for_cat = "markdown",
+        ft = "markdown",
+        after = function(_)
+            require("render-markdown").setup({})
+        end,
+    },
+    {
         "markdown-preview.nvim",
         for_cat = "markdown",
         cmd = { "MarkdownPreview", "MarkdownPreviewStop", "MarkdownPreviewToggle" },

@@ -94,6 +94,9 @@ let
           inherit (pkgs) nix-doc lua-language-server nixd;
           # and each will be its own sub category
         };
+        markdown = with pkgs; [
+          python3Packages.pylatexenc
+        ];
       };
 
       # This is for plugins that will load at startup without using packadd:
@@ -156,6 +159,7 @@ let
           conform-nvim
         ];
         markdown = with pkgs.vimPlugins; [
+          render-markdown-nvim
           markdown-preview-nvim
         ];
         zettelkasten = with pkgs.vimPlugins; [

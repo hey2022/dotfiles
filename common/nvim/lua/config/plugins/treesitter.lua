@@ -6,6 +6,7 @@ return {
         for_cat = "general.treesitter",
         -- cmd = { "" },
         event = "DeferredUIEnter",
+        deps_of = { "render-markdown.nvim" },
         -- ft = "",
         -- keys = "",
         -- colorscheme = "",

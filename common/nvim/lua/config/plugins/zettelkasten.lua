@@ -42,6 +42,9 @@ return {
                     blink = true,
                     min_chars = 0,
                 },
+                ui = {
+                    enable = false,
+                },
             })
         end,
     },
