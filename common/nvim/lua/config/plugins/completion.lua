@@ -51,6 +51,7 @@ return {
         "blink.cmp",
         for_cat = "general.blink",
         event = "DeferredUIEnter",
+        on_require = "blink.cmp",
         after = function(_)
             require("blink.cmp").setup({
                 keymap = {
