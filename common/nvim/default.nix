@@ -174,6 +174,7 @@ let
         general = {
           blink = with pkgs.vimPlugins; [
             luasnip
+            pkgs.neovimPlugins.luasnip-latex-snippets-nvim
             friendly-snippets
             cmp-cmdline
             blink-cmp

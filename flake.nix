@@ -92,6 +92,10 @@
       url = "github:catppuccin/zen-browser";
       flake = false;
     };
+    plugins-luasnip-latex-snippets-nvim = {
+      url = "github:Iurimateus/luasnip-latex-snippets.nvim";
+      flake = false;
+    };
   };
 
   outputs =

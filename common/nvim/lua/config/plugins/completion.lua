@@ -24,6 +24,7 @@ return {
         "luasnip",
         for_cat = "general.blink",
         dep_of = { "blink.cmp" },
+        on_require = "luasnip",
         after = function(_)
             local luasnip = require("luasnip")
             require("luasnip.loaders.from_vscode").lazy_load()
@@ -40,6 +41,17 @@ return {
                     ls.change_choice(1)
                 end
             end)
+        end,
+    },
+    {
+        "luasnip-latex-snippets-nvim",
+        for_cat = "general.blink",
+        ft = { "markdown", "tex" },
+        after = function(_)
+            require("luasnip-latex-snippets").setup({
+                use_treesitter = true,
+                allow_on_markdown = true,
+            })
         end,
     },
     {

@@ -1026,6 +1026,22 @@
         "type": "github"
       }
     },
+    "plugins-luasnip-latex-snippets-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1743463667,
+        "narHash": "sha256-QWZIw/ZafnNa1j20TI361X9+x3nleZgBchiJ5tMw+Qw=",
+        "owner": "Iurimateus",
+        "repo": "luasnip-latex-snippets.nvim",
+        "rev": "498f4ba12d025487939d89b801647b44bb15676c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Iurimateus",
+        "repo": "luasnip-latex-snippets.nvim",
+        "type": "github"
+      }
+    },
     "pre-commit-hooks": {
       "inputs": {
         "flake-compat": "flake-compat_3",
@@ -1092,6 +1108,7 @@
         "nixpkgs": "nixpkgs_3",
         "nixpkgs-stable": "nixpkgs-stable",
         "nur": "nur",
+        "plugins-luasnip-latex-snippets-nvim": "plugins-luasnip-latex-snippets-nvim",
         "reshade-shaders": "reshade-shaders",
         "sops-nix": "sops-nix",
         "stylix": "stylix",
