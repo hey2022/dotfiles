@@ -4,7 +4,7 @@ if [[ -n "${ZELLIJ-}" ]]; then
     exit 0
 fi
 
-if [[ -z $1 ]]; then
+if [[ -z "${1-}" ]]; then
     dir=$(zoxide query --interactive)
 else
     dir=$(zoxide query "$1")
