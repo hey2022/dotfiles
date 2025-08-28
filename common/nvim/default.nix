@@ -162,6 +162,9 @@ let
           render-markdown-nvim
           markdown-preview-nvim
         ];
+        org-mode = with pkgs.vimPlugins; [
+          orgmode
+        ];
         zettelkasten = with pkgs.vimPlugins; [
           obsidian-nvim
         ];
@@ -335,6 +338,7 @@ let
           };
           categories = {
             markdown = true;
+            org-mode = true;
             statistics = true;
             zettelkasten = true;
             typst = true;

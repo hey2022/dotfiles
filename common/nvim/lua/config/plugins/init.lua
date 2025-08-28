@@ -65,6 +65,7 @@ require("lze").load({
     { import = "config.plugins.completion" },
     { import = "config.plugins.markdown" },
     { import = "config.plugins.neogit" },
+    { import = "config.plugins.org-mode" },
     { import = "config.plugins.quarto" },
     { import = "config.plugins.session" },
     { import = "config.plugins.telescope" },
