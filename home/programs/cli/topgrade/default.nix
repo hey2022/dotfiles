@@ -10,18 +10,21 @@
           "bun"
           "git_repos"
           "nix"
+          "system"
           "uv"
         ];
         pre_sudo = true;
       };
       linux = {
-        nix_arguments = "--flake ${config.home.dotfiles}";
         home_manager_arguments = [
           "--flake"
           "${config.home.dotfiles}"
           "-b"
           "backup"
         ];
+      };
+      pre_commands = {
+        "NixOS upgrade" = "sudo nixos-rebuild switch --flake ${config.home.dotfiles}";
       };
     };
   };
