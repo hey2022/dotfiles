@@ -71,7 +71,7 @@ require("lze").load({
     { import = "config.plugins.telescope" },
     { import = "config.plugins.treesitter" },
     { import = "config.plugins.typst" },
-    { import = "config.plugins.zettelkasten" },
+    { import = "config.plugins.obsidian" },
     {
         "undotree",
         for_cat = "general.extra",

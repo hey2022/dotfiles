@@ -1,7 +1,7 @@
 return {
     {
         "obsidian.nvim",
-        for_cats = "zettelkasten",
+        for_cats = "obsidian",
         keys = {
             { "<leader>zz", "<cmd>Obsidian<cr>", desc = "Obsidian", mode = { "n", "v" } },
             { "<leader>zb", "<cmd>Obsidian backlinks<cr>", desc = "View backlinks" },

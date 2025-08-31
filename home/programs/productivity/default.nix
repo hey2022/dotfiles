@@ -8,6 +8,6 @@
     ./pdf
     ./rnote.nix
     ./xournalpp.nix
-    ./zettelkasten.nix
+    ./obsidian.nix
   ];
 }

@@ -165,7 +165,7 @@ let
         org-mode = with pkgs.vimPlugins; [
           orgmode
         ];
-        zettelkasten = with pkgs.vimPlugins; [
+        obsidian = with pkgs.vimPlugins; [
           obsidian-nvim
         ];
         neonixdev = with pkgs.vimPlugins; [
@@ -340,7 +340,7 @@ let
             markdown = true;
             org-mode = true;
             statistics = true;
-            zettelkasten = true;
+            obsidian = true;
             typst = true;
             general = true;
             lint = true;
