@@ -8,7 +8,6 @@
         assume_yes = true;
         disable = [
           "bun"
-          "doom"
           "git_repos"
           "nix"
           "uv"
