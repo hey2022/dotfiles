@@ -6,7 +6,6 @@
     ./libreoffice.nix
     ./obs.nix
     ./pdf
-    ./rnote.nix
     ./xournalpp.nix
     ./obsidian.nix
   ];
