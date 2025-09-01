@@ -8,6 +8,7 @@
         assume_yes = true;
         disable = [
           "bun"
+          "emacs"
           "git_repos"
           "nix"
           "system"
