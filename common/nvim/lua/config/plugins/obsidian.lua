@@ -30,7 +30,7 @@ return {
                 wiki_link_func = "use_alias_only",
                 note_id_func = function(title)
                     if title ~= nil then
-                        return title:gsub("[^A-Za-z0-9-]", ""):lower()
+                        return title:sub(1, 1):upper() .. title:sub(2):lower()
                     else
                         return tostring(os.time())
                     end
