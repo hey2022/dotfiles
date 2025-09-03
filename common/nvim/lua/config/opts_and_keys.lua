@@ -159,4 +159,4 @@ vim.api.nvim_set_keymap("n", "<leader>w", "<C-w>", { noremap = true, silent = tr
 -- Spellcheck
 vim.opt.spell = true
 vim.opt.spelllang = "en_gb"
-vim.api.nvim_set_keymap("i", "<c-l>", "<c-g>u<Esc>[s1z=`]a<c-g>u", { noremap = true, silent = true })
+vim.api.nvim_set_keymap({ "i", "n" }, "<c-l>", "<c-g>u<Esc>[s1z=`]a<c-g>u", { noremap = true, silent = true })
