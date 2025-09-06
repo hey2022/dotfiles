@@ -10,6 +10,7 @@
     nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
     settings = {
       lazy-trees = true;
+      eval-cores = 0;
       download-buffer-size = 1073741824;
       keep-going = true;
       show-trace = true;
