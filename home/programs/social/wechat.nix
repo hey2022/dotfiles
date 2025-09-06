@@ -1,4 +1,4 @@
 { pkgs, ... }:
 {
-  home.packages = [ pkgs.wechat-uos ];
+  home.packages = [ pkgs.wechat ];
 }
