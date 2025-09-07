@@ -276,6 +276,9 @@ binds {
     Mod+Shift+Return hotkey-overlay-title="Open editor" {
         spawn "neovide"
     }
+    Mod+Ctrl+Return hotkey-overlay-title="Neovim anywhere" {
+        spawn "neovim-anywhere"
+    }
     Mod+Space hotkey-overlay-title="Run an Application: rofi" {
         spawn "rofi" "-show" "drun"
     }
