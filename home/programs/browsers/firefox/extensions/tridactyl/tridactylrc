@@ -4,7 +4,7 @@ sanitise tridactyllocal
 " settings
 set theme midnight
 set smoothscroll true
-set editorcmd emacsclient -c
+set editorcmd neovide
 
 " swap J and K
 bind J tabnext
