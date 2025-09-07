@@ -12,6 +12,7 @@
         nvim = nixCats.packages.${system}.nvim;
         nnvim = nixCats.packages.${system}.nnvim;
         cliprust = pkgs.callPackage ./cliprust { };
+        neovim-anywhere = pkgs.callPackage ./neovim-anywhere { };
       };
     };
 }

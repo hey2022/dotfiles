@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   imports = [
     ./ap-dl
@@ -7,4 +9,5 @@
     ./swap
     ./zjs
   ];
+  home.packages = with pkgs; [ neovim-anywhere ];
 }
