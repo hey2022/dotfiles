@@ -7,7 +7,7 @@
     settings = {
       server = {
         bind_address = "127.0.0.1";
-        port = 8888;
+        port = 8880;
       };
       engines = lib.mapAttrsToList (name: value: { inherit name; } // value) {
         "startpage".disabled = true;
