@@ -160,3 +160,6 @@ vim.api.nvim_set_keymap("n", "<leader>w", "<C-w>", { noremap = true, silent = tr
 vim.opt.spell = true
 vim.opt.spelllang = "en_gb"
 vim.keymap.set({ "i", "n" }, "<C-l>", "<C-g>u<Esc>[s1z=`]a<C-g>u", { noremap = true, silent = true })
+
+-- Latex
+vim.g.tex_flavor = 'latex'
