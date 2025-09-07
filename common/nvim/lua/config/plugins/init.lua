@@ -118,7 +118,15 @@ require("lze").load({
         for_cat = "general.always",
         event = "DeferredUIEnter",
         after = function(plugin)
-            require("nvim-autopairs").setup()
+            local npairs = require("nvim-autopairs")
+            local Rule = require("nvim-autopairs.rule")
+
+            npairs.setup()
+            npairs.add_rules({
+                Rule("$", "$", "tex"),
+                Rule("\\(", "\\)", "tex"),
+                Rule("\\[", "\\]", "tex"),
+            })
         end,
     },
     {
