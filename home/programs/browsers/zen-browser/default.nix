@@ -71,7 +71,7 @@ in
         privateDefault = "ddg";
         engines = {
           SearXNG = {
-            urls = [ { template = "http://localhost:8888/search?q={searchTerms}"; } ];
+            urls = [ { template = "http://localhost:8880/search?q={searchTerms}"; } ];
           };
         };
       };
