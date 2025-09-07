@@ -16,6 +16,12 @@ let
       url = "https://github.com/NixOS/nixpkgs/pull/400589.patch";
       sha256 = "sha256-ur8eyCzCUhBRmdSm4oQjOk6MyozjewjyH9durUhzmag=";
     })
+    # https://nixpk.gs/pr-tracker.html?pr=431873
+    (pkgs.fetchpatch2 {
+      name = "gitbutler: 0.14.19 -> 0.15.10";
+      url = "https://github.com/NixOS/nixpkgs/pull/431873.patch";
+      sha256 = "sha256-AywgW3znfmidsMkdzqwKuKVeSgTwklPAOVo08h3ejjQ=";
+    })
   ];
   home-manager-patches = [ ];
   nixpkgs-patched =
