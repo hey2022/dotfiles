@@ -294,7 +294,7 @@ binds {
     Mod+Shift+Escape hotkey-overlay-title="Lock the Screen: hyprlock" {
         spawn "hyprlock" "--immediate"
     }
-    Mod+Ctrl+I hotkey-overlay-title="Toggle inhibit lid sleep" {
+    Mod+Ctrl+I allow-when-locked=true hotkey-overlay-title="Toggle inhibit lid sleep" {
         spawn "toggle-inhibit-lid-sleep"
     }
     Mod+O hotkey-overlay-title="OCR" {
