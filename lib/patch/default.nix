@@ -10,12 +10,6 @@ let
     inherit system;
   };
   nixpkgs-patches = [
-    # https://nixpk.gs/pr-tracker.html?pr=400589
-    (pkgs.fetchpatch2 {
-      name = "suwayomi-server: 1.1.1 -> 2.0.1727";
-      url = "https://github.com/NixOS/nixpkgs/pull/400589.patch";
-      sha256 = "sha256-ur8eyCzCUhBRmdSm4oQjOk6MyozjewjyH9durUhzmag=";
-    })
     # https://nixpk.gs/pr-tracker.html?pr=431873
     (pkgs.fetchpatch2 {
       name = "gitbutler: 0.14.19 -> 0.15.10";
