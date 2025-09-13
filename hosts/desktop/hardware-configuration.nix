@@ -39,7 +39,10 @@
     };
     ${config.homelab.mediaDir} = {
       device = "/mnt/elements/media";
-      options = [ "bind" "nofail" ];
+      options = [
+        "bind"
+        "nofail"
+      ];
     };
   };
 
