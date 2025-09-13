@@ -5,8 +5,8 @@
   ...
 }:
 {
-  config = lib.mkIf config.services.dnscrypt-proxy2.enable {
-    services.dnscrypt-proxy2 = {
+  config = lib.mkIf config.services.dnscrypt-proxy.enable {
+    services.dnscrypt-proxy = {
       settings = {
         server_names = [
           "adguard-dns"
