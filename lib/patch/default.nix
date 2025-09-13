@@ -34,6 +34,12 @@ let
       url = "https://github.com/NixOS/nixpkgs/pull/442302.patch";
       sha256 = "sha256-lbrDxXnBUTuRoE6THIzl+xSVrsi1GebK5DXom8MiFGk=";
     })
+    # https://nixpk.gs/pr-tracker.html?pr=442565
+    (pkgs.fetchpatch2 {
+      name = "nixos/meilisearch: allow access to proc for memory limit";
+      url = "https://github.com/NixOS/nixpkgs/pull/442565.patch";
+      sha256 = "sha256-zixYDVJa76K+fjyWHr9mXDVVJMzh6SlyJsHs0BNimhY=";
+    })
   ];
   home-manager-patches = [ ];
   nixpkgs-patched =
