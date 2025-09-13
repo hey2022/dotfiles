@@ -35,10 +35,11 @@
     "/mnt/elements" = {
       device = "/dev/disk/by-uuid/AAC8CF3AC8CF0393";
       fsType = "ntfs3";
+      options = [ "nofail" ];
     };
     ${config.homelab.mediaDir} = {
       device = "/mnt/elements/media";
-      options = [ "bind" ];
+      options = [ "bind" "nofail" ];
     };
   };
 
