@@ -6,10 +6,9 @@
 }:
 {
   config = lib.mkIf config.profiles.entertainment.enable {
-    home.packages = with pkgs; [ jellyfin-media-player ];
-    # HACK: https://github.com/nixos/nixpkgs/issues/437865
-    nixpkgs.config.permittedInsecurePackages = [
-      "qtwebengine-5.15.19"
+    # HACK: Drop jellyfin-media-player for now https://github.com/nixos/nixpkgs/issues/437865
+    home.packages = with pkgs; [
+      # jellyfin-media-player
     ];
   };
 }
