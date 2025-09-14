@@ -26,7 +26,7 @@
           devShells = lib.mapAttrs' (n: lib.nameValuePair "devShell-${n}") self'.devShells;
           homeConfigurations = lib.mapAttrs' (
             name: config: lib.nameValuePair "home-manager-${name}" config.activation-script
-          ) (self'.legacyPackages.homeConfigurations or { });
+          ) (self.homeConfigurations or { });
         in
         nixosMachines // homeConfigurations // devShells // packages;
     };
