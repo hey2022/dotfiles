@@ -1,4 +1,5 @@
-{ config, ... }:
+{ config, lib, ... }:
+
 {
   imports = [
     ./bazarr.nix
@@ -10,15 +11,27 @@
     ./torrent
   ];
   users.groups.media = { };
-  systemd.tmpfiles.rules = [
-    "d ${config.homelab.mediaDir} 775 root media - -"
-    "d ${config.homelab.mediaDir}/shows 775 root media - -"
-    "d ${config.homelab.mediaDir}/shows/anime 775 root media - -"
-    "d ${config.homelab.mediaDir}/shows/other 775 root media - -"
-    "d ${config.homelab.mediaDir}/movies 775 root media - -"
-    "d ${config.homelab.mediaDir}/movies/anime 775 root media - -"
-    "d ${config.homelab.mediaDir}/movies/other 775 root media - -"
-    "d ${config.homelab.mediaDir}/music 775 root media - -"
-    "d ${config.homelab.mediaDir}/downloads 775 root media - -"
-  ];
+
+  system.activationScripts.createMediaDirs =
+    let
+      mediaDirs = [
+        "shows/anime"
+        "shows/other"
+        "movies/anime"
+        "movies/other"
+        "music"
+        "downloads"
+      ];
+    in
+    ''
+      if mountpoint -q ${config.homelab.mediaDir}; then
+        ${lib.concatLines (
+          map (dir: ''
+            mkdir -p ${config.homelab.mediaDir}/${dir}
+            chown root:media ${config.homelab.mediaDir}/${dir}
+            chmod 775 ${config.homelab.mediaDir}/${dir}
+          '') mediaDirs
+        )}
+      fi
+    '';
 }
