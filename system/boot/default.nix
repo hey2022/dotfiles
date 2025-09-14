@@ -10,5 +10,8 @@
       "kernel.sysrq" = 1;
       "vm.swappiness" = 10;
     };
+    supportedFilesystems = [
+      "ntfs"
+    ];
   };
 }
