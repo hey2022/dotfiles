@@ -16,18 +16,6 @@ let
       url = "https://github.com/NixOS/nixpkgs/pull/431873.patch";
       sha256 = "sha256-AywgW3znfmidsMkdzqwKuKVeSgTwklPAOVo08h3ejjQ=";
     })
-    # https://nixpk.gs/pr-tracker.html?pr=442277
-    (pkgs.fetchpatch2 {
-      name = "searxng: 0-unstable-2025-08-29 -> 0-unstable-2025-09-11, relax typer-slim";
-      url = "https://github.com/NixOS/nixpkgs/pull/442277.patch";
-      sha256 = "sha256-61+K3yIoioeoDq2fnvGVqI8yhLEdVXR/i+e7uYnCEkQ=";
-    })
-    # https://nixpk.gs/pr-tracker.html?pr=442302
-    (pkgs.fetchpatch2 {
-      name = "tigervnc: fix build failed";
-      url = "https://github.com/NixOS/nixpkgs/pull/442302.patch";
-      sha256 = "sha256-lbrDxXnBUTuRoE6THIzl+xSVrsi1GebK5DXom8MiFGk=";
-    })
     # https://nixpk.gs/pr-tracker.html?pr=442565
     (pkgs.fetchpatch2 {
       name = "nixos/meilisearch: allow access to proc for memory limit";
