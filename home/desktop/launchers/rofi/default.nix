@@ -5,7 +5,6 @@
 }:
 {
   programs.rofi = {
-    package = pkgs.rofi-wayland;
     configPath = "";
     plugins = with pkgs; [
       rofi-calc
