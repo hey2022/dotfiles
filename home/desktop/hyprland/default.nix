@@ -34,7 +34,6 @@ in
   };
   config = {
     wayland.windowManager.hyprland = {
-      enable = true;
       systemd.enable = false;
       hy3 = true;
       uwsm = true;
