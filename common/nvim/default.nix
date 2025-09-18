@@ -178,6 +178,9 @@ let
         typst = with pkgs.vimPlugins; [
           typst-preview-nvim
         ];
+        latex = with pkgs.vimPlugins; [
+          vimtex
+        ];
         general = {
           blink = with pkgs.vimPlugins; [
             luasnip
@@ -342,6 +345,7 @@ let
             statistics = true;
             obsidian = true;
             typst = true;
+            latex = true;
             general = true;
             lint = true;
             format = true;

@@ -63,15 +63,16 @@ end
 require("lze").load({
     { import = "config.plugins.ai" },
     { import = "config.plugins.completion" },
+    { import = "config.plugins.latex" },
     { import = "config.plugins.markdown" },
     { import = "config.plugins.neogit" },
+    { import = "config.plugins.obsidian" },
     { import = "config.plugins.org-mode" },
     { import = "config.plugins.quarto" },
     { import = "config.plugins.session" },
     { import = "config.plugins.telescope" },
     { import = "config.plugins.treesitter" },
     { import = "config.plugins.typst" },
-    { import = "config.plugins.obsidian" },
     {
         "undotree",
         for_cat = "general.extra",
