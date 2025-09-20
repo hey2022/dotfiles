@@ -7,6 +7,7 @@
   imports = [
     ../lib/hm.nix
     ../modules/home-manager/default.nix
+    ./auto-upgrade.nix
     ./dev
     ./font
     ./nix.nix
