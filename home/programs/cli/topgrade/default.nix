@@ -24,7 +24,7 @@
           "backup"
         ];
       };
-      commands = {
+      pre_commands = {
         "NixOS upgrade" = "sudo nixos-rebuild switch --flake ${config.home.dotfiles}";
       };
     };
