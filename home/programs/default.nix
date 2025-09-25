@@ -2,7 +2,7 @@
 {
   imports = [
     ./anime.nix
-    ./anki.nix
+    ./anki
     ./browsers
     ./cli
     ./dictionary.nix
