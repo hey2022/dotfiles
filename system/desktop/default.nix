@@ -9,6 +9,5 @@
     ./regreet.nix
     ./stylix.nix
     ./wluma.nix
-    ./xdg
   ];
 }
