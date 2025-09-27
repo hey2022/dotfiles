@@ -14,10 +14,8 @@
       workersFile = config.sops.secrets."buildbot/workers".path;
       admins = [ "hey2022" ];
       github = {
-        authType.app = {
-          id = 1689378;
-          secretKeyFile = config.sops.secrets."buildbot/secretKey".path;
-        };
+        appId = 1689378;
+        appSecretKeyFile = config.sops.secrets."buildbot/secretKey".path;
         webhookSecretFile = config.sops.secrets."buildbot/webhookSecret".path;
         oauthId = "Iv23liAuWHy8Mdqf2Ifm";
         oauthSecretFile = config.sops.secrets."buildbot/oauthSecret".path;
