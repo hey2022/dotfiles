@@ -1,4 +1,3 @@
-{ ... }:
 {
   imports = [
     ./catppuccin.nix
@@ -9,5 +8,6 @@
     ./regreet.nix
     ./stylix.nix
     ./wluma.nix
+    ./ydotool.nix
   ];
 }

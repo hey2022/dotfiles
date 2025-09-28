@@ -10,7 +10,6 @@
     ./cloudflared.nix
     ../../system
     ../../system/desktop/hyprland.nix
-    ../../system/programs/utilities
     ../../system/desktop
     ../../system/desktop/hyprland.nix
     ../../system/services/homelab
