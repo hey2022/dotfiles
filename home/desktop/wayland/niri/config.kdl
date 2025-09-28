@@ -300,9 +300,10 @@ binds {
     Mod+O hotkey-overlay-title="OCR" {
         spawn "sh" "-c" "slurp | xargs -I {} grim -g {} - | tesseract -l eng - - | wl-copy"
     }
-    Mod+Shift+C hotkey-overlay-title="Clipboard: Copy strip new lines" {
-        spawn "sh" "-c" "wl-paste --primary | tr '\n' ' ' | tr '  ' ' ' | wl-copy"
+    Mod+Shift+V hotkey-overlay-title="Clipboard: Paste strip newlines" {
+        spawn "sh" "-c" "sleep 0.1 && wl-paste | tr '\n' ' ' | tr '  ' ' ' | wl-copy && ydotool key 29:1 47:1 47:0 29:0"
     }
+    // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.
     // Mod+T { spawn "bash" "-c" "notify-send hello && exec alacritty"; }
@@ -663,7 +664,7 @@ binds {
     Mod+V {
         toggle-window-floating
     }
-    Mod+Shift+V {
+    Mod+Ctrl+V {
         switch-focus-between-floating-and-tiling
     }
     // Toggle tabbed column display mode.
