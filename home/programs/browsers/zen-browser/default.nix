@@ -60,6 +60,7 @@ in
               sponsorblock
               tridactyl
               ublock-origin
+              violentmonkey
               zotero-connector
             ];
           }
