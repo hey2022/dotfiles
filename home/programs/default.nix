@@ -16,6 +16,7 @@
     ./qalculate
     ./rss.nix
     ./social
+    ./todo.nix
     ./torrent.nix
   ];
   home.packages = with pkgs; [
