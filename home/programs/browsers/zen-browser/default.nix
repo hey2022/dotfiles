@@ -61,6 +61,7 @@ in
               tridactyl
               ublock-origin
               violentmonkey
+              yomitan
               zotero-connector
             ];
           }
