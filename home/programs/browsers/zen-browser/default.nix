@@ -60,6 +60,7 @@ in
               sponsorblock
               tridactyl
               ublock-origin
+              untrap-for-youtube
               violentmonkey
               yomitan
               zotero-connector
