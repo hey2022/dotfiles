@@ -12,6 +12,7 @@ bind K tabprev
 
 " blacklist
 blacklistadd excalidraw.com
+blacklistadd figma.com
 blacklistadd hey2022.github.io/qField
 blacklistadd localhost:8888
 blacklistadd monkeytype.com
