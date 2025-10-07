@@ -346,7 +346,14 @@ let
             obsidian = true;
             typst = true;
             latex = true;
-            general = true;
+            general = {
+              blink = true;
+              treesitter = true;
+              telescope = true;
+              always = true;
+              extra = true;
+              ai = true;
+            };
             lint = true;
             format = true;
             neonixdev = true;
