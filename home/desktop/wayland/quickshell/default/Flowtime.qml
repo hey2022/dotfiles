@@ -67,6 +67,7 @@ Scope {
                         switchMode();
                         break;
                     case Qt.MiddleButton:
+                        alarmSound.stop();
                         timer.running = false;
                         if (root.isTask) {
                             root.time = 0;
@@ -110,6 +111,7 @@ Scope {
     }
 
     function switchMode() {
+        alarmSound.stop();
         root.isTask ^= true;
         if (root.breakTime >= -10 && root.breakTime < 0) {
             root.breakTime = 0;
