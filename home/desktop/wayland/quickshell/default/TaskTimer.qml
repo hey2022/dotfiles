@@ -51,9 +51,9 @@ Scope {
                         font.pixelSize: 12
                         text: {
                             let time = root.isTask ? root.time : root.breakTime;
-                            let minutes = Math.floor(time / 60);
-                            let seconds = time % 60;
-                            return `${root.isTask ? "Task" : "Break"}: ${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+                            let minutes = Math.trunc(time / 60);
+                            let seconds = Math.abs(time) % 60;
+                            return `${root.isTask ? "Focus" : "Break"}: ${time < 0 ? "-" : ""}${String(Math.abs(minutes)).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
                         }
                     }
                 }
@@ -82,7 +82,7 @@ Scope {
                     if (root.isTask) {
                         root.time = Math.max(0, root.time + dt);
                     } else {
-                        root.breakTime = Math.max(0, root.breakTime + dt);
+                        root.breakTime += dt;
                     }
                 }
             }
@@ -100,10 +100,9 @@ Scope {
                 return;
             }
 
-            if (root.breakTime <= 0) {
-                switchMode();
-                timer.running = false;
+            if (root.breakTime == 0) {
                 alarmSound.play();
+                root.breakTime--;
             } else {
                 root.breakTime--;
             }
