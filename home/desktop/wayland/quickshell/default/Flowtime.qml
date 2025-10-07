@@ -111,6 +111,9 @@ Scope {
 
     function switchMode() {
         root.isTask ^= true;
+        if (root.breakTime >= -10 && root.breakTime < 0) {
+            root.breakTime = 0;
+        }
         root.breakTime += root.time / 5;
         root.time = 0;
     }
