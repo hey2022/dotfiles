@@ -10,7 +10,7 @@ in
     };
     programs = {
       rofi.enable = true;
-      alacritty.enable = true;
+      foot.enable = true;
       hyprlock.enable = true;
       waybar.enable = true;
       wlogout.enable = true;
