@@ -1,9 +1,13 @@
 { self, inputs, ... }:
 {
   perSystem =
-    { pkgs, system, ... }:
+    { system, ... }:
 
     let
+      pkgs = import inputs.nixpkgs {
+        inherit system;
+        config = import ../common/nixpkgs.nix;
+      };
       nixCats = import "${self}/common/nvim" { inherit inputs; };
     in
     {
@@ -13,6 +17,7 @@
         nnvim = nixCats.packages.${system}.nnvim;
         cliprust = pkgs.callPackage ./cliprust { };
         neovim-anywhere = pkgs.callPackage ./neovim-anywhere { };
+        ticktick-cracked = pkgs.callPackage ./ticktick-cracked { };
       };
     };
 }
