@@ -12,8 +12,9 @@ in
   config = lib.mkIf cfg.enable {
     programs.niri = { };
     services.gnome.gnome-keyring.enable = false;
-    environment.systemPackages = [
-      pkgs.xwayland-satellite
+    environment.systemPackages = with pkgs; [
+      labwc
+      xwayland-satellite
     ];
   };
 }
