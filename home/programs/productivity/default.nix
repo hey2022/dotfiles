@@ -5,7 +5,8 @@
     ./graphics
     ./libreoffice.nix
     ./obs.nix
-    ./pdf
     ./obsidian.nix
+    ./pdf
+    ./video
   ];
 }
