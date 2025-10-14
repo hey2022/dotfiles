@@ -237,7 +237,7 @@ screenshot-path "~/pictures/screenshots/%Y%m%d-%H%M%S.png"
 // The wiki explains how to configure individual animations:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Animations
 animations {
-    slowdown 0.1
+    slowdown 0
 }
 // Window rules let you adjust behavior for individual windows.
 // Find more information on the wiki:
