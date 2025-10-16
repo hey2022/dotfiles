@@ -3,11 +3,11 @@
 {
   sops.secrets = {
     cloudflared = {
-      sopsFile = ../../secrets/desktop/cloudflared.env;
+      sopsFile = ../../secrets/root/desktop/cloudflared.env;
       format = "dotenv";
     };
     caddy = {
-      sopsFile = ../../secrets/desktop/caddy.env;
+      sopsFile = ../../secrets/root/desktop/caddy.env;
       format = "dotenv";
     };
   };

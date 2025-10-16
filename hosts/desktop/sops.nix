@@ -1,9 +1,9 @@
 {
   sops = {
-    defaultSopsFile = ../../secrets/desktop/secrets.yaml;
+    defaultSopsFile = ../../secrets/root/desktop/secrets.yaml;
     secrets = {
       homepage = {
-        sopsFile = ../../secrets/desktop/homepage.env;
+        sopsFile = ../../secrets/root/desktop/homepage.env;
         format = "dotenv";
       };
     };

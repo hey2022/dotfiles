@@ -16,7 +16,7 @@
   };
 
   sops.secrets.searx = {
-    sopsFile = ../../secrets/searx.env;
+    sopsFile = ../../secrets/root/searx.env;
     format = "dotenv";
   };
 }
