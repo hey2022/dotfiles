@@ -14,15 +14,19 @@
       keyFile = config.sops.secrets."anki/key".path;
       autoSync = true;
     };
-    addons = with pkgs.ankiAddons; [
-      anki-connect
-      anki-quizlet-importer-extended
-      review-heatmap
-      (recolor.withConfig {
-        config = lib.importJSON ./recolor.json;
-      })
-      pkgs.anki-popup-dictionary
-    ];
+    addons =
+      with pkgs;
+      with pkgs.ankiAddons;
+      [
+        anki-connect
+        anki-quizlet-importer-extended
+        review-heatmap
+        (recolor.withConfig {
+          config = lib.importJSON ./recolor.json;
+        })
+        anki-popup-dictionary
+        anki-fsrs-helper
+      ];
   };
   sops = {
     secrets = {

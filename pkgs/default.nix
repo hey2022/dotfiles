@@ -19,6 +19,7 @@
         neovim-anywhere = pkgs.callPackage ./neovim-anywhere { };
         ticktick-cracked = pkgs.callPackage ./ticktick-cracked { };
         anki-popup-dictionary = pkgs.callPackage ./anki/popup-dictionary { };
+        anki-fsrs-helper = pkgs.callPackage ./anki/fsrs-helper { };
       };
     };
 }
