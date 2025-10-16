@@ -27,6 +27,7 @@
         anki-popup-dictionary
         anki-fsrs-helper
         mds-time-left
+        anking-note-addon
       ];
   };
   sops = {
