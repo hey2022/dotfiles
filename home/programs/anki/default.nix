@@ -28,6 +28,7 @@
         anki-fsrs-helper
         mds-time-left
         anking-note-addon
+        anki-stylusdraw
       ];
   };
   sops = {
