@@ -1,0 +1,15 @@
+diff --git i/src/popup_dictionary/reviewer.py w/src/popup_dictionary/reviewer.py
+index 3859a67..72a8f6b 100644
+--- i/src/popup_dictionary/reviewer.py
++++ w/src/popup_dictionary/reviewer.py
+@@ -36,8 +36,8 @@ Modifications to Anki's Reviewer
+ import json
+ from typing import TYPE_CHECKING, Any, Optional, Tuple, Union
+ 
+-from PyQt5.QtGui import QKeySequence
+-from PyQt5.QtWidgets import QMenu, QShortcut
++from PyQt6.QtGui import QKeySequence, QShortcut
++from PyQt6.QtWidgets import QMenu
+ 
+ from aqt import mw
+ from aqt.reviewer import Reviewer

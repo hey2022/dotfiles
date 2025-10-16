@@ -21,6 +21,7 @@
       (recolor.withConfig {
         config = lib.importJSON ./recolor.json;
       })
+      pkgs.anki-popup-dictionary
     ];
   };
   sops = {
