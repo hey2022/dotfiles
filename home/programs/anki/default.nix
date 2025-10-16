@@ -31,6 +31,7 @@
         # anki-contanki
         anking-note-addon
         anki-stylusdraw
+        # anki-search-stats-extended
       ];
   };
   sops = {
