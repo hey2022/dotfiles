@@ -28,6 +28,7 @@
         anki-fsrs-helper
         mds-time-left
         ajt-card-management
+        # anki-contanki
         anking-note-addon
         anki-stylusdraw
       ];

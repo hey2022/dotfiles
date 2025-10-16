@@ -21,6 +21,7 @@
         anki-popup-dictionary = pkgs.callPackage ./anki/popup-dictionary { };
         anki-fsrs-helper = pkgs.callPackage ./anki/fsrs-helper { };
         ajt-card-management = pkgs.callPackage ./anki/ajt-card-management { };
+        anki-contanki = pkgs.callPackage ./anki/anki-contanki { };
         anki-stylusdraw = pkgs.callPackage ./anki/anki-stylusdraw { };
         anking-note-addon = pkgs.callPackage ./anki/anking-note-addon { };
         mds-time-left = pkgs.callPackage ./anki/mds-time-left { };
