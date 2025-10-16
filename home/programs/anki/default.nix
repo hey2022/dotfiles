@@ -27,6 +27,7 @@
         anki-popup-dictionary
         anki-fsrs-helper
         mds-time-left
+        ajt-card-management
         anking-note-addon
         anki-stylusdraw
       ];
