@@ -29,6 +29,7 @@
         mds-time-left
         ajt-card-management
         # anki-contanki
+        anki-hyper-tts
         anking-note-addon
         anki-stylusdraw
         # anki-search-stats-extended
