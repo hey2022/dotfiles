@@ -9,6 +9,7 @@
 
   profiles = {
     entertainment.enable = true;
+    gaming.enable = true;
   };
   programs.niri.enable = true;
 }

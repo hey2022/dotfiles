@@ -27,7 +27,7 @@
     ];
   };
 
-  profiles.gaming.enable = false;
+  profiles.gaming.enable = true;
   homelab.enable = true;
   programs.niri.enable = true;
 }
