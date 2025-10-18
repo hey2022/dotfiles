@@ -25,7 +25,9 @@
           config = lib.importJSON ./recolor.json;
         })
         anki-popup-dictionary
-        anki-fsrs-helper
+        (anki-fsrs-helper.withConfig {
+          config = lib.importJSON ./fsrs-helper.json;
+        })
         mds-time-left
         ajt-card-management
         # anki-contanki
