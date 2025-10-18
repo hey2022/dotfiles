@@ -84,16 +84,16 @@ let
         statistics = with pkgs; [
           quarto
         ];
-        # and easily check if they are included in lua
-        format = with pkgs; [
-          stylua
+        lua = {
+          always = with pkgs; [
+            lua-language-server
+            stylua
+          ];
+        };
+        nix = with pkgs; [
+          nixd
           nixfmt
         ];
-        neonixdev = {
-          # also you can do this.
-          inherit (pkgs) nix-doc lua-language-server nixd;
-          # and each will be its own sub category
-        };
         markdown = with pkgs; [
           python3Packages.pylatexenc
         ];
@@ -168,9 +168,11 @@ let
         obsidian = with pkgs.vimPlugins; [
           obsidian-nvim
         ];
-        neonixdev = with pkgs.vimPlugins; [
-          lazydev-nvim
-        ];
+        lua = {
+          neovim = with pkgs.vimPlugins; [
+            lazydev-nvim
+          ];
+        };
         statistics = with pkgs.vimPlugins; [
           quarto-nvim
           otter-nvim
@@ -355,8 +357,9 @@ let
               ai = true;
             };
             lint = true;
+            lua = true;
             format = true;
-            neonixdev = true;
+            nix = true;
             test = true;
             lspDebugMode = false;
             themer = true;
