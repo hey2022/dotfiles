@@ -73,6 +73,7 @@ require("lze").load({
     { import = "config.plugins.telescope" },
     { import = "config.plugins.treesitter" },
     { import = "config.plugins.typst" },
+    { import = "config.plugins.vim-tmux-navigator" },
     {
         "undotree",
         for_cat = "general.extra",

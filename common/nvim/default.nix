@@ -113,6 +113,7 @@ let
             vim-repeat
             plenary-nvim
             nvim-notify
+            vim-tmux-navigator
           ];
           extra = [
             oil-nvim

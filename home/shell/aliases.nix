@@ -10,5 +10,7 @@
     zj = "zellij";
 
     tp = "gtrash put";
+    s = "sesh connect $(sesh list --zoxide --icons | fzf --ansi)";
+    S = "sesh connect $(sesh list --icons | fzf --ansi)";
   };
 }
