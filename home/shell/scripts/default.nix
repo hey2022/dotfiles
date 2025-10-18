@@ -7,7 +7,6 @@
     ./nightgrade
     ./nixpif
     ./swap
-    ./zjs
   ];
   home.packages = with pkgs; [ neovim-anywhere ];
 }

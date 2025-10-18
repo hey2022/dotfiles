@@ -11,7 +11,7 @@
     ./scripts
     ./starship.nix
     ./tldr.nix
-    ./zellij
+    # ./zellij
     ./zoxide.nix
   ];
 
