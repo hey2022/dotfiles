@@ -24,8 +24,8 @@
         (recolor.withConfig {
           config = lib.importJSON ./recolor.json;
         })
-        anki-popup-dictionary
-        (anki-fsrs-helper.withConfig {
+        popup-dictionary
+        (fsrs-helper.withConfig {
           config = lib.importJSON ./fsrs-helper.json;
         })
         mds-time-left
@@ -34,8 +34,8 @@
         anki-hyper-tts
         anking-note-addon
         anki-stylusdraw
-        anki-life-drain
-        # anki-search-stats-extended
+        life-drain
+        # search-stats-extended
       ];
   };
   sops = {
