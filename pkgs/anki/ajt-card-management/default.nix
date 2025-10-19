@@ -3,7 +3,6 @@
   anki-utils,
   fetchFromGitHub,
   nix-update-script,
-  openssh,
 }:
 
 anki-utils.buildAnkiAddon (finalAttrs: {
