@@ -11,6 +11,7 @@ bind J tabnext
 bind K tabprev
 
 " blacklist
+blacklistadd canva.com
 blacklistadd excalidraw.com
 blacklistadd figma.com
 blacklistadd hey2022.github.io/qField
