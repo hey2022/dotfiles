@@ -26,6 +26,7 @@
         anki-stylusdraw = pkgs.callPackage ./anki/anki-stylusdraw { };
         anking-note-addon = pkgs.callPackage ./anki/anking-note-addon { };
         mds-time-left = pkgs.callPackage ./anki/mds-time-left { };
+        gitbutler-bin = pkgs.callPackage ./gitbutler-bin { };
         # anki-search-stats-extended = pkgs.callPackage ./anki/search-stats-extended { };
       };
     };
