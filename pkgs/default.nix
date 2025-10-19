@@ -20,6 +20,6 @@
         ticktick-cracked = pkgs.callPackage ./ticktick-cracked { };
         gitbutler-bin = pkgs.callPackage ./gitbutler-bin { };
       }
-      // (pkgs.callPackage ./anki { });
+      // (import ./anki { inherit (pkgs) callPackage; });
     };
 }
