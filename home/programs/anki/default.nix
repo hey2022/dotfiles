@@ -30,7 +30,9 @@
         })
         mds-time-left
         ajt-card-management
-        # anki-contanki
+        # (anki-contanki.withConfig {
+        #   config = lib.importJSON ./anki-contanki.json;
+        # })
         anki-hyper-tts
         anking-note-addon
         anki-stylusdraw

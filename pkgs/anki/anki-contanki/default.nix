@@ -11,9 +11,17 @@ anki-utils.buildAnkiAddon (finalAttrs: {
   src = fetchFromGitHub {
     owner = "roxgib";
     repo = "anki-contanki";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-a8EbCQVuxJv04RVtiGUz5ypRdqFUIqK8Uqz5Zf0XkqI=";
   };
+  patches = [
+    ./fix-readonly-config.patch
+  ];
+  patchFlags = [
+    "-p1"
+    "-d"
+    ".."
+  ];
   sourceRoot = "${finalAttrs.src.name}/contanki";
   passthru.updateScript = nix-update-script { };
   meta = {
