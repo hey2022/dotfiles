@@ -10,5 +10,5 @@
   anking-note-addon = callPackage ./anking-note-addon { };
   mds-time-left = callPackage ./mds-time-left { };
   life-drain = callPackage ./life-drain { };
-  # search-stats-extended = callPackage ./search-stats-extended { };
+  search-stats-extended = callPackage ./search-stats-extended { };
 }

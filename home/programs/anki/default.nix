@@ -35,7 +35,7 @@
         anking-note-addon
         anki-stylusdraw
         life-drain
-        # search-stats-extended
+        search-stats-extended
       ];
   };
   sops = {

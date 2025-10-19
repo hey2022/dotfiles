@@ -4,6 +4,7 @@
   fetchFromGitHub,
   nix-update-script,
   buildNpmPackage,
+  nodejs,
   protobuf,
 }:
 
@@ -12,8 +13,8 @@ let
   src = fetchFromGitHub {
     owner = "Luc-Mcgrady";
     repo = "Anki-Search-Stats-Extended";
-    rev = "v${version}";
-    hash = "sha256-rJLcE93iomIEJi267DrEkVFdHe6jE1efzTOiMlMy8iA=";
+    tag = "v${version}";
+    hash = "sha256-rJLcE93iomIEJi267DiEkVFdHe6jE1efzTOiMlMy8iA=";
     fetchSubmodules = true;
   };
 
@@ -23,7 +24,8 @@ let
     npmDepsHash = "sha256-uzsJUx61O4kqV58pxexJmwrx5e5AB9JQWbVEp5G4B5U=";
     dontBuild = true;
     installPhase = ''
-      cp -r node_modules $out
+      mkdir -p $out
+      cp -r node_modules $out/
     '';
   };
 
@@ -33,15 +35,19 @@ anki-utils.buildAnkiAddon (finalAttrs: {
   inherit version src;
 
   nativeBuildInputs = [
+    nodejs
     protobuf
   ];
 
   buildPhase = ''
     runHook preBuild
-    ln -s ${node_modules_drv} node_modules
+
+    ln -s ${node_modules_drv}/node_modules node_modules
+
     export PATH=$PWD/node_modules/.bin:$PATH
     export NODE_PATH=$PWD/node_modules
 
+    mkdir -p src/ts/proto
     protoc \
         -I anki/proto \
         --es_out src/ts/proto \
