@@ -18,7 +18,7 @@
         {
           plugin = vim-tmux-navigator;
           extraConfig = ''
-            set -g @vim_navigator_mapping_prev "" 
+            set -g @vim_navigator_mapping_prev ""
           '';
         }
         yank
