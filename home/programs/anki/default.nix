@@ -34,6 +34,7 @@
         anki-hyper-tts
         anking-note-addon
         anki-stylusdraw
+        anki-life-drain
         # anki-search-stats-extended
       ];
   };
