@@ -29,44 +29,59 @@ let
     '';
   };
 
+  base = anki-utils.buildAnkiAddon (finalAttrs: {
+    pname = "search-stats-extended";
+    inherit version src;
+
+    nativeBuildInputs = [
+      nodejs
+      protobuf
+    ];
+
+    buildPhase = ''
+      runHook preBuild
+
+      ln -s ${node_modules_drv}/node_modules node_modules
+
+      export PATH=$PWD/node_modules/.bin:$PATH
+      export NODE_PATH=$PWD/node_modules
+
+      mkdir -p src/ts/proto
+      protoc \
+          -I anki/proto \
+          --es_out src/ts/proto \
+          --es_opt target=ts \
+          anki/proto/anki/*.proto
+
+      find src/ts/proto -type f -name "*.ts" -exec sed -i 's/\.js//g' {} +
+
+      npm run format
+      npm run build
+
+      runHook postBuild
+    '';
+
+    installPrefix = "share/anki/addons/${finalAttrs.pname}";
+
+    passthru.updateScript = nix-update-script { };
+
+    meta = {
+      description = "Search Stats Extended";
+      homepage = "https://github.com/Luc-Mcgrady/Anki-Search-Stats-Extended";
+      license = lib.licenses.agpl3Only;
+      maintainers = with lib.maintainers; [ ];
+    };
+  });
 in
-anki-utils.buildAnkiAddon (finalAttrs: {
-  pname = "search-stats-extended";
-  inherit version src;
+base.overrideAttrs (old: {
+  installPhase = ''
+    runHook preInstall
 
-  nativeBuildInputs = [
-    nodejs
-    protobuf
-  ];
+    mkdir -p "$out/$installPrefix/user_files"
+    mkdir -p "$out/$installPrefix/locale"
+    mv __init__.py stats.min.js stats.min.css developers.md manifest.json config.json LICENSE "$out/$installPrefix/"
+    mv locale/*.ftl "$out/$installPrefix/locale/"
 
-  buildPhase = ''
-    runHook preBuild
-
-    ln -s ${node_modules_drv}/node_modules node_modules
-
-    export PATH=$PWD/node_modules/.bin:$PATH
-    export NODE_PATH=$PWD/node_modules
-
-    mkdir -p src/ts/proto
-    protoc \
-        -I anki/proto \
-        --es_out src/ts/proto \
-        --es_opt target=ts \
-        anki/proto/anki/*.proto
-
-    find src/ts/proto -type f -name "*.ts" -exec sed -i 's/\.js//g' {} +
-
-    npm run build
-
-    runHook postBuild
+    runHook postInstall
   '';
-
-  passthru.updateScript = nix-update-script { };
-
-  meta = {
-    description = "Search Stats Extended";
-    homepage = "https://github.com/Luc-Mcgrady/Anki-Search-Stats-Extended";
-    license = lib.licenses.agpl3Only;
-    maintainers = with lib.maintainers; [ ];
-  };
 })
