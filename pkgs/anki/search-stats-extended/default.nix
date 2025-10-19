@@ -19,7 +19,7 @@ let
   };
 
   node_modules_drv = buildNpmPackage {
-    pname = "search-stats-extended-deps";
+    pname = "search-stats-node-modules";
     inherit version src;
     npmDepsHash = "sha256-uzsJUx61O4kqV58pxexJmwrx5e5AB9JQWbVEp5G4B5U=";
     dontBuild = true;
