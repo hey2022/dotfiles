@@ -11,6 +11,8 @@
       };
       engines = lib.mapAttrsToList (name: value: { inherit name; } // value) {
         "startpage".disabled = true;
+        # BUG: Wikidata breaks all searches
+        "wikidata".disabled = true;
       };
     };
   };
