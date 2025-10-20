@@ -32,7 +32,7 @@
         ajt-card-management
         # anki-contanki
         anki-hyper-tts
-        anking-note-addon
+        anking-notes-addon
         anki-stylusdraw
         life-drain
         # (search-stats-extended.withConfig {

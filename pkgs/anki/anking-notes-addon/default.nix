@@ -7,12 +7,12 @@
 
 anki-utils.buildAnkiAddon (finalAttrs: {
   pname = "anking-notes-addon";
-  version = "3.4.2";
+  version = "3.4.4";
   src = fetchFromGitHub {
     owner = "AnKing-VIP";
     repo = "anking_notes_addon";
-    rev = finalAttrs.version;
-    hash = "sha256-CH25Ag/FK7MsnPGfuLWXtuNmbVqI4FRoxdRwqjDNiGs=";
+    tag = finalAttrs.version;
+    hash = "sha256-lP720qeryTOJafGGAVzaLgOFkWKyprRjAVxomIbFrXM=";
   };
   sourceRoot = "${finalAttrs.src.name}/src/anking_notetypes";
   passthru.updateScript = nix-update-script { };

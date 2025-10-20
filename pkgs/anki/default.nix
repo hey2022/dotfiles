@@ -7,7 +7,7 @@
   anki-contanki = callPackage ./anki-contanki { };
   anki-hyper-tts = callPackage ./anki-hyper-tts { };
   anki-stylusdraw = callPackage ./anki-stylusdraw { };
-  anking-note-addon = callPackage ./anking-note-addon { };
+  anking-notes-addon = callPackage ./anking-notes-addon { };
   mds-time-left = callPackage ./mds-time-left { };
   life-drain = callPackage ./life-drain { };
   search-stats-extended = callPackage ./search-stats-extended { };
