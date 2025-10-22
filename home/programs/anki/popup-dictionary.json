@@ -1,0 +1,13 @@
+{
+  "generalConfirmEmpty": true,
+  "generalHotkey": "Alt+Shift+D",
+  "dictionaryEnabled": true,
+  "dictionaryNoteTypeName": "Dictionary Entry",
+  "dictionaryTermFieldName": "Term",
+  "dictionaryDefinitionFieldName": "Definition",
+  "snippetsEnabled": true,
+  "snippetsExcludedFields": ["Note ID", "ID (hidden)"],
+  "snippetsExcludeNewNotes": false,
+  "snippetsLimitToCurrentDeck": false,
+  "snippetsResultsWarnLimit": 1000
+}

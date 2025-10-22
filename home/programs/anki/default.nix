@@ -24,7 +24,9 @@
         (recolor.withConfig {
           config = lib.importJSON ./recolor.json;
         })
-        popup-dictionary
+        (popup-dictionary.withConfig {
+          config = lib.importJSON ./popup-dictionary.json;
+        })
         (fsrs-helper.withConfig {
           config = lib.importJSON ./fsrs-helper.json;
         })
