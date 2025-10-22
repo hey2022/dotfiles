@@ -82,6 +82,9 @@ let
           cpp = with pkgs; [
             clang-tools
           ];
+          rust = with pkgs; [
+            rust-analyzer
+          ];
           statistics = with pkgs; [
             quarto
           ];
@@ -363,6 +366,7 @@ let
               markdown = true;
               nix = true;
               org-mode = true;
+              rust = true;
               statistics = true;
               typst = true;
             };
