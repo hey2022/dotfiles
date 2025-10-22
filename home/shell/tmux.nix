@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 
 {
   programs = {
@@ -68,8 +68,10 @@
     };
     sesh = {
       enable = true;
-      enableAlias = false;
       enableTmuxIntegration = false;
+    };
+    nushell.shellAliases = {
+      s = lib.mkForce "sesh connect (sesh list --icons | fzf --ansi)";
     };
   };
 }
