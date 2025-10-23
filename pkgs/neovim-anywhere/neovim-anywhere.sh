@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 
-TEMP_FILE=$(mktemp).tex
+set -euo pipefail
 
-neovide "$TEMP_FILE"
+tmp=$(mktemp)
+trap 'rm -f "$tmp"' EXIT
 
-if [ -s "$TEMP_FILE" ]; then
-    wl-copy < "$TEMP_FILE"
-fi
+ft="${1:-markdown}"
 
-rm "$TEMP_FILE"
+neovide -- -c "set filetype=${ft}" "$tmp"
+
+[ -s "$tmp" ] && wl-copy < "$tmp"
+ydotool key 29:1 47:1 47:0 29:0

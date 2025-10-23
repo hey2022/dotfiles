@@ -3,14 +3,16 @@
   neovide,
   wl-clipboard,
   coreutils,
+  ydotool,
 }:
 
 writeShellApplication {
   name = "neovim-anywhere";
   runtimeInputs = [
+    coreutils
     neovide
     wl-clipboard
-    coreutils
+    ydotool
   ];
   text = builtins.readFile ./neovim-anywhere.sh;
 }
