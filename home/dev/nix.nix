@@ -6,6 +6,7 @@
 }:
 {
   home.packages = with pkgs; [
+    common-updater-scripts
     deadnix
     flake-checker
     hydra-check
