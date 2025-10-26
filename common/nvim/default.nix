@@ -78,25 +78,27 @@ let
         # per nvim package you export
         debug = with pkgs; {
         };
-        cpp = with pkgs; [
-          clang-tools
-        ];
-        statistics = with pkgs; [
-          quarto
-        ];
-        lua = {
-          always = with pkgs; [
-            lua-language-server
-            stylua
+        languages = {
+          cpp = with pkgs; [
+            clang-tools
+          ];
+          statistics = with pkgs; [
+            quarto
+          ];
+          lua = {
+            always = with pkgs; [
+              lua-language-server
+              stylua
+            ];
+          };
+          nix = with pkgs; [
+            nixd
+            nixfmt
+          ];
+          markdown = with pkgs; [
+            python3Packages.pylatexenc
           ];
         };
-        nix = with pkgs; [
-          nixd
-          nixfmt
-        ];
-        markdown = with pkgs; [
-          python3Packages.pylatexenc
-        ];
       };
 
       # This is for plugins that will load at startup without using packadd:
@@ -159,30 +161,32 @@ let
         format = with pkgs.vimPlugins; [
           conform-nvim
         ];
-        markdown = with pkgs.vimPlugins; [
-          render-markdown-nvim
-          markdown-preview-nvim
-        ];
-        org-mode = with pkgs.vimPlugins; [
-          orgmode
-        ];
-        obsidian = with pkgs.vimPlugins; [
-          obsidian-nvim
-        ];
-        lua = {
-          neovim = with pkgs.vimPlugins; [
-            lazydev-nvim
+        languages = {
+          markdown = with pkgs.vimPlugins; [
+            render-markdown-nvim
+            markdown-preview-nvim
+          ];
+          org-mode = with pkgs.vimPlugins; [
+            orgmode
+          ];
+          lua = {
+            neovim = with pkgs.vimPlugins; [
+              lazydev-nvim
+            ];
+          };
+          statistics = with pkgs.vimPlugins; [
+            quarto-nvim
+            otter-nvim
+          ];
+          typst = with pkgs.vimPlugins; [
+            typst-preview-nvim
+          ];
+          latex = with pkgs.vimPlugins; [
+            vimtex
           ];
         };
-        statistics = with pkgs.vimPlugins; [
-          quarto-nvim
-          otter-nvim
-        ];
-        typst = with pkgs.vimPlugins; [
-          typst-preview-nvim
-        ];
-        latex = with pkgs.vimPlugins; [
-          vimtex
+        obsidian = with pkgs.vimPlugins; [
+          obsidian-nvim
         ];
         general = {
           blink = with pkgs.vimPlugins; [
@@ -343,12 +347,7 @@ let
             hosts.node.enable = true;
           };
           categories = {
-            markdown = true;
-            org-mode = true;
-            statistics = true;
             obsidian = true;
-            typst = true;
-            latex = true;
             general = {
               blink = true;
               treesitter = true;
@@ -357,10 +356,17 @@ let
               extra = true;
               ai = true;
             };
+            languages = {
+              latex = true;
+              lua = true;
+              markdown = true;
+              nix = true;
+              org-mode = true;
+              statistics = true;
+              typst = true;
+            };
             lint = true;
-            lua = true;
             format = true;
-            nix = true;
             test = true;
             lspDebugMode = false;
             themer = true;

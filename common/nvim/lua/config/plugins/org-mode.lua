@@ -1,7 +1,7 @@
 return {
     {
         "orgmode",
-        for_cats = "org-mode",
+        for_cat = "languages.org-mode",
         after = function(_)
             require("orgmode").setup({
                 org_agenda_files = { "~/documents/org/agenda.org", "~/documents/school/school.org" },

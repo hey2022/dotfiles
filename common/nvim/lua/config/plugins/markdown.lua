@@ -1,7 +1,7 @@
 return {
     {
         "render-markdown.nvim",
-        for_cat = "markdown",
+        for_cat = "languages.markdown",
         ft = "markdown",
         after = function(_)
             require("render-markdown").setup({})
@@ -9,7 +9,7 @@ return {
     },
     {
         "markdown-preview.nvim",
-        for_cat = "markdown",
+        for_cat = "languages.markdown",
         cmd = { "MarkdownPreview", "MarkdownPreviewStop", "MarkdownPreviewToggle" },
         ft = "markdown",
         keys = {

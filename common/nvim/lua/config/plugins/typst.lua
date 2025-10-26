@@ -1,7 +1,7 @@
 return {
     {
         "typst-preview.nvim",
-        for_cat = "typst",
+        for_cat = "languages.typst",
         ft = "typst",
         after = function(_)
             require("typst-preview").setup({})
