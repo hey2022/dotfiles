@@ -247,7 +247,6 @@ let
             # pkgs.neovimPlugins.hlargs
           ];
           ai = with pkgs.vimPlugins; [
-            supermaven-nvim
           ];
         };
       };
@@ -357,7 +356,7 @@ let
               telescope = true;
               always = true;
               extra = true;
-              ai = true;
+              ai = false;
             };
             languages = {
               cpp = true;
