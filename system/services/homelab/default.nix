@@ -24,7 +24,6 @@
       };
       bazarr.enable = true;
       jellyseerr.enable = true;
-      miniflux.enable = true;
       qbittorrent.enable = true;
     };
   };
