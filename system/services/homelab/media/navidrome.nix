@@ -4,7 +4,6 @@ let
 in
 {
   services.navidrome = {
-    enable = true;
     group = "media";
     settings = {
       MusicFolder = "${config.homelab.mediaDir}/music";
