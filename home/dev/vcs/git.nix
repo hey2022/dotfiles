@@ -2,14 +2,16 @@
   programs = {
     git = {
       enable = true;
-      userEmail = "yiheng.he@proton.me";
-      userName = "Yiheng He";
       lfs.enable = true;
       includes = [ { path = "~/.config/git/maintenance"; } ];
-      aliases = {
-        maintain = "maintenance register --config-file $HOME/.config/git/maintenance";
-      };
-      extraConfig = {
+      settings = {
+        aliases = {
+          maintain = "maintenance register --config-file $HOME/.config/git/maintenance";
+        };
+        user = {
+          email = "yiheng.he@proton.me";
+          name = "Yiheng He";
+        };
         branch.sort = "-committerdate";
         column.ui = "auto";
         core = {
@@ -53,12 +55,13 @@
       signing = {
         signByDefault = true;
       };
-      delta = {
-        enable = true;
-      };
     };
     lazygit = {
       enable = true;
+    };
+    delta = {
+      enable = true;
+      enableGitIntegration = true;
     };
   };
 }
