@@ -357,6 +357,7 @@ let
               ai = true;
             };
             languages = {
+              cpp = true;
               latex = true;
               lua = true;
               markdown = true;
