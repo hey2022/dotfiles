@@ -22,7 +22,6 @@
         master.enable = true;
         worker.enable = true;
       };
-      bazarr.enable = true;
       jellyseerr.enable = true;
       qbittorrent.enable = true;
     };
