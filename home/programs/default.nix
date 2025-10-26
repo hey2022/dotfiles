@@ -14,7 +14,6 @@
     ./productivity
     ./proxy
     ./qalculate
-    ./rss.nix
     ./social
     ./todo.nix
     ./torrent.nix
