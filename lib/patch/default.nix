@@ -20,7 +20,7 @@ let
     (pkgs.fetchpatch2 {
       name = "anki: 25.07.5 -> 25.09.2";
       url = "https://github.com/NixOS/nixpkgs/pull/444594.patch";
-      sha256 = "sha256-GPSvpGgCwxyho0N+tdINKe/lFgPz2fGk2gqRVCCGCzk=";
+      sha256 = "sha256-4cgvRVkkcLtJl3zm/F5Idw/rb4VTk2rcD1I4/00hJT8=";
     })
   ];
   home-manager-patches = [ ];
