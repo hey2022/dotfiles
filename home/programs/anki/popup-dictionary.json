@@ -8,6 +8,6 @@
   "snippetsEnabled": true,
   "snippetsExcludedFields": ["Note ID", "ID (hidden)"],
   "snippetsExcludeNewNotes": false,
-  "snippetsLimitToCurrentDeck": false,
+  "snippetsLimitToCurrentDeck": true,
   "snippetsResultsWarnLimit": 1000
 }
