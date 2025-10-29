@@ -16,12 +16,6 @@ let
     #   url = "https://github.com/NixOS/nixpkgs/pull/431873.patch";
     #   sha256 = "sha256-AywgW3znfmidsMkdzqwKuKVeSgTwklPAOVo08h3ejjQ=";
     # })
-    # https://nixpk.gs/pr-tracker.html?pr=444594
-    (pkgs.fetchpatch2 {
-      name = "anki: 25.07.5 -> 25.09.2";
-      url = "https://github.com/NixOS/nixpkgs/pull/444594.patch";
-      sha256 = "sha256-4cgvRVkkcLtJl3zm/F5Idw/rb4VTk2rcD1I4/00hJT8=";
-    })
   ];
   home-manager-patches = [ ];
   nixpkgs-patched =
