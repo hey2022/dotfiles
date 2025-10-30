@@ -24,6 +24,7 @@ in
       };
     };
     nativeMessagingHosts = with pkgs; [
+      firefoxpwa
       tridactyl-native
     ];
     languagePacks = [
@@ -64,6 +65,7 @@ in
               violentmonkey
               yomitan
               zotero-connector
+              pwas-for-firefox
             ];
           }
           (importExtension "redirector")
@@ -80,8 +82,11 @@ in
       };
     };
   };
-  home.file = {
-    ".zen/${profile}/chrome/catppuccin".source =
-      "${inputs.catppuccin-zen-browser}/themes/Mocha/Lavender";
+  home = {
+    file = {
+      ".zen/${profile}/chrome/catppuccin".source =
+        "${inputs.catppuccin-zen-browser}/themes/Mocha/Lavender";
+    };
+    packages = with pkgs; [ firefoxpwa ];
   };
 }
