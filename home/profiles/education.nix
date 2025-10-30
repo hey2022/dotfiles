@@ -16,7 +16,6 @@
   config = lib.mkIf config.profiles.education.enable {
     home.packages = with pkgs; [
       inputs.tls-xb.packages.${pkgs.system}.default
-      teams-for-linux
       zotero
     ];
   };
