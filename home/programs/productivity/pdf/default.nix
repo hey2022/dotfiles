@@ -13,6 +13,6 @@
     lib.mkIf config.profiles.productivity.enable [
       kdePackages.okular
       ocrmypdf
-      poppler_utils
+      poppler-utils
     ];
 }
