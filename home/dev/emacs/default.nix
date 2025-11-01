@@ -1,10 +1,12 @@
 {
   inputs,
   config,
+  lib,
   pkgs,
   ...
 }:
 let
+  cfg = config.programs.emacs;
   emacs = pkgs.emacs-pgtk;
 in
 {
@@ -12,39 +14,40 @@ in
     ../tex.nix
     ../../spell
   ];
-  home.packages = with pkgs; [
-    git
-    ripgrep
-    fd
+  config = lib.mkIf cfg.enable {
+    home.packages = with pkgs; [
+      git
+      ripgrep
+      fd
 
-    # copilot-node-server
-    nodejs
+      # copilot-node-server
+      nodejs
 
-    alsa-utils
-    languagetool
-  ];
-  programs.emacs = {
-    enable = true;
-    package = emacs;
-    extraPackages =
-      epkgs: with epkgs; [
-        vterm
-        jinx
-      ];
-  };
-  services.emacs = {
-    enable = false;
-    package = emacs;
-    client = {
+      alsa-utils
+      languagetool
+    ];
+    programs.emacs = {
+      package = emacs;
+      extraPackages =
+        epkgs: with epkgs; [
+          vterm
+          jinx
+        ];
+    };
+    services.emacs = {
       enable = true;
+      package = emacs;
+      client = {
+        enable = true;
+      };
+      startWithUserSession = true;
     };
-    startWithUserSession = true;
-  };
-  xdg.configFile = {
-    "doom" = {
-      source = config.lib.hm.mkFlakeSymlink ./doom;
-      recursive = true;
+    xdg.configFile = {
+      "doom" = {
+        source = config.lib.hm.mkFlakeSymlink ./doom;
+        recursive = true;
+      };
+      "emacs/.local/alarm.wav".source = "${inputs.self}/assets/sounds/alarm.wav";
     };
-    "emacs/.local/alarm.wav".source = "${inputs.self}/assets/sounds/alarm.wav";
   };
 }
