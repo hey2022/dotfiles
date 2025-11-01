@@ -17,11 +17,6 @@ in
     enable = true;
     policies = {
       OfferToSaveLogins = false;
-      Cookies = {
-        Block = [
-          "https://youtube.com"
-        ];
-      };
     };
     nativeMessagingHosts = with pkgs; [
       firefoxpwa
