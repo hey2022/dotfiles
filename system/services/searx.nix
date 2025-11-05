@@ -11,6 +11,9 @@
       };
       engines = lib.mapAttrsToList (name: value: { inherit name; } // value) {
         "startpage".disabled = true;
+        # BUG: https://github.com/searxng/searxng/issues/5286
+        "google".disabled = true;
+        "mullvadleta".disabled = false;
         # BUG: Wikidata breaks all searches
         "wikidata".disabled = true;
       };
