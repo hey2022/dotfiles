@@ -10,10 +10,10 @@ return function(_, bufnr)
         vim.keymap.set("n", keys, func, { buffer = bufnr, desc = desc })
     end
 
-    nmap("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
-    nmap("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
+    nmap("<leader>cr", vim.lsp.buf.rename, "Rename")
+    nmap("<leader>ca", vim.lsp.buf.code_action, "Code action")
 
-    nmap("gd", vim.lsp.buf.definition, "[G]oto [D]efinition")
+    nmap("gd", vim.lsp.buf.definition, "Goto definition")
 
     -- NOTE: why are these functions that call the telescope builtin?
     -- because otherwise they would load telescope eagerly when this is defined.
@@ -21,31 +21,31 @@ return function(_, bufnr)
     if nixCats("general.telescope") then
         nmap("gr", function()
             require("telescope.builtin").lsp_references()
-        end, "[G]oto [R]eferences")
+        end, "Goto references")
         nmap("gI", function()
             require("telescope.builtin").lsp_implementations()
-        end, "[G]oto [I]mplementation")
-        nmap("<leader>ds", function()
+        end, "Goto implementation")
+        nmap("<leader>cds", function()
             require("telescope.builtin").lsp_document_symbols()
-        end, "[D]ocument [S]ymbols")
-        nmap("<leader>ws", function()
+        end, "Document symbols")
+        nmap("<leader>cdw", function()
             require("telescope.builtin").lsp_dynamic_workspace_symbols()
-        end, "[W]orkspace [S]ymbols")
+        end, "Document workspace symbols")
     end -- TODO: someone who knows the builtin versions of these to do instead help me out please.
 
-    nmap("<leader>D", vim.lsp.buf.type_definition, "Type [D]efinition")
+    nmap("<leader>ct", vim.lsp.buf.type_definition, "Type definition")
 
     -- See `:help K` for why this keymap
     nmap("K", vim.lsp.buf.hover, "Hover Documentation")
     nmap("<C-k>", vim.lsp.buf.signature_help, "Signature Documentation")
 
     -- Lesser used LSP functionality
-    nmap("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
-    nmap("<leader>wa", vim.lsp.buf.add_workspace_folder, "[W]orkspace [A]dd Folder")
-    nmap("<leader>wr", vim.lsp.buf.remove_workspace_folder, "[W]orkspace [R]emove Folder")
-    nmap("<leader>wl", function()
+    nmap("gD", vim.lsp.buf.declaration, "Goto declaration")
+    nmap("<leader>cwa", vim.lsp.buf.add_workspace_folder, "Workspace add folder")
+    nmap("<leader>cwd", vim.lsp.buf.remove_workspace_folder, "Workspace remove folder")
+    nmap("<leader>cwl", function()
         print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-    end, "[W]orkspace [L]ist Folders")
+    end, "Workspace list folders")
 
     -- Create a command `:Format` local to the LSP buffer
     vim.api.nvim_buf_create_user_command(bufnr, "Format", function(_)
