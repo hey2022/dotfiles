@@ -150,18 +150,6 @@ require("lze").load({
             require("fidget").setup({})
         end,
     },
-    {
-        "toggleterm.nvim",
-        for_cat = "general.extra",
-        keys = {
-            { [[<c-\>]] },
-        },
-        after = function(_)
-            require("toggleterm").setup({
-                open_mapping = [[<c-\>]],
-            })
-        end,
-    },
     -- {
     --   "hlargs",
     --   for_cat = 'general.extra',
