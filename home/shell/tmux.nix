@@ -4,7 +4,7 @@
   programs = {
     tmux = {
       enable = true;
-      prefix = "C-Space";
+      prefix = "C-a";
       keyMode = "vi";
       escapeTime = 0;
       historyLimit = 10000;
@@ -15,12 +15,7 @@
         open
         pain-control
         resurrect
-        {
-          plugin = vim-tmux-navigator;
-          extraConfig = ''
-            set -g @vim_navigator_mapping_prev ""
-          '';
-        }
+        vim-tmux-navigator
         yank
       ];
       extraConfig = ''
