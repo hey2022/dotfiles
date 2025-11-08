@@ -1,5 +1,3 @@
-{ config, ... }:
-
 {
   programs.topgrade = {
     enable = true;
@@ -10,22 +8,17 @@
           "bun"
           "emacs"
           "git_repos"
+          "home_manager"
           "nix"
+          "nix_helper"
           "system"
           "uv"
         ];
         pre_sudo = true;
       };
-      linux = {
-        home_manager_arguments = [
-          "--flake"
-          "${config.home.dotfiles}"
-          "-b"
-          "backup"
-        ];
-      };
-      pre_commands = {
-        "NixOS upgrade" = "sudo nixos-rebuild switch --flake ${config.home.dotfiles}";
+      commands = {
+        "NixOS switch" = "nh os switch";
+        "Home-Manager switch" = "nh home switch -b backup";
       };
     };
   };
