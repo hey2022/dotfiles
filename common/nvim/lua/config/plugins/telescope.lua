@@ -79,7 +79,7 @@ return {
                     }))
                 end,
                 mode = { "n" },
-                desc = "[/] Fuzzily search in current buffer",
+                desc = "Fuzzily search in current buffer",
             },
             {
                 "<leader>f/",
