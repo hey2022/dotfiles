@@ -327,7 +327,7 @@ require("lze").load({
         event = "DeferredUIEnter",
         keys = {
             {
-                "<leader>S",
+                "<leader>ss",
                 function()
                     require("spectre").toggle()
                 end,
