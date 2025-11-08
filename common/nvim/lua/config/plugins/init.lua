@@ -63,6 +63,7 @@ end
 require("lze").load({
     { import = "config.plugins.ai" },
     { import = "config.plugins.completion" },
+    { import = "config.plugins.hardtime" },
     { import = "config.plugins.latex" },
     { import = "config.plugins.markdown" },
     { import = "config.plugins.neogit" },

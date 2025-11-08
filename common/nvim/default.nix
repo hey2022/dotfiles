@@ -233,20 +233,18 @@ let
             nvim-spectre
           ];
           extra = with pkgs.vimPlugins; [
-            fidget-nvim
             # lualine-lsp-progress
-            which-key-nvim
             comment-nvim
-            undotree
+            fidget-nvim
+            hardtime-nvim
             indent-blankline-nvim
-            vim-startuptime
+            nui-nvim
             persistence-nvim
-            # If it was included in your flake inputs as plugins-hlargs,
-            # this would be how to add that plugin in your config.
-            # pkgs.neovimPlugins.hlargs
+            undotree
+            vim-startuptime
+            which-key-nvim
           ];
-          ai = with pkgs.vimPlugins; [
-          ];
+          ai = with pkgs.vimPlugins; [ ];
         };
       };
 
