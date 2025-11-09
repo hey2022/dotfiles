@@ -27,7 +27,7 @@
         (popup-dictionary.withConfig {
           config = lib.importJSON ./popup-dictionary.json;
         })
-        (fsrs-helper.withConfig {
+        (fsrs4anki-helper.withConfig {
           config = lib.importJSON ./fsrs-helper.json;
         })
         mds-time-left
