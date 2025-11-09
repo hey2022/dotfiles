@@ -9,12 +9,12 @@
 }:
 
 let
-  version = "1.15.3";
+  version = "1.17.0";
   src = fetchFromGitHub {
     owner = "Luc-Mcgrady";
     repo = "Anki-Search-Stats-Extended";
     tag = "v${version}";
-    hash = "sha256-rJLcE93iomIEJi267DiEkVFdHe6jE1efzTOiMlMy8iA=";
+    hash = "sha256-li9ZqQwzX6JCd+txLztDhQSqkXdM0Fk4xpNq1XENyKY=";
     fetchSubmodules = true;
   };
 
