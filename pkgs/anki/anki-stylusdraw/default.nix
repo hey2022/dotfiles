@@ -6,7 +6,7 @@
 }:
 
 anki-utils.buildAnkiAddon (finalAttrs: {
-  pname = "anki-hyper-";
+  pname = "anki-stylusdraw";
   version = "1.2.2";
   src = fetchFromGitHub {
     owner = "Rytisgit";
