@@ -8,6 +8,5 @@
   anki-stylusdraw = callPackage ./anki-stylusdraw { };
   anking-notes-addon = callPackage ./anking-notes-addon { };
   mds-time-left = callPackage ./mds-time-left { };
-  life-drain = callPackage ./life-drain { };
   search-stats-extended = callPackage ./search-stats-extended { };
 }
