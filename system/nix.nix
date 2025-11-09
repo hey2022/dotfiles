@@ -17,7 +17,6 @@
       substituters = [
         "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store?priority=20"
         "https://mirrors.ustc.edu.cn/nix-channels/store?priority=20"
-        "https://mirrors.sjtug.sjtu.edu.cn/nix-channels/store"
         "https://nix-community.cachix.org"
         "https://cache.nixos.org?priority=100"
       ];
