@@ -1,9 +1,5 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}:
+{ lib, ... }:
+
 {
   imports = [
     ../vnc
@@ -15,7 +11,6 @@
   wayvnc.enable = true;
   wayland.windowManager.sway = {
     enable = true;
-    package = config.lib.nixGL.wrap pkgs.sway;
     config = lib.mkForce null;
     extraConfig = builtins.readFile ./config;
   };

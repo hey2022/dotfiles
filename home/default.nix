@@ -11,7 +11,7 @@
     ./dev
     ./font
     ./nix.nix
-    ./nixgl.nix
+    ./non-nixos.nix
     ./profiles
     ./programs
     ./services
