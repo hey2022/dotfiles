@@ -2,7 +2,7 @@
 
 {
   popup-dictionary = callPackage ./popup-dictionary { };
-  fsrs-helper = callPackage ./fsrs-helper { };
+  fsrs4anki-helper = callPackage ./fsrs4anki-helper { };
   ajt-card-management = callPackage ./ajt-card-management { };
   anki-contanki = callPackage ./anki-contanki { };
   anki-hyper-tts = callPackage ./anki-hyper-tts { };
