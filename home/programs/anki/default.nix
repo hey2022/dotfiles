@@ -33,7 +33,6 @@
         mds-time-left
         ajt-card-management
         # anki-contanki
-        anki-hyper-tts
         anking-notes-addon
         anki-stylusdraw
         # (life-drain.withConfig {
