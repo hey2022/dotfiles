@@ -312,12 +312,17 @@ require("lze").load({
             require("which-key").setup({})
             require("which-key").add({
                 { "<leader><leader>", group = "buffer commands" },
-                { "<leader>c", group = "[c]ode" },
-                { "<leader>g", group = "[g]it" },
-                { "<leader>m", group = "[m]arkdown" },
-                { "<leader>s", group = "[s]earch" },
-                { "<leader>t", group = "[t]oggles" },
-                { "<leader>w", group = "[w]orkspace" },
+                { "<leader>F", group = "Format" },
+                { "<leader>c", group = "Code" },
+                { "<leader>f", group = "Find" },
+                { "<leader>g", group = "Git" },
+                { "<leader>m", group = "Markdown" },
+                { "<leader>o", group = "Org" },
+                { "<leader>q", group = "Persistence" },
+                { "<leader>s", group = "Search" },
+                { "<leader>t", group = "Toggles" },
+                { "<leader>w", group = "Workspace" },
+                { "<leader>z", group = "Obsidian" },
             })
         end,
     },
