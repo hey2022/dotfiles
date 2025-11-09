@@ -35,9 +35,6 @@
         # anki-contanki
         anking-notes-addon
         anki-stylusdraw
-        # (life-drain.withConfig {
-        #   config = lib.importJSON ./life-drain.json;
-        # })
         # (search-stats-extended.withConfig {
         #   config = lib.importJSON ./search-stats-extended.json;
         # })
