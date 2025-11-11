@@ -38,6 +38,8 @@ stdenv.mkDerivation (finalAttrs: {
     wrapProgram "$out/bin/${finalAttrs.meta.mainProgram}" \
       --prefix GIO_EXTRA_MODULES : "${glib-networking}/lib/gio/modules"
 
+    ln -s $out/bin/${finalAttrs.meta.mainProgram} $out/bin/but
+
     runHook postInstall
   '';
 
