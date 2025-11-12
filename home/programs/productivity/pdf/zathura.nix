@@ -6,10 +6,12 @@
       useMupdf = true;
     };
     options = {
-      selection-clipboard = "clipboard";
       recolor = false;
       recolor-keephue = true;
       recolor-reverse-video = true;
+      render-loading = false;
+      render-loading-bg = "#FFFFFF";
+      selection-clipboard = "clipboard";
     };
   };
 }
