@@ -1,7 +1,7 @@
 {
   xdg.mimeApps = {
     enable = true;
-    # MIME type: xdg-mime query filetype
+    # MIME type: xdg-mime query filetype <file>
     # desktop files location: ~/.nix-profile/share/applications/
     defaultApplications = {
       "application/json" = "emacsclient.desktop";
