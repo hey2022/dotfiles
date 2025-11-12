@@ -33,8 +33,17 @@ require("lze").load({
             vim.lsp.enable(plugin.name)
         end,
         before = function(_)
-            vim.lsp.config("*", {
-                on_attach = require("config.LSPs.on_attach"),
+            -- BUG: https://github.com/neovim/nvim-lspconfig/issues/3827
+            -- vim.lsp.config("*", {
+            --     on_attach = require("config.LSPs.on_attach"),
+            -- })
+            vim.api.nvim_create_autocmd("LspAttach", {
+                group = vim.api.nvim_create_augroup("LspConfig", { clear = true }),
+                callback = function(args)
+                    local bufnr = args.buf
+                    local client = vim.lsp.get_client_by_id(args.id)
+                    require("config.LSPs.on_attach")(client, bufnr)
+                end,
             })
         end,
     },
