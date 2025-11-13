@@ -236,6 +236,7 @@ let
             # lualine-lsp-progress
             comment-nvim
             fidget-nvim
+            flash-nvim
             hardtime-nvim
             indent-blankline-nvim
             nui-nvim

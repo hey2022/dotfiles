@@ -66,6 +66,7 @@ require("lze").load({
     { import = "config.plugins.hardtime" },
     { import = "config.plugins.latex" },
     { import = "config.plugins.markdown" },
+    { import = "config.plugins.navigation" },
     { import = "config.plugins.neogit" },
     { import = "config.plugins.obsidian" },
     { import = "config.plugins.org-mode" },
