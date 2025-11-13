@@ -31,7 +31,9 @@
           config = lib.importJSON ./fsrs-helper.json;
         })
         mds-time-left
-        ajt-card-management
+        (ajt-card-management.withConfig {
+          config = lib.importJSON ./ajt-card-management.json;
+        })
         # anki-contanki
         anking-notes-addon
         anki-stylusdraw
