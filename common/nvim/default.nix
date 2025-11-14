@@ -220,23 +220,23 @@ let
             telescope-nvim
           ];
           always = with pkgs.vimPlugins; [
-            nvim-lspconfig
-            lualine-nvim
             barbar-nvim
-            gitsigns-nvim
-            neogit
             diffview-nvim
-            vim-sleuth
-            vim-rhubarb
-            nvim-surround
+            flash-nvim
+            gitsigns-nvim
+            lualine-nvim
+            neogit
             nvim-autopairs
+            nvim-lspconfig
             nvim-spectre
+            nvim-surround
+            vim-rhubarb
+            vim-sleuth
           ];
           extra = with pkgs.vimPlugins; [
             # lualine-lsp-progress
             comment-nvim
             fidget-nvim
-            flash-nvim
             hardtime-nvim
             indent-blankline-nvim
             nui-nvim
