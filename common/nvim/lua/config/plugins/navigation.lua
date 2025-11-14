@@ -2,7 +2,6 @@ return {
     {
         "flash.nvim",
         for_cat = "general.always",
-        event = "DeferredUIEnter",
         after = function(_)
             require("flash").setup({
                 modes = {
