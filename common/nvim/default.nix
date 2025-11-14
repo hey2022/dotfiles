@@ -235,6 +235,7 @@ let
           ];
           extra = with pkgs.vimPlugins; [
             # lualine-lsp-progress
+            aerial-nvim
             comment-nvim
             fidget-nvim
             hardtime-nvim
