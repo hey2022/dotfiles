@@ -72,6 +72,7 @@ require("lze").load({
     { import = "config.plugins.obsidian" },
     { import = "config.plugins.org-mode" },
     { import = "config.plugins.quarto" },
+    { import = "config.plugins.rust" },
     { import = "config.plugins.session" },
     { import = "config.plugins.telescope" },
     { import = "config.plugins.treesitter" },

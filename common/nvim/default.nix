@@ -177,6 +177,9 @@ let
               lazydev-nvim
             ];
           };
+          rust = with pkgs.vimPlugins; [
+            rustaceanvim
+          ];
           statistics = with pkgs.vimPlugins; [
             quarto-nvim
             otter-nvim
