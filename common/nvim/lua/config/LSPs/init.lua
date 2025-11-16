@@ -126,13 +126,4 @@ require("lze").load({
             },
         },
     },
-    {
-        "rust_analyzer",
-        for_cat = "languages.rust",
-        lsp = {
-            filetypes = {
-                "rust",
-            },
-        },
-    },
 })
