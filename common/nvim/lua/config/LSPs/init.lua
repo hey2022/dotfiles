@@ -40,8 +40,8 @@ require("lze").load({
             vim.api.nvim_create_autocmd("LspAttach", {
                 group = vim.api.nvim_create_augroup("LspConfig", { clear = true }),
                 callback = function(args)
+                    local client = vim.lsp.get_client_by_id(args.data.client_id)
                     local bufnr = args.buf
-                    local client = vim.lsp.get_client_by_id(args.id)
                     require("config.LSPs.on_attach")(client, bufnr)
                 end,
             })
