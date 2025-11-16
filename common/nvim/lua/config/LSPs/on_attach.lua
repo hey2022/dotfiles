@@ -1,4 +1,4 @@
-return function(_, bufnr)
+return function(client, bufnr)
     -- we create a function that lets us more easily define mappings specific
     -- for LSP related items. It sets the mode, buffer and description for us each time.
 
@@ -34,6 +34,14 @@ return function(_, bufnr)
     end -- TODO: someone who knows the builtin versions of these to do instead help me out please.
 
     nmap("<leader>ct", vim.lsp.buf.type_definition, "Type definition")
+
+    -- Inlay hint
+    if client and client:supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint, bufnr) then
+        nmap("<leader>ch", function()
+            vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = bufnr }), { bufnr = bufnr })
+        end, "Toggle inlay hints")
+        vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+    end
 
     -- See `:help K` for why this keymap
     nmap("K", vim.lsp.buf.hover, "Hover Documentation")
