@@ -1,8 +1,8 @@
 {
-  "learn_shortcut": "Ctrl+L",
-  "again_shortcut": "Ctrl+A",
+  "learn_shortcut": "Ctrl+Shift+L",
+  "again_shortcut": "Ctrl+Shift+A",
   "hard_shortcut": "",
-  "good_shortcut": "Ctrl+Space",
+  "good_shortcut": "Ctrl+Shift+Space",
   "easy_shortcut": "",
   "randomize_card_due": true
 }
