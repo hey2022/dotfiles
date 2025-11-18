@@ -1,9 +1,9 @@
 {
   inputs,
   config,
-  pkgs,
   ...
 }:
+
 {
   imports = [
     ./hardware-configuration.nix
@@ -32,5 +32,8 @@
     gaming.enable = false;
     vm.enable = false;
   };
-  programs.niri.enable = true;
+  programs = {
+    fish.enable = true;
+    niri.enable = true;
+  };
 }

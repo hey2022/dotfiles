@@ -1,8 +1,5 @@
-{
-  config,
-  pkgs,
-  ...
-}:
+{ config, ... }:
+
 {
   imports = [
     ./hardware-configuration.nix
@@ -29,5 +26,8 @@
 
   profiles.gaming.enable = true;
   homelab.enable = true;
-  programs.niri.enable = true;
+  programs = {
+    fish.enable = true;
+    niri.enable = true;
+  };
 }
