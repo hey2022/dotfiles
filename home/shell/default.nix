@@ -3,6 +3,7 @@
   imports = [
     ./aliases.nix
     ./bash.nix
+    ./carapace.nix
     ./direnv.nix
     ./env.nix
     ./fish
@@ -34,7 +35,4 @@
     tree
   ];
 
-  programs = {
-    carapace.enable = true;
-  };
 }

@@ -11,5 +11,8 @@
     entertainment.enable = true;
     gaming.enable = true;
   };
-  programs.niri.enable = true;
+  programs = {
+    fish.enable = true;
+    niri.enable = true;
+  };
 }

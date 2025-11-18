@@ -1,4 +1,3 @@
-{ ... }:
 {
   imports = [
     ../../home
@@ -12,5 +11,8 @@
   profiles = {
     gaming.enable = false;
   };
-  programs.niri.enable = true;
+  programs = {
+    fish.enable = true;
+    niri.enable = true;
+  };
 }
