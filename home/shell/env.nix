@@ -3,7 +3,6 @@
 {
   home = {
     sessionPath = [
-      "$HOME/.config/emacs/bin"
       "$HOME/.cargo/bin"
       "$HOME/.local/bin"
     ];
