@@ -15,17 +15,20 @@ in
     ../../spell
   ];
   config = lib.mkIf cfg.enable {
-    home.packages = with pkgs; [
-      git
-      ripgrep
-      fd
+    home = {
+      packages = with pkgs; [
+        git
+        ripgrep
+        fd
 
-      # copilot-node-server
-      nodejs
+        # copilot-node-server
+        nodejs
 
-      alsa-utils
-      languagetool
-    ];
+        alsa-utils
+        languagetool
+      ];
+      sessionPath = [ "$HOME/.config/emacs/bin" ];
+    };
     programs.emacs = {
       package = emacs;
       extraPackages =
