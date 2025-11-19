@@ -20,6 +20,7 @@
       [
         anki-connect
         anki-quizlet-importer-extended
+        anki-to-pdf
         review-heatmap
         (recolor.withConfig {
           config = lib.importJSON ./recolor.json;
