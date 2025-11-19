@@ -23,23 +23,23 @@
         anki-to-pdf
         review-heatmap
         (recolor.withConfig {
-          config = lib.importJSON ./recolor.json;
+          config = lib.importJSON ./config/recolor.json;
         })
         (popup-dictionary.withConfig {
-          config = lib.importJSON ./popup-dictionary.json;
+          config = lib.importJSON ./config/popup-dictionary.json;
         })
         (fsrs4anki-helper.withConfig {
-          config = lib.importJSON ./fsrs-helper.json;
+          config = lib.importJSON ./config/fsrs-helper.json;
         })
         mds-time-left
         (ajt-card-management.withConfig {
-          config = lib.importJSON ./ajt-card-management.json;
+          config = lib.importJSON ./config/ajt-card-management.json;
         })
         # anki-contanki
         anking-notes-addon
         anki-stylusdraw
         # (search-stats-extended.withConfig {
-        #   config = lib.importJSON ./search-stats-extended.json;
+        #   config = lib.importJSON ./config/search-stats-extended.json;
         # })
       ];
   };
