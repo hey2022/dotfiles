@@ -20,7 +20,9 @@
       [
         anki-connect
         anki-quizlet-importer-extended
-        anki-to-pdf
+        (anki-to-pdf.withConfig {
+          userFiles = ./user-files/anki-to-pdf;
+        })
         review-heatmap
         (recolor.withConfig {
           config = lib.importJSON ./config/recolor.json;
