@@ -4,7 +4,6 @@
   fetchFromGitHub,
   nix-update-script,
   buildNpmPackage,
-  nodejs,
   protobuf,
 }:
 
@@ -18,33 +17,15 @@ let
     fetchSubmodules = true;
   };
 
-  node_modules_drv = buildNpmPackage {
-    pname = "search-stats-node-modules";
+  frontend = buildNpmPackage {
+    pname = "search-stats-assets";
     inherit version src;
     npmDepsHash = "sha256-uzsJUx61O4kqV58pxexJmwrx5e5AB9JQWbVEp5G4B5U=";
-    dontBuild = true;
-    installPhase = ''
-      mkdir -p $out
-      cp -r node_modules $out/
-    '';
-  };
-
-  base = anki-utils.buildAnkiAddon (finalAttrs: {
-    pname = "search-stats-extended";
-    inherit version src;
-
-    nativeBuildInputs = [
-      nodejs
-      protobuf
-    ];
-
+    nativeBuildInputs = [ protobuf ];
     buildPhase = ''
       runHook preBuild
 
-      ln -s ${node_modules_drv}/node_modules node_modules
-
-      export PATH=$PWD/node_modules/.bin:$PATH
-      export NODE_PATH=$PWD/node_modules
+      export PATH="$PWD/node_modules/.bin:$PATH"
 
       mkdir -p src/ts/proto
       protoc \
@@ -61,27 +42,27 @@ let
       runHook postBuild
     '';
 
-    installPrefix = "share/anki/addons/${finalAttrs.pname}";
+    installPhase = ''
+      mkdir -p $out
+      cp stats.min.js stats.min.css $out/
+    '';
+  };
 
-    passthru.updateScript = nix-update-script { };
-
-    meta = {
-      description = "Search Stats Extended";
-      homepage = "https://github.com/Luc-Mcgrady/Anki-Search-Stats-Extended";
-      license = lib.licenses.agpl3Only;
-      maintainers = with lib.maintainers; [ ];
-    };
-  });
 in
-base.overrideAttrs (old: {
-  installPhase = ''
-    runHook preInstall
+anki-utils.buildAnkiAddon (finalAttrs: {
+  pname = "search-stats-extended";
+  inherit version src;
 
-    mkdir -p "$out/$installPrefix/user_files"
-    mkdir -p "$out/$installPrefix/locale"
-    mv __init__.py stats.min.js stats.min.css developers.md manifest.json config.json LICENSE "$out/$installPrefix/"
-    mv locale/*.ftl "$out/$installPrefix/locale/"
+  passthru.updateScript = nix-update-script { };
 
-    runHook postInstall
+  preInstall = ''
+    cp ${frontend}/* .
   '';
+
+  meta = {
+    description = "Search Stats Extended";
+    homepage = "https://github.com/Luc-Mcgrady/Anki-Search-Stats-Extended";
+    license = lib.licenses.agpl3Only;
+    maintainers = with lib.maintainers; [ ];
+  };
 })
