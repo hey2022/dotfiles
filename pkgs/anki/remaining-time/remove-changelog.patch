@@ -1,0 +1,11 @@
+diff --git i/src/utils/openChangelog.py w/src/utils/openChangelog.py
+index e731208..c00557a 100644
+--- i/src/utils/openChangelog.py
++++ w/src/utils/openChangelog.py
+@@ -39,6 +39,3 @@ def showChangelogOnUpdate():
+         if os.path.exists(changelogPath):
+             dlg = MiniBrowser(None, "CHANGELOG.html")
+             dlg.exec()
+-
+-
+-showChangelogOnUpdate()
