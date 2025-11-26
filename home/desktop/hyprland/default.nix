@@ -13,7 +13,6 @@ in
     ../../dev/jq.nix
     ../../programs/music.nix
     ../file-manager/cosmic-files.nix
-    ../vnc
     ../wayland
     ./binds.nix
     ./hypridle.nix
