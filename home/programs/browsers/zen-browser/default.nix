@@ -52,6 +52,8 @@ in
               keepassxc-browser
               languagetool
               libredirect
+              multi-account-containers
+              pwas-for-firefox
               refined-github
               sponsorblock
               tridactyl
@@ -60,7 +62,6 @@ in
               violentmonkey
               yomitan
               zotero-connector
-              pwas-for-firefox
             ];
           }
           (importExtension "redirector")
