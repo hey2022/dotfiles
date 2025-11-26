@@ -2,13 +2,11 @@
 
 {
   imports = [
-    ../vnc
     ./wkill.nix
     ../file-manager/pcmanfm.nix
     ../wayland
   ];
 
-  wayvnc.enable = true;
   wayland.windowManager.sway = {
     enable = true;
     config = lib.mkForce null;
