@@ -7,6 +7,7 @@
     ./niri.nix
     ./regreet.nix
     ./stylix.nix
+    ./sunshine.nix
     ./wluma.nix
     ./ydotool.nix
   ];
