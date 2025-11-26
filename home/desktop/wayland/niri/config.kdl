@@ -243,10 +243,10 @@ animations {
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
 // Block out password managers from screen capture.
-window-rule {
-    match app-id="^org\\.keepassxc\\.KeePassXC$"
-    block-out-from "screen-capture"
-}
+// window-rule {
+//     match app-id="^org\\.keepassxc\\.KeePassXC$"
+//     block-out-from "screen-capture"
+// }
 // Enable rounded corners for all windows.
 window-rule {
     geometry-corner-radius 12
