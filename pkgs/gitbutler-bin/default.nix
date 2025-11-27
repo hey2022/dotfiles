@@ -11,11 +11,11 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "gitbutler-bin";
-  version = "0.17.6";
+  version = "0.18.0";
 
   src = fetchurl {
-    url = "https://releases.gitbutler.com/releases/release/${finalAttrs.version}-2578/linux/x86_64/GitButler_${finalAttrs.version}_amd64.deb";
-    hash = "sha256-pSUGdnmLi6K6EDPCE1PhmVHEZSpbj/U7OpsEILJx4GM=";
+    url = "https://releases.gitbutler.com/releases/release/${finalAttrs.version}-2626/linux/x86_64/GitButler_${finalAttrs.version}_amd64.deb";
+    hash = "sha256-dLvTeKXtoXXRwc0vER2QWFevOdQ+9f/PDGAIFAEQh7Y=";
   };
 
   nativeBuildInputs = [
