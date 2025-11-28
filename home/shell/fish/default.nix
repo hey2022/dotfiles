@@ -15,7 +15,7 @@ in
         fish_vi_key_bindings
 
         if not set -q TMUX
-            exec tmux new-session -A -s main
+            tmux new-session -A -s main
         end
       '';
       shellAliases = {
