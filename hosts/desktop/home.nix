@@ -8,7 +8,6 @@
   home.homeDirectory = "/home/yiheng";
 
   profiles = {
-    entertainment.enable = true;
     gaming.enable = true;
   };
   programs = {
