@@ -41,6 +41,7 @@ in
     home.packages = with pkgs; [
       bun
       flamegraph
+      git-sizer
       hyperfine
       just
       onefetch
