@@ -1,0 +1,9 @@
+{
+  "debug": false,
+  "showAtBottom": true,
+  "autoReset": false,
+  "resetHotkey": "",
+  "runOnMobile": false,
+  "messageFormat": "Elapsed %(elapsedTime),  Remaining %(remainingTime), ETA %(ETA)",
+  "barCSS": ""
+}

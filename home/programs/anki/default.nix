@@ -43,7 +43,9 @@
         # (search-stats-extended.withConfig {
         #   config = lib.importJSON ./config/search-stats-extended.json;
         # })
-        remaining-time
+        (remaining-time.withConfig {
+          config = lib.importJSON ./config/remaining-time.json;
+        })
       ];
   };
   sops = {
