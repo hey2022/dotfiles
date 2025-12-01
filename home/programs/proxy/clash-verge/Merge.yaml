@@ -91,7 +91,7 @@ rule-providers:
     interval: 86400
 
 rules:
-  - DOMAIN-SUFFIX,argotunnel.com,DIRECT
+  - DOMAIN-SUFFIX,argotunnel.com,DIRECT # cloudflared
   - PROCESS-NAME-REGEX,.*qbittorrent.*,DIRECT
 
   # tailscale
