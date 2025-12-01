@@ -99,7 +99,6 @@ rules:
   - IP-CIDR,100.64.0.0/10,DIRECT
 
   - PROCESS-NAME,syncthing,DIRECT
-  - DOMAIN-SUFFIX,comick.pictures,DIRECT
   - RULE-SET,applications,DIRECT
   - RULE-SET,private,DIRECT
   - RULE-SET,reject,REJECT
