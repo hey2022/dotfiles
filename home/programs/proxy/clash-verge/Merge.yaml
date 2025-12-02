@@ -93,6 +93,11 @@ rule-providers:
 rules:
   - DOMAIN-SUFFIX,argotunnel.com,DIRECT
   - PROCESS-NAME-REGEX,.*qbittorrent.*,DIRECT
+
+  # tailscale
+  - PROCESS-NAME-REGEX,.*tailscale.*,DIRECT
+  - IP-CIDR,100.64.0.0/10,DIRECT
+
   - PROCESS-NAME,syncthing,DIRECT
   - DOMAIN-SUFFIX,comick.pictures,DIRECT
   - RULE-SET,applications,DIRECT
