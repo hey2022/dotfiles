@@ -6,7 +6,7 @@ _: {
         (defsrc)
 
         (deflayermap (base-layer)
-          caps (tap-hold-press 200 200 caps lctl))
+          caps (tap-hold-press 200 200 esc lctl))
       '';
       extraDefCfg = ''
         process-unmapped-keys yes
