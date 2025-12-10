@@ -15,6 +15,7 @@
         default = nixCats.packages.${system}.nvim;
         nvim = nixCats.packages.${system}.nvim;
         nnvim = nixCats.packages.${system}.nnvim;
+        ap-dl = pkgs.callPackage ./ap-dl { };
         cliprust = pkgs.callPackage ./cliprust { };
         neovim-anywhere = pkgs.callPackage ./neovim-anywhere { };
         ticktick-cracked = pkgs.callPackage ./ticktick-cracked { };
