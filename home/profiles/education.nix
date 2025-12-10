@@ -15,6 +15,7 @@
   };
   config = lib.mkIf config.profiles.education.enable {
     home.packages = with pkgs; [
+      ap-dl
       inputs.tls-xb.packages.${pkgs.system}.default
       zotero
     ];
