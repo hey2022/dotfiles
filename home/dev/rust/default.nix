@@ -8,7 +8,7 @@
     packages = with pkgs; [
       cargo
       cargo-update
-      mold-wrapped
+      mold
       rust-analyzer
       rustc
       cargo-binstall
