@@ -68,11 +68,14 @@ in
         ];
       search = {
         force = true;
-        default = "SearXNG";
-        privateDefault = "ddg";
+        default = "Brave";
+        privateDefault = "Brave";
         engines = {
           SearXNG = {
             urls = [ { template = "http://localhost:8880/search?q={searchTerms}"; } ];
+          };
+          Brave = {
+            urls = [ { template = "https://search.brave.com/search?q={searchTerms}"; } ];
           };
         };
       };
