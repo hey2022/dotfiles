@@ -39,6 +39,27 @@
         };
       };
     };
+    "he.yiheng@outlook.com" = {
+      realName = "Yiheng He";
+      address = "he.yiheng@outlook.com";
+      userName = "he.yiheng@outlook.com";
+      imap = {
+        host = "outlook.office365.com";
+        port = 993;
+      };
+      smtp = {
+        host = "smtp-mail.outlook.com";
+        port = 587;
+        tls.useStartTls = true;
+      };
+      thunderbird = {
+        enable = true;
+        settings = id: {
+          "mail.smtpserver.smtp_${id}.authMethod" = 10;
+          "mail.server.server_${id}.authMethod" = 10;
+        };
+      };
+    };
   };
   programs.thunderbird = {
     enable = true;
