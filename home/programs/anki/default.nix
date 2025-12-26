@@ -24,9 +24,6 @@
           userFiles = ./user-files/anki-to-pdf;
         })
         review-heatmap
-        (recolor.withConfig {
-          config = lib.importJSON ./config/recolor.json;
-        })
         (popup-dictionary.withConfig {
           config = lib.importJSON ./config/popup-dictionary.json;
         })
