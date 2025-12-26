@@ -56,6 +56,7 @@ in
               pwas-for-firefox
               refined-github
               sponsorblock
+              translate-web-pages
               tridactyl
               ublock-origin
               untrap-for-youtube
