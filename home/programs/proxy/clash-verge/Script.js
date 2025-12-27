@@ -1,7 +1,9 @@
 function main(config) {
-  const group = config["proxy-groups"].map((group) => group.name)[0];
+  const selectedGroup = config["proxy-groups"].reduce((a, b) =>
+    a.proxies.length + 5 >= b.proxies.length ? a : b,
+  ).name;
   config.rules = config.rules.map((rule) =>
-    rule.replace(/,PROXY$/, "," + group),
+    rule.replace(/,PROXY$/, "," + selectedGroup),
   );
   return config;
 }
