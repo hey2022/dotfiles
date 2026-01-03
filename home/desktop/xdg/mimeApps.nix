@@ -7,6 +7,7 @@
       "application/json" = "emacsclient.desktop";
       "application/pdf" = "org.pwmt.zathura.desktop";
       "application/vnd.openxmlformats-officedocument.wordprocessingml.document" = "writer.desktop";
+      "application/application/vnd.oasis.opendocument.text" = "writer.desktop";
       "image/jpeg" = "imv.desktop";
       "image/png" = "imv.desktop";
       "image/webp" = "imv.desktop";
