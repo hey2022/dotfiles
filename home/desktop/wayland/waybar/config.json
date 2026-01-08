@@ -8,11 +8,11 @@
     "niri/window",
     "hyprland/window"
   ],
+  "modules-center": ["clock"],
   "modules-right": [
     "group/hardware",
     "group/controls",
     "group/tray",
-    "clock",
     "custom/notification"
   ],
   "custom/drawer": {
@@ -82,8 +82,8 @@
   },
   "clock": {
     "interval": 1,
-    "format": "{:%H:%M} ",
-    "format-alt": "{:%Y-%m-%d %H:%M:%S} ",
+    "format": "{:%H:%M}",
+    "format-alt": "{:%Y-%m-%d %H:%M:%S}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
       "mode": "month",
