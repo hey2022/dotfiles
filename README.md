@@ -7,6 +7,8 @@ Cooked configs for NixOS and Home-Manager using [flake-parts](https://github.com
 See an overview of the flake outputs by running
 `nix flake show github:hey2022/dotfiles`.
 
+Project documentation can be found [here](./docs/).
+
 ## 🗃️ Contents
 
 - [hosts](./hosts): Host-specific configuration
