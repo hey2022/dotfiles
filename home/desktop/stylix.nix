@@ -10,7 +10,7 @@
   ];
 
   stylix = {
-    iconTheme = {
+    icons = {
       enable = false;
       package = pkgs.papirus-icon-theme;
       dark = "Papirus-Dark";
