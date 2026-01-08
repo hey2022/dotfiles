@@ -2,6 +2,7 @@
   "layer": "top",
   "position": "top",
   "modules-left": [
+    "custom/hostname",
     "niri/workspaces",
     "hyprland/workspaces",
     "niri/window",
@@ -49,6 +50,11 @@
   "hyprland/window": {
     "format": "{class}",
     "separate-outputs": true
+  },
+  "custom/hostname": {
+    "format": "{}",
+    "exec": "hostname",
+    "interval": 60
   },
   "mpris": {
     "format": "{player_icon} {dynamic}",
