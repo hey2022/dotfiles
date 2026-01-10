@@ -4,6 +4,7 @@
   fetchFromGitHub,
   nix-update-script,
   buildNpmPackage,
+  nodejs_22,
 }:
 
 let
@@ -15,12 +16,14 @@ let
     hash = "sha256-bmtpuQakmMg/VnV+5NxUFoiXMkaDw9NZyWDV+ycvGa0=";
   };
 
-  frontend = buildNpmPackage {
+  # HACK: https://github.com/npm/cli/issues/8805 upstream needs to update package-lock.json
+  frontend = buildNpmPackage.override { nodejs = nodejs_22; } {
     pname = "remaining-time-assets";
     inherit version src;
 
     npmDepsHash = "sha256-IM9mvG09LbIjMq+wcIlfpT//KBGgWnDaWI3832Ct1f8=";
     npmFlags = [ "--ignore-scripts" ];
+
     buildPhase = ''
       runHook preBuild
       npm run compile

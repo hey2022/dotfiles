@@ -11,7 +11,6 @@
     ./auto-upgrade.nix
     ./bluetooth.nix
     ./boot
-    ./dev
     ./flatpak.nix
     ./groups.nix
     ./hardware
