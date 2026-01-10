@@ -66,9 +66,10 @@ let
       lspsAndRuntimeDeps = {
         # some categories of stuff.
         general = with pkgs; [
-          universal-ctags
-          ripgrep
           fd
+          ripgrep
+          tree-sitter
+          universal-ctags
           zoxide
         ];
         # these names are arbitrary.
@@ -205,7 +206,7 @@ let
             colorful-menu-nvim
           ];
           treesitter = with pkgs.vimPlugins; [
-            nvim-treesitter-textobjects
+            pkgs.neovimPlugins.nvim-treesitter-textobjects
             nvim-treesitter.withAllGrammars
             # This is for if you only want some of the grammars
             # (nvim-treesitter.withPlugins (

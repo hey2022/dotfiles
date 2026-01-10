@@ -956,6 +956,23 @@
         "type": "github"
       }
     },
+    "plugins-nvim-treesitter-textobjects": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1767434017,
+        "narHash": "sha256-5VeIAW09my+4fqXbzVG7RnLXrjpXAk/g2vd7RbhNws8=",
+        "owner": "nvim-treesitter",
+        "repo": "nvim-treesitter-textobjects",
+        "rev": "28a3494c075ef0f353314f627546537e43c09592",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-treesitter",
+        "ref": "main",
+        "repo": "nvim-treesitter-textobjects",
+        "type": "github"
+      }
+    },
     "reshade-shaders": {
       "flake": false,
       "locked": {
@@ -995,6 +1012,7 @@
         "nixpkgs-stable": "nixpkgs-stable",
         "nur": "nur",
         "plugins-luasnip-latex-snippets-nvim": "plugins-luasnip-latex-snippets-nvim",
+        "plugins-nvim-treesitter-textobjects": "plugins-nvim-treesitter-textobjects",
         "reshade-shaders": "reshade-shaders",
         "sops-nix": "sops-nix",
         "stylix": "stylix",
