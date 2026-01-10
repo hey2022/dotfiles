@@ -68,6 +68,9 @@
         isDefault = true;
       };
     };
+    settings = {
+      "general.useragent.compatMode.firefox" = true;
+    };
   };
   home.packages = [
     pkgs.hydroxide
