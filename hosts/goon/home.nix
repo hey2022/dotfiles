@@ -9,10 +9,11 @@
   host.laptop = true;
 
   profiles = {
-    gaming.enable = false;
+    gaming.enable = true;
   };
   programs = {
     fish.enable = true;
     niri.enable = true;
+    fjord.enable = true;
   };
 }
