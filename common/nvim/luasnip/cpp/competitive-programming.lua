@@ -35,7 +35,7 @@ ls.add_snippets("cpp", {
         )
     ),
     s({ trig = "ll", snippetType = "autosnippet" }, t("long long")),
-    s({ trig = "db", snippetType = "autosnippet" }, t("long double")),
+    s({ trig = "ldb", snippetType = "autosnippet" }, t("long double")),
     s({ trig = "str", snippetType = "autosnippet" }, t("string")),
 
     s({ trig = "pair", snippetType = "autosnippet" }, fmt("pair<{}, {}> {}", { i(1), i(2), i(0) })),
@@ -67,7 +67,7 @@ ls.add_snippets("cpp", {
         )
     ),
     s(
-        { trig = "fore", snippetType = "autosnippet" },
+        { trig = "efor", snippetType = "autosnippet" },
         fmt(
             [[
         for (int {} = {}; {} <= {}; {}++) {{
@@ -89,7 +89,7 @@ ls.add_snippets("cpp", {
         )
     ),
     s(
-        { trig = "rofe", snippetType = "autosnippet" },
+        { trig = "erof", snippetType = "autosnippet" },
         fmt(
             [[
         for (int {} = {}; {} >= {}; --{}) {{
