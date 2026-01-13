@@ -12,7 +12,6 @@ in
   imports = [
     ../../dev/jq.nix
     ../../programs/music.nix
-    ../file-manager/cosmic-files.nix
     ../wayland
     ./binds.nix
     ./hypridle.nix
@@ -39,6 +38,7 @@ in
     };
     home.packages = [
       inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
+      pkgs.cosmic-files
     ]
     ++ lib.optionals cfg.uwsm [ pkgs.uwsm ];
     programs = {
