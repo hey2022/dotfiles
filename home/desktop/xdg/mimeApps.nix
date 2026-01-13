@@ -28,6 +28,10 @@
         "zen-beta.desktop"
         "firefox.desktop"
       ];
+      "inode/directory" = [
+        "thunar.desktop"
+        "com.system76.CosmicFiles.desktop"
+      ];
     };
   };
 }
