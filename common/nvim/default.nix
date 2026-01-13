@@ -89,6 +89,9 @@ let
           statistics = with pkgs; [
             quarto
           ];
+          tex = with pkgs; [
+            tex-fmt
+          ];
           lua = {
             always = with pkgs; [
               lua-language-server
