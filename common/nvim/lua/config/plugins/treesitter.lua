@@ -3,7 +3,7 @@ return {
         "nvim-treesitter",
         for_cat = "general.treesitter",
         lazy = false,
-        -- deps_of = { "render-markdown.nvim", "aerial.nvim" },
+        -- deps_of = { "render-markdown.nvim", "aerial.nvim", "quarto-nvim" },
         after = function(plugin)
             ---@param buf integer
             ---@param language string
