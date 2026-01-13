@@ -86,7 +86,7 @@ let
           rust = with pkgs; [
             rust-analyzer
           ];
-          statistics = with pkgs; [
+          quarto = with pkgs; [
             quarto
           ];
           tex = with pkgs; [
@@ -184,7 +184,7 @@ let
           rust = with pkgs.vimPlugins; [
             rustaceanvim
           ];
-          statistics = with pkgs.vimPlugins; [
+          quarto = with pkgs.vimPlugins; [
             quarto-nvim
             otter-nvim
           ];
@@ -371,8 +371,8 @@ let
               markdown = true;
               nix = true;
               org-mode = true;
+              quarto = true;
               rust = true;
-              statistics = true;
               typst = true;
             };
             lint = true;
