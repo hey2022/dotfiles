@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
+    tex-fmt
     texlive.combined.scheme-medium
     texlab
   ];

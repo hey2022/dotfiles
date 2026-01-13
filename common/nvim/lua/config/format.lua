@@ -19,6 +19,7 @@ require("lze").load({
                     lua = { "stylua" },
                     nix = { "nixfmt" },
                     cpp = { "clang-format" },
+                    tex = { "tex-fmt" },
                     -- go = { "gofmt", "golint" },
                     -- templ = { "templ" },
                     -- Conform will run multiple formatters sequentially
