@@ -30,7 +30,7 @@ in
       };
     };
   };
-  config = {
+  config = lib.mkIf cfg.enable {
     wayland.windowManager.hyprland = {
       systemd.enable = false;
       hy3 = true;
