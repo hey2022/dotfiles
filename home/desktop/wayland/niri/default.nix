@@ -1,4 +1,9 @@
-{ config, lib, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 let
   cfg = config.programs.niri;
@@ -21,5 +26,6 @@ in
       hypridle.enable = true;
       swaync.enable = true;
     };
+    home.packages = with pkgs; [ thunar ];
   };
 }
