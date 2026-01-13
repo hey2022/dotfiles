@@ -15,7 +15,8 @@
     programs = {
       obs-studio.enable = true;
       pandoc.enable = true;
-      zathura.enable = true;
+      sioyek.enable = true;
+      zathura.enable = false;
     };
   };
 }

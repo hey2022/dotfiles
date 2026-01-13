@@ -5,7 +5,10 @@
     # desktop files location: ~/.nix-profile/share/applications/
     defaultApplications = {
       "application/json" = "emacsclient.desktop";
-      "application/pdf" = "org.pwmt.zathura.desktop";
+      "application/pdf" = [
+        "sioyek.desktop"
+        "org.pwmt.zathura.desktop"
+      ];
       "application/vnd.openxmlformats-officedocument.wordprocessingml.document" = "writer.desktop";
       "application/application/vnd.oasis.opendocument.text" = "writer.desktop";
       "image/jpeg" = "imv.desktop";
