@@ -51,6 +51,7 @@ return {
     },
     {
         "nvim-treesitter-textobjects",
+        for_cat = "general.treesitter",
         lazy = false,
         before = function(plugin)
             -- https://github.com/nvim-treesitter/nvim-treesitter-textobjects/tree/main?tab=readme-ov-file#using-a-package-manager
