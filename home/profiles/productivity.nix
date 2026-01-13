@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }:
 {
@@ -18,5 +19,8 @@
       sioyek.enable = true;
       zathura.enable = false;
     };
+    home.packages = with pkgs; [
+      quarto
+    ];
   };
 }
