@@ -3,7 +3,6 @@
   home.packages = with pkgs; [
     tex-fmt
     texlive.combined.scheme-medium
-    texlab
   ];
   home.file.".latexmkrc".text = ''
     $pdf_mode = 4;
