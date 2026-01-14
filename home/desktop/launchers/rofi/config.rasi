@@ -11,8 +11,8 @@ configuration {
   drun-display-format: "{name}";
   window-format: "{w}{c}";
 
-  run-command: "uwsm-app -- {cmd}";
-  recursivebrowser {
-    command: "uwsm-app -- xdg-open";
-  }
+  // run-command: "uwsm-app -- {cmd}";
+  // recursivebrowser {
+  //   command: "uwsm-app -- xdg-open";
+  // }
 }
