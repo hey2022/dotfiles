@@ -13,5 +13,6 @@
   programs = {
     fish.enable = true;
     niri.enable = true;
+    fjord.enable = true;
   };
 }
