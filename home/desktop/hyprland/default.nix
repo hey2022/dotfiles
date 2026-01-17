@@ -50,9 +50,9 @@ in
     };
     services = {
       cliphist.enable = true;
-      gammastep.enable = true;
       hypridle.enable = true;
       swaync.enable = true;
+      wlsunset.enable = true;
     };
   };
 }

@@ -20,7 +20,7 @@
     wezterm.enable = true;
   };
   services = {
-    gammastep.enable = true;
     swaync.enable = true;
+    wlsunset.enable = true;
   };
 }
