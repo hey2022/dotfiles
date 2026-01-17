@@ -1,8 +1,9 @@
-_: {
+{
   services.gammastep = {
     provider = "manual";
-    latitude = 23.021;
-    longitude = 113.752;
+    # Coordinate precision https://xkcd.com/2170/
+    latitude = 23.0;
+    longitude = 113.8;
     settings = {
       general = {
         fade = 1;
