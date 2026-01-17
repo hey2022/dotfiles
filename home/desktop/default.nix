@@ -17,6 +17,7 @@
     ./terminal
     ./udiskie.nix
     ./wallpaper
+    ./wlsunset.nix
     ./wluma.nix
     ./xdg
   ];
