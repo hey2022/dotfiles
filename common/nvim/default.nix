@@ -384,7 +384,7 @@ let
           };
           extra = {
             nixdExtras = {
-              nixpkgs = ''import ${pkgs.path} {}'';
+              nixpkgs = "import ${pkgs.path} {}";
               nixos_options = ''(builtins.getFlake "${builtins.toString inputs.self.outPath}").nixosConfigurations.desktop.options'';
               home_manager_options = ''(builtins.getFlake "${builtins.toString inputs.self.outPath}").homeConfigurations."yiheng@desktop".options'';
             };
@@ -463,7 +463,7 @@ forEachSystem (
         name = defaultPackageName;
         packages = [ defaultPackage ];
         inputsFrom = [ ];
-        shellHook = '''';
+        shellHook = "";
       };
     };
 

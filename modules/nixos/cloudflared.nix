@@ -454,7 +454,7 @@ in
           DynamicUser = true;
         };
 
-        environment.TUNNEL_ORIGIN_CERT = lib.mkIf (certFile != null) ''%d/cert.pem'';
+        environment.TUNNEL_ORIGIN_CERT = lib.mkIf (certFile != null) "%d/cert.pem";
       }
     ) cfg.tunnels;
   };
