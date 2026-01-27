@@ -7,12 +7,12 @@
 
 anki-utils.buildAnkiAddon (finalAttrs: {
   pname = "anki-stylusdraw";
-  version = "1.2.2";
+  version = "1.7";
   src = fetchFromGitHub {
     owner = "Rytisgit";
     repo = "Anki-StylusDraw";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-uYIlpj4vyJc5VIE99bNSGpX96d9K00VLmjfhi7tZhPg=";
+    hash = "sha256-SINHUSVDfUPX5pCZ2qMLiUjUG7CbHLawmlvSY2LPenk=";
     fetchSubmodules = true;
   };
   sourceRoot = "${finalAttrs.src.name}/AnkiDraw";
