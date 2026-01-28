@@ -15,6 +15,7 @@
     ./qt.nix
     ./stylix.nix
     ./terminal
+    ./theme.nix
     ./udiskie.nix
     ./wallpaper
     ./wlsunset.nix
