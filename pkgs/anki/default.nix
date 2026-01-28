@@ -1,7 +1,6 @@
 { callPackage, ... }:
 
 {
-  ajt-card-management = callPackage ./ajt-card-management { };
   anki-contanki = callPackage ./anki-contanki { };
   anki-stylusdraw = callPackage ./anki-stylusdraw { };
   anki-to-pdf = callPackage ./anki-to-pdf { };
