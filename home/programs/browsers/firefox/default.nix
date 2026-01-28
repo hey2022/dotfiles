@@ -39,7 +39,7 @@ in
       userContent = ./userContent.css;
       extensions =
         let
-          importExtension = path: import (./extensions + ("/" + path + ".nix")) { inherit pkgs; };
+          importExtension = path: import path { inherit pkgs; };
         in
         lib.mkMerge [
           {
@@ -53,7 +53,6 @@ in
               multi-account-containers
               pwas-for-firefox
               refined-github
-              sidebery
               sponsorblock
               translate-web-pages
               tridactyl
@@ -64,7 +63,8 @@ in
               zotero-connector
             ];
           }
-          (importExtension "redirector")
+          (importExtension ./extensions/redirector.nix)
+          (importExtension ./extensions/sidebery/default.nix)
         ];
       search = {
         force = true;
