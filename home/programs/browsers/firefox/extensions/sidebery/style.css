@@ -1,0 +1,208 @@
+@media (prefers-color-scheme: dark) {
+  :root {
+    --uc-browser-color: rgb(30, 30, 46);
+    --uc-text: rgb(205, 214, 244);
+    --uc-layered-background: rgb(24, 24, 37);
+    --uc-navbar-background: var(--toolbar-bgcolor);
+    --uc-urlbar-background: rgb(24, 24, 37);
+    --uc-findbar-background: var(--uc-layered-background);
+    --uc-sidebar-background: var(--uc-layered-background);
+    --uc-tabsbar-background: var(--uc-browser-color);
+    --uc-tab-background: transparent;
+    --uc-tab-selected: rgb(17 17 27);
+    --uc-tab-selected-text: var(--uc-accent-color-5);
+    --uc-button-selected: rgb(17 17 27);
+    --uc-button-red: color-mix(in srgb, #f54e4e 30%, var(--uc-accent-color-2));
+    --uc-context-menu: rgb(39, 40, 58);
+    --uc-panel-background: var(--uc-layered-background);
+    --uc-panel-border: rgba(27, 25, 35, 1);
+    --uc-panel-border-2: rgba(70, 70, 80, 0.2);
+    --uc-accent-color-1: rgb(203, 166, 247);
+    --uc-accent-color-2: rgb(137, 180, 250);
+    --uc-accent-color-3: rgb(186, 194, 222);
+    --uc-accent-color-4: rgb(24, 24, 37);
+    --uc-accent-color-5: rgb(166, 227, 161);
+    --uc-accent-color-6: rgb(243, 139, 168);
+    --uc-accent-color-7: rgb(44, 55, 80);
+    --uc-transparent: rgba(0, 0, 0, 0);
+    --uc-box-shadow: 0.15rem 0.3rem 0.3rem -0.1rem rgba(0, 0, 0, 0.4);
+    --uc-box-shadow-panel: 0.15rem 0.3rem 0.3rem -0.1rem rgba(25, 25, 25, 1);
+    --uc-button-border-radius: 10px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  #root.root {
+    --frame-bg: var(--uc-layered-background) !important;
+    --toolbar-bg: var(--uc-layered-background) !important;
+    --frame-fg: var(--uc-text) !important;
+    --toolbar-fg: var(--uc-text) !important;
+  }
+}
+@media (prefers-color-scheme: light) {
+  #root.root {
+    --frame-bg: var(--uc-layered-background) !important;
+    --toolbar-bg: var(--uc-layered-background) !important;
+    --frame-fg: var(--uc-text) !important;
+    --toolbar-fg: var(--uc-text) !important;
+  }
+}
+/* Global (to Sidebery) Styles ---------------------------------*/
+#root.root {
+  --general-margin: 2px !important;
+  --general-border-radius: var(--uc-button-border-radius) !important;
+}
+/* Header Panel ------------------------------------------------*/
+#root.root {
+  --toolbar-scrollbar-color: var(--uc-accent-i) !important;
+  --frame-el-overlay-selected-bg: var(--uc-button-selected) !important;
+  --frame-el-overlay-selected-border: var(--uc-accent-color-1) !important;
+  --frame-el-overlay-hover-bg: var(--uc-button-selected) !important;
+  --frame-scrollbar-color: var(--uc-accent-i) !important;
+  --toolbar-el-overlay-selected-bg: var(--uc-button-selected) !important;
+  --toolbar-el-overlay-hover-bg: var(--uc-button-selected) !important;
+  --toolbar-el-overlay-active-bg: var(--uc-button-selected) !important;
+  --toolbar-el-overlay-active-border: var(--uc-accent-color-1) !important;
+  --nav-btn-fg: var(--uc-text) !important;
+  --nav-btn-accent: color-mix(
+    in srgb,
+    var(--uc-accent-color-5) 40%,
+    black 60%
+  ) !important;
+  --nav-btn-active-shadow: var(--uc-box-shadow) !important;
+}
+.NavigationBar .nav-item .audio {
+  display: none !important;
+}
+@media (max-width: 50px) {
+  .BottomBar {
+    padding-left: 1px !important;
+  }
+  .static-btns {
+    padding-left: 3px !important;
+  }
+}
+/* Pinned Tabs -----------------------------------------------*/
+#root.root {
+  --tabs-pinned-width: 24vw !important;
+  --tabs-pinned-height: 40px !important;
+}
+@media (max-width: 250px) {
+  #root.root {
+    --tabs-pinned-width: 23.5vw !important;
+    --tabs-pinned-height: 40px !important;
+  }
+}
+@media (max-width: 165px) {
+  #root.root {
+    --tabs-pinned-width: 23vw !important;
+    --tabs-pinned-height: 40px !important;
+  }
+}
+@media (max-width: 125px) {
+  #root.root {
+    --tabs-pinned-width: 22vw !important;
+    --tabs-pinned-height: 40px !important;
+  }
+}
+@media (max-width: 84px) {
+  #root.root {
+    --tabs-pinned-width: 20.5vw !important;
+    --tabs-pinned-height: 19px !important;
+  }
+  .PinnedTabsBar .tab-wrapper .fav {
+    transform: scale(0.6) !important;
+  } /* even smaller */
+}
+@media (max-width: 42px) {
+  #root.root {
+    --tabs-pinned-width: 15px !important;
+    --tabs-pinned-height: 19px !important;
+  }
+  .PinnedTabsBar[data-audible] svg.-loud,
+  .PinnedTabsBar[data-muted] svg.-mute {
+    display: none !important;
+  } /* even smaller than smaller */
+}
+/* Tabs ----------------------------------------------------*/
+#root.root {
+  --tabs-normal-fg: var(--uc-text) !important;
+  --tabs-normal-bg: transparent;
+  --tabs-activated-bg: var(--uc-button-selected) !important;
+  --tabs-activated-fg: var(--uc-accent-color-5) !important;
+  --tabs-border-radius: var(--uc-button-border-radius) !important;
+  --tabs-activated-shadow: var(--uc-box-shadow) !important;
+  --tabs-progress-bg: var(--uc-accent-color-5) !important;
+  --tabs-height: 35px !important;
+
+  --tabs-discarded-favicon-opacity: 0.05 !important;
+  --tabs-discarded-title-opacity: 0.15 !important;
+  --tabs-audio-btn-width: 30px !important;
+  --ntb-border-radius: var(--uc-button-border-radius) !important;
+}
+/* center favicon when collapsed */
+.Tab[data-pin="false"] .fav {
+  margin-left: 10px !important;
+}
+/* correct spacing of tab text label */
+.Tab .t-box {
+  margin: 0 10px 0 4px !important;
+}
+/* hide tab text label when collapsed */
+@media screen and (max-width: 50px) {
+  .Tab .t-box {
+    opacity: 0 !important;
+  }
+}
+/* Fix Tabs Tree --------------------------------------------*/
+@media screen and (max-width: 42px) {
+  #root.root {
+    --tabs-indent: unset !important;
+  }
+  .ScrollBox > .scroll-container {
+    overflow: hidden !important;
+  }
+  .Tab .body::after {
+    display: none !important;
+  }
+  .Tab .audio {
+    left: 10px !important;
+    transform: scale(0.8) !important;
+    transform: translateY(6px) translateX(-15px) !important;
+    z-index: 99 !important;
+  }
+  .Tab[data-audible] svg.-loud,
+  .Tab[data-muted] svg.-mute {
+    transform: translateY(0px) translateX(0px) !important;
+  }
+}
+/* Bookmarks ------------------------------------------------*/
+#root.root {
+  --bookmarks-indent: 0px !important;
+}
+/* Popups ---------------------------------------------------*/
+#root.root {
+  --ctx-menu-bg: var(--uc-context-menu) !important;
+  --ctx-menu-fg: var(--uc-text) !important;
+
+  --ctx-menu-padding: 5px !important;
+  --ctx-menu-border-radius: 8px !important;
+  --ctx-menu-text-opt-inner-gap: 5px !important;
+
+  --ctx-menu-separator: var(--uc-layered-background) !important;
+  --ctx-menu-shadow:
+    0 0 0 2px var(--uc-accent-color-1), 0 1px 16px 0 rgba(0, 0, 0, 0.5) !important;
+
+  --popup-bg: var(--uc-context-menu) !important;
+  --popup-fg: var(--uc-text) !important;
+  --popup-scrollbar-color: var(--uc-accent-color-1)
+    --notification-bg: var(--uc-context-menu) !important;
+  --notification-fg: var(--uc-text) !important;
+
+  --btn-border-radius: var(--uc-button-border-radius) !important;
+  --scroll-color: color-mix(
+    in srgb,
+    var(--uc-accent-color-1) 40%,
+    transparent 60%
+  ) !important;
+}
