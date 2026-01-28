@@ -242,6 +242,22 @@
         "type": "github"
       }
     },
+    "ff-ultima": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1768090246,
+        "narHash": "sha256-9nEtNmarNRDlz3nzYJDPQ1zLw4KEzD5I/TQjSoz+foE=",
+        "owner": "soulhotel",
+        "repo": "FF-ULTIMA",
+        "rev": "299811dc2d4ffe898bc3de43d26bff8b9b03e05c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "soulhotel",
+        "repo": "FF-ULTIMA",
+        "type": "github"
+      }
+    },
     "firefox-gnome-theme": {
       "flake": false,
       "locked": {
@@ -997,6 +1013,7 @@
         "catppuccin-zen-browser": "catppuccin-zen-browser",
         "determinate": "determinate",
         "disko": "disko",
+        "ff-ultima": "ff-ultima",
         "firefox-ui-fix": "firefox-ui-fix",
         "fjordlauncher": "fjordlauncher",
         "flake-parts": "flake-parts_3",

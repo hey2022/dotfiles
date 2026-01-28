@@ -80,6 +80,10 @@
       url = "github:yokoffing/Betterfox";
       flake = false;
     };
+    ff-ultima = {
+      url = "github:soulhotel/FF-ULTIMA";
+      flake = false;
+    };
     reshade-shaders = {
       url = "github:crosire/reshade-shaders";
       flake = false;

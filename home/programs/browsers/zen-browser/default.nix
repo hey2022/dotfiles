@@ -14,7 +14,7 @@ in
     ../firefox/extensions
   ];
   programs.zen-browser = {
-    enable = true;
+    enable = false;
     policies = {
       OfferToSaveLogins = false;
     };

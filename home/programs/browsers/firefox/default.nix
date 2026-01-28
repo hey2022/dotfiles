@@ -1,5 +1,6 @@
 {
   inputs,
+  lib,
   pkgs,
   ...
 }:
@@ -9,11 +10,13 @@ in
 {
   imports = [ ./extensions ];
   programs.firefox = {
+    enable = true;
     languagePacks = [
       "en-GB"
       "zh-CN"
     ];
     nativeMessagingHosts = with pkgs; [
+      firefoxpwa
       tridactyl-native
     ];
     profiles.${profile} = {
@@ -22,52 +25,73 @@ in
         "browser.tabs.closeWindowWithLastTab" = false;
         "extensions.autoDisableScopes" = 0;
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+        "ultima.tabs.tabbar.disabled" = true;
+        "sidebar.expandOnHover" = false;
+        "user.theme.0.default" = false;
+        "user.theme.catppuccin-mocha" = true;
       };
-      extraConfig = ''
+      preConfig = ''
         ${builtins.readFile "${inputs.betterfox}/user.js"}
         ${builtins.readFile "${inputs.firefox-ui-fix}/user.js"}
+        ${builtins.readFile "${inputs.ff-ultima}/user.js"}
       '';
       userChrome = ./userChrome.css;
       userContent = ./userContent.css;
-      extensions = {
-        force = true;
-        packages = with pkgs.nur.repos.rycee.firefox-addons; [
-          aw-watcher-web
-          firefox-color
-          keepassxc-browser
-          languagetool
-          libredirect
-          redirector
-          refined-github
-          sidebery
-          sponsorblock
-          stylus
-          tridactyl
-          ublock-origin
-          zotero-connector
+      extensions =
+        let
+          importExtension = path: import (./extensions + ("/" + path + ".nix")) { inherit pkgs; };
+        in
+        lib.mkMerge [
+          {
+            force = true;
+            packages = with pkgs.nur.repos.rycee.firefox-addons; [
+              aw-watcher-web
+              darkreader
+              keepassxc-browser
+              languagetool
+              libredirect
+              multi-account-containers
+              pwas-for-firefox
+              refined-github
+              sidebery
+              sponsorblock
+              translate-web-pages
+              tridactyl
+              ublock-origin
+              untrap-for-youtube
+              violentmonkey
+              yomitan
+              zotero-connector
+            ];
+          }
+          (importExtension "redirector")
         ];
-      };
       search = {
         force = true;
-        default = "Unduck";
-        privateDefault = "Unduck";
+        default = "Brave";
+        privateDefault = "Brave";
         engines = {
-          Unduck = {
-            urls = [ { template = "https://s.dunkirk.sh?q={searchTerms}"; } ];
-            definedAliases = [ "@!" ];
+          SearXNG = {
+            urls = [ { template = "http://localhost:8880/search?q={searchTerms}"; } ];
+          };
+          Brave = {
+            urls = [ { template = "https://search.brave.com/search?q={searchTerms}"; } ];
           };
         };
       };
     };
   };
-  home.file = {
-    ".mozilla/firefox/${profile}/chrome/firefox-ui-fix" = {
-      source = inputs.firefox-ui-fix;
-      recursive = true;
+  home = {
+    file = {
+      ".mozilla/firefox/${profile}/chrome/firefox-ui-fix" = {
+        source = inputs.firefox-ui-fix;
+        recursive = true;
+      };
+      ".mozilla/firefox/${profile}/chrome/ff-ultima" = {
+        source = inputs.ff-ultima;
+        recursive = true;
+      };
     };
-  };
-  stylix.targets.firefox = {
-    profileNames = [ profile ];
-    colorTheme.enable = true;
+    packages = with pkgs; [ firefoxpwa ];
   };
 }
