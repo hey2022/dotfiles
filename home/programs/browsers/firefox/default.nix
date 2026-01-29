@@ -25,6 +25,7 @@ in
         "browser.tabs.closeWindowWithLastTab" = false;
         "extensions.autoDisableScopes" = 0;
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+        "ultima.sidebery.autohide" = false;
         "ultima.tabs.tabbar.disabled" = true;
         "sidebar.expandOnHover" = false;
         "user.theme.0.default" = false;
