@@ -10,6 +10,7 @@
       "fit_to_page_width" = "=";
       "prev_state" = "<C-o>";
       "next_state" = "<C-i>";
+      "goto_toc" = "<tab>";
     };
   };
 }
