@@ -36,4 +36,7 @@
     fish.enable = true;
     niri.enable = true;
   };
+  services = {
+    thinkfan.enable = true;
+  };
 }
