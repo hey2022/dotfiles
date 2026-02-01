@@ -41,17 +41,17 @@
         [
           "level auto"
           0
-          60
+          70
         ]
         [
           7
-          60
-          70
+          65
+          80
         ]
         [
           "level full-speed"
-          70
-          80
+          75
+          85
         ]
         [
           "level disengaged"
