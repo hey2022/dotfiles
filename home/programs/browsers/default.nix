@@ -2,6 +2,5 @@
 {
   imports = [
     ./firefox
-    ./zen-browser
   ];
 }

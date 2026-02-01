@@ -67,11 +67,6 @@
       url = "github:unmojang/FjordLauncher";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    zen-browser = {
-      url = "github:0xc000022070/zen-browser-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
-    };
     firefox-ui-fix = {
       url = "github:black7375/Firefox-UI-Fix";
       flake = false;
@@ -86,10 +81,6 @@
     };
     reshade-shaders = {
       url = "github:crosire/reshade-shaders";
-      flake = false;
-    };
-    catppuccin-zen-browser = {
-      url = "github:catppuccin/zen-browser";
       flake = false;
     };
     plugins-luasnip-latex-snippets-nvim = {
