@@ -59,7 +59,7 @@ ls.add_snippets("cpp", {
         { trig = "for", snippetType = "autosnippet" },
         fmt(
             [[
-        for (int {} = {}; {} < {}; {}++) {{
+        for (int {} = {}; {} < {}; ++{}) {{
             {}
         }}
     ]],
@@ -70,7 +70,7 @@ ls.add_snippets("cpp", {
         { trig = "efor", snippetType = "autosnippet" },
         fmt(
             [[
-        for (int {} = {}; {} <= {}; {}++) {{
+        for (int {} = {}; {} <= {}; ++{}) {{
             {}
         }}
     ]],
