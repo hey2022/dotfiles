@@ -288,16 +288,16 @@ binds {
         spawn-sh "neovim-anywhere tex"
     }
     Mod+Space hotkey-overlay-title="Run an Application: rofi" {
-        spawn "rofi" "-show" "drun"
+        spawn-sh "pkill rofi || rofi -show drun"
     }
     Mod+Shift+Space hotkey-overlay-title="Execute a command: rofi" {
-        spawn "rofi" "-show" "run"
+        spawn-sh "pkill rofi || rofi -show run"
     }
     Mod+Ctrl+Space hotkey-overlay-title="Open file" {
-        spawn "rofi" "-show" "recursivebrowser"
+        spawn-sh "pkill rofi || rofi -show recursivebrowser"
     }
     Mod+Alt+Space hotkey-overlay-title="Calcuate: rofi" {
-        spawn "sh" "-c" "rofi -show calc -modi calc -no-show-match -no-sort -no-history -calc-command \"echo -n '{result}' | wl-copy\""
+        spawn-sh "pkill rofi || rofi -show calc -modi calc -no-show-match -no-sort -no-history -calc-command \"echo -n '{result}' | wl-copy\""
     }
     Mod+Shift+Escape hotkey-overlay-title="Lock the Screen: hyprlock" {
         spawn "hyprlock" "--immediate"
