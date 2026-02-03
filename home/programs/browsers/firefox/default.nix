@@ -55,7 +55,6 @@ in
               translate-web-pages
               tridactyl
               ublock-origin
-              untrap-for-youtube
               violentmonkey
               yomitan
               zotero-connector
