@@ -16,7 +16,6 @@ in
       "zh-CN"
     ];
     nativeMessagingHosts = with pkgs; [
-      firefoxpwa
       tridactyl-native
     ];
     profiles.${profile} = {
@@ -52,7 +51,6 @@ in
               languagetool
               libredirect
               multi-account-containers
-              pwas-for-firefox
               refined-github
               sponsorblock
               translate-web-pages
@@ -93,6 +91,5 @@ in
         recursive = true;
       };
     };
-    packages = with pkgs; [ firefoxpwa ];
   };
 }
