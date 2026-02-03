@@ -19,7 +19,6 @@ in
       OfferToSaveLogins = false;
     };
     nativeMessagingHosts = with pkgs; [
-      firefoxpwa
       tridactyl-native
     ];
     languagePacks = [
@@ -53,7 +52,6 @@ in
               languagetool
               libredirect
               multi-account-containers
-              pwas-for-firefox
               refined-github
               sponsorblock
               translate-web-pages
@@ -87,6 +85,5 @@ in
       ".zen/${profile}/chrome/catppuccin".source =
         "${inputs.catppuccin-zen-browser}/themes/Mocha/Lavender";
     };
-    packages = with pkgs; [ firefoxpwa ];
   };
 }
