@@ -50,7 +50,6 @@ in
               darkreader
               keepassxc-browser
               languagetool
-              libredirect
               multi-account-containers
               refined-github
               sponsorblock
