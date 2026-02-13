@@ -2,6 +2,6 @@ import Quickshell
 
 ShellRoot {
     ReloadPopup {}
-    Flowtime {}
+    // Flowtime {}
     // VolumeOSD {}
 }
