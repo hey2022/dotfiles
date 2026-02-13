@@ -49,7 +49,6 @@ in
               darkreader
               keepassxc-browser
               languagetool
-              libredirect
               refined-github
               sponsorblock
               translate-web-pages
