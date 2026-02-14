@@ -27,7 +27,6 @@ return {
         on_require = "luasnip",
         after = function(_)
             local luasnip = require("luasnip")
-            require("luasnip.loaders.from_vscode").lazy_load()
             require("luasnip.loaders.from_lua").lazy_load({ paths = nixCats.configDir .. "/luasnip" })
             luasnip.config.setup({
                 enable_autosnippets = true,
@@ -62,7 +61,7 @@ return {
     {
         "blink.cmp",
         for_cat = "general.blink",
-        event = "DeferredUIEnter",
+        event = "InsertEnter",
         on_require = "blink.cmp",
         after = function(_)
             require("blink.cmp").setup({
