@@ -370,7 +370,7 @@ let
               lua = true;
               markdown = true;
               nix = true;
-              org-mode = true;
+              org-mode = false;
               quarto = true;
               rust = true;
               typst = true;

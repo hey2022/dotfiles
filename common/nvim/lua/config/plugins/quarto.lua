@@ -9,6 +9,6 @@ return {
     },
     {
         "otter.nvim",
-        deps_of = { "quarto-nvim" },
+        on_plugin = { "quarto-nvim" },
     },
 }

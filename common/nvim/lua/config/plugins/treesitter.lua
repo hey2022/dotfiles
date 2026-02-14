@@ -2,7 +2,7 @@ return {
     {
         "nvim-treesitter",
         for_cat = "general.treesitter",
-        lazy = false,
+        event = { "BufReadPost", "BufNewFile" },
         -- deps_of = { "render-markdown.nvim", "aerial.nvim", "quarto-nvim" },
         after = function(plugin)
             ---@param buf integer
@@ -52,7 +52,7 @@ return {
     {
         "nvim-treesitter-textobjects",
         for_cat = "general.treesitter",
-        lazy = false,
+        deps_of = "nvim-treesitter",
         before = function(plugin)
             -- https://github.com/nvim-treesitter/nvim-treesitter-textobjects/tree/main?tab=readme-ov-file#using-a-package-manager
             -- Disable entire built-in ftplugin mappings to avoid conflicts.
