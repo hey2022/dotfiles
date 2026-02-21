@@ -83,6 +83,9 @@ output "eDP-1" {
 // automatically.
 //position x=1280 y=0
 }
+output "PNP(YCT) Sculptor 0000" {
+    mode "2560x1600@119.998"
+}
 workspace "1"
 workspace "2"
 workspace "3"
