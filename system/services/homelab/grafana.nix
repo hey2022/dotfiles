@@ -9,6 +9,7 @@ in
       server.http_port = 9191;
       security = {
         allow_embedding = true;
+        secret_key = "$__file{${config.sops.secrets."grafana".path}}";
       };
     };
     provision = {
@@ -25,4 +26,5 @@ in
   homelab.services.grafana = {
     port = cfg.settings.server.http_port;
   };
+  sops.secrets."grafana" = { };
 }
