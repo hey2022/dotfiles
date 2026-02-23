@@ -58,7 +58,7 @@ input {
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
 // Remember to uncomment the node by removing "/-"!
 output "eDP-1" {
-    // Uncomment this line to disable this output.
+ // Uncomment this line to disable this output.
     // off
     // Resolution and, optionally, refresh rate of the output.
     // The format is "<width>x<height>" or "<width>x<height>@<refresh rate>".
@@ -68,7 +68,7 @@ output "eDP-1" {
     // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
     // mode "1920x1080@120.030"
     // You can use integer or fractional scale, for example use 1.5 for 150% scale.
-    scale 1
+    // scale 1
  // Transform allows to rotate the output counter-clockwise, valid values are:
 // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
 // transform "normal"
@@ -82,6 +82,7 @@ output "eDP-1" {
 // If the position is unset or results in an overlap, the output is instead placed
 // automatically.
 //position x=1280 y=0
+
 }
 output "PNP(YCT) Sculptor 0000" {
     mode "2560x1600@119.998"
