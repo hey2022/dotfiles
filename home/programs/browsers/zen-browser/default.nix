@@ -48,8 +48,8 @@ in
             packages = with pkgs.nur.repos.rycee.firefox-addons; [
               aw-watcher-web
               darkreader
+              grammarly
               keepassxc-browser
-              languagetool
               multi-account-containers
               refined-github
               sponsorblock
