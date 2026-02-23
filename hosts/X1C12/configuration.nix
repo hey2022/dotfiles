@@ -24,6 +24,13 @@
     "/.swapvol".options = [ "noatime" ];
   };
 
+  swapDevices = [
+    {
+      device = "/.swapvol/swapfile";
+      size = 64 * 1024;
+    }
+  ];
+
   users.users.yiheng = {
     isNormalUser = true;
     extraGroups = config.users.baseGroups;
