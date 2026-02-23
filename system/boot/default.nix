@@ -1,5 +1,6 @@
 { pkgs, ... }:
 {
+  imports = [ ./swap.nix ];
   boot = {
     loader = {
       systemd-boot.enable = true;
@@ -8,7 +9,6 @@
     kernelPackages = pkgs.linuxPackages_latest;
     kernel.sysctl = {
       "kernel.sysrq" = 1;
-      "vm.swappiness" = 10;
     };
     supportedFilesystems = [
       "ntfs"
