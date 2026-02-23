@@ -6,6 +6,7 @@
   ];
   home.username = "yiheng";
   home.homeDirectory = "/home/yiheng";
+  home.stateVersion = "25.05";
 
   profiles = {
     gaming.enable = true;

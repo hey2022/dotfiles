@@ -48,7 +48,6 @@
     };
   };
   config = {
-    system.stateVersion = "25.05";
     _module.args.pkgs-stable = import inputs.nixpkgs-stable {
       inherit (pkgs.stdenv.hostPlatform) system;
       inherit (config.nixpkgs) config;
