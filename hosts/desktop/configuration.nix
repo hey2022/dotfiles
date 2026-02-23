@@ -16,6 +16,7 @@
 
   host.address = "hey2022.dev";
   time.timeZone = "Asia/Shanghai";
+  system.stateVersion = "25.05";
 
   users.users.yiheng = {
     isNormalUser = true;
