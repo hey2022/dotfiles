@@ -12,7 +12,6 @@
 
     ../../system
     ../../system/desktop
-    ../../system/desktop/hyprland.nix
     ../../system/network/mac-spoof.nix
   ];
 
