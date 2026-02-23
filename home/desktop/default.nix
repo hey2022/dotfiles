@@ -18,6 +18,7 @@
     ./theme.nix
     ./udiskie.nix
     ./wallpaper
+    ./wayland
     ./wlsunset.nix
     ./wluma.nix
     ./xdg
