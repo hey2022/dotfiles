@@ -10,7 +10,6 @@
           "git_repos"
           "home_manager"
           "nix"
-          "nix_helper"
           "system"
           "uv"
         ];
