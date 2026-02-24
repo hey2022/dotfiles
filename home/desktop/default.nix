@@ -19,8 +19,6 @@
     ./udiskie.nix
     ./wallpaper
     ./wayland
-    ./wlsunset.nix
-    ./wluma.nix
     ./xdg
   ];
   home.packages = with pkgs; [

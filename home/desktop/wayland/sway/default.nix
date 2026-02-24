@@ -4,7 +4,6 @@
   imports = [
     ./wkill.nix
     ../file-manager/pcmanfm.nix
-    ../wayland
   ];
 
   wayland.windowManager.sway = {
