@@ -10,6 +10,7 @@
     ./encryption.nix
     ./games
     ./media
+    ./music.nix
     ./pandoc.nix
     ./productivity
     ./proxy

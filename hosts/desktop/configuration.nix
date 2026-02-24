@@ -6,9 +6,7 @@
     ./sops.nix
     ./cloudflared.nix
     ../../system
-    ../../system/desktop/hyprland.nix
     ../../system/desktop
-    ../../system/desktop/hyprland.nix
     ../../system/services/homelab
   ];
 

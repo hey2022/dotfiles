@@ -10,9 +10,6 @@ let
 in
 {
   imports = [
-    ../../dev/jq.nix
-    ../../programs/music.nix
-    ../wayland
     ./binds.nix
     ./hypridle.nix
     ./hyprlock
