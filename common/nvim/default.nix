@@ -343,7 +343,7 @@ let
   packageDefinitions =
     let
       nvim =
-        { pkgs, ... }@misc:
+        { pkgs, ... }:
         {
           settings = {
             suffix-path = true;
@@ -391,19 +391,30 @@ let
           };
         };
       nnvim =
-        { pkgs, ... }@misc:
+        { ... }@args:
         let
-          base = nvim misc;
+          config = nvim args;
         in
-        base
+        config
         // {
-          settings = base.settings // {
+          settings = config.settings // {
             wrapRc = false;
+          };
+        };
+      nvim-min =
+        { ... }@args:
+        let
+          config = nvim args;
+        in
+        config
+        // {
+          categories = config.categories // {
+            languages = { };
           };
         };
     in
     {
-      inherit nvim nnvim;
+      inherit nvim nnvim nvim-min;
     };
 
   defaultPackageName = "nvim";
