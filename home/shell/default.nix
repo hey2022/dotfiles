@@ -21,6 +21,7 @@
     bat
     btop
     choose
+    dua
     duf
     dust
     eza
