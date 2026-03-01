@@ -25,6 +25,5 @@
     extraOptions = ''
       !include ${config.sops.secrets.nix-access-tokens.path}
     '';
-    gc.dates = "03:15";
   };
 }
