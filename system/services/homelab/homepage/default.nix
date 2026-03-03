@@ -31,7 +31,7 @@ in
   services.homepage-dashboard = {
     inherit package;
     enable = true;
-    environmentFile = config.sops.secrets.homepage.path;
+    environmentFiles = [ config.sops.secrets.homepage.path ];
     allowedHosts = "localhost:8082,127.0.0.1:8082,homepage.${config.host.address}";
     settings = {
       theme = "dark";
