@@ -26,5 +26,7 @@ in
   homelab.services.grafana = {
     port = cfg.settings.server.http_port;
   };
-  sops.secrets."grafana" = { };
+  sops.secrets."grafana" = {
+    owner = "grafana";
+  };
 }
