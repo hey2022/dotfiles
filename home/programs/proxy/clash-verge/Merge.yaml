@@ -94,6 +94,7 @@ rules:
   - DOMAIN-SUFFIX,argotunnel.com,DIRECT # cloudflared
   - PROCESS-NAME-REGEX,.*qbittorrent.*,DIRECT
   - IP-CIDR,4.3.2.1/32,DIRECT
+  - DOMAIN,nixpkgs-tracker.ocfox.me,DIRECT
 
   # tailscale
   - PROCESS-NAME-REGEX,.*tailscale.*,DIRECT
