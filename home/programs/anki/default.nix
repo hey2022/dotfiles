@@ -9,7 +9,7 @@
   programs.anki = {
     enable = true;
     theme = "dark";
-    sync = {
+    profiles."User 1".sync = {
       usernameFile = config.sops.secrets."anki/username".path;
       keyFile = config.sops.secrets."anki/key".path;
       autoSync = true;
