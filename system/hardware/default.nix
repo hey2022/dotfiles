@@ -1,7 +1,7 @@
-{ ... }:
+{ pkgs, ... }:
 {
   imports = [
-    ./fan.nix
     ./logitech.nix
   ];
+  environment.systemPackages = [ pkgs.lm_sensors ];
 }
