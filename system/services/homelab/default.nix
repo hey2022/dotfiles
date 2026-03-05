@@ -24,6 +24,7 @@
       };
       jellyseerr.enable = true;
       qbittorrent.enable = true;
+      calibre-web.enable = true;
     };
   };
 }
