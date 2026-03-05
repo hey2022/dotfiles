@@ -8,6 +8,7 @@ let
     {
       name,
       serviceName ? name,
+      type ? name,
       icon ? "${name}.svg",
       url ? "https://${name}.${config.host.address}",
       widget ? null,
@@ -23,7 +24,7 @@ let
       }
       // lib.optionalAttrs (widget != null) {
         widget = widget // {
-          type = name;
+          inherit type;
           url = "http://localhost:${toString config.homelab.services.${name}.port}";
         };
       }
@@ -130,6 +131,14 @@ in
         widget = {
           username = "admin";
           password = "{{HOMEPAGE_VAR_SUWAYOMI}}";
+        };
+      };
+      calibre-web = mkService {
+        name = "calibre-web";
+        type = "calibreweb";
+        widget = {
+          username = "admin";
+          password = "{{HOMEPAGE_VAR_CALIBREWEB}}";
         };
       };
     };

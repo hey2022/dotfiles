@@ -3,6 +3,7 @@
 {
   imports = [
     ./bazarr.nix
+    ./calibre.nix
     ./jellyfin.nix
     ./jellyseer.nix
     ./navidrome.nix
@@ -21,6 +22,7 @@
         "movies/other"
         "music"
         "downloads"
+        "library"
       ];
     in
     ''
