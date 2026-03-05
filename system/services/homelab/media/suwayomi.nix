@@ -27,8 +27,5 @@ in
     sops.secrets.suwayomi-password = {
       owner = cfg.user;
     };
-    systemd.tmpfiles.rules = [
-      "d ${config.homelab.mediaDir}/manga 775 root media - -"
-    ];
   };
 }
