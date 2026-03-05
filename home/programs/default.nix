@@ -5,7 +5,6 @@
     ./anki
     ./browsers
     ./cli
-    ./dictionary.nix
     ./email.nix
     ./encryption.nix
     ./games
