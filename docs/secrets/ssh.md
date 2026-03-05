@@ -6,7 +6,7 @@
 
 ## Backup private key
 
-In KeePassXC, backup `~/.ssh/id_ed25519` with an attachment not an external file
+In KeePassXC, backup `~/.ssh/id_ed25519` as an attachment but set the agent to external file
 
 ## Upload public key
 
