@@ -1,4 +1,4 @@
-_: {
+{
   services.prometheus = {
     enable = true;
     globalConfig.scrape_interval = "15s";
@@ -10,6 +10,7 @@ _: {
             targets = [
               "desktop.taila6842.ts.net:9100"
               "goon.taila6842.ts.net:9100"
+              "x1c12.taila6842.ts.net:9100"
             ];
           }
         ];
