@@ -141,6 +141,13 @@ in
           password = "{{HOMEPAGE_VAR_CALIBREWEB}}";
         };
       };
+      immich = mkService {
+        name = "immich";
+        widget = {
+          key = "{{HOMEPAGE_VAR_IMMICH}}";
+          version = 2;
+        };
+      };
     };
     AI = {
       open-webui = mkService {
