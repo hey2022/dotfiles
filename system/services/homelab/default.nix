@@ -22,9 +22,10 @@
         master.enable = true;
         worker.enable = true;
       };
+      calibre-web.enable = true;
+      immich.enable = true;
       jellyseerr.enable = true;
       qbittorrent.enable = true;
-      calibre-web.enable = true;
     };
   };
 }

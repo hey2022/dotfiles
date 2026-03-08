@@ -2,6 +2,7 @@
   imports = [
     ./bazarr.nix
     ./calibre.nix
+    ./immich.nix
     ./jellyfin.nix
     ./jellyseer.nix
     ./navidrome.nix

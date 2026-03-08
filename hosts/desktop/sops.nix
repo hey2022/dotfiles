@@ -6,6 +6,10 @@
         sopsFile = ../../secrets/root/desktop/homepage.env;
         format = "dotenv";
       };
+      immich = {
+        sopsFile = ../../secrets/root/desktop/immich.env;
+        format = "dotenv";
+      };
     };
   };
 }
