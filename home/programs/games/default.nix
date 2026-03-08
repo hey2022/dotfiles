@@ -18,7 +18,7 @@
       goverlay
       mindustry-wayland
       steam
-      superTuxKart
+      supertuxkart
     ];
   };
 }
