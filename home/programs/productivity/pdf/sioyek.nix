@@ -12,6 +12,7 @@
       "next_state" = "<C-i>";
       "goto_toc" = "<tab>";
       "change_highlight" = "ch";
+      "close_window" = "q";
     };
   };
 }
