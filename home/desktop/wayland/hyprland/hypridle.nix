@@ -24,7 +24,7 @@
         }
         (lib.mkIf config.host.laptop {
           timeout = 900;
-          on-timeout = "systemctl suspend";
+          on-timeout = "systemctl sleep";
         })
       ];
     };
