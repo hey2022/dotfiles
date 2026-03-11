@@ -16,9 +16,11 @@ require("lze").load({
                 formatters_by_ft = {
                     -- NOTE: download some formatters in lspsAndRuntimeDeps
                     -- and configure them here
+                    cpp = { "clang-format" },
+                    css = { "prettier" },
+                    json = { "prettier" },
                     lua = { "stylua" },
                     nix = { "nixfmt" },
-                    cpp = { "clang-format" },
                     tex = { "tex-fmt" },
                     -- go = { "gofmt", "golint" },
                     -- templ = { "templ" },

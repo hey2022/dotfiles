@@ -79,6 +79,7 @@ let
         # per nvim package you export
         debug = with pkgs; {
         };
+        format = with pkgs; [ prettier ];
         languages = {
           cpp = with pkgs; [
             clang-tools
