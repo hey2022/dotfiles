@@ -19,7 +19,6 @@
       with pkgs.ankiAddons;
       [
         anki-connect
-        anki-quizlet-importer-extended
         (anki-to-pdf.withConfig {
           userFiles = ./user-files/anki-to-pdf;
         })
