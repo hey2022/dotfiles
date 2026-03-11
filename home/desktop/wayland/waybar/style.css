@@ -18,19 +18,19 @@
 
 #clock,
 #controls,
-#custom-hostname,
 #custom-notification,
 #hardware,
 #mpris,
 #tray,
 #window,
-#workspaces {
+#workspace-group {
   background-color: @surface0;
   margin: 0 5px;
   padding: 0 0.75rem;
   border-radius: 1rem;
 }
 
+#workspace-group #custom-hostname,
 #controls *,
 #hardware * {
   padding: 0 0.5rem;

@@ -1,13 +1,7 @@
 {
   "layer": "top",
   "position": "top",
-  "modules-left": [
-    "custom/hostname",
-    "niri/workspaces",
-    "hyprland/workspaces",
-    "niri/window",
-    "hyprland/window"
-  ],
+  "modules-left": ["group/workspace-group", "niri/window", "hyprland/window"],
   "modules-center": ["clock"],
   "modules-right": [
     "group/hardware",
@@ -18,6 +12,10 @@
   "custom/drawer": {
     "tooltip": false,
     "format": ""
+  },
+  "group/workspace-group": {
+    "orientation": "inherit",
+    "modules": ["custom/hostname", "niri/workspaces", "hyprland/workspaces"]
   },
   "group/controls": {
     "orientation": "inherit",
