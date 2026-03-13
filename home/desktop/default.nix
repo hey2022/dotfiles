@@ -1,4 +1,3 @@
-# TODO: add quickshell widgets
 { pkgs, ... }:
 {
   imports = [

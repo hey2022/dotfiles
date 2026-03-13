@@ -1,5 +1,3 @@
-<!-- TODO: finish README -->
-
 <h1 align="center">hey2022/dotfiles</h1>
 
 Cooked configs for NixOS and Home-Manager using [flake-parts](https://github.com/hercules-ci/flake-parts).
