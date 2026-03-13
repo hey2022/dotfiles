@@ -18,9 +18,6 @@ in
     policies = {
       OfferToSaveLogins = false;
     };
-    nativeMessagingHosts = with pkgs; [
-      tridactyl-native
-    ];
     languagePacks = [
       "en-GB"
       "zh-CN"

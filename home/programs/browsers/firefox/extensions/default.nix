@@ -1,7 +1,6 @@
 { ... }:
 {
   imports = [
-    ./tridactyl
     ./ublock-origin
   ];
 }
