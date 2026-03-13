@@ -15,9 +15,6 @@ in
       "en-GB"
       "zh-CN"
     ];
-    nativeMessagingHosts = with pkgs; [
-      tridactyl-native
-    ];
     profiles.${profile} = {
       isDefault = true;
       settings = {
@@ -52,7 +49,6 @@ in
               refined-github
               sponsorblock
               translate-web-pages
-              tridactyl
               ublock-origin
               violentmonkey
               yomitan
