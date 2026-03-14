@@ -1,2 +1,16 @@
 @import url("firefox-ui-fix/userContent.css");
 @import url("ff-ultima/userContent.css");
+
+/* I have no idea why this doesn't work when I move this to another file, but I have already spent hours trying to no avail */
+@-moz-document url("about:home"),url("about:blank"),url("about:newtab") {
+  :root {
+    --newtab-background-color: #1e1e2e !important;
+    --newtab-background-color-secondary: #1e1e2e !important;
+  }
+}
+
+@-moz-document url(about:privatebrowsing) {
+  html.private {
+    background-color: #1e1e2e !important;
+  }
+}
