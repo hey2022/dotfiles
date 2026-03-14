@@ -7,13 +7,15 @@
     {
       treefmt = {
         projectRootFile = "flake.nix";
+        settings = {
+          excludes = [
+            "secrets/*" # handled by sops
+          ];
+        };
         programs = {
           nixfmt.enable = true;
           prettier = {
             enable = true;
-            excludes = [
-              "secrets/*" # handled by sops
-            ];
           };
           shellcheck.enable = true;
           taplo.enable = true;
