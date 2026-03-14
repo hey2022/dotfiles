@@ -10,6 +10,7 @@
         sopsFile = ../../secrets/root/desktop/immich.env;
         format = "dotenv";
       };
+      "mihomo/controller-secret" = { };
     };
   };
 }

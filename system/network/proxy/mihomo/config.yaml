@@ -1,0 +1,208 @@
+# https://wiki.metacubex.one/en/config
+mixed-port: 7897
+unified-delay: true
+tcp-concurrent: true
+external-controller: 0.0.0.0:9097
+secret: "{{controller-secret}}"
+external-controller-cors:
+  allow-private-network: true
+  allow-origins:
+    - http://localhost
+    - http://127.0.0.1
+    - tauri://localhost
+    - http://tauri.localhost
+    - https://yacd.metacubex.one
+    - https://metacubex.github.io
+    - https://board.zash.run.place
+tun:
+  enable: true
+  stack: gvisor
+  auto-detect-interface: true
+  auto-redirect: true
+  auto-route: true
+  dns-hijack:
+    - any:53
+    - "tcp://any:53"
+dns:
+  enable: true
+  listen: :53
+  ipv6: true
+  prefer-h3: true
+  respect-rules: false # Strongly not recommended to use it with prefer-h3.
+  default-nameserver:
+    - system
+    - 223.6.6.6
+    - 8.8.8.8
+    - 2400:3200::1
+    - 2001:4860:4860::8888
+  nameserver:
+    - 8.8.8.8
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  direct-nameserver: []
+  direct-nameserver-follow-policy: false
+  enhanced-mode: fake-ip
+  fake-ip-filter-mode: blacklist
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.local"
+    - "*.arpa"
+    - time.*.com
+    - ntp.*.com
+    - time.*.com
+    - +.market.xiaomi.com
+    - localhost.ptlogin2.qq.com
+    - "*.msftncsi.com"
+    - www.msftconnecttest.com
+  fallback: []
+  fallback-filter:
+    domain:
+      - +.google.com
+      - +.youtube.com
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+  proxy-server-nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+    - tls://223.5.5.5
+sniffer:
+  enable: true
+  sniff:
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+    TLS:
+      ports: [443, 8443]
+    QUIC:
+      ports: [443, 8443]
+  skip-domain:
+    - "Mijia Cloud"
+    - "+.push.apple.com"
+proxy-providers:
+  XSUS:
+    type: http
+    url: "{{XSUS}}"
+  KyCloud:
+    type: http
+    url: "{{KyCloud}}"
+proxy-groups:
+  - name: XSUS
+    type: select
+    use:
+      - XSUS
+  - name: KyCloud
+    type: select
+    use:
+      - KyCloud
+  - name: Hong Kong
+    type: url-test
+    include-all: true
+    filter: "(?i)港|hk|hongkong|hong kong"
+    exclude-filter: "海外"
+    url: "https://www.gstatic.com/generate_204"
+    tolerance: 10
+rule-providers:
+  reject:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
+    path: ./ruleset/reject.yaml
+    interval: 86400
+  icloud:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt"
+    path: ./ruleset/icloud.yaml
+    interval: 86400
+  apple:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt"
+    path: ./ruleset/apple.yaml
+    interval: 86400
+  google:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt"
+    path: ./ruleset/google.yaml
+    interval: 86400
+  proxy:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
+    path: ./ruleset/proxy.yaml
+    interval: 86400
+  direct:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
+    path: ./ruleset/direct.yaml
+    interval: 86400
+  private:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
+    path: ./ruleset/private.yaml
+    interval: 86400
+  gfw:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
+    path: ./ruleset/gfw.yaml
+    interval: 86400
+  tld-not-cn:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt"
+    path: ./ruleset/tld-not-cn.yaml
+    interval: 86400
+  telegramcidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
+    path: ./ruleset/telegramcidr.yaml
+    interval: 86400
+  cncidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
+    path: ./ruleset/cncidr.yaml
+    interval: 86400
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
+    path: ./ruleset/lancidr.yaml
+    interval: 86400
+  applications:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt"
+    path: ./ruleset/applications.yaml
+    interval: 86400
+rules:
+  - DOMAIN-SUFFIX,argotunnel.com,DIRECT # cloudflared
+  - PROCESS-NAME-REGEX,.*qbittorrent.*,DIRECT
+  - IP-CIDR,4.3.2.1/32,DIRECT
+  - DOMAIN,nixpkgs-tracker.ocfox.me,DIRECT
+  - PROCESS-NAME-REGEX,.*tailscale.*,DIRECT
+  - IP-CIDR,100.64.0.0/10,DIRECT # Tailscale CIDR
+  - PROCESS-NAME,syncthing,DIRECT
+  - RULE-SET,applications,DIRECT
+  - RULE-SET,private,DIRECT
+  - RULE-SET,reject,REJECT
+  - RULE-SET,icloud,DIRECT
+  - RULE-SET,apple,DIRECT
+  - RULE-SET,google,GLOBAL
+  - RULE-SET,proxy,GLOBAL
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,lancidr,DIRECT
+  - RULE-SET,cncidr,DIRECT
+  - RULE-SET,telegramcidr,GLOBAL
+  - GEOIP,LAN,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,GLOBAL
