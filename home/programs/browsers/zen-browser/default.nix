@@ -51,7 +51,6 @@ in
               refined-github
               sponsorblock
               translate-web-pages
-              tridactyl
               ublock-origin
               violentmonkey
               yomitan
