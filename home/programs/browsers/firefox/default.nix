@@ -1,5 +1,6 @@
 {
   inputs,
+  config,
   lib,
   pkgs,
   ...
@@ -32,8 +33,8 @@ in
         ${builtins.readFile "${inputs.firefox-ui-fix}/user.js"}
         ${builtins.readFile "${inputs.ff-ultima}/user.js"}
       '';
-      userChrome = ./userChrome.css;
-      userContent = ./userContent.css;
+      userChrome = config.lib.hm.mkFlakeSymlink ./userChrome.css;
+      userContent = config.lib.hm.mkFlakeSymlink ./userContent.css;
       extensions =
         let
           importExtension = path: import path { inherit pkgs; };
@@ -77,11 +78,9 @@ in
     file = {
       ".mozilla/firefox/${profile}/chrome/firefox-ui-fix" = {
         source = inputs.firefox-ui-fix;
-        recursive = true;
       };
       ".mozilla/firefox/${profile}/chrome/ff-ultima" = {
         source = inputs.ff-ultima;
-        recursive = true;
       };
     };
   };
