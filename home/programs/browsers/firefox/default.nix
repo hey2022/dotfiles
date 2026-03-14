@@ -16,6 +16,12 @@ in
       "en-GB"
       "zh-CN"
     ];
+    # https://mozilla.github.io/policy-templates
+    policies = {
+      Cookies = {
+        Allow = [ "https://devdocs.io" ];
+      };
+    };
     profiles.${profile} = {
       isDefault = true;
       settings = {
