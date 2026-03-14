@@ -13,13 +13,12 @@
           ];
         };
         programs = {
+          kdlfmt.enable = true;
           nixfmt.enable = true;
-          prettier = {
-            enable = true;
-          };
+          prettier.enable = true;
           shellcheck.enable = true;
           taplo.enable = true;
-          kdlfmt.enable = true;
+          yamlfmt.enable = true;
         };
         settings.formatter = {
           qmlformat = {
