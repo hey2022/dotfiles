@@ -1,4 +1,3 @@
-{ ... }:
 {
   imports = [
     ./clash-verge.nix
