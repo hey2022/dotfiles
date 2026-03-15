@@ -67,10 +67,6 @@
       url = "github:unmojang/FjordLauncher";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    linux-wallpaper-engine = {
-      url = "github:jagrat7/linux-wallpaper-engine";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     firefox-ui-fix = {
       url = "github:black7375/Firefox-UI-Fix";
       flake = false;
