@@ -8,10 +8,10 @@
 
 anki-utils.buildAnkiAddon (finalAttrs: {
   pname = "search-stats-extended-bin";
-  version = "1.17.0";
+  version = "1.21.0";
   src = fetchurl {
     url = "https://github.com/Luc-Mcgrady/Anki-Search-Stats-Extended/releases/download/v${finalAttrs.version}/searchStatsExtended.ankiaddon";
-    hash = "sha256-OdHHT+3FUzMlLvS9BY6B8yYctvRm6N5/3gb4NY/0lpY=";
+    hash = "sha256-ZRtYomX5NNOZkLXIq0iAQM2g//2liy0G1RGIlgxfg6k=";
   };
   nativeBuildInputs = [
     unzip
