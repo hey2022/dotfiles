@@ -3,5 +3,5 @@
     ./ly.nix
     ./regreet.nix
   ];
-  services.displayManager.ly.enable = true;
+  programs.regreet.enable = true;
 }
