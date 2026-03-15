@@ -1,15 +1,16 @@
 {
   "loadDelayMs": 100,
-  "burdenNotLoad": false,
-  "confirmExpensiveStats": true,
+  "autoMemorisedStats": false,
+  "autoRevlogStats": false,
   "barWidth": 600,
   "barHeight": 250,
   "piePercentages": true,
   "warnings": true,
   "trends": true,
-  "forceLang": "en_GB",
+  "forceLang": null,
   "graphMode": "Pie",
   "categories": {
+    "graphOrder": true,
     "about": true,
     "due": true,
     "misc": true,
@@ -23,5 +24,21 @@
     "introduced": true,
     "timeMachine": true,
     "bad": "removed"
-  }
+  },
+  "categoryOrder": [
+    "due",
+    "misc",
+    "rating",
+    "load",
+    "timeMachine",
+    "fsrs",
+    "forgettingCurve",
+    "introduced",
+    "interval",
+    "repetition",
+    "time",
+    "lapse",
+    "bad"
+  ],
+  "alwaysAllTime": false
 }
