@@ -4,5 +4,4 @@
     pwvucontrol
     qpwgraph
   ];
-  services.easyeffects.enable = true;
 }
