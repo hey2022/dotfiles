@@ -2,7 +2,7 @@
 mixed-port: 7897
 unified-delay: true
 tcp-concurrent: true
-external-controller: 0.0.0.0:9097
+external-controller: "[::]:9097"
 secret: "{{controller-secret}}"
 external-controller-cors:
   allow-private-network: true
