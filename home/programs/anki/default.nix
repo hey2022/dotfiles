@@ -36,9 +36,9 @@
         # anki-contanki
         anking-notes-addon
         anki-stylusdraw
-        # (search-stats-extended.withConfig {
-        #   config = lib.importJSON ./config/search-stats-extended.json;
-        # })
+        (search-stats-extended-bin.withConfig {
+          config = lib.importJSON ./config/search-stats-extended.json;
+        })
         (remaining-time.withConfig {
           config = lib.importJSON ./config/remaining-time.json;
         })
