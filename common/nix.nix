@@ -5,6 +5,7 @@
         "nix-command"
         "flakes"
       ];
+      trace-import-from-derivation = true;
     };
     gc = {
       automatic = true;
