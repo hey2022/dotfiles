@@ -7,8 +7,8 @@ secret: "{{controller-secret}}"
 external-controller-cors:
   allow-private-network: true
   allow-origins:
-    - http://localhost
-    - http://127.0.0.1
+    - http://localhost:9097
+    - http://127.0.0.1:9097
     - https://metacubex.github.io
     - https://metacubexd.pages.dev
 tun:
