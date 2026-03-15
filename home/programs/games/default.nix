@@ -16,7 +16,6 @@
   config = lib.mkIf config.profiles.gaming.enable {
     home.packages = with pkgs; [
       goverlay
-      mindustry-wayland
       steam
       supertuxkart
     ];
