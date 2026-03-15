@@ -9,11 +9,8 @@ external-controller-cors:
   allow-origins:
     - http://localhost
     - http://127.0.0.1
-    - tauri://localhost
-    - http://tauri.localhost
-    - https://yacd.metacubex.one
     - https://metacubex.github.io
-    - https://board.zash.run.place
+    - https://metacubexd.pages.dev
 tun:
   enable: true
   stack: gvisor
