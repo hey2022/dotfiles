@@ -12,6 +12,16 @@ creation_rules:
       - age:
           - *admin
           - *root-desktop
+  - path_regex: ^secrets/root/X1C12/.+$
+    key_groups:
+      - age:
+          - *admin
+          - *root-X1C12
+  - path_regex: ^secrets/root/goon/.+$
+    key_groups:
+      - age:
+          - *admin
+          - *root-goon
   - path_regex: ^secrets/root/[^/]+$
     key_groups:
       - age:
