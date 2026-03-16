@@ -10,8 +10,8 @@
   "forceLang": null,
   "graphMode": "Pie",
   "categories": {
-    "graphOrder": true,
-    "about": true,
+    "graphOrder": false,
+    "about": false,
     "due": true,
     "misc": true,
     "interval": true,
