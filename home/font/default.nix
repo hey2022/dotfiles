@@ -10,6 +10,7 @@
     inter-nerdfont
     lxgw-wenkai
     nerd-fonts.symbols-only
+    vista-fonts
   ];
   fonts.fontconfig.enable = true;
 }
