@@ -14,6 +14,7 @@ in
     home.packages = with pkgs; [
       android-tools
       qtscrcpy
+      scrcpy
     ];
   };
 }
