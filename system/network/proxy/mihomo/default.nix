@@ -14,7 +14,7 @@ in
     services.mihomo = {
       tunMode = true;
       webui = pkgs.metacubexd;
-      # processes Info = true;
+      processesInfo = true;
       configFile = config.sops.templates."mihomo.yaml".path;
     };
     sops = {
