@@ -23,7 +23,7 @@
     "load": true,
     "introduced": true,
     "timeMachine": true,
-    "bad": "removed"
+    "bad": true
   },
   "categoryOrder": [
     "due",
