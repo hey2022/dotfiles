@@ -23,6 +23,7 @@ in
     services = {
       cliphist.enable = true;
       hypridle.enable = true;
+      hyprpolkitagent.enable = true;
       swaync.enable = true;
       wlsunset.enable = true;
     };
