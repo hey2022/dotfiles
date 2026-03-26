@@ -45,4 +45,8 @@
     fish.enable = true;
     niri.enable = true;
   };
+
+  services = {
+    fprintd.enable = true;
+  };
 }
