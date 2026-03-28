@@ -9,10 +9,11 @@
   home.stateVersion = "25.11";
 
   profiles = {
-    gaming.enable = false;
+    gaming.enable = true;
   };
   programs = {
     fish.enable = true;
     niri.enable = true;
+    fjord.enable = true;
   };
 }
