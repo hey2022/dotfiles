@@ -32,6 +32,8 @@
     }
   ];
 
+  hardware.thinkpad.enable = true;
+
   users.users.yiheng = {
     isNormalUser = true;
     extraGroups = config.users.baseGroups;

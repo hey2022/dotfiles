@@ -18,6 +18,8 @@
 
   boot.kernelParams = [ "i915.enable_dc=0" ];
 
+  hardware.thinkpad.enable = true;
+
   networking.hostName = "goon";
   host.laptop = true;
 
