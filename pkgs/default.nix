@@ -21,6 +21,7 @@
         neovim-anywhere = pkgs.callPackage ./neovim-anywhere { };
         ticktick-cracked = pkgs.callPackage ./ticktick-cracked { };
         gitbutler-bin = pkgs.callPackage ./gitbutler-bin { };
+        keepassxc-snapshot = pkgs.callPackage ./keepassxc-snapshot { };
       }
       // (import ./anki { inherit (pkgs) callPackage; });
     };
