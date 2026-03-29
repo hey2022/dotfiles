@@ -20,6 +20,6 @@
   ];
   home.packages = with pkgs; [
     czkawka
-    keepassxc
+    keepassxc-snapshot
   ];
 }
