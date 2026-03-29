@@ -12,5 +12,6 @@
     home-manager
     neovim
     wget
+    keepassxc-snapshot
   ];
 }
