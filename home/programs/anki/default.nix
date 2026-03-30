@@ -33,7 +33,7 @@
         (ajt-card-management.withConfig {
           config = lib.importJSON ./config/ajt-card-management.json;
         })
-        # anki-contanki
+        anki-contanki
         anking-notes-addon
         anki-stylusdraw
         (search-stats-extended-bin.withConfig {
