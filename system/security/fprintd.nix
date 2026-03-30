@@ -17,7 +17,6 @@
       in
       lib.flip lib.genAttrs serviceCfg [
         "greetd"
-        "hyprlock"
         "login"
         "polkit-1"
         "sudo"
