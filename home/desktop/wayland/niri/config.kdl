@@ -304,7 +304,7 @@ binds {
         spawn-sh "pkill rofi || rofi -show calc -modi calc -no-show-match -no-sort -no-history -calc-command \"echo -n '{result}' | wl-copy\""
     }
     Mod+Shift+Escape hotkey-overlay-title="Lock the Screen: hyprlock" {
-        spawn "hyprlock" "--immediate"
+        spawn "loginctl" "lock-session"
     }
     Mod+Ctrl+I allow-when-locked=true hotkey-overlay-title="Toggle inhibit lid sleep" {
         spawn "toggle-inhibit-lid-sleep"

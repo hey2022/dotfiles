@@ -1,7 +1,9 @@
 { pkgs, ... }:
 {
   imports = [
+    ./hypridle.nix
     ./hyprland
+    ./hyprlock
     ./niri
     ./quickshell
     ./swaylock.nix
