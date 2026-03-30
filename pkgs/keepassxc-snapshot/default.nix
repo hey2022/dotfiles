@@ -1,27 +1,212 @@
 {
-  appimageTools,
-  fetchurl,
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  cmake,
+  libsForQt5,
+  fetchpatch2,
+
+  apple-sdk_15,
+  asciidoctor,
+  botan3,
+  curl,
+  darwinMinVersionHook,
+  libxi,
+  libxtst,
+  libargon2,
+  libusb1,
+  minizip,
+  nix-update-script,
+  pcsclite,
+  pkg-config,
+  qrencode,
+  readline,
+  wrapGAppsHook3,
+  zlib,
+  keyutils,
+
+  withKeePassBrowser ? true,
+  withKeePassBrowserPasskeys ? true,
+  withKeePassFDOSecrets ? stdenv.hostPlatform.isLinux,
+  withKeePassKeeShare ? true,
+  withKeePassNetworking ? true,
+  withKeePassSSHAgent ? true,
+  withKeePassX11 ? true,
+  withKeePassYubiKey ? stdenv.hostPlatform.isLinux,
+
+  nixosTests,
 }:
 
-let
-  prerelease-version = "2.8.0";
-  build = "282464";
-  date = "2026-03-15";
-
+stdenv.mkDerivation (finalAttrs: {
   pname = "keepassxc-snapshot";
-  version = "${prerelease-version}-unstable-${date}";
-  src = fetchurl {
-    url = "https://snapshot.keepassxc.org/build-${build}/KeePassXC-${prerelease-version}-snapshot-x86_64.AppImage";
-    hash = "sha256-z/CxwLOYGbSpuSxiEDWeQuyPwI5ldSPe8SzG7kEz/Mc=";
+  version = "2.8.0-unstable-2025-03-15";
+
+  src = fetchFromGitHub {
+    owner = "keepassxreboot";
+    repo = "keepassxc";
+    rev = "379be00127db60b1ddee9c67f4bfc49c15db8236";
+    hash = "sha256-Lf0fNflOMYU3WSzPmia2l3urp0/s3UHZOPx5MzDUPFs=";
   };
 
-  appimageContents = appimageTools.extract { inherit pname version src; };
-in
-appimageTools.wrapType2 {
-  inherit pname version src;
-  extraInstallCommands = ''
-    cp -r ${appimageContents}/usr/share $out/
-    substituteInPlace $out/share/applications/org.keepassxc.KeePassXC.desktop \
-      --replace-fail 'Exec=keepassxc' "Exec=$out/bin/${pname}"
+  env =
+    (lib.optionalAttrs stdenv.cc.isGNU {
+      NIX_CFLAGS_COMPILE = "-Wno-error=deprecated-enum-enum-conversion";
+    })
+    // lib.optionalAttrs stdenv.cc.isClang {
+      NIX_CFLAGS_COMPILE = toString [
+        "-Wno-old-style-cast"
+        "-Wno-error"
+        "-D__BIG_ENDIAN__=${if stdenv.hostPlatform.isBigEndian then "1" else "0"}"
+      ];
+    }
+    // lib.optionalAttrs stdenv.hostPlatform.isDarwin {
+      NIX_LDFLAGS = toString [
+        "-rpath"
+        "${libargon2}/lib"
+      ];
+    };
+
+  patches = [
+    ./darwin.patch
+    (fetchpatch2 {
+      url = "https://patch-diff.githubusercontent.com/raw/keepassxreboot/keepassxc/pull/13161.patch";
+      hash = "sha256-HjFuaJZwcr8JZLtdIlet7lYRWmHpoXqPg/0eC9LIjH8=";
+    })
+  ];
+
+  cmakeFlags = [
+    (lib.cmakeFeature "KEEPASSXC_BUILD_TYPE" "Release")
+    (lib.cmakeBool "WITH_GUI_TESTS" true)
+    (lib.cmakeBool "WITH_XC_UPDATECHECK" false)
+    (lib.cmakeBool "WITH_XC_X11" withKeePassX11)
+    (lib.cmakeBool "WITH_XC_BROWSER" withKeePassBrowser)
+    (lib.cmakeBool "WITH_XC_BROWSER_PASSKEYS" withKeePassBrowserPasskeys)
+    (lib.cmakeBool "WITH_XC_KEESHARE" withKeePassKeeShare)
+    (lib.cmakeBool "WITH_XC_NETWORKING" withKeePassNetworking)
+    (lib.cmakeBool "WITH_XC_SSHAGENT" withKeePassSSHAgent)
+    (lib.cmakeBool "WITH_XC_FDOSECRETS" withKeePassFDOSecrets)
+    (lib.cmakeBool "WITH_XC_YUBIKEY" withKeePassYubiKey)
+  ];
+
+  doCheck = true;
+  checkPhase =
+    let
+      disabledTests = lib.concatStringsSep "|" (
+        [
+          # flaky
+          "testcli"
+          "testgui"
+        ]
+        ++ lib.optionals stdenv.hostPlatform.isDarwin [
+          # QWidget: Cannot create a QWidget without QApplication
+          "testautotype"
+
+          # FAIL!  : TestDatabase::testExternallyModified() Compared values are not the same
+          #   Actual   (((spyFileChanged.count()))): 0
+          #   Expected (1)                         : 1
+          #   Loc: [/tmp/nix-build-keepassxc-2.7.10.drv-2/source/tests/TestDatabase.cpp(288)]
+          "testdatabase"
+        ]
+      );
+    in
+    ''
+      runHook preCheck
+
+      export LC_ALL="en_US.UTF-8"
+      export QT_QPA_PLATFORM=offscreen
+      export QT_PLUGIN_PATH="${libsForQt5.qtbase.bin}/${libsForQt5.qtbase.qtPluginPrefix}"
+
+      make test ARGS+="-E '${disabledTests}' --output-on-failure"
+
+      runHook postCheck
+    '';
+
+  nativeBuildInputs = [
+    asciidoctor
+    cmake
+    libsForQt5.wrapQtAppsHook
+    libsForQt5.qttools
+    pkg-config
+    keyutils
+  ]
+  ++ lib.optional (!stdenv.hostPlatform.isDarwin) wrapGAppsHook3;
+
+  dontWrapGApps = true;
+  preFixup = ''
+    qtWrapperArgs+=("''${gappsWrapperArgs[@]}")
+  ''
+  + lib.optionalString stdenv.hostPlatform.isDarwin ''
+    wrapQtApp "$out/Applications/KeePassXC.app/Contents/MacOS/KeePassXC"
   '';
-}
+
+  postInstall = lib.concatLines [
+    (lib.optionalString stdenv.hostPlatform.isDarwin ''
+      mkdir -p "$out/bin"
+      for program in keepassxc-cli keepassxc-proxy; do
+        ln -s "$out/Applications/KeePassXC.app/Contents/MacOS/$program" "$out/bin/$program"
+      done
+    '')
+
+    # See https://github.com/keepassxreboot/keepassxc/blob/cd7a53abbbb81e468efb33eb56eefc12739969b8/src/browser/NativeMessageInstaller.cpp#L317
+    (lib.optionalString withKeePassBrowser ''
+      mkdir -p "$out/lib/mozilla/native-messaging-hosts"
+      substituteAll "${./firefox-native-messaging-host.json}" "$out/lib/mozilla/native-messaging-hosts/org.keepassxc.keepassxc_browser.json"
+    '')
+  ];
+
+  buildInputs = [
+    botan3
+    curl
+    libxi
+    libxtst
+    libargon2
+    libsForQt5.qtbase
+    libsForQt5.qtsvg
+    minizip
+    pcsclite
+    qrencode
+    readline
+    zlib
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isDarwin [
+    libsForQt5.qtmacextras
+
+    apple-sdk_15
+    # ScreenCaptureKit, required by livekit, is only available on 12.3 and up:
+    # https://developer.apple.com/documentation/screencapturekit
+    (darwinMinVersionHook "12.3")
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [
+    libusb1
+  ]
+  ++ lib.optionals withKeePassX11 [
+    libsForQt5.qtx11extras
+  ];
+
+  passthru = {
+    tests = {
+      inherit (nixosTests) keepassxc;
+    };
+    updateScript = nix-update-script { };
+  };
+
+  meta = {
+    description = "Offline password manager with many features";
+    longDescription = ''
+      A community fork of KeePassX, which is itself a port of KeePass Password Safe.
+      The goal is to extend and improve KeePassX with new features and bugfixes,
+      to provide a feature-rich, fully cross-platform and modern open-source password manager.
+      Accessible via native cross-platform GUI, CLI, has browser integration
+      using the KeePassXC Browser Extension (https://github.com/keepassxreboot/keepassxc-browser)
+    '';
+    homepage = "https://keepassxc.org/";
+    changelog = "https://github.com/keepassxreboot/keepassxc/blob/${finalAttrs.version}/CHANGELOG.md";
+    license = lib.licenses.gpl2Plus;
+    mainProgram = "keepassxc";
+    maintainers = with lib.maintainers; [
+      sigmasquadron
+      ryand56
+    ];
+    platforms = lib.platforms.linux ++ lib.platforms.darwin;
+  };
+})
