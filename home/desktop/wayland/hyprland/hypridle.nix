@@ -15,12 +15,12 @@
       listener = [
         {
           timeout = 300;
-          on-timeout = "niri msg action power-off-monitors || hyprctl dispatch dpms off";
-          on-resume = "niri msg action power-on-monitors || hyprctl dispatch dpms on";
+          on-timeout = "loginctl lock-session";
         }
         {
           timeout = 600;
-          on-timeout = "loginctl lock-session";
+          on-timeout = "niri msg action power-off-monitors || hyprctl dispatch dpms off";
+          on-resume = "niri msg action power-on-monitors || hyprctl dispatch dpms on";
         }
         (lib.mkIf config.host.laptop {
           timeout = 900;
