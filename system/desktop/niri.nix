@@ -10,7 +10,9 @@ let
 in
 {
   config = lib.mkIf cfg.enable {
-    programs.niri = { };
+    programs = {
+      hyprlock.enable = true;
+    };
     services.gnome.gnome-keyring.enable = false;
     environment.systemPackages = with pkgs; [
       labwc
