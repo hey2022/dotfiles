@@ -22,6 +22,7 @@ in
         Allow = [ "https://devdocs.io" ];
       };
     };
+    nativeMessagingHosts = with pkgs; [ keepassxc-snapshot ];
     profiles.${profile} = {
       isDefault = true;
       settings = {
