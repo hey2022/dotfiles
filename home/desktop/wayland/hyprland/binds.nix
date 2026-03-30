@@ -77,7 +77,7 @@ in
       # logout menu
       "$mod SHIFT, Escape, exec, ${toggle "wlogout"} -p layer-shell"
       # lock screen
-      "$mod, Escape, exec, ${runOnce "hyprlock"} --immediate"
+      "$mod, Escape, exec, ${runOnce "loginctl"} lock-session"
       # inhibit-lid-sleep
       "$mod, I, exec, toggle-inhibit-lid-sleep"
 

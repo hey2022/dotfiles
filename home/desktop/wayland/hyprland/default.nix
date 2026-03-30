@@ -11,8 +11,6 @@ in
 {
   imports = [
     ./binds.nix
-    ./hypridle.nix
-    ./hyprlock
     ./plugins
     ./rules.nix
     ./settings.nix
@@ -41,7 +39,6 @@ in
     programs = {
       rofi.enable = true;
       ghostty.enable = true;
-      hyprlock.enable = true;
       waybar.enable = true;
       wlogout.enable = true;
     };
