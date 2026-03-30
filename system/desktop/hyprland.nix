@@ -1,8 +1,16 @@
-{ ... }:
+{ config, lib, ... }:
+
+let
+  cfg = config.programs.hyprland;
+in
 {
-  imports = [ ./hyprlock.nix ];
-  programs.hyprland = {
-    xwayland.enable = true;
-    withUWSM = true;
+  config = lib.mkIf cfg.enable {
+    programs = {
+      hyprland = {
+        xwayland.enable = true;
+        withUWSM = true;
+      };
+      hyprlock.enable = true;
+    };
   };
 }
