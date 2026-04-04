@@ -87,6 +87,10 @@ let
           cpp = with pkgs; [
             clang-tools
           ];
+          python = with pkgs; [
+            basedpyright
+            ruff
+          ];
           rust = with pkgs; [
             rust-analyzer
           ];
@@ -417,6 +421,7 @@ let
               markdown = true;
               nix = true;
               org-mode = false;
+              python = true;
               quarto = true;
               rust = true;
               typst = true;
