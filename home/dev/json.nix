@@ -1,4 +1,4 @@
 { pkgs, ... }:
 {
-  home.packages = with pkgs; [ nodePackages.prettier ];
+  home.packages = with pkgs; [ prettier ];
 }

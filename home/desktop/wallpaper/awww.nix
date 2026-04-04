@@ -6,7 +6,7 @@
 }:
 
 {
-  config = lib.mkIf config.services.swww.enable {
+  config = lib.mkIf config.services.awww.enable {
     home.packages = with pkgs; [
       waypaper
     ];

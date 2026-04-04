@@ -2,9 +2,9 @@
 
 {
   imports = [
-    ./swww.nix
+    ./awww.nix
     ./wallpaper-engine.nix
   ];
-  services.swww.enable = true;
+  services.awww.enable = true;
   xdg.configFile."wallpapers".source = config.lib.hm.mkFlakeSymlink "${self}/assets/wallpapers";
 }
