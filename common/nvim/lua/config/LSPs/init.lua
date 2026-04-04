@@ -93,7 +93,7 @@ require("lze").load({
         "clangd",
         for_cat = "languages.cpp",
         lsp = {
-            filetpes = { "cpp", "c" },
+            filetypes = { "cpp", "c" },
         },
     },
     {
