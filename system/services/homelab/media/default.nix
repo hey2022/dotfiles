@@ -4,7 +4,7 @@
     ./calibre.nix
     ./immich.nix
     ./jellyfin.nix
-    ./jellyseer.nix
+    ./seerr.nix
     ./navidrome.nix
     ./qbittorrent.nix
     ./suwayomi.nix
