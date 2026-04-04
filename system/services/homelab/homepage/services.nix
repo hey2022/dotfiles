@@ -104,10 +104,10 @@ in
           enableNowPlaying = false;
         };
       };
-      jellyseerr = mkService {
-        name = "jellyseerr";
+      seerr = mkService {
+        name = "seerr";
         widget = {
-          key = "{{HOMEPAGE_VAR_JELLYSEERR}}";
+          key = "{{HOMEPAGE_VAR_SEERR}}";
         };
       };
       qbittorrent = mkService {
