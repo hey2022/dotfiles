@@ -126,4 +126,11 @@ require("lze").load({
             },
         },
     },
+    {
+        "basedpyright",
+        for_cat = "languages.python",
+        lsp = {
+            filetypes = { "python" },
+        },
+    },
 })
