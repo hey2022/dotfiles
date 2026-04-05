@@ -12,6 +12,7 @@
       sensibleOnTop = true;
       plugins = with pkgs.tmuxPlugins; [
         continuum
+        fzf-tmux-url
         open
         pain-control
         resurrect
