@@ -10,6 +10,7 @@
     ./gtk.nix
     ./imv.nix
     ./launchers
+    ./mapping
     ./pipewire.nix
     ./qt.nix
     ./stylix.nix
