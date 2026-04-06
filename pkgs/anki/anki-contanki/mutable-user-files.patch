@@ -12,7 +12,7 @@ index ad54c72..7fb0a2c 100644
  
  
 diff --git i/contanki/utils.py w/contanki/utils.py
-index bdfd119..e876bbc 100644
+index bdfd119..3c987ba 100644
 --- i/contanki/utils.py
 +++ w/contanki/utils.py
 @@ -11,17 +11,37 @@ import re
@@ -28,7 +28,7 @@ index bdfd119..e876bbc 100644
  addon_path = dirname(abspath(__file__))
  tests_path = join(addon_path, "tests")
 -user_files_path = join(addon_path, "user_files")
-+user_files_path = join(os.path.expanduser("~"), ".local/share/Anki2/addons21/1898790263", "user_files")
++user_files_path = os.path.expanduser("~/.local/share/Anki2/addons21/1898790263/user_files")
  user_profile_path = join(user_files_path, "profiles")
  user_controllers_path = join(user_files_path, "custom_controllers")
  default_profile_path = join(addon_path, "profiles")
@@ -48,8 +48,8 @@ index bdfd119..e876bbc 100644
 +        if os.path.isdir(dst):
 +            for root, dirs, files in os.walk(dst):
 +                for name in dirs + files:
-+                    p = join(root, name)
-+                    os.chmod(p, os.stat(p).st_mode | stat.S_IWUSR)
++                    path = join(root, name)
++                    os.chmod(path, os.stat(path).st_mode | stat.S_IWUSR)
 +
  State = Literal[
      "all",
