@@ -4,7 +4,7 @@
     ./automount.nix
     ./fail2ban.nix
     ./iperf.nix
-    ./kanata.nix
+    ./mapping.nix
     ./minecraft.nix
     ./pipewire.nix
     ./printing.nix
