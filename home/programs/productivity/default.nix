@@ -8,5 +8,6 @@
     ./obsidian.nix
     ./pdf
     ./video
+    ./draw.nix
   ];
 }
