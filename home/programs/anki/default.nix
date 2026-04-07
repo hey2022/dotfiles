@@ -43,6 +43,11 @@
         })
       ];
   };
+  home.packages = [
+    (pkgs.writeShellScriptBin "anki-dev" ''
+      exec ${lib.getExe pkgs.anki} -b ~/code/anki-dev "$@"
+    '')
+  ];
   sops = {
     secrets = {
       "anki/username" = { };
