@@ -1,7 +1,6 @@
 { callPackage, ... }:
 
 {
-  anki-contanki = callPackage ./anki-contanki { };
   anki-stylusdraw = callPackage ./anki-stylusdraw { };
   anki-to-pdf = callPackage ./anki-to-pdf { };
   anking-notes-addon = callPackage ./anking-notes-addon { };

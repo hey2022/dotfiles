@@ -21,6 +21,7 @@
         anki-connect
         (anki-contanki.withConfig {
           config = lib.importJSON ./config/contanki.json;
+          userFiles = ./user-files/anki-contanki;
         })
         (anki-to-pdf.withConfig {
           userFiles = ./user-files/anki-to-pdf;
@@ -53,8 +54,5 @@
       "anki/username" = { };
       "anki/key" = { };
     };
-  };
-  xdg.dataFile."Anki2/addons21/1898790263/user_files" = {
-    source = config.lib.hm.mkFlakeSymlink ./user-files/anki-contanki;
   };
 }

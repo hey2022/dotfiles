@@ -9,7 +9,12 @@ let
   pkgs = import inputs.nixpkgs {
     inherit system;
   };
-  nixpkgs-patches = [ ];
+  nixpkgs-patches = [
+    (pkgs.fetchpatch2 {
+      url = "https://patch-diff.githubusercontent.com/raw/NixOS/nixpkgs/pull/507286.patch";
+      hash = "sha256-jBJOiAP0T9lfLqeVF+WZai+xCI/26DO/otMrG6DORyU=";
+    })
+  ];
   home-manager-patches = [ ];
   nixpkgs-patched =
     if nixpkgs-patches != [ ] then
