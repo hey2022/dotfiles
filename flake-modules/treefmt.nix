@@ -10,6 +10,7 @@
         settings = {
           excludes = [
             "secrets/*" # handled by sops
+            "home/desktop/mapping/input-remapper/*"
           ];
         };
         programs = {
