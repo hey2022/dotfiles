@@ -1,4 +1,9 @@
-{ inputs, config, ... }:
+{
+  inputs,
+  config,
+  lib,
+  ...
+}:
 
 {
   imports = [
@@ -33,6 +38,13 @@
   ];
 
   hardware.thinkpad.enable = true;
+
+  # https://wiki.archlinux.org/title/Intel_graphics#Testing_the_new_experimental_Xe_driver
+  # These params conflict with ones set in nixos-hardware so mkAfter is used
+  boot.kernelParams = lib.mkAfter [
+    "i915.force_probe=!7d55"
+    "xe.force_probe=7d55"
+  ];
 
   users.users.yiheng = {
     isNormalUser = true;
