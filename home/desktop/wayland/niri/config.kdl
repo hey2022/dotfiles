@@ -315,8 +315,8 @@ binds {
     Mod+Shift+V hotkey-overlay-title="Clipboard: Paste strip newlines" {
         spawn "sh" "-c" "sleep 0.25 && wl-paste | tr '\n' ' ' | tr -s ' ' | wl-copy && ydotool key 29:1 47:1 47:0 29:0"
     }
-    Mod+d hotkey-overlay-title="OCR" {
-        spawn-sh "goldendict $(wl-paste -n -p)"
+    Mod+a hotkey-overlay-title="Wayscriber" {
+        spawn "wayscriber" "--daemon-toggle"
     }
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
@@ -717,9 +717,6 @@ binds {
     }
     // The quit action will show a confirmation dialog to avoid accidental exits.
     Mod+Shift+E {
-        quit
-    }
-    Ctrl+Alt+Delete {
         quit
     }
     // Powers off the monitors. To turn them back on, do any input like
