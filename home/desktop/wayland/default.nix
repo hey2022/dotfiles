@@ -12,6 +12,7 @@
     ./wlogout.nix
     ./wlsunset.nix
     ./wluma.nix
+    ./wayscriber.nix
   ];
   home.packages = with pkgs; [
     brightnessctl
