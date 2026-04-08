@@ -62,5 +62,9 @@
 
   services = {
     fprintd.enable = true;
+    throttled = {
+      enable = true;
+      extraConfig = lib.readFile ./throttled.conf;
+    };
   };
 }
