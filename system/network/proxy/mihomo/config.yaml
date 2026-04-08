@@ -97,12 +97,12 @@ proxy-groups:
     use:
       - KyCloud
   - name: Hong Kong
-    type: url-test
+    type: select
     include-all: true
     filter: "(?i)港|hk|hongkong|hong kong"
     exclude-filter: "海外"
     url: "https://www.gstatic.com/generate_204"
-    tolerance: 10
+    expected-status: 204
 rule-providers:
   reject:
     type: http
