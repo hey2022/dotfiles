@@ -6,4 +6,5 @@
     ./thinkpad.nix
   ];
   environment.systemPackages = [ pkgs.lm_sensors ];
+  services.fwupd.enable = true;
 }
