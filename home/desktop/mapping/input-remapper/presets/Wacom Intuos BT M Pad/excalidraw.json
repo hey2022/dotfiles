@@ -1,0 +1,74 @@
+[
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 331,
+                "origin_hash": "aaedc51bceee2e03e9bd11d034b51d81"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "Control_L + z",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 332,
+                "origin_hash": "aaedc51bceee2e03e9bd11d034b51d81"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "KEY_SPACE",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 256,
+                "origin_hash": "7e4e5c806b5b80aee3c402a16d3942f8"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "v",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 257,
+                "origin_hash": "7e4e5c806b5b80aee3c402a16d3942f8"
+           }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "l",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 258,
+                "origin_hash": "7e4e5c806b5b80aee3c402a16d3942f8"
+           }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "p",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 259,
+                "origin_hash": "7e4e5c806b5b80aee3c402a16d3942f8"
+           }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "e",
+        "mapping_type": "key_macro"
+    }
+]
