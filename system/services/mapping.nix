@@ -16,6 +16,7 @@
     };
     input-remapper = {
       enable = true;
+      enableUdevRules = true;
     };
   };
 }
