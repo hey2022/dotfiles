@@ -9,6 +9,7 @@
     ./encryption.nix
     ./games
     ./media
+    ./monitoring.nix
     ./music.nix
     ./pandoc.nix
     ./productivity

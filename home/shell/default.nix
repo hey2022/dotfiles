@@ -19,7 +19,6 @@
 
   home.packages = with pkgs; [
     bat
-    btop
     choose
     dua
     duf
