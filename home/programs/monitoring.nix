@@ -6,5 +6,6 @@
     duf
     fastfetch
     lm_sensors
+    s-tui
   ];
 }
