@@ -17,6 +17,7 @@
         nnvim = nixCats.packages.${system}.nnvim;
         nvim-min = nixCats.packages.${system}.nvim-min;
         ap-dl = pkgs.callPackage ./ap-dl { };
+        apcap = pkgs.callPackage ./apcap { };
         cliprust = pkgs.callPackage ./cliprust { };
         neovim-anywhere = pkgs.callPackage ./neovim-anywhere { };
         ticktick-cracked = pkgs.callPackage ./ticktick-cracked { };
