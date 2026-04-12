@@ -29,7 +29,7 @@
     "modules": ["battery", "cpu", "memory", "temperature"]
   },
   "niri/workspaces": {
-    "format": "{name}",
+    "format": "{value}",
     "format-icons": {
       "active": "",
       "default": ""
