@@ -87,16 +87,16 @@ output "eDP-1" {
 output "PNP(YCT) Sculptor 0000" {
     mode "2560x1600@119.998"
 }
-workspace "1"
-workspace "2"
-workspace "3"
-workspace "4"
-workspace "5"
-workspace "6"
-workspace "7"
-workspace "8"
-workspace "9"
-workspace "10"
+workspace "⠁"
+workspace "⠃"
+workspace "⠉"
+workspace "⠙"
+workspace "⠑"
+workspace "⠋"
+workspace "⠛"
+workspace "⠓"
+workspace "⠊"
+workspace "⠚"
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
@@ -547,64 +547,64 @@ binds {
     // For example, with 2 workspaces + 1 empty, indices 3, 4, 5 and so on
     // will all refer to the 3rd workspace.
     Mod+1 {
-        focus-workspace "1"
+        focus-workspace "⠁"
     }
     Mod+2 {
-        focus-workspace "2"
+        focus-workspace "⠃"
     }
     Mod+3 {
-        focus-workspace "3"
+        focus-workspace "⠉"
     }
     Mod+4 {
-        focus-workspace "4"
+        focus-workspace "⠙"
     }
     Mod+5 {
-        focus-workspace "5"
+        focus-workspace "⠑"
     }
     Mod+6 {
-        focus-workspace "6"
+        focus-workspace "⠋"
     }
     Mod+7 {
-        focus-workspace "7"
+        focus-workspace "⠛"
     }
     Mod+8 {
-        focus-workspace "8"
+        focus-workspace "⠓"
     }
     Mod+9 {
-        focus-workspace "9"
+        focus-workspace "⠊"
     }
     Mod+0 {
-        focus-workspace "10"
+        focus-workspace "⠚"
     }
     Mod+Shift+1 {
-        move-column-to-workspace "1"
+        move-column-to-workspace "⠁"
     }
     Mod+Shift+2 {
-        move-column-to-workspace "2"
+        move-column-to-workspace "⠃"
     }
     Mod+Shift+3 {
-        move-column-to-workspace "3"
+        move-column-to-workspace "⠉"
     }
     Mod+Shift+4 {
-        move-column-to-workspace "4"
+        move-column-to-workspace "⠙"
     }
     Mod+Shift+5 {
-        move-column-to-workspace "5"
+        move-column-to-workspace "⠑"
     }
     Mod+Shift+6 {
-        move-column-to-workspace "6"
+        move-column-to-workspace "⠋"
     }
     Mod+Shift+7 {
-        move-column-to-workspace "7"
+        move-column-to-workspace "⠛"
     }
     Mod+Shift+8 {
-        move-column-to-workspace "8"
+        move-column-to-workspace "⠓"
     }
     Mod+Shift+9 {
-        move-column-to-workspace "9"
+        move-column-to-workspace "⠊"
     }
     Mod+Shift+0 {
-        move-column-to-workspace "10"
+        move-column-to-workspace "⠚"
     }
     // Alternatively, there are commands to move just a single window:
     // Mod+Ctrl+1 { move-window-to-workspace 1; }
