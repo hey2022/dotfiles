@@ -14,9 +14,5 @@ def clean:
 [[.data.apiActivity.items[].questions[]] | to_entries[] | {
     question: (.key + 1),
     stimulus: (.value.stimulus | clean),
-    options: [.value.options[] | {label: (.label | clean), value: .value}],
-    answer: (.value as $q | .value.options[] | select(.value == $q.validation.valid_response.value[0]) | {
-        label: (.label | clean),
-        value: .value
-    })
+    answer: (.value as $q | .value.options[] | select(.value == $q.validation.valid_response.value[0]) | .label | clean),
 }]
