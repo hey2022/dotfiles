@@ -23,5 +23,6 @@ in
         cat = "bat -p";
       };
     };
+    programs.man.generateCaches = false;
   };
 }
