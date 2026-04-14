@@ -19,7 +19,10 @@ in
     # https://mozilla.github.io/policy-templates
     policies = {
       Cookies = {
-        Allow = [ "https://devdocs.io" ];
+        Allow = [
+          "https://devdocs.io"
+          "https://s.dunkirk.sh"
+        ];
       };
     };
     nativeMessagingHosts = with pkgs; [ keepassxc-snapshot ];
@@ -69,14 +72,17 @@ in
         ];
       search = {
         force = true;
-        default = "Brave";
-        privateDefault = "Brave";
+        default = "unduckified";
+        privateDefault = "unduckified";
         engines = {
           SearXNG = {
             urls = [ { template = "http://localhost:8880/search?q={searchTerms}"; } ];
           };
           Brave = {
             urls = [ { template = "https://search.brave.com/search?q={searchTerms}"; } ];
+          };
+          unduckified = {
+            urls = [ { template = "https://s.dunkirk.sh?q={searchTerms}"; } ];
           };
         };
       };
