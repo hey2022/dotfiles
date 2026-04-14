@@ -30,7 +30,7 @@ let
       pkgs.applyPatches {
         name = "home-manager-patched";
         src = inputs.home-manager;
-        patches = [ ];
+        patches = home-manager-patches;
       }
     else
       inputs.home-manager;
