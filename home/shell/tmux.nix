@@ -24,7 +24,7 @@
         set -g pane-base-index 1
         set -g renumber-windows on
         set -g focus-events on
-        set -g default-terminal "screen-256color"
+        set -g default-terminal "tmux-256color"
 
         bind-key -n M-w choose-tree -w
         bind-key -n M-n new-window
