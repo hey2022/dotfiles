@@ -22,9 +22,9 @@
       extraConfig = ''
         set -g base-index 1
         set -g pane-base-index 1
-        set-option -g renumber-windows on
-        set-option -g focus-events on
-        set-option -g default-terminal "screen-256color"
+        set -g renumber-windows on
+        set -g focus-events on
+        set -g default-terminal "screen-256color"
 
         bind-key -n M-w choose-tree -w
         bind-key -n M-n new-window
