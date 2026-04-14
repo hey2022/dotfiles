@@ -57,6 +57,7 @@ in
               darkreader
               grammarly
               keepassxc-browser
+              libredirect
               refined-github
               sponsorblock
               translate-web-pages
