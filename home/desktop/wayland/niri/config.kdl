@@ -303,7 +303,7 @@ binds {
     Mod+Alt+Space hotkey-overlay-title="Calcuate: rofi" {
         spawn-sh "pkill rofi || rofi -show calc -modi calc -no-show-match -no-sort -no-history -calc-command \"echo -n '{result}' | wl-copy\""
     }
-    Mod+Shift+Escape hotkey-overlay-title="Lock the Screen: hyprlock" {
+    Mod+Shift+Escape hotkey-overlay-title="Lock session" allow-when-locked=true {
         spawn "loginctl" "lock-session"
     }
     Mod+Ctrl+I allow-when-locked=true hotkey-overlay-title="Toggle inhibit lid sleep" {
