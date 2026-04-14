@@ -23,10 +23,12 @@
         worker.enable = true;
       };
       calibre-web.enable = true;
+      glance.enable = true;
       immich.enable = true;
       miniflux.enable = true;
       qbittorrent.enable = true;
       seerr.enable = true;
     };
+    homelab.rootService = config.services.glance.settings.server.port;
   };
 }
