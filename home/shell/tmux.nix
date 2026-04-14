@@ -26,6 +26,9 @@
         set -g focus-events on
         set -g default-terminal "tmux-256color"
 
+        set -g status-left-length 100
+        set -g status-right-length 100
+
         bind-key -n M-w choose-tree -w
         bind-key -n M-n new-window
         bind-key -n M-q kill-pane
