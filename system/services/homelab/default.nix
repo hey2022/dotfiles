@@ -24,8 +24,9 @@
       };
       calibre-web.enable = true;
       immich.enable = true;
-      seerr.enable = true;
+      miniflux.enable = true;
       qbittorrent.enable = true;
+      seerr.enable = true;
     };
   };
 }
