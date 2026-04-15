@@ -15,6 +15,15 @@
         ];
       };
     };
+    keymap = {
+      mgr.prepend_keymap = [
+        {
+          on = "<C-n>";
+          run = "shell -- ripdrag %s -xan 2>/dev/null &";
+          desc = "Drag and drop selected files";
+        }
+      ];
+    };
   };
   home.packages = with pkgs; [
     parallel
