@@ -25,5 +25,6 @@
     desktop-file-utils
     localsend
     moonlight-qt
+    ripdrag
   ];
 }
