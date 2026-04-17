@@ -39,13 +39,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "keepassxc-snapshot";
-  version = "2.8.0-unstable-2025-03-15";
+  version = "2.8.0-unstable-2025-04-17";
 
   src = fetchFromGitHub {
     owner = "keepassxreboot";
     repo = "keepassxc";
-    rev = "379be00127db60b1ddee9c67f4bfc49c15db8236";
-    hash = "sha256-Lf0fNflOMYU3WSzPmia2l3urp0/s3UHZOPx5MzDUPFs=";
+    rev = "007839bd909a373710da4a06bff414c5002e6cf0";
+    hash = "sha256-lnhtnE0g+IBGEADoeIi0yeUFfVJ1zrI6OPz2LAYSpAk=";
   };
 
   env =
@@ -68,10 +68,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   patches = [
     ./darwin.patch
-    (fetchpatch2 {
-      url = "https://patch-diff.githubusercontent.com/raw/keepassxreboot/keepassxc/pull/13161.patch";
-      hash = "sha256-HjFuaJZwcr8JZLtdIlet7lYRWmHpoXqPg/0eC9LIjH8=";
-    })
   ];
 
   cmakeFlags = [
