@@ -9,7 +9,6 @@
     ./niri.nix
     ./stylix.nix
     ./sunshine.nix
-    ./wallpaper-engine.nix
     ./wluma.nix
     ./ydotool.nix
   ];
