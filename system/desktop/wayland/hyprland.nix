@@ -13,5 +13,8 @@ in
       hyprlock.enable = true;
       ydotool.enable = true;
     };
+    services = {
+      espanso.enable = true;
+    };
   };
 }

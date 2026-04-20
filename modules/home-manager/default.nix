@@ -1,6 +1,7 @@
 {
   imports = [
     ./autoUpgrade.nix
+    ./espanso-config.nix
     ./niri.nix
     ./wayscriber.nix
   ];
