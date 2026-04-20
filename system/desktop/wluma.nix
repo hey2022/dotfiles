@@ -1,3 +1,0 @@
-{
-  programs.wluma.enable = false;
-}
