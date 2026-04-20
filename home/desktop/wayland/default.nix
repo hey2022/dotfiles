@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
+    ./espanso
     ./hypridle.nix
     ./hyprland
     ./hyprlock
@@ -9,10 +10,10 @@
     ./swaylock.nix
     ./swaync.nix
     ./waybar
+    ./wayscriber.nix
     ./wlogout.nix
     ./wlsunset.nix
     ./wluma.nix
-    ./wayscriber.nix
   ];
   home.packages = with pkgs; [
     brightnessctl

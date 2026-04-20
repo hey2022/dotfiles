@@ -14,7 +14,10 @@ in
       hyprlock.enable = true;
       ydotool.enable = true;
     };
-    services.gnome.gnome-keyring.enable = false;
+    services = {
+      espanso.enable = true;
+      gnome.gnome-keyring.enable = false;
+    };
     environment.systemPackages = with pkgs; [
       labwc
       xwayland-satellite

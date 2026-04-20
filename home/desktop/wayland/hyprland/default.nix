@@ -37,8 +37,9 @@ in
     ]
     ++ lib.optionals cfg.uwsm [ pkgs.uwsm ];
     programs = {
-      rofi.enable = true;
+      espanso-config.enable = true;
       ghostty.enable = true;
+      rofi.enable = true;
       waybar.enable = true;
       wlogout.enable = true;
     };

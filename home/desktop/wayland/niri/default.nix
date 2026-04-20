@@ -14,8 +14,9 @@ in
       configFile = config.lib.hm.mkFlakeSymlink ./config.kdl;
     };
     programs = {
-      rofi.enable = true;
+      espanso-config.enable = true;
       foot.enable = true;
+      rofi.enable = true;
       waybar.enable = true;
       wlogout.enable = true;
     };
