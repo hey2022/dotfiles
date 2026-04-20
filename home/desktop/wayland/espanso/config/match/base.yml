@@ -1,0 +1,8 @@
+matches:
+  - trigger: ":ip"
+    replace: "{{ip}}"
+    vars:
+      - name: ip
+        type: shell
+        params:
+          cmd: "curl 'https://icanhazip.com'"
