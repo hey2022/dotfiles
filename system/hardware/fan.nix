@@ -42,12 +42,12 @@ in
         ];
       };
     };
-    # https://github.com/vmatare/thinkfan/issues/181#issuecomment-1356350908
-    systemd.services.thinkfan-sleep = lib.mkIf cfg.enable {
-      serviceConfig.ExecStart = lib.mkForce [
-        "${lib.getExe' pkgs.procps "pkill"} -x -winch thinkfan"
-        "${lib.getExe' pkgs.coreutils "sleep"} 1"
-      ];
-    };
+    systemd.services.thinkfan-sleep.serviceConfig.ExecStart = lib.mkForce [
+      ""
+      "${lib.getExe' pkgs.procps "pkill"} -x -pwr thinkfan"
+      "${lib.getExe' pkgs.util-linux "logger"} -t '%N' \"Setting /proc/acpi/ibm/fan to 'level auto'\""
+      "${pkgs.runtimeShell} -c 'echo \"level auto\" > /proc/acpi/ibm/fan'"
+      "${lib.getExe' pkgs.coreutils "sleep"} 1"
+    ];
   };
 }
