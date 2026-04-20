@@ -87,6 +87,22 @@ output "eDP-1" {
 output "PNP(YCT) Sculptor 0000" {
     mode "2560x1600@119.998"
 }
+recent-windows {
+    binds {
+        Alt+Tab {
+            next-window
+        }
+        Alt+Shift+Tab {
+            previous-window
+        }
+        Alt+grave {
+            next-window filter="app-id"
+        }
+        Alt+Shift+grave {
+            previous-window filter="app-id"
+        }
+    }
+}
 workspace "⠁"
 workspace "⠃"
 workspace "⠉"
