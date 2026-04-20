@@ -14,6 +14,12 @@ let
       url = "https://patch-diff.githubusercontent.com/raw/NixOS/nixpkgs/pull/507286.patch";
       hash = "sha256-jBJOiAP0T9lfLqeVF+WZai+xCI/26DO/otMrG6DORyU=";
     })
+    # https://nixpk.gs/pr-tracker.html?pr=511721
+    (pkgs.fetchpatch2 {
+      name = "nixos/espanso: add extraPackages option";
+      url = "https://patch-diff.githubusercontent.com/raw/NixOS/nixpkgs/pull/511721.patch";
+      hash = "sha256-6ohUS46Yc3Vno+kelWd+epS4b8y116u4BcVIjUNG2J0=";
+    })
   ];
   home-manager-patches = [ ];
   nixpkgs-patched =
