@@ -11,6 +11,7 @@ in
         withUWSM = true;
       };
       hyprlock.enable = true;
+      ydotool.enable = true;
     };
   };
 }
