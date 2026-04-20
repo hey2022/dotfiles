@@ -11,11 +11,11 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "gitbutler-bin";
-  version = "0.19.3";
+  version = "0.19.8";
 
   src = fetchurl {
-    url = "https://releases.gitbutler.com/releases/release/${finalAttrs.version}-2869/linux/x86_64/GitButler_${finalAttrs.version}_amd64.deb";
-    hash = "sha256-K7d5HO5dm/N0a2r5TaJh+lE0wrwi+GzDPer+n/YOtL0=";
+    url = "https://releases.gitbutler.com/releases/release/${finalAttrs.version}-2983/linux/x86_64/GitButler_${finalAttrs.version}_amd64.deb";
+    hash = "sha256-r0C2sSoH4nLAQ1OGloZYClvu0++dvbblyVzKgjXjjAc=";
   };
 
   nativeBuildInputs = [
@@ -37,8 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
 
     wrapProgram "$out/bin/${finalAttrs.meta.mainProgram}" \
       --prefix GIO_EXTRA_MODULES : "${glib-networking}/lib/gio/modules"
-
-    ln -s $out/bin/${finalAttrs.meta.mainProgram} $out/bin/but
 
     runHook postInstall
   '';
