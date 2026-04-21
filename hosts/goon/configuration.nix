@@ -13,7 +13,6 @@
     ./sops.nix
     ../../system
     ../../system/desktop
-    ../../system/network/mac-spoof.nix
   ];
 
   boot.kernelParams = [ "i915.enable_dc=0" ];

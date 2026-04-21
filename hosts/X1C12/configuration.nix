@@ -5,6 +5,10 @@
   ...
 }:
 
+let
+  # MAXHUB-A401SE
+  spoofed-mac-address = "DC:EC:4F:89:20:AF";
+in
 {
   imports = [
     ./hardware-configuration.nix
@@ -15,7 +19,13 @@
     ../../system/desktop
   ];
 
-  networking.hostName = "X1C12";
+  networking = {
+    hostName = "X1C12";
+    networkmanager = {
+      wifi.macAddress = spoofed-mac-address;
+      ethernet.macAddress = spoofed-mac-address;
+    };
+  };
   time.timeZone = "Asia/Shanghai";
   system.stateVersion = "25.11";
 
