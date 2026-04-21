@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
     determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
