@@ -24,21 +24,19 @@ tun:
 dns:
   enable: true
   listen: :53
-  ipv6: true
-  prefer-h3: true
-  respect-rules: false # Strongly not recommended to use it with prefer-h3.
+  ipv6: false
+  cache-algorithm: arc
+  respect-rules: true
   default-nameserver:
-    - system
-    - 223.6.6.6
-    - 8.8.8.8
-    - 2400:3200::1
-    - 2001:4860:4860::8888
+    - 1.12.12.12
+    - 223.5.5.5
   nameserver:
-    - 8.8.8.8
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
-  direct-nameserver: []
-  direct-nameserver-follow-policy: false
+  nameserver-policy:
+    "geosite:cn":
+      - https://doh.pub/dns-query
+      - https://dns.alidns.com/dns-query
   enhanced-mode: fake-ip
   fake-ip-filter-mode: blacklist
   fake-ip-range: 198.18.0.1/16
@@ -48,25 +46,27 @@ dns:
     - "*.arpa"
     - time.*.com
     - ntp.*.com
-    - time.*.com
     - +.market.xiaomi.com
     - localhost.ptlogin2.qq.com
     - "*.msftncsi.com"
     - www.msftconnecttest.com
-  fallback: []
+  fallback:
+    - https://dns.google/dns-query
+    - https://dns.quad9.net/dns-query
   fallback-filter:
     domain:
       - +.google.com
       - +.youtube.com
     geoip: true
     geoip-code: CN
+    geosite:
+      - gfw
     ipcidr:
       - 240.0.0.0/4
       - 0.0.0.0/32
   proxy-server-nameserver:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
-    - tls://223.5.5.5
 sniffer:
   enable: true
   sniff:
