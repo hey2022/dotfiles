@@ -11,7 +11,6 @@ in
   imports = [
     ./android.nix
     ./cpp.nix
-    ./cyber-security.nix
     ./emacs
     ./gpg.nix
     ./java.nix
@@ -45,6 +44,7 @@ in
       hyperfine
       just
       onefetch
+      rustscan
       tokei
       wget
     ];
