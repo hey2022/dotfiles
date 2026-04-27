@@ -43,6 +43,7 @@
     ${config.homelab.mediaDir} = {
       device = "/mnt/elements/media";
       depends = [ "/mnt/elements" ];
+      fsType = "none";
       options = [
         "bind"
         "nofail"
