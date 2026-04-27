@@ -5,7 +5,7 @@
 }:
 {
   programs.rofi = {
-    configPath = "";
+    configPath = "${config.xdg.configHome}/rofi/.hm-config.rasi";
     plugins = with pkgs; [
       rofi-calc
       rofi-emoji
