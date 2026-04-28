@@ -6,3 +6,5 @@ matches:
         type: shell
         params:
           cmd: "curl 'https://icanhazip.com'"
+  - trigger: ";proof"
+    replace: "{{c99::::proof}}"
