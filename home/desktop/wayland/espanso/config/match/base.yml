@@ -8,3 +8,7 @@ matches:
           cmd: "curl 'https://icanhazip.com'"
   - trigger: ";proof"
     replace: "{{c99::::proof}}"
+  - trigger: ";ml"
+    replace: "::more/less"
+  - trigger: ";hl"
+    replace: "::higher/lower"
