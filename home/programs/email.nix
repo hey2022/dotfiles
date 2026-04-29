@@ -93,6 +93,7 @@
     };
     settings = {
       "general.useragent.compatMode.firefox" = true;
+      "mail.server.default.check_all_folders_for_new" = true;
     };
   };
   home.packages = [
