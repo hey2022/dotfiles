@@ -15,12 +15,18 @@ anki-utils.buildAnkiAddon (finalAttrs: {
     hash = "sha256-SINHUSVDfUPX5pCZ2qMLiUjUG7CbHLawmlvSY2LPenk=";
     fetchSubmodules = true;
   };
+  patches = [ ./pen.patch ];
+  patchFlags = [
+    "-p1"
+    "-d"
+    ".."
+  ];
   sourceRoot = "${finalAttrs.src.name}/AnkiDraw";
   passthru.updateScript = nix-update-script { };
   meta = {
     description = "Draw and write using mouse and stylus with pressure support in Anki";
     homepage = "https://github.com/Rytisgit/Anki-StylusDraw";
     license = lib.licenses.gpl3Only;
-    maintainers = with lib.maintainers; [ ];
+    maintainers = with lib.maintainers; [ hey2022 ];
   };
 })
