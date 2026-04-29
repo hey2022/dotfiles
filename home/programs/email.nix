@@ -34,8 +34,8 @@
       thunderbird = {
         enable = true;
         settings = id: {
-          "mail.smtpserver.smtp_${id}.authMethod" = 10;
-          "mail.server.server_${id}.authMethod" = 10;
+          "mail.smtpserver.smtp_${id}.authMethod" = 10; # OAuth2
+          "mail.server.server_${id}.authMethod" = 10; # OAuth2
         };
       };
     };
@@ -55,8 +55,31 @@
       thunderbird = {
         enable = true;
         settings = id: {
-          "mail.smtpserver.smtp_${id}.authMethod" = 10;
-          "mail.server.server_${id}.authMethod" = 10;
+          "mail.smtpserver.smtp_${id}.authMethod" = 10; # OAuth2
+          "mail.server.server_${id}.authMethod" = 10; # OAuth2
+        };
+      };
+    };
+    # https://answers.uillinois.edu/illinois/page.php?id=150086
+    "jameyhe2@illinois.edu" = {
+      realName = "Yiheng He";
+      address = "jameyhe2@illinois.edu";
+      userName = "jameyhe2@illinois.edu";
+      imap = {
+        host = "outlook.office365.com";
+        port = 143;
+        tls.useStartTls = true;
+      };
+      smtp = {
+        host = "smtp.office365.com";
+        port = 587;
+        tls.useStartTls = true;
+      };
+      thunderbird = {
+        enable = true;
+        settings = id: {
+          "mail.smtpserver.smtp_${id}.authMethod" = 10; # OAuth2
+          "mail.server.server_${id}.authMethod" = 10; # OAuth2
         };
       };
     };
