@@ -1,0 +1,25 @@
+diff --git i/AnkiDraw/__init__.py w/AnkiDraw/__init__.py
+index 512c134..3afccfc 100644
+--- i/AnkiDraw/__init__.py
++++ w/AnkiDraw/__init__.py
+@@ -64,11 +64,11 @@ saved_value_defaults = {
+     'ts_background_color': "#FFFFFF00",
+     'ts_x_offset': 2,
+     'ts_location': 1,
+-    'ts_pen1_color': "#272828",
++    'ts_pen1_color': "#ffffff",
+     'ts_pen2_color': "#149beb",
+     'ts_pen3_color': "#ced51a",
+     'ts_pen4_color': "#da13a8",
+-    'ts_pen1_width': 4,
++    'ts_pen1_width': 2,
+     'ts_pen2_width': 6,
+     'ts_pen3_width': 20,
+     'ts_pen4_width': 8,
+@@ -2304,4 +2304,4 @@ def ts_onload():
+     addHook("showAnswer", resize_js)
+     ts_setup_menu()
+ 
+-ts_onload()
+\ No newline at end of file
++ts_onload()
