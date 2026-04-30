@@ -32,7 +32,7 @@ in
       uwsm = true;
     };
     home.packages = [
-      inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
+      inputs.hyprland-contrib.packages.${pkgs.stdenv.hostPlatform.system}.grimblast
       pkgs.cosmic-files
     ]
     ++ lib.optionals cfg.uwsm [ pkgs.uwsm ];

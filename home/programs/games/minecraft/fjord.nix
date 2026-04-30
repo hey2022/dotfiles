@@ -6,7 +6,7 @@
   ...
 }:
 let
-  fjordPackages = inputs.fjordlauncher.packages.${pkgs.system};
+  fjordPackages = inputs.fjordlauncher.packages.${pkgs.stdenv.hostPlatform.system};
 in
 {
   options.programs.fjord = {
