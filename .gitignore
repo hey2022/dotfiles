@@ -1,2 +1,4 @@
 **/doom/config.el
 /.projectile-cache.eld
+
+/.pre-commit-config.yaml
