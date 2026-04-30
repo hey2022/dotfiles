@@ -12,6 +12,7 @@ in
   imports = [ ./extensions ];
   programs.firefox = {
     enable = true;
+    configPath = "${config.xdg.configHome}/mozilla/firefox";
     languagePacks = [
       "en-GB"
       "zh-CN"
@@ -91,10 +92,10 @@ in
   };
   home = {
     file = {
-      ".mozilla/firefox/${profile}/chrome/firefox-ui-fix" = {
+      "${config.programs.firefox.configPath}/${profile}/chrome/firefox-ui-fix" = {
         source = inputs.firefox-ui-fix;
       };
-      ".mozilla/firefox/${profile}/chrome/ff-ultima" = {
+      "${config.programs.firefox.configPath}/${profile}/chrome/ff-ultima" = {
         source = inputs.ff-ultima;
       };
     };
