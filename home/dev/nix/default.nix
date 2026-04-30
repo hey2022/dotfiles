@@ -12,7 +12,7 @@
     deadnix
     flake-checker
     hydra-check
-    inputs.nix-alien.packages.${system}.nix-alien
+    inputs.nix-alien.packages.${stdenv.hostPlatform.system}.nix-alien
     nh
     nix-eval-jobs
     nix-fast-build

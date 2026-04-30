@@ -17,7 +17,7 @@
     home.packages = with pkgs; [
       ap-dl
       apcap
-      inputs.tls-xb.packages.${pkgs.system}.default
+      inputs.tls-xb.packages.${pkgs.stdenv.hostPlatform.system}.default
       zotero
     ];
   };
