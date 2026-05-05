@@ -6,7 +6,6 @@
   anking-notes-addon = callPackage ./anking-notes-addon { };
   fsrs4anki-helper = callPackage ./fsrs4anki-helper { };
   mds-time-left = callPackage ./mds-time-left { };
-  popup-dictionary = callPackage ./popup-dictionary { };
   search-stats-extended = callPackage ./search-stats-extended { };
   search-stats-extended-bin = callPackage ./search-stats-extended-bin { };
 }
