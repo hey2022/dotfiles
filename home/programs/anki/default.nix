@@ -27,9 +27,6 @@
           userFiles = ./user-files/anki-to-pdf;
         })
         review-heatmap
-        (popup-dictionary.withConfig {
-          config = lib.importJSON ./config/popup-dictionary.json;
-        })
         (fsrs4anki-helper.withConfig {
           config = lib.importJSON ./config/fsrs-helper.json;
         })
