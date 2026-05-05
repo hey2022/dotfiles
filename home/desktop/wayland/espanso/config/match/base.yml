@@ -12,3 +12,5 @@ matches:
     replace: "::more/less"
   - trigger: ";hl"
     replace: "::higher/lower"
+  - trigger: ";id"
+    replace: "::increases/decreases"
