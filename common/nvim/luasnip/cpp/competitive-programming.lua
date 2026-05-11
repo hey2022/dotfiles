@@ -14,7 +14,6 @@ ls.add_snippets("cpp", {
         using namespace std;
 
         #ifdef LOCAL
-        #define DBG_MACRO_NO_WARNING
         #include "dbg.h"
         #else
         #define dbg(...) __VA_ARGS__
