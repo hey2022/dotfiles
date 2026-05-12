@@ -33,6 +33,37 @@ ls.add_snippets("cpp", {
             i(0)
         )
     ),
+    s("d4", {
+        t({
+            "const int dx[] = { 0,  1,  0, -1};",
+            "const int dy[] = {-1,  0,  1,  0};",
+        }),
+    }),
+    s("d8", {
+        t({
+            "const int dx[] = { 0,  1,  1,  1,  0, -1, -1, -1};",
+            "const int dy[] = {-1, -1,  0,  1,  1,  1,  0, -1};",
+        }),
+    }),
+    s(
+        "bounds_check",
+        fmt(
+            [[
+        if ({} >= 0 && {} < {} && {} >= 0 && {} < {}) {{
+            {}
+        }}
+        ]],
+            {
+                i(1, "nx"),
+                rep(1),
+                i(2, "w"),
+                i(3, "ny"),
+                rep(3),
+                i(4, "h"),
+                i(0),
+            }
+        )
+    ),
     s({ trig = "ll", snippetType = "autosnippet" }, t("long long")),
     s({ trig = "ull", snippetType = "autosnippet" }, t("unsigned long long")),
     s({ trig = "dbl", snippetType = "autosnippet" }, t("double")),
