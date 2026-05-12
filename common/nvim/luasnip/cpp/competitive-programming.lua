@@ -86,7 +86,37 @@ ls.add_snippets("cpp", {
     s({ trig = "vvb", snippetType = "autosnippet" }, t("vector<vector<bool>>")),
     s({ trig = "vvs", snippetType = "autosnippet" }, t("vector<vector<string>>")),
     s({ trig = "vvc", snippetType = "autosnippet" }, t("vector<vector<char>>")),
-
+    s(
+        { trig = "iff", snippetType = "autosnippet" },
+        fmt(
+            [[
+        if ({}) {{
+            {}
+        }}
+        ]],
+            {
+                i(1, "cond"),
+                i(2),
+            }
+        )
+    ),
+    s(
+        { trig = "ife", snippetType = "autosnippet" },
+        fmt(
+            [[
+        if ({}) {{
+            {}
+        }} else {{
+            {}
+        }}
+        ]],
+            {
+                i(1, "cond"),
+                i(2),
+                i(3),
+            }
+        )
+    ),
     s(
         { trig = "for", snippetType = "autosnippet" },
         fmt(
