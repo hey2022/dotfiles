@@ -132,7 +132,7 @@ ls.add_snippets("cpp", {
         )
     ),
     s(
-        { trig = "for", snippetType = "autosnippet" },
+        { trig = "forr", snippetType = "autosnippet" },
         fmt(
             [[
         for (int {} = {}; {} < {}; ++{}) {{
@@ -143,7 +143,7 @@ ls.add_snippets("cpp", {
         )
     ),
     s(
-        { trig = "efor", snippetType = "autosnippet" },
+        { trig = "for=", snippetType = "autosnippet" },
         fmt(
             [[
         for (int {} = {}; {} <= {}; ++{}) {{
@@ -154,7 +154,7 @@ ls.add_snippets("cpp", {
         )
     ),
     s(
-        { trig = "rof", snippetType = "autosnippet" },
+        { trig = "roff", snippetType = "autosnippet" },
         fmt(
             [[
         for (int {} = {} - 1; {} >= {}; --{}) {{
@@ -165,7 +165,7 @@ ls.add_snippets("cpp", {
         )
     ),
     s(
-        { trig = "erof", snippetType = "autosnippet" },
+        { trig = "rof=", snippetType = "autosnippet" },
         fmt(
             [[
         for (int {} = {}; {} >= {}; --{}) {{
@@ -176,7 +176,7 @@ ls.add_snippets("cpp", {
         )
     ),
     s(
-        { trig = "each", snippetType = "autosnippet" },
+        { trig = "fore", snippetType = "autosnippet" },
         fmt(
             [[
         for (auto& {} : {}) {{
