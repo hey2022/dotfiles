@@ -118,6 +118,20 @@ ls.add_snippets("cpp", {
         )
     ),
     s(
+        { trig = "while ", snippetType = "autosnippet" },
+        fmt(
+            [[
+        while ({}) {{
+            {}
+        }}
+        ]],
+            {
+                i(1, "cond"),
+                i(2),
+            }
+        )
+    ),
+    s(
         { trig = "for", snippetType = "autosnippet" },
         fmt(
             [[
