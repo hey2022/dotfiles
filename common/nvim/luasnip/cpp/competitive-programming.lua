@@ -34,6 +34,7 @@ ls.add_snippets("cpp", {
         )
     ),
     s({ trig = "ll", snippetType = "autosnippet" }, t("long long")),
+    s({ trig = "ull", snippetType = "autosnippet" }, t("unsigned long long")),
     s({ trig = "ldb", snippetType = "autosnippet" }, t("long double")),
     s({ trig = "str", snippetType = "autosnippet" }, t("string")),
 
