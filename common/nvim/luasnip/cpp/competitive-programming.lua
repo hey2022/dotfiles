@@ -118,7 +118,7 @@ ls.add_snippets("cpp", {
         )
     ),
     s(
-        { trig = "while ", snippetType = "autosnippet" },
+        { trig = "whilee", snippetType = "autosnippet" },
         fmt(
             [[
         while ({}) {{
