@@ -3,18 +3,22 @@ import Quickshell.Widgets
 import QtQuick
 import QtQuick.Controls
 import QtMultimedia
+import Quickshell.Io
 
 Scope {
     id: root
     property bool isTask: true
     property int time: 0
     property int breakTime: 0
+    property bool showTimer: true
 
     Variants {
         model: Quickshell.screens
         PanelWindow {
+            visible: root.showTimer
+
             property var modelData
-            property real margin: 5
+            property int margin: 5
             screen: modelData
             anchors {
                 bottom: true
@@ -123,5 +127,12 @@ Scope {
     SoundEffect {
         id: alarmSound
         source: "assets/sounds/alarm.wav"
+    }
+
+    IpcHandler {
+        target: "flowtime"
+        function toggle(): void {
+            root.showTimer ^= true;
+        }
     }
 }
