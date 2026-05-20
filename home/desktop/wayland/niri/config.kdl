@@ -752,4 +752,7 @@ binds {
     Mod+Shift+N {
         spawn "swaync-client" "-d"
     }
+    Mod+Grave hotkey-overlay-title="Toggle Flowtime" {
+        spawn "qs" "ipc" "call" "flowtime" "toggle"
+    }
 }
