@@ -3,6 +3,7 @@ import QtQuick.Layouts
 import Quickshell
 import Quickshell.Services.Pipewire
 import Quickshell.Widgets
+import Quickshell.Wayland
 
 Scope {
     id: root
@@ -48,6 +49,9 @@ Scope {
 
             // An empty click mask prevents the window from blocking mouse events.
             mask: Region {}
+
+            WlrLayershell.layer: WlrLayer.Overlay
+            exclusionMode: ExclusionMode.Ignore
 
             Rectangle {
                 anchors.fill: parent
