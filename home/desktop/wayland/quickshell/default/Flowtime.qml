@@ -40,10 +40,16 @@ Scope {
                     anchors.centerIn: parent
                     radius: 10
                     margin: 5
-                    color: "#80000000"
+                    color: "#c0000000"
                     border {
                         width: 1
-                        color: timer.running ? "#ffffff" : "#000000"
+                        color: {
+                            if (root.isTask) {
+                                return timer.running ? "#ff7287fd" : "#807287fd";
+                            } else {
+                                return timer.running ? "#ff8839ef" : "#808839ef";
+                            }
+                        }
                     }
                     Text {
                         id: timerDisplay
@@ -57,7 +63,7 @@ Scope {
                             let time = root.isTask ? root.time : root.breakTime;
                             let minutes = Math.trunc(time / 60);
                             let seconds = Math.abs(time) % 60;
-                            return `${root.isTask ? "Focus" : "Break"}: ${time < 0 ? "-" : ""}${String(Math.abs(minutes)).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+                            return `${time < 0 ? "-" : ""}${String(Math.abs(minutes)).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
                         }
                     }
                 }
