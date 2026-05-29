@@ -69,6 +69,7 @@ in
     fish.enable = true;
     niri.enable = true;
   };
+  virtualisation.waydroid.enable = true;
 
   services = {
     fprintd.enable = true;

@@ -3,6 +3,7 @@
 {
   imports = [
     inputs.determinate.nixosModules.default
+    inputs.nur.modules.nixos.default
     ../common/nix.nix
   ];
   nix = {
