@@ -68,7 +68,7 @@ ls.add_snippets("cpp", {
     s({ trig = "ull", snippetType = "autosnippet" }, t("unsigned long long")),
     s({ trig = "dbl", snippetType = "autosnippet" }, t("double")),
     s({ trig = "ldb", snippetType = "autosnippet" }, t("long double")),
-    s({ trig = "str", snippetType = "autosnippet" }, t("string")),
+    s({ trig = "str ", snippetType = "autosnippet" }, t("string ")),
 
     s({ trig = "pair", snippetType = "autosnippet" }, fmt("pair<{}, {}> {}", { i(1), i(2), i(0) })),
     s({ trig = "arr", snippetType = "autosnippet" }, fmt("arr<{}> {}", { i(1), i(0) })),
