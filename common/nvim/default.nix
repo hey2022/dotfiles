@@ -77,7 +77,10 @@ let
         ];
         # but you can choose which ones you want
         # per nvim package you export
-        debug = with pkgs; {
+        debug = {
+          cpp = with pkgs; [
+            vscode-extensions.vadimcn.vscode-lldb
+          ];
         };
         format = with pkgs; [
           prettier
@@ -426,6 +429,9 @@ let
               rust = true;
               typst = true;
             };
+            debug = {
+              cpp = true;
+            };
             lint = true;
             format = true;
             test = true;
@@ -438,6 +444,9 @@ let
               nixpkgs = "import ${pkgs.path} {}";
               nixos_options = ''(builtins.getFlake "${builtins.toString inputs.self.outPath}").nixosConfigurations.desktop.options'';
               home_manager_options = ''(builtins.getFlake "${builtins.toString inputs.self.outPath}").homeConfigurations."yiheng@desktop".options'';
+            };
+            path = {
+              codelldb = pkgs.vscode-extensions.vadimcn.vscode-lldb;
             };
           };
         };
