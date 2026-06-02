@@ -4,7 +4,9 @@ return {
         for_cat = "general.extra",
         event = "DeferredUIEnter",
         after = function(_)
-            require("hardtime").setup()
+            require("hardtime").setup({
+                disable_mouse = false,
+            })
         end,
     },
     {
