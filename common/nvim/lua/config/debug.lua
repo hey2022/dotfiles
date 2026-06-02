@@ -97,8 +97,25 @@ require("lze").load({
                 -- e.g. 80 to position at column 80, see `:h nvim_buf_set_extmark()`
             })
 
-            -- NOTE: Install lang specific config
-            -- either in here, or in a separate plugin spec as demonstrated for go below.
+            if nixCats("debug.cpp") then
+                dap.adapters.codelldb = {
+                    type = "executable",
+                    command = nixCats.extra("path.codelldb")
+                        .. "/share/vscode/extensions/vadimcn.vscode-lldb/adapter/codelldb",
+                }
+                dap.configurations.cpp = {
+                    {
+                        name = "Launch file",
+                        type = "codelldb",
+                        request = "launch",
+                        program = function()
+                            return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+                        end,
+                        cwd = "${workspaceFolder}",
+                        stopOnEntry = false,
+                    },
+                }
+            end
         end,
     },
 })
