@@ -239,6 +239,7 @@ let
                 gitattributes
                 gitcommit
                 gitignore
+                glsl
                 gpg
                 hjson
                 hlsl
