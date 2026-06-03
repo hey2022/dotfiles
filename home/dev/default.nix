@@ -10,7 +10,7 @@ in
 {
   imports = [
     ./android.nix
-    ./cpp.nix
+    ./cpp
     ./emacs
     ./gpg.nix
     ./java.nix
