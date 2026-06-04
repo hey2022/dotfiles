@@ -13,5 +13,6 @@
       gamescope.enable = true;
       gamemode.enable = true;
     };
+    services.uuplugin.enable = true;
   };
 }
