@@ -23,6 +23,7 @@
         ticktick-cracked = pkgs.callPackage ./ticktick-cracked { };
         gitbutler-bin = pkgs.callPackage ./gitbutler-bin { };
         keepassxc-snapshot = pkgs.callPackage ./keepassxc-snapshot { };
+        uuplugin = pkgs.callPackage ./uuplugin { };
       }
       // (import ./anki { inherit (pkgs) callPackage; });
     };
