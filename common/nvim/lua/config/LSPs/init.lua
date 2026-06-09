@@ -133,4 +133,11 @@ require("lze").load({
             filetypes = { "python" },
         },
     },
+    {
+        "glsl_analyzer",
+        for_cat = "languages.glsl",
+        lsp = {
+            filetypes = { "glsl", "vert", "tesc", "tese", "frag", "geom", "comp" },
+        },
+    },
 })
