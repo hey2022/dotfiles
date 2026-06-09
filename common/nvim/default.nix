@@ -90,6 +90,9 @@ let
           cpp = with pkgs; [
             clang-tools
           ];
+          glsl = with pkgs; [
+            glsl_analyzer
+          ];
           python = with pkgs; [
             basedpyright
             ruff
@@ -420,6 +423,7 @@ let
             };
             languages = {
               cpp = true;
+              glsl = true;
               latex = true;
               lua = true;
               markdown = true;
