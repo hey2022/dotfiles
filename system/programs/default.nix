@@ -4,6 +4,7 @@
     ./beets.nix
     ./localsend.nix
     ./productivity
+    ./steam.nix
   ];
   environment.systemPackages = with pkgs; [
     fastfetch
