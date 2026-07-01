@@ -9,4 +9,5 @@
     ./sunshine.nix
     ./wayland
   ];
+  services.gvfs.enable = true;
 }
