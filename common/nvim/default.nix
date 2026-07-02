@@ -10,9 +10,7 @@ let
   # import nixpkgs { config = extra_pkg_config; inherit system; }
   # will not apply to module imports
   # as that will have your system values
-  extra_pkg_config = {
-    # allowUnfree = true;
-  };
+  extra_pkg_config = import ../../common/nixpkgs.nix;
   # management of the system variable is one of the harder parts of using flakes.
 
   # so I have done it here in an interesting way to keep it out of the way.
