@@ -25,6 +25,7 @@
       calibre-web.enable = true;
       glance.enable = true;
       immich.enable = true;
+      karakeep.enable = false; # https://github.com/NixOS/nixpkgs/issues/529285
       miniflux.enable = true;
       qbittorrent.enable = true;
       seerr.enable = true;
