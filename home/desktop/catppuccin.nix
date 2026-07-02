@@ -3,6 +3,7 @@
   imports = [ inputs.catppuccin.homeModules.catppuccin ];
   catppuccin = {
     enable = true;
+    autoEnable = false;
     flavor = "mocha";
     fcitx5.apply = false;
     hyprlock.useDefaultConfig = false;
