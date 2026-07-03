@@ -11,8 +11,8 @@ require("lze").load({
             { "<F29>", desc = "Debug: Terminate" }, -- <C-F5>
             { "<F9>", desc = "Debug: See last session result." },
             { "<F10>", desc = "Debug: Step Over" },
-            { "<F11>", desc = "Debug: Step Out" },
-            { "<F12>", desc = "Debug: Step Into" },
+            { "<F11>", desc = "Debug: Step Into" },
+            { "<F12>", desc = "Debug: Step Out" },
             { "<leader>b", desc = "Debug: Toggle Breakpoint" },
             { "<leader>B", desc = "Debug: Set Breakpoint" },
         },
