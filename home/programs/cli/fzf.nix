@@ -7,5 +7,6 @@
     enable = true;
     defaultCommand = "fd -t f";
     tmux.enableShellIntegration = true;
+    historyWidget.command = "";
   };
 }
