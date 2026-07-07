@@ -21,6 +21,14 @@ ls.add_snippets("cpp", {
         using namespace std;
 
         #ifdef LOCAL
+        #include "timer.h"
+        #else
+        struct Timer {
+            Timer(string_view = "") {}
+        };
+        #endif
+
+        #ifdef DEBUG
         #include "dbg.h"
         #else
         #define dbg(...) __VA_ARGS__
