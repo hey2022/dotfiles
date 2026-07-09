@@ -1,7 +1,7 @@
 {
   "layer": "top",
   "position": "top",
-  "modules-left": ["group/workspace-group", "niri/window", "hyprland/window"],
+  "modules-left": ["group/workspace-group", "hyprland/window"],
   "modules-center": ["clock"],
   "modules-right": [
     "group/hardware",
@@ -36,11 +36,7 @@
     }
   },
   "hyprland/workspaces": {
-    "disable-scroll": true,
-    "format": " {icon} ",
-    "format-icons": {
-      "default": ""
-    }
+    "disable-scroll": true
   },
   "niri/window": {
     "format": "{app_id}"

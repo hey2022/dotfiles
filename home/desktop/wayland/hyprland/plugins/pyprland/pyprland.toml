@@ -1,2 +1,0 @@
-[pyprland]
-plugins = ["fetch_client_menu", "magnify", "toggle_special"]

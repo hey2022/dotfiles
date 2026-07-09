@@ -9,43 +9,68 @@ let
   cfg = config.wayland.windowManager.hyprland;
 in
 {
-  imports = [
-    ./binds.nix
-    ./plugins
-    ./rules.nix
-    ./settings.nix
-    ./startup.nix
-  ];
   options = {
     wayland.windowManager.hyprland = {
-      hy3 = lib.mkEnableOption "hy3";
-      uwsm = lib.mkEnableOption "uwsm";
-      term = lib.mkPackageOption pkgs "terminal" {
-        default = "ghostty";
-      };
+      uwsm.enable = lib.mkEnableOption "uwsm";
     };
   };
   config = lib.mkIf cfg.enable {
     wayland.windowManager.hyprland = {
-      systemd.enable = false;
-      hy3 = true;
-      uwsm = true;
+      uwsm.enable = true;
+      systemd.enable = !cfg.uwsm.enable;
+      configType = "lua";
+      extraLuaFiles = {
+        "nix.lua" = {
+          content = ''
+            local nix = {
+                uwsm = ${toString cfg.uwsm.enable},
+                xresources_path = "${config.xresources.path}",
+            }
+            return nix
+          '';
+          autoLoad = false;
+        };
+        "config.lua" = {
+          content = config.lib.hm.mkFlakeSymlink ./config.lua;
+          autoLoad = false;
+        };
+        "lib.lua" = {
+          content = config.lib.hm.mkFlakeSymlink ./lib.lua;
+          autoLoad = false;
+        };
+        "autostart.lua" = {
+          content = config.lib.hm.mkFlakeSymlink ./autostart.lua;
+        };
+        "binds.lua" = {
+          content = config.lib.hm.mkFlakeSymlink ./binds.lua;
+        };
+        "wm.lua" = {
+          content = config.lib.hm.mkFlakeSymlink ./wm.lua;
+        };
+        "rules.lua" = {
+          content = config.lib.hm.mkFlakeSymlink ./rules.lua;
+        };
+        "settings.lua" = {
+          content = config.lib.hm.mkFlakeSymlink ./settings.lua;
+        };
+      };
     };
-    home.packages = [
-      inputs.hyprland-contrib.packages.${pkgs.stdenv.hostPlatform.system}.grimblast
-      pkgs.cosmic-files
-    ]
-    ++ lib.optionals cfg.uwsm [ pkgs.uwsm ];
+    home.packages = with pkgs; [
+      grimblast
+      thunar
+    ];
     programs = {
       espanso-config.enable = true;
-      ghostty.enable = true;
+      foot.enable = true;
       rofi.enable = true;
+      uwsm.enable = true;
       waybar.enable = true;
       wlogout.enable = true;
     };
     services = {
       cliphist.enable = true;
       hypridle.enable = true;
+      hyprpolkitagent.enable = true;
       swaync.enable = true;
       wlsunset.enable = true;
     };

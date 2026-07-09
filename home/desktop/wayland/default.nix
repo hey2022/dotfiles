@@ -9,6 +9,7 @@
     ./quickshell
     ./swaylock.nix
     ./swaync.nix
+    ./uwsm.nix
     ./waybar
     ./wayscriber.nix
     ./wlogout.nix
