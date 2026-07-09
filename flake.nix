@@ -58,10 +58,6 @@
       url = "github:catppuccin/nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprland-contrib = {
-      url = "github:hyprwm/contrib";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     nixCats.url = "github:BirdeeHub/nixCats-nvim";
     tls-xb = {
       url = "github:hey2022/tls-xb";

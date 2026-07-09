@@ -14,7 +14,7 @@ in
         general = {
           lock_cmd = "pgrep hyprlock --grace 3 || hyprlock --grace 3";
           before_sleep_cmd = "loginctl lock-session";
-          after_sleep_cmd = "niri msg action power-on-monitors || hyprctl dispatch dpms on";
+          after_sleep_cmd = "hyprctl dispatch 'hl.dsp.dpms({action=\"enable\"})' || niri msg action power-on-monitors";
         };
 
         listener = [
@@ -24,8 +24,8 @@ in
           }
           {
             timeout = 600;
-            on-timeout = "niri msg action power-off-monitors || hyprctl dispatch dpms off";
-            on-resume = "niri msg action power-on-monitors || hyprctl dispatch dpms on";
+            on-timeout = "hyprctl dispatch 'hl.dsp.dpms({action=\"disable\"})' || niri msg action power-off-monitors";
+            on-resume = "hyprctl dispatch 'hl.dsp.dpms({action=\"enable\"})' || niri msg action power-on-monitors";
           }
           (lib.mkIf config.host.laptop {
             timeout = 900;
