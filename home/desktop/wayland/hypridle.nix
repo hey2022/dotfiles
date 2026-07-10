@@ -12,7 +12,7 @@ in
     services.hypridle = {
       settings = {
         general = {
-          lock_cmd = "pgrep hyprlock --grace 3 || hyprlock --grace 3";
+          lock_cmd = "pgrep hyprlock || hyprlock";
           before_sleep_cmd = "loginctl lock-session";
           after_sleep_cmd = "hyprctl dispatch 'hl.dsp.dpms({action=\"enable\"})' || niri msg action power-on-monitors";
         };
@@ -53,7 +53,7 @@ in
             ];
             text = ''
               SID=$(loginctl show-user "$USER" -p Display --value)
-              for _ in {1..50}; do
+              for _ in {1..10}; do
                   loginctl lock-session "$SID"
                   LOCKED=$(loginctl show-session "$SID" -p LockedHint --value)
                   if [ "$LOCKED" = "yes" ]; then
