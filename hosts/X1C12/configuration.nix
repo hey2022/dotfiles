@@ -2,6 +2,7 @@
   inputs,
   config,
   lib,
+  pkgs,
   ...
 }:
 
@@ -59,6 +60,7 @@ in
   users.users.yiheng = {
     isNormalUser = true;
     extraGroups = config.users.baseGroups;
+    shell = pkgs.fish;
   };
 
   profiles = {

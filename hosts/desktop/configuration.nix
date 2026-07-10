@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
 {
   imports = [
@@ -18,6 +18,7 @@
 
   users.users.yiheng = {
     isNormalUser = true;
+    shell = pkgs.fish;
     extraGroups = config.users.baseGroups ++ [
       "media"
     ];
