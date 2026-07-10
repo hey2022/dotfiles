@@ -9,6 +9,9 @@ let
   cfg = config.wayland.windowManager.hyprland;
 in
 {
+  imports = [
+    ./plugins
+  ];
   options = {
     wayland.windowManager.hyprland = {
       uwsm.enable = lib.mkEnableOption "uwsm";
