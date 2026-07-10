@@ -1,5 +1,3 @@
-{ lib, pkgs, ... }:
-
 {
   home = {
     sessionPath = [
@@ -8,8 +6,6 @@
     sessionVariables = {
       VISUAL = "neovide";
       EDITOR = "nvim";
-
-      SHELL = lib.getExe pkgs.fish;
     };
   };
 }
