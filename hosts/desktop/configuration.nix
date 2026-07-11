@@ -28,6 +28,6 @@
   homelab.enable = true;
   programs = {
     fish.enable = true;
-    niri.enable = true;
+    hyprland.enable = true;
   };
 }
