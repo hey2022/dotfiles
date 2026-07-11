@@ -15,7 +15,6 @@
   programs = {
     fish.enable = true;
     fjord.enable = true;
-    niri.enable = true;
   };
   wayland.windowManager.hyprland.enable = true;
 }

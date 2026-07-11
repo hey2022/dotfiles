@@ -70,7 +70,6 @@ in
   programs = {
     fish.enable = true;
     hyprland.enable = true;
-    niri.enable = true;
   };
   virtualisation.waydroid.enable = true;
 

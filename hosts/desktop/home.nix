@@ -12,7 +12,7 @@
   };
   programs = {
     fish.enable = true;
-    niri.enable = true;
     fjord.enable = true;
   };
+  wayland.windowManager.hyprland.enable = true;
 }
