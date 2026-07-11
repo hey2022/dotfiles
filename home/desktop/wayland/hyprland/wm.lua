@@ -43,8 +43,8 @@ for i = 1, 10 do
     bind("SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
 end
 
-bind("MINUS", hl.dsp.workspace.toggle_special("scratchpad"))
-bind("SHIFT + MINUS", hl.dsp.window.move({ workspace = "special:scratchpad" }))
+bind("TAB", hl.dsp.workspace.toggle_special("scratchpad"))
+bind("SHIFT + TAB", hl.dsp.window.move({ workspace = "special:scratchpad" }))
 
 -- Scroll through existing workspaces with mainMod + scroll
 bind("mouse_down", hl.dsp.focus({ workspace = "e+1" }))

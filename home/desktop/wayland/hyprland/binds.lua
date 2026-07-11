@@ -75,4 +75,4 @@ bind(
         { toggle = true, program = "rofi" }
     )
 )
-bind("GRAVE", exec("qs ipc call flowtime toggle"))
+bind("MINUS", exec("qs ipc call flowtime toggle"))
