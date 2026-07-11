@@ -9,11 +9,16 @@
           "emacs"
           "git_repos"
           "home_manager"
+          "hyprpm"
           "nix"
           "system"
           "uv"
+          "vcpkg"
         ];
         pre_sudo = true;
+      };
+      firmware = {
+        upgrade = true;
       };
       commands = {
         "NixOS switch" = "nh os switch";
