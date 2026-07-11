@@ -20,6 +20,6 @@ hl.config({
     },
 })
 
-hl.bind(cfg.mainMod .. " + Tab", function()
+hl.bind(cfg.mainMod .. " + GRAVE", function()
     hl.plugin.scrolloverview.overview("toggle")
 end)
