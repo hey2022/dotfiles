@@ -17,6 +17,7 @@
         core = {
           fsmonitor = true;
           untrackedcache = true;
+          editor = "nvim";
         };
         diff = {
           algorithm = "histogram";
