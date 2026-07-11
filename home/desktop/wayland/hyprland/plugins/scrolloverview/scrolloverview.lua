@@ -1,4 +1,5 @@
-local cfg = require("config")
+local lib = require("lib")
+local bind = lib.bind
 
 hl.config({
     plugin = {
@@ -20,6 +21,4 @@ hl.config({
     },
 })
 
-hl.bind(cfg.mainMod .. " + GRAVE", function()
-    hl.plugin.scrolloverview.overview("toggle")
-end)
+bind("GRAVE", hl.plugin.scrolloverview.overview("toggle"))
