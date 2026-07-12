@@ -22,6 +22,7 @@ bind(
     )
 )
 
+bind("I", exec("toggle-inhibit-idle"))
 bind("SHIFT + I", exec("toggle-inhibit-lid-sleep"))
 bind("O", exec("slurp | xargs -I {} grim -g {} - | tesseract -l eng - - | wl-copy"))
 bind("A", exec("wayscriber --daemon-toggle"))
