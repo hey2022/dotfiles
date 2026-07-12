@@ -104,7 +104,7 @@
   "custom/inhibitor": {
     "format": "{}",
     "return-type": "json",
-    "interval": 5,
+    "interval": 1,
     "exec": "inhibitor-status",
     "on-click": "toggle-inhibit-idle",
     "on-click-right": "toggle-inhibit-lid-sleep"
