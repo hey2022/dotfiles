@@ -31,6 +31,21 @@ bind("SHIFT + l", hl.dsp.layout("swapcol r"))
 bind("SHIFT + k", hl.dsp.window.move({ direction = "up" }))
 bind("SHIFT + j", hl.dsp.window.move({ direction = "down" }))
 
+bind("CTRL + h", hl.dsp.focus({ monitor = "l" }))
+bind("CTRL + l", hl.dsp.focus({ monitor = "r" }))
+bind("CTRL + k", hl.dsp.focus({ monitor = "u" }))
+bind("CTRL + j", hl.dsp.focus({ monitor = "d" }))
+
+bind("CTRL + SHIFT + h", hl.dsp.window.move({ monitor = "l" }))
+bind("CTRL + SHIFT + l", hl.dsp.window.move({ monitor = "r" }))
+bind("CTRL + SHIFT + k", hl.dsp.window.move({ monitor = "u" }))
+bind("CTRL + SHIFT + j", hl.dsp.window.move({ monitor = "d" }))
+
+bind("ALT + h", hl.dsp.workspace.move({ monitor = "l" }))
+bind("ALT + l", hl.dsp.workspace.move({ monitor = "r" }))
+bind("ALT + k", hl.dsp.workspace.move({ monitor = "u" }))
+bind("ALT + j", hl.dsp.workspace.move({ monitor = "d" }))
+
 bind("COMMA", hl.dsp.layout("consume"))
 bind("PERIOD", hl.dsp.layout("expel"))
 bind("SHIFT + PERIOD", hl.dsp.layout("promote"))

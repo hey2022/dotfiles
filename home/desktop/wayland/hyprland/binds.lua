@@ -6,7 +6,6 @@ local exec = lib.exec
 bind("RETURN", exec(cfg.terminal, { uwsm = true }))
 bind("SHIFT + RETURN", exec("neovide", { uwsm = true }))
 bind("ALT + RETURN", exec("neovim-anywhere", { uwsm = true }))
-bind("ALT + L", exec("neovim-anywhere tex", { uwsm = true }))
 bind("SHIFT + E", exec("loginctl terminate-session $XDG_SESSION_ID"))
 bind("ESCAPE", exec("loginctl lock-session"))
 bind("SHIFT + ESCAPE", exec("wlogout -p layer-shell", { toggle = true }))
@@ -23,7 +22,7 @@ bind(
     )
 )
 
-bind("SHIFT+I", exec("toggle-inhibit-lid-sleep"))
+bind("SHIFT + I", exec("toggle-inhibit-lid-sleep"))
 bind("O", exec("slurp | xargs -I {} grim -g {} - | tesseract -l eng - - | wl-copy"))
 bind("A", exec("wayscriber --daemon-toggle"))
 
