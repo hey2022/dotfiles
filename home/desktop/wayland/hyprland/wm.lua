@@ -46,6 +46,11 @@ bind("ALT + l", hl.dsp.workspace.move({ monitor = "r" }))
 bind("ALT + k", hl.dsp.workspace.move({ monitor = "u" }))
 bind("ALT + j", hl.dsp.workspace.move({ monitor = "d" }))
 
+bind("BRACKETLEFT", hl.dsp.layout("move -col"))
+bind("BRACKETRIGHT", hl.dsp.layout("move +col"))
+bind("SHIFT + BRACKETLEFT", hl.dsp.layout("move +200"), { repeating = true })
+bind("SHIFT + BRACKETRIGHT", hl.dsp.layout("move -200"), { repeating = true })
+
 bind("COMMA", hl.dsp.layout("consume"))
 bind("PERIOD", hl.dsp.layout("expel"))
 bind("SHIFT + PERIOD", hl.dsp.layout("promote"))
