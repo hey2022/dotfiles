@@ -7,6 +7,7 @@
     "group/hardware",
     "group/controls",
     "group/tray",
+    "custom/inhibitor",
     "custom/notification"
   ],
   "custom/drawer": {
@@ -99,6 +100,14 @@
       "on-scroll-up": "shift_up",
       "on-scroll-down": "shift_down"
     }
+  },
+  "custom/inhibitor": {
+    "format": "{}",
+    "return-type": "json",
+    "interval": 5,
+    "exec": "inhibitor-status",
+    "on-click": "toggle-inhibit-idle",
+    "on-click-right": "toggle-inhibit-lid-sleep"
   },
   "cpu": {
     "format": "{usage}% ",
