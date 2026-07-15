@@ -133,12 +133,32 @@ return {
                 desc = "Find by grep",
             },
             {
+                "<leader>fG",
+                function()
+                    return require("telescope.builtin").live_grep({
+                        additional_args = { "--hidden" },
+                    })
+                end,
+                mode = { "n" },
+                desc = "Find by grep in all files",
+            },
+            {
                 "<leader>fw",
                 function()
                     return require("telescope.builtin").grep_string()
                 end,
                 mode = { "n" },
                 desc = "Find current word",
+            },
+            {
+                "<leader>fW",
+                function()
+                    return require("telescope.builtin").grep_string({
+                        additional_args = { "--hidden" },
+                    })
+                end,
+                mode = { "n" },
+                desc = "Find current word in all files",
             },
             {
                 "<leader>fs",
@@ -155,6 +175,17 @@ return {
                 end,
                 mode = { "n" },
                 desc = "Find files",
+            },
+            {
+                "<leader>fF",
+                function()
+                    require("telescope.builtin").find_files({
+                        hidden = true,
+                        no_ignore = true,
+                    })
+                end,
+                mode = { "n" },
+                desc = "Find all files",
             },
             {
                 "<leader>fk",
@@ -187,17 +218,6 @@ return {
                 defaults = {
                     mappings = {
                         i = { ["<c-enter>"] = "to_fuzzy_refine" },
-                    },
-                },
-                pickers = {
-                    find_files = {
-                        hidden = true,
-                    },
-                    grep_string = {
-                        additional_args = { "--hidden" },
-                    },
-                    live_grep = {
-                        additional_args = { "--hidden" },
                     },
                 },
                 extensions = {
