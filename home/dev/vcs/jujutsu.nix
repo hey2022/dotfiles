@@ -33,5 +33,9 @@
       enable = true;
       enableJujutsuIntegration = true;
     };
+    mergiraf = {
+      enable = true;
+      enableJujutsuIntegration = true;
+    };
   };
 }
