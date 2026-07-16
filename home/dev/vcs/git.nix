@@ -31,7 +31,6 @@
           pruneTags = true;
           writeCommitGraph = true;
         };
-        gitbutler.signCommits = true;
         help.autocorrect = "prompt";
         init.defaultBranch = "main";
         merge = {

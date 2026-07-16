@@ -2,7 +2,6 @@
 {
   imports = [
     ./git.nix
-    ./gitbutler.nix
     ./github.nix
     ./jujutsu.nix
   ];
