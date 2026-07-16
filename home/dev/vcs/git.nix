@@ -63,5 +63,9 @@
       enable = true;
       enableGitIntegration = true;
     };
+    mergiraf = {
+      enable = true;
+      enableGitIntegration = true;
+    };
   };
 }
