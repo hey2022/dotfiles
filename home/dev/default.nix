@@ -38,6 +38,7 @@ in
   };
   config = lib.mkIf cfg.enable {
     home.packages = with pkgs; [
+      ast-grep
       bun
       flamegraph
       git-sizer
