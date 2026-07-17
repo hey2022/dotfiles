@@ -164,3 +164,22 @@ vim.keymap.set("n", "<C-l>", "[s1z=`]", { noremap = true, silent = true })
 
 -- Latex
 vim.g.tex_flavor = "latex"
+
+vim.api.nvim_create_user_command("Diff2", function()
+    vim.cmd("enew")
+    local buf_a = vim.api.nvim_get_current_buf()
+    vim.api.nvim_buf_set_name(buf_a, "A")
+    vim.bo.buftype = "nofile"
+    vim.bo.bufhidden = "wipe"
+    vim.cmd("diffthis")
+
+    vim.cmd("rightbelow vnew")
+    local buf_b = vim.api.nvim_get_current_buf()
+    vim.api.nvim_buf_set_name(buf_b, "B")
+    vim.bo.buftype = "nofile"
+    vim.bo.bufhidden = "wipe"
+    vim.cmd("diffthis")
+
+    vim.cmd("wincmd h")
+end, {})
+vim.keymap.set("n", "<leader>D", "<cmd>Diff2<CR>", { desc = "Open diff scratch buffers" })
