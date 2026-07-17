@@ -71,7 +71,6 @@ in
     fish.enable = true;
     hyprland.enable = true;
   };
-  virtualisation.waydroid.enable = true;
 
   services = {
     fprintd.enable = true;

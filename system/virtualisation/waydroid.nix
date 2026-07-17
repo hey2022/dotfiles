@@ -15,5 +15,4 @@ in
       nur.repos.ataraxiasjel.waydroid-script
     ];
   };
-
 }
