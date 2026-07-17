@@ -47,9 +47,9 @@
     jjui = {
       enable = true;
     };
-    delta = {
+    difftastic = {
       enable = true;
-      enableJujutsuIntegration = true;
+      jujutsu.enable = true;
     };
     mergiraf = {
       enable = true;

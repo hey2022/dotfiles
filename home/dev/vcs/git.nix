@@ -59,9 +59,9 @@
     lazygit = {
       enable = true;
     };
-    delta = {
+    difftastic = {
       enable = true;
-      enableGitIntegration = true;
+      git.enable = true;
     };
     mergiraf = {
       enable = true;
