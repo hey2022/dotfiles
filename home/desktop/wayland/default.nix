@@ -5,6 +5,7 @@
     ./hypridle.nix
     ./hyprland
     ./hyprlock
+    ./hyprsunset.nix
     ./niri
     ./quickshell
     ./swaylock.nix
