@@ -32,9 +32,6 @@
         ui = {
           editor = "nvim";
         };
-        git = {
-          abandon-unreachable-commits = false;
-        };
         aliases = {
           tug = [
             "bookmark"
