@@ -16,12 +16,6 @@ let
       url = "https://patch-diff.githubusercontent.com/raw/NixOS/nixpkgs/pull/507286.patch";
       hash = "sha256-jBJOiAP0T9lfLqeVF+WZai+xCI/26DO/otMrG6DORyU=";
     })
-    # https://nixpk.gs/pr-tracker.html?pr=538768
-    (pkgs.fetchpatch2 {
-      name = "Revert \"throttled: 0.11 -> 0.12\"";
-      url = "https://patch-diff.githubusercontent.com/raw/NixOS/nixpkgs/pull/538768.patch";
-      hash = "sha256-jPjk+S2xsaJ/Lmybmo7pJRAGFmGzDmegvu+Q2GgbrXI=";
-    })
   ];
   home-manager-patches = [ ];
   nixpkgs-patched =
