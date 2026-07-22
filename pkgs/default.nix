@@ -1,7 +1,7 @@
 { inputs, pkgs, ... }:
 
 let
-  nixCats = import ../common/nvim { inherit inputs; };
+  nixCats = import ../common/nvim { inherit inputs pkgs; };
   system = pkgs.stdenv.hostPlatform.system;
 in
 {

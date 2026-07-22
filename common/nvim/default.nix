@@ -1,4 +1,4 @@
-{ inputs, ... }@attrs:
+{ inputs, pkgs, ... }@attrs:
 let
   inherit (inputs) nixpkgs;
   inherit (inputs.nixCats) utils;
@@ -515,9 +515,6 @@ forEachSystem (
     # call it with our defaultPackageName
     defaultPackage = nixCatsBuilder defaultPackageName;
 
-    # this pkgs variable is just for using utils such as pkgs.mkShell
-    # within this outputs set.
-    pkgs = import nixpkgs { inherit system; };
     # The one used to build neovim is resolved inside the builder
     # and is passed to our categoryDefinitions and packageDefinitions
   in
