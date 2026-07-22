@@ -3,6 +3,7 @@
   config,
   lib,
   pkgs,
+  pkgs-local,
   ...
 }:
 let
@@ -26,7 +27,7 @@ in
         ];
       };
     };
-    nativeMessagingHosts = with pkgs; [ keepassxc-snapshot ];
+    nativeMessagingHosts = [ pkgs-local.keepassxc-snapshot ];
     profiles.${profile} = {
       isDefault = true;
       settings = {

@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  pkgs-local,
   ...
 }:
 {
@@ -13,6 +14,9 @@
       gamescope.enable = true;
       gamemode.enable = true;
     };
-    services.uuplugin.enable = true;
+    services.uuplugin = {
+      enable = true;
+      package = pkgs-local.uuplugin;
+    };
   };
 }

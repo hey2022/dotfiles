@@ -1,11 +1,11 @@
 {
   self,
   config,
-  pkgs,
+  pkgs-local,
   ...
 }:
 {
-  home.packages = with pkgs; [
+  home.packages = with pkgs-local; [
     nvim
     nnvim
   ];

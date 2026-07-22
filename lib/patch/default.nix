@@ -41,9 +41,6 @@ in
   nixpkgs = import nixpkgs-patched {
     inherit system;
     config = import "${self}/common/nixpkgs.nix";
-    overlays = [
-      (_final: _prev: builtins.mapAttrs (_: package: package) self.packages.${system})
-    ];
   };
   nixosSystem = import (nixpkgs-patched + "/nixos/lib/eval-config.nix");
   home-manager = import home-manager-patched { };

@@ -21,6 +21,7 @@
           specialArgs = {
             inherit inputs;
             inherit (inputs) self;
+            pkgs-local = self.packages.${system};
           };
         };
       mkHome =
@@ -31,6 +32,7 @@
           extraSpecialArgs = {
             inherit inputs;
             inherit (inputs) self;
+            pkgs-local = self.packages.${system};
           };
         };
     };
