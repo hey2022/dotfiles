@@ -2,7 +2,7 @@
 {
   home.packages = with pkgs; [
     tex-fmt
-    texlive.combined.scheme-medium
+    texliveMedium
   ];
   home.file.".latexmkrc".text = ''
     $pdf_mode = 4;
