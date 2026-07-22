@@ -1,29 +1,20 @@
-{ self, inputs, ... }:
-{
-  perSystem =
-    { system, ... }:
+{ inputs, pkgs, ... }:
 
-    let
-      pkgs = import inputs.nixpkgs {
-        inherit system;
-        config = import ../common/nixpkgs.nix;
-      };
-      nixCats = import "${self}/common/nvim" { inherit inputs; };
-    in
-    {
-      packages = {
-        default = nixCats.packages.${system}.nvim;
-        nvim = nixCats.packages.${system}.nvim;
-        nnvim = nixCats.packages.${system}.nnvim;
-        nvim-min = nixCats.packages.${system}.nvim-min;
-        ap-dl = pkgs.callPackage ./ap-dl { };
-        apcap = pkgs.callPackage ./apcap { };
-        cliprust = pkgs.callPackage ./cliprust { };
-        neovim-anywhere = pkgs.callPackage ./neovim-anywhere { };
-        ticktick-cracked = pkgs.callPackage ./ticktick-cracked { };
-        keepassxc-snapshot = pkgs.callPackage ./keepassxc-snapshot { };
-        uuplugin = pkgs.callPackage ./uuplugin { };
-      }
-      // (import ./anki { inherit (pkgs) callPackage; });
-    };
+let
+  nixCats = import ../common/nvim { inherit inputs; };
+  system = pkgs.stdenv.hostPlatform.system;
+in
+{
+  default = nixCats.packages.${system}.nvim;
+  nvim = nixCats.packages.${system}.nvim;
+  nnvim = nixCats.packages.${system}.nnvim;
+  nvim-min = nixCats.packages.${system}.nvim-min;
+  ap-dl = pkgs.callPackage ./ap-dl { };
+  apcap = pkgs.callPackage ./apcap { };
+  cliprust = pkgs.callPackage ./cliprust { };
+  neovim-anywhere = pkgs.callPackage ./neovim-anywhere { };
+  ticktick-cracked = pkgs.callPackage ./ticktick-cracked { };
+  keepassxc-snapshot = pkgs.callPackage ./keepassxc-snapshot { };
+  uuplugin = pkgs.callPackage ./uuplugin { };
 }
+// (import ./anki { inherit (pkgs) callPackage; })
