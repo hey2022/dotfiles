@@ -1,7 +1,7 @@
 {
   nixpkgs.overlays = [
     (final: prev: {
-      jujutsu = prev.jujutsu.overrideAttrs (oldAttrs: rec {
+      jujutsu = prev.jujutsu.overrideAttrs rec {
         # HACK: git-lfs: add ability to ignore files based on git attributes https://github.com/jj-vcs/jj/pull/9635
         version = "0.42.0";
         src = prev.fetchFromGitHub {
@@ -14,7 +14,7 @@
           inherit src;
           hash = "sha256-wyaFOMSpJqe4BMHsYFp2+JjUWphpQ64QbE/Am2V4D5A=";
         };
-      });
+      };
     })
   ];
   programs = {

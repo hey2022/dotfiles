@@ -3,10 +3,13 @@
     ../../home
     ../../home/desktop
   ];
-  home.username = "yiheng";
-  home.homeDirectory = "/home/yiheng";
+
+  home = {
+    username = "yiheng";
+    homeDirectory = "/home/yiheng";
+    stateVersion = "25.05";
+  };
   host.laptop = true;
-  home.stateVersion = "25.05";
 
   profiles = {
     gaming.enable = true;

@@ -11,6 +11,4 @@ let
       // args
     );
 in
-{
-  inherit buildFirefoxXpiAddon;
-}
+{ }
