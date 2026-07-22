@@ -13,3 +13,6 @@ result-*
 
 # Ignore NixOS interactive test driver history
 **/.nixos-test-history
+
+# Ignore nix profiling
+nix.profile
