@@ -8,12 +8,15 @@
   imports = [
     ./nix-init.nix
   ];
+  nixpkgs.overlays = [
+    inputs.nix-alien.overlays.default
+  ];
   home.packages = with pkgs; [
     deadnix
     flake-checker
     hydra-check
-    inputs.nix-alien.packages.${stdenv.hostPlatform.system}.nix-alien
     nh
+    nix-alien
     nix-eval-jobs
     nix-fast-build
     nix-melt
