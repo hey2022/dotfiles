@@ -13,6 +13,7 @@
         let
           machinesPerSystem = {
             x86_64-linux = [
+              "X1C12"
               "desktop"
               "goon"
             ];
