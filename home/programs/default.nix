@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, pkgs-local, ... }:
 {
   imports = [
     ./anime.nix
@@ -20,8 +20,8 @@
     ./todo.nix
     ./torrent.nix
   ];
-  home.packages = with pkgs; [
-    czkawka
-    keepassxc-snapshot
+  home.packages = [
+    pkgs-local.keepassxc-snapshot
+    pkgs.czkawka
   ];
 }

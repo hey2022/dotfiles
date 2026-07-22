@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs-local, ... }:
 
 {
   imports = [
@@ -7,5 +7,5 @@
     ./nixpif
     ./swap
   ];
-  home.packages = with pkgs; [ neovim-anywhere ];
+  home.packages = [ pkgs-local.neovim-anywhere ];
 }

@@ -1,7 +1,7 @@
-{ pkgs, ... }:
+{ pkgs-local, ... }:
 
 {
   home.packages = [
-    pkgs.ticktick-cracked
+    pkgs-local.ticktick-cracked
   ];
 }

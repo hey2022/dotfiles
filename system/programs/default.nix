@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, pkgs-local, ... }:
 {
   imports = [
     ./beets.nix
@@ -12,7 +12,7 @@
     git
     home-manager
     neovim
+    pkgs-local.keepassxc-snapshot
     wget
-    keepassxc-snapshot
   ];
 }
