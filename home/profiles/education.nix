@@ -15,8 +15,8 @@
   };
   config = lib.mkIf config.profiles.education.enable {
     home.packages = with pkgs; [
-      pkgs-local.apcap
       pkgs-local.ap-dl
+      pkgs-local.apcap
       zotero
     ];
   };
