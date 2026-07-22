@@ -28,6 +28,6 @@ anki-utils.buildAnkiAddon (finalAttrs: {
     description = "Search Stats Extended";
     homepage = "https://github.com/Luc-Mcgrady/Anki-Search-Stats-Extended";
     license = lib.licenses.agpl3Only;
-    maintainers = with lib.maintainers; [ ];
+    maintainers = with lib.maintainers; [ hey2022 ];
   };
 })

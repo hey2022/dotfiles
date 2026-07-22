@@ -31,6 +31,6 @@ anki-utils.buildAnkiAddon (finalAttrs: {
     description = "Export Anki to PDF";
     homepage = "https://github.com/AnKing-VIP/anki_to_pdf";
     license = lib.licenses.agpl3Only;
-    maintainers = with lib.maintainers; [ ];
+    maintainers = with lib.maintainers; [ hey2022 ];
   };
 })

@@ -20,6 +20,6 @@ anki-utils.buildAnkiAddon (finalAttrs: {
     description = "AnKing notes addon";
     homepage = "https://github.com/AnKing-VIP/anking_notes_addon";
     license = lib.licenses.agpl3Only;
-    maintainers = with lib.maintainers; [ ];
+    maintainers = with lib.maintainers; [ hey2022 ];
   };
 })

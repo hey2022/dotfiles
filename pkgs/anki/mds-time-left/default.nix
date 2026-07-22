@@ -5,7 +5,7 @@
   nix-update-script,
 }:
 
-anki-utils.buildAnkiAddon (finalAttrs: {
+anki-utils.buildAnkiAddon {
   pname = "mds-time-left";
   version = "unstable-2025-06-2";
   src = fetchFromGitHub {
@@ -20,6 +20,6 @@ anki-utils.buildAnkiAddon (finalAttrs: {
     homepage = "https://github.com/cjdduarte/MDS_Time_Left";
     # Assumed to be AGPL3 https://ankiweb.net/account/terms
     license = lib.licenses.agpl3Only;
-    maintainers = with lib.maintainers; [ ];
+    maintainers = with lib.maintainers; [ hey2022 ];
   };
-})
+}
