@@ -16,7 +16,6 @@
   };
   programs = {
     fish.enable = true;
-    fjord.enable = true;
   };
   wayland.windowManager.hyprland.enable = true;
 }

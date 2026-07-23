@@ -9,11 +9,7 @@ let
   fjordPackages = inputs.fjordlauncher.packages.${pkgs.stdenv.hostPlatform.system};
 in
 {
-  options.programs.fjord = {
-    enable = lib.mkEnableOption "Enable fjord";
-  };
-
-  config = lib.mkIf (config.profiles.gaming.enable && config.programs.fjord.enable) {
+  config = lib.mkIf (config.profiles.gaming.enable && config.profiles.gaming.minecraft.enable) {
     home.packages = [
       (fjordPackages.fjordlauncher.override {
         fjordlauncher-unwrapped = fjordPackages.fjordlauncher-unwrapped.overrideAttrs (oldAttrs: {
