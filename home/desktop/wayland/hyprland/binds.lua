@@ -7,8 +7,8 @@ bind("RETURN", exec(cfg.terminal, { uwsm = true }))
 bind("SHIFT + RETURN", exec(cfg.terminal .. " nvim", { uwsm = true }))
 bind("ALT + RETURN", exec("neovim-anywhere", { uwsm = true }))
 bind("SHIFT + E", exec("loginctl terminate-session $XDG_SESSION_ID"))
-bind("ESCAPE", exec("loginctl lock-session"))
-bind("SHIFT + ESCAPE", exec("wlogout -p layer-shell", { toggle = true }))
+bind("SHIFT + ESCAPE", exec("loginctl lock-session"))
+bind("CTRL + ESCAPE", exec("wlogout -p layer-shell", { toggle = true }))
 
 -- menu
 bind("SPACE", exec("rofi -show drun", { toggle = true }))
