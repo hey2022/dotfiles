@@ -8,6 +8,8 @@
     fcitx5.apply = false;
     hyprlock.useDefaultConfig = false;
     wezterm.apply = true;
+    # HACK: https://github.com/catppuccin/nix/issues/392 IFD
+    starship.enable = false;
     tmux.extraConfig = ''
       set -g @catppuccin_window_status_style "rounded"
       set -g status-left ""
