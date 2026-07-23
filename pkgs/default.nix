@@ -4,15 +4,17 @@ let
   nixCats = import ../common/nvim { inherit inputs pkgs; };
   system = pkgs.stdenv.hostPlatform.system;
 in
-{
-  default = nixCats.packages.${system}.nvim;
+rec {
+  default = nvim;
   nvim = nixCats.packages.${system}.nvim;
-  nnvim = nixCats.packages.${system}.nnvim;
+  nvim-wrapped = nixCats.packages.${system}.nvim-wrapped;
   nvim-min = nixCats.packages.${system}.nvim-min;
   ap-dl = pkgs.callPackage ./ap-dl { };
   apcap = pkgs.callPackage ./apcap { };
   cliprust = pkgs.callPackage ./cliprust { };
-  neovim-anywhere = pkgs.callPackage ./neovim-anywhere { };
+  neovim-anywhere = pkgs.callPackage ./neovim-anywhere {
+    neovim = nvim;
+  };
   ticktick-cracked = pkgs.callPackage ./ticktick-cracked { };
   keepassxc-snapshot = pkgs.callPackage ./keepassxc-snapshot { };
   uuplugin = pkgs.callPackage ./uuplugin { };

@@ -404,7 +404,7 @@ let
             suffix-path = true;
             suffix-LD = true;
             aliases = [ ];
-            wrapRc = true;
+            wrapRc = false;
             configDirName = "nvim";
             hosts.python3.enable = true;
             hosts.node.enable = true;
@@ -453,7 +453,7 @@ let
             };
           };
         };
-      nnvim =
+      nvim-wrapped =
         { ... }@args:
         let
           config = nvim args;
@@ -461,13 +461,13 @@ let
         config
         // {
           settings = config.settings // {
-            wrapRc = false;
+            wrapRc = true;
           };
         };
       nvim-min =
         { ... }@args:
         let
-          config = nvim args;
+          config = nvim-wrapped args;
         in
         config
         // {
@@ -477,7 +477,7 @@ let
         };
     in
     {
-      inherit nvim nnvim nvim-min;
+      inherit nvim nvim-wrapped nvim-min;
     };
 
   defaultPackageName = "nvim";

@@ -8,5 +8,5 @@ trap 'rm -f "$tmp"' EXIT
 ft="${1:-markdown}"
 
 wl-paste -p > "$tmp"
-neovide -- -c "set filetype=${ft}" "$tmp"
+footclient nvim -c "set filetype=${ft}" "$tmp" || foot nvim -c "set filetype=${ft}" "$tmp"
 [ -s "$tmp" ] && wl-copy < "$tmp" && ydotool key 29:1 47:1 47:0 29:0

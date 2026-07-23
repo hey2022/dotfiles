@@ -5,12 +5,6 @@
   ...
 }:
 {
-  home.packages = with pkgs-local; [
-    nvim
-    nnvim
-  ];
-  programs.neovide = {
-    enable = true;
-  };
+  home.packages = [ pkgs-local.nvim ];
   xdg.configFile."nvim".source = config.lib.hm.mkFlakeSymlink "${self}/common/nvim";
 }
