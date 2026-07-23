@@ -18,5 +18,6 @@ rec {
   ticktick-cracked = pkgs.callPackage ./ticktick-cracked { };
   keepassxc-snapshot = pkgs.callPackage ./keepassxc-snapshot { };
   uuplugin = pkgs.callPackage ./uuplugin { };
+  reshade-steam-proton = pkgs.callPackage ./reshade-steam-proton { };
 }
 // (import ./anki { inherit (pkgs) callPackage; })
