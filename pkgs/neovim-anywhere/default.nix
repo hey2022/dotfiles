@@ -1,8 +1,9 @@
 {
   writeShellApplication,
-  neovide,
-  wl-clipboard,
   coreutils,
+  foot,
+  neovim,
+  wl-clipboard,
   ydotool,
 }:
 
@@ -10,7 +11,8 @@ writeShellApplication {
   name = "neovim-anywhere";
   runtimeInputs = [
     coreutils
-    neovide
+    foot
+    neovim
     wl-clipboard
     ydotool
   ];
