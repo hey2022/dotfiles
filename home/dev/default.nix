@@ -21,6 +21,7 @@ in
     ./markdown
     ./neovim.nix
     ./nix
+    ./profiling.nix
     ./python.nix
     ./qt.nix
     ./rust
@@ -39,9 +40,7 @@ in
   config = lib.mkIf cfg.enable {
     home.packages = with pkgs; [
       ast-grep
-      flamegraph
       git-sizer
-      hyperfine
       just
       onefetch
       rustscan
