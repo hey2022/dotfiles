@@ -5,5 +5,8 @@
     ./mullvad.nix
     ./v2raya.nix
   ];
-  services.mihomo.enable = true;
+  services = {
+    mihomo.enable = true;
+    mullvad-vpn.enable = true;
+  };
 }
