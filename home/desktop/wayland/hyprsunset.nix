@@ -8,8 +8,12 @@
           identity = true;
         }
         {
-          time = "21:00";
-          temperature = 5000;
+          time = "18:00";
+          temperature = 2700;
+        }
+        {
+          time = "20:00";
+          temperature = 1900;
         }
       ];
     };
