@@ -11,18 +11,44 @@ bind("CTRL + P", function()
     end, { timeout = 500, type = "oneshot" })
 end)
 
--- BUG: https://github.com/hyprwm/Hyprland/discussions/14380
+-- https://github.com/hyprwm/Hyprland/discussions/14380#discussioncomment-17734370
 bind("F", function()
-    hl.dispatch(hl.dsp.layout("colresize +conf"))
+    local monitor = hl.get_active_monitor()
+    local window = hl.get_active_window()
+
+    if monitor and window and type(window.size) == "table" then
+        if window.size.x >= monitor.width / 2 then
+            hl.dispatch(hl.dsp.layout("colresize 0.5"))
+            hl.dispatch(hl.dsp.layout("focus r"))
+            hl.dispatch(hl.dsp.layout("focus l"))
+        else
+            hl.dispatch(hl.dsp.layout("colresize 1"))
+        end
+    end
+end)
+
+-- bind("F", function()
+--     -- BUG: https://github.com/hyprwm/Hyprland/discussions/15564 fullscreen hides windows from gaps
+--     hl.dispatch(hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
+--     -- BUG: https://github.com/hyprwm/Hyprland/discussions/14338 focused view is on empty space after toggling fullscreen
+--     hl.dispatch(hl.dsp.layout("focus r"))
+--     hl.dispatch(hl.dsp.layout("focus l"))
+-- end)
+
+bind("SHIFT + F", function()
+    hl.dispatch(hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
+    -- BUG: https://github.com/hyprwm/Hyprland/discussions/15206 window is shifted after exiting fullscreen
     hl.dispatch(hl.dsp.layout("focus r"))
     hl.dispatch(hl.dsp.layout("focus l"))
 end)
 
-bind("SHIFT + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
-
+-- BUG: https://github.com/hyprwm/Hyprland/pull/15569 cannot change focus in fullscreen
 -- Move focus with mainMod + arrow keys
-bind("h", hl.dsp.focus({ direction = "left" }))
-bind("l", hl.dsp.focus({ direction = "right" }))
+-- bind("h", hl.dsp.focus({ direction = "left" }))
+-- bind("l", hl.dsp.focus({ direction = "right" }))
+bind("h", hl.dsp.layout("focus l"))
+bind("l", hl.dsp.layout("focus r"))
+
 bind("k", hl.dsp.focus({ direction = "up" }))
 bind("j", hl.dsp.focus({ direction = "down" }))
 
