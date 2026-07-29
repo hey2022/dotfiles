@@ -32,6 +32,9 @@
         ui = {
           editor = "nvim";
         };
+        revset-aliases = {
+          "closest_merge(to)" = "heads(::to & merges())";
+        };
         aliases = {
           tug = [
             "bookmark"
@@ -40,6 +43,29 @@
             "heads(::@- & bookmarks())"
             "--to"
             "@-"
+          ];
+          # https://isaaccorbrey.com/notes/jujutsu-megamerges-for-fun-and-profit
+          stack = [
+            "rebase"
+            "--after"
+            "trunk()"
+            "--before"
+            "closest_merge(@)"
+            "--revision"
+          ];
+          # https://isaaccorbrey.com/notes/jujutsu-megamerges-for-fun-and-profit
+          stage = [
+            "stack"
+            "closest_merge(@)+:: ~ empty()"
+          ];
+          # https://isaaccorbrey.com/notes/jujutsu-megamerges-for-fun-and-profit
+          restack = [
+            "rebase"
+            "--onto"
+            "trunk()"
+            "--source"
+            "roots(trunk()..) & mutable()"
+            "--simplify-parents"
           ];
         };
       };
