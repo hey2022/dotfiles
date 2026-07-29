@@ -42,6 +42,9 @@ bind("SHIFT + F", function()
     hl.dispatch(hl.dsp.layout("focus l"))
 end)
 
+bind("R", hl.dsp.layout("colresize +conf"))
+bind("SHIFT + R", hl.dsp.layout("colresize -conf"))
+
 -- BUG: https://github.com/hyprwm/Hyprland/pull/15569 cannot change focus in fullscreen
 -- Move focus with mainMod + arrow keys
 -- bind("h", hl.dsp.focus({ direction = "left" }))
