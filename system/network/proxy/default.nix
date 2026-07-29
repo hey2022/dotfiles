@@ -2,11 +2,10 @@
   imports = [
     ./clash-verge.nix
     ./mihomo
-    ./mullvad.nix
+    ./mullvad
     ./v2raya.nix
   ];
   services = {
     mihomo.enable = true;
-    mullvad-vpn.enable = true;
   };
 }
