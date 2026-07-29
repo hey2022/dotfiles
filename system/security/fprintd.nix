@@ -16,7 +16,6 @@
         };
       in
       lib.flip lib.genAttrs serviceCfg [
-        "greetd"
         "login"
         "polkit-1"
         "sudo"
