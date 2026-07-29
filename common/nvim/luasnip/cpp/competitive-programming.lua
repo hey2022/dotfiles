@@ -23,9 +23,9 @@ ls.add_snippets("cpp", {
         #ifdef LOCAL
         #include "timer.h"
         #else
-        struct Timer {
-            Timer(string_view = "") {}
-        };
+        struct Timer {{
+            Timer(string_view = "") {{}}
+        }};
         #endif
 
         #ifdef DEBUG
