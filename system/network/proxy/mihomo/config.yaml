@@ -84,18 +84,11 @@ proxy-providers:
   XSUS:
     type: http
     url: "{{XSUS}}"
-  KyCloud:
-    type: http
-    url: "{{KyCloud}}"
 proxy-groups:
   - name: XSUS
     type: select
     use:
       - XSUS
-  - name: KyCloud
-    type: select
-    use:
-      - KyCloud
   - name: Hong Kong
     type: select
     include-all: true
