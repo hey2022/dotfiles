@@ -1,0 +1,28 @@
+# BROKEN: https://github.com/mullvad/mullvadvpn-app/issues/10416
+# This file is for split-tunneling based on IP addresses
+# Issue: https://github.com/mullvad/mullvadvpn-app/discussions/9059
+# Due to https://github.com/mullvad/mullvadvpn-app/issues/5418, these rules need to be activated after mullvad connects
+# Activate with: sudo nft -f mullvad-split-tunnel.rules
+# Deactivate with: sudo nft delete table inet mullvad-split-tunnel
+
+# Reference:
+# https://mullvad.net/en/help/split-tunneling-with-linux-advanced
+# https://github.com/r3nor/mullvad-tailscale
+# https://tailscale.com/docs/reference/faq/firewall-ports
+
+define EXCLUDED_IPS = { 100.64.0.0/10, 192.200.0.0/24 }
+define EXCLUDED_IPV6 = { fd7a:115c:a1e0::/48, 2606:B740:49::/48 }
+
+table inet mullvad-split-tunnel {
+  chain excludeOutgoing {
+     type route hook output priority -100; policy accept;
+     ip daddr $EXCLUDED_IPS ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
+     ip6 daddr $EXCLUDED_IPV6 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
+   }
+
+   chain excludeIncoming {
+     type filter hook prerouting priority -100; policy accept;
+     ip saddr $EXCLUDED_IPS ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
+     ip6 saddr $EXCLUDED_IPV6 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
+   }
+}
