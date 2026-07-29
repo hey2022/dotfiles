@@ -264,7 +264,6 @@ let
                 rust
                 scheme
                 ssh_config
-                tmux
                 toml
                 typescript
                 typst
