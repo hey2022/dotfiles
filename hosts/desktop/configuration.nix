@@ -24,8 +24,10 @@
     ];
   };
 
-  profiles.gaming.enable = true;
-  homelab.enable = true;
+  profiles = {
+    gaming.enable = true;
+    homelab.enable = true;
+  };
   programs = {
     fish.enable = true;
     hyprland.enable = true;

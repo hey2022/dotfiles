@@ -7,7 +7,7 @@
 
 let
   beetsSettings = {
-    directory = "${config.homelab.mediaDir}/music";
+    directory = "${config.profiles.homelab.mediaDir}/music";
     library = "/etc/beets/library.db";
     import.hardlink = true;
     plugins = [
@@ -41,7 +41,7 @@ let
   };
 in
 {
-  config = lib.mkIf config.homelab.enable {
+  config = lib.mkIf config.profiles.homelab.enable {
     environment = {
       systemPackages = with pkgs; [
         beets

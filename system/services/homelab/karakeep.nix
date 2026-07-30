@@ -8,7 +8,7 @@ in
       PORT = "9000";
     };
   };
-  homelab.services.karakeep = {
+  profiles.homelab.services.karakeep = {
     port = cfg.extraEnvironment.PORT;
   };
 }

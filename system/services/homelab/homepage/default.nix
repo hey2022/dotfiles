@@ -80,7 +80,7 @@ in
   environment.etc."homepage-dashboard/services.yaml".source = lib.mkForce (
     settingsFormat.generate "services.yaml" (convertServiceConfig cfg.services)
   );
-  homelab.services.homepage = {
+  profiles.homelab.services.homepage = {
     port = cfg.listenPort;
     serviceName = "homepage-dashboard";
   };

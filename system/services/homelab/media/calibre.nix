@@ -7,10 +7,10 @@ in
     group = "media";
     options = {
       enableBookUploading = true;
-      calibreLibrary = "${config.homelab.mediaDir}/library";
+      calibreLibrary = "${config.profiles.homelab.mediaDir}/library";
     };
   };
-  homelab.services.calibre-web = {
+  profiles.homelab.services.calibre-web = {
     inherit (cfg.listen) port;
   };
 }

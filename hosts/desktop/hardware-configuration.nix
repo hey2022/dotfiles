@@ -40,7 +40,7 @@
         "nofail"
       ];
     };
-    ${config.homelab.mediaDir} = {
+    ${config.profiles.homelab.mediaDir} = {
       device = "/mnt/elements/media";
       depends = [ "/mnt/elements" ];
       fsType = "none";

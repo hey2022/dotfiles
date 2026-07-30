@@ -23,7 +23,7 @@ in
       ];
     };
   };
-  homelab.services.grafana = {
+  profiles.homelab.services.grafana = {
     port = cfg.settings.server.http_port;
   };
   sops.secrets."grafana" = {

@@ -10,7 +10,7 @@
         in
         {
           "${domain}, www.${domain}".extraConfig = ''
-            reverse_proxy localhost:${toString config.homelab.rootService}
+            reverse_proxy localhost:${toString config.profiles.homelab.rootService}
           '';
           "*.${domain}".extraConfig = lib.concatLines (
             lib.mapAttrsToList
@@ -26,7 +26,7 @@
                     enable = lib.getAttrFromPath (attrPath ++ [ "enable" ]) config.services;
                   in
                   service.expose && enable
-                ) config.homelab.services
+                ) config.profiles.homelab.services
               )
           );
         };

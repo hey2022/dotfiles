@@ -16,7 +16,7 @@
     ./prometheus.nix
   ];
 
-  config = lib.mkIf config.homelab.enable {
+  config = lib.mkIf config.profiles.homelab.enable {
     services = {
       buildbot-nix = {
         master.enable = true;

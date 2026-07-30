@@ -22,7 +22,7 @@
         topic = "buildbot-hey2022";
       };
     };
-    homelab.services.buildbot = {
+    profiles.homelab.services.buildbot = {
       port = 8010;
       serviceName = "buildbot-nix.master";
     };
