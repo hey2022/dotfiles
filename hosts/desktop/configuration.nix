@@ -27,10 +27,7 @@
     gaming.enable = true;
     homelab = {
       enable = true;
-      media = {
-        enable = true;
-        pirate = true;
-      };
+      media.enable = true;
     };
   };
   programs = {
