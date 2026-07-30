@@ -4,5 +4,4 @@
     ./immich.nix
     ./torrent
   ];
-  users.groups.media = { };
 }

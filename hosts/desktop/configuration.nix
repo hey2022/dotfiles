@@ -25,7 +25,13 @@
 
   profiles = {
     gaming.enable = true;
-    homelab.enable = true;
+    homelab = {
+      enable = true;
+      media = {
+        enable = true;
+        pirate = true;
+      };
+    };
   };
   programs = {
     fish.enable = true;

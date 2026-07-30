@@ -19,7 +19,7 @@ in
       torrentingPort = 49152;
       serverConfig = {
         BitTorrent.Session = {
-          DefaultSavePath = "${config.profiles.homelab.mediaDir}/downloads";
+          DefaultSavePath = "${config.profiles.homelab.media.mediaDir}/downloads";
         };
         Preferences.WebUI = {
           AlternativeUIEnabled = true;

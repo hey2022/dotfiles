@@ -12,8 +12,8 @@ in
         basicAuthEnabled = true;
         basicAuthUsername = "admin";
         basicAuthPasswordFile = config.sops.secrets.suwayomi-password.path;
-        localSourcePath = "${config.profiles.homelab.mediaDir}/manga";
-        downloadsPath = "${config.profiles.homelab.mediaDir}/manga/suwayomi";
+        localSourcePath = "${config.profiles.homelab.media.mediaDir}/manga";
+        downloadsPath = "${config.profiles.homelab.media.mediaDir}/manga/suwayomi";
         autoDownloadNewChapters = true;
         extensionRepos = [
           "https://raw.githubusercontent.com/keiyoushi/extensions/repo/index.min.json"
