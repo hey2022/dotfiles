@@ -1,44 +1,48 @@
 { config, lib, ... }:
 
+let
+  cfg = config.services.caddy;
+in
 {
-  services = {
-    caddy = {
-      enable = true;
-      virtualHosts =
-        let
-          domain = config.host.address;
-        in
-        {
-          "${domain}, www.${domain}".extraConfig = ''
-            reverse_proxy localhost:${toString config.profiles.homelab.rootService}
-          '';
-          "*.${domain}".extraConfig = lib.concatLines (
-            lib.mapAttrsToList
-              (name: service: ''
-                @${name} host ${service.subdomain}.${domain}
-                reverse_proxy @${name} localhost:${toString service.port}
-              '')
-              (
-                lib.filterAttrs (
-                  _: service:
-                  let
-                    attrPath = lib.splitString "." service.serviceName;
-                    enable = lib.getAttrFromPath (attrPath ++ [ "enable" ]) config.services;
-                  in
-                  service.expose && enable
-                ) config.profiles.homelab.services
-              )
-          );
-        };
+  config = lib.mkIf cfg.enable {
+    services = {
+      caddy = {
+        virtualHosts =
+          let
+            domain = config.host.address;
+          in
+          {
+            "${domain}, www.${domain}".extraConfig = ''
+              reverse_proxy localhost:${toString config.profiles.homelab.rootService}
+            '';
+            "*.${domain}".extraConfig = lib.concatLines (
+              lib.mapAttrsToList
+                (name: service: ''
+                  @${name} host ${service.subdomain}.${domain}
+                  reverse_proxy @${name} localhost:${toString service.port}
+                '')
+                (
+                  lib.filterAttrs (
+                    _: service:
+                    let
+                      attrPath = lib.splitString "." service.serviceName;
+                      enable = lib.getAttrFromPath (attrPath ++ [ "enable" ]) config.services;
+                    in
+                    service.expose && enable
+                  ) config.profiles.homelab.services
+                )
+            );
+          };
+      };
+      nginx.enable = lib.mkForce false;
     };
-    nginx.enable = lib.mkForce false;
-  };
-  services.tailscale.permitCertUid = config.services.caddy.user;
-  networking.firewall = {
-    allowedTCPPorts = [
-      80
-      443
-    ];
-    allowedUDPPorts = [ 443 ];
+    services.tailscale.permitCertUid = config.services.caddy.user;
+    networking.firewall = {
+      allowedTCPPorts = [
+        80
+        443
+      ];
+      allowedUDPPorts = [ 443 ];
+    };
   };
 }

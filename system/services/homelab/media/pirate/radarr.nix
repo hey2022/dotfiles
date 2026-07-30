@@ -1,6 +1,5 @@
 {
   services.radarr = {
-    enable = true;
     group = "media";
   };
   profiles.homelab.services.radarr = {

@@ -7,7 +7,6 @@
     ./cloudflared.nix
     ../../system
     ../../system/desktop
-    ../../system/services/homelab
   ];
 
   networking.hostName = "desktop";

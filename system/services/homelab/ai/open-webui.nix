@@ -1,15 +1,12 @@
-{ config, lib, ... }:
+{ config, ... }:
 let
   cfg = config.services.open-webui;
 in
 {
-  config = lib.mkIf config.profiles.ai.enable {
-    services.open-webui = {
-      enable = true;
-      port = 11111;
-    };
-    profiles.homelab.services.open-webui = {
-      inherit (cfg) port;
-    };
+  services.open-webui = {
+    port = 11111;
+  };
+  profiles.homelab.services.open-webui = {
+    inherit (cfg) port;
   };
 }

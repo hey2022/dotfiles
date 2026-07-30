@@ -1,7 +1,5 @@
 {
-  services.prowlarr = {
-    enable = true;
-  };
+  services.prowlarr = { };
   profiles.homelab.services.prowlarr = {
     port = 9696;
   };
