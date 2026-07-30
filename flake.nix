@@ -64,6 +64,10 @@
       url = "github:yayuuu/hyprland-scroll-overview";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    split-monitor-workspaces = {
+      url = "github:zjeffer/split-monitor-workspaces";
+      flake = false;
+    };
     nixCats.url = "github:BirdeeHub/nixCats-nvim";
     fjordlauncher = {
       url = "github:unmojang/FjordLauncher";
