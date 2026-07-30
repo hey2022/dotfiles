@@ -5,7 +5,7 @@ let
 in
 {
   services.seerr = { };
-  homelab.services.seerr = {
+  profiles.homelab.services.seerr = {
     inherit (cfg) port;
   };
 }

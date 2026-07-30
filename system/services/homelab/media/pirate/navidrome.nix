@@ -6,10 +6,10 @@ in
   services.navidrome = {
     group = "media";
     settings = {
-      MusicFolder = "${config.homelab.mediaDir}/music";
+      MusicFolder = "${config.profiles.homelab.mediaDir}/music";
     };
   };
-  homelab.services.navidrome = {
+  profiles.homelab.services.navidrome = {
     port = cfg.settings.Port;
   };
 }

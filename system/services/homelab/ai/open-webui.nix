@@ -8,7 +8,7 @@ in
       enable = true;
       port = 11111;
     };
-    homelab.services.open-webui = {
+    profiles.homelab.services.open-webui = {
       inherit (cfg) port;
     };
   };

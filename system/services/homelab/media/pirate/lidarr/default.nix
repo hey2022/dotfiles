@@ -3,7 +3,7 @@
   services.lidarr = {
     group = "media";
   };
-  homelab.services.lidarr = {
+  profiles.homelab.services.lidarr = {
     port = 8686;
   };
 }

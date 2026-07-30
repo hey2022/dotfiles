@@ -12,15 +12,15 @@ in
         basicAuthEnabled = true;
         basicAuthUsername = "admin";
         basicAuthPasswordFile = config.sops.secrets.suwayomi-password.path;
-        localSourcePath = "${config.homelab.mediaDir}/manga";
-        downloadsPath = "${config.homelab.mediaDir}/manga/suwayomi";
+        localSourcePath = "${config.profiles.homelab.mediaDir}/manga";
+        downloadsPath = "${config.profiles.homelab.mediaDir}/manga/suwayomi";
         autoDownloadNewChapters = true;
         extensionRepos = [
           "https://raw.githubusercontent.com/keiyoushi/extensions/repo/index.min.json"
         ];
       };
     };
-    homelab.services.suwayomi = {
+    profiles.homelab.services.suwayomi = {
       inherit (cfg.settings.server) port;
       serviceName = "suwayomi-server";
     };

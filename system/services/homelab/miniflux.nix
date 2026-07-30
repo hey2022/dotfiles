@@ -8,7 +8,7 @@ in
       LISTEN_ADDR = "0.0.0.0:${toString port}";
     };
   };
-  homelab.services.miniflux = {
+  profiles.homelab.services.miniflux = {
     inherit port;
   };
 }

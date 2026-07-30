@@ -7,7 +7,7 @@ in
   imports = [
     ./node_exporter.nix
   ];
-  homelab.services.prometheus = {
+  profiles.homelab.services.prometheus = {
     inherit (cfg) port;
   };
 }

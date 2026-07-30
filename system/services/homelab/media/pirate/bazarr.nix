@@ -7,7 +7,7 @@ in
   services.bazarr = {
     group = "media";
   };
-  homelab.services.bazarr = {
+  profiles.homelab.services.bazarr = {
     port = cfg.listenPort;
   };
 }

@@ -3,7 +3,7 @@
     enable = true;
     group = "media";
   };
-  homelab.services.sonarr = {
+  profiles.homelab.services.sonarr = {
     port = 8989;
   };
 }

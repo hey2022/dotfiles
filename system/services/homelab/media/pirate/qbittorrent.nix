@@ -13,7 +13,7 @@ in
     torrentingPort = 49152;
     serverConfig = {
       BitTorrent.Session = {
-        DefaultSavePath = "${config.homelab.mediaDir}/downloads";
+        DefaultSavePath = "${config.profiles.homelab.mediaDir}/downloads";
       };
       Preferences.WebUI = {
         AlternativeUIEnabled = true;
@@ -26,7 +26,7 @@ in
     UMask = "002";
   };
   networking.firewall.allowedTCPPorts = [ cfg.torrentingPort ];
-  homelab.services.qbittorrent = {
+  profiles.homelab.services.qbittorrent = {
     port = cfg.webuiPort;
   };
 }
