@@ -32,6 +32,9 @@
         ui = {
           editor = "nvim";
         };
+        revsets = {
+          log = "all()";
+        };
         revset-aliases = {
           "closest_merge(to)" = "heads(::to & merges())";
         };
