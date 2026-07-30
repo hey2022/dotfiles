@@ -1,7 +1,6 @@
 { pkgs, pkgs-local, ... }:
 {
   imports = [
-    ./beets.nix
     ./localsend.nix
     ./productivity
     ./steam.nix
