@@ -60,9 +60,11 @@
       url = "github:catppuccin/nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hyprland.url = "github:hyprwm/Hyprland";
     hyprland-scroll-overview = {
-      url = "github:yayuuu/hyprland-scroll-overview";
+      url = "github:yayuuu/hyprland-scroll-overview/new-release";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.hyprland.follows = "hyprland";
     };
     split-monitor-workspaces = {
       url = "github:zjeffer/split-monitor-workspaces";
