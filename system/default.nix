@@ -7,6 +7,7 @@
 }:
 {
   imports = [
+    (inputs.import-tree ./services)
     ../modules/nixos
     ./auto-upgrade.nix
     ./bluetooth.nix
@@ -21,7 +22,6 @@
     ./profiles
     ./programs
     ./security
-    ./services
     ./shell
     ./sops-nix.nix
     ./ssh.nix
