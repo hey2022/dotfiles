@@ -2,7 +2,6 @@
   imports = [
     ./greetd.nix
     ./ly.nix
-    ./regreet.nix
   ];
-  programs.regreet.enable = true;
+  services.displayManager.regreet.enable = true;
 }
