@@ -1,5 +1,3 @@
-{ config, lib, ... }:
-
 {
   imports = [
     ./ai
@@ -15,21 +13,4 @@
     ./miniflux.nix
     ./prometheus.nix
   ];
-
-  config = lib.mkIf config.profiles.homelab.enable {
-    services = {
-      buildbot-nix = {
-        master.enable = true;
-        worker.enable = true;
-      };
-      calibre-web.enable = true;
-      glance.enable = true;
-      immich.enable = true;
-      karakeep.enable = false; # https://github.com/NixOS/nixpkgs/issues/529285
-      miniflux.enable = true;
-      qbittorrent.enable = true;
-      seerr.enable = true;
-    };
-    homelab.rootService = config.services.glance.settings.server.port;
-  };
 }
