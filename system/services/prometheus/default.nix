@@ -4,9 +4,6 @@ let
   cfg = config.services.prometheus;
 in
 {
-  imports = [
-    ./node_exporter.nix
-  ];
   profiles.homelab.services.prometheus = {
     inherit (cfg) port;
   };

@@ -1,5 +1,4 @@
 {
-  imports = [ ./beets.nix ];
   services.lidarr = {
     group = "media";
   };

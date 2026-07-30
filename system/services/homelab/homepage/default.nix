@@ -27,7 +27,6 @@ let
     ));
 in
 {
-  imports = [ ./services.nix ];
   config = lib.mkIf cfg.enable {
     services.homepage-dashboard = {
       inherit package;
