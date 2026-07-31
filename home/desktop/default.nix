@@ -1,6 +1,7 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
   imports = [
+    (inputs.import-tree ./wayland)
     ./activitywatch.nix
     ./catppuccin.nix
     ./clipboard
@@ -17,7 +18,6 @@
     ./theme.nix
     ./udiskie.nix
     ./wallpaper
-    ./wayland
     ./xdg
   ];
   home.packages = with pkgs; [
