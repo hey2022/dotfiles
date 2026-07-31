@@ -21,3 +21,4 @@ rec {
   reshade-steam-proton = pkgs.callPackage ./reshade-steam-proton { };
 }
 // (import ./anki { inherit (pkgs) callPackage; })
+// (import ./firefox-addons { inherit pkgs; })
