@@ -1,12 +1,9 @@
 {
   config,
   pkgs,
-  pkgs-stable,
+  pkgs-local,
   ...
 }:
-let
-  fonts = import ../common/fonts.nix { pkgs = pkgs-stable; };
-in
 {
   stylix = {
     enable = true;
@@ -22,7 +19,7 @@ in
         name = "Inter";
       };
       monospace = {
-        package = fonts.IosevkaCustom;
+        package = pkgs-local.IosevkaCustom;
         name = "Iosevka Custom";
       };
       emoji = {

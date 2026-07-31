@@ -1,4 +1,9 @@
-{ inputs, pkgs, ... }:
+{
+  inputs,
+  pkgs,
+  pkgs-stable,
+  ...
+}:
 
 let
   nixCats = import ../common/nvim { inherit inputs pkgs; };
@@ -19,6 +24,8 @@ rec {
   keepassxc-snapshot = pkgs.callPackage ./keepassxc-snapshot { };
   uuplugin = pkgs.callPackage ./uuplugin { };
   reshade-steam-proton = pkgs.callPackage ./reshade-steam-proton { };
+
 }
 // (import ./anki { inherit (pkgs) callPackage; })
 // (import ./firefox-addons { inherit pkgs; })
+// (import ./iosevka { pkgs = pkgs-stable; })
