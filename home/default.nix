@@ -6,12 +6,12 @@
 }:
 {
   imports = [
+    (inputs.import-tree ../modules/home-manager)
     (inputs.import-tree ./profiles)
     (inputs.import-tree ./programs)
     (inputs.import-tree ./services)
     (inputs.import-tree ./shell)
     ../lib/hm.nix
-    ../modules/home-manager/default.nix
     ./auto-upgrade.nix
     ./dev
     ./fonts.nix
