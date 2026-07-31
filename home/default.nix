@@ -1,10 +1,12 @@
 {
+  inputs,
   config,
   lib,
   ...
 }:
 {
   imports = [
+    (inputs.import-tree ./profiles)
     ../lib/hm.nix
     ../modules/home-manager/default.nix
     ./auto-upgrade.nix
@@ -12,7 +14,6 @@
     ./font
     ./nix.nix
     ./non-nixos.nix
-    ./profiles
     ./programs
     ./services
     ./shell
