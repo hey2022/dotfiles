@@ -95,6 +95,9 @@ for i = 1, smw.get_amount_of_workspaces() do
     bind(" + " .. n, smw.workspace(n))
     bind(" + SHIFT +" .. n, smw.move_to_workspace_silent(n))
 end
+bind(" + SHIFT + G", smw.grab_rogue_windows())
+bind(" + MINUS", smw.cycle_workspaces("prev"))
+bind(" + EQUAL", smw.cycle_workspaces("next"))
 
 bind("TAB", hl.dsp.workspace.toggle_special("scratchpad"))
 bind("SHIFT + TAB", function()
