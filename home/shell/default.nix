@@ -1,21 +1,5 @@
 { pkgs, ... }:
 {
-  imports = [
-    ./aliases.nix
-    ./bash.nix
-    ./carapace.nix
-    ./direnv.nix
-    ./env.nix
-    ./fish
-    ./nushell
-    ./pay-respects.nix
-    ./scripts
-    ./starship.nix
-    ./tldr.nix
-    ./tmux.nix
-    ./zoxide.nix
-  ];
-
   home.packages = with pkgs; [
     bat
     choose

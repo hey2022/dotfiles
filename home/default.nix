@@ -9,6 +9,7 @@
     (inputs.import-tree ./profiles)
     (inputs.import-tree ./programs)
     (inputs.import-tree ./services)
+    (inputs.import-tree ./shell)
     ../lib/hm.nix
     ../modules/home-manager/default.nix
     ./auto-upgrade.nix
@@ -16,7 +17,6 @@
     ./fonts.nix
     ./nix.nix
     ./non-nixos.nix
-    ./shell
     ./sops-nix.nix
   ];
   options = {
