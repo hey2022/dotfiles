@@ -14,6 +14,14 @@
           }
         ];
       }
+      {
+        job_name = "harmonia";
+        static_configs = [
+          {
+            targets = [ "cache.hey2022.dev" ];
+          }
+        ];
+      }
     ];
   };
 }
