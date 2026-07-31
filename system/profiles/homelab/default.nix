@@ -7,10 +7,6 @@ let
   cfg = config.profiles.homelab;
 in
 {
-  imports = [
-    ./ai.nix
-    ./media.nix
-  ];
   options = {
     profiles.homelab =
       with lib.types;

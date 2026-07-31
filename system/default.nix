@@ -8,6 +8,7 @@
 {
   imports = [
     (inputs.import-tree ./services)
+    (inputs.import-tree ./profiles)
     ../modules/nixos
     ./auto-upgrade.nix
     ./bluetooth.nix
@@ -19,7 +20,6 @@
     ./nix-ld.nix
     ./nix.nix
     ./power
-    ./profiles
     ./programs
     ./security
     ./shell
