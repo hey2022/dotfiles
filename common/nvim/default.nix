@@ -62,7 +62,6 @@ let
       # at RUN TIME for plugins. Will be available to PATH within neovim terminal
       # this includes LSPs
       lspsAndRuntimeDeps = {
-        # some categories of stuff.
         general = with pkgs; [
           fd
           ripgrep
@@ -70,39 +69,19 @@ let
           universal-ctags
           zoxide
         ];
-        # these names are arbitrary.
-        lint = with pkgs; [
-        ];
-        # but you can choose which ones you want
-        # per nvim package you export
         debug = {
-          cpp = with pkgs; [
-            vscode-extensions.vadimcn.vscode-lldb
-          ];
+          cpp = [ pkgs.vscode-extensions.vadimcn.vscode-lldb ];
         };
         format = with pkgs; [
           prettier
           yamlfmt
         ];
         languages = {
-          cpp = with pkgs; [
-            clang-tools
-          ];
-          glsl = with pkgs; [
-            glsl_analyzer
-          ];
+          cpp = [ pkgs.clang-tools ];
+          glsl = [ pkgs.glsl_analyzer ];
           python = with pkgs; [
             basedpyright
             ruff
-          ];
-          rust = with pkgs; [
-            rust-analyzer
-          ];
-          quarto = with pkgs; [
-            quarto
-          ];
-          tex = with pkgs; [
-            tex-fmt
           ];
           lua = {
             always = with pkgs; [
@@ -110,24 +89,21 @@ let
               stylua
             ];
           };
+          markdown = [ pkgs.python3Packages.pylatexenc ];
           nix = with pkgs; [
             nixd
             nixfmt
           ];
-          markdown = with pkgs; [
-            python3Packages.pylatexenc
-          ];
+          quarto = [ pkgs.quarto ];
+          rust = [ pkgs.rust-analyzer ];
+          tex = [ pkgs.tex-fmt ];
         };
       };
 
       # This is for plugins that will load at startup without using packadd:
       startupPlugins = {
-        debug = with pkgs.vimPlugins; [
-          nvim-nio
-        ];
+        debug = [ pkgs.vimPlugins.nvim-nio ];
         general = with pkgs.vimPlugins; {
-          # you can make subcategories!!!
-          # (always isnt a special name, just the one I chose for this subcategory)
           always = [
             lze
             lzextras
@@ -174,38 +150,24 @@ let
             nvim-dap-virtual-text
           ];
         };
-        lint = with pkgs.vimPlugins; [
-          nvim-lint
-        ];
-        format = with pkgs.vimPlugins; [
-          conform-nvim
-        ];
+        lint = [ pkgs.vimPlugins.nvim-lint ];
+        format = [ pkgs.vimPlugins.conform-nvim ];
         languages = {
-          markdown = with pkgs.vimPlugins; [
-            render-markdown-nvim
-            markdown-preview-nvim
-          ];
-          org-mode = with pkgs.vimPlugins; [
-            orgmode
-          ];
+          latex = [ pkgs.vimPlugins.vimtex ];
           lua = {
-            neovim = with pkgs.vimPlugins; [
-              lazydev-nvim
-            ];
+            neovim = [ pkgs.vimPlugins.lazydev-nvim ];
           };
-          rust = with pkgs.vimPlugins; [
-            rustaceanvim
+          markdown = with pkgs.vimPlugins; [
+            markdown-preview-nvim
+            render-markdown-nvim
           ];
+          org-mode = [ pkgs.vimPlugins.orgmode ];
           quarto = with pkgs.vimPlugins; [
-            quarto-nvim
             otter-nvim
+            quarto-nvim
           ];
-          typst = with pkgs.vimPlugins; [
-            typst-preview-nvim
-          ];
-          latex = with pkgs.vimPlugins; [
-            vimtex
-          ];
+          rust = [ pkgs.vimPlugins.rustaceanvim ];
+          typst = [ pkgs.vimPlugins.typst-preview-nvim ];
         };
         obsidian = with pkgs.vimPlugins; [
           obsidian-nvim
@@ -307,7 +269,6 @@ let
             vim-startuptime
             which-key-nvim
           ];
-          ai = with pkgs.vimPlugins; [ ];
         };
       };
 
@@ -416,7 +377,6 @@ let
               telescope = true;
               always = true;
               extra = true;
-              ai = false;
             };
             languages = {
               cpp = true;
