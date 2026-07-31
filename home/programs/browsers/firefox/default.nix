@@ -10,7 +10,7 @@ let
   profile = "default";
 in
 {
-  imports = [ ./extensions ];
+  imports = [ ./_extensions ];
   programs.firefox = {
     enable = true;
     configPath = "${config.xdg.configHome}/mozilla/firefox";
@@ -71,8 +71,8 @@ in
               zotero-connector
             ];
           }
-          (importExtension ./extensions/redirector.nix)
-          (importExtension ./extensions/sidebery/default.nix)
+          (importExtension ./_extensions/redirector.nix)
+          (importExtension ./_extensions/sidebery/default.nix)
         ];
       search = {
         force = true;

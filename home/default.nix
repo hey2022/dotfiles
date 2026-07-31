@@ -7,6 +7,7 @@
 {
   imports = [
     (inputs.import-tree ./profiles)
+    (inputs.import-tree ./programs)
     ../lib/hm.nix
     ../modules/home-manager/default.nix
     ./auto-upgrade.nix
@@ -14,7 +15,6 @@
     ./font
     ./nix.nix
     ./non-nixos.nix
-    ./programs
     ./services
     ./shell
     ./sops-nix.nix

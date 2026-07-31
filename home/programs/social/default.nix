@@ -1,6 +1,0 @@
-{ ... }:
-{
-  imports = [
-    ./wechat.nix
-  ];
-}
