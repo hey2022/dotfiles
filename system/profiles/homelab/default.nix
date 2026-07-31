@@ -58,6 +58,7 @@ in
       caddy.enable = true;
       glance.enable = true;
       grafana.enable = true;
+      harmonia.cache.enable = true;
       homepage-dashboard.enable = true;
       # karakeep.enable = false; # https://github.com/NixOS/nixpkgs/issues/529285
       miniflux.enable = true;
