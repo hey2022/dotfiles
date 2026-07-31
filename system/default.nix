@@ -7,9 +7,11 @@
 }:
 {
   imports = [
-    (inputs.import-tree ./services)
-    (inputs.import-tree ./profiles)
-    (inputs.import-tree ../modules/nixos)
+    (inputs.import-tree [
+      ../modules/nixos
+      ./profiles
+      ./services
+    ])
     ./auto-upgrade.nix
     ./bluetooth.nix
     ./boot
