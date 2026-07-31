@@ -1,7 +1,9 @@
+{ inputs, ... }:
+
 {
   imports = [
+    (inputs.import-tree ../../home/desktop)
     ../../home
-    ../../home/desktop
   ];
 
   home = {
