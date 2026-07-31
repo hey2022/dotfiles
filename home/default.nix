@@ -13,7 +13,7 @@
     ../modules/home-manager/default.nix
     ./auto-upgrade.nix
     ./dev
-    ./font
+    ./fonts.nix
     ./nix.nix
     ./non-nixos.nix
     ./shell

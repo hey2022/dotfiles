@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
   imports = [
-    ../font
     ./activitywatch.nix
     ./catppuccin.nix
     ./clipboard

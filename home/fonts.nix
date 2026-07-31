@@ -1,11 +1,9 @@
 { pkgs, pkgs-local, ... }:
 {
-  imports = [
-    ./font-awesome.nix
-  ];
   home.packages = with pkgs; [
     corefonts
     eb-garamond
+    font-awesome
     inter-nerdfont
     lxgw-wenkai
     nerd-fonts.symbols-only
