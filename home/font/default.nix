@@ -1,7 +1,6 @@
-{ pkgs, ... }:
+{ pkgs, pkgs-local, ... }:
 {
   imports = [
-    ./iosevka
     ./font-awesome.nix
   ];
   home.packages = with pkgs; [
@@ -10,6 +9,8 @@
     inter-nerdfont
     lxgw-wenkai
     nerd-fonts.symbols-only
+    pkgs-local.IosevkaCustom
+    pkgs-local.IosevkaProportionalCustom
     vista-fonts
   ];
   fonts.fontconfig.enable = true;
