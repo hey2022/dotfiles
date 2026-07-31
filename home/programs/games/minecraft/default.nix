@@ -5,7 +5,6 @@
   ...
 }:
 {
-  imports = [ ./fjord.nix ];
   options.profiles.gaming.minecraft = {
     enable = lib.mkEnableOption "Minecraft gaming support";
   };
