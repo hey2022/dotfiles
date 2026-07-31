@@ -115,3 +115,9 @@ bind("mouse_up", hl.dsp.focus({ workspace = "e-1" }))
 -- Move/resize windows with mainMod + LMB/RMB and dragging
 bind("mouse:272", hl.dsp.window.drag(), { mouse = true })
 bind("mouse:273", hl.dsp.window.resize(), { mouse = true })
+
+bind("ESCAPE", hl.dsp.submap("passthrough"))
+hl.define_submap("passthrough", function()
+    hl.bind("ESCAPE", hl.dsp.submap("reset"))
+    bind("ESCAPE", hl.dsp.submap("reset"))
+end)
