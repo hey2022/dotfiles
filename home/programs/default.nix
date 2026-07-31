@@ -13,7 +13,6 @@
     ./music.nix
     ./pandoc.nix
     ./productivity
-    ./proxy
     ./qalculate
     ./rss.nix
     ./social
