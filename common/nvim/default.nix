@@ -94,6 +94,7 @@ let
             nixd
             nixfmt
           ];
+          qml = [ pkgs.qt6.qtdeclarative ];
           quarto = [ pkgs.quarto ];
           rust = [ pkgs.rust-analyzer ];
           tex = [ pkgs.tex-fmt ];
@@ -387,6 +388,7 @@ let
               nix = true;
               org-mode = false;
               python = true;
+              qml = true;
               quarto = true;
               rust = true;
               typst = true;
