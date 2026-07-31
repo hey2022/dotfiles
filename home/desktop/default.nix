@@ -1,25 +1,6 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
+
 {
-  imports = [
-    (inputs.import-tree ./wayland)
-    ./activitywatch.nix
-    ./catppuccin.nix
-    ./clipboard
-    ./fcitx5.nix
-    ./gammastep.nix
-    ./gtk.nix
-    ./imv.nix
-    ./launchers
-    ./mapping
-    ./pipewire.nix
-    ./qt.nix
-    ./stylix.nix
-    ./terminal
-    ./theme.nix
-    ./udiskie.nix
-    ./wallpaper
-    ./xdg
-  ];
   home.packages = with pkgs; [
     desktop-file-utils
     localsend
