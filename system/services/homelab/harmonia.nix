@@ -9,7 +9,7 @@ in
       cache = {
         signKeyPaths = [ config.sops.secrets.harmonia-key.path ];
         settings = {
-          priority = 50;
+          priority = 40;
         };
       };
       daemon.enable = true;
