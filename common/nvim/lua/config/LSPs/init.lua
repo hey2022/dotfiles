@@ -140,4 +140,11 @@ require("lze").load({
             filetypes = { "glsl", "vert", "tesc", "tese", "frag", "geom", "comp" },
         },
     },
+    {
+        "qmlls",
+        for_cat = "languages.qml",
+        lsp = {
+            filetypes = { "qml" },
+        },
+    },
 })
