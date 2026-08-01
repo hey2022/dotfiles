@@ -10,6 +10,7 @@
     (inputs.import-tree [
       ../modules/nixos
       ./profiles
+      ./programs
       ./services
     ])
     ./auto-upgrade.nix
@@ -22,7 +23,6 @@
     ./nix-ld.nix
     ./nix.nix
     ./power
-    ./programs
     ./security
     ./shell
     ./sops-nix.nix
