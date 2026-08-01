@@ -1,4 +1,5 @@
 import Quickshell
+import qs.flowtime
 import qs.wlogout
 
 ShellRoot {
