@@ -26,8 +26,7 @@ bind("SHIFT + I", exec("toggle-inhibit-lid-sleep"))
 bind("O", exec("slurp | xargs -I {} grim -g {} - | tesseract -l eng - - | wl-copy"))
 bind("A", exec("wayscriber --daemon-toggle"))
 
-bind("W", exec("waypaper --random"))
-bind("SHIFT + W", exec("waypaper", { uwsm = true }))
+bind("W", exec("skwd wall toggle"))
 
 bind("SHIFT + V", exec("sleep 0.25 && wl-paste | tr '\n' ' ' | tr -s ' ' | wl-copy && ydotool key 29:1 47:1 47:0 29:0"))
 
