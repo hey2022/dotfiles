@@ -68,6 +68,7 @@ in
       rofi.enable = true;
       uwsm.enable = true;
       waybar.enable = true;
+      waypaper.enable = true;
     };
     services = {
       cliphist.enable = true;

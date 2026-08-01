@@ -5,12 +5,19 @@
   ...
 }:
 
+let
+  cfg = config.programs.waypaper;
+in
 {
-  config = lib.mkIf config.services.awww.enable {
+  options.programs.waypaper = {
+    enable = lib.mkEnableOption "waypaper";
+    random.enable = lib.mkEnableOption "waypaper random switcher";
+  };
+  config = lib.mkIf cfg.enable {
     home.packages = with pkgs; [
       waypaper
     ];
-    systemd.user = {
+    systemd.user = lib.mkIf cfg.random.enable {
       services = {
         waypaper-random = {
           Unit = {
