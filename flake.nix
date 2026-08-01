@@ -58,7 +58,12 @@
     };
     catppuccin = {
       url = "github:catppuccin/nix";
+    };
+    skwd-wall = {
+      url = "github:liixini/skwd-wall";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.skwd-daemon.inputs.nixpkgs.follows = "skwd-wall/nixpkgs";
+      inputs.quickshell.inputs.nixpkgs.follows = "skwd-wall/nixpkgs";
     };
     hyprland.url = "github:hyprwm/Hyprland";
     hyprland-scroll-overview = {
