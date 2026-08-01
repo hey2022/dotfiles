@@ -16,3 +16,6 @@ result-*
 
 # Ignore nix profiling
 nix.profile
+
+# Quickshell qmlls config
+.qmlls.ini
