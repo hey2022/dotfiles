@@ -132,7 +132,7 @@ Scope {
 
     SoundEffect {
         id: alarmSound
-        source: "assets/sounds/alarm.wav"
+        source: "assets/alarm.wav"
     }
 
     IpcHandler {
