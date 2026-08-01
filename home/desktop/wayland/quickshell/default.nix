@@ -1,5 +1,13 @@
-{ config, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
+let
+  cfg = config.programs.quickshell;
+in
 {
   home.packages = with pkgs; [
     qt6Packages.qtmultimedia
@@ -12,4 +20,9 @@
       default = config.lib.hm.mkFlakeSymlink ./default;
     };
   };
+  home.activation.create-create-qmlls-config = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    for dir in ${lib.escapeShellArgs (lib.attrValues cfg.configs)}; do
+      touch "$dir/.qmlls.ini"
+    done
+  '';
 }
