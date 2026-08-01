@@ -18,7 +18,6 @@ in
       foot.enable = true;
       rofi.enable = true;
       waybar.enable = true;
-      wlogout.enable = true;
     };
     services = {
       cliphist.enable = true;
