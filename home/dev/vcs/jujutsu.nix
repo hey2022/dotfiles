@@ -1,4 +1,9 @@
-{ config, lib, ... }:
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}:
 let
   cfg = config.programs.jujutsu;
 in
@@ -75,13 +80,61 @@ in
                 "roots(trunk()..) & mutable()"
                 "--simplify-parents"
               ];
+              # https://github.com/acarapetis/jj-pre-push
+              push = [
+                "util"
+                "exec"
+                "--"
+                "jj-pre-push"
+                "push"
+              ];
             };
           };
         };
         jjui = {
           enable = true;
+          settings = {
+            # https://github.com/acarapetis/jj-pre-push
+            actions = [
+              {
+                name = "jj-push";
+                lua = ''
+                  jj_async("push")
+                  revisions.refresh()
+                '';
+              }
+              {
+                name = "jj-push-selected";
+                lua = ''
+                  jj_async("push", "-r", context.commit_id())
+                  revisions.refresh()
+                '';
+              }
+            ];
+            bindings = [
+              {
+                action = "jj-push";
+                desc = "jj push";
+                scope = "revisions";
+                seq = [
+                  "x"
+                  "p"
+                ];
+              }
+              {
+                action = "jj-push-selected";
+                desc = "jj push selected bookmark(s)";
+                scope = "revisions";
+                seq = [
+                  "x"
+                  "P"
+                ];
+              }
+            ];
+          };
         };
       };
+      home.packages = [ pkgs.jj-pre-push ];
     })
     {
       programs = {
