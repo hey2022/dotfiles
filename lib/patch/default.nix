@@ -1,14 +1,12 @@
 {
   self,
+  pkgs,
   inputs,
   system,
   ...
 }:
 
 let
-  pkgs = import inputs.nixpkgs {
-    inherit system;
-  };
   nixpkgs-patches = [
     # https://nixpk.gs/pr-tracker.html?pr=507286
     (pkgs.fetchpatch2 {
