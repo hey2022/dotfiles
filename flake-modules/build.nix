@@ -1,39 +1,51 @@
 {
   self,
   inputs,
+  withSystem,
   ...
 }:
 
+let
+  get-patched =
+    system:
+    import ../lib/patch {
+      inherit self inputs system;
+      pkgs = import inputs.nixpkgs { inherit system; };
+    };
+in
 {
+  perSystem =
+    { system, ... }:
+    {
+      _module.args.pkgs = (get-patched system).nixpkgs;
+    };
+
   flake.lib.build =
     system:
     let
-      patched = import ../lib/patch {
-        inherit self inputs system;
-      };
+      patched = get-patched system;
     in
-    {
-      mkSystem =
-        modules:
-        patched.nixosSystem {
-          inherit system modules;
-          pkgs = patched.nixpkgs;
-          specialArgs = {
-            inherit inputs;
-            inherit (inputs) self;
-            pkgs-local = self.packages.${system};
+    withSystem system (
+      { self', pkgs, ... }: {
+        mkSystem =
+          modules:
+          patched.nixosSystem {
+            inherit system modules pkgs;
+            specialArgs = {
+              inherit inputs self;
+              pkgs-local = self'.packages;
+            };
           };
-        };
-      mkHome =
-        modules:
-        patched.home-manager.lib.homeManagerConfiguration {
-          inherit modules;
-          pkgs = patched.nixpkgs;
-          extraSpecialArgs = {
-            inherit inputs;
-            inherit (inputs) self;
-            pkgs-local = self.packages.${system};
+
+        mkHome =
+          modules:
+          patched.home-manager.lib.homeManagerConfiguration {
+            inherit modules pkgs;
+            extraSpecialArgs = {
+              inherit inputs self;
+              pkgs-local = self'.packages;
+            };
           };
-        };
-    };
+      }
+    );
 }
