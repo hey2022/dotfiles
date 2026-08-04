@@ -1,5 +1,4 @@
 local lib = require("lib")
-local smw = require("plugins.split-monitor-workspaces")
 local bind = lib.bind
 local exec = lib.exec
 
@@ -87,17 +86,11 @@ bind("SHIFT + PERIOD", hl.dsp.layout("promote"))
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
-for i = 1, smw.get_amount_of_workspaces() do
-    local n = tostring(i)
-    if n == "10" then
-        n = "0"
-    end
-    bind(" + " .. n, smw.workspace(n))
-    bind(" + SHIFT +" .. n, smw.move_to_workspace_silent(n))
+for i = 1, 10 do
+    local key = i % 10 -- 10 maps to key 0
+    bind(tostring(key), hl.dsp.focus({ workspace = i }))
+    bind("SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
 end
-bind(" + SHIFT + G", smw.grab_rogue_windows())
-bind(" + MINUS", smw.cycle_workspaces("prev"))
-bind(" + EQUAL", smw.cycle_workspaces("next"))
 
 bind("TAB", hl.dsp.workspace.toggle_special("scratchpad"))
 bind("SHIFT + TAB", function()

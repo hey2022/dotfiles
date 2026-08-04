@@ -1521,7 +1521,6 @@
         "reshade-shaders": "reshade-shaders",
         "skwd-wall": "skwd-wall",
         "sops-nix": "sops-nix",
-        "split-monitor-workspaces": "split-monitor-workspaces",
         "stylix": "stylix",
         "treefmt-nix": "treefmt-nix_2"
       }
@@ -1586,22 +1585,6 @@
       "original": {
         "owner": "Mic92",
         "repo": "sops-nix",
-        "type": "github"
-      }
-    },
-    "split-monitor-workspaces": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1785188714,
-        "narHash": "sha256-2sxPGolcu1kL734NuKNDZjz9+qFZaBmEMEf75v998wc=",
-        "owner": "zjeffer",
-        "repo": "split-monitor-workspaces",
-        "rev": "60a6f9126caa8e81addf424668ec3308aa5baa96",
-        "type": "github"
-      },
-      "original": {
-        "owner": "zjeffer",
-        "repo": "split-monitor-workspaces",
         "type": "github"
       }
     },
