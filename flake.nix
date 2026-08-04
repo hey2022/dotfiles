@@ -71,10 +71,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.hyprland.follows = "hyprland";
     };
-    split-monitor-workspaces = {
-      url = "github:zjeffer/split-monitor-workspaces";
-      flake = false;
-    };
     nixCats.url = "github:BirdeeHub/nixCats-nvim";
     fjordlauncher = {
       url = "github:unmojang/FjordLauncher";
