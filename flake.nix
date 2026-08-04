@@ -100,11 +100,6 @@
       url = "github:Iurimateus/luasnip-latex-snippets.nvim";
       flake = false;
     };
-    # HACK: until nvim-treesitter-textobjects moves to main branch
-    plugins-nvim-treesitter-textobjects = {
-      url = "github:nvim-treesitter/nvim-treesitter-textobjects/main";
-      flake = false;
-    };
   };
 
   outputs =
