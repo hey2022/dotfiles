@@ -22,6 +22,10 @@
       url = "github:nix-community/buildbot-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    ncro = {
+      url = "github:manic-systems/ncro";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:denful/import-tree";
