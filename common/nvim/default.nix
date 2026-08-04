@@ -184,7 +184,7 @@ let
             colorful-menu-nvim
           ];
           treesitter = with pkgs.vimPlugins; [
-            pkgs.neovimPlugins.nvim-treesitter-textobjects
+            nvim-treesitter-textobjects
             (nvim-treesitter.withPlugins (
               plugins: with plugins; [
                 bash
