@@ -22,6 +22,22 @@
           }
         ];
       }
+      {
+        job_name = "ncro";
+        static_configs = [
+          {
+            targets =
+              let
+                port = 8501;
+              in
+              [
+                "desktop.taila6842.ts.net:${toString port}"
+                "goon.taila6842.ts.net:${toString port}"
+                "x1c12.taila6842.ts.net:${toString port}"
+              ];
+          }
+        ];
+      }
     ];
   };
 }
