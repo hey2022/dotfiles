@@ -69,6 +69,18 @@ in
                 }
               ];
             }
+            {
+              url = "https://catppuccin.cachix.org";
+              priority = 50;
+              public_key = "catppuccin.cachix.org-1:noG/4HkbhJb+lUAdKrph6LaozJvAeEEZj4N732IysmU=";
+              filters = [
+                {
+                  action = "allow";
+                  field = "name";
+                  pattern = "catppuccin*";
+                }
+              ];
+            }
           ];
       logging.timestamps = false;
     };
