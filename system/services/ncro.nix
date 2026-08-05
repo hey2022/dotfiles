@@ -81,6 +81,18 @@ in
                 }
               ];
             }
+            {
+              url = "https://install.determinate.systems";
+              priority = 50;
+              public_key = "cache.flakehub.com-3:hJuILl5sVK4iKm86JzgdXW12Y2Hwd5G07qKtHTOcDCM=";
+              filters = [
+                {
+                  action = "allow";
+                  field = "name";
+                  pattern = "determinate*";
+                }
+              ];
+            }
           ];
       logging.timestamps = false;
     };
