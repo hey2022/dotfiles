@@ -102,4 +102,10 @@ in
       };
     };
   };
+  # HACK: https://github.com/catppuccin/nix/issues/392 IFD
+  catppuccin.firefox.enable = false;
+  stylix.targets.firefox = {
+    enable = true;
+    profileNames = [ profile ];
+  };
 }
