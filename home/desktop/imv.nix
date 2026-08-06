@@ -7,4 +7,6 @@
       };
     };
   };
+  # HACK: https://github.com/catppuccin/nix/issues/392 IFD
+  catppuccin.imv.enable = false;
 }
