@@ -37,6 +37,9 @@
       (pkgs-local.search-stats-extended-bin.withConfig {
         config = lib.importJSON ./config/search-stats-extended.json;
       })
+      (recolor.withConfig {
+        config = lib.importJSON ./config/recolor.json;
+      })
     ];
   };
   home.packages = [
@@ -50,4 +53,6 @@
       "anki/key" = { };
     };
   };
+  # HACK: https://github.com/catppuccin/nix/issues/392 IFD
+  catppuccin.anki.enable = false;
 }

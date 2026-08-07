@@ -53,6 +53,11 @@ in
               public_key = "cache.hey2022.dev:jjEoh4E8SFmnwrDvEPQRF3aTj/Y4iNzWj6PkdlBAyGY=";
             }
             {
+              url = "https://nyx-cache.chaotic.cx";
+              priority = 40;
+              public_key = "nyx-cache.chaotic.cx:dJxTrgMC3V3cFfyIiBQDQorG6k1LsqurH/srpMSq7qk=";
+            }
+            {
               url = "https://hyprland.cachix.org";
               priority = 50;
               public_key = "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=";
@@ -61,6 +66,30 @@ in
                   action = "allow";
                   field = "name";
                   pattern = "*hyprland*";
+                }
+              ];
+            }
+            {
+              url = "https://catppuccin.cachix.org";
+              priority = 50;
+              public_key = "catppuccin.cachix.org-1:noG/4HkbhJb+lUAdKrph6LaozJvAeEEZj4N732IysmU=";
+              filters = [
+                {
+                  action = "allow";
+                  field = "name";
+                  pattern = "catppuccin*";
+                }
+              ];
+            }
+            {
+              url = "https://install.determinate.systems";
+              priority = 50;
+              public_key = "cache.flakehub.com-3:hJuILl5sVK4iKm86JzgdXW12Y2Hwd5G07qKtHTOcDCM=";
+              filters = [
+                {
+                  action = "allow";
+                  field = "name";
+                  pattern = "determinate*";
                 }
               ];
             }
