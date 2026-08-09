@@ -11,7 +11,6 @@ let
 in
 {
   imports = [
-    ../tex.nix
     ../../spell
   ];
   config = lib.mkIf cfg.enable {
