@@ -15,7 +15,6 @@ in
     ./gpg.nix
     ./jq.nix
     ./json.nix
-    ./julia.nix
     ./lisp.nix
     ./markdown
     ./neovim.nix
