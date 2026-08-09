@@ -14,17 +14,16 @@ in
       upstreams =
         lib.map
           (
-            upstream:
-            upstream
-            // {
-              filters = (upstream.filters or [ ]) ++ [
-                {
-                  action = "deny";
-                  field = "name";
-                  pattern = "*-source";
-                }
-              ];
-            }
+            upstream: upstream
+            # // {
+            #   filters = (upstream.filters or [ ]) ++ [
+            #     {
+            #       action = "deny";
+            #       field = "name";
+            #       pattern = "*-source";
+            #     }
+            #   ];
+            # }
           )
           [
             {
