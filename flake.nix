@@ -79,7 +79,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.hyprland.follows = "hyprland";
     };
-    nixCats.url = "github:BirdeeHub/nixCats-nvim";
     fjordlauncher = {
       url = "github:unmojang/FjordLauncher";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -100,7 +99,7 @@
       url = "github:crosire/reshade-shaders";
       flake = false;
     };
-    plugins-luasnip-latex-snippets-nvim = {
+    neovim-plugin-luasnip-latex-snippets-nvim = {
       url = "github:Iurimateus/luasnip-latex-snippets.nvim";
       flake = false;
     };
