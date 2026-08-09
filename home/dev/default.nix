@@ -18,7 +18,6 @@ in
     ./neovim.nix
     ./nix
     ./profiling.nix
-    ./python.nix
     ./rust
     ./sh.nix
     ./vcs
