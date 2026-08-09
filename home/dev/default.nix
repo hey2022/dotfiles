@@ -20,7 +20,6 @@ in
     ./nix
     ./profiling.nix
     ./python.nix
-    ./qt.nix
     ./rust
     ./sh.nix
     ./sqlite.nix
