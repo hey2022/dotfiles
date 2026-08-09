@@ -29,8 +29,13 @@ in
       { self', pkgs, ... }: {
         mkSystem =
           modules:
+          # https://github.com/NixOS/nixpkgs/blob/master/flake.nix
+          # https://github.com/NixOS/nixpkgs/blob/master/nixos/lib/eval-config.nix
           patched.nixosSystem {
-            inherit system modules pkgs;
+            system = null;
+            modules = modules ++ [
+              { nixpkgs.pkgs = pkgs; }
+            ];
             specialArgs = {
               inherit inputs self;
               pkgs-local = self'.packages;
