@@ -64,7 +64,12 @@ in
                 {
                   action = "allow";
                   field = "name";
-                  pattern = "*hyprland*";
+                  pattern = "*hypr*";
+                }
+                {
+                  action = "allow";
+                  field = "name";
+                  pattern = "aquamarine*";
                 }
               ];
             }
