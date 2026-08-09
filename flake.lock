@@ -1034,6 +1034,22 @@
         "type": "github"
       }
     },
+    "neovim-plugin-luasnip-latex-snippets-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1766323359,
+        "narHash": "sha256-0Q24sRsmdUCr7V3jod9XmgeUev3BfmiHj5OmrEZiXSI=",
+        "owner": "Iurimateus",
+        "repo": "luasnip-latex-snippets.nvim",
+        "rev": "a14821dd680dfdd2006b135425cc2a8ab297ebc6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Iurimateus",
+        "repo": "luasnip-latex-snippets.nvim",
+        "type": "github"
+      }
+    },
     "nix": {
       "inputs": {
         "flake-parts": "flake-parts",
@@ -1152,21 +1168,6 @@
       "original": {
         "owner": "oddlama",
         "repo": "nix-topology",
-        "type": "github"
-      }
-    },
-    "nixCats": {
-      "locked": {
-        "lastModified": 1777273601,
-        "narHash": "sha256-xBUa8Tl9V7IXI+VmLEuDc81La/EhoSn1C3EVSnJ3cfU=",
-        "owner": "BirdeeHub",
-        "repo": "nixCats-nvim",
-        "rev": "f69ea013e328841a7def7037ed59788a76be8816",
-        "type": "github"
-      },
-      "original": {
-        "owner": "BirdeeHub",
-        "repo": "nixCats-nvim",
         "type": "github"
       }
     },
@@ -1414,22 +1415,6 @@
         "type": "github"
       }
     },
-    "plugins-luasnip-latex-snippets-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1766323359,
-        "narHash": "sha256-0Q24sRsmdUCr7V3jod9XmgeUev3BfmiHj5OmrEZiXSI=",
-        "owner": "Iurimateus",
-        "repo": "luasnip-latex-snippets.nvim",
-        "rev": "a14821dd680dfdd2006b135425cc2a8ab297ebc6",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Iurimateus",
-        "repo": "luasnip-latex-snippets.nvim",
-        "type": "github"
-      }
-    },
     "pre-commit-hooks": {
       "inputs": {
         "flake-compat": "flake-compat_3",
@@ -1507,16 +1492,15 @@
         "hyprland-scroll-overview": "hyprland-scroll-overview",
         "import-tree": "import-tree",
         "ncro": "ncro",
+        "neovim-plugin-luasnip-latex-snippets-nvim": "neovim-plugin-luasnip-latex-snippets-nvim",
         "nix-alien": "nix-alien",
         "nix-flatpak": "nix-flatpak",
         "nix-index-database": "nix-index-database_2",
         "nix-topology": "nix-topology",
-        "nixCats": "nixCats",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_7",
         "nixpkgs-stable": "nixpkgs-stable",
         "nur": "nur",
-        "plugins-luasnip-latex-snippets-nvim": "plugins-luasnip-latex-snippets-nvim",
         "reshade-shaders": "reshade-shaders",
         "skwd-wall": "skwd-wall",
         "sops-nix": "sops-nix",
