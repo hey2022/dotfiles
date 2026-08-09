@@ -14,7 +14,6 @@ in
     ./emacs
     ./gpg.nix
     ./jq.nix
-    ./json.nix
     ./markdown
     ./neovim.nix
     ./nix
