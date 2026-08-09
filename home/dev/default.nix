@@ -22,7 +22,6 @@ in
     ./python.nix
     ./rust
     ./sh.nix
-    ./typst.nix
     ./vcs
   ];
   options.profiles.dev = {
