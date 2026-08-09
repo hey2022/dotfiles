@@ -13,7 +13,6 @@ in
     ./cpp
     ./emacs
     ./gpg.nix
-    ./java.nix
     ./jq.nix
     ./json.nix
     ./julia.nix
