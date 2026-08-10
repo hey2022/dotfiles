@@ -9,7 +9,6 @@ let
 in
 {
   imports = [
-    ./android.nix
     ./cpp
     ./emacs
     ./gpg.nix
