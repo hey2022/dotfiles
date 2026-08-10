@@ -22,6 +22,7 @@ in
     policies = {
       Cookies = {
         Allow = [
+          "https://app.element.io"
           "https://devdocs.io"
           "https://s.dunkirk.sh"
         ];
