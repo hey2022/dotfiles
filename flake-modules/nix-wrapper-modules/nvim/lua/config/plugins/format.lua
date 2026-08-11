@@ -8,13 +8,19 @@ return {
         },
         after = function(plugin)
             local conform = require("conform")
-
             conform.setup({
+                -- HACK: https://github.com/stevearc/conform.nvim/issues/793
+                formatters = {
+                    treefmt = {
+                        require_cwd = false,
+                    },
+                },
                 formatters_by_ft = {
                     -- Conform will run multiple formatters sequentially
                     -- python = { "isort", "black" },
                     -- Use a sub-list to run only the first available formatter
                     -- javascript = { { "prettierd", "prettier" } },
+                    ["*"] = { "treefmt" },
                     cpp = { "clang-format" },
                     css = { "prettier" },
                     json = { "prettier" },
