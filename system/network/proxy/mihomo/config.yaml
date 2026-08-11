@@ -84,11 +84,18 @@ proxy-providers:
   XSUS:
     type: http
     url: "{{XSUS}}"
+  backup:
+    type: http
+    url: "{{backup}}"
 proxy-groups:
   - name: XSUS
     type: select
     use:
       - XSUS
+  - name: backup
+    type: select
+    use:
+      - backup
   - name: Hong Kong
     type: select
     include-all: true

@@ -23,16 +23,21 @@ in
         "mihomo/XSUS" = {
           sopsFile = "${inputs.self}/secrets/root/secrets.yaml";
         };
+        "mihomo/backup" = {
+          sopsFile = "${inputs.self}/secrets/root/secrets.yaml";
+        };
       };
       templates."mihomo.yaml".content =
         lib.strings.replaceStrings
           [
             "{{controller-secret}}"
             "{{XSUS}}"
+            "{{backup}}"
           ]
           [
             config.sops.placeholder."mihomo/controller-secret"
             config.sops.placeholder."mihomo/XSUS"
+            config.sops.placeholder."mihomo/backup"
           ]
           (lib.readFile ./config.yaml);
     };
