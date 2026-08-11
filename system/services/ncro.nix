@@ -102,5 +102,5 @@ in
     };
   };
 
-  nix.settings.substituters = lib.mkForce [ "http://localhost:${toString port}" ];
+  nix.settings.substituters = lib.mkForce [ "http://localhost:${toString port}?priority=0" ];
 }
