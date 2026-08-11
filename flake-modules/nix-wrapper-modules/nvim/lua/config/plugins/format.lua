@@ -2,7 +2,7 @@ return {
     {
         "conform.nvim",
         for_cat = "format",
-        ft = { "stylua", "nix" },
+        event = { "BufReadPre", "BufNewFile" },
         keys = {
             { "<leader>FF", desc = "[F]ormat [F]ile" },
         },
