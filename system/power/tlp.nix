@@ -6,6 +6,7 @@
 {
   services.tlp = lib.mkIf config.host.laptop {
     enable = true;
+    pd.enable = true;
     settings = {
       # https://linrunner.de/tlp/support/optimizing.html
       # Extend power-saver runtime
