@@ -1,0 +1,25 @@
+[shell]
+font_family = "Iosevka Custom"
+screen_time_enabled = true
+
+[shell.animation]
+enabled = false
+
+[shell.launcher.dmenu.entry.files]
+command = "fd"
+exec = "xdg-open {selection}"
+global = false
+glyph = "terminal"
+label = "files"
+prefix = "file"
+
+[shell.panel]
+control_center_placement = "floating"
+open_near_click_control_center = true
+open_near_click_session = true
+session_placement = "floating"
+session_position = "center"
+wallpaper_placement = "floating"
+
+[shell.screen_corners]
+enabled = true

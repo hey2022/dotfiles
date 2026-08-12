@@ -113,7 +113,7 @@ bind("mouse_up", hl.dsp.focus({ workspace = "e-1" }))
 bind("mouse:272", hl.dsp.window.drag(), { mouse = true })
 bind("mouse:273", hl.dsp.window.resize(), { mouse = true })
 
-bind("+ SHIFT + ESCAPE", hl.dsp.submap("passthrough"))
+bind("CTRL + SHIFT + ESCAPE", hl.dsp.submap("passthrough"))
 hl.define_submap("passthrough", function()
     hl.bind("ESCAPE", hl.dsp.submap("reset"))
 end)

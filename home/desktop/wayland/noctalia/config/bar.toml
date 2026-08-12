@@ -1,0 +1,44 @@
+[bar]
+order = ["default"]
+
+[bar.default]
+background_opacity = 0.0
+capsule = true
+capsule_padding = 10.0
+capsule_thickness = 1.0
+enabled = true
+end = ["tray", "group:g1", "group:g2", "group:g3"]
+margin_edge = 5
+margin_ends = 10
+start = ["workspaces", "media"]
+
+[[bar.default.capsule_group]]
+enabled = true
+fill = "surface_variant"
+id = "g1"
+members = ["network", "bluetooth"]
+opacity = 1.0
+padding = 10.0
+
+[[bar.default.capsule_group]]
+enabled = true
+fill = "surface_variant"
+id = "g2"
+members = ["volume", "brightness", "battery"]
+opacity = 1.0
+padding = 10.0
+
+[[bar.default.capsule_group]]
+enabled = true
+fill = "surface_variant"
+id = "g3"
+members = [
+  "launcher",
+  "wallpaper",
+  "notifications",
+  "clipboard",
+  "control-center",
+  "session",
+]
+opacity = 1.0
+padding = 10.0

@@ -65,17 +65,12 @@ in
     programs = {
       espanso-config.enable = true;
       foot.enable = true;
-      rofi.enable = true;
-      skwd-wall.enable = true;
+      noctalia.enable = true;
       uwsm.enable = true;
-      waybar.enable = true;
     };
     services = {
-      cliphist.enable = true;
-      hypridle.enable = true;
       hyprpolkitagent.enable = true;
       hyprsunset.enable = true;
-      swaync.enable = true;
     };
   };
 }

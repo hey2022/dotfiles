@@ -2,31 +2,17 @@ local cfg = require("config")
 local lib = require("lib")
 local bind = lib.bind
 local exec = lib.exec
+local ipc = "noctalia msg "
 
 bind("RETURN", exec(cfg.terminal, { uwsm = true }))
 bind("SHIFT + RETURN", exec(cfg.terminal .. " nvim", { uwsm = true }))
 bind("ALT + RETURN", exec("neovim-anywhere", { uwsm = true }))
 bind("SHIFT + E", exec("loginctl terminate-session $XDG_SESSION_ID"))
-bind("ESCAPE", exec("qs ipc call wlogout toggle"))
 
--- menu
-bind("SPACE", exec("rofi -show drun", { toggle = true }))
-bind("SHIFT + SPACE", exec("rofi -show run", { toggle = true }))
-bind("CTRL + SPACE", exec("rofi -show recursivebrowser", { toggle = true }))
-bind(
-    "ALT + SPACE",
-    exec(
-        "rofi -show calc -modi calc -no-show-match -no-sort -no-history -calc-command \"echo -n '{result}' | wl-copy\"",
-        { toggle = true }
-    )
-)
-
-bind("I", exec("toggle-inhibit-idle"))
+bind("I", exec("noctalia msg caffeine-toggle"))
 bind("SHIFT + I", exec("toggle-inhibit-lid-sleep"))
 bind("O", exec("slurp | xargs -I {} grim -g {} - | tesseract -l eng - - | wl-copy"))
 bind("A", exec("wayscriber --daemon-toggle"))
-
-bind("W", exec("skwd wall toggle"))
 
 bind("SHIFT + V", exec("sleep 0.25 && wl-paste | tr '\n' ' ' | tr -s ' ' | wl-copy && ydotool key 29:1 47:1 47:0 29:0"))
 
@@ -63,15 +49,17 @@ bind({ "CTRL + Print", "CTRL + S" }, exec("grimblast --notify --cursor copy acti
 bind({ "Print", "S" }, exec("grimblast --notify --cursor copy output", { run_once = true }))
 bind({ "ALT + Print", "ALT + S" }, exec("grimblast --notify --cursor copy screen", { run_once = true }))
 
--- swaync
-bind("N", exec("swaync-client -t"))
-bind("SHIFT + N", exec("swaync-client -d"))
-
-bind(
-    "C",
-    exec(
-        "cliprust list | rofi -dmenu -display-columns 2 | cliprust decode | wl-copy",
-        { toggle = true, program = "rofi" }
-    )
-)
+-- Shell IPC
 bind("MINUS", exec("qs ipc call flowtime toggle"))
+
+bind("Space", exec(ipc .. "panel-toggle launcher"))
+bind("SHIFT + SPACE", exec(ipc .. "panel-toggle launcher /file"))
+
+bind("ESCAPE", exec(ipc .. "panel-toggle control-center"))
+bind("SHIFT + ESCAPE", exec(ipc .. " panel-toggle session"))
+
+bind("C", exec(ipc .. " panel-toggle clipboard"))
+bind("N", exec(ipc .. " panel-toggle notification"))
+bind("SHIFT + comma", exec(ipc .. "settings-toggle"))
+hl.bind("ALT + Tab", exec(ipc .. "window-switcher"))
+bind("W", exec(ipc .. " panel-toggle wallpaper"))
