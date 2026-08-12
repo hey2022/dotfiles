@@ -1,0 +1,2 @@
+[hooks]
+started = "noctalia msg session lock"

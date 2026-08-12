@@ -50,3 +50,9 @@ hl.window_rule({
 })
 
 hl.workspace_rule({ workspace = "special:scratchpad", gaps_out = 100, on_created_empty = cfg.terminal })
+
+hl.window_rule({
+    match = { class = "dev.noctalia.Noctalia" },
+    float = true,
+    size = { 1080, 920 },
+})

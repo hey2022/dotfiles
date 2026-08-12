@@ -1,0 +1,4 @@
+[dock]
+enabled = true
+reserve_space = false
+smart_auto_hide = true

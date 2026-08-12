@@ -1,0 +1,9 @@
+[theme]
+builtin = "Catppuccin"
+community_palette = "Catppuccin Mocha Blue"
+mode = "dark"
+source = "community"
+wallpaper_scheme = "m3-content"
+
+[wallpaper]
+directory = "~/.config/wallpapers"
