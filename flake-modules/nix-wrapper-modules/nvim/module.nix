@@ -114,6 +114,8 @@ inputs:
             nvim-spectre
             nvim-surround
             persistence-nvim
+            todo-comments-nvim
+            trouble-nvim
             undotree
             vim-rhubarb
             vim-sleuth

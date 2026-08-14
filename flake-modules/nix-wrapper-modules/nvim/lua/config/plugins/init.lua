@@ -3,6 +3,7 @@ nixInfo.lze.load({
     { import = "config.plugins.colorscheme" },
     { import = "config.plugins.completion" },
     { import = "config.plugins.debug" },
+    { import = "config.plugins.diagnostic" },
     { import = "config.plugins.files" },
     { import = "config.plugins.format" },
     { import = "config.plugins.hardtime" },
