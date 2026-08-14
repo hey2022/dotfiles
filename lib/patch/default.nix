@@ -9,11 +9,7 @@
 let
   nixpkgs-patches = [
     # https://nixpk.gs/pr-tracker.html?pr=507286
-    (pkgs.fetchpatch2 {
-      name = "ankiAddons.anki-contanki: init at 1.0";
-      url = "https://patch-diff.githubusercontent.com/raw/NixOS/nixpkgs/pull/507286.patch";
-      hash = "sha256-jBJOiAP0T9lfLqeVF+WZai+xCI/26DO/otMrG6DORyU=";
-    })
+    inputs.anki-contanki-patch
   ];
   home-manager-patches = [ ];
   nixpkgs-patched =
