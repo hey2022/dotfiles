@@ -58,7 +58,6 @@ in
             force = true;
             packages = with pkgs.nur.repos.rycee.firefox-addons; [
               darkreader
-              grammarly
               keepassxc-browser
               libredirect
               refined-github
