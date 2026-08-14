@@ -57,7 +57,6 @@ in
           {
             force = true;
             packages = with pkgs.nur.repos.rycee.firefox-addons; [
-              aw-watcher-web
               darkreader
               grammarly
               keepassxc-browser
