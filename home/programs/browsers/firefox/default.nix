@@ -64,7 +64,6 @@ in
               sponsorblock
               translate-web-pages
               ublock-origin
-              user-agent-string-switcher
               violentmonkey
               yomitan
               zotero-connector
