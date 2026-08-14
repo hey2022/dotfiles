@@ -46,8 +46,8 @@ inputs:
     info = {
       nix = {
         nixpkgs = "import ${pkgs.path} {}";
-        nixos_options = ''(builtins.getFlake "${builtins.toString inputs.self.outPath}").nixosConfigurations.desktop.options'';
-        home_manager_options = ''(builtins.getFlake "${builtins.toString inputs.self.outPath}").homeConfigurations."yiheng@desktop".options'';
+        nixos_options = ''(builtins.getFlake "${toString inputs.self.outPath}").nixosConfigurations.desktop.options'';
+        home_manager_options = ''(builtins.getFlake "${toString inputs.self.outPath}").homeConfigurations."yiheng@desktop".options'';
       };
     };
     specs = {
