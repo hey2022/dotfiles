@@ -14,6 +14,7 @@ in
     random.enable = lib.mkEnableOption "waypaper random switcher";
   };
   config = lib.mkIf cfg.enable {
+    services.awww.enable = true;
     home.packages = with pkgs; [
       waypaper
     ];
