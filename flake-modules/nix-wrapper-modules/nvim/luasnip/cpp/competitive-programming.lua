@@ -7,7 +7,7 @@ local rep = require("luasnip.extras").rep
 
 local function w(context, nodes, opts)
     if type(context) ~= "string" and context.trig and context.snippetType == "autosnippet" then
-        context.trig = ";" .. context.trig
+        context.trig = context.trig .. ";"
     end
     return s(context, nodes, opts)
 end
@@ -84,7 +84,7 @@ ls.add_snippets("cpp", {
     w({ trig = "ull", snippetType = "autosnippet" }, t("unsigned long long")),
     w({ trig = "dbl", snippetType = "autosnippet" }, t("double")),
     w({ trig = "ldb", snippetType = "autosnippet" }, t("long double")),
-    w({ trig = "str", snippetType = "autosnippet" }, t("string ")),
+    w({ trig = "str", snippetType = "autosnippet" }, t("string")),
 
     w({ trig = "pair", snippetType = "autosnippet" }, fmt("pair<{}, {}> {}", { i(1), i(2), i(0) })),
     w({ trig = "arr", snippetType = "autosnippet" }, fmt("arr<{}> {}", { i(1), i(0) })),
@@ -103,7 +103,7 @@ ls.add_snippets("cpp", {
     w({ trig = "vvs", snippetType = "autosnippet" }, t("vector<vector<string>>")),
     w({ trig = "vvc", snippetType = "autosnippet" }, t("vector<vector<char>>")),
     w(
-        { trig = "iff", snippetType = "autosnippet" },
+        { trig = "if", snippetType = "autosnippet" },
         fmt(
             [[
         if ({}) {{
@@ -134,7 +134,7 @@ ls.add_snippets("cpp", {
         )
     ),
     w(
-        { trig = "whilee", snippetType = "autosnippet" },
+        { trig = "while", snippetType = "autosnippet" },
         fmt(
             [[
         while ({}) {{
@@ -148,7 +148,7 @@ ls.add_snippets("cpp", {
         )
     ),
     w(
-        { trig = "forr", snippetType = "autosnippet" },
+        { trig = "for", snippetType = "autosnippet" },
         fmt(
             [[
         for (int {} = {}; {} < {}; ++{}) {{
@@ -170,7 +170,7 @@ ls.add_snippets("cpp", {
         )
     ),
     w(
-        { trig = "roff", snippetType = "autosnippet" },
+        { trig = "rof", snippetType = "autosnippet" },
         fmt(
             [[
         for (int {} = {} - 1; {} >= {}; --{}) {{
