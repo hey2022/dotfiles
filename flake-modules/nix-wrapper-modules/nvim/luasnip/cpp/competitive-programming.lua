@@ -102,6 +102,8 @@ ls.add_snippets("cpp", {
     w({ trig = "vvb", snippetType = "autosnippet" }, t("vector<vector<bool>>")),
     w({ trig = "vvs", snippetType = "autosnippet" }, t("vector<vector<string>>")),
     w({ trig = "vvc", snippetType = "autosnippet" }, t("vector<vector<char>>")),
+
+    w({ trig = "vpi", snippetType = "autosnippet" }, t("vector<pair<int, int>>")),
     w(
         { trig = "if", snippetType = "autosnippet" },
         fmt(
