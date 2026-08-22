@@ -27,7 +27,7 @@ in
       ethernet.macAddress = spoofed-mac-address;
     };
   };
-  time.timeZone = "Asia/Shanghai";
+  time.timeZone = "America/Chicago";
   system.stateVersion = "25.11";
 
   host.laptop = true;
