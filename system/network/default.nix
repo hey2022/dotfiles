@@ -5,6 +5,7 @@
     ./dns
     ./nm-applet.nix
     ./proxy
+    ./uiuc.nix
     ./wireshark.nix
   ];
   environment.systemPackages = with pkgs; [
