@@ -1,4 +1,3 @@
-{ pkgs, lib, ... }:
 {
   accounts.email.accounts = {
     "yiheng.he@proton.me" = {
@@ -9,12 +8,12 @@
       imap = {
         host = "localhost";
         port = 1143;
-        tls.enable = false;
+        tls.useStartTls = true;
       };
       smtp = {
         host = "localhost";
         port = 1025;
-        tls.enable = false;
+        tls.useStartTls = true;
       };
       thunderbird.enable = true;
     };
@@ -96,21 +95,7 @@
       "mail.server.default.check_all_folders_for_new" = true;
     };
   };
-  home.packages = [
-    pkgs.hydroxide
-  ];
-  systemd.user.services."hydroxide" = {
-    Unit = {
-      Description = "A third-party, open-source ProtonMail CardDAV, IMAP and SMTP bridge";
-      Wants = "network-online.target";
-      After = "network-online.target";
-    };
-    Install = {
-      WantedBy = [ "default.target" ];
-    };
-    Service = {
-      ExecStart = "${lib.getExe pkgs.hydroxide} --carddav-port 5232 serve";
-      Restart = "always";
-    };
+  services.protonmail-bridge = {
+    enable = true;
   };
 }
