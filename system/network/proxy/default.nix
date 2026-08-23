@@ -3,7 +3,4 @@
     ./mihomo
     ./mullvad
   ];
-  services = {
-    mihomo.enable = true;
-  };
 }
