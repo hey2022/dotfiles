@@ -11,6 +11,7 @@
       ghostscript
       img2pdf
       ocrmypdf
+      pdftk
       poppler-utils
     ];
 }
