@@ -23,7 +23,6 @@ in
       Cookies = {
         Allow = [
           "https://devdocs.io"
-          "https://s.dunkirk.sh"
         ];
       };
     };
@@ -68,22 +67,15 @@ in
               zotero-connector
             ];
           }
-          (importExtension ./_extensions/redirector.nix)
           (importExtension ./_extensions/sidebery/default.nix)
         ];
       search = {
         force = true;
-        default = "unduckified";
-        privateDefault = "unduckified";
+        default = "kagi";
+        privateDefault = "DuckDuckGo";
         engines = {
-          SearXNG = {
-            urls = [ { template = "http://localhost:8880/search?q={searchTerms}"; } ];
-          };
-          Brave = {
-            urls = [ { template = "https://search.brave.com/search?q={searchTerms}"; } ];
-          };
-          unduckified = {
-            urls = [ { template = "https://s.dunkirk.sh?q={searchTerms}"; } ];
+          kagi = {
+            urls = [ { template = "https://kagi.com/search?q={searchTerms}"; } ];
           };
         };
       };
