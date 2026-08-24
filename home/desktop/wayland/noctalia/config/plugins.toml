@@ -1,0 +1,2 @@
+[plugins]
+enabled = ["nightwatch75/file-search"]

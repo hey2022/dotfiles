@@ -5,14 +5,6 @@ screen_time_enabled = true
 [shell.animation]
 enabled = false
 
-[shell.launcher.dmenu.entry.files]
-command = "fd"
-exec = "xdg-open {selection}"
-global = false
-glyph = "terminal"
-label = "files"
-prefix = "file"
-
 [shell.panel]
 control_center_placement = "floating"
 open_near_click_control_center = true
