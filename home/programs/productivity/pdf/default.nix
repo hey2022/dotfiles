@@ -9,8 +9,8 @@
     with pkgs;
     lib.mkIf config.profiles.productivity.enable [
       ghostscript
+      img2pdf
       ocrmypdf
       poppler-utils
-      img2pdf
     ];
 }
