@@ -7,7 +7,7 @@
       opener = {
         open = [
           {
-            run = "parallel -j 0 xdg-open ::: \"$@\"";
+            run = "parallel -j 0 xdg-open ::: %s";
             orphan = true;
             desc = "Open";
             for = "unix";
