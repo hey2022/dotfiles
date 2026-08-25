@@ -37,9 +37,6 @@ end)
 
 bind("SHIFT + F", function()
     hl.dispatch(hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
-    -- BUG: https://github.com/hyprwm/Hyprland/discussions/15206 window is shifted after exiting fullscreen
-    hl.dispatch(hl.dsp.layout("focus r"))
-    hl.dispatch(hl.dsp.layout("focus l"))
 end)
 
 bind("R", hl.dsp.layout("colresize +conf"))
@@ -47,10 +44,10 @@ bind("SHIFT + R", hl.dsp.layout("colresize -conf"))
 
 -- BUG: https://github.com/hyprwm/Hyprland/pull/15569 cannot change focus in fullscreen
 -- Move focus with mainMod + arrow keys
--- bind("h", hl.dsp.focus({ direction = "left" }))
--- bind("l", hl.dsp.focus({ direction = "right" }))
-bind("h", hl.dsp.layout("focus l"))
-bind("l", hl.dsp.layout("focus r"))
+bind("h", hl.dsp.focus({ direction = "left" }))
+bind("l", hl.dsp.focus({ direction = "right" }))
+-- bind("h", hl.dsp.layout("focus l"))
+-- bind("l", hl.dsp.layout("focus r"))
 
 bind("k", hl.dsp.focus({ direction = "up" }))
 bind("j", hl.dsp.focus({ direction = "down" }))
