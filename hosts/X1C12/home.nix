@@ -14,7 +14,6 @@
 
   profiles = {
     gaming.enable = true;
-    productivity.images.enable = true;
   };
   programs = {
     fish.enable = true;
