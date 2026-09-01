@@ -53,8 +53,9 @@ bind({ "ALT + Print", "ALT + S" }, exec("grimblast --notify --cursor copy screen
 bind("MINUS", exec("qs ipc call flowtime toggle"))
 
 bind("Space", exec(ipc .. "panel-toggle launcher"))
+bind("ALT + SPACE", exec(ipc .. " panel-toggle launcher /calc"))
 -- HACK: https://noctalia.dev/plugins/community/file-search#:~:text=manager-,Launcher,results,-%29
-bind("SHIFT + SPACE", exec(ipc .. " panel-toggle launcher /fs"))
+bind("SHIFT + SPACE", exec(ipc .. " panel-toggle nightwatch75/file-search:panel"))
 
 bind("ESCAPE", exec(ipc .. "panel-toggle control-center"))
 bind("SHIFT + ESCAPE", exec(ipc .. " panel-toggle session"))
