@@ -27,6 +27,10 @@
         keepassxc-snapshot = pkgs.callPackage ./keepassxc-snapshot { };
         uuplugin = pkgs.callPackage ./uuplugin { };
         reshade-steam-proton = pkgs.callPackage ./reshade-steam-proton { };
+        hidsharpcore-patched = pkgs.callPackage ./hidsharpcore-patched { };
+        opentabletdriver-patched = pkgs.callPackage ./opentabletdriver-patched {
+          hidsharpcore = hidsharpcore-patched;
+        };
       }
       // (import ./anki { inherit (pkgs) callPackage; })
       // (import ./firefox-addons { inherit pkgs; })
