@@ -132,4 +132,11 @@ return {
             filetypes = { "qml" },
         },
     },
+    {
+        "tinymist",
+        for_cat = "lsp",
+        lsp = {
+            filetypes = { "typst" },
+        },
+    },
 }
