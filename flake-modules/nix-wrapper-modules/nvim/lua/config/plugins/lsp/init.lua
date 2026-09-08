@@ -79,6 +79,11 @@ return {
         for_cat = "lsp",
         lsp = {
             filetypes = { "cpp", "c" },
+            cmd = {
+                "clangd",
+                "--background-index",
+                "--clang-tidy",
+            },
         },
     },
     {
