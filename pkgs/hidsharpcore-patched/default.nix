@@ -6,13 +6,13 @@
 
 buildDotnetModule {
   pname = "HIDSharpCore";
-  version = "1.3.0-basic-bluetooth";
+  version = "1.3.0-bluetooth";
 
   src = fetchFromGitHub {
-    owner = "hey2022";
+    owner = "Tsuyumi25";
     repo = "HIDSharpCore";
-    rev = "2db7daee74653947c9c24fc841cf96c405ae1b1f";
-    hash = "sha256-W+ElXGqgoTaBvvScwg+nKNB/zrr9hOtGMd5gp9KBui4=";
+    rev = "linux-hid-parent-fallback";
+    hash = "sha256-z9v7oHQa/EKV91Qv0HiuXfv/EefS0+/JEbxsodTQfus=";
   };
 
   nugetDeps = ./deps.json;

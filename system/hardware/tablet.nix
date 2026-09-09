@@ -10,6 +10,6 @@
   };
   boot.kernelModules = [ "uinput" ];
   services.udev.extraRules = ''
-    SUBSYSTEM=="hidraw", MODE="0666", TAG+="uaccess", TAG+="udev-acl"
+    KERNEL=="hidraw*", KERNELS=="0005:056A:03C8.*", MODE="0666"
   '';
 }

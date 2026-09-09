@@ -6,8 +6,8 @@
 
 let
   bluetooth-patch = fetchpatch2 {
-    url = "https://github.com/Tsuyumi25/OpenTabletDriver/compare/0.6.x...hey2022:OpenTabletDriver:bluetooth-ctl6100wl.diff";
-    hash = "sha256-uuxzon7Ad+CzsYSgy/W7zKHrD3XKu+9EYFryoT/Vpv4=";
+    url = "https://patch-diff.githubusercontent.com/raw/OpenTabletDriver/OpenTabletDriver/pull/4672.diff";
+    hash = "sha256-f+3OxIqVz7GDYW6Wge3pZvkBSnEIDcJAIwPrP1f3MqE=";
   };
 in
 opentabletdriver.overrideAttrs (oldAttrs: {
