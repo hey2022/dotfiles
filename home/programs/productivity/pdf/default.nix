@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  pkgs-local,
   ...
 }:
 {
@@ -13,5 +14,6 @@
       ocrmypdf
       pdftk
       poppler-utils
+      pkgs-local.pdf-open
     ];
 }

@@ -6,6 +6,7 @@
     defaultApplications = {
       "application/json" = "emacsclient.desktop";
       "application/pdf" = [
+        "pdf-open.desktop"
         "sioyek.desktop"
         "org.pwmt.zathura.desktop"
       ];

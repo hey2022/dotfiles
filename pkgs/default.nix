@@ -32,6 +32,7 @@
           hidsharpcore = hidsharpcore-patched;
         };
         pdf-js = pkgs.callPackage ./pdf-js { };
+        pdf-open = pkgs.callPackage ./pdf-open { };
       }
       // (import ./anki { inherit (pkgs) callPackage; })
       // (import ./firefox-addons { inherit pkgs; })
