@@ -31,6 +31,7 @@
         opentabletdriver-patched = pkgs.callPackage ./opentabletdriver-patched {
           hidsharpcore = hidsharpcore-patched;
         };
+        pdf-js = pkgs.callPackage ./pdf-js { };
       }
       // (import ./anki { inherit (pkgs) callPackage; })
       // (import ./firefox-addons { inherit pkgs; })
