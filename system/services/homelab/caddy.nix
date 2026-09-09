@@ -11,7 +11,7 @@ in
           let
             domain = config.host.address;
           in
-          {
+          lib.mkIf config.profiles.homelab.enable {
             "${domain}, www.${domain}".extraConfig = ''
               reverse_proxy localhost:${toString config.profiles.homelab.rootService}
             '';
