@@ -4,6 +4,7 @@
   makeDesktopItem,
   coreutils,
   firefox,
+  jq,
 }:
 
 let
@@ -12,6 +13,7 @@ let
     runtimeInputs = [
       coreutils
       firefox
+      jq
     ];
     text = builtins.readFile ./pdf-open.sh;
   };

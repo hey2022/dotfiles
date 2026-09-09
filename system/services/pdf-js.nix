@@ -7,7 +7,7 @@
       redir / /web/viewer.html
 
       handle_path /pdf/* {
-        root * /run/caddy
+        root * /run/caddy/pdf/
         file_server
       }
 
