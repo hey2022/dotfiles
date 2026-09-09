@@ -24,7 +24,7 @@ in
       programs = {
         obs-studio.enable = true;
         pandoc.enable = true;
-        sioyek.enable = true;
+        sioyek.enable = false;
         zathura.enable = false;
       };
       home.packages = with pkgs; [
