@@ -1,10 +1,10 @@
-{ self, pkgs, ... }:
+{ pkgs-local, ... }:
 {
   # HACK: https://github.com/OpenTabletDriver/OpenTabletDriver/issues/2118 running custom build of OTD
   hardware = {
     opentabletdriver = {
       enable = true;
-      package = self.packages.${pkgs.stdenv.hostPlatform.system}.opentabletdriver-patched;
+      package = pkgs-local.opentabletdriver-patched;
     };
     uinput.enable = true;
   };
