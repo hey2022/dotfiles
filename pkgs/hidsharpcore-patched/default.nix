@@ -12,10 +12,10 @@ buildDotnetModule {
     owner = "Tsuyumi25";
     repo = "HIDSharpCore";
     rev = "linux-hid-parent-fallback";
-    hash = "sha256-z9v7oHQa/EKV91Qv0HiuXfv/EefS0+/JEbxsodTQfus=";
+    hash = "sha256-pUsGYPPY1dNn+3RnifZNwATDTbp+8AqW4ctQnVIJ8oA=";
   };
 
-  nugetDeps = ./deps.json;
+  nugetDeps = [ ];
   projectFile = "HidSharp/HidSharp.csproj";
 
   meta = with lib; {
