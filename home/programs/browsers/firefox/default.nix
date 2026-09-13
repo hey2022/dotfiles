@@ -72,7 +72,7 @@ in
       search = {
         force = true;
         default = "kagi";
-        privateDefault = "DuckDuckGo";
+        privateDefault = "ddg";
         engines = {
           kagi = {
             urls = [ { template = "https://kagi.com/search?q={searchTerms}"; } ];
