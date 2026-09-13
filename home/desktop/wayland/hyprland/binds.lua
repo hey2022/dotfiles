@@ -13,6 +13,7 @@ bind("I", exec("noctalia msg caffeine-toggle"))
 bind("SHIFT + I", exec("toggle-inhibit-lid-sleep"))
 bind("O", exec("slurp | xargs -I {} grim -g {} - | tesseract -l eng - - | wl-copy"))
 bind("A", exec("wayscriber --daemon-toggle"))
+bind("W", exec("skwd-wall-v2"))
 
 bind("SHIFT + V", exec("sleep 0.25 && wl-paste | tr '\n' ' ' | tr -s ' ' | wl-copy && ydotool key 29:1 47:1 47:0 29:0"))
 
@@ -64,4 +65,3 @@ bind("C", exec(ipc .. " panel-toggle clipboard"))
 bind("N", exec(ipc .. " panel-toggle notification"))
 bind("SHIFT + comma", exec(ipc .. "settings-toggle"))
 hl.bind("ALT + Tab", exec(ipc .. "window-switcher"))
-bind("W", exec(ipc .. " panel-toggle wallpaper"))
