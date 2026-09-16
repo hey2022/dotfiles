@@ -7,16 +7,18 @@ capsule = true
 capsule_padding = 10.0
 capsule_thickness = 1.0
 enabled = true
-end = ["tray", "group:g1", "group:g2", "group:g3"]
+end = ["group:g1", "group:g2", "group:g3", "group:g4"]
 margin_edge = 5
 margin_ends = 10
 start = ["workspaces", "media"]
 
 [[bar.default.capsule_group]]
+accordion = true
+accordion_direction = "start"
 enabled = true
 fill = "surface_variant"
 id = "g1"
-members = ["network", "bluetooth"]
+members = ["notifications", "tray"]
 opacity = 1.0
 padding = 10.0
 
@@ -24,7 +26,7 @@ padding = 10.0
 enabled = true
 fill = "surface_variant"
 id = "g2"
-members = ["volume", "brightness", "battery"]
+members = ["network", "bluetooth"]
 opacity = 1.0
 padding = 10.0
 
@@ -32,6 +34,14 @@ padding = 10.0
 enabled = true
 fill = "surface_variant"
 id = "g3"
+members = ["volume", "brightness", "battery"]
+opacity = 1.0
+padding = 10.0
+
+[[bar.default.capsule_group]]
+enabled = true
+fill = "surface_variant"
+id = "g4"
 members = [
   "launcher",
   "wallpaper",
