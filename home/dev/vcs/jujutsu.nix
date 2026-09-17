@@ -1,5 +1,6 @@
 {
   pkgs,
+  pkgs-local,
   config,
   lib,
   ...
@@ -10,26 +11,9 @@ in
 {
   config = lib.mkMerge [
     (lib.mkIf cfg.enable {
-      nixpkgs.overlays = [
-        (final: prev: {
-          jujutsu = prev.jujutsu.overrideAttrs rec {
-            # HACK: git-lfs: add ability to ignore files based on git attributes https://github.com/jj-vcs/jj/pull/9635
-            version = "0.43.0";
-            src = prev.fetchFromGitHub {
-              owner = "jj-vcs";
-              repo = "jj";
-              rev = "263ba237ff13ca4b85dc490aee797713b990810e";
-              hash = "sha256-c7uv+5b/n+WphNXPKHu5Ta+n19WcP7r1kBvfBLrQ1A8=";
-            };
-            cargoDeps = final.rustPlatform.fetchCargoVendor {
-              inherit src;
-              hash = "sha256-wP3u+kxVfu1bYEKtHq5eqSoiPAFSyEXagHo7Xj8rzys=";
-            };
-          };
-        })
-      ];
       programs = {
         jujutsu = {
+          package = pkgs-local.jujutsu-git-lfs;
           settings = {
             user = {
               email = "yiheng.he@proton.me";

@@ -33,6 +33,7 @@
         };
         pdf-js = pkgs.callPackage ./pdf-js { };
         pdf-open = pkgs.callPackage ./pdf-open { };
+        jujutsu-git-lfs = pkgs.callPackage ./jujutsu-git-lfs { };
       }
       // (import ./anki { inherit (pkgs) callPackage; })
       // (import ./firefox-addons { inherit pkgs; })
