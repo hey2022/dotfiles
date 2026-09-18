@@ -10,7 +10,7 @@ enabled = true
 end = ["group:g1", "group:g2", "group:g3", "group:g4"]
 margin_edge = 5
 margin_ends = 10
-start = ["workspaces", "media"]
+start = ["workspaces", "media", "active_window"]
 
 [[bar.default.capsule_group]]
 accordion = true
