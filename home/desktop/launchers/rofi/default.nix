@@ -9,7 +9,7 @@
     theme = lib.mkForce {
       "@import" = "theme";
     };
-    extraConfig =
+    settings =
       let
         run-prefix = if config.programs.uwsm.enable then "runapp -- " else "";
       in
