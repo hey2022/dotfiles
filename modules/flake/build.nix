@@ -8,7 +8,7 @@
 let
   get-patched =
     system:
-    import ../lib/patch {
+    import (self + "/lib/patch") {
       inherit self inputs system;
       pkgs = import inputs.nixpkgs { inherit system; };
     };

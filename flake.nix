@@ -118,7 +118,7 @@
     }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; } {
       imports = [
-        ./flake-modules
+        ./modules/flake
         ./hosts
       ];
     };
