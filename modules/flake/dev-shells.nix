@@ -13,6 +13,13 @@
           '';
           packages = config.pre-commit.settings.enabledPackages;
         };
+        typst = pkgs.mkShell {
+          packages = with pkgs; [
+            tinymist
+            typst
+            typstyle
+          ];
+        };
       };
     };
 }
