@@ -9,11 +9,11 @@
         }
         {
           time = "18:00";
-          temperature = 2700;
+          temperature = 3400;
         }
         {
           time = "20:00";
-          temperature = 1900;
+          temperature = 2700;
         }
       ];
     };
