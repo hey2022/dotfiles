@@ -1,9 +1,4 @@
-{
-  config,
-  lib,
-  pkgs-local,
-  ...
-}:
+{ config, lib, ... }:
 {
   options.profiles.gaming = {
     enable = lib.mkEnableOption "Gaming support";
@@ -13,10 +8,6 @@
       steam.enable = true;
       gamescope.enable = true;
       gamemode.enable = true;
-    };
-    services.uuplugin = {
-      enable = true;
-      package = pkgs-local.uuplugin;
     };
   };
 }
