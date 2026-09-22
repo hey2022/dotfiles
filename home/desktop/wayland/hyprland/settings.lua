@@ -134,6 +134,8 @@ hl.config({
     scrolling = {
         fullscreen_on_one_column = true,
         follow_min_visible = 0.75,
+        wrap_focus = false,
+        wrap_swapcol = false,
     },
 })
 
