@@ -4,7 +4,7 @@
       "$HOME/.local/bin"
     ];
     sessionVariables = {
-      VISUAL = "neovide";
+      VISUAL = "footclient nvim";
       EDITOR = "nvim";
     };
   };
