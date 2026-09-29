@@ -9,5 +9,9 @@
       path = ./typst;
       description = "Typst Flake Template";
     };
+    typix = {
+      path = ./typix;
+      description = "Typix Flake Template";
+    };
   };
 }
