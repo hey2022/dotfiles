@@ -5,5 +5,9 @@
       path = ./base;
       description = "Base Flake Template";
     };
+    typst = {
+      path = ./typst;
+      description = "Typst Flake Template";
+    };
   };
 }
