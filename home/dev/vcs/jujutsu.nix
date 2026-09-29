@@ -67,6 +67,8 @@ in
                 "exec"
                 "--"
                 "jj-pre-push"
+                "--checker"
+                "prek"
                 "push"
               ];
             };
@@ -118,7 +120,12 @@ in
           };
         };
       };
-      home.packages = [ pkgs.jj-pre-push ];
+      home.packages = with pkgs; [
+        (jj-pre-push.override {
+          withPrecommit = false;
+        })
+        prek
+      ];
     })
     {
       programs = {
