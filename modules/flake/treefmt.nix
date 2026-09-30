@@ -11,6 +11,7 @@
           excludes = [
             "secrets/*" # handled by sops
             "home/desktop/mapping/input-remapper/*"
+            "modules/flake/templates/*/.github/workflows/*.yaml"
           ];
         };
         programs = {
