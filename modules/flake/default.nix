@@ -5,7 +5,7 @@
     ../../pkgs
     ./build.nix
     ./check.nix
-    ./dev-shells.nix
+    ./devshells.nix
     ./git-hooks.nix
     ./nix-topology.nix
     ./nix-wrapper-modules
