@@ -1497,6 +1497,7 @@
         "sops-nix": "sops-nix",
         "stylix": "stylix",
         "treefmt-nix": "treefmt-nix_2",
+        "userscript-nixpkgs-review-gha": "userscript-nixpkgs-review-gha",
         "wrappers": "wrappers"
       }
     },
@@ -1704,6 +1705,22 @@
       "original": {
         "owner": "numtide",
         "repo": "treefmt-nix",
+        "type": "github"
+      }
+    },
+    "userscript-nixpkgs-review-gha": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1789957358,
+        "narHash": "sha256-s4lZONZ8/fUxvdYW6ENjQ3OUthg6SdEVXim5Vr4PTrQ=",
+        "owner": "hey2022",
+        "repo": "nixpkgs-review-gha",
+        "rev": "05be2410ba6775b612fe733127703ec71b3b3425",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hey2022",
+        "repo": "nixpkgs-review-gha",
         "type": "github"
       }
     },

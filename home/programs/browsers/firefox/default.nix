@@ -49,7 +49,7 @@ in
       userContent = config.lib.hm.mkFlakeSymlink ./userContent.css;
       extensions =
         let
-          importExtension = path: import path { inherit pkgs; };
+          importExtension = path: import path { inherit inputs pkgs; };
         in
         lib.mkMerge [
           {
@@ -68,6 +68,7 @@ in
             ];
           }
           (importExtension ./_extensions/sidebery/default.nix)
+          (importExtension ./_extensions/violentmonkey/default.nix)
         ];
       search = {
         force = true;
