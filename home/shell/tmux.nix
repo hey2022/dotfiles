@@ -34,6 +34,7 @@
         bind-key -n M-q kill-pane
         bind-key -n M-Q kill-session
         bind-key -n M-d detach-client
+        bind-key -n M-c attach-session -c "#{pane_current_path}"
 
         bind-key -n M-h previous-window
         bind-key -n M-l next-window
