@@ -39,5 +39,9 @@
         };
       };
     };
+    settings = {
+      moveNewTab = "after";
+      kbNewTabInPanelPos = "end";
+    };
   };
 }
