@@ -19,6 +19,13 @@
             typstyle
           ];
         };
+        python = pkgs.mkShell {
+          packages = with pkgs; [
+            basedpyright
+            python3
+            uv
+          ];
+        };
       };
     };
 }
