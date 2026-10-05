@@ -19,13 +19,22 @@
             typstyle
           ];
         };
-        python = pkgs.mkShell {
-          packages = with pkgs; [
-            basedpyright
-            python3
-            uv
-          ];
-        };
+        python =
+          let
+            system-libraries = with pkgs; [
+              libx11
+            ];
+          in
+          pkgs.mkShell {
+            shellHook = ''
+              export LD_LIBRARY_PATH="${pkgs.lib.makeLibraryPath system-libraries}''${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+            '';
+            packages = with pkgs; [
+              basedpyright
+              python3
+              uv
+            ];
+          };
       };
     };
 }
