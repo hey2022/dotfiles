@@ -25,4 +25,15 @@ in
       touch "$dir/.qmlls.ini"
     done
   '';
+
+  sops = {
+    secrets = {
+      "ticktick-token" = { };
+    };
+  };
+  systemd.user.services.quickshell = {
+    Service.LoadCredential = [
+      "ticktick-token:${config.sops.secrets.ticktick-token.path}"
+    ];
+  };
 }
