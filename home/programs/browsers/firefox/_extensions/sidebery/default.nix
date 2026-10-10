@@ -37,6 +37,13 @@
           iconIMGSrc = "https://cdn.brand.illinois.edu/favicon.ico";
           iconIMG = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABAklEQVRIS2NkQALCOt5BvAx/1giz/EIWJpr9+jcbwxcGDs93VzfuhGliRLcgWvDJ2g6FG0Qbiqww564Ow4aPMh54LYgTery2T/E6WRak3dFlWPtBdrhbYMj+cY2n4GtwEPEy/2GIEXvCyMn0D2uQffnLzLDklcz/b/+YwfIb3okzXP0piDuSpXR9NX78+ReKlAJCN6if0bHhf4eSGGDyu96L/I+6bXTuPwPDRpgYy2/WZa/ubLiLNRWhO1NI03v5OrWz4fYCb7FasO2d6P/Y24Zz3t3YmoYrVWDVCFM8agEoJEaDaDQVUTmj0byoANVoNC3sQBaMVjgEq0yaV/rUbrYAAKLNNCgLaVrPAAAAAElFTkSuQmCC";
         };
+        application = {
+          name = "Application";
+          id = "application";
+          type = 2;
+          color = "purple";
+          iconSVG = "icon_clipboard";
+        };
       };
     };
     settings = {
