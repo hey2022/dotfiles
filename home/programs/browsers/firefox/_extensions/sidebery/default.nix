@@ -23,9 +23,9 @@
           color = "toolbar";
           iconSVG = "icon_tabs";
         };
-        dev = {
-          name = "dev";
-          id = "dev";
+        cs = {
+          name = "CS";
+          id = "cs";
           type = 2;
           color = "blue";
           iconSVG = "icon_code";
