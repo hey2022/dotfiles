@@ -81,6 +81,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.hyprland.follows = "hyprland";
     };
+    nix-pandoc-bin = {
+      url = "github:doronbehar/nix-pandoc-bin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     firefox-ui-fix = {
       url = "github:black7375/Firefox-UI-Fix";
       flake = false;
