@@ -43,6 +43,7 @@
       (pkgs-local.ajt-autocopy.withConfig {
         config = lib.importJSON ./config/ajt-autocopy.json;
       })
+      pkgs-local.empty-cards-shortcut
     ];
   };
   home.packages = [
