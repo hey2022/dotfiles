@@ -20,6 +20,7 @@
         ap-dl = pkgs.callPackage ./ap-dl { };
         apcap = pkgs.callPackage ./apcap { };
         cliprust = pkgs.callPackage ./cliprust { };
+        committer-progress = pkgs.callPackage ./committer-progress { };
         neovim-anywhere = pkgs.callPackage ./neovim-anywhere {
           neovim = self'.packages.nvim;
         };

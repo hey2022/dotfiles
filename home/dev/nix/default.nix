@@ -2,6 +2,7 @@
   inputs,
   config,
   pkgs,
+  pkgs-local,
   ...
 }:
 {
@@ -30,6 +31,7 @@
     nurl
     statix
     steam-run-free
+    pkgs-local.committer-progress
   ];
   programs.nix-index-database.comma.enable = true;
   home.sessionVariables = {
