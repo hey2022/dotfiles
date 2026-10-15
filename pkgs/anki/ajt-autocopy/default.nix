@@ -7,13 +7,13 @@
 
 anki-utils.buildAnkiAddon (finalAttrs: {
   pname = "ajt-autocopy";
-  version = "26.8.6.0";
+  version = "26.10.20.0";
   src =
     (fetchFromGitHub {
       owner = "Ajatt-Tools";
       repo = "autocopy";
       tag = "v${finalAttrs.version}";
-      hash = "sha256-hRucUEj8ya2NCbPRwMt0z75NP6A3W2xx6wf0PiVg4n8=";
+      hash = "sha256-hBM2nqe2Mj3PV/0YVwznaEWvZDBB0fzAJjeriY9j3UM=";
       fetchSubmodules = true;
     }).overrideAttrs
       (oldAttrs: {
