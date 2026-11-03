@@ -5,7 +5,7 @@ return {
         ft = "typst",
         after = function(_)
             require("typst-preview").setup({})
-            vim.keymap.set("n", "<leader>tp", "<cmd>TypstPreview<CR>", { noremap = true, desc = "typst preview" })
+            vim.keymap.set("n", "<leader>tp", "<cmd>TypstPreviewToggle<CR>", { noremap = true, desc = "typst preview" })
         end,
     },
 }
