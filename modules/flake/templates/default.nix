@@ -13,5 +13,9 @@
       path = ./typix;
       description = "Typix Flake Template";
     };
+    rust = {
+      path = ./rust;
+      description = "Rust Flake Template";
+    };
   };
 }
