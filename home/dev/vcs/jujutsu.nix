@@ -52,13 +52,13 @@ in
                 "stack"
                 "closest_merge(@)+:: ~ empty()"
               ];
-              # https://isaaccorbrey.com/notes/jujutsu-megamerges-for-fun-and-profit
+              # Modified version from https://isaaccorbrey.com/notes/jujutsu-megamerges-for-fun-and-profit
               restack = [
                 "rebase"
                 "--onto"
                 "trunk()"
                 "--source"
-                "roots(trunk()..) & mutable()"
+                "roots(trunk().. & ::(bookmarks() | @)) & mutable()"
                 "--simplify-parents"
               ];
               # https://github.com/acarapetis/jj-pre-push
