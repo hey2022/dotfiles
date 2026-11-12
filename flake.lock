@@ -1007,6 +1007,22 @@
         "type": "github"
       }
     },
+    "janestreet-agent-skills": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1793728425,
+        "narHash": "sha256-bKGKDaK2pSJsp5uVMUQDcj8J+N9nX2fDdeU1DXM2qLw=",
+        "owner": "janestreet",
+        "repo": "agent_skills",
+        "rev": "7c6715c29548a3b39d4a9545c698ee4fd17a7213",
+        "type": "github"
+      },
+      "original": {
+        "owner": "janestreet",
+        "repo": "agent_skills",
+        "type": "github"
+      }
+    },
     "ncro": {
       "inputs": {
         "nixpkgs": [
@@ -1520,6 +1536,7 @@
         "hyprland": "hyprland",
         "hyprland-scroll-overview": "hyprland-scroll-overview",
         "import-tree": "import-tree",
+        "janestreet-agent-skills": "janestreet-agent-skills",
         "ncro": "ncro",
         "neovim-plugin-luasnip-latex-snippets-nvim": "neovim-plugin-luasnip-latex-snippets-nvim",
         "nix-alien": "nix-alien",

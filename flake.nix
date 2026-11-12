@@ -113,6 +113,10 @@
       url = "github:hey2022/nixpkgs-review-gha";
       flake = false;
     };
+    janestreet-agent-skills = {
+      url = "github:janestreet/agent_skills";
+      flake = false;
+    };
   };
 
   outputs =
