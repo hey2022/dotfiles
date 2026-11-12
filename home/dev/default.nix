@@ -19,6 +19,7 @@ in
     ./profiling.nix
     ./rust
     ./sh.nix
+    ./skills
     ./vcs
   ];
   options.profiles.dev = {
@@ -38,5 +39,6 @@ in
       tokei
       wget
     ];
+    programs.opencode.enable = true;
   };
 }
