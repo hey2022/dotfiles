@@ -9,18 +9,17 @@ let
 in
 {
   imports = [
+    ./ai
     ./cpp
     ./emacs
     ./gpg.nix
     ./jq.nix
     ./markdown
-    ./mcp.nix
     ./neovim.nix
     ./nix
     ./profiling.nix
     ./rust
     ./sh.nix
-    ./skills
     ./vcs
   ];
   options.profiles.dev = {
