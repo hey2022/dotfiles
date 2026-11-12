@@ -12,6 +12,26 @@
         "url": "https://patch-diff.githubusercontent.com/raw/NixOS/nixpkgs/pull/507286.diff"
       }
     },
+    "anki-mcp": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1794199174,
+        "narHash": "sha256-/GiObhg+e5ngDzK2dM4aYsOtysa6Cecqybr7sZnTDvw=",
+        "owner": "ankimcp",
+        "repo": "anki-mcp-server-addon",
+        "rev": "763518607f115ea8272f8c126f501f400cb4b66a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ankimcp",
+        "repo": "anki-mcp-server-addon",
+        "type": "github"
+      }
+    },
     "aquamarine": {
       "inputs": {
         "hyprutils": [
@@ -1522,6 +1542,7 @@
     "root": {
       "inputs": {
         "anki-contanki-patch": "anki-contanki-patch",
+        "anki-mcp": "anki-mcp",
         "betterfox": "betterfox",
         "buildbot-nix": "buildbot-nix",
         "catppuccin": "catppuccin",

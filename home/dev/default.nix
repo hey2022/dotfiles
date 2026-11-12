@@ -14,6 +14,7 @@ in
     ./gpg.nix
     ./jq.nix
     ./markdown
+    ./mcp.nix
     ./neovim.nix
     ./nix
     ./profiling.nix

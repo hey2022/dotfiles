@@ -85,6 +85,10 @@
       url = "github:doronbehar/nix-pandoc-bin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    anki-mcp = {
+      url = "github:ankimcp/anki-mcp-server-addon";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     firefox-ui-fix = {
       url = "github:black7375/Firefox-UI-Fix";
       flake = false;
