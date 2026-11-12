@@ -76,6 +76,15 @@ in
         };
         jjui = {
           enable = true;
+          package = pkgs.jjui.overrideAttrs (oldAttrs: {
+            # https://github.com/idursun/jjui/pull/780
+            patches = (oldAttrs.patches or [ ]) ++ [
+              (pkgs.fetchpatch2 {
+                url = "https://patch-diff.githubusercontent.com/raw/idursun/jjui/pull/780.diff";
+                hash = "sha256-p1yehPM9wL1lddwI4og/0aNte4nGSvAsX/GQiFnKVlo=";
+              })
+            ];
+          });
           settings = {
             # https://github.com/acarapetis/jj-pre-push
             actions = [

@@ -1,4 +1,5 @@
-{ pkgs, pkgs-local, ... }:
+{ pkgs, ... }:
+
 {
   environment.systemPackages = with pkgs; [
     fastfetch
@@ -6,7 +7,6 @@
     git
     home-manager
     neovim
-    pkgs-local.keepassxc-snapshot
     wget
   ];
 }

@@ -1,8 +1,8 @@
-{ pkgs, pkgs-local, ... }:
+{ pkgs, ... }:
 
 {
-  home.packages = [
-    pkgs-local.keepassxc-snapshot
-    pkgs.czkawka
+  home.packages = with pkgs; [
+    keepassxc
+    czkawka
   ];
 }

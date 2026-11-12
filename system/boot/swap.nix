@@ -1,7 +1,6 @@
 {
   boot = {
     initrd = {
-      systemd.enable = true; # for zswap lz4
       kernelModules = [ "lz4" ];
     };
     kernelParams = [

@@ -3,7 +3,6 @@
   config,
   lib,
   pkgs,
-  pkgs-local,
   ...
 }:
 let
@@ -12,6 +11,9 @@ in
 {
   imports = [ ./_extensions ];
   programs.firefox = {
+    package = pkgs.firefox.override {
+      extraPrefsFiles = [ "${inputs.ff-ultima}/userchromejs/firefox/config.js" ];
+    };
     configPath = "${config.xdg.configHome}/mozilla/firefox";
     languagePacks = [
       "en-GB"
@@ -24,25 +26,24 @@ in
           "https://devdocs.io"
         ];
       };
+      ExtensionSettings = {
+        "userChromeCompanion@soulhotel.net" = {
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/userchrome-companion";
+          installation_mode = "force_installed";
+        };
+      };
     };
-    nativeMessagingHosts = [ pkgs-local.keepassxc-snapshot ];
+    nativeMessagingHosts = [ pkgs.keepassxc ];
     profiles.${profile} = {
       isDefault = true;
       settings = {
         "browser.tabs.closeWindowWithLastTab" = false;
         "extensions.autoDisableScopes" = 0;
-        "sidebar.expandOnHover" = false;
-        "sidebar.revamp" = false;
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
-        "ultima.sidebery.autohide" = false;
-        "ultima.tabs.tabbar.disabled" = true;
-        "user.theme.0.default" = false;
-        "user.theme.catppuccin-mocha" = true;
       };
       preConfig = ''
         ${builtins.readFile "${inputs.betterfox}/user.js"}
         ${builtins.readFile "${inputs.firefox-ui-fix}/user.js"}
-        ${builtins.readFile "${inputs.ff-ultima}/user.js"}
       '';
       userChrome = config.lib.hm.mkFlakeSymlink ./userChrome.css;
       userContent = config.lib.hm.mkFlakeSymlink ./userContent.css;
@@ -88,6 +89,9 @@ in
       };
       "${config.programs.firefox.configPath}/${profile}/chrome/ff-ultima" = {
         source = inputs.ff-ultima;
+      };
+      "${config.programs.firefox.configPath}/${profile}/chrome/userchromejs" = {
+        source = "${inputs.ff-ultima}/userchromejs";
       };
     };
   };

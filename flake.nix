@@ -77,7 +77,7 @@
     };
     hyprland.url = "github:hyprwm/Hyprland";
     hyprland-scroll-overview = {
-      url = "github:yayuuu/hyprland-scroll-overview/new-release";
+      url = "github:hey2022/hyprland-scroll-overview/new-release";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.hyprland.follows = "hyprland";
     };

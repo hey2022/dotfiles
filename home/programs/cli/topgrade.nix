@@ -12,6 +12,7 @@
           "hyprpm"
           "nix"
           "system"
+          "tailscale"
           "uv"
           "vcpkg"
         ];

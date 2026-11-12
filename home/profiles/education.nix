@@ -19,5 +19,9 @@
       pkgs-local.apcap
       zotero
     ];
+    nixpkgs.config.permittedInsecurePackages = [
+      # zotero
+      "firefox-esr-140-bin-unwrapped-140.17.0esr"
+    ];
   };
 }

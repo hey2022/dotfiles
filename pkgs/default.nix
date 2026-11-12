@@ -25,7 +25,6 @@
           neovim = self'.packages.nvim;
         };
         ticktick-cracked = pkgs.callPackage ./ticktick-cracked { };
-        keepassxc-snapshot = pkgs.callPackage ./keepassxc-snapshot { };
         uuplugin = pkgs.callPackage ./uuplugin { };
         reshade-steam-proton = pkgs.callPackage ./reshade-steam-proton { };
         hidsharpcore-patched = pkgs.callPackage ./hidsharpcore-patched { };

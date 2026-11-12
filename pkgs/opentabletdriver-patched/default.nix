@@ -7,7 +7,7 @@
 let
   bluetooth-patch = fetchpatch2 {
     url = "https://patch-diff.githubusercontent.com/raw/OpenTabletDriver/OpenTabletDriver/pull/4672.diff";
-    hash = "sha256-f+3OxIqVz7GDYW6Wge3pZvkBSnEIDcJAIwPrP1f3MqE=";
+    hash = "sha256-0Jsjwl0iHnN9gm/O5UZsMM19PYk+kSn3fi7mwqrHLIY=";
   };
 in
 opentabletdriver.overrideAttrs (oldAttrs: {
