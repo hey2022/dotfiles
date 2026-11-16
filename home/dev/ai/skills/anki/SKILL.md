@@ -27,6 +27,11 @@ useful or needed for targeted practice.
 Match the actual task: recognizing a method, executing it, recalling a
 proof idea, and writing a proof are different retrieval goals.
 
+Distinguish knowledge worth practicing from knowledge worth scheduling
+through Anki. Routine exercises and calculations can remain in ordinary
+practice without becoming cards. Preserve reusable methods and principles
+when they constitute worthwhile retrieval tasks.
+
 Use necessary context without giving away the answer. Make the expected
 response clear enough to assess, accepting equivalent correct answers
 unless exact wording is itself the goal.
@@ -65,12 +70,17 @@ rather than guessing fields.
 Prefer `AnKing`, the user's enhanced cloze model, over generic Cloze or
 Basic for general recall.
 
-Use concise cue → clozed answer formats. For a definition:
+Use concise cue → clozed answer formats.
+
+For a definition requiring only forward recall:
 
 ```html
 [Term]<br>
 {{c1::[Definition]}}
 ```
+
+For definitions where both directions are useful, follow the bidirectional
+recall rules below.
 
 An explicit question is useful when it clarifies the task:
 
@@ -156,6 +166,30 @@ Progressive revelation and recalling the whole answer before feedback
 are different valid tasks. Use a single whole-answer cloze when that
 better matches the intended practice.
 
+### Cloze and MathJax safety
+
+Put MathJax delimiters inside cloze deletions:
+
+- Correct: `{{c1::\(a+b\)}}`
+- Avoid: `\({{c1::a+b}}\)`
+
+Anki may interpret the first literal `}}` after a cloze opening as its
+terminator. Nested TeX braces can accidentally create this sequence.
+Insert mathematically insignificant whitespace where necessary.
+
+For example:
+
+- Safe: `{{c1::\(\sqrt{\mathbf{v} }\)}}`
+- Unsafe: `{{c1::\(\sqrt{\mathbf{v}}\)}}`
+
+Use Anki MathJax `\(...\)` and `\[...\]`, and HTML for field formatting.
+Where HTML parsing could interfere with mathematical comparison symbols,
+prefer `\lt` and `\gt` inside MathJax.
+
+Inspect the rendered question and answer for every generated cloze card,
+including all siblings and reverse directions. Check for answer leakage,
+broken MathJax, and unintended extra cards.
+
 ### Specialized models
 
 Use suitable existing models for statements, proofs, strategies, and
@@ -196,8 +230,12 @@ tasks are not necessarily duplicates.
 - `Main::Construction`: tasks requiring writing or typing, such as written
   proofs and implementations; scheduling is tuned for that activity.
 
-Length alone does not imply Construction. A long mentally rehearsed process
-can belong in Primary.
+Most cards, including complete procedures recalled mentally, belong in
+`Main::Primary`.
+
+Reserve `Main::Construction` for tasks explicitly requiring written or
+typed responses, currently primarily complete proofs and code
+implementations. Length or multiple steps alone do not imply Construction.
 
 Route by the actual task. Decks are card-level: one note may generate
 written-proof cards for Construction and statement-recall cards for Primary.
@@ -243,7 +281,25 @@ check that all intended cards are ready.
 
 When converting learning into cards, prioritize reusable concepts,
 conditions, methods, whole processes, and demonstrated misconceptions.
+
+Select worthwhile retrieval tasks at multiple levels, including:
+
+- Essential definitions, theorem statements, and necessary conditions.
+- Conceptual relationships, comparisons, and distinctions.
+- Important examples and non-examples that clarify a concept.
+- Recognizing applicable methods and diagnosing common misconceptions.
+- Complete procedures, proofs, and implementations when recalling or
+  constructing them is itself a meaningful performance task.
+
+A whole-process card does not replace independently useful foundational
+cards, and foundational cards do not replace whole-process retrieval.
+
+Include both when they train distinct useful skills. Avoid redundant
+restatements that test substantially the same knowledge.
+
 Do not turn every exchange into a card or impose an arbitrary card quota.
+Select retrieval tasks by learning value rather than target card counts.
+
 After tutoring, create cards at the agreed time.
 
 Before writing:
@@ -253,12 +309,105 @@ Before writing:
 1. Select home decks and existing context/subject tags.
 
 Provide drafts or previews when requested; otherwise carry out requested
-creation once essential choices are known. Read complete fields before
-editing; never write truncated excerpts back into notes.
+creation once essential choices are known.
 
-Use Anki MathJax `\(...\)` and `\[...\]`, and HTML for field formatting.
-Check cloze boundaries around mathematical braces. Use stored Anki media
-for visual tasks.
+Read complete fields before editing; never write truncated excerpts back
+into notes.
+
+When source information is available, retain useful references in appropriate
+fields such as Extra. Do not invent source locations or assume an unsupported
+field exists.
+
+### Supporting examples
+
+When a short example would help the user recognize when knowledge applies,
+include a concise example-form cue in Extra. Prefer examples illustrating
+the retrieval target rather than unrelated worked problems.
+
+Do not create an additional scheduled card merely to include an example.
+
+For code-related knowledge, include exact relevant syntax or a concrete code
+snippet when executable code is part of what must be recalled.
+
+Preserve complete implementations when reconstruction is the intended task.
+Do not replace executable syntax with pseudocode when the actual code is
+the retrieval target.
+
+### Visuals and media
+
+Proactively consider visuals when spatial, geometric, structural, or
+directional relationships are central to the retrieval task.
+
+Use visuals only when they materially improve understanding or retrieval,
+not merely for decoration.
+
+Choose the representation appropriate to the task:
+
+- An existing, accurate lecture figure when it already illustrates the idea.
+- An original SVG, TikZ, plotted graph, or schematic for exact mathematical
+  and computer-science relationships.
+- An image-generation tool for illustrations where visual realism is useful
+  and exact mathematical geometry is not required.
+
+Prefer precise diagrams over generated illustrations when
+correctness depends on geometry, orientation, labels, or scale.
+
+Inspect all created or retrieved images before using them.
+
+Verify mathematical and semantic correctness, including:
+
+- Labels, units, axes, and coordinate conventions.
+- Orientation, direction, vector order, and arrowheads.
+- Scale and geometric relationships when they matter.
+- Legibility at typical Anki review sizes.
+- Sufficient contrast without relying solely on color.
+
+Place visuals according to the retrieval task:
+
+- Front: when interpreting the image is what the user must perform.
+- Back or Extra: when the image explains or illustrates the answer.
+
+Question-side images, captions, and alternative text must not reveal the
+intended answer. Use separate unannotated and annotated versions when useful.
+
+Use Anki MCP to store images, insert them into note fields, and verify
+the resulting cards. Inspect images visually when possible; do not
+claim visual verification based solely on HTML or metadata.
+
+Preserve useful attribution when reusing third-party images.
+
+### Card quality and revision
+
+Evaluate every card as the learner will encounter it.
+
+Before finalizing, inspect the answer-hidden front independently of the
+answer, surrounding cards, and source material.
+
+Verify that:
+
+- The front specifies one clear retrieval task with sufficient context.
+- The answer cannot be inferred from unintended hints or visible siblings.
+- The expected response is independently assessable.
+- Necessary assumptions, conditions, symbols, and directions are clear.
+- The retrieval activity matches the intended deck and review method.
+- Difficulty comes from meaningful retrieval rather than ambiguity or
+  unnecessary bookkeeping.
+
+Judge cognitive effort according to the actual task.
+
+Mental recall cards should be reasonably reviewable without external tools.
+Construction cards may require substantial written or typed work when that
+is the intended performance.
+
+Do not automatically split a coherent procedure, proof, or implementation
+merely because it is difficult or lengthy.
+
+When an existing card repeatedly fails, distinguish genuine difficulty
+from poor card construction. Investigate ambiguity, insufficient context,
+interference, excessive unrelated work, and answer leakage.
+
+Revise poorly constructed cards when requested, but preserve genuinely
+difficult, well-designed retrieval tasks.
 
 Before handing over cards, check:
 
@@ -266,10 +415,13 @@ Before handing over cards, check:
 - The cue and response train the intended performance.
 - The user can assess a complete response.
 - Clozes and generated card directions behave as intended.
+- Images are visually inspected when possible, and Anki media
+  references are verified.
 - Home decks, tags, and inbox state are correct.
 
 Batch compatible operations, check partial failures, and verify results
 when possible. Report what was actually created or updated.
 
-When the user syncs across devices, offer AnkiWeb sync at the start and
-end. Local MCP operations do not sync implicitly.
+When the user syncs across devices, offer AnkiWeb sync before and after
+substantial card operations when appropriate. Local MCP operations do
+not sync implicitly.
