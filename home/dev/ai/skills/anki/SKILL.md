@@ -68,14 +68,14 @@ Basic for general recall.
 Use concise cue → clozed answer formats. For a definition:
 
 ```html
-[Term]<br /><br />
+[Term]<br>
 {{c1::[Definition]}}
 ```
 
 An explicit question is useful when it clarifies the task:
 
 ```html
-How do you perform [task] under [conditions]?<br /><br />
+How do you perform [task] under [conditions]?<br>
 {{c1::[complete answer or procedure]}}
 ```
 
@@ -95,9 +95,9 @@ For progressive recall of one process, use separate clozes with the same
 number and set the `One by one` field to `1`:
 
 ```html
-[Task or procedure cue]<br /><br />
-1. {{c1::First step.}}<br />
-2. {{c1::Second step.}}<br />
+[Task or procedure cue]<br>
+1. {{c1::First step.}}<br>
+2. {{c1::Second step.}}<br>
 3. {{c1::Third step.}}
 ```
 
@@ -201,8 +201,8 @@ After tutoring, create cards at the agreed time.
 Before writing:
 
 1. Establish the intended retrieval tasks.
-2. Inspect relevant models and search for existing overlapping notes.
-3. Select home decks and existing context/subject tags.
+1. Inspect relevant models and search for existing overlapping notes.
+1. Select home decks and existing context/subject tags.
 
 Provide drafts or previews when requested; otherwise carry out requested
 creation once essential choices are known. Read complete fields before

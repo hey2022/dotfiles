@@ -16,6 +16,13 @@
         };
         programs = {
           kdlfmt.enable = true;
+          mdformat = {
+            enable = true;
+            plugins = ps: [
+              ps.mdformat-frontmatter
+              ps.mdformat-gfm
+            ];
+          };
           nixfmt.enable = true;
           prettier.enable = true;
           shellcheck.enable = true;
@@ -23,6 +30,9 @@
           yamlfmt.enable = true;
         };
         settings.formatter = {
+          prettier = {
+            excludes = [ "*.md" ];
+          };
           qmlformat = {
             command = lib.getExe' pkgs.qt6Packages.qtdeclarative "qmlformat";
             options = [ "-i" ];
