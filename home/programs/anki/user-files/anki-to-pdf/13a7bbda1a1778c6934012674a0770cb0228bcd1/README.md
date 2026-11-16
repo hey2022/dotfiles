@@ -1,1 +1,0 @@
-# Basic (optional reversed card)

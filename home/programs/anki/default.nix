@@ -22,9 +22,6 @@
         config = lib.importJSON ./config/contanki.json;
         userFiles = ./user-files/anki-contanki;
       })
-      (pkgs-local.anki-to-pdf.withConfig {
-        userFiles = ./user-files/anki-to-pdf;
-      })
       review-heatmap
       (fsrs4anki-helper.withConfig {
         config = lib.importJSON ./config/fsrs-helper.json;
