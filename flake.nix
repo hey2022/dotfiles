@@ -86,7 +86,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     anki-mcp = {
-      url = "github:ankimcp/anki-mcp-server-addon";
+      url = "github:hey2022/anki-mcp-server-addon/anki-mcp";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     firefox-ui-fix = {
