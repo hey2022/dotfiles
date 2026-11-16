@@ -81,6 +81,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.hyprland.follows = "hyprland";
     };
+    hyprpolkitagent = {
+      url = "github:hyprwm/hyprpolkitagent";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nix-pandoc-bin = {
       url = "github:doronbehar/nix-pandoc-bin";
       inputs.nixpkgs.follows = "nixpkgs";
