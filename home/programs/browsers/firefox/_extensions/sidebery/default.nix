@@ -9,8 +9,9 @@
     sidebar = {
       nav = [
         "tabs"
-        "dev"
+        "cs"
         "uiuc"
+        "application"
         "add_tp"
         "sp-0"
         "settings"
