@@ -89,6 +89,54 @@ card multiplication or visible surrounding steps that give away answers.
 Put supporting explanation in Extra. Keep material that must be actively
 recalled in the tested content.
 
+### Bidirectional recall
+
+For term–definition pairs, prefer bidirectional recall when both directions
+represent useful, independently testable knowledge.
+
+Use separate cloze numbers within one AnKing note to generate two cards:
+
+```html
+{{c2::[Term]}}<br>
+{{c1::[Definition]}}
+```
+
+- `c1`: Term → Definition.
+- `c2`: Definition → Term.
+
+Treat the two directions as distinct retrieval tasks. A reverse card should
+test something the user genuinely needs to recognize or produce, not merely
+the ability to associate an answer with its label.
+
+Do not automatically reverse every card.
+
+Prefer bidirectional recall for:
+
+- Terms and their definitions.
+- Concepts with distinctive descriptions that the user should identify.
+- Other relationships where both directions are independently useful.
+
+Prefer one direction for:
+
+- Named laws or theorems → statements or formulas, unless recognizing the
+  name from the statement is independently useful.
+- Problem situations → appropriate methods or strategies.
+- Tasks → procedures, proofs, derivations, or implementations.
+- Questions whose reversed direction is trivial, ambiguous, or unnatural.
+
+For example, recalling Gauss's law from its name is useful, but identifying
+the name "Gauss's law" from its formula is not automatically worth a card.
+
+Reverse definitions only when they identify the intended term sufficiently
+clearly. Avoid reversed cards with multiple equally valid answers unless
+the cue can be made unambiguous without revealing the answer.
+
+Prefer one AnKing note with multiple cloze numbers over duplicate notes
+when both directions concern the same knowledge.
+
+Inspect the generated cards to verify that each direction provides enough
+context, hides the intended answer, and does not reveal it elsewhere.
+
 ### One-by-one processes
 
 For progressive recall of one process, use separate clozes with the same
