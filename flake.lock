@@ -19,16 +19,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1794788675,
-        "narHash": "sha256-mLQt3/2wmHg+DrgncaNl5+OQEM3P9pzhXJ5rbYw2gvE=",
-        "owner": "hey2022",
+        "lastModified": 1794857656,
+        "narHash": "sha256-QmlqFNDOwJahZ8BhFa8mgEHnZT5Wmc8a6IEfv3bBxWs=",
+        "owner": "ankimcp",
         "repo": "anki-mcp-server-addon",
-        "rev": "169314ff55fa61b5729df9c2b8f1d4e36bc59df8",
+        "rev": "98df226bd5ffad4a22226416306abb336aaa0c14",
         "type": "github"
       },
       "original": {
-        "owner": "hey2022",
-        "ref": "anki-mcp",
+        "owner": "ankimcp",
         "repo": "anki-mcp-server-addon",
         "type": "github"
       }
