@@ -65,6 +65,10 @@ Do not maintain a fixed schema inventory or fetch every model. If MCP is
 unavailable, ask for the necessary details or provide a labeled draft
 rather than guessing fields.
 
+Some add tools reject a note unless every field key is present. Pass unused
+fields as empty strings; this is a request-shape requirement, not a content
+rule.
+
 ### AnKing: default general-recall format
 
 Prefer `AnKing`, the user's enhanced cloze model, over generic Cloze or
@@ -271,8 +275,18 @@ The filtered workspace study deck additionally restricts cards to:
 (is:due OR is:new)
 ```
 
+A filtered deck is a snapshot: removing `inbox` or changing suspension does
+not update a built deck until it is rebuilt. Rebuild only when requested.
+
+Editing a deferred note can create new sibling cards—for example, adding a
+new cloze number. Suspend those siblings too and re-check that the backlog
+is still fully suspended.
+
 The user also captures incomplete lecture placeholders. Preserve these
 when requested without inventing missing content or treating them as finished.
+When a placeholder admits more than one reading, infer from the course,
+tags, neighbouring notes, and recent work. If the readings remain plausible,
+ask or leave the note suspended rather than choosing one.
 
 Tags affect whole notes. Before removing `inbox` from a multi-card note,
 check that all intended cards are ready.
@@ -314,9 +328,13 @@ creation once essential choices are known.
 Read complete fields before editing; never write truncated excerpts back
 into notes.
 
-When source information is available, retain useful references in appropriate
-fields such as Extra. Do not invent source locations or assume an unsupported
-field exists.
+Before writing course cards, check the workspace for the course's own
+materials—lecture notes, readings, problem sets. When they exist, follow
+their definitions, notation, and terminology even if a standard textbook
+differs, and record the source in Extra. Without such a source, use
+standard knowledge without claiming that its wording or notation matches
+the course exactly. Preserve course context tags when the user has
+established that context.
 
 ### Supporting examples
 
@@ -388,7 +406,9 @@ Verify that:
 - The front specifies one clear retrieval task with sufficient context.
 - The answer cannot be inferred from unintended hints or visible siblings.
 - The expected response is independently assessable.
-- Necessary assumptions, conditions, symbols, and directions are clear.
+- Necessary assumptions, conditions, symbols, and directions are clear,
+  including the object a formula applies to; do not present a special case
+  as the general rule.
 - The retrieval activity matches the intended deck and review method.
 - Difficulty comes from meaningful retrieval rather than ambiguity or
   unnecessary bookkeeping.
