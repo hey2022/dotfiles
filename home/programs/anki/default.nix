@@ -42,7 +42,9 @@
         config = lib.importJSON ./config/ajt-autocopy.json;
       })
       pkgs-local.empty-cards-shortcut
-      inputs.anki-mcp.packages.${pkgs.stdenv.hostPlatform.system}.addon
+      (inputs.anki-mcp.packages.${pkgs.stdenv.hostPlatform.system}.addon.withConfig {
+        config = lib.importJSON ./config/anki-mcp.json;
+      })
     ];
   };
   home.packages = [
