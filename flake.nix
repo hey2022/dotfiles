@@ -125,6 +125,10 @@
       url = "github:janestreet/agent_skills";
       flake = false;
     };
+    ponytail-agent-skills = {
+      url = "github:DietrichGebert/ponytail";
+      flake = false;
+    };
   };
 
   outputs =

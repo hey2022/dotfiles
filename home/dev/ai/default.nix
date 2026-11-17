@@ -19,6 +19,7 @@ in
     };
     home.file = {
       ".agents/skills/janestreet".source = inputs.janestreet-agent-skills;
+      ".agents/skills/ponytail".source = "${inputs.ponytail-agent-skills}/skills";
       ".agents/skills/personal".source = config.lib.hm.mkFlakeSymlink ./skills;
     };
   };
