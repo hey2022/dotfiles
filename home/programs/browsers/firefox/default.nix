@@ -72,11 +72,12 @@ in
         ];
       search = {
         force = true;
-        default = "kagi";
+        default = "brave";
         privateDefault = "ddg";
         engines = {
-          kagi = {
-            urls = [ { template = "https://kagi.com/search?q={searchTerms}"; } ];
+          brave = {
+            name = "Brave Search";
+            urls = [ { template = "https://search.brave.com/search?q={searchTerms}"; } ];
           };
         };
       };
