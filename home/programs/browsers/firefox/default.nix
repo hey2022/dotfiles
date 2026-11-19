@@ -23,6 +23,7 @@ in
     policies = {
       Cookies = {
         Allow = [
+          "http://127.0.0.1"
           "https://devdocs.io"
         ];
       };
