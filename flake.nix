@@ -113,10 +113,6 @@
       url = "github:Iurimateus/luasnip-latex-snippets.nvim";
       flake = false;
     };
-    anki-contanki-patch = {
-      url = "https://patch-diff.githubusercontent.com/raw/NixOS/nixpkgs/pull/507286.diff";
-      flake = false;
-    };
     userscript-nixpkgs-review-gha = {
       url = "github:hey2022/nixpkgs-review-gha";
       flake = false;

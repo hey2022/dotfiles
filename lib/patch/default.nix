@@ -9,7 +9,10 @@
 let
   nixpkgs-patches = [
     # https://nixpk.gs/pr-tracker.html?pr=507286
-    inputs.anki-contanki-patch
+    (pkgs.fetchpatch2 {
+      url = "https://patch-diff.githubusercontent.com/raw/NixOS/nixpkgs/pull/507286.diff";
+      hash = "sha256-rphIBU7EVR0nhyB8IL+8lldHzSob9lcexmW1H+jUVUw=";
+    })
   ];
   home-manager-patches = [ ];
   nixpkgs-patched =
