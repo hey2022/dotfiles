@@ -2,7 +2,7 @@
 
 ## Generate new keypair
 
-`ssh-keygen -t ed25519 -C "yiheng.he@proton.me"`
+`ssh-keygen -t ed25519`
 
 ## Backup private key
 
