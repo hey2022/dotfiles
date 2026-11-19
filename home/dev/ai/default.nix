@@ -18,9 +18,10 @@ in
       mcp.enable = true;
     };
     home.file = {
+      ".agents/skills/humanizer".source = inputs.humanizer;
       ".agents/skills/janestreet".source = inputs.janestreet-agent-skills;
-      ".agents/skills/ponytail".source = "${inputs.ponytail-agent-skills}/skills";
       ".agents/skills/personal".source = config.lib.hm.mkFlakeSymlink ./skills;
+      ".agents/skills/ponytail".source = "${inputs.ponytail-agent-skills}/skills";
     };
   };
 }

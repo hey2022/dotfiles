@@ -703,6 +703,22 @@
         "type": "github"
       }
     },
+    "humanizer": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1795082863,
+        "narHash": "sha256-ql6zyupIPJaGtzHrVwGe7iqZKfdg/4YItv3FaDeYVe4=",
+        "owner": "blader",
+        "repo": "humanizer",
+        "rev": "a48c60c2a3f7a0f6ecc8f9b8d2b1ef71c7927155",
+        "type": "github"
+      },
+      "original": {
+        "owner": "blader",
+        "repo": "humanizer",
+        "type": "github"
+      }
+    },
     "hyprcursor": {
       "inputs": {
         "hyprlang": [
@@ -1807,6 +1823,7 @@
         "flake-parts": "flake-parts_2",
         "git-hooks-nix": "git-hooks-nix_2",
         "home-manager": "home-manager_2",
+        "humanizer": "humanizer",
         "hyprland": "hyprland",
         "hyprland-scroll-overview": "hyprland-scroll-overview",
         "hyprpolkitagent": "hyprpolkitagent",

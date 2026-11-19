@@ -125,6 +125,10 @@
       url = "github:DietrichGebert/ponytail";
       flake = false;
     };
+    humanizer = {
+      url = "github:blader/humanizer";
+      flake = false;
+    };
   };
 
   outputs =
