@@ -7,53 +7,48 @@ description: Create, edit, and design Anki notes using the user's application-fi
 
 ## Core principle: practice knowledge as it will be used
 
-Design each card around:
+Match the cue to the situation, the information available, and what the
+user must recall or do. Recognizing a method, executing it, recalling a
+proof idea, and writing a proof are different retrieval tasks.
 
-- The situation that calls for the knowledge.
-- The information available in that situation.
-- What the user must recognize, recall, explain, produce, or execute.
+A card tests one meaningful task, not necessarily one fact or step. Keep
+a procedure, proof, derivation, or reasoning flow together when the user
+will perform it as a unit. Add component cards only when they train
+something independently useful or target a specific weak point.
 
-The unit of a card is a meaningful unit of performance, not necessarily
-one fact or step.
+Schedule reusable knowledge worth retrieving. Leave routine exercises and
+calculations to ordinary practice unless the task itself is worth recalling.
 
-Preserve a whole procedure, proof, derivation, or reasoning flow when the
-user will perform it as one unit—even if the answer is long. Do not split
-it merely to satisfy the minimum information principle.
+### Keep tested answers lean
 
-Distinguish coherent processes from arbitrary bundles of unrelated facts.
-Component cards can supplement whole-process practice when independently
-useful or needed for targeted practice.
+The default is a short, assessable answer—often one sentence or a few
+key moves—not an essay. Length is justified only when the user is
+actually performing the whole unit as one retrieval task.
 
-Match the actual task: recognizing a method, executing it, recalling a
-proof idea, and writing a proof are different retrieval goals.
-
-Distinguish knowledge worth practicing from knowledge worth scheduling
-through Anki. Routine exercises and calculations can remain in ordinary
-practice without becoming cards. Preserve reusable methods and principles
-when they constitute worthwhile retrieval tasks.
-
-Use necessary context without giving away the answer. Make the expected
-response clear enough to assess, accepting equivalent correct answers
-unless exact wording is itself the goal.
+- For procedures, keep only the key moves. Drop micro-steps, obvious
+  restatements, and steps implied by a later step. Keep everything needed
+  for a complete solution when construction is the task.
+- Put illustrative examples in Extra. Keep an example in the tested answer
+  when producing one is the task, such as giving a counterexample.
+- If an answer is a list of independent facts, split it only when each
+  component is independently useful.
+- Do not delete a card merely because it is a general fact. General
+  principles and definitions are valid retrieval targets. Delete only
+  trivial, duplicated, or low-value cards.
+- If a card is vague, add the missing context to the cue rather than
+  padding the answer.
 
 ### Prefer concise, natural cues
 
-Use the shortest cue that makes the intended retrieval task clear.
-Do not turn every prompt into a full question.
+Use the shortest natural cue that makes the retrieval task clear without
+giving away the answer. A term alone usually cues a definition. A theorem
+name, formula, diagram, or problem pattern can also suffice when the
+expected response is clear from convention.
 
-For definitions, the term alone is usually sufficient: the user understands
-that a bare term asks for its definition or meaning.
-
-A theorem name, formula, diagram, or problem pattern can likewise serve as
-the cue when the expected response is clear from established conventions.
-
-Add explicit wording only when needed to distinguish the task, resolve
-ambiguity, or state necessary conditions. For example, distinguish recalling
-a theorem's statement from constructing its proof when the cue alone would
-not make that clear.
-
-Keep prompts concise without artificially shortening answers. A one-word
-cue may require a substantial definition, explanation, or whole process.
+Add wording when it changes what's being asked: when to use a method versus
+how to execute it, or stating a theorem versus writing its proof. Include
+necessary conditions. Accept equivalent answers unless exact wording is
+the task.
 
 ## Note types: inspect the live collection
 
@@ -71,8 +66,8 @@ rule.
 
 ### AnKing: default general-recall format
 
-Prefer `AnKing`, the user's enhanced cloze model, over generic Cloze or
-Basic for general recall.
+Prefer `AnKing` over generic Cloze or Basic for general recall, unless a
+specialized model better fits the intended task.
 
 Use concise cue → clozed answer formats.
 
@@ -83,9 +78,6 @@ For a definition requiring only forward recall:
 {{c1::[Definition]}}
 ```
 
-For definitions where both directions are useful, follow the bidirectional
-recall rules below.
-
 An explicit question is useful when it clarifies the task:
 
 ```html
@@ -93,22 +85,38 @@ How do you perform [task] under [conditions]?<br>
 {{c1::[complete answer or procedure]}}
 ```
 
-Cloze does not have to mean deleting individual words from prose.
-A complete answer or process can be one cloze.
-
-Use the same cloze number for material recalled together; different
-numbers intentionally create separate scheduled cards. Avoid accidental
-card multiplication or visible surrounding steps that give away answers.
+One cloze can hide a complete answer or process. Use the same number for
+material recalled together and different numbers for separate cards.
 
 Put supporting explanation in Extra. Keep material that must be actively
 recalled in the tested content.
 
+#### Formula cards
+
+Show the equation structure when it helps specify what's being recalled.
+For a one-way formula, usually show the left side and cloze the right:
+
+```html
+Polar area element: \(dA={{c1::r\,dr\,d\theta}}\)
+```
+
+For a named formula, a cue line followed by the whole formula as one cloze
+may read more naturally:
+
+```html
+Polar area element<br>
+{{c1::\(dA=r\,dr\,d\theta\)}}
+```
+
+Define unfamiliar symbols on the front if the user needs them to answer,
+unless their meaning is itself being tested. Use Extra for notation notes
+that are helpful but not needed to answer.
+
 ### Bidirectional recall
 
-For term–definition pairs, prefer bidirectional recall when both directions
-represent useful, independently testable knowledge.
-
-Use separate cloze numbers within one AnKing note to generate two cards:
+Use both directions only when each is useful and independently assessable.
+For bidirectional term–definition recall in `AnKing`, use one note with
+separate clozes:
 
 ```html
 {{c2::[Term]}}<br>
@@ -118,38 +126,11 @@ Use separate cloze numbers within one AnKing note to generate two cards:
 - `c1`: Term → Definition.
 - `c2`: Definition → Term.
 
-Treat the two directions as distinct retrieval tasks. A reverse card should
-test something the user genuinely needs to recognize or produce, not merely
-the ability to associate an answer with its label.
-
-Do not automatically reverse every card.
-
-Prefer bidirectional recall for:
-
-- Terms and their definitions.
-- Concepts with distinctive descriptions that the user should identify.
-- Other relationships where both directions are independently useful.
-
-Prefer one direction for:
-
-- Named laws or theorems → statements or formulas, unless recognizing the
-  name from the statement is independently useful.
-- Problem situations → appropriate methods or strategies.
-- Tasks → procedures, proofs, derivations, or implementations.
-- Questions whose reversed direction is trivial, ambiguous, or unnatural.
-
-For example, recalling Gauss's law from its name is useful, but identifying
-the name "Gauss's law" from its formula is not automatically worth a card.
-
-Reverse definitions only when they identify the intended term sufficiently
-clearly. Avoid reversed cards with multiple equally valid answers unless
-the cue can be made unambiguous without revealing the answer.
-
-Prefer one AnKing note with multiple cloze numbers over duplicate notes
-when both directions concern the same knowledge.
-
-Inspect the generated cards to verify that each direction provides enough
-context, hides the intended answer, and does not reveal it elsewhere.
+Reverse a definition or other description only if it identifies the intended
+term without giving it away. Prefer one direction for named laws or theorems,
+situations → methods, and tasks → procedures, proofs, or implementations.
+For example, recalling Gauss's law from its name does not imply the name is
+worth recalling from the formula.
 
 ### One-by-one processes
 
@@ -166,22 +147,24 @@ number and set the `One by one` field to `1`:
 This is one scheduled card with individually revealable steps.
 Verify the live field name and behavior before writing.
 
+Use one-by-one only for a genuine multi-step procedure, and only for the
+key moves—usually 3–4 steps, not every algebraic micro-step. Do not add
+a step for an action already implied by a later step, such as “compute the
+Jacobian” immediately before “multiply by the Jacobian.”
+
 Progressive revelation and recalling the whole answer before feedback
 are different valid tasks. Use a single whole-answer cloze when that
 better matches the intended practice.
 
 ### Cloze and MathJax safety
 
-Put MathJax delimiters inside cloze deletions:
+Both of these work:
 
-- Correct: `{{c1::\(a+b\)}}`
-- Avoid: `\({{c1::a+b}}\)`
+- MathJax inside the cloze: `{{c1::\(a+b\)}}`
+- MathJax outside the cloze: `\(a+b={{c1::c}}\)`
 
-Anki may interpret the first literal `}}` after a cloze opening as its
-terminator. Nested TeX braces can accidentally create this sequence.
-Insert mathematically insignificant whitespace where necessary.
-
-For example:
+Within clozed MathJax, adjacent TeX closing braces can be read as the
+cloze terminator. Insert harmless whitespace between those braces:
 
 - Safe: `{{c1::\(\sqrt{\mathbf{v} }\)}}`
 - Unsafe: `{{c1::\(\sqrt{\mathbf{v}}\)}}`
@@ -190,15 +173,34 @@ Use Anki MathJax `\(...\)` and `\[...\]`, and HTML for field formatting.
 Where HTML parsing could interfere with mathematical comparison symbols,
 prefer `\lt` and `\gt` inside MathJax.
 
-Inspect the rendered question and answer for every generated cloze card,
-including all siblings and reverse directions. Check for answer leakage,
-broken MathJax, and unintended extra cards.
-
 ### Specialized models
 
-Use suitable existing models for statements, proofs, strategies, and
-structured objects. Relevant examples include `Mathmatical Statement`
-(exact spelling), `Problem Strategy`, `VSEPR`, and `Geometric Shapes`.
+Use suitable existing models for statements, definitions, proofs,
+strategies, and structured objects. Relevant examples include
+`Mathmatical Statement` (exact spelling), `Problem Strategy`, `VSEPR`,
+and `Geometric Shapes`.
+
+Prefer `Mathmatical Statement` for named definitions and theorems when
+their natural-language and formal/symbolic versions support distinct,
+useful retrieval tasks (such as stating, identifying, or translating).
+Use AnKing for simpler term–meaning recall, lists, procedures, or when
+the specialized model would generate unnecessary retrieval directions.
+
+Choose based on the intended retrieval tasks and the cards the actual
+templates generate, not merely the shape of the knowledge or which
+models neighboring notes use. Do not create reverse cards solely
+because a model supports them.
+
+For definition notes in `Mathmatical Statement`, write a concise prose
+characterization in `Statement` that identifies the concept without naming
+it, e.g. "a graph homomorphism that is left-cancellative." The Identify
+card uses `Statement` as its cue and falls back to `Formal` if `Statement`
+is blank. Set `Name` to `Definition of X` for the State prompt. Make sure
+the State answer includes any condition the user is meant to recall.
+
+Add a symbolic version in `Formal` only when translating between the two
+versions in both directions is worth practicing. Leaving `Formal` blank
+skips the Translate and Meaning cards.
 
 The user welcomes new models for recurring objects with multiple useful
 retrieval directions, such as diagram → name or equation → graph.
@@ -305,22 +307,14 @@ Select worthwhile retrieval tasks at multiple levels, including:
 - Complete procedures, proofs, and implementations when recalling or
   constructing them is itself a meaningful performance task.
 
-A whole-process card does not replace independently useful foundational
-cards, and foundational cards do not replace whole-process retrieval.
-
-Include both when they train distinct useful skills. Avoid redundant
-restatements that test substantially the same knowledge.
-
-Do not turn every exchange into a card or impose an arbitrary card quota.
-Select retrieval tasks by learning value rather than target card counts.
+If two cards test the same thing, keep one and move useful detail into
+Extra. Don't turn every exchange into a card or aim for a fixed count.
 
 After tutoring, create cards at the agreed time.
 
-Before writing:
-
-1. Establish the intended retrieval tasks.
-1. Inspect relevant models and search for existing overlapping notes.
-1. Select home decks and existing context/subject tags.
+Before drafting, establish the intended retrieval tasks and inspect the
+relevant models and templates. Before writing, check for overlapping notes
+and select home decks and existing context/subject tags.
 
 Provide drafts or previews when requested; otherwise carry out requested
 creation once essential choices are known.
@@ -328,7 +322,7 @@ creation once essential choices are known.
 Read complete fields before editing; never write truncated excerpts back
 into notes.
 
-Before writing course cards, check the workspace for the course's own
+Before drafting course cards, check the workspace for the course's own
 materials—lecture notes, readings, problem sets. When they exist, follow
 their definitions, notation, and terminology even if a standard textbook
 differs, and record the source in Extra. Without such a source, use
@@ -396,31 +390,12 @@ Preserve useful attribution when reusing third-party images.
 
 ### Card quality and revision
 
-Evaluate every card as the learner will encounter it.
-
-Before finalizing, inspect the answer-hidden front independently of the
-answer, surrounding cards, and source material.
-
-Verify that:
-
-- The front specifies one clear retrieval task with sufficient context.
-- The answer cannot be inferred from unintended hints or visible siblings.
-- The expected response is independently assessable.
-- Necessary assumptions, conditions, symbols, and directions are clear,
-  including the object a formula applies to; do not present a special case
-  as the general rule.
-- The retrieval activity matches the intended deck and review method.
-- Difficulty comes from meaningful retrieval rather than ambiguity or
-  unnecessary bookkeeping.
-
-Judge cognitive effort according to the actual task.
-
-Mental recall cards should be reasonably reviewable without external tools.
-Construction cards may require substantial written or typed work when that
-is the intended performance.
-
-Do not automatically split a coherent procedure, proof, or implementation
-merely because it is difficult or lengthy.
+Before writing, check every intended front in isolation, with no answer,
+neighboring cards, or source material. Confirm that it sets a clear task
+without giving away the answer, and that the expected answer is correct and
+assessable. Check assumptions and scope; don't present a special case as
+the general rule. Mental recall should be workable without external tools;
+substantial written or typed work is fine when that is the task.
 
 When an existing card repeatedly fails, distinguish genuine difficulty
 from poor card construction. Investigate ambiguity, insufficient context,
@@ -429,18 +404,11 @@ interference, excessive unrelated work, and answer leakage.
 Revise poorly constructed cards when requested, but preserve genuinely
 difficult, well-designed retrieval tasks.
 
-Before handing over cards, check:
-
-- Correct content, assumptions, and necessary qualifications.
-- The cue and response train the intended performance.
-- The user can assess a complete response.
-- Clozes and generated card directions behave as intended.
-- Images are visually inspected when possible, and Anki media
-  references are verified.
-- Home decks, tags, and inbox state are correct.
-
-Batch compatible operations, check partial failures, and verify results
-when possible. Report what was actually created or updated.
+Batch compatible writes and check for partial failures. After writing,
+verify generated fronts and backs, including all siblings, for missing or
+unintended cards, answer leakage, broken MathJax, and media references.
+Check home decks, tags, and inbox state. Report what was actually created
+or updated and flag any checks that couldn't be done.
 
 When the user syncs across devices, offer AnkiWeb sync before and after
 substantial card operations when appropriate. Local MCP operations do
