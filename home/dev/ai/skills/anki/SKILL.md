@@ -310,14 +310,15 @@ Select worthwhile retrieval tasks at multiple levels, including:
 If two cards test the same thing, keep one and move useful detail into
 Extra. Don't turn every exchange into a card or aim for a fixed count.
 
-After tutoring, create cards at the agreed time.
+After tutoring, start card creation at the agreed time. Default to the draft
+review below for tutoring batches, unless the user asks to batch directly.
 
 Before drafting, establish the intended retrieval tasks and inspect the
 relevant models and templates. Before writing, check for overlapping notes
 and select home decks and existing context/subject tags.
 
-Provide drafts or previews when requested; otherwise carry out requested
-creation once essential choices are known.
+Outside draft review, provide previews when requested; otherwise carry out
+requested creation once essential choices are known.
 
 Read complete fields before editing; never write truncated excerpts back
 into notes.
@@ -329,6 +330,30 @@ differs, and record the source in Extra. Without such a source, use
 standard knowledge without claiming that its wording or notation matches
 the course exactly. Preserve course context tags when the user has
 established that context.
+
+### One-at-a-time draft review
+
+Start with one representative draft in chat: show the cue and tested answer,
+mention any sibling retrieval tasks the note would generate, and show Extra
+only when it matters. Do not write to Anki during the review.
+
+- **Comment:** Revise the current draft and apply the feedback to other
+  drafts where it fits. Keep topic-specific feedback scoped to that topic.
+  A material change to an approved cue, tested answer, or set of sibling
+  cards voids its individual approval; show the revision for reapproval.
+- **Approve:** Keep the draft and show the next one. Pick a different example
+  that tests whether the feedback carries over. Write the batch once all
+  drafts are approved.
+- **Accept all:** Stop previewing, finish the rest of the current batch using
+  the feedback so far, and write the whole batch.
+
+For new notes, batch-create them with `inbox`, even if approved in chat.
+When reviewing existing notes, use the current notes as drafts and show
+revisions in chat. Apply the approved changes in place at the end and verify
+the resulting cards. Leave other notes and existing inbox status unchanged
+unless the user asks otherwise.
+
+Save feedback for future sessions only when the user asks.
 
 ### Supporting examples
 
