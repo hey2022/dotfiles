@@ -11,10 +11,10 @@ jujutsu.overrideAttrs rec {
     owner = "jj-vcs";
     repo = "jj";
     rev = "sbarfurth/push-uulvmqxnpmzk";
-    hash = "sha256-wXrzUSNbiaKcgSx/mBtaLXE8g774x17FzESg0On/Swc=";
+    hash = "sha256-RH95COZILuOA4IWjJBRtiMzEB4tragTPTXUfmCFzSTg=";
   };
   cargoDeps = rustPlatform.fetchCargoVendor {
     inherit src;
-    hash = "sha256-MeYpBSwEX5pwlgJffXPhKSQufEWb9vqWaEnn4ehCp9I=";
+    hash = "sha256-WZZ0KQkKWEJSDeCeQ4SmFyj6eacoEU9YLeBVjRSlSNI=";
   };
 }
