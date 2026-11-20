@@ -16,6 +16,10 @@ a procedure, proof, derivation, or reasoning flow together when the user
 will perform it as a unit. Add component cards only when they train
 something independently useful or target a specific weak point.
 
+Whole-process and component cards can coexist when they train distinct,
+independently useful retrieval tasks; neither automatically replaces
+the other.
+
 Schedule reusable knowledge worth retrieving. Leave routine exercises and
 calculations to ordinary practice unless the task itself is worth recalling.
 
@@ -25,16 +29,17 @@ The default is a short, assessable answer—often one sentence or a few
 key moves—not an essay. Length is justified only when the user is
 actually performing the whole unit as one retrieval task.
 
-- For procedures, keep only the key moves. Drop micro-steps, obvious
-  restatements, and steps implied by a later step. Keep everything needed
-  for a complete solution when construction is the task.
+- For procedures, omit redundant micro-steps while preserving all
+  essential moves needed to reconstruct the intended process, whether
+  mentally or in writing. Keep complete details when accurate written
+  or typed construction is the retrieval task.
 - Put illustrative examples in Extra. Keep an example in the tested answer
   when producing one is the task, such as giving a counterexample.
 - If an answer is a list of independent facts, split it only when each
   component is independently useful.
-- Do not delete a card merely because it is a general fact. General
-  principles and definitions are valid retrieval targets. Delete only
-  trivial, duplicated, or low-value cards.
+- Do not exclude a proposed card merely because it is a general fact.
+  General principles and definitions are valid retrieval targets. Exclude
+  only trivial, duplicated, or low-value proposed cards.
 - If a card is vague, add the missing context to the cue rather than
   padding the answer.
 
@@ -49,6 +54,11 @@ Add wording when it changes what's being asked: when to use a method versus
 how to execute it, or stating a theorem versus writing its proof. Include
 necessary conditions. Accept equivalent answers unless exact wording is
 the task.
+
+Cue the whole task when the user needs to perform it as a unit. For example,
+“How do you prove that (f:A\\to B) is surjective?” cues the full proof
+flow; “You’ve solved (f(x)=y)” cues only what comes after finding a
+candidate input.
 
 ## Note types: inspect the live collection
 
@@ -126,8 +136,11 @@ separate clozes:
 - `c1`: Term → Definition.
 - `c2`: Definition → Term.
 
-Reverse a definition or other description only if it identifies the intended
-term without giving it away. Prefer one direction for named laws or theorems,
+For each definition, decide explicitly whether recognizing the term from
+its description is worth practicing. Reverse it only if the description
+identifies the intended term without giving it away. When adding a reverse
+card to an existing note, preserve the wording unless a wording change is
+separately proposed for review. Prefer one direction for named laws or theorems,
 situations → methods, and tasks → procedures, proofs, or implementations.
 For example, recalling Gauss's law from its name does not imply the name is
 worth recalling from the formula.
@@ -311,11 +324,14 @@ If two cards test the same thing, keep one and move useful detail into
 Extra. Don't turn every exchange into a card or aim for a fixed count.
 
 After tutoring, start card creation at the agreed time. Default to the draft
-review below for tutoring batches, unless the user asks to batch directly.
+review below for tutoring batches and follow-ups. A request like “add those
+definitions” selects the content; it does not waive review. Skip review only
+if the user explicitly asks to add the batch without drafts. During review,
+“accept all” approves the rest of the current batch.
 
-Before drafting, establish the intended retrieval tasks and inspect the
-relevant models and templates. Before writing, check for overlapping notes
-and select home decks and existing context/subject tags.
+Before drafting, establish the intended retrieval tasks, inspect relevant
+models and templates, search for overlapping notes, and select appropriate
+home decks and existing context/subject tags.
 
 Outside draft review, provide previews when requested; otherwise carry out
 requested creation once essential choices are known.
@@ -333,9 +349,20 @@ established that context.
 
 ### One-at-a-time draft review
 
-Start with one representative draft in chat: show the cue and tested answer,
-mention any sibling retrieval tasks the note would generate, and show Extra
-only when it matters. Do not write to Anki during the review.
+Start with one representative note. Prefix every draft with `[i/n]`, where
+`i` is the current note and `n` is the number of notes currently planned for
+this batch. Count a note with sibling cards once. If the plan changes, update
+the denominator and briefly say why. Show the exact Anki note type on every
+draft, even when it is unchanged from the previous draft.
+
+Show the exact wording of each proposed card. For AnKing, show the exact
+cloze text once, preserving wording, line breaks, and cloze numbers. If the
+note generates multiple cards, list what each cloze tests (e.g., `c1`:
+term → definition; `c2`: definition → term). Show separate front/back
+previews only if requested; preserve the same note text across siblings and
+change only which part is hidden. For other models, show only the cards the
+populated fields and live templates will generate. Show Extra only when it
+matters. Do not write to Anki during the review.
 
 - **Comment:** Revise the current draft and apply the feedback to other
   drafts where it fits. Keep topic-specific feedback scoped to that topic.
