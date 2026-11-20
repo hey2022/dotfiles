@@ -71,11 +71,9 @@
       url = "github:liixini/skwd-wall";
       inputs.release.inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprland.url = "github:hyprwm/Hyprland";
     hyprland-scroll-overview = {
-      url = "github:hey2022/hyprland-scroll-overview/new-release";
+      url = "github:yayuuu/hyprland-scroll-overview";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.hyprland.follows = "hyprland";
     };
     hyprpolkitagent = {
       url = "github:hyprwm/hyprpolkitagent";

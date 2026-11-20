@@ -1,15 +1,19 @@
-# BUG: https://github.com/yayuuu/hyprland-scroll-overview/issues/35
 {
   inputs,
-  config,
   pkgs,
+  config,
   ...
 }:
 
+let
+  plugin = inputs.hyprland-scroll-overview.packages.${pkgs.stdenv.hostPlatform.system}.default;
+in
 {
   wayland.windowManager.hyprland = {
     plugins = [
-      inputs.hyprland-scroll-overview.packages.${pkgs.stdenv.hostPlatform.system}.default
+      (plugin.overrideAttrs {
+        buildInputs = [ pkgs.hyprland ] ++ pkgs.hyprland.buildInputs ++ [ pkgs.lua5_4 ];
+      })
     ];
     extraLuaFiles = {
       "scrolloverview.lua" = {

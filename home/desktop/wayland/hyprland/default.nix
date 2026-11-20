@@ -1,5 +1,4 @@
 {
-  inputs,
   config,
   lib,
   pkgs,
@@ -16,9 +15,6 @@ in
   };
   config = lib.mkIf cfg.enable {
     wayland.windowManager.hyprland = {
-      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-      portalPackage =
-        inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
       uwsm.enable = true;
       systemd.enable = !cfg.uwsm.enable;
       configType = "lua";
