@@ -28,6 +28,7 @@ in
   config = lib.mkIf cfg.enable {
     programs = {
       claude-code.enable = true;
+      codex.enable = true;
       opencode.enable = true;
       mcp.enable = true;
     };
