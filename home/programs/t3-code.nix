@@ -2,6 +2,13 @@
 
 {
   programs.t3code = {
+    server = {
+      enable = true;
+      extraArgs = [
+        "--host"
+        "0.0.0.0"
+      ];
+    };
     userSettings.providerInstances.deepseek = {
       driver = "acpRegistry";
       displayName = "DeepSeek Harness";
