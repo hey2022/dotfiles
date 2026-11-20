@@ -30,6 +30,7 @@ in
       claude-code.enable = true;
       codex.enable = true;
       opencode.enable = true;
+      t3code.enable = true;
       mcp.enable = true;
     };
     home.file = lib.mkMerge [
