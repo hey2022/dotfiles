@@ -2,6 +2,7 @@
   inputs,
   config,
   lib,
+  pkgs,
   ...
 }:
 
@@ -26,6 +27,7 @@ in
     ./mcp.nix
   ];
   config = lib.mkIf cfg.enable {
+    home.packages = with pkgs; [ deepseek-harness ];
     programs = {
       claude-code.enable = true;
       codex.enable = true;
@@ -41,6 +43,7 @@ in
         name: source:
         lib.nameValuePair "${config.programs.claude-code.configDir}/skills/${name}" { inherit source; }
       ) skills)
+      { ".agents/AGENTS.md".source = ./AGENTS.md; }
     ];
   };
 }
