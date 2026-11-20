@@ -27,12 +27,17 @@ in
   ];
   config = lib.mkIf cfg.enable {
     programs = {
+      claude-code.enable = true;
       opencode.enable = true;
       mcp.enable = true;
     };
     home.file = lib.mkMerge [
       (lib.mapAttrs' (
         name: source: lib.nameValuePair ".agents/skills/${name}" { inherit source; }
+      ) skills)
+      (lib.mapAttrs' (
+        name: source:
+        lib.nameValuePair "${config.programs.claude-code.configDir}/skills/${name}" { inherit source; }
       ) skills)
     ];
   };
