@@ -1668,26 +1668,6 @@
         "type": "github"
       }
     },
-    "noctalia": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1794509281,
-        "narHash": "sha256-pmSk3eq/kvmk1QYW6pC0zFVBJM4GQlFYqjzaN35GxoQ=",
-        "owner": "noctalia-dev",
-        "repo": "noctalia",
-        "rev": "cd239b3ca4f364fb5e4f1ad3cd98f314249b742d",
-        "type": "github"
-      },
-      "original": {
-        "owner": "noctalia-dev",
-        "repo": "noctalia",
-        "type": "github"
-      }
-    },
     "nur": {
       "inputs": {
         "flake-parts": "flake-parts_5",
@@ -1839,7 +1819,6 @@
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_7",
         "nixpkgs-stable": "nixpkgs-stable",
-        "noctalia": "noctalia",
         "nur": "nur",
         "ponytail-agent-skills": "ponytail-agent-skills",
         "reshade-shaders": "reshade-shaders",

@@ -67,10 +67,6 @@
     catppuccin = {
       url = "github:catppuccin/nix";
     };
-    noctalia = {
-      url = "github:noctalia-dev/noctalia";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     skwd-wall = {
       url = "github:liixini/skwd-wall";
       inputs.release.inputs.nixpkgs.follows = "nixpkgs";
