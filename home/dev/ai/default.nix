@@ -7,6 +7,19 @@
 
 let
   cfg = config.profiles.dev;
+
+  flatten =
+    dir:
+    lib.genAttrs (lib.filter (name: builtins.pathExists "${toString dir}/${name}/SKILL.md") (
+      builtins.attrNames (builtins.readDir dir)
+    )) (name: dir + "/${name}");
+
+  skills = {
+    humanizer = "${inputs.humanizer}";
+  }
+  // flatten "${inputs.janestreet-agent-skills}"
+  // flatten "${inputs.ponytail-agent-skills}/skills"
+  // lib.mapAttrs (_: config.lib.hm.mkFlakeSymlink) (flatten ./skills);
 in
 {
   imports = [
@@ -17,11 +30,10 @@ in
       opencode.enable = true;
       mcp.enable = true;
     };
-    home.file = {
-      ".agents/skills/humanizer".source = inputs.humanizer;
-      ".agents/skills/janestreet".source = inputs.janestreet-agent-skills;
-      ".agents/skills/personal".source = config.lib.hm.mkFlakeSymlink ./skills;
-      ".agents/skills/ponytail".source = "${inputs.ponytail-agent-skills}/skills";
-    };
+    home.file = lib.mkMerge [
+      (lib.mapAttrs' (
+        name: source: lib.nameValuePair ".agents/skills/${name}" { inherit source; }
+      ) skills)
+    ];
   };
 }

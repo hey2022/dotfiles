@@ -39,6 +39,5 @@ in
       tokei
       wget
     ];
-    programs.opencode.enable = true;
   };
 }
