@@ -49,7 +49,13 @@ hl.window_rule({
     float = true,
 })
 
-hl.workspace_rule({ workspace = "special:scratchpad", gaps_out = 100, on_created_empty = cfg.terminal })
+hl.workspace_rule({ workspace = "special:scratchpad", gaps_out = 100 })
+
+hl.on("workspace.created", function(ws)
+    if ws.name == "special:scratchpad" and ws.is_empty then
+        hl.exec_cmd(cfg.terminal)
+    end
+end)
 
 hl.window_rule({
     match = { class = "dev.noctalia.Noctalia" },
