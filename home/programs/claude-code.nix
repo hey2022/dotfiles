@@ -1,6 +1,13 @@
+{ config, lib, ... }:
+
+let
+  cfg = config.programs.claude-code;
+in
 {
-  programs.claude-code = {
-    enableMcpIntegration = true;
-    context = ../dev/ai/AGENTS.md;
+  config = lib.mkIf cfg.enable {
+    programs.claude-code = {
+      enableMcpIntegration = true;
+    };
+    home.file."${cfg.configDir}/CLAUDE.md".source = config.lib.hm.mkFlakeSymlink ../dev/ai/AGENTS.md;
   };
 }

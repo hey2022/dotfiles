@@ -43,7 +43,7 @@ in
         name: source:
         lib.nameValuePair "${config.programs.claude-code.configDir}/skills/${name}" { inherit source; }
       ) skills)
-      { ".agents/AGENTS.md".source = ./AGENTS.md; }
+      { ".agents/AGENTS.md".source = config.lib.hm.mkFlakeSymlink ./AGENTS.md; }
     ];
   };
 }
