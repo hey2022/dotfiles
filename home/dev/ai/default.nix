@@ -19,7 +19,6 @@ let
     humanizer = "${inputs.humanizer}";
   }
   // flatten "${inputs.janestreet-agent-skills}"
-  // flatten "${inputs.ponytail-agent-skills}/skills"
   // lib.mapAttrs (_: config.lib.hm.mkFlakeSymlink) (flatten ./skills);
 in
 {
