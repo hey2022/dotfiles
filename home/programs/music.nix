@@ -1,7 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, pkgs-local, ... }:
 {
-  home.packages = with pkgs; [
-    pear-desktop
-    songrec
+  home.packages = [
+    pkgs-local.limusic
+    pkgs.songrec
   ];
 }
