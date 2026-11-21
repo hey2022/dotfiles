@@ -408,13 +408,17 @@ not merely for decoration.
 Choose the representation appropriate to the task:
 
 - An existing, accurate lecture figure when it already illustrates the idea.
-- An original SVG, TikZ, plotted graph, or schematic for exact mathematical
-  and computer-science relationships.
+- Typst with CeTZ for original diagrams and schematics. Use CeTZ-Plot for
+  simple function graphs and Python with Matplotlib for plots based on data,
+  simulations, or numerical computations.
 - An image-generation tool for illustrations where visual realism is useful
   and exact mathematical geometry is not required.
 
 Prefer precise diagrams over generated illustrations when
 correctness depends on geometry, orientation, labels, or scale.
+
+Export original figures as SVG or PNG for Anki media. For Typst, use
+`typst compile figure.typ figure.svg` to export an SVG.
 
 Inspect all created or retrieved images before using them.
 
