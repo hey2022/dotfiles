@@ -15,11 +15,10 @@ let
       builtins.attrNames (builtins.readDir dir)
     )) (name: dir + "/${name}");
 
-  skills = {
-    humanizer = "${inputs.humanizer}";
-  }
-  // flatten "${inputs.janestreet-agent-skills}"
-  // lib.mapAttrs (_: config.lib.hm.mkFlakeSymlink) (flatten ./skills);
+  skills = lib.mergeAttrsList [
+    (flatten "${inputs.janestreet-agent-skills}")
+    (lib.mapAttrs (_: config.lib.hm.mkFlakeSymlink) (flatten ./skills))
+  ];
 in
 {
   imports = [
