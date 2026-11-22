@@ -323,18 +323,16 @@ Select worthwhile retrieval tasks at multiple levels, including:
 If two cards test the same thing, keep one and move useful detail into
 Extra. Don't turn every exchange into a card or aim for a fixed count.
 
-After tutoring, start card creation at the agreed time. Default to the draft
-review below for tutoring batches and follow-ups. A request like “add those
-definitions” selects the content; it does not waive review. Skip review only
-if the user explicitly asks to add the batch without drafts. During review,
-“accept all” approves the rest of the current batch.
+Whenever this skill is used to create or revise cards, show drafts using the
+one-at-a-time review below and get approval before writing to Anki. This
+applies to standalone requests, single cards, batches, and follow-ups.
+Requests like “create a card” or “add those definitions” still enter draft
+review. Proceed directly if the user explicitly asks to skip drafts or
+approves an exact draft already shown.
 
 Before drafting, establish the intended retrieval tasks, inspect relevant
 models and templates, search for overlapping notes, and select appropriate
 home decks and existing context/subject tags.
-
-Outside draft review, provide previews when requested; otherwise carry out
-requested creation once essential choices are known.
 
 Read complete fields before editing; never write truncated excerpts back
 into notes.
