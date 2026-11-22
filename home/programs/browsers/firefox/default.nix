@@ -25,6 +25,7 @@ in
         Allow = [
           "http://127.0.0.1"
           "https://devdocs.io"
+          "https://s.dunkirk.sh"
         ];
       };
       ExtensionSettings = {
@@ -73,12 +74,12 @@ in
         ];
       search = {
         force = true;
-        default = "brave";
+        default = "unduck";
         privateDefault = "ddg";
         engines = {
-          brave = {
-            name = "Brave Search";
-            urls = [ { template = "https://search.brave.com/search?q={searchTerms}"; } ];
+          unduck = {
+            name = "Unduck";
+            urls = [ { template = "https://s.dunkirk.sh?q={searchTerms}"; } ];
           };
         };
       };
