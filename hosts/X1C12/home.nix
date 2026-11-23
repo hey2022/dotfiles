@@ -13,7 +13,10 @@
   host.laptop = true;
 
   profiles = {
-    gaming.enable = true;
+    gaming = {
+      enable = true;
+      roblox.enable = true;
+    };
   };
   programs = {
     fish.enable = true;
