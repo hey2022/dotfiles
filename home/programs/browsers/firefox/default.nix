@@ -24,6 +24,7 @@ in
       Cookies = {
         Allow = [
           "http://127.0.0.1"
+          "http://localhost"
           "https://devdocs.io"
           "https://s.dunkirk.sh"
         ];
